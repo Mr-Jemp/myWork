@@ -1,0 +1,46 @@
+
+
+[
+    {
+    "Id":"1",
+    "text":"德冠投资",
+    "status":0,
+    "children":[
+        {"Id":101,"text":"综合政务","children":[
+            {"Id":1011,"text":"行政人事","children":[{"id":10111,"text":"招聘","children":[]}]},
+            {"Id":1012,"text":"精算","children":[{"id":10121,"text":"采购","children":[]}]},
+            {"Id":1013,"text":"税务","children":[{"id":10131,"text":"供应链","children":[]}]}
+        ]},
+        {"Id":102,"text":"互联网营销","children":[
+            {"Id":1021,"text":"教育事业","children":[{"id":10211,"text":"素质教育网","children":[]}]},
+            {"Id":1022,"text":"垂直行业","children":[{"id":10221,"text":"化工网","children":[]}]},
+            {"Id":1023,"text":"企业管理","children":[{"id":10131,"text":"管理软件网","children":[]}]},
+            {"Id":1024,"text":"政府单位","children":[{"id":10241,"text":"同城分类网","children":[]}]},
+            {"Id":1025,"text":"生活平台","children":[{"id":10251,"text":"商城","children":[]}]}
+        ]},
+        {"Id":103,"text":"网店营运","children":[
+            {"Id":1031,"text":"穿戴设备","children":[{"id":10311,"text":"素质教育网","children":[]}]},
+            {"Id":1032,"text":"智能家居","children":[{"id":10321,"text":"化工网","children":[]}]},
+            {"Id":1034,"text":"机器人","children":[{"id":10341,"text":"管理软件网","children":[]}]},
+            {"Id":1035,"text":"智能机器","children":[{"id":10351,"text":"同城分类网","children":[]}]}
+        ]},
+        {"Id":104,"text":"茂名研发部","children":[
+            {"Id":1041,"text":"软件","children":[{"id":10411,"text":"素质教育网","children":[]}]},
+            {"Id":1042,"text":"硬件","children":[{"id":10421,"text":"化工网","children":[]}]},
+            {"Id":1043,"text":"机械","children":[{"id":10431,"text":"管理软件网","children":[]}]},
+            {"Id":1044,"text":"测试维护","children":[{"id":10441,"text":"同城分类网","children":[]}]}
+        ]},
+        {"Id":105,"text":"高州","children":[
+            {"Id":1051,"text":"金歌","children":[{"id":10511,"text":"前台","children":[]}]},
+            {"Id":1052,"text":"洗涤","children":[{"id":10521,"text":"楼层","children":[]}]}
+        ]},
+        {"Id":106,"text":"商客渠道","children":[
+            {"Id":1061,"text":"代理经销","children":[{"id":10611,"text":"商客","children":[]}]}
+        ]},
+        {"Id":107,"text":"国际业务","children":[
+            {"Id":1071,"text":"代理经销","children":[{"id":10711,"text":"商客","children":[]}]}
+        ]}
+    ]
+}
+
+]

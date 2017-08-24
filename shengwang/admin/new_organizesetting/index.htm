@@ -1,0 +1,478 @@
+﻿<div id="pageFrameDiv" class="organize-main1" style="float: left; width: 74.5%; padding: 0;
+            margin: 0; height: 100%;">
+            <!--<iframe id="pageFrame" frameborder="0" style="width: 100%; height: 100%"></iframe>-->
+            <div class="container-fluid" style="margin: 0; padding: 0; height: 100%;">
+                <div class="row-fluid" style="margin: 0; padding: 0; height: 100%;">
+                    <!--	                <div class="span12" style="border:1px solid #000000;" id="toolDiv">
+	                    <input id="controlCircle" type="button" value="隐藏控件框"/>
+	                    <input id="propertiesCircle" type="button" value="显示属性框"/>
+	                </div>-->
+                    <div class="span2" style="border: 1px solid #000000; height: 100%; margin: 0; padding: 0;
+                        border-left: 0px; border-right-color: White;" id="boxDiv">
+                        <label style="margin-bottom: 10px; margin-left: 25px; width: 100%;">
+                        HTML控件</label><br />
+                        <a href='#' style="margin-left: 15px; margin-top: 10px; width: 100px;" id='label'>标签</a><br />
+                        <a href='#' style="margin-left: 15px; margin-top: 10px; width: 100px;" id='text'>文本框</a><br />
+                        <a href='#' style="margin-left: 15px; margin-top: 10px; width: 100px;" id='checkbox'>
+                            复选框</a><br />
+                        <a href='#' style="margin-left: 15px; margin-top: 10px; width: 100px;" id='radio'>单选按钮</a><br />
+                        <a href='#' style="margin-left: 15px; margin-top: 10px; width: 100px;" id='select'>列表框</a><br />
+                        <a href='#' style="margin-left: 15px; margin-top: 10px; width: 100px;" id='image'>图片框</a><br />
+                        <a href='#' style="margin-left: 15px; margin-top: 10px; width: 100px;" id='date'>日期控件</a><br />
+                        <a href='#' style="margin-left: 15px; margin-top: 10px; width: 100px;" id='listTable'>
+                            列表子表</a><br />
+                        <a href='#' style="margin-left: 15px; margin-top: 10px; width: 100px;" id='tree'>树型</a><br />
+                        <a href='#' style="margin-left: 15px; margin-top: 10px; width: 100px;" id='uploadFile'>
+                            上传文件</a><br />
+                        <a href='#' style="margin-left: 15px; margin-top: 10px; width: 100px;" id='fileListing'>
+                            文件列表</a><br />
+                        <!--<a href='#' style="margin-left:15px;margin-top:10px;width:100px;" id='matrixRpt'>交叉报表</a><br/>-->
+                        <a href='#' style="margin-left: 15px; margin-top: 10px; width: 100px;" id='iframe'>页面容器</a><!--<br/><a href='#' style="margin-left:15px;margin-top:10px;width:100px;" id='apeakTree'>垂直导航</a><br/><a href='#' style="margin-left:15px;margin-top:10px;width:100px;" id='planeTree'>水平导航</a><br/><a href='#' style="margin-left:15px;margin-top:10px;width:100px;" id='From'>交叉表</a><br/><a href='#' style="margin-left:15px;margin-top:10px;width:100px;" id='Flot'>图表</a><br/><a href='#' style="margin-left:15px;margin-top:10px;width:100px;" id='reply'>批复</a>--><br />
+                        <a href='#' style="margin-left: 15px; margin-top: 10px; width: 100px;" id='orderNo'>
+                            单号生成器</a><br />
+                        <a href='#' style="margin-left: 15px; margin-top: 10px; width: 100px;" id='money'>金额转换</a><br />
+    
+                        <br />
+                        <label style="margin-bottom: 10px; margin-left: 25px; width: 100%;">
+                            模版排版</label><br />
+                        <a href='#' style="margin-left: 15px; margin-top: 10px; width: 100px;" name="modelControl" id='1'>1</a><br />
+                        <a href='#' style="margin-left: 15px; margin-top: 10px; width: 100px;" name="modelControl" id='2-2'>2-2</a><br />
+                        <a href='#' style="margin-left: 15px; margin-top: 10px; width: 100px;" name="modelControl" id='3-3-3'>
+                            3-3-3</a><br />
+                        <a href='#' style="margin-left: 15px; margin-top: 10px; width: 100px;" name="modelControl" id='4-4-4-4'>4-4-4-4</a><br />
+                        <a href='#' style="margin-left: 15px; margin-top: 10px; width: 100px;" name="modelControl" id='3-9'>3-9</a><br />
+
+                    </div>
+                    <div class="span1" style="border: 1px solid #000000; width: 1%; height: 100%; margin: 0;
+                        padding: 0; padding-top: 25%; border-left: 0px; border-left-color: White" id="editPageHTML">
+                        <img src="/resource/js/bs/img/left_ss.gif" width="10px" onclick="editPageHTML()" style="float: right;
+                            cursor: pointer" />
+                    </div>
+                    <div class="span10" style="border: 1px solid #000000; overflow: auto; height: 100%;
+                        margin: 0; padding: 0; padding-left: 20px" id="canvas">
+                    </div>
+                    <div class="span1" style="border: 1px solid #000000; width: 1%; height: 100%; margin: 0;
+                        padding: 0; padding-top: 25%;" id="editPageProperties">
+                        <img src="/resource/js/bs/img/left_ss.gif" width="10px" onclick="editPageProperties()" style="float: right;
+                            cursor: pointer" />
+                    </div>
+                    <div class="span3" style="border: 1px solid #000000; overflow: auto; height: 100%;
+                        display: none; margin: 0; padding: 0" id="propertiesDiv">
+                        <div role="tabpanel" style="width: 100%; height: 100%">
+                            <ul class="nav nav-tabs" role="tablist">
+                                <li role="presentation" class="active"><a href="#basePropertiesDiv" aria-controls="home"
+                                    role="tab" data-toggle="tab">逻辑属性</a></li>
+                                <li role="presentation"><a href="#cssPropertiesDiv" aria-controls="profile" role="tab"
+                                    data-toggle="tab">样式属性</a></li>
+                            </ul>
+                            <div class="tab-content" style="width: 100%; height: 100%;">
+                                <div id="basePropertiesDiv" role="tabpanel" class="tab-pane active" style="overflow: auto;">
+                                    <table id="basePropertiesTable" class="table table-bordered">
+                                        <thead>
+                                        </thead>
+                                        <tbody>
+                                            <tr class="hbspage hbslabel hbstext hbscheckbox hbsradio hbsselect hbsimage hbsdate hbslisttable hbscolumn hbsstatistics">
+                                                <td style="border: 1px solid black; text-align: left; color: Black; font-size: 12px;">
+                                                    名称
+                                                </td>
+                                                <td style="border: 1px solid black; text-align: left; font-size: 12px;">
+                                                    <input id="nameInput" type="text" style="width: 95%; font-size: 12px;" />
+                                                </td>
+                                            </tr>
+                                            <tr class="hbspage hbslabel hbstext hbscheckbox hbsradio hbsselect hbsimage hbsdate hbslisttable hbscolumn hbsstatistics">
+                                                <td style="border: 1px solid black; text-align: left; color: Black; font-size: 12px;">
+                                                    控件类型
+                                                </td>
+                                                <td style="border: 1px solid black; text-align: left; font-size: 12px;">
+                                                    <input id='controlTypeInput' disabled="disabled" type="text" style="width: 95%; font-size: 12px;" />
+                                                </td>
+                                            </tr>
+                                            <tr class="hbstext hbsdate hbscolumn hbsstatistics hbsreadonlyClass">
+                                                <td style="border: 1px solid black; text-align: left; font-size: 12px;">
+                                                    只读属性
+                                                </td>
+                                                <td style="border: 1px solid black; text-align: left; font-size: 12px;">
+                                                    <input id='readonly' value='readonly' type='radio' name='readonlyRdo' />只读&nbsp;&nbsp;<input
+                                                        id='readAndwrite' value='readAndwrite' type='radio' name='readonlyRdo' />读写
+                                                </td>
+                                            </tr>
+                                            <tr class="hbstext hbscheckbox hbsradio hbsselect hbsimage hbsdate hbscolumn hbsstatistics hbsdisabledClass">
+                                                <td style="border: 1px solid black; text-align: left; font-size: 12px;">
+                                                    禁止使用
+                                                </td>
+                                                <td style="border: 1px solid black; text-align: left; font-size: 12px;">
+                                                    <input id='disabled' value='disabled' type='radio' name='disabledRdo' />是&nbsp;&nbsp;<input
+                                                        id='abled' value='abled' type='radio' name='disabledRdo' />否
+                                                </td>
+                                            </tr>
+                                            <tr class="hbstext">
+                                                <td style="border: 1px solid black; text-align: left; font-size: 12px;">
+                                                    数据类型
+                                                </td>
+                                                <td style="border: 1px solid black; text-align: left; font-size: 12px;">
+                                                    <input id="dataTypeInput" type="text" style="width: 95%; font-size: 12px;" />
+                                                </td>
+                                            </tr>
+                                            <tr class="hbsdate">
+                                                <td style="border: 1px solid black; text-align: left; font-size: 12px;">
+                                                    日期格式
+                                                </td>
+                                                <td style="border: 1px solid black; text-align: left; font-size: 12px;">
+                                                    <input id="dateFormatInput" type="text" style="width: 95%; font-size: 12px;" />
+                                                </td>
+                                            </tr>
+                                            <tr class="hbstext">
+                                                <td style="border: 1px solid black; text-align: left; font-size: 12px;">
+                                                    数据长度
+                                                </td>
+                                                <td style="border: 1px solid black; text-align: left; font-size: 12px;">
+                                                    <input id="dataLengthInput" type="text" style="width: 95%; font-size: 12px;" />
+                                                </td>
+                                            </tr>
+                                            <tr class="hbstext hbsimage hbsdate hbslisttable hbscolumn hbsisFieldClass">
+                                                <td style="border: 1px solid black; text-align: left; font-size: 12px;">
+                                                    是字段控件
+                                                </td>
+                                                <td style="border: 1px solid black; text-align: left; font-size: 12px;">
+                                                    <input id='isField' value='isField' type='radio' name='isFieldRdo' />是&nbsp;&nbsp;<input
+                                                        id='notIs' value='notIs' type='radio' name='isFieldRdo' />不是
+                                                </td>
+                                            </tr>
+                                            <tr class="hbstext hbsselect hbscolumn">
+                                                <td style="border: 1px solid black; text-align: left; font-size: 12px;">
+                                                    取值字段
+                                                </td>
+                                                <td style="border: 1px solid black; text-align: left; font-size: 12px;">
+                                                    <input id="valueFieldInput" type="text" style="width: 95%; font-size: 12px;" />
+                                                </td>
+                                            </tr>
+                                            <tr class="hbstext hbsselect hbscolumn">
+                                                <td style="border: 1px solid black; text-align: left; font-size: 12px;">
+                                                    文本字段
+                                                </td>
+                                                <td style="border: 1px solid black; text-align: left; font-size: 12px;">
+                                                    <input id="textFieldInput" type="text" style="width: 95%; font-size: 12px;" />
+                                                </td>
+                                            </tr>
+                                            <tr class="hbscheckbox hbsradio">
+                                                <td style="border: 1px solid black; text-align: left; font-size: 12px;">
+                                                    分组名称
+                                                </td>
+                                                <td style="border: 1px solid black; text-align: left; font-size: 12px;">
+                                                    <input id="groupInput" type="text" style="width: 95%; font-size: 12px;" />
+                                                </td>
+                                            </tr>
+                                            <tr class="hbsselect hbsgetOptionType">
+                                                <td style="border: 1px solid black; text-align: left;">
+                                                    选项获取
+                                                </td>
+                                                <td style="border: 1px solid black; text-align: left;">
+                                                    <input id='static' type='radio' value='static' name='getOptionRdo' />静态&nbsp;&nbsp;<input
+                                                        id='dynamic' type='radio' value='dynamic' name='getOptionRdo' />不是
+                                                </td>
+                                            </tr>
+                                            <tr class="hbsselect">
+                                                <td style="border: 1px solid black; text-align: left; font-size: 12px;">
+                                                    选项设定
+                                                </td>
+                                                <td style="border: 1px solid black; text-align: left; font-size: 12px;">
+                                                    <input id="optionInput" type="text" style="width: 95%; font-size: 12px;" />
+                                                </td>
+                                            </tr>
+                                            <tr class="hbstext">
+                                                <td style="border: 1px solid black; text-align: left; font-size: 12px;">
+                                                    文本控件类型
+                                                </td>
+                                                <td style="border: 1px solid black; text-align: left; font-size: 12px;">
+                                                    <input id="textModelInput" type="text" style="width: 95%; font-size: 12px;" />
+                                                </td>
+                                            </tr>
+                                            <tr class="hbstext_li">
+                                                <td style="border: 1px solid black; text-align: left; font-size: 12px;">
+                                                    节点值
+                                                </td>
+                                                <td style="border: 1px solid black; text-align: left; font-size: 12px;">
+                                                    <input id="liTextInput" type="text" style="width: 95%; font-size: 12px;" />
+                                                </td>
+                                            </tr>
+                                            <tr class="hbstext_li">
+                                                <td style="border: 1px solid black; text-align: left; font-size: 12px;">
+                                                    网页打开方式
+                                                </td>
+                                                <td style="border: 1px solid black; text-align: left; font-size: 12px;">
+                                                    <input id="linkEmbedInput" type="text" style="width: 95%; font-size: 12px;" />
+                                                </td>
+                                            </tr>
+                                            <tr class="hbstext_li">
+                                                <td style="border: 1px solid black; text-align: left; font-size: 12px;">
+                                                    网页链接
+                                                </td>
+                                                <td style="border: 1px solid black; text-align: left; font-size: 12px;">
+                                                    <input id="liHrefInput" type="text" style="width: 95%; font-size: 12px;" />
+                                                </td>
+                                            </tr>
+                                            <tr class="hbsimage">
+                                                <td style="border: 1px solid black; text-align: left; font-size: 12px;">
+                                                    链接地址
+                                                </td>
+                                                <td style="border: 1px solid black; text-align: left; font-size: 12px;">
+                                                    <input id="imageSrcInput" type="text" style="width: 95%; font-size: 12px;" />
+                                                </td>
+                                            </tr>
+                                            <tr class="hbstreeSrcInput">
+                                                <td style="border: 1px solid black; text-align: left; font-size: 12px;">
+                                                    链接地址
+                                                </td>
+                                                <td style="border: 1px solid black; text-align: left; font-size: 12px;">
+                                                    <input id="srcInput" type="text" style="width: 95%; font-size: 12px;" />
+                                                </td>
+                                            </tr>
+                                            <tr class="hbsuploadFileInput">
+                                                <td style="border: 1px solid black; text-align: left; font-size: 12px;">
+                                                    上传文件的作用区
+                                                </td>
+                                                <td style="border: 1px solid black; text-align: left; font-size: 12px;">
+                                                    <input id="uploadFileInput" type="text" style="width: 95%; font-size: 12px;" />
+                                                </td>
+                                            </tr>
+                                            <tr class="hbstreeSrcInput">
+                                                <td style="border: 1px solid black; text-align: left; font-size: 12px;">
+                                                    链接文本
+                                                </td>
+                                                <td style="border: 1px solid black; text-align: left; font-size: 12px;">
+                                                    <input id="TreeSrcInput" type="text" style="width: 95%; font-size: 12px;" />
+                                                </td>
+                                            </tr>
+                                            <tr class="hbssrcOpen">
+                                                <td style="border: 1px solid black; text-align: left; font-size: 12px;">
+                                                    链接打开方式
+                                                </td>
+                                                <td style="border: 1px solid black; text-align: left; font-size: 12px;">
+                                                    <input id="srcOpenInput" type="text" style="width: 95%; font-size: 12px;" />
+                                                </td>
+                                            </tr>
+                                            <tr class="hbstreeSrcInput">
+                                                <td style="border: 1px solid black; text-align: left; font-size: 12px;">
+                                                    绑定树型表
+                                                </td>
+                                                <td style="border: 1px solid black; text-align: left; font-size: 12px;">
+                                                    <input id="treeTbaleInput" type="text" style="width: 95%; font-size: 12px;" />
+                                                </td>
+                                            </tr>
+                                            <tr class="hbstreeSrcInput">
+                                                <td style="border: 1px solid black; text-align: left; font-size: 12px;">
+                                                    创建树型表
+                                                </td>
+                                                <td style="border: 1px solid black; text-align: left; font-size: 12px;">
+                                                    <font id="treeTbaleCreateInput" color="#00FF33" style="width: 95%; font-size: 12px;
+                                                        cursor: pointer;">当前可以创建树型数据表</font>
+                                                </td>
+                                            </tr>
+                                            <tr class="hbspage">
+                                                <td style="border: 1px solid black; text-align: left; font-size: 12px;">
+                                                    添加触发
+                                                </td>
+                                                <td style="border: 1px solid black; text-align: left; font-size: 12px;">
+                                                    <input id="addTriggerInput" value="..." readonly="readonly" type="text" style="width: 95%;
+                                                        font-size: 12px;" />
+                                                </td>
+                                            </tr>
+                                            <tr class="hbspage">
+                                                <td style="border: 1px solid black; text-align: left; font-size: 12px;">
+                                                    删除触发
+                                                </td>
+                                                <td style="border: 1px solid black; text-align: left; font-size: 12px;">
+                                                    <input id="delTriggerInput" value="..." readonly="readonly" type="text" style="width: 95%;
+                                                        font-size: 12px;" />
+                                                </td>
+                                            </tr>
+                                            <tr class="hbspage">
+                                                <td style="border: 1px solid black; text-align: left; font-size: 12px;">
+                                                    编辑触发
+                                                </td>
+                                                <td style="border: 1px solid black; text-align: left; font-size: 12px;">
+                                                    <input id="updateTriggerInput" value="..." readonly="readonly" type="text" style="width: 95%;
+                                                        font-size: 12px;" />
+                                                </td>
+                                            </tr>
+                                            <tr class="hbspage">
+                                                <td style="border: 1px solid black; text-align: left; font-size: 12px;">
+                                                    标识字段
+                                                </td>
+                                                <td style="border: 1px solid black; text-align: left; font-size: 12px;">
+                                                    <input id="signFieldInput" type="text" value="id" style="width: 95%; font-size: 12px;" />
+                                                </td>
+                                            </tr>
+                                            <tr class="hbstext">
+                                                <td style="border: 1px solid black; text-align: left; font-size: 12px;">
+                                                    简单验证规则
+                                                </td>
+                                                <td style="border: 1px solid black; text-align: left; font-size: 12px;">
+                                                    <input id="regexInput" type="text" style="width: 95%; font-size: 12px;" />
+                                                </td>
+                                            </tr>
+                                            <tr class="hbsstatistics">
+                                                <td style="border: 1px solid black; text-align: left; font-size: 12px;">
+                                                    统计字段
+                                                </td>
+                                                <td style="border: 1px solid black; text-align: left; font-size: 12px;">
+                                                    <input id="statisticsFieldInput" type="text" style="width: 95%; font-size: 12px;" />
+                                                </td>
+                                            </tr>
+                                            <tr class="hbsstatistics">
+                                                <td style="border: 1px solid black; text-align: left; font-size: 12px;">
+                                                    统计方法
+                                                </td>
+                                                <td style="border: 1px solid black; text-align: left; font-size: 12px;">
+                                                    <input id="statisticsMethodInput" type="text" style="width: 95%; font-size: 12px;" />
+                                                </td>
+                                            </tr>
+                                            <tr lass="hbslisttable hbsimportData">
+                                                <td style="border: 1px solid black; text-align: left; font-size: 12px;">
+                                                    导入数据
+                                                </td>
+                                                <td style="border: 1px solid black; text-align: left; font-size: 12px;">
+                                                    <input id='importData' type='radio' name='importRdo' />是&nbsp;&nbsp;<input id='notImport'
+                                                        type='radio' name='importRdo' />不是
+                                                </td>
+                                            </tr>
+                                            <tr class="hbscolumn">
+                                                <td style="border: 1px solid black; text-align: left; font-size: 12px;">
+                                                    从视图取值
+                                                </td>
+                                                <td style="border: 1px solid black; text-align: left; font-size: 12px;">
+                                                    <input id="importViewFieldInput" type="text" style="width: 95%; font-size: 12px;" />
+                                                </td>
+                                            </tr>
+                                            <tr class="hbscolumn hbsshowColumnHead">
+                                                <td style="border: 1px solid black; text-align: left; font-size: 12px;">
+                                                    显示列头
+                                                </td>
+                                                <td style="border: 1px solid black; text-align: left; font-size: 12px;">
+                                                    <input id='showHead' type='radio' value='showHead' name='showColumnHeadRdo' />是&nbsp;&nbsp;<input
+                                                        id='hideHead' type='radio' value='hideHead' name='showColumnHeadRdo' />不是
+                                                </td>
+                                            </tr>
+                                            <tr class="hbstext hbsselect hbslisttable">
+                                                <td style="border: 1px solid black; text-align: left; font-size: 12px;">
+                                                    数据视图
+                                                </td>
+                                                <td style="border: 1px solid black; text-align: left; font-size: 12px;">
+                                                    <input id="datasourceInput" type="text" style="width: 68%; font-size: 12px;" /><span
+                                                        style="width: 30%; font-size: 12px;">视图</span>
+                                                </td>
+                                            </tr>
+                                            <tr class="hbscolumn">
+                                                <td style="border: 1px solid black; text-align: left; font-size: 12px;">
+                                                    控件类型
+                                                </td>
+                                                <td style="border: 1px solid black; text-align: left; font-size: 12px;">
+                                                    <input id="domTypeInput" type="text" style="width: 95%; font-size: 12px;" />
+                                                </td>
+                                            </tr>
+                                            <tr class="hbspage">
+                                                <td style="border: 1px solid black; text-align: left; font-size: 12px;">
+                                                    页内逻辑
+                                                </td>
+                                                <td style="border: 1px solid black; text-align: left; font-size: 12px;">
+                                                    <input id="innerPageLogicInput" type="text" style="width: 95%; font-size: 12px;" />
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <div id="cssPropertiesDiv" role="tabpanel" class="tab-pane" style="">
+                                    <table id="cssPropertiesTable" class="table table-bordered">
+                                        <thead>
+                                        </thead>
+                                        <tbody>
+                                            <tr style="display: none;" class="hbslabel hbstext hbscheckbox hbsradio hbsselect hbsimage hbsdate hbslisttable hbsstatistics">
+                                                <td style="border: 1px solid black; text-align: left; font-size: 12px;">
+                                                    左边距
+                                                </td>
+                                                <td style="border: 1px solid black; text-align: left; font-size: 12px;">
+                                                    <input disabled="disabled" type="text" id="leftInput" style="width: 95%; font-size: 12px;" />
+                                                </td>
+                                            </tr>
+                                            <tr style="display: none;" class="hbslabel hbstext hbscheckbox hbsradio hbsselect hbsimage hbsdate hbslisttable hbsstatistics">
+                                                <td style="border: 1px solid black; text-align: left; font-size: 12px;">
+                                                    上边距
+                                                </td>
+                                                <td style="border: 1px solid black; text-align: left; font-size: 12px;">
+                                                    <input disabled="disabled" type="text" id="topInput" style="width: 95%; font-size: 12px;" />
+                                                </td>
+                                            </tr>
+                                            <tr class="hbstext hbsselect hbsimage hbsdate hbslisttable hbsstatistics hbspage">
+                                                <td style="border: 1px solid black; text-align: left; font-size: 12px;">
+                                                    宽度
+                                                </td>
+                                                <td style="border: 1px solid black; text-align: left; font-size: 12px;">
+                                                    <input type="text" id="widthInput" style="width: 95%; font-size: 12px;" />
+                                                </td>
+                                            </tr>
+                                            <tr class="hbsimage hbslisttable hbspage">
+                                                <td style="border: 1px solid black; text-align: left; font-size: 12px;">
+                                                    高度
+                                                </td>
+                                                <td style="border: 1px solid black; text-align: left; font-size: 12px;">
+                                                    <input type="text" id="heightInput" style="width: 95%; font-size: 12px;" />
+                                                </td>
+                                            </tr>
+                                            <tr class="hbslabel hbstext hbscheckbox hbsradio hbsselect hbsdate hbslisttable hbsstatistics hbscolumn">
+                                                <td style="border: 1px solid black; text-align: left; font-size: 12px;">
+                                                    字体大小
+                                                </td>
+                                                <td style="border: 1px solid black; text-align: left; font-size: 12px;">
+                                                    <input type="text" id="FontSizeInput" style="width: 95%; font-size: 12px;" />
+                                                </td>
+                                            </tr>
+                                            <tr class="hbslabel hbstext hbscheckbox hbsradio hbsselect hbsdate hbslisttable hbsstatistics hbscolumn">
+                                                <td style="border: 1px solid black; text-align: left; text-align: left; font-size: 12px;">
+                                                    字体粗细
+                                                </td>
+                                                <td style="border: 1px solid black; text-align: left; font-size: 12px;">
+                                                    <input type="text" id="FontWeightInput" style="width: 95%; font-size: 12px;" />
+                                                </td>
+                                            </tr>
+                                            <tr class="hbscolumn hbsblockDisplay">
+                                                <td style="border: 1px solid black; text-align: left; font-size: 12px;">
+                                                    可视
+                                                </td>
+                                                <td style="border: 1px solid black; text-align: left; font-size: 12px;">
+                                                    <input id='blockDisplay' type='radio' name='displayRdo' />可视&nbsp;&nbsp;<input id='noneDisplay'
+                                                        type='radio' name='displayRdo' />不可
+                                                </td>
+                                            </tr>
+                                            <tr class="hbslabel hbstext hbscheckbox hbsradio hbsselect hbsdate hbslisttable hbsstatistics hbscolumn">
+                                                <td style="border: 1px solid black; text-align: left; font-size: 12px;">
+                                                    前景色
+                                                </td>
+                                                <td style="border: 1px solid black; text-align: left; font-size: 12px;">
+                                                    <input type="text" id="colorInput" style="width: 95%; font-size: 12px;" />
+                                                </td>
+                                            </tr>
+                                            <tr class="hbslabel hbstext hbscheckbox hbsradio hbsselect hbsdate hbslisttable hbsstatistics hbscolumn hbspage">
+                                                <td style="border: 1px solid black; text-align: left; font-size: 12px;">
+                                                    背景色
+                                                </td>
+                                                <td style="border: 1px solid black; text-align: left; font-size: 12px;">
+                                                    <input type="text" id="backgroundColorInput" style="width: 95%; font-size: 12px;" />
+                                                </td>
+                                            </tr>
+                                            <tr class="hbstextAlign">
+                                                <td style="border: 1px solid black; text-align: left; font-size: 12px;">
+                                                    文本位置
+                                                </td>
+                                                <td style="border: 1px solid black; text-align: left; font-size: 12px;">
+                                                    <input type="text" id="textAlignInput" style="width: 95%; font-size: 12px;" />
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>

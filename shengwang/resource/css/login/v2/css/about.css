@@ -1,0 +1,75 @@
+@charset "utf-8";
+/* CSS Document */
+
+.aboutwarp{
+	width:100%;
+	height:100%;
+	background:#f8f8f8;
+	padding-top:20px;
+	padding-bottom:20px;
+	}
+.aboutcon{
+	width:1000px;
+	margin:0 auto;
+	}
+.aboutcon_menu{
+	width:170px;
+	height:393px;
+	background:#f2f2f2;
+	float:left;
+	border-left:2px solid #ccc;
+	border-top:1px solid #ccc;
+	}
+.aboutcon_menu ul li{
+	display:block;
+	width:170px;
+	height:38px;
+	border-bottom:1px dotted #ccc;
+	}
+.menulist{
+	width:136px;
+	height:40px;
+	line-height:40px;
+	position:relative;
+	left:0px;
+	top:-34px;
+	padding-left:35px;
+	z-index:2;
+	background:#fff;
+	}
+.menulist_un{
+	width:134px;
+	height:38px;
+	line-height:38px;
+	padding-left:40px;
+	}
+
+.menuselected{
+	background:#ffffff;
+	}
+.huablock{
+	width:6px;
+	height:28px;
+	margin:3px 0;
+	position:relative;
+	top:4px;
+	left:-4px;
+	z-index:3;
+	background:#F60;
+	}
+
+.aboutcon_container{
+	width:760px;
+	background:#ffffff;
+	border:1px solid #ccc;
+	float:left;
+	padding-left:20px;
+	padding-right:20px;
+	padding-top:15px;
+	}
+.aboutcon_container p{
+	line-height:1.8;
+	font-size:14px;
+	text-indent:2em;
+	margin-bottom:15px;
+	}

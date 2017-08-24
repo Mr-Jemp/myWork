@@ -1,0 +1,32 @@
+html,body{height:auto}body {
+	margin-left: 3px;
+	margin-top: 3px;
+	margin-right: 3px;
+	margin-bottom: 3px;
+}
+body,td,th {
+	font-size: 14px;
+}
+a:link {
+	text-decoration: none;
+}
+a:visited {
+	text-decoration: none;
+}
+a:hover {
+	text-decoration: none;
+}
+a:active {
+	text-decoration: none;
+}
+a{color:#333333;}
+#srcpathlist a{ border:1px solid  #333333; padding:3px;background:#efefef;}
+#sel_srcpath a{text-decoration:underline;}
+
+.path{color:#ffffff;}
+#fileid select{width:500px;}
+
+#submitmsg{color:red;}
+.style1{height: 25px;}
+#itemloadid{overflow:hidden;height:0px;width:auto;color:#ffffff;background:#218AB5; text-align:center;line-height:25px;}
+#itembodyid{display:none;}

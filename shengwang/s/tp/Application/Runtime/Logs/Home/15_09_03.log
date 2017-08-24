@@ -1,0 +1,135 @@
+[ 2015-09-03T07:55:35+08:00 ] 120.82.18.6 /s/tp/wwwroot/index.php?s=/demo/formdesign/form_id/329.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000433s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000626s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000657s ]
+SQL: SHOW COLUMNS FROM `ht_form` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `ht_form` WHERE `id` = 329 AND `is_del` = 0 LIMIT 1   [ RunTime:0.0004s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000819s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000855s ]
+
+[ 2015-09-03T09:13:02+08:00 ] 120.82.18.6 /s/tp/wwwroot/index.php?s=/Home/Demo/edit.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000082s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000033s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000064s ]
+SQL: SHOW COLUMNS FROM `ht_form` [ RunTime:0.0011s ]
+SQL: SELECT * FROM `ht_form` WHERE `id` = 325 AND `is_del` = 0 LIMIT 1   [ RunTime:0.0003s ]
+SQL: UPDATE `ht_form` SET `form_name`='财务管理',`form_desc`='',`updatetime`='1441242782',`type`='1' WHERE `id` = 325 [ RunTime:0.0239s ]
+NOTIC: [2] unlink(../Application/Runtime/Temp/21d9a5adf0e55158019e1c301ccb9502.php): No such file or directory /var/www/dzxt/s/tp/ThinkPHP/Library/Think/Cache/Driver/File.class.php 第 157 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000043s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000074s ]
+
+[ 2015-09-03T09:13:20+08:00 ] 120.82.18.6 /s/tp/wwwroot/index.php?s=/Home/Demo/edit.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000076s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000033s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000063s ]
+SQL: SHOW COLUMNS FROM `ht_form` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `ht_form` WHERE `id` = 326 AND `is_del` = 0 LIMIT 1   [ RunTime:0.0003s ]
+SQL: UPDATE `ht_form` SET `form_name`='行政办公',`form_desc`='',`updatetime`='1441242800',`type`='1' WHERE `id` = 326 [ RunTime:0.0212s ]
+NOTIC: [2] unlink(../Application/Runtime/Temp/21d9a5adf0e55158019e1c301ccb9502.php): No such file or directory /var/www/dzxt/s/tp/ThinkPHP/Library/Think/Cache/Driver/File.class.php 第 157 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000040s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000068s ]
+
+[ 2015-09-03T09:14:13+08:00 ] 120.82.18.6 /s/tp/wwwroot/index.php?s=/Home/Demo/edit.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000079s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000035s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000065s ]
+SQL: SHOW COLUMNS FROM `ht_form` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `ht_form` WHERE `id` = 265 AND `is_del` = 0 LIMIT 1   [ RunTime:0.0002s ]
+SQL: UPDATE `ht_form` SET `form_name`='人力资源',`form_desc`='',`updatetime`='1441242853',`type`='1' WHERE `id` = 265 [ RunTime:0.0186s ]
+NOTIC: [2] unlink(../Application/Runtime/Temp/21d9a5adf0e55158019e1c301ccb9502.php): No such file or directory /var/www/dzxt/s/tp/ThinkPHP/Library/Think/Cache/Driver/File.class.php 第 157 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000043s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000072s ]
+
+[ 2015-09-03T09:40:00+08:00 ] 120.82.18.6 /s/tp/wwwroot/index.php?s=/Home/Demo/del.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000093s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000033s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000062s ]
+SQL: SHOW COLUMNS FROM `ht_form` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `ht_form` WHERE `pid` = 561 LIMIT 1   [ RunTime:0.0023s ]
+SQL: DELETE FROM `ht_form` WHERE `id` = 561 [ RunTime:0.0232s ]
+SQL: SHOW COLUMNS FROM `ht_power` [ RunTime:0.0006s ]
+SQL: DELETE FROM `ht_power` WHERE `form_id` = 561 [ RunTime:0.0218s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000066s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000096s ]
+
+[ 2015-09-03T09:40:08+08:00 ] 120.82.18.6 /s/tp/wwwroot/index.php?s=/Home/Demo/del.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000008s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000071s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000034s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000064s ]
+SQL: SHOW COLUMNS FROM `ht_form` [ RunTime:0.0009s ]
+SQL: SELECT * FROM `ht_form` WHERE `pid` = 560 LIMIT 1   [ RunTime:0.0022s ]
+SQL: DELETE FROM `ht_form` WHERE `id` = 560 [ RunTime:0.0205s ]
+SQL: SHOW COLUMNS FROM `ht_power` [ RunTime:0.0006s ]
+SQL: DELETE FROM `ht_power` WHERE `form_id` = 560 [ RunTime:0.0196s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000066s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000096s ]
+
+[ 2015-09-03T09:41:37+08:00 ] 120.82.18.6 /s/tp/wwwroot/index.php?s=/Home/Demo/del.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000086s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000035s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000065s ]
+SQL: SHOW COLUMNS FROM `ht_form` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `ht_form` WHERE `pid` = 570 LIMIT 1   [ RunTime:0.0022s ]
+SQL: DELETE FROM `ht_form` WHERE `id` = 570 [ RunTime:0.0205s ]
+SQL: SHOW COLUMNS FROM `ht_power` [ RunTime:0.0006s ]
+SQL: DELETE FROM `ht_power` WHERE `form_id` = 570 [ RunTime:0.0196s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000078s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000109s ]
+
+[ 2015-09-03T09:41:43+08:00 ] 120.82.18.6 /s/tp/wwwroot/index.php?s=/Home/Demo/del.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000068s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000033s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000062s ]
+SQL: SHOW COLUMNS FROM `ht_form` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `ht_form` WHERE `pid` = 156 LIMIT 1   [ RunTime:0.0023s ]
+SQL: DELETE FROM `ht_form` WHERE `id` = 156 [ RunTime:0.0194s ]
+SQL: SHOW COLUMNS FROM `ht_power` [ RunTime:0.0006s ]
+SQL: DELETE FROM `ht_power` WHERE `form_id` = 156 [ RunTime:0.0189s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000066s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000095s ]
+
+[ 2015-09-03T09:45:40+08:00 ] 120.82.18.6 /s/tp/wwwroot/index.php?s=/demo/formdesign/form_id/564.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000077s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000037s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000065s ]
+SQL: SHOW COLUMNS FROM `ht_form` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `ht_form` WHERE `id` = 564 AND `is_del` = 0 LIMIT 1   [ RunTime:0.0003s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000038s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000067s ]
+

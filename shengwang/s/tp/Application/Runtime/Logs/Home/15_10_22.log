@@ -1,0 +1,176 @@
+[ 2015-10-22T09:39:24+08:00 ] 127.0.0.1 /s/tp/wwwroot/index.php?s=/demo/formdesign/form_id/143.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.037110s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001954s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001954s ]
+SQL: SHOW COLUMNS FROM `ht_form` [ RunTime:0.0049s ]
+SQL: SELECT * FROM `ht_form` WHERE `id` = 143 AND `is_del` = 0 LIMIT 1   [ RunTime:0.0020s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.029297s ]
+INFO: [ app_end ] --END-- [ RunTime:0.029297s ]
+
+[ 2015-10-22T09:39:38+08:00 ] 127.0.0.1 /s/tp/wwwroot/index.php?s=/demo/formdesign/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000977s ]
+SQL: SHOW COLUMNS FROM `ht_form` [ RunTime:0.0127s ]
+SQL: SELECT * FROM `ht_form` WHERE `id` = 143 AND `is_del` = 0 LIMIT 1   [ RunTime:0.0029s ]
+NOTIC: [8] Undefined index: value D:\project\dzxt\s\tp\Application\Home\Org\Formdesign.class.php 第 78 行.
+SQL: show tables like 'ht_form_data_143' [ RunTime:0.0029s ]
+SQL: SHOW COLUMNS FROM `ht_form_data_143` [ RunTime:0.0107s ]
+SQL: ALTER TABLE `ht_form_data_143` ADD COLUMN `data_5` varchar(255) NOT NULL DEFAULT '' comment '缩短的'; [ RunTime:0.0264s ]
+SQL: UPDATE `ht_form` SET `is_data_form`='1',`fields`='5',`content`='<p>月份：{|-<span leipiplugins=\"select\"><select orgwidth=\"150\" style=\"width: 150px;\" size=\"1\" leipiplugins=\"select\" title=\"月份\" name=\"data_1\"><option value=\"1月\">1月</option><option value=\"2月\">2月</option><option value=\"3月\">3月</option></select>&nbsp;&nbsp;</span>-|}</p><p>金额：<input name=\"data_3\" value=\"{macros}\" title=\"统计\" leipiplugins=\"macros\" orgtype=\"sys_data_arithmetic\" orgyear=\"2015\" orgformid=\"139\" orgformname=\"558\" orgmonth=\"08\" orgfield=\"`data_1`\" orgfieldname=\"单价\" orgfun=\"合计\" orghide=\"0\" orgfontsize=\"\" orgwidth=\"150\" style=\"width: 150px;\" type=\"text\"/></p><p><input orgtype=\"text\" orgwidth=\"150\" orgalign=\"left\" style=\"text-align: left; width: 150px;\" orghide=\"0\" leipiplugins=\"text\" value=\"\" title=\"金额\" name=\"data_2\" type=\"text\"/>{|-<span leipiplugins=\"radios\" name=\"data_5\" title=\"缩短的\"><input type=\"radio\" name=\"data_5\" value=\"地方\"  />地方&nbsp;<input type=\"radio\" name=\"data_5\" value=\"爱上对方地方的\"  />爱上对方地方的&nbsp;</span>-|}</p><p>统计：<input name=\"data_4\" value=\"{子列表}\" title=\"ok\" leipiplugins=\"sublist\" orgformid=\"143\" orgformname=\"月统计表3\" orgfield=\"`data_1`,月份;`data_2`,金额;`data_3`,ssds\" orghide=\"0\" style=\"width: 100%;\" type=\"text\"/></p>',`content_parse`='<p>月份：{data_1}</p><p>金额：{data_3}</p><p>{data_2}{data_5}</p><p>统计：{data_4}</p>',`content_data`='a:5:{i:0;a:8:{s:12:\"leipiplugins\";s:6:\"select\";s:8:\"orgwidth\";s:3:\"150\";s:5:\"style\";s:13:\"width: 150px;\";s:4:\"size\";s:1:\"1\";s:5:\"title\";s:6:\"月份\";s:4:\"name\";s:6:\"data_1\";s:5:\"value\";s:14:\"1月,2月,3月\";s:7:\"content\";s:263:\"<span leipiplugins=\"select\"><select orgwidth=\"150\" style=\"width: 150px;\" size=\"1\" leipiplugins=\"select\" title=\"月份\" name=\"data_1\"><option value=\"1月\">1月</option><option value=\"2月\">2月</option><option value=\"3月\">3月</option></select>&nbsp;&nbsp;</span>\";}i:1;a:18:{s:4:\"name\";s:6:\"data_3\";s:5:\"value\";s:8:\"{macros}\";s:5:\"title\";s:6:\"统计\";s:12:\"leipiplugins\";s:6:\"macros\";s:7:\"orgtype\";s:19:\"sys_data_arithmetic\";s:7:\"orgyear\";s:4:\"2015\";s:9:\"orgformid\";s:3:\"139\";s:11:\"orgformname\";s:3:\"558\";s:8:\"orgmonth\";s:2:\"08\";s:8:\"orgfield\";s:8:\"`data_1`\";s:12:\"orgfieldname\";s:6:\"单价\";s:6:\"orgfun\";s:6:\"合计\";s:7:\"orghide\";s:1:\"0\";s:11:\"orgfontsize\";s:0:\"\";s:8:\"orgwidth\";s:3:\"150\";s:5:\"style\";s:13:\"width: 150px;\";s:4:\"type\";s:4:\"text\";s:7:\"content\";s:303:\"<input name=\"data_3\" value=\"{macros}\" title=\"统计\" leipiplugins=\"macros\" orgtype=\"sys_data_arithmetic\" orgyear=\"2015\" orgformid=\"139\" orgformname=\"558\" orgmonth=\"08\" orgfield=\"`data_1`\" orgfieldname=\"单价\" orgfun=\"合计\" orghide=\"0\" orgfontsize=\"\" orgwidth=\"150\" style=\"width: 150px;\" type=\"text\"/>\";}i:2;a:11:{s:7:\"orgtype\";s:4:\"text\";s:8:\"orgwidth\";s:3:\"150\";s:8:\"orgalign\";s:4:\"left\";s:5:\"style\";s:31:\"text-align: left; width: 150px;\";s:7:\"orghide\";s:1:\"0\";s:12:\"leipiplugins\";s:4:\"text\";s:5:\"value\";s:0:\"\";s:5:\"title\";s:6:\"金额\";s:4:\"name\";s:6:\"data_2\";s:4:\"type\";s:4:\"text\";s:7:\"content\";s:176:\"<input orgtype=\"text\" orgwidth=\"150\" orgalign=\"left\" style=\"text-align: left; width: 150px;\" orghide=\"0\" leipiplugins=\"text\" value=\"\" title=\"金额\" name=\"data_2\" type=\"text\"/>\";}i:3;a:6:{s:12:\"leipiplugins\";s:6:\"radios\";s:5:\"title\";s:9:\"缩短的\";s:4:\"name\";s:6:\"data_5\";s:5:\"value\";s:28:\"地方,爱上对方地方的\";s:7:\"content\";s:225:\"<span leipiplugins=\"radios\" name=\"data_5\" title=\"缩短的\"><input type=\"radio\" name=\"data_5\" value=\"地方\"  />地方&nbsp;<input type=\"radio\" name=\"data_5\" value=\"爱上对方地方的\"  />爱上对方地方的&nbsp;</span>\";s:7:\"options\";a:2:{i:0;a:3:{s:4:\"name\";s:6:\"data_5\";s:5:\"value\";s:6:\"地方\";s:4:\"type\";s:5:\"radio\";}i:1;a:3:{s:4:\"name\";s:6:\"data_5\";s:5:\"value\";s:21:\"爱上对方地方的\";s:4:\"type\";s:5:\"radio\";}}}i:4;a:11:{s:4:\"name\";s:6:\"data_4\";s:5:\"value\";s:11:\"{子列表}\";s:5:\"title\";s:2:\"ok\";s:12:\"leipiplugins\";s:7:\"sublist\";s:9:\"orgformid\";s:3:\"143\";s:11:\"orgformname\";s:13:\"月统计表3\";s:8:\"orgfield\";s:45:\"`data_1`,月份;`data_2`,金额;`data_3`,ssds\";s:7:\"orghide\";s:1:\"0\";s:5:\"style\";s:12:\"width: 100%;\";s:4:\"type\";s:4:\"text\";s:7:\"content\";s:222:\"<input name=\"data_4\" value=\"{子列表}\" title=\"ok\" leipiplugins=\"sublist\" orgformid=\"143\" orgformname=\"月统计表3\" orgfield=\"`data_1`,月份;`data_2`,金额;`data_3`,ssds\" orghide=\"0\" style=\"width: 100%;\" type=\"text\"/>\";}}',`updatetime`='1445477978' WHERE `id` = 143 [ RunTime:0.0068s ]
+NOTIC: [2] unlink(../Application/Runtime/Temp/21d9a5adf0e55158019e1c301ccb9502.php): No such file or directory D:\project\dzxt\s\tp\ThinkPHP\Library\Think\Cache\Driver\File.class.php 第 157 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000976s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001953s ]
+
+[ 2015-10-22T09:39:40+08:00 ] 127.0.0.1 /s/tp/wwwroot/index.php?s=/demo/formdesign/form_id/143.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000977s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000976s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001953s ]
+SQL: SHOW COLUMNS FROM `ht_form` [ RunTime:0.0117s ]
+SQL: SELECT * FROM `ht_form` WHERE `id` = 143 AND `is_del` = 0 LIMIT 1   [ RunTime:0.0029s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000977s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001953s ]
+
+[ 2015-10-22T09:39:48+08:00 ] 127.0.0.1 /s/tp/wwwroot/index.php?s=/demo/formdesign/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000976s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000977s ]
+SQL: SHOW COLUMNS FROM `ht_form` [ RunTime:0.0088s ]
+SQL: SELECT * FROM `ht_form` WHERE `id` = 143 AND `is_del` = 0 LIMIT 1   [ RunTime:0.0020s ]
+NOTIC: [8] Undefined index: value D:\project\dzxt\s\tp\Application\Home\Org\Formdesign.class.php 第 78 行.
+SQL: show tables like 'ht_form_data_143' [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `ht_form_data_143` [ RunTime:0.0078s ]
+SQL: UPDATE `ht_form` SET `is_data_form`='1',`fields`='5',`content`='<p>月份：{|-<span leipiplugins=\"select\"><select orgwidth=\"150\" style=\"width: 150px;\" size=\"1\" leipiplugins=\"select\" title=\"月份\" name=\"data_1\"><option value=\"1月\">1月</option><option value=\"2月\">2月</option><option value=\"3月\">3月</option></select>&nbsp;&nbsp;</span>-|}</p><p>金额：<input name=\"data_3\" value=\"{macros}\" title=\"统计\" leipiplugins=\"macros\" orgtype=\"sys_data_arithmetic\" orgyear=\"2015\" orgformid=\"139\" orgformname=\"558\" orgmonth=\"08\" orgfield=\"`data_1`\" orgfieldname=\"单价\" orgfun=\"合计\" orghide=\"0\" orgfontsize=\"\" orgwidth=\"150\" style=\"width: 150px;\" type=\"text\"/></p><p><input orgtype=\"text\" orgwidth=\"150\" orgalign=\"left\" style=\"text-align: left; width: 150px;\" orghide=\"0\" leipiplugins=\"text\" value=\"\" title=\"金额\" name=\"data_2\" type=\"text\"/>{|-<span leipiplugins=\"radios\" name=\"data_5\" title=\"缩短的\"><input type=\"radio\" name=\"data_5\" value=\"地方\"  />地方&nbsp;<input type=\"radio\" name=\"data_5\" value=\"爱上对方地方的\"  />爱上对方地方的&nbsp;</span>-|}</p><p>统计：<input name=\"data_4\" value=\"{子列表}\" title=\"ok\" leipiplugins=\"sublist\" orgformid=\"143\" orgformname=\"月统计表3\" orgfield=\"`data_1`,月份;`data_2`,金额;`data_3`,ssds\" orghide=\"0\" style=\"width: 100%;\" type=\"text\"/></p>',`content_parse`='<p>月份：{data_1}</p><p>金额：{data_3}</p><p>{data_2}{data_5}</p><p>统计：{data_4}</p>',`content_data`='a:5:{i:0;a:8:{s:12:\"leipiplugins\";s:6:\"select\";s:8:\"orgwidth\";s:3:\"150\";s:5:\"style\";s:13:\"width: 150px;\";s:4:\"size\";s:1:\"1\";s:5:\"title\";s:6:\"月份\";s:4:\"name\";s:6:\"data_1\";s:5:\"value\";s:14:\"1月,2月,3月\";s:7:\"content\";s:263:\"<span leipiplugins=\"select\"><select orgwidth=\"150\" style=\"width: 150px;\" size=\"1\" leipiplugins=\"select\" title=\"月份\" name=\"data_1\"><option value=\"1月\">1月</option><option value=\"2月\">2月</option><option value=\"3月\">3月</option></select>&nbsp;&nbsp;</span>\";}i:1;a:18:{s:4:\"name\";s:6:\"data_3\";s:5:\"value\";s:8:\"{macros}\";s:5:\"title\";s:6:\"统计\";s:12:\"leipiplugins\";s:6:\"macros\";s:7:\"orgtype\";s:19:\"sys_data_arithmetic\";s:7:\"orgyear\";s:4:\"2015\";s:9:\"orgformid\";s:3:\"139\";s:11:\"orgformname\";s:3:\"558\";s:8:\"orgmonth\";s:2:\"08\";s:8:\"orgfield\";s:8:\"`data_1`\";s:12:\"orgfieldname\";s:6:\"单价\";s:6:\"orgfun\";s:6:\"合计\";s:7:\"orghide\";s:1:\"0\";s:11:\"orgfontsize\";s:0:\"\";s:8:\"orgwidth\";s:3:\"150\";s:5:\"style\";s:13:\"width: 150px;\";s:4:\"type\";s:4:\"text\";s:7:\"content\";s:303:\"<input name=\"data_3\" value=\"{macros}\" title=\"统计\" leipiplugins=\"macros\" orgtype=\"sys_data_arithmetic\" orgyear=\"2015\" orgformid=\"139\" orgformname=\"558\" orgmonth=\"08\" orgfield=\"`data_1`\" orgfieldname=\"单价\" orgfun=\"合计\" orghide=\"0\" orgfontsize=\"\" orgwidth=\"150\" style=\"width: 150px;\" type=\"text\"/>\";}i:2;a:11:{s:7:\"orgtype\";s:4:\"text\";s:8:\"orgwidth\";s:3:\"150\";s:8:\"orgalign\";s:4:\"left\";s:5:\"style\";s:31:\"text-align: left; width: 150px;\";s:7:\"orghide\";s:1:\"0\";s:12:\"leipiplugins\";s:4:\"text\";s:5:\"value\";s:0:\"\";s:5:\"title\";s:6:\"金额\";s:4:\"name\";s:6:\"data_2\";s:4:\"type\";s:4:\"text\";s:7:\"content\";s:176:\"<input orgtype=\"text\" orgwidth=\"150\" orgalign=\"left\" style=\"text-align: left; width: 150px;\" orghide=\"0\" leipiplugins=\"text\" value=\"\" title=\"金额\" name=\"data_2\" type=\"text\"/>\";}i:3;a:6:{s:12:\"leipiplugins\";s:6:\"radios\";s:4:\"name\";s:6:\"data_5\";s:5:\"title\";s:9:\"缩短的\";s:5:\"value\";s:28:\"地方,爱上对方地方的\";s:7:\"content\";s:225:\"<span leipiplugins=\"radios\" name=\"data_5\" title=\"缩短的\"><input type=\"radio\" name=\"data_5\" value=\"地方\"  />地方&nbsp;<input type=\"radio\" name=\"data_5\" value=\"爱上对方地方的\"  />爱上对方地方的&nbsp;</span>\";s:7:\"options\";a:2:{i:0;a:3:{s:4:\"name\";s:6:\"data_5\";s:5:\"value\";s:6:\"地方\";s:4:\"type\";s:5:\"radio\";}i:1;a:3:{s:4:\"name\";s:6:\"data_5\";s:5:\"value\";s:21:\"爱上对方地方的\";s:4:\"type\";s:5:\"radio\";}}}i:4;a:11:{s:4:\"name\";s:6:\"data_4\";s:5:\"value\";s:11:\"{子列表}\";s:5:\"title\";s:2:\"ok\";s:12:\"leipiplugins\";s:7:\"sublist\";s:9:\"orgformid\";s:3:\"143\";s:11:\"orgformname\";s:13:\"月统计表3\";s:8:\"orgfield\";s:45:\"`data_1`,月份;`data_2`,金额;`data_3`,ssds\";s:7:\"orghide\";s:1:\"0\";s:5:\"style\";s:12:\"width: 100%;\";s:4:\"type\";s:4:\"text\";s:7:\"content\";s:222:\"<input name=\"data_4\" value=\"{子列表}\" title=\"ok\" leipiplugins=\"sublist\" orgformid=\"143\" orgformname=\"月统计表3\" orgfield=\"`data_1`,月份;`data_2`,金额;`data_3`,ssds\" orghide=\"0\" style=\"width: 100%;\" type=\"text\"/>\";}}',`updatetime`='1445477988' WHERE `id` = 143 [ RunTime:0.0146s ]
+NOTIC: [2] unlink(../Application/Runtime/Temp/21d9a5adf0e55158019e1c301ccb9502.php): No such file or directory D:\project\dzxt\s\tp\ThinkPHP\Library\Think\Cache\Driver\File.class.php 第 157 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000977s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000977s ]
+
+[ 2015-10-22T09:39:49+08:00 ] 127.0.0.1 /s/tp/wwwroot/index.php?s=/demo/formdesign/form_id/143.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000976s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000976s ]
+SQL: SHOW COLUMNS FROM `ht_form` [ RunTime:0.0059s ]
+SQL: SELECT * FROM `ht_form` WHERE `id` = 143 AND `is_del` = 0 LIMIT 1   [ RunTime:0.0020s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000977s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000977s ]
+
+[ 2015-10-22T09:40:03+08:00 ] 127.0.0.1 /s/tp/wwwroot/index.php?s=/Home/Demo/add.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000976s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000977s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001954s ]
+SQL: SHOW COLUMNS FROM `ht_form` [ RunTime:0.0059s ]
+SQL: INSERT INTO `ht_form` (`form_name`,`form_desc`,`updatetime`,`type`,`dateline`,`pid`,`creater_uid`) VALUES ('时代发生的发','','1445478003','0','1445478003','52','18') [ RunTime:0.0117s ]
+NOTIC: [2] unlink(../Application/Runtime/Temp/21d9a5adf0e55158019e1c301ccb9502.php): No such file or directory D:\project\dzxt\s\tp\ThinkPHP\Library\Think\Cache\Driver\File.class.php 第 157 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001953s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001953s ]
+
+[ 2015-10-22T09:40:06+08:00 ] 127.0.0.1 /s/tp/wwwroot/index.php?s=/demo/formdesign/form_id/204.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000977s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002930s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002930s ]
+SQL: SHOW COLUMNS FROM `ht_form` [ RunTime:0.0117s ]
+SQL: SELECT * FROM `ht_form` WHERE `id` = 204 AND `is_del` = 0 LIMIT 1   [ RunTime:0.0020s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000977s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000977s ]
+
+[ 2015-10-22T09:40:19+08:00 ] 127.0.0.1 /s/tp/wwwroot/index.php?s=/demo/formdesign/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000977s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000977s ]
+SQL: SHOW COLUMNS FROM `ht_form` [ RunTime:0.0049s ]
+SQL: SELECT * FROM `ht_form` WHERE `id` = 204 AND `is_del` = 0 LIMIT 1   [ RunTime:0.0010s ]
+SQL: show tables like 'ht_form_data_204' [ RunTime:0.0020s ]
+SQL: CREATE TABLE `ht_form_data_204` (
+              `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+              `uid` int(10) unsigned NOT NULL DEFAULT '0',
+              `foreign_id` int(10) unsigned NOT NULL DEFAULT '0',
+              `data_1` varchar(255) NOT NULL DEFAULT '' comment '阿什顿飞',
+              `is_del` tinyint(1) unsigned NOT NULL DEFAULT '0',
+              `updatetime` int(10) unsigned NOT NULL DEFAULT '0',
+              `dateline` int(10) unsigned NOT NULL DEFAULT '0',
+              PRIMARY KEY (`id`),
+              KEY `uid` (`uid`),
+              KEY `foreign_id` (`foreign_id`)
+            ) ENGINE=InnoDB DEFAULT CHARSET=utf8; [ RunTime:0.0098s ]
+SQL: UPDATE `ht_form` SET `is_data_form`='0',`fields`='1',`content`='<p>{|-<span leipiplugins=\"radios\" name=\"data_1\" title=\"阿什顿飞\"><input type=\"radio\" name=\"data_1\" value=\"发的撒大事\"  />发的撒大事&nbsp;<input type=\"radio\" name=\"data_1\" value=\"的说法都是的说法\"  />的说法都是的说法&nbsp;</span>-|}</p>',`content_parse`='<p>{data_1}</p>',`content_data`='a:1:{i:0;a:6:{s:12:\"leipiplugins\";s:6:\"radios\";s:5:\"title\";s:12:\"阿什顿飞\";s:4:\"name\";s:6:\"data_1\";s:5:\"value\";s:40:\"发的撒大事,的说法都是的说法\";s:7:\"content\";s:252:\"<span leipiplugins=\"radios\" name=\"data_1\" title=\"阿什顿飞\"><input type=\"radio\" name=\"data_1\" value=\"发的撒大事\"  />发的撒大事&nbsp;<input type=\"radio\" name=\"data_1\" value=\"的说法都是的说法\"  />的说法都是的说法&nbsp;</span>\";s:7:\"options\";a:2:{i:0;a:3:{s:4:\"name\";s:6:\"data_1\";s:5:\"value\";s:15:\"发的撒大事\";s:4:\"type\";s:5:\"radio\";}i:1;a:3:{s:4:\"name\";s:6:\"data_1\";s:5:\"value\";s:24:\"的说法都是的说法\";s:4:\"type\";s:5:\"radio\";}}}}',`updatetime`='1445478019' WHERE `id` = 204 [ RunTime:0.0029s ]
+NOTIC: [2] unlink(../Application/Runtime/Temp/21d9a5adf0e55158019e1c301ccb9502.php): No such file or directory D:\project\dzxt\s\tp\ThinkPHP\Library\Think\Cache\Driver\File.class.php 第 157 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000977s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000977s ]
+
+[ 2015-10-22T09:40:21+08:00 ] 127.0.0.1 /s/tp/wwwroot/index.php?s=/demo/formdesign/form_id/204.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000977s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000977s ]
+SQL: SHOW COLUMNS FROM `ht_form` [ RunTime:0.0059s ]
+SQL: SELECT * FROM `ht_form` WHERE `id` = 204 AND `is_del` = 0 LIMIT 1   [ RunTime:0.0020s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000976s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000976s ]
+
+[ 2015-10-22T09:40:55+08:00 ] 127.0.0.1 /s/tp/wwwroot/index.php?s=/demo/formdesign/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.015625s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.015625s ]
+SQL: SHOW COLUMNS FROM `ht_form` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `ht_form` WHERE `id` = 204 AND `is_del` = 0 LIMIT 1   [ RunTime:0.0156s ]
+NOTIC: [8] Undefined index: value D:\project\dzxt\s\tp\Application\Home\Org\Formdesign.class.php 第 78 行.
+SQL: show tables like 'ht_form_data_204' [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ht_form_data_204` [ RunTime:0.0156s ]
+SQL: ALTER TABLE `ht_form_data_204` ADD COLUMN `data_2` varchar(255) NOT NULL DEFAULT '' comment '奋斗奋斗是谁的'; [ RunTime:0.0156s ]
+SQL: UPDATE `ht_form` SET `is_data_form`='0',`fields`='2',`content`='<p>{|-<span leipiplugins=\"radios\" name=\"data_1\" title=\"阿什顿飞\"><input type=\"radio\" name=\"data_1\" value=\"发的撒大事\"  />发的撒大事&nbsp;<input type=\"radio\" name=\"data_1\" value=\"的说法都是的说法\"  />的说法都是的说法&nbsp;</span>-|}</p><p>{|-<span leipiplugins=\"select\"><select orgwidth=\"150\" style=\"width: 150px;\" size=\"1\" leipiplugins=\"select\" title=\"奋斗奋斗是谁的\" name=\"data_2\"><option selected=\"selected\" value=\"\">&nbsp;</option><option value=\"的方式\">的方式</option><option value=\"对方的方式\">对方的方式</option><option value=\"但是丰富的\">但是丰富的</option></select>&nbsp;&nbsp;</span>-|}</p>',`content_parse`='<p>{data_1}</p><p>{data_2}</p>',`content_data`='a:2:{i:0;a:6:{s:12:\"leipiplugins\";s:6:\"radios\";s:4:\"name\";s:6:\"data_1\";s:5:\"title\";s:12:\"阿什顿飞\";s:5:\"value\";s:40:\"发的撒大事,的说法都是的说法\";s:7:\"content\";s:252:\"<span leipiplugins=\"radios\" name=\"data_1\" title=\"阿什顿飞\"><input type=\"radio\" name=\"data_1\" value=\"发的撒大事\"  />发的撒大事&nbsp;<input type=\"radio\" name=\"data_1\" value=\"的说法都是的说法\"  />的说法都是的说法&nbsp;</span>\";s:7:\"options\";a:2:{i:0;a:3:{s:4:\"name\";s:6:\"data_1\";s:5:\"value\";s:15:\"发的撒大事\";s:4:\"type\";s:5:\"radio\";}i:1;a:3:{s:4:\"name\";s:6:\"data_1\";s:5:\"value\";s:24:\"的说法都是的说法\";s:4:\"type\";s:5:\"radio\";}}}i:1;a:9:{s:12:\"leipiplugins\";s:6:\"select\";s:8:\"orgwidth\";s:3:\"150\";s:5:\"style\";s:13:\"width: 150px;\";s:4:\"size\";s:1:\"1\";s:5:\"title\";s:21:\"奋斗奋斗是谁的\";s:4:\"name\";s:6:\"data_2\";s:8:\"selected\";s:8:\"selected\";s:5:\"value\";s:42:\",的方式,对方的方式,但是丰富的\";s:7:\"content\";s:384:\"<span leipiplugins=\"select\"><select orgwidth=\"150\" style=\"width: 150px;\" size=\"1\" leipiplugins=\"select\" title=\"奋斗奋斗是谁的\" name=\"data_2\"><option selected=\"selected\" value=\"\">&nbsp;</option><option value=\"的方式\">的方式</option><option value=\"对方的方式\">对方的方式</option><option value=\"但是丰富的\">但是丰富的</option></select>&nbsp;&nbsp;</span>\";}}',`updatetime`='1445478055' WHERE `id` = 204 [ RunTime:0.0156s ]
+NOTIC: [2] unlink(../Application/Runtime/Temp/21d9a5adf0e55158019e1c301ccb9502.php): No such file or directory D:\project\dzxt\s\tp\ThinkPHP\Library\Think\Cache\Driver\File.class.php 第 157 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2015-10-22T09:40:56+08:00 ] 127.0.0.1 /s/tp/wwwroot/index.php?s=/demo/formdesign/form_id/204.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `ht_form` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `ht_form` WHERE `id` = 204 AND `is_del` = 0 LIMIT 1   [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+

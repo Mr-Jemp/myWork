@@ -1,0 +1,883 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>流程图DEMO</title>
+    <!--[if lt IE 9]>
+<?import namespace="v" implementation="#default#VML" ?>
+<![endif]-->
+    <!--<link rel="stylesheet" type="text/css" href="css/GooFlow2.css"/>-->
+    <link rel="stylesheet" type="text/css" href="css/GooFlow.css" />
+    <link rel="Stylesheet" type="text/css" href="css/bootstrap.min.css" />
+    <link rel="Stylesheet" type="text/css" href="js/lib/ligerUI/skins/Aqua/css/ligerui-all.css" />
+
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    
+   
+
+
+    <script src="js/lib/ligerUI/js/core/base.js" type="text/javascript"></script>
+
+    <script src="js/lib/ligerUI/js/plugins/ligerLayout.js" type="text/javascript"></script>
+
+    <script src="js/lib/ligerUI/js/plugins/ligerComboBox.js" type="text/javascript"></script>
+
+    <script src="js/lib/ligerUI/js/plugins/ligerSpinner.js" type="text/javascript"></script>
+
+    <script src="js/lib/ligerUI/js/plugins/ligerCheckBox.js" type="text/javascript"></script>
+
+    <script src="js/lib/ligerUI/js/plugins/ligerResizable.js" type="text/javascript"></script>
+
+    <script src="js/lib/ligerUI/js/plugins/ligerGrid.js" type="text/javascript"></script>
+
+    <script src="js/lib/ligerUI/js/plugins/ligerListBox.js" type="text/javascript"></script>
+
+    <script src="js/lib/ligerUI/js/plugins/ligerButton.js" type="text/javascript"></script>
+
+    <script src="js/lib/ligerUI/js/plugins/ligerDialog.js" type="text/javascript"></script>
+
+    <script src="js/lib/ligerUI/js/plugins/ligerTextBox.js" type="text/javascript"></script>
+
+    <script src="js/lib/ligerUI/js/plugins/ligerDrag.js" type="text/javascript"></script>
+    
+    <script src="js/lib/ligerUI/js/plugins/ligerDateEditor.js" type="text/javascript"></script>
+   
+    <script type="text/javascript" src="js/GooFunc.js"></script>
+
+    <script type="text/javascript" src="js/json2.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="css/default.css" />
+
+    <script type="text/javascript" src="js/GooFlow.js"></script>
+    <!-- 初始化层-->
+    <script type="text/javascript">
+        var checkedCustomer = [];
+        var sta_table;
+        var property = {
+            width: 600,
+            height: 800,
+            toolBtns: ["start", "end", "role", "chat", "complex"],
+            haveHead: true,
+            headBtns: ["new", "save", "undo", "redo", "reload"], //如果haveHead=true，则定义HEAD区的按钮
+            haveTool: true,
+            haveGroup: true,
+            useOperStack: true
+        };
+        var remark = {
+            cursor: "选择指针",
+            direct: "转换连线",
+            start: "开始结点",
+            "end round": "结束结点",
+            "complex": "复合结点",
+            "role": "权限节点",
+            chat: "决策结点",
+            group: "组织划分框编辑开关"
+           
+
+        };
+
+        function GetQueryString(name) {
+            var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)");
+            var r = window.location.search.substr(1).match(reg);
+            if (r != null) return unescape(r[2]); return null;
+        }
+
+        var demo;
+        var starl_TableName;
+        $(document).ready(function() {
+
+
+
+
+
+            $("#layout1").ligerLayout({ rightWidth: 250 });
+            $("#starl").css("display", "none");
+            $("#chat").css("display", "none");
+            $("#complex").css("display", "none");
+            $("#user").css("display", "none");
+            $("#chat_symbol").ligerComboBox({ width: 200 });
+            $("#logic").ligerComboBox({ width: 200 });
+            $("#name").ligerTextBox({ width: 200 });
+            $("#isfine").ligerTextBox({ width: 200 });
+            $("#chat_sort").ligerComboBox({ width: 200 });
+            $("#chat_grouping").ligerComboBox({ isShowCheckBox: true, isMultiSelect: true, Width: 200 });
+            $("#chat_tabColum").ligerComboBox({ width: 200 });
+            $("#chat_where").ligerComboBox({ width: 200 });
+            $("#CookieYN").ligerCheckBox({ disabled: false });
+
+            $("#starl_JsonTitle").ligerTextBox({ width: 200 });
+            $("#TriggerName").ligerTextBox({ width: 200 });
+            $("#TriggerType").ligerComboBox({ width: 200 });
+            $("#complex_operation").ligerComboBox({ width: 200 });
+            $("#complex_tabColumn").ligerComboBox({ width: 200 });
+            $("#chat_Fun").ligerComboBox({ width: 200,
+                onSelected: function(newvalue) {
+                    var vs = newvalue;
+                    if (vs == "select") {
+                        $("#chat_iswhere").css("display", "block");
+                        $("#chat_px").css("display", "block");
+                        $("#chat_columns").css("display", "block");
+                    }
+                    else if (vs == "update") {
+
+                        $("#chat_iswhere").css("display", "block");
+                        $("#chat_px").css("display", "none");
+                        $("#chat_columns").css("display", "block");
+                    } else if (vs == "delete from") {
+                        $("#chat_iswhere").css("display", "block");
+                        $("#chat_px").css("display", "none");
+                        $("#chat_columns").css("display", "none");
+
+                    } else {
+                        $("#chat_iswhere").css("display", "none");
+                        $("#chat_px").css("display", "none");
+                        $("#chat_columns").css("display", "block");
+
+                    }
+
+                    $("chat_tables").val("");
+                    $("chat_tabColum").val("");
+                    $("chat_where").val("");
+                    $("chat_sort").val("");
+                    $("chat_grouping").val("");
+                    $("CookieYN").checked = false;
+                }
+            });
+
+            $("#chat_tables").ligerComboBox(
+                        {
+                            url: "Handler/Tables.ashx?r=" + Math.random() + "&action=GetTable",
+                            valueField: 'tablename',
+                            textField: 'tablename',
+                            autocomplete: true,
+                            width: 200,
+                            onSelected: function(newvalue) {
+                                SetData(newvalue)
+                            }
+                        });
+
+            //ajax(无刷新)获取数据库信息进行联动效果
+            $("#complex_name").ligerComboBox(
+                {
+                    url: "Handler/Tables.ashx?r=" + Math.random() + "&action=GetTable",
+                    valueField: 'tablename',
+                    textField: 'tablename',
+                    selectBoxWidth: 200,
+                    autocomplete: true,
+                    width: 200,
+                    onSelected: function(newvalue) {
+                        $("#complex_tabColumn").ligerComboBox(
+                            {
+                                url: "Handler/Tables.ashx?r=" + Math.random() + "&action=GetFormField&TABLE=" + newvalue,
+                                valueField: 'column_name',
+                                textField: 'column_name',
+                                selectBoxWidth: 200,
+                                autocomplete: true,
+                                width: 200
+                            }
+                        );
+                    }
+                }
+            );
+
+            demo = $.createGooFlow($("#demo"), property);
+
+            demo.setNodeRemarks(remark);
+            demo.clearData();
+
+            demo.onBtnSaveClick = function() {
+                SaveJson();
+            }
+
+            demo.GetNodesJson = function() {
+                GetNodes();
+            }
+
+            var id = GetQueryString("id");
+            if (id != null) {
+
+                Update(id)
+            }
+            else {
+                demo.onBtnNewClick = function() {
+                    Add();
+                }
+                Add();
+            }
+
+        });
+    </script>
+    
+      <!-- gooflow-->
+    <script type="text/javascript">
+        function Add() {
+
+            jsondata = { "title": "newFlow_1", "nodes": { "start_1": { "name": "start_1", "left": 200, "top": 25, "type": "start", "command": "", "TriggerName": "", "TriggerType": "", "TableName": "", "FunctionName": "", "width": 86, "height": 24, "alt": true} }, "lines": {}, "areas": {}, "initNum": 2 };
+
+            demo.loadData(jsondata);
+        }
+
+
+
+        function Update(id) {
+
+            $.ajax({
+
+                type: "GET",
+
+                url: "Handler/Mainpanel.ashx?r=" + Math.random() + "&action=GetJson&id=" + id,
+
+                dataType: "json",
+                success: function(data, txtSataus) {
+                    demo.loadData(data);
+                },
+                error: function(XMLHttpRequest, textStatus, errorThrown) {
+                    return "";
+                }
+            });
+
+
+
+        }
+
+
+        // 双击 获取Node
+
+        function GetNodes() {
+            var jsondata = demo.exportNodes();
+            var dsdds = JSON.stringify(jsondata);
+
+            if (jsondata.type == "start") {
+
+                $("#starl").css("display", "block");
+                $("#chat").css("display", "none");
+                $("#complex").css("display", "none");
+                $("#user").css("display", "none");
+
+
+
+                $("#starl_TableName").ligerComboBox({
+                    url: "Handler/Tables.ashx?r=" + Math.random() + "&action=GetTable",
+                    valueField: 'tablename',
+                    textField: 'tablename',
+                    selectBoxWidth: 200,
+                    autocomplete: true,
+                    width: 200,
+                    onSelected: function(newvalue) {
+                        starl_TableName = newvalue;
+
+                    }
+
+                });
+
+                var starl_JsonTitle = jsondata.name;
+                var TriggerName = jsondata.TriggerName;
+                var TriggerType = jsondata.TriggerType;
+                var starl_TableName = jsondata.TableName;
+                var FunctionName = jsondata.FunctionName;
+                $("#starl_JsonTitle").val(starl_JsonTitle);
+                $("#TriggerName").val(TriggerName);
+                $("#TriggerType").val(TriggerType);
+                $("#starl_TableName").val(starl_TableName);
+                $("#TriggerName").val(FunctionName);
+
+            } else if (jsondata.type == 'chat') {
+
+                $("#starl").css("display", "none");
+                $("#chat").css("display", "block");
+                $("#complex").css("display", "none");
+                $("#user").css("display", "none");
+                $("#name").val(jsondata.name);
+                $("#commsql").html(jsondata.sql);
+                $("#chat_tables").val(jsondata.chat_table);
+                $("#chat_where").val(jsondata.chat_where);
+                $("#chat_grouping").val(jsondata.chat_group);
+
+                $("#chat_tabColum").val(jsondata.chat_tbcolumn);
+                $("#chat_sort").val(jsondata.chat_logic);
+
+            } else if (jsondata.type == 'complex') {
+                $("#starl").css("display", "none");
+                $("#chat").css("display", "none");
+                $("#complex").css("display", "block");
+                $("#user").css("display", "none");
+                $("#complex_name").val(jsondata.TatbleName);
+                $("#complex_tabColumn").val(jsondata.TatblField);
+                var rule = jsondata.Rule;
+
+                $("#complex_operation option:contains('" + rule + "')").attr("selected", "selected");
+
+                $("#isfine").val(jsondata.Result);
+            } else if (jsondata.type == 'role') {
+
+                $("#starl").css("display", "none");
+                $("#chat").css("display", "none");
+                $("#complex").css("display", "none");
+                $("#user").css("display", "block");
+                $("#user_root").ligerComboBox({
+                url: "Handler/UserRoot.ashx?r=" + Math.random() + "&action=GetRoot",
+                    valueField: 'id',
+                    textField: 'id',
+                    selectBoxWidth: 150,
+                    autocomplete: true,
+                    width: 200
+                });
+
+
+
+            }
+
+        }
+
+        function SaveJson(id) {
+
+            var id = GetQueryString("id");
+            if (id == null)
+                id = 0;
+
+            var jsondata = demo.exportData();
+
+            var TriggerName = jsondata.nodes.start_1.TriggerName;
+
+            if (TriggerName == "") {
+                alert("请先设置 触发器信息");
+                return;
+            }
+            $.ajax({
+                type: "GET",
+                url: "Handler/Mainpanel.ashx?action=SaveJson&r=" + Math.random() + "&jsonText=" + JSON.stringify(jsondata) + "&id=" + id,
+                success: function(data, txtSataus) {
+                    alert("保存成功");
+                    window.parent.Refresh();
+                    window.parent.$dfDialog.close();
+                },
+                error: function(XMLHttpRequest, textStatus, errorThrown) {
+                    return "";
+                }
+            });
+
+        }
+
+
+
+        function f_onCheckAllRow(checked) {
+            for (var rowid in this.records) {
+                if (checked)
+                    addCheckedCustomer(this.records[rowid]['column_name']);
+                else
+                    removeCheckedCustomer(this.records[rowid]['column_name']);
+            }
+
+            for (var i = 0; i < checkedCustomer.length; i++) {
+                dataGrid1.push({ zds: checkedCustomer[i] });
+
+            }
+
+        }
+
+        function findCheckedCustomer(column_name) {
+            for (var i = 0; i < checkedCustomer.length; i++) {
+                if (checkedCustomer[i] == column_name) return i;
+            }
+            return -1;
+        }
+        function addCheckedCustomer(column_name) {
+            if (findCheckedCustomer(column_name) == -1)
+                checkedCustomer.push(column_name);
+        }
+        function removeCheckedCustomer(column_name) {
+            var i = findCheckedCustomer(column_name);
+            if (i == -1) return;
+            checkedCustomer.splice(i, 1);
+        }
+        function f_isChecked(rowdata) {
+            if (findCheckedCustomer(rowdata.column_name) == -1)
+                return false;
+            return true;
+        }
+        function f_onCheckRow(checked, data) {
+            if (checked) addCheckedCustomer(data.column_name);
+            else removeCheckedCustomer(data.column_name);
+
+        }
+
+        function getCustomer() {
+
+            for (var i = 0; i < checkedCustomer.length; i++) {
+                alert(checkedCustomer[i]);
+            }
+        }
+
+
+    
+    </script>
+
+
+    <!-- chat-->
+    <script type="text/javascript">
+
+        function chat_save() {
+            var charname = $("#name").val();
+            var chat_operation = document.getElementById("chat_Fun").value;
+            var tables = $("#chat_tables").val();
+            var chat_where = $("#chat_where").val();
+            var grouping = $("#chat_grouping").val();
+            var newgrouping = grouping.replace(/;/g, ",");
+            var sql_Column = $("#chat_tabColum").val();
+            var sort = $("#chat_sort").val();
+            var isfine = $("input[type='checkbox']").is(':checked');
+
+            var sql = "";
+
+            if (chat_operation == "select") {
+
+                if (tables == "") {
+                    alert("请选择操作表");
+                    return;
+                } else if (sql_Column == "") {
+                    alert("请选择字段");
+                    return;
+                }
+
+                if (isfine) {
+                    chat_operation = chat_operation + " DISTINCT ";
+
+                }
+                sql = chat_operation + " " + sql_Column + " from \"" + tables + "\" ";
+                if (chat_where != "") {
+                    sql = sql + " where " + chat_where;
+                }
+                if (grouping != "") {
+                    sql = sql + "  group by " + newgrouping;
+                }
+                if (sort != "") {
+                    sql = sql + "  order by " + sort;
+                }
+
+                $("#commsql").html(sql);
+            }
+            else if (chat_operation == "update") {
+
+
+
+                if (tables == "") {
+                    alert("请选择操作表");
+                    return;
+                } else {
+                    sql = chat_operation + " " + tables + "  set " + sql_Column;
+                }
+                if (chat_where != "") {
+                    sql = sql + " where " + chat_where;
+                }
+
+
+                $("#commsql").html(sql);
+
+            } else if (chat_operation == "delete from") {
+
+                if (tables == "") {
+                    alert("请选择操作表");
+                    return;
+                } else {
+                    sql = chat_operation + " \"" + tables + "\" ";
+                }
+                if (chat_where != "") {
+
+                    sql = sql + " where " + chat_where;
+                }
+
+                $("#commsql").html(sql);
+
+            }
+
+            else if (chat_operation == " insert into") {
+
+                sql_Column = $("#chat_tabColum").ligerComboBox().getText(); // $("#chat_InsertField").val();
+                var values = $("#chat_tabColum").ligerComboBox().getValue(); // $("#chat_InsertValues").val();
+                sql = chat_operation + " \"" + tables + "\"(" + sql_Column + ")  values (" + values + ")";
+                $("#commsql").html(sql);
+
+            }
+
+
+            demo.SetCharJson(charname, sql, tables, sql_Column, chat_where, sort, grouping);
+
+
+        }
+
+
+
+        function f_selectField() {
+          
+            if (chat_Settable == "")
+                return;
+
+            var chat_operation = document.getElementById("chat_Fun").value;
+            if (chat_operation == " insert into") {
+                $.ligerDialog.open({ title: '设置插入字段值', name: 'column_name', width: 700, height: 300, url: 'SetFieldForInsert.html?r=' + Math.random() + '&value=' + chat_Settable + '&starl_value=' + sta_table, buttons: [
+                    { text: '确定', onclick: f_selectFieldOK }, { text: '取消', onclick: f_selectFieldCancel}]
+                });
+            }
+            else {
+                $.ligerDialog.open({ title: '设置字段值', name: 'column_name', width: 700, height: 300, url: 'SetField.html?r=' + Math.random() + '&value=' + chat_Settable+ '&starl_value=' + sta_table, buttons: [
+                    { text: '确定', onclick: f_selectFieldOK }, { text: '取消', onclick: f_selectFieldCancel}]
+                });
+            }
+
+            return false;
+        }
+        function f_selectFieldOK(item, dialog) {
+            var fn = dialog.frame.f_select || dialog.frame.window.f_select;
+            var chat_operation = document.getElementById("chat_Fun").value;
+            var data = fn();
+            if (!data) {
+                alert('请选择行!');
+                return;
+            }
+
+            var manager = dialog.frame.g;
+            var sql_Column = "";
+
+            var sql_Field = "";
+            var sql_Values = "";
+
+            for (var i in manager.getCheckedRows()) {
+                var column_name = manager.getRow(i).column_name;
+                var column_name_as = manager.getRow(i).column_name_as;
+
+                if (i > 0) {
+                    sql_Column = sql_Column + ",";
+                }
+
+                if (chat_operation == "select") {
+                    sql_Column = sql_Column + column_name + " as \"" + column_name_as + "\" ";
+                } else if (chat_operation == "update") {
+                    sql_Column = sql_Column + column_name + " = '" + column_name_as + "' ";
+                }
+                else if (chat_operation == " insert into") {
+                    if (sql_Field == "") {
+                        sql_Field = sql_Field + column_name;
+                    }
+                    else {
+                        sql_Field = sql_Field + " ," + column_name;
+                    }
+
+                    if (sql_Values == "") {
+                        sql_Values = sql_Values + " '" + column_name_as + "' ";
+                    }
+                    else {
+                        sql_Values = sql_Values + " ,'" + column_name_as + "' ";
+                    }
+
+                }
+
+            }
+
+            if (chat_operation == " insert into") {
+                $("#chat_tabColum").ligerComboBox().setText(sql_Field);
+                $("#chat_tabColum").ligerComboBox().setValue(sql_Values);
+
+                $("#chat_tabColum").val(sql_Field);
+            }
+            else {
+                $("#chat_tabColum").val(sql_Column);
+            }
+
+            dialog.close();
+        }
+        function f_selectFieldCancel(item, dialog) {
+            dialog.close();
+        }
+        function f_selectSort() {
+            if (chat_Settable == "")
+                return;
+
+            $.ligerDialog.open({ title: '设置排序', name: 'column_name', url: 'SetSort.html?r=' + Math.random() + '&value=' + chat_Settable, buttons: [
+                { text: '确定', onclick: f_selectSortOK },
+                { text: '取消', onclick: f_selectSortCancel }
+            ]
+            });
+            return false;
+        }
+        function f_selectSortOK(item, dialog) {
+            var fn = dialog.frame.f_select || dialog.frame.window.f_select;
+            var data = fn();
+            if (!data) {
+                alert('请选择行!');
+                return;
+            }
+
+            var manager = dialog.frame.g;
+            var sql_sort = "";
+
+            for (var i in manager.getCheckedRows()) {
+                var column_name = manager.getRow(i).column_name;
+                var sort = manager.getRow(i).column_name_as;
+
+                if (i > 0) {
+                    sql_sort = sql_sort + ",";
+                }
+
+                if (sort == "1") {
+                    sql_sort = sql_sort + " " + column_name + " asc ";
+                } else {
+                    sql_sort = sql_sort + " " + column_name + " desc ";
+                }
+
+            }
+
+            $("#chat_sort").val(sql_sort);
+
+            dialog.close();
+        }
+        function f_selectSortCancel(item, dialog) {
+            dialog.close();
+        }
+
+        function f_selectWhere() {
+            if (chat_Settable == "")
+                return;
+
+            $.ligerDialog.open({ title: '条件', name: 'column_name', url: 'Where.html?r=' + Math.random() + '&value=' + chat_Settable, width: 520, height: 430, buttons: [
+                { text: '确定', onclick: f_selectWhereOK },
+                { text: '取消', onclick: f_selectWhereCancel }
+            ]
+            });
+            return false;
+        }
+        function f_selectWhereOK(item, dialog) {
+            var chat_where = dialog.frame.document.getElementById("chat_where").value;
+            if (chat_where != "") {
+                dialog.frame.add();
+            }
+
+            var manager = dialog.frame.$("#Flowlistbox").ligerListBox();
+            var sql_where = "";
+
+            for (var i in manager.data) {
+                sql_where = sql_where + manager.data[i].text + " ";
+            }
+
+            $("#chat_where").val(sql_where);
+
+            dialog.close();
+
+
+        }
+        function f_selectWhereCancel(item, dialog) {
+            dialog.close();
+        }
+
+        var chat_Settable = "";
+        function SetData(value) {
+
+            chat_Settable = value;
+            $("#chat_tabColum").ligerComboBox({ onBeforeOpen: f_selectField, valueFieldID: 'chat_tabColum' });
+            $("#chat_sort").ligerComboBox({ onBeforeOpen: f_selectSort, valueFieldID: 'chat_sort' });
+            $("#chat_where").ligerComboBox({ onBeforeOpen: f_selectWhere, valueFieldID: 'chat_where' });
+            $("#chat_grouping").ligerComboBox({ isShowCheckBox: true, isMultiSelect: true, Width: 200, url: 'Handler/Tables.ashx?r=' + Math.random() + '&action=GetTabFieldForList&TABLE=' + value, textField: 'column_name', columns: [{ header: '列名', name: 'column_name', align: 'left', minWidth: 200}] });
+
+        }
+        
+    </script>
+     <!-- start-->
+    <script type="text/javascript">
+        function starl_save() {
+
+            var starl_JsonTitle = document.getElementById("starl_JsonTitle").value;
+
+            var TriggerName = document.getElementById("TriggerName").value;
+            if (TriggerName == "") {
+                alert("请输入“触发器名称”");
+                return;
+            }
+            var TriggerType = $("#TriggerType").val();
+
+            var starl_TableName = $("#starl_TableName").val();
+            if (starl_TableName == "") {
+                alert("请输入“所属表”");
+                return;
+
+            }
+
+            var FunctionName = document.getElementById("TriggerName").value;
+            sta_table = starl_TableName;
+            demo.SetNodesJson(starl_JsonTitle, TriggerName, TriggerType, starl_TableName, FunctionName);
+
+        }
+    </script>
+     <!-- complex-->
+    <script type="text/javascript">
+        function complex_bindsql() {
+            var table = $("#complex_name").val();
+            var lie = $("#complex_tabColumn").val();
+            var complex_operation = $("#complex_operation").val();
+            var isfine = $("#isfine").val();
+
+            var sql = table + "." + lie + "  " + complex_operation + " '" + isfine + "'";
+            $("#complex_where").html(sql);
+            var com = $("#complex_where").val();
+            demo.Setcomplex(table, lie, complex_operation, isfine);
+        }
+    </script>
+   <!-- role-->
+    <script type="text/javascript">
+        function saveRoot() {
+            var root = $("#user_root").val();
+            var isfine = $("input:radio[name='isrio']:checked").val();
+            demo.SetRootJson(root, isfine);
+        }
+    </script>
+     
+    <style type="text/css">
+        .panel-body label
+        {
+            text-align: left;
+            width: 68px;
+        }
+        .panel-body div
+        {
+            margin-top: 1px;
+        }
+    </style>
+</head>
+<body>
+    <div id="layout1">
+        <div position="center" title="标题">
+            <div id="demo" style="margin: 10px">
+            </div>
+        </div>
+        <div position="right">
+            <div class="panel panel-primary" style="height: 840px;">
+                <div class="panel-heading">
+                    <h3 class="panel-title">
+                        属性面板</h3>
+                </div>
+                <div class="panel-body">
+                 
+                        <div id="starl">
+                            <div>
+                                <label>
+                                    节点名:</label><br />
+                                <input type="text" id="starl_JsonTitle" /></div>
+                            <div>
+                                <label>
+                                    所属表:</label><br />
+                                <input type="text" id="starl_TableName" /></div>
+                            <div>
+                                <label>
+                                    触发类型:</label><br />
+                                <select id="TriggerType" style="width: 140px;">
+                                    <option value="insert">增加</option>
+                                    <option value="delete">删除</option>
+                                    <option value="update">修改</option>
+                                </select></div>
+                            <div>
+                                <label>
+                                    触发器名称:</label><br />
+                                <input type="text" id="TriggerName" /></div>
+                            <div>
+                                <button class="btn" onclick="starl_save()">
+                                    保存</button>
+                            </div>
+                        </div>
+                        <div id="chat" style="display: none;">
+                            <div>
+                                <label>
+                                    节点名:</label><br />
+                                <input type="text" id="name" /></div>
+                            <div>
+                                <label>
+                                    操作:</label>
+                                <select id="chat_Fun">
+                                    <option value="select">查看</option>
+                                    <option value=" insert into">增加</option>
+                                    <option value="update">修改</option>
+                                    <option value="delete from">删除</option>
+                                </select> <br />
+                                <label>
+                                    表:</label>
+                                <input type="text" id="chat_tables" />
+                            </div>
+                            <div id="chat_columns">
+                                <label>
+                                    选择字段:</label> 
+                                <input type="text" id="chat_tabColum" />
+                            </div>
+                      
+                            <div id="chat_iswhere">
+                                <label>条件</label><br />
+                                <input type="text" id="chat_where" />
+                               
+                            </div>
+                            <div id="chat_px">
+                                <label>
+                                    排序:</label><br />
+                                <input type="text" id="chat_sort" />
+                                 
+                                <label>
+                                    分组:</label><br />
+                                <input type="text" id="chat_grouping" />  
+                                <label style="width: 100px;">
+                                    <input type="checkbox" name="CookieYN" checked="checked" id="CookieYN" value="1" />去除重复记录</label>
+                            
+                            </div>  <br />
+                            <div>
+                                
+                                <input type="button" value="保 存" class="btn" onclick="chat_save()" />
+                            </div>
+                            <div>
+                                <textarea id="commsql" style="width: 200px; height:180px;"></textarea>
+                            </div>
+                        </div>
+                        <div id="complex">
+                            <div>
+                                <label>
+                                    表名:</label><br />
+                                <input type="text" id="complex_name" />
+                            </div>
+                            <div>
+                                <label>
+                                    字段:</label><br />
+                                <input type="text" id="complex_tabColumn" style=" width:200px;" /></div>
+                            <div>
+                                <label>
+                                    规则:</label><br />
+                                <select id="complex_operation">
+                                    <option value="=">等于</option>
+                                    <option value="<>">不等于</option>
+                                    <option value=">">大于</option>
+                                    <option value="<">小于</option>
+                                </select></div>
+                            <div>
+                                <label>
+                                    值:</label><br />
+                                <input type="text" id="isfine" />
+                               
+                                <div>
+                                    <button class="btn" onclick="complex_bindsql()">
+                                        保 存</button>
+                                </div>
+                                 <div>
+                                <textarea id="complex_where" style="width: 200px; height:180px;"></textarea>
+                            </div>
+                            </div>
+                        </div>
+                        <div id="user">
+                            <div>
+                                <label>权限列表:</label><br />
+                                <input type="text" id="user_root" />
+                            </div>
+                            <div style=" margin-top:20px;" >
+                             <label>是否有权限:</label><br />
+                                 有<input type="radio"  name="isrio"   value="true"  />
+                                无:<input type="radio" name="isrio" value="false" />
+                            </div>
+                               <button class="btn" onclick="saveRoot()" >保  存</button>
+                        </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

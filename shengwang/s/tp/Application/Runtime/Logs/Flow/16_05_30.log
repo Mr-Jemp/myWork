@@ -1,0 +1,337 @@
+[ 2016-05-30T11:38:27+08:00 ] 119.134.118.25 /s/tp/wwwroot/index.php?s=/Flow/run/getflowlist/type/getmyflow
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000152s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000099s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000176s ]
+NOTIC: [2048] Declaration of Flow\Controller\RunController::show() should be compatible with Think\Controller::show($content, $charset = '', $contentType = '', $prefix = '') /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 4 行.
+SQL: SHOW COLUMNS FROM `ht_run` [ RunTime:0.0011s ]
+SQL: SELECT * FROM `ht_run` WHERE `uid` = '18'  [ RunTime:0.0019s ]
+NOTIC: [8] Undefined variable: is_finish /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 466 行.
+NOTIC: [8] Undefined variable: is_finish /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 466 行.
+NOTIC: [8] Undefined variable: is_finish /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 466 行.
+NOTIC: [8] Undefined variable: is_finish /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 466 行.
+NOTIC: [8] Undefined variable: is_finish /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 466 行.
+NOTIC: [8] Undefined variable: is_finish /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 466 行.
+NOTIC: [8] Undefined variable: is_finish /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 466 行.
+NOTIC: [8] Undefined variable: is_finish /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 466 行.
+NOTIC: [8] Undefined variable: is_finish /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 466 行.
+NOTIC: [8] Undefined variable: is_finish /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 466 行.
+NOTIC: [8] Undefined variable: is_finish /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 466 行.
+NOTIC: [8] Undefined variable: is_finish /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 466 行.
+NOTIC: [8] Undefined variable: is_finish /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 466 行.
+NOTIC: [8] Undefined variable: is_finish /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 466 行.
+NOTIC: [8] Undefined variable: is_finish /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 466 行.
+NOTIC: [8] Undefined variable: is_finish /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 466 行.
+NOTIC: [8] Undefined variable: is_finish /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 466 行.
+NOTIC: [8] Undefined variable: is_finish /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 466 行.
+NOTIC: [8] Undefined variable: is_finish /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 466 行.
+NOTIC: [8] Undefined variable: is_finish /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 466 行.
+NOTIC: [8] Undefined variable: is_finish /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 466 行.
+NOTIC: [8] Undefined variable: is_finish /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 466 行.
+NOTIC: [8] Undefined variable: is_finish /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 466 行.
+NOTIC: [8] Undefined variable: is_finish /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 466 行.
+NOTIC: [8] Undefined variable: is_finish /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 466 行.
+NOTIC: [8] Undefined variable: is_finish /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 466 行.
+NOTIC: [8] Undefined variable: is_finish /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 466 行.
+NOTIC: [8] Undefined variable: is_finish /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 466 行.
+NOTIC: [8] Undefined variable: is_finish /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 466 行.
+NOTIC: [8] Undefined variable: is_finish /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 466 行.
+NOTIC: [8] Undefined variable: is_finish /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 466 行.
+NOTIC: [8] Undefined variable: is_finish /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 466 行.
+NOTIC: [8] Undefined variable: is_finish /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 466 行.
+NOTIC: [8] Undefined variable: is_finish /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 466 行.
+NOTIC: [8] Undefined variable: is_finish /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 466 行.
+NOTIC: [8] Undefined variable: is_finish /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 466 行.
+NOTIC: [8] Undefined variable: is_finish /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 466 行.
+NOTIC: [8] Undefined variable: is_finish /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 466 行.
+NOTIC: [8] Undefined variable: is_finish /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 466 行.
+NOTIC: [8] Undefined variable: is_finish /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 466 行.
+NOTIC: [8] Undefined variable: is_finish /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 466 行.
+NOTIC: [8] Undefined variable: is_finish /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 466 行.
+NOTIC: [8] Undefined variable: is_finish /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 466 行.
+NOTIC: [8] Undefined variable: is_finish /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 466 行.
+NOTIC: [8] Undefined variable: is_finish /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 466 行.
+NOTIC: [8] Undefined variable: is_finish /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 466 行.
+NOTIC: [8] Undefined variable: is_finish /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 466 行.
+NOTIC: [8] Undefined variable: is_finish /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 466 行.
+NOTIC: [8] Undefined variable: is_finish /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 466 行.
+NOTIC: [8] Undefined variable: is_finish /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 466 行.
+NOTIC: [8] Undefined variable: is_finish /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 466 行.
+NOTIC: [8] Undefined variable: is_finish /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 466 行.
+NOTIC: [8] Undefined variable: is_finish /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 466 行.
+NOTIC: [8] Undefined variable: is_finish /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 466 行.
+NOTIC: [8] Undefined variable: is_finish /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 466 行.
+NOTIC: [8] Undefined variable: is_finish /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 466 行.
+NOTIC: [8] Undefined variable: is_finish /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 466 行.
+NOTIC: [8] Undefined variable: is_finish /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 466 行.
+NOTIC: [8] Undefined variable: is_finish /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 466 行.
+NOTIC: [8] Undefined variable: is_finish /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 466 行.
+NOTIC: [8] Undefined variable: is_finish /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 466 行.
+NOTIC: [8] Undefined variable: is_finish /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 466 行.
+NOTIC: [8] Undefined variable: is_finish /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 466 行.
+NOTIC: [8] Undefined variable: is_finish /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 466 行.
+NOTIC: [8] Undefined variable: is_finish /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 466 行.
+NOTIC: [8] Undefined variable: is_finish /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 466 行.
+NOTIC: [8] Undefined variable: is_finish /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 466 行.
+NOTIC: [8] Undefined variable: is_finish /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 466 行.
+NOTIC: [8] Undefined variable: is_finish /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 466 行.
+NOTIC: [8] Undefined variable: is_finish /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 466 行.
+NOTIC: [8] Undefined variable: is_finish /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 466 行.
+NOTIC: [8] Undefined variable: is_finish /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 466 行.
+NOTIC: [8] Undefined variable: is_finish /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 466 行.
+NOTIC: [8] Undefined variable: is_finish /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 466 行.
+NOTIC: [8] Undefined variable: is_finish /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 466 行.
+NOTIC: [8] Undefined variable: is_finish /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 466 行.
+NOTIC: [8] Undefined variable: is_finish /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 466 行.
+NOTIC: [8] Undefined variable: is_finish /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 466 行.
+NOTIC: [8] Undefined variable: is_finish /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 466 行.
+NOTIC: [8] Undefined variable: is_finish /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 466 行.
+NOTIC: [8] Undefined variable: is_finish /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 466 行.
+NOTIC: [8] Undefined variable: is_finish /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 466 行.
+NOTIC: [8] Undefined variable: is_finish /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 466 行.
+NOTIC: [8] Undefined variable: is_finish /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 466 行.
+NOTIC: [8] Undefined variable: is_finish /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 466 行.
+NOTIC: [8] Undefined variable: is_finish /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 466 行.
+NOTIC: [8] Undefined variable: is_finish /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 466 行.
+NOTIC: [8] Undefined variable: is_finish /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 466 行.
+NOTIC: [8] Undefined variable: is_finish /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 466 行.
+NOTIC: [8] Undefined variable: is_finish /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 466 行.
+NOTIC: [8] Undefined variable: is_finish /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 466 行.
+NOTIC: [8] Undefined variable: is_finish /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 466 行.
+NOTIC: [8] Undefined variable: is_finish /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 466 行.
+NOTIC: [8] Undefined variable: is_finish /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 466 行.
+NOTIC: [8] Undefined variable: is_finish /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 466 行.
+NOTIC: [8] Undefined variable: is_finish /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 466 行.
+NOTIC: [8] Undefined variable: is_finish /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 466 行.
+NOTIC: [8] Undefined variable: is_finish /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 466 行.
+NOTIC: [8] Undefined variable: is_finish /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 466 行.
+NOTIC: [8] Undefined variable: is_finish /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 466 行.
+NOTIC: [8] Undefined variable: is_finish /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 466 行.
+NOTIC: [8] Undefined variable: is_finish /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 466 行.
+NOTIC: [8] Undefined variable: is_finish /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 466 行.
+NOTIC: [8] Undefined variable: is_finish /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 466 行.
+NOTIC: [8] Undefined variable: is_finish /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 466 行.
+NOTIC: [8] Undefined variable: is_finish /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 466 行.
+NOTIC: [8] Undefined variable: is_finish /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 466 行.
+NOTIC: [8] Undefined variable: is_finish /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 466 行.
+NOTIC: [8] Undefined variable: is_finish /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 466 行.
+NOTIC: [8] Undefined variable: is_finish /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 466 行.
+NOTIC: [8] Undefined variable: is_finish /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 466 行.
+NOTIC: [8] Undefined variable: is_finish /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 466 行.
+NOTIC: [8] Undefined variable: is_finish /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 466 行.
+NOTIC: [8] Undefined variable: is_finish /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 466 行.
+NOTIC: [8] Undefined variable: is_finish /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 466 行.
+NOTIC: [8] Undefined variable: is_finish /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 466 行.
+NOTIC: [8] Undefined variable: is_finish /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 466 行.
+NOTIC: [8] Undefined variable: is_finish /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 466 行.
+NOTIC: [8] Undefined variable: is_finish /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 466 行.
+NOTIC: [8] Undefined variable: is_finish /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 466 行.
+NOTIC: [8] Undefined variable: is_finish /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 466 行.
+NOTIC: [8] Undefined variable: is_finish /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 466 行.
+NOTIC: [8] Undefined variable: is_finish /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 466 行.
+NOTIC: [8] Undefined variable: is_finish /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 466 行.
+NOTIC: [8] Undefined variable: is_finish /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 466 行.
+NOTIC: [8] Undefined variable: is_finish /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 466 行.
+NOTIC: [8] Undefined variable: is_finish /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 466 行.
+NOTIC: [8] Undefined variable: is_finish /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 466 行.
+NOTIC: [8] Undefined variable: is_finish /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 466 行.
+NOTIC: [8] Undefined variable: is_finish /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 466 行.
+NOTIC: [8] Undefined variable: is_finish /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 466 行.
+NOTIC: [8] Undefined variable: is_finish /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 466 行.
+NOTIC: [8] Undefined variable: is_finish /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 466 行.
+NOTIC: [8] Undefined variable: is_finish /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 466 行.
+NOTIC: [8] Undefined variable: is_finish /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 466 行.
+NOTIC: [8] Undefined variable: is_finish /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 466 行.
+NOTIC: [8] Undefined variable: is_finish /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 466 行.
+NOTIC: [8] Undefined variable: is_finish /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 466 行.
+NOTIC: [8] Undefined variable: is_finish /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 466 行.
+NOTIC: [8] Undefined variable: is_finish /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 466 行.
+NOTIC: [8] Undefined variable: is_finish /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 466 行.
+NOTIC: [8] Undefined variable: is_finish /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 466 行.
+NOTIC: [8] Undefined variable: is_finish /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 466 行.
+NOTIC: [8] Undefined variable: is_finish /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 466 行.
+NOTIC: [8] Undefined variable: is_finish /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 466 行.
+NOTIC: [8] Undefined variable: is_finish /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 466 行.
+NOTIC: [8] Undefined variable: is_finish /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 466 行.
+NOTIC: [8] Undefined variable: is_finish /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 466 行.
+NOTIC: [8] Undefined variable: is_finish /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 466 行.
+NOTIC: [8] Undefined variable: is_finish /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 466 行.
+NOTIC: [8] Undefined variable: is_finish /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 466 行.
+NOTIC: [8] Undefined variable: is_finish /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 466 行.
+NOTIC: [8] Undefined variable: is_finish /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 466 行.
+NOTIC: [8] Undefined variable: is_finish /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 466 行.
+NOTIC: [8] Undefined variable: is_finish /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 466 行.
+NOTIC: [8] Undefined variable: is_finish /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 466 行.
+NOTIC: [8] Undefined variable: is_finish /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 466 行.
+NOTIC: [8] Undefined variable: is_finish /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 466 行.
+NOTIC: [8] Undefined variable: is_finish /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 466 行.
+NOTIC: [8] Undefined variable: is_finish /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 466 行.
+NOTIC: [8] Undefined variable: is_finish /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 466 行.
+NOTIC: [8] Undefined variable: is_finish /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 466 行.
+NOTIC: [8] Undefined variable: is_finish /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 466 行.
+NOTIC: [8] Undefined variable: is_finish /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 466 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000041s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000112s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010214s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010269s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000258s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000306s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000066s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000114s ]
+
+[ 2016-05-30T16:19:00+08:00 ] 119.134.118.25 /s/tp/wwwroot/index.php?s=/Flow/demo/index/getflow/ok.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000155s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000088s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000156s ]
+SQL: SHOW COLUMNS FROM `ht_flow` [ RunTime:0.0011s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `ht_flow` WHERE `is_del` = 0 LIMIT 1   [ RunTime:0.0005s ]
+NOTIC: [8] Undefined variable: p /var/www/dzxt/s/tp/Application/Flow/Controller/DemoController.class.php 第 22 行.
+NOTIC: [8] Trying to get property of non-object /var/www/dzxt/s/tp/Application/Flow/Controller/DemoController.class.php 第 22 行.
+NOTIC: [8] Undefined variable: p /var/www/dzxt/s/tp/Application/Flow/Controller/DemoController.class.php 第 22 行.
+NOTIC: [8] Trying to get property of non-object /var/www/dzxt/s/tp/Application/Flow/Controller/DemoController.class.php 第 22 行.
+SQL: SELECT `id`,`form_id`,`flow_name`,`flow_desc`,`updatetime`,`dateline` FROM `ht_flow` WHERE `is_del` = 0 ORDER BY id desc  [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `ht_form` [ RunTime:0.0009s ]
+SQL: SELECT * FROM `ht_form` WHERE ( 1=1 AND id='757' ) LIMIT 1   [ RunTime:0.0006s ]
+SQL: SELECT * FROM `ht_form` WHERE ( 1=1 AND id='775' ) LIMIT 1   [ RunTime:0.0006s ]
+SQL: SELECT * FROM `ht_form` WHERE ( 1=1 AND id='772' ) LIMIT 1   [ RunTime:0.0005s ]
+SQL: SELECT * FROM `ht_form` WHERE ( 1=1 AND id='769' ) LIMIT 1   [ RunTime:0.0005s ]
+SQL: SELECT * FROM `ht_form` WHERE ( 1=1 AND id='746' ) LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT * FROM `ht_form` WHERE ( 1=1 AND id='730' ) LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT * FROM `ht_form` WHERE ( 1=1 AND id='587' ) LIMIT 1   [ RunTime:0.0005s ]
+SQL: SELECT * FROM `ht_form` WHERE ( 1=1 AND id='266' ) LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT * FROM `ht_form` WHERE ( 1=1 AND id='328' ) LIMIT 1   [ RunTime:0.0005s ]
+SQL: SELECT * FROM `ht_form` WHERE ( 1=1 AND id='329' ) LIMIT 1   [ RunTime:0.0004s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000117s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000187s ]
+
+[ 2016-05-30T17:25:44+08:00 ] 119.134.118.25 /s/tp/wwwroot/index.php?s=/Flow/run/getflowlist/type/getmyflow
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000126s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000064s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000112s ]
+NOTIC: [2048] Declaration of Flow\Controller\RunController::show() should be compatible with Think\Controller::show($content, $charset = '', $contentType = '', $prefix = '') /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 4 行.
+SQL: SHOW COLUMNS FROM `ht_run` [ RunTime:0.0007s ]
+SQL: SELECT * FROM `ht_run` WHERE `uid` = '178'  [ RunTime:0.0010s ]
+NOTIC: [8] Undefined variable: is_finish /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 466 行.
+NOTIC: [8] Undefined variable: is_finish /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 466 行.
+NOTIC: [8] Undefined variable: is_finish /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 466 行.
+NOTIC: [8] Undefined variable: is_finish /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 466 行.
+NOTIC: [8] Undefined variable: is_finish /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 466 行.
+NOTIC: [8] Undefined variable: is_finish /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 466 行.
+NOTIC: [8] Undefined variable: is_finish /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 466 行.
+NOTIC: [8] Undefined variable: is_finish /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 466 行.
+NOTIC: [8] Undefined variable: is_finish /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 466 行.
+NOTIC: [8] Undefined variable: is_finish /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 466 行.
+NOTIC: [8] Undefined variable: is_finish /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 466 行.
+NOTIC: [8] Undefined variable: is_finish /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 466 行.
+NOTIC: [8] Undefined variable: is_finish /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 466 行.
+NOTIC: [8] Undefined variable: is_finish /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 466 行.
+NOTIC: [8] Undefined variable: is_finish /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 466 行.
+NOTIC: [8] Undefined variable: is_finish /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 466 行.
+NOTIC: [8] Undefined variable: is_finish /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 466 行.
+NOTIC: [8] Undefined variable: is_finish /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 466 行.
+NOTIC: [8] Undefined variable: is_finish /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 466 行.
+NOTIC: [8] Undefined variable: is_finish /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 466 行.
+NOTIC: [8] Undefined variable: is_finish /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 466 行.
+NOTIC: [8] Undefined variable: is_finish /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 466 行.
+NOTIC: [8] Undefined variable: is_finish /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 466 行.
+NOTIC: [8] Undefined variable: is_finish /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 466 行.
+NOTIC: [8] Undefined variable: is_finish /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 466 行.
+NOTIC: [8] Undefined variable: is_finish /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 466 行.
+NOTIC: [8] Undefined variable: is_finish /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 466 行.
+NOTIC: [8] Undefined variable: is_finish /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 466 行.
+NOTIC: [8] Undefined variable: is_finish /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 466 行.
+NOTIC: [8] Undefined variable: is_finish /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 466 行.
+NOTIC: [8] Undefined variable: is_finish /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 466 行.
+NOTIC: [8] Undefined variable: is_finish /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 466 行.
+NOTIC: [8] Undefined variable: is_finish /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 466 行.
+NOTIC: [8] Undefined variable: is_finish /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 466 行.
+NOTIC: [8] Undefined variable: is_finish /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 466 行.
+NOTIC: [8] Undefined variable: is_finish /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 466 行.
+NOTIC: [8] Undefined variable: is_finish /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 466 行.
+NOTIC: [8] Undefined variable: is_finish /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 466 行.
+NOTIC: [8] Undefined variable: is_finish /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 466 行.
+NOTIC: [8] Undefined variable: is_finish /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 466 行.
+NOTIC: [8] Undefined variable: is_finish /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 466 行.
+NOTIC: [8] Undefined variable: is_finish /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 466 行.
+NOTIC: [8] Undefined variable: is_finish /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 466 行.
+NOTIC: [8] Undefined variable: is_finish /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 466 行.
+NOTIC: [8] Undefined variable: is_finish /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 466 行.
+NOTIC: [8] Undefined variable: is_finish /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 466 行.
+NOTIC: [8] Undefined variable: is_finish /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 466 行.
+NOTIC: [8] Undefined variable: is_finish /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 466 行.
+NOTIC: [8] Undefined variable: is_finish /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 466 行.
+NOTIC: [8] Undefined variable: is_finish /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 466 行.
+NOTIC: [8] Undefined variable: is_finish /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 466 行.
+NOTIC: [8] Undefined variable: is_finish /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 466 行.
+NOTIC: [8] Undefined variable: is_finish /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 466 行.
+NOTIC: [8] Undefined variable: is_finish /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 466 行.
+NOTIC: [8] Undefined variable: is_finish /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 466 行.
+NOTIC: [8] Undefined variable: is_finish /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 466 行.
+NOTIC: [8] Undefined variable: is_finish /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 466 行.
+NOTIC: [8] Undefined variable: is_finish /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 466 行.
+NOTIC: [8] Undefined variable: is_finish /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 466 行.
+NOTIC: [8] Undefined variable: is_finish /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 466 行.
+NOTIC: [8] Undefined variable: is_finish /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 466 行.
+NOTIC: [8] Undefined variable: is_finish /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 466 行.
+NOTIC: [8] Undefined variable: is_finish /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 466 行.
+NOTIC: [8] Undefined variable: is_finish /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 466 行.
+NOTIC: [8] Undefined variable: is_finish /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 466 行.
+NOTIC: [8] Undefined variable: is_finish /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 466 行.
+NOTIC: [8] Undefined variable: is_finish /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 466 行.
+NOTIC: [8] Undefined variable: is_finish /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 466 行.
+NOTIC: [8] Undefined variable: is_finish /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 466 行.
+NOTIC: [8] Undefined variable: is_finish /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 466 行.
+NOTIC: [8] Undefined variable: is_finish /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 466 行.
+NOTIC: [8] Undefined variable: is_finish /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 466 行.
+NOTIC: [8] Undefined variable: is_finish /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 466 行.
+NOTIC: [8] Undefined variable: is_finish /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 466 行.
+NOTIC: [8] Undefined variable: is_finish /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 466 行.
+NOTIC: [8] Undefined variable: is_finish /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 466 行.
+NOTIC: [8] Undefined variable: is_finish /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 466 行.
+NOTIC: [8] Undefined variable: is_finish /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 466 行.
+NOTIC: [8] Undefined variable: is_finish /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 466 行.
+NOTIC: [8] Undefined variable: is_finish /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 466 行.
+NOTIC: [8] Undefined variable: is_finish /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 466 行.
+NOTIC: [8] Undefined variable: is_finish /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 466 行.
+NOTIC: [8] Undefined variable: is_finish /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 466 行.
+NOTIC: [8] Undefined variable: is_finish /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 466 行.
+NOTIC: [8] Undefined variable: is_finish /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 466 行.
+NOTIC: [8] Undefined variable: is_finish /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 466 行.
+NOTIC: [8] Undefined variable: is_finish /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 466 行.
+NOTIC: [8] Undefined variable: is_finish /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 466 行.
+NOTIC: [8] Undefined variable: is_finish /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 466 行.
+NOTIC: [8] Undefined variable: is_finish /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 466 行.
+NOTIC: [8] Undefined variable: is_finish /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 466 行.
+NOTIC: [8] Undefined variable: is_finish /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 466 行.
+NOTIC: [8] Undefined variable: is_finish /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 466 行.
+NOTIC: [8] Undefined variable: is_finish /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 466 行.
+NOTIC: [8] Undefined variable: is_finish /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 466 行.
+NOTIC: [8] Undefined variable: is_finish /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 466 行.
+NOTIC: [8] Undefined variable: is_finish /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 466 行.
+NOTIC: [8] Undefined variable: is_finish /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 466 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000068s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000126s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.003230s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.003287s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000053s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000092s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000062s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000105s ]
+

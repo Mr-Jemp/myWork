@@ -1,0 +1,14 @@
+[ 2015-12-11T11:30:16+08:00 ] 183.21.22.228 /s/tp/wwwroot/index.php?s=/Home/Demo/add.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000550s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000748s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000821s ]
+SQL: SHOW COLUMNS FROM `ht_form` [ RunTime:0.0010s ]
+SQL: INSERT INTO `ht_form` (`form_name`,`form_desc`,`updatetime`,`type`,`dateline`,`pid`,`creater_uid`) VALUES ('潘严辉','','1449804616','1','1449804616','1728','203') [ RunTime:0.0241s ]
+NOTIC: [2] unlink(../Application/Runtime/Temp/21d9a5adf0e55158019e1c301ccb9502.php): No such file or directory /var/www/dzxt/s/tp/ThinkPHP/Library/Think/Cache/Driver/File.class.php 第 157 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000856s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000929s ]
+

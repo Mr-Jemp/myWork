@@ -1,0 +1,38 @@
+.newlist{
+    width:930px;
+    height:150px;
+    margin:10px auto;
+}
+.newlist ul,.newlist li{
+    margin:0px;
+    padding:0px;
+}
+.divX {
+    z-index:500;
+    line-height:20px;
+    text-align:center;
+    font-weight:bold;
+    cursor:pointer;
+    font-size:30px;
+    color:white;
+    display: none;
+}
+.newlist ul li {
+    width: 270px;
+    float: left;
+    line-height: 30px;
+    padding-left:15px;
+    height: 30px;
+    overflow:hidden;
+    list-style-type: none;
+    background-image: url("/resource/images/login/libg.gif");
+    background-repeat: no-repeat;
+    background-position: left center;
+    padding-right: 15px;
+}
+.newlist span{
+    color:#cccccc;
+    margin:0px;
+    padding:0px;
+    float:right;
+}

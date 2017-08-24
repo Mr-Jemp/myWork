@@ -1,0 +1,29 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link href="/resource/part/bootstrap/css/bootstrap3.min.css" rel="stylesheet" type="text/css" />
+<script src="/resource/js/jQuery/jquery-1.11.1.min.js"></script>
+<title>处理流程</title>
+</head>
+<body>
+    {$nav}
+<div class="container">
+    <div class="row">
+        <volist name="form_data" id="vo">
+            {$vo}
+        </volist>
+    </div>
+</div>
+<div class="container">
+    <div class="row">
+        <form action="{:U('/Flow/run/flowsave')}" method="post">
+            {$form_hidden}
+            {$design_content}
+            {$form_sumit}
+        </form>
+    </div>
+</div>
+<script src="/resource/part/bootstrap/js/bootstrap3.min.js"></script>
+</body>
+</html>
