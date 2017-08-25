@@ -1,176 +1,26 @@
-<!--<link rel="stylesheet" type="text/css" href="/resource/part/newtpl/css/public.css"/>-->
+
 <div class="admin_top_bg">
-	<table width="98%" height="70" border="0" cellpadding="0" cellspacing="0">
-		<tr>
-			<td width="200" rowspan="2" align="right" valign="middle">
-				<div align="center" class="login_title">
-					<h1>胜网科技</h1><span>Wins net technology</span></div>
-			</td>
-			<td height="39" align="right" valign="middle" class="link_w">
-				欢迎超级管理员：<strong style="color: #99FF00"></strong>&nbsp; 登录&nbsp;&nbsp; &nbsp;&nbsp;
-				<a href="javascript:;" onClick="tuichu()" target="_parent">[退出]</a>&nbsp;&nbsp;&nbsp;
-				<a href="http://192.168.0.198" target="_blank">官方网站</a>
-			</td>
-		</tr>
-		<tr>
-			<td height="31" valign="bottom" class="admin_top_nav">
-				<!--<a href="main.php" target="mainFrame" class="select" id="index">首页</a>
-				<a href="../new_organizesetting/bumenTree.html" target="mainFrame" id="orgsetting">角色设置</a>
-				<a href="../flowsetting/index.htm" target="mainFrame" id="flowsetting">流程设置</a>
-				<a href="../new_powerdesign/quanxian.htm" target="mainFrame" id="powersetting">权限设置</a>-->
-				<a ui-sref=".biaodan">表单设置</a>
-				<a ui-sref=".oa" target="_self" id="oaflowsetting">OA流管理</a>
-				<a ui-sref=".renyuan" target="_self" id="personmanage">人员管理</a>
-				<a ui-sref=".fuwu" target="_self" id="serversetting">服务器状态</a>
-				<a ui-sref=".peizhi" target="_self" id="setting">网站配置</a>
-				<a ui-sref=".shuju" target="_self" id="personmanage">数据视图</a>
-				<div class="clear"></div>
-			</td>
-		</tr>
-	</table>
+    <table width="98%" height="70" border="0" cellpadding="0" cellspacing="0">
+        <tr><td width="200" rowspan="2" align="right" valign="middle" ><div align="center" class="login_title"><h1>胜网科技</h1><span>Wins net technology</span></div>
+        </td>
+            <td height="39" align="right" valign="middle" class="link_w">
+                欢迎超级管理员：<strong style="color: #99FF00">&nbsp; 登录&nbsp;&nbsp; &nbsp;&nbsp; <a href="/front/main/mainpage.php"  onClick="tuichu()" target="_parent">[退出]</a>&nbsp;&nbsp;&nbsp; <a href="http://www.goodhead.cn" target="_blank">官方网站</a></td>
+        </tr>
+        <tr>
+            <td height="31" valign="bottom" class="admin_top_nav">
+                <!--<a href="main.php" target="mainFrame" class="select" id="index">首页</a>
+                <a href="../new_organizesetting/bumenTree.html" target="mainFrame" id="orgsetting">角色设置</a>
+                <a href="../flowsetting/index.htm" target="mainFrame" id="flowsetting">流程设置</a>-->
+                <!--<a href="../new_powerdesign/quanxian.htm" target="mainFrame" id="powersetting">权限设置</a>	-->
+                <a href="#" target="mainFrame" id="pagesetting">表单设置</a>
+                <a href="#" target="mainFrame" id="oaflowsetting">OA流管理</a>
+                <a href="#" target="mainFrame" id="personmanage">人员管理</a>
+                <a href="#" target="mainFrame" id="serversetting">服务器状态</a>
+                <a href="#" target="mainFrame" id="setting">网站配置</a>
+                <a href="#" target="mainFrame" id="personmanage">数据视图</a>
+                <div class="clear"></div>
+            </td>
+        </tr>
+    </table>
 </div>
-<style>
-	.icons {
-		width: 48px;
-		height: 48px;
-		display: inline-block;
-		/**display:;*/
-	}
-	
-	.icons img {
-		max-width: 48px;
-		max-height: 48px;
-	}
-	
-	.iconstitle {
-		width: auto;
-		height: 48px;
-		overflow: hidden;
-		display: inline-block;
-		margin-left: 10px;
-	}
-	
-	.admin_frameset {
-		margin-top: 70px;
-	}
-	.login_info_box .admin_left_box{
-		width: 190px;
-		position: absolute;
-		top: 70px;
-	}
-	.login_info_box .admin_main_nr_dbox{
-		width: 1088px;
-		height: 540px;
-		position: absolute;
-		left: 196px;
-	}
-	.login_info_box .admin_frameset{
-		margin-top: 70px;
-		margin-left: 196px;
-	}
-</style>
-<div class="login_info_box">
-	<script type="text/javascript">
-		$(document).ready(function() {
-			$("li").first().addClass("hover");
-			$("li>a").click(function() {
-				$("li").removeClass("hover");
-				$(this).parent().addClass("hover");
-				$(this).blur();
-			})
-		})
-	</script>
-	<div class="admin_left_box">
-		<ul>
-			<li>
-				<!--../../s/monitor/df_monitor.php-->
-				<a href="javascript:;" target="mainFrame">空间占用情况</a>
-			</li>
-
-			<li>
-				<a href="javascript:;" target="mainFrame">性能监控</a>
-			</li>
-
-		</ul>
-	</div>
-	<div class="admin_main_nr_dbox">
-		<div class="pagetit">
-			<div class="ptit">
-				<span class="icons"><img src="./resource/images/usericons/noavatar_small.gif" /></span>
-				<span class="iconstitle">
-				<!--<?php echo $_SESSION['chinese_name'];?>-->
-		            <br />欢迎登录胜网信息管理系统！
-				</span>&nbsp;
-				<div style="font-weight:normal">
-					担任角色：
-				</div>
-			</div>
-			<div class="clear"></div>
-		</div>
-		<span id="version"></span>
-		<table width="100%" border="0" cellpadding="5" cellspacing="1" bgcolor="#FF9900" style=" margin-bottom:6px;">
-			<tr>
-				<td bgcolor="#FFFFCC" style="border: 1px solid orange;">&nbsp;你最近一次的登陆IP2017，时间为8.18。</td>
-			</tr>
-		</table>
-		<table width="100%" border="0" cellpadding="5" cellspacing="1" bgcolor="#FF9900" style=" margin-bottom:6px;">
-			<tr>
-				<td bgcolor="#FFFFCC" style="border: 1px solid orange;">&nbsp;公司公告：<span id="gong"></span></td>
-			</tr>
-		</table>
-		<div class="toptit">待处理事务</div>
-		<table width="100%" border="0" cellpadding="0" cellspacing="0" class="link_lan" style="padding-left:15px; line-height:220%; margin-bottom:10px; color:#666666">
-			<tr>
-				<td>收到消息：&nbsp;(
-					<a href="#" onclick="window.parent.open_msg('new')" id="t1"></a> )</td>
-				<td>收到邮件：&nbsp;
-					<a href="#" id="t3">...</a>
-				</td>
-				<td>&nbsp;</td>
-			</tr>
-			<tr>
-				<td>即时通消息：&nbsp;
-					<a href="#" id="t2">...</a>
-				</td>
-				<td>待处理事务：&nbsp;
-					<a href="#" id="t4">...</a>
-				</td>
-			</tr>
-
-		</table>
-	</div>
-	<div class="admin_frameset">
-		<div class="open_frame" title="全屏" id="open_frame" flag="min"></div>
-		<div class="close_frame" title="还原窗口" id="close_frame" flag="min"></div>
-	</div>
-</div>
-
-<script>
-	$(window).load(function() {
-		$.ajax({
-			type: 'POST',
-			url: '',
-			data: {
-				"get": "yes"
-			},
-			success: function(data) {
-				data = eval('(' + data + ')');
-				if(data.IsSuccess)
-					$("#gong").html($(data.res).text());
-			},
-			error: function(xhr, stat, e) {}
-		});
-
-	});
-</script>
-
-<script type="text/javascript">
-	var oA = $(".admin_top_nav a");
-	oA.click(function() {
-		$(this).addClass("select").siblings().removeClass("select");
-		$(".login_info_box").html("");
-	})
-</script>
-<div ui-view="">
-
-</div>
+</body>

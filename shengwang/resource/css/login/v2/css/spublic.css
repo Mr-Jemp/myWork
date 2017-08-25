@@ -103,7 +103,8 @@ ul li{
 	height:80px;
 	background:#f2f2f2;
 	border-top:1px solid #ccc;
-	}
+	float: left;
+}
 .footcon{
 	width:1000px;
 	height:30px;

@@ -8,6 +8,8 @@
 <script src="../../../resource/part/ligerlib/ligerUI/js/ligerui.all.js"></script>
 <script src="../../../resource/part/ligerlib/json2.js" type="text/javascript"></script>
 <script src="../../../js/lib/ligerUI/js/plugins/ligerGrid.js" type="text/javascript"></script>
+<script src="../../../js/angular/angular.min.js"></script>
+<script src="../../../main/app.js"></script>
 <script type="text/javascript">
 	var actionCustomerID;
 	var actionPID;
@@ -16,12 +18,26 @@
 	var actionRemark;
 	var actionRowIndex;
 	var actionParm;
-
+	var g = null;
 	//请求地址
 	var getUrl = "../../../data_json/bumenTree.json"
 	var ediPparentNodeDialog;
 	var editParentNodeTree;
 	var editParentNodeTreeId;
+
+
+	myApp.controller("apphttp",["$scope","$http",function($scope,$http){
+		$http({
+			url:"http://192.168.0.21:20896/htRoleService/getHtUserName?role_id=9",
+			method:"GET",
+		}).then(function(req){
+			console.log(req)
+		},function(err){
+			$scope.err = err
+			console.log(err)
+		})
+
+	}])
 
 	$.extend($.ligerMethos.Grid,
 			{
@@ -38,47 +54,73 @@
 			}
 	);
 
+	$.ajax({
+
+	})
+
 	$(function() {
-		var maingrid;
-		//渲染兼容树
-		maingrid = $("#maingrid").ligerGrid({
-			columns: [
-				{ display: '部门名', name: 'name',width:250, align: 'left', editor: { type: 'text'} },
-				{ display: '部门描述', name: 'remark',width:80,align: 'left', editor: { type: 'text'}}
-			], width: '100%', pageSizeOptions: [5, 10, 15, 20],
-			onSelectRow: function(rowdata, rowindex) {
-				$("#txtrowindex").val(rowindex);
-			},
-			//数据现在固定
-			url:getUrl, alternatingRow: false, tree: { columnName: 'name' },
-			autoCheckChildren: false,
+		var InfoRole;
+		var Rows;
+		//这里是	角色配置
+		$.ajax({
+			type:"GET",
+			url:"http://192.168.0.21:20896/htRoleService/getSearchInfoRole?role_id=0",
+//			headers:{"Content-Type": "application/json"},
+			async: false,
+			success: function (res){
+				console.log(res)
+				if(res.status==1){
+					Rows=res.msg
+					console.log({Rows})
+					maingrid = $("#maingrid").ligerGrid({
+						columns: [
+							{ display: '部门名', name: 'name',width:250, align: 'left',  },
+							{ display: '部门描述', name: 'remark',width:80,align: 'left', }
+						],
+						width: '100%', pageSizeOptions: [5, 10, 15, 20],
+						//数据现在固定
+						data:{Rows}, alternatingRow: false, tree:{columnName: 'name'},
+						onSelectRow: function(rowdata, rowindex) {
+							$("#txtrowindex").val(rowindex);
+						},
+						autoCheckChildren: false,
 //            onReload: function() { //刷新事件
 //                //getNewData();
 //                return false;
 //            },
-			onContextmenu: function(parm, e) {  //右击事件
-				actionParm=parm;
-				actionRowIndex=parm.rowindex;
-				actionCustomerID = parm.data.id;
-				actionPID = parm.data.parentId;
-				actionName = parm.data.name;
-				actionRemark = parm.data.remark;
-				menu.show({ top: e.pageY, left: e.pageX });
-				maingrid.select(actionRowIndex);
-				return false;
-			},
-			height:'97%'
-		});
+						onContextmenu: function(parm, e) {  //右击事件
+							actionParm=parm;
+							actionRowIndex=parm.rowindex;
+							actionCustomerID = parm.data.id;
+							actionPID = parm.data.parentId;
+							actionName = parm.data.name;
+							actionRemark = parm.data.remark;
+							menu.show({ top: e.pageY, left: e.pageX });
+							maingrid.select(actionRowIndex);
+							return false;
+						},
+						height:'97%'
+					});
+				}
+
+
+
+			}
+		})
+		var maingrid;
+		//渲染兼容树
+
 		//监听点击选择目标
 		maingrid.bind('selectRow', function(data)
 		{
 			var wai=$.ligerDialog.waitting('正在加载中,请稍候...');
 			actionCustomerID=data.id;
 			LoadDataTree();
-			$.ajax({ url:getUrl,  type: "GET", data: { operatetype: "getStaffsForRole", roleId: escape(maingrid.alert3()) },
+			$.ajax({ url:"http://192.168.0.21:20896/htRoleService/getHtUserName?role_id=9",type:"GET",
 				success: function(data) {
 					wai.close();
-					data = eval("('+data+')");
+					console.log(data)
+//					data = eval("('+data+')");
 					if (data.IsSuccess) {
 						var ss = g.rows;
 						g.deleteRange(ss);
@@ -86,7 +128,6 @@
 					} else {
 						var ss = g.rows;
 						g.deleteRange(ss);
-						console.log(ss)
 					}
 				},
 				error: function(er) {
@@ -386,9 +427,130 @@
 			});
 		}
 
-		//添加角色成员---未完成
+
+		//添加角色成员
 		//getNewData();
+		var getzhanghao ="http://192.168.0.21:20896/htRoleService/getHtUserName?role_id=9" ;  // 模拟用户信息
+		var massage = "../../../data_json/massage.json"  	//添加成功数据
+		var fn = null;
+		var EmployeeData;
+		//点击选择添加角色成员,显示选择数据面板
+		function f_import() {
+			var getmaingrid = maingrid.alert3();
+			if (getmaingrid == null) {
+				alert("请先左键点击选择部门5555");
+				return;
+			}
+				$.ajax({ url: getzhanghao, async: false, type: "GET",
+				success: function(data) {
+//					data = eval('(' + data + ')');
+//					if(data.pw_flag==1){alert(data.msg);return false;}
+					console.log(data)
+					$("#showStaffDiv").html("");
+					if (data.IsSuccess) {
+						//如果请求成功,保存数据,生成树结构
+						EmployeeData = data.Data;
+
+						fn = $.ligerui.getPopupFn({
+							top: 80,
+							onSelect: function(e) {
+								console.log(e)
+								console.log(e.data)
+								//选择
+								var isno = false;
+								for (var i = 0; i < e.data.length; i++) {
+									//遍历选中的数据,发送到后台添加,返回true和false ---现在模拟
+									$.ajax({ url: massage,  type: "GET", async: false, data: { operatetype: "appointEmployeer", roleId: escape(getmaingrid), staffId: escape(e.data[i].Id) },
+										success: function(data) {
+//											data = eval('(' + data + ')');
+											if (data.IsSuccess) {
+												isno = true;
+											}
+											else {
+												alert(data.Message);
+											}
+										},
+										error: function(xhr, stat, e) {
+											alert(e);
+										}
+									});
+								}
+								if (isno) {
+									//后台数据返回true,添加成功,添加一行
+									g.addRows(e.data);
+								}
+
+							},
+							grid: {
+								columns: [
+									{ display: '账号', name: 'Zhanghao', width: 50, type: 'text' },
+									{ display: '名字', name: 'Name', width: 50, type: 'text' }
+
+								], isScroll: false, checkbox: true,
+								data: { Rows: EmployeeData },  //弹出表格渲染
+								width: '95%'
+							}
+						});
+					}
+					else {
+					}
+				},
+				error: function(xhr, stat, e) {
+					alert(e);
+				}
+			});
+			fn();
+		}
+
+
+		$(f_initGrid);
+
+		//生成成员树
+		function f_initGrid() {
+			g = $("#maingrid23").ligerGrid({
+				columns: [
+					{ display: '账号', name: 'Zhanghao', width: 50, type: 'text' },
+					{ display: '名字', name: 'Name', width: 100,
+						editor: { type: 'text' }
+					}, {
+						display: '操作', isSort: false, width: 120, render: function() {
+							var h = "<a href='javascript:deleteRow()'>删除</a> ";
+
+							return h;
+						}
+					}
+
+				],onReload: function() {return false;}, data: { Rows: [] },
+				enabledEdit: false, isScroll: true,
+				width: '100%',height:'97%'
+			});
+		}
+
 	});
+	//删除角色成员
+	var deletemassage = "../../../data_json/massage.json"
+	function deleteRow() {
+		var rowid = g.getSelectedRow().Id;
+		if (confirm('是否真的解除角色?')) {
+			$.ajax({ url: deletemassage, type: "GET", data: { operatetype: "fireEmployeer", staffId: escape(rowid) },
+				success: function(data) {
+//					data = eval('(' + data + ')');
+//					if(data.pw_flag==1){alert(data.msg);return false;}
+					if (data.IsSuccess) {
+						//后台返回true,删除成功
+						g.deleteSelectedRow();
+					}
+					else {
+						alert(data.Message);
+					}
+				},
+				error: function(xhr, stat, e) {
+					alert(e);
+				}
+			});
+
+		}
+	}
 
 	function itemclick(item, i) {
 
@@ -413,148 +575,41 @@
 		});
 
 		$("#tab1").ligerTab();
+        $("#tab_role").ligerTab();
 	});
 </script>
 
-<script type="text/javascript">
-	var EmployeeData;
-	var fn = null;
-	function f_import() {
-		var getmaingrid = maingrid.alert3();
-		if (getmaingrid == null) {
-			alert("请先左键点击选择部门");
-			return;
-		} else {
-
-		}
-		$.ajax({ url: getUrl, async: false, type: "POST", data: { operatetype: "getAllStaff" },
-			success: function(data) {
-
-				data = eval('(' + data + ')');
-				if(data.pw_flag==1){alert(data.msg);return false;}
-				$("#showStaffDiv").html("");
-				if (data.IsSuccess) {
-					EmployeeData = data.Data;
-
-					fn = $.ligerui.getPopupFn({
-						top: 80,
-						onSelect: function(e) {
-							var isno = false;
-							for (var i = 0; i < e.data.length; i++) {
-								$.ajax({ url: getUrl,  type: "POST", async: false, data: { operatetype: "appointEmployeer", roleId: escape(getmaingrid), staffId: escape(e.data[i].Id) },
-									success: function(data) {
-										data = eval('(' + data + ')');
-										if (data.IsSuccess) {
-											isno = true;
-										}
-										else {
-											alert(data.Message);
-										}
-									},
-									error: function(xhr, stat, e) {
-										alert(e);
-									}
-								});
-							}
-							if (isno) {
-								g.addRows(e.data);
-							}
-
-						},
-						grid: {
-							columns: [
-								{ display: '账号', name: 'Zhanghao', width: 50, type: 'text' },
-								{ display: '名字', name: 'Name', width: 50, type: 'text' }
-
-							], isScroll: false, checkbox: true,
-							data: { Rows: EmployeeData },
-							width: '95%'
-						}
-					});
-				}
-				else {
-				}
-			},
-			error: function(xhr, stat, e) {
-				alert(e);
-			}
-		});
-
-
-		fn();
-	}
-
-	$(f_initGrid);
-
-	var g = null;
-	function f_initGrid() {
-		g = $("#maingrid23").ligerGrid({
-			columns: [
-				{ display: '账号', name: 'Zhanghao', width: 50, type: 'text' },
-				{ display: '名字', name: 'Name', width: 100,
-					editor: { type: 'text' }
-				}, {
-					display: '操作', isSort: false, width: 120, render: function() {
-						var h = "<a href='javascript:deleteRow()'>删除</a> ";
-
-						return h;
-					}
-				}
-
-			],onReload: function() {return false;}, data: { Rows: [] },
-			enabledEdit: false, isScroll: true,
-			width: '100%',height:'97%'
-		});
-	}
-	function deleteRow() {
-		var rowid = g.getSelectedRow().Id;
-		if (confirm('是否真的解除角色?')) {
-			$.ajax({ url: getUrl, type: "POST", data: { operatetype: "fireEmployeer", staffId: escape(rowid) },
-				success: function(data) {
-					data = eval('(' + data + ')');
-					if(data.pw_flag==1){alert(data.msg);return false;}
-					if (data.IsSuccess) {
-						g.deleteSelectedRow();
-					}
-					else {
-						alert(data.Message);
-					}
-				},
-				error: function(xhr, stat, e) {
-					alert(e);
-				}
-			});
-
-		}
-	}
-
-</script>
 <!--权限方面-->
 <script>
+	var kk = [{"id": "0", "text": "胜网科技", "type": "1","children":[]}]
 	var g_isloading = false;
+
 	$(function()
 	{
+//		$("#dataTree").ligerTree({ url: '../../../data_json/tissue_nav_tree.json' });
 		//权限设置
 		dataTree=$("#dataTree").ligerTree(
 				{
+					url:"../../../data_json/tissue_nav_tree.json",
 					height:50,
-					data:[],
 					isLeaf:function(item)
 					{
-						return (item.type==1)?false:true;
+//						console.log(item.type)
+//						return (item.type==1)?false:true;
 					},
 					onSelect:onTreeSelect
 				});
-//		dataTree.loadData(null,url+"/Index/getform.html",null);
+//		dataTree.loadData(null,"../../../data_json/tissue_nav_tree.json",null);
 	});
 	function LoadDataTree()
 	{
 		$.ajax({
-			url:url+"/index/getUserRole/role_id/"+actionCustomerID+".html",
+			url:"../../../data_json/flow_tree.json",
 			dataType:'json',
-			type:"get",
+			type:"GET",
 			success:function(data)
 			{
+
 				g_isloading = true;
 				dataTree.cancelSelect(null);
 				$("div").children(".l-checkbox-checked").prop("class","l-box l-checkbox l-checkbox-unchecked");
@@ -663,7 +718,7 @@
 	#maingrid .l-grid-body-inner{width:auto!important;}
 </style>
 </head>
-<body style="background-color:#E0F0FE;">
+<body style="background-color:#E0F0FE;" ng-controller="apphttp">
 <div class="admin_main_nr_dbox">
 	<div id="addChildNode" style="display: none;line-height:35px;">
 		子节点名字：<input id="addChildName" type="text" /><br />
@@ -677,7 +732,49 @@
 		节点名字：<input id="editNodeName" type="text" /><br />
 		节点简介：<input id="editNodePresentation" type="text" /><br />
 	</div>
-	<div id="layout1">
+	<div id="tab_role" style="height:100%">
+		<div title="角色管理">
+			<div id="layout1">
+				<div position="center" title="角色信息">
+					<div id="maingrid">
+					</div>
+				</div>
+				<div position="right" title="角色成员与权限" style="height:100%">
+					<div id="tab1" style="height:100%">
+						<div title="角色成员">
+							<div id="maingrid23">
+							</div>
+						</div>
+						<div title="角色权限" style="height:96%;overflow-y:scroll">
+							<a style="padding:0px 4px 0px 4px;text-align:center;font-size:14px;position:absolute;width:35px;height:26px;line-height:26px;z-index:10000;right:30px;top:10px;background-color:rgb(18,147,147);color:#FFF;text-decoration:none;" href="#" onclick="get_treeconent();">保存</a>
+							<div id="dataTree" >
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div title="用户管理" style="height:100%">
+			<!--<iframe style="width:100%;height: 100%;" src="/8.15/admin/user/usermain.html" height="100%" frameborder="0" scrolling="on"></iframe>-->
+			<div id="layout2">
+                <div position="center" title="用户管理">
+                    <iframe style="width:100%;" src="../../../admin/user/usermain.html" height="100%" frameborder="0" scrolling="on"></iframe>
+                </div>
+                <!--&lt;!&ndash;<div position="center" title="用户管理">
+                    <iframe style="width:100%;" src="../admin/user/usermain.html" height="100%" frameborder="0" scrolling="on"></iframe>
+                </div>&ndash;&gt;-->
+            </div>
+			 <!--<frameset cols="180,*"  name="bodyFrame" id="bodyFrame" frameborder="no" border="0" framespacing="0">
+                 <frame src="/admin/new_pagedesign/pdesign_left.php" name="leftFrame" frameborder="no" scrolling="no" noresize id="leftFrame">
+                 <frame src="/admin/new_pagedesign/form_index.html" name="mainFrame" frameborder="no" scrolling="auto" noresize id="mainFrame">
+             </frameset>
+             <iframe style="width:100%;" src="../../../admin/user/usermain.html" height="100%" frameborder="0" scrolling="on"></iframe>-->
+		</div>
+		<div title="审核管理" style="height:100%">
+			<!--<iframe style="width:100%;" src="/8.15/admin/examine/main.html" height="100%" frameborder="0" scrolling="on"></iframe>-->
+		</div>
+	</div>
+	<!--<div id="layout1">
 		<div position="center" title="角色信息">
 			<div id="maingrid">
 			</div>
@@ -695,7 +792,7 @@
 				</div>
 			</div>
 		</div>
-	</div>
+	</div>-->
 	<!-- start -->
 	<div id="ediPparentNode" style="width:auto;height:auto; margin:3px; display:none; overflow:hidden;">
 		<input name="selectid" type="hidden" value="" id="selectid"/>

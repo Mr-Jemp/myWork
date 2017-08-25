@@ -3,10 +3,10 @@
 myApp.controller("main",["$scope","$http",function($scope,$http){
 
     //角色请求地址
-    $scope.power_tree ="./data_json/workdesk.json"
+    $scope.power_tree ="http://192.168.0.21:20896/htRoleService/getSearchInfoRole"
     //功能请求地址
     $scope.tissue_nav_tree ="./data_json/tissue_nav_tree.json"
-
+    $scope.naw ="./data_json/roleTree.json"
     //流程请求地址
     $scope.appflow_tree="./data_json/appflow_tree.json"
     $scope.appflow_tree02="./data_json/flow_tree.json"
@@ -18,14 +18,33 @@ myApp.controller("main",["$scope","$http",function($scope,$http){
 
 //左边主要菜单树分类   角色/功能/流程
 myApp.controller("work1Controller",["$scope","$http",function($scope,$http){
+
     $http({
-        method: 'GET',
-        url: $scope.power_tree
+        method:"POST",
+        url:"http://192.168.0.21:20896/htRoleService/getHtUserName",
+        data:{"role_id":9},
+//                headers:{'Content-Type': 'application/json'}
+    }).then(function(req){
+        console.log(req)
+        var ObjData = req.msg
+    },function(err){
+        $scope.err = err
+        console.log(err)
+    })
+
+
+
+
+    $http({
+        method:'GET',
+        url:$scope.power_tree,
     }).success(function(data){
+        var Objdata = data.msg
         var power_tree=$("#power_tree").ligerTree(
             {
-                data:data,
+                textFieldName:'name',
                 nodeWidth:200,
+                data:Objdata,
                 onclick:function(node){
                     var tabid = $(node.target).attr("tabid");
                     if (!tabid)
@@ -50,11 +69,6 @@ myApp.controller("work1Controller",["$scope","$http",function($scope,$http){
     }).error(function(data){
         alert("失败")
     })
-
-
-
-
-
 
 }])
 //功能
@@ -320,4 +334,23 @@ myApp.controller("gourl",["$scope","$http",function($scope,$http){
     }
 
 }])
+
+
+
+myApp.controller("juese",["$scope","http",function($scope,$http){
+
+
+}])
+
+
+
+
+
+
+
+
+
+
+
+
 

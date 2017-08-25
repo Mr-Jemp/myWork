@@ -3,12 +3,12 @@
     var myApp = angular.module('myApp', ['ui.router','angularTreeview'])
 
     myApp.config(function($stateProvider,$urlRouterProvider){
-        $urlRouterProvider.otherwise('/my');//在请求无效路由时使用的路径
+        $urlRouterProvider.otherwise('/school');//在请求无效路由时使用的路径
 
         $stateProvider
             .state('my',{  //设置路由状态
                 url:'/my',                      //路径
-                templateUrl:'./template/my/my.html' //加载的模版
+                templateUrl:'./template/my/index.html' //加载的模版
             })
             //登录成功后显示的页面
             .state('home',{
@@ -26,42 +26,15 @@
                 url:'/website',
                 templateUrl:'./template/website/website.html'
             })
-            //网站页的子路由跳转页面
-            .state('website.biaodan',{
-                url:'/biaodan',
-                template:"<h1>你好表单</h1>"
-            })
-            .state('website.oa',{
-                url:'/oa',
-                template:"<h1>你好OA</h1>"
-            })
-            .state('website.renyuan',{
-                url:'/renyuan',
-                templateUrl:"./template/website/website_child/people.html"
-            })
-            .state('website.fuwu',{
-                url:'/fuwu',
-                templateUrl:"./template/website/website_child/server.html"
-            })
-            .state('website.peizhi',{
-                url:'/peizhi',
-                templateUrl:"./template/website/website_child/web_config.html"
-            })
-            .state('website.shuju',{
-                url:'/shuju',
-                template:"<h1>你好数据</h1>"
-            })
-            
-            
              //吐槽
             .state('complain',{
                 url:'/complain',
                 templateUrl:'./template/complain/complain.html'
             })
             //生活
-            .state('life',{
-                url:'/life',
-                templateUrl:'./template/life/life.html'
+            .state('school',{
+                url:'/school',
+                templateUrl:'./template/school/school.html'
             })
             //会议视频
             .state('meeting',{

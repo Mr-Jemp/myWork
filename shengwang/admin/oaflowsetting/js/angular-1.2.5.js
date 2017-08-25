@@ -11505,7 +11505,7 @@ function $RootScopeProvider(){
        * you can register a `watchExpression` function with
        * {@link ng.$rootScope.Scope#methods_$watch $watch()} with no `listener`.
        *
-       * In unit tests, you may need to call `$digest()` to simulate the scope life cycle.
+       * In unit tests, you may need to call `$digest()` to simulate the scope school cycle.
        *
        * # Example
        * <pre>
@@ -11783,7 +11783,7 @@ function $RootScopeProvider(){
        * @description
        * `$apply()` is used to execute an expression in angular from outside of the angular
        * framework. (For example from browser DOM events, setTimeout, XHR or third party libraries).
-       * Because we are calling into the angular framework we need to perform proper scope life
+       * Because we are calling into the angular framework we need to perform proper scope school
        * cycle of {@link ng.$exceptionHandler exception handling},
        * {@link ng.$rootScope.Scope#methods_$digest executing watches}.
        *
@@ -11845,7 +11845,7 @@ function $RootScopeProvider(){
        *
        * @description
        * Listens on events of a given type. See {@link ng.$rootScope.Scope#methods_$emit $emit} for
-       * discussion of event life cycle.
+       * discussion of event school cycle.
        *
        * The event listener function format is: `function(event, args...)`. The `event` object
        * passed into the listener has the following attributes:
@@ -11887,7 +11887,7 @@ function $RootScopeProvider(){
        * Dispatches an event `name` upwards through the scope hierarchy notifying the
        * registered {@link ng.$rootScope.Scope#methods_$on} listeners.
        *
-       * The event life cycle starts at the scope on which `$emit` was called. All
+       * The event school cycle starts at the scope on which `$emit` was called. All
        * {@link ng.$rootScope.Scope#methods_$on listeners} listening for `name` event on this scope get
        * notified. Afterwards, the event traverses upwards toward the root scope and calls all
        * registered listeners along the way. The event will stop propagating if one of the listeners
@@ -11956,7 +11956,7 @@ function $RootScopeProvider(){
        * Dispatches an event `name` downwards to all child scopes (and their children) notifying the
        * registered {@link ng.$rootScope.Scope#methods_$on} listeners.
        *
-       * The event life cycle starts at the scope on which `$broadcast` was called. All
+       * The event school cycle starts at the scope on which `$broadcast` was called. All
        * {@link ng.$rootScope.Scope#methods_$on listeners} listening for `name` event on this scope get
        * notified. Afterwards, the event propagates to all direct and indirect scopes of the current
        * scope and calls all registered listeners along the way. The event cannot be canceled.
