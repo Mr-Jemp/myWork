@@ -1,0 +1,52 @@
+[ 2015-11-19T11:31:42+08:00 ] 183.21.22.158 /s/tp/wwwroot/index.php?s=/demo/formdesign/form_id/1278.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000153s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000069s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000141s ]
+SQL: SHOW COLUMNS FROM `ht_form` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `ht_form` WHERE `id` = 1278 AND `is_del` = 0 LIMIT 1   [ RunTime:0.0003s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000068s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000139s ]
+
+[ 2015-11-19T16:47:27+08:00 ] 183.21.22.158 /s/tp/wwwroot/index.php?s=/demo/formdesign/form_id/1712.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000156s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000075s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000148s ]
+SQL: SHOW COLUMNS FROM `ht_form` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `ht_form` WHERE `id` = 1712 AND `is_del` = 0 LIMIT 1   [ RunTime:0.0005s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000074s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000145s ]
+
+[ 2015-11-19T17:35:31+08:00 ] 119.134.124.20 /s/tp/wwwroot/index.php?s=/demo/formdesign/form_id/720.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000150s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000079s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000152s ]
+SQL: SHOW COLUMNS FROM `ht_form` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `ht_form` WHERE `id` = 720 AND `is_del` = 0 LIMIT 1   [ RunTime:0.0003s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000111s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000184s ]
+
+[ 2015-11-19T17:53:34+08:00 ] 119.134.124.20 /s/tp/wwwroot/index.php?s=/demo/formdesign/form_id/724.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000153s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000073s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000156s ]
+SQL: SHOW COLUMNS FROM `ht_form` [ RunTime:0.0009s ]
+SQL: SELECT * FROM `ht_form` WHERE `id` = 724 AND `is_del` = 0 LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000072s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000143s ]
+

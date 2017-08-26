@@ -1,0 +1,100 @@
+@charset "utf-8";
+/* CSS Document */
+#sidebar {
+	background-color: #ececec;
+	height: 100%;
+	width: 50px;
+	position: fixed;
+	margin: 0px;
+	padding: 0px;
+	z-index:600;
+}
+#icolist {
+	padding-top: 22px;
+}
+#sidebar dl {
+	height: auto;
+	width: 50px;
+	text-align: center;
+	clear: both;
+	overflow: hidden;
+	padding-top: 3px;
+	padding-right: 0px;
+	padding-bottom: 3px;
+	padding-left: 0px;
+	margin-top: 3px;
+	margin-right: 0px;
+	margin-bottom: 3px;
+	margin-left: 0px;
+	border-top-width: 1px;
+	border-bottom-width: 1px;
+	border-top-style: solid;
+	border-bottom-style: solid;
+	border-top-color: #ececec;
+	border-bottom-color: #ececec;
+}
+#sidebar dl dt {
+	width: 50px;
+	height:36px;
+	float: left;
+	margin: 0px;
+	padding: 0px;
+}
+#sidebar dl dd {
+	width: 50px;
+	float: left;
+	font-size: 12px;
+	margin: 0px;
+	padding-top: 3px;
+	padding-right: 0px;
+	padding-bottom: 0px;
+	padding-left: 0px;
+	color: #666;
+	line-height:16px;
+	height:16px;
+	font-family: Arial, Helvetica, sans-serif;
+}
+#sidebar #icolist dl dd a {
+	color: #666;
+	text-decoration: none;
+}
+.hover{
+	cursor:pointer;
+	background-color:#f7f7f7;
+	border-top: solid 1px #e6e6e6;
+    border-bottom: solid 1px #e6e6e6;
+}
+.lt {
+	height: 50px;
+	width: 50px;
+	background-color: #ECECEC;
+	background-image: url(../../../resource/images/common/sidebar/icon.png);
+	background-repeat: no-repeat;
+	background-position: 0px 0px;
+	position: fixed;
+	z-index: 601;
+	bottom:16px;	
+	filter:alpha(opacity=50);   
+    -moz-opacity:0.5;   
+    -khtml-opacity: 0.5;   
+    opacity: 0.5; 
+}
+.ltnone{
+	background-position: 0px -60px;
+}
+.ltover{
+	cursor:pointer;		
+	background-position: -60px 0px;	
+	filter:alpha(opacity=100);   
+    -moz-opacity:1;   
+    -khtml-opacity:1;   
+    opacity:1;
+}
+.ltover2{
+	cursor:pointer;		
+	background-position: -60px -60px;
+	filter:alpha(opacity=100);   
+    -moz-opacity:1;   
+    -khtml-opacity:1;   
+    opacity:1;	
+}

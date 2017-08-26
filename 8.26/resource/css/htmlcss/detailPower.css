@@ -1,0 +1,36 @@
+﻿body
+{
+    padding:0px; 
+    margin:0px;  
+} 
+#contain
+{
+	text-align:center;
+	width:99%;
+	height:100%;	
+}
+#topDiv
+{
+    float:left;
+    margin-top:20px;   
+    width:100%;
+    height:10%;
+    background-color:#29AAE7;    
+}
+#contentDiv
+{  
+    float:left;
+    width:100%;
+    height:80%;
+}
+#bottom
+{
+    float:left;
+    width:100%;
+    height:10%;
+    background-color:#EFEFEF;
+}
+.selectA
+{
+    background-color:Gray;
+}

@@ -1,0 +1,29 @@
+[ 2016-06-21T10:54:46+08:00 ] 113.99.27.15 /s/tp/wwwroot/index.php?s=/Flow/demo/index/getflow/ok.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000165s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000071s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000140s ]
+SQL: SHOW COLUMNS FROM `ht_flow` [ RunTime:0.0010s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `ht_flow` WHERE `is_del` = 0 LIMIT 1   [ RunTime:0.0005s ]
+NOTIC: [8] Undefined variable: p /var/www/dzxt/s/tp/Application/Flow/Controller/DemoController.class.php 第 22 行.
+NOTIC: [8] Trying to get property of non-object /var/www/dzxt/s/tp/Application/Flow/Controller/DemoController.class.php 第 22 行.
+NOTIC: [8] Undefined variable: p /var/www/dzxt/s/tp/Application/Flow/Controller/DemoController.class.php 第 22 行.
+NOTIC: [8] Trying to get property of non-object /var/www/dzxt/s/tp/Application/Flow/Controller/DemoController.class.php 第 22 行.
+SQL: SELECT `id`,`form_id`,`flow_name`,`flow_desc`,`updatetime`,`dateline` FROM `ht_flow` WHERE `is_del` = 0 ORDER BY id desc  [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `ht_form` [ RunTime:0.0008s ]
+SQL: SELECT * FROM `ht_form` WHERE ( 1=1 AND id='757' ) LIMIT 1   [ RunTime:0.0005s ]
+SQL: SELECT * FROM `ht_form` WHERE ( 1=1 AND id='775' ) LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT * FROM `ht_form` WHERE ( 1=1 AND id='772' ) LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT * FROM `ht_form` WHERE ( 1=1 AND id='769' ) LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT * FROM `ht_form` WHERE ( 1=1 AND id='746' ) LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT * FROM `ht_form` WHERE ( 1=1 AND id='730' ) LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT * FROM `ht_form` WHERE ( 1=1 AND id='587' ) LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT * FROM `ht_form` WHERE ( 1=1 AND id='266' ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `ht_form` WHERE ( 1=1 AND id='328' ) LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT * FROM `ht_form` WHERE ( 1=1 AND id='329' ) LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000102s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000160s ]
+

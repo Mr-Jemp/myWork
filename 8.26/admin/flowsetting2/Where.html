@@ -1,0 +1,245 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+
+    <script type="text/javascript" src="js/json2.js"></script>
+
+    <link rel="Stylesheet" type="text/css" href="css/bootstrap.min.css" />
+    <link rel="Stylesheet" type="text/css" href="js/lib/ligerUI/skins/Aqua/css/ligerui-all.css" />
+
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+
+    <script src="js/lib/ligerUI/js/core/base.js" type="text/javascript"></script>
+
+    <script src="js/lib/ligerUI/js/plugins/ligerLayout.js" type="text/javascript"></script>
+
+    <script src="js/lib/ligerUI/js/plugins/ligerComboBox.js" type="text/javascript"></script>
+
+    <script src="js/lib/ligerUI/js/plugins/ligerSpinner.js" type="text/javascript"></script>
+
+    <script src="js/lib/ligerUI/js/plugins/ligerCheckBox.js" type="text/javascript"></script>
+
+    <script src="js/lib/ligerUI/js/plugins/ligerResizable.js" type="text/javascript"></script>
+
+    <script src="js/lib/ligerUI/js/plugins/ligerGrid.js" type="text/javascript"></script>
+
+    <script src="js/lib/ligerUI/js/plugins/ligerListBox.js" type="text/javascript"></script>
+
+    <script src="js/lib/ligerUI/js/plugins/ligerButton.js" type="text/javascript"></script>
+
+    <script src="js/lib/ligerUI/js/plugins/ligerDialog.js" type="text/javascript"></script>
+
+    <script src="js/lib/ligerUI/js/plugins/ligerTextBox.js" type="text/javascript"></script>
+
+    <script src="js/lib/ligerUI/js/plugins/ligerDateEditor.js" type="text/javascript"></script>
+
+    <script type="text/javascript">
+        var g = null;
+         
+        var value =  GetQueryString("value");
+        $(function() {
+            $("#chat_symbol").ligerComboBox({ width: 350 });
+            $("#logic").ligerComboBox({ width: 350 });
+            $("#txt_char_jieguo").ligerTextBox({ width: 350 });
+            $("#Flowlistbox").ligerListBox({
+
+
+                isShowCheckBox: true,
+                isMultiSelect: true,
+                height: 50,
+                width: 350,
+                valueFieldID: 'text'
+
+            });
+
+            document.getElementById("div_logic").style.display = "none";
+
+
+            g = $("#chat_where").ligerComboBox({
+                url: 'Handler/Tables.ashx?action=GetTabFieldForList&TABLE=' + value,
+                valueField: 'column_name',
+                textField: 'column_name',
+                width: 350,
+                autocomplete: true
+
+            });
+            $("#pageloading").hide();
+
+            $("#add").click(function() {
+                add();
+            });
+
+            $("#btn_chat_deleteList").click(function() {
+                var lbox = liger.get("Flowlistbox");
+                alert(lbox);
+                var selecteds = lbox.getSelectedItems();
+                lbox.removeItems(selecteds);
+
+            });
+
+        });
+        function f_select()
+        {
+            return g.getSelectedRow();
+        }
+        
+        function GetQueryString(name) {
+            var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)");
+            var r = window.location.search.substr(1).match(reg);
+            if (r != null) return unescape(r[2]); return null;
+        }
+
+
+            function add()
+            {
+                var lbox = liger.get("Flowlistbox"); 
+                
+                 var lj = document.getElementById("logic").value;
+                 
+                var zd = document.getElementById("chat_where").value;
+                if(zd=="")
+                {
+                    alert("请选择字段");
+                    return;
+                }
+                
+                var ys = document.getElementById("chat_symbol").value;
+                if(ys=="")
+                {
+                    alert("请选择运算符");
+                     return;
+                }
+                
+                var bd = document.getElementById("txt_char_jieguo").value;
+                if(bd=="")
+                {
+                    alert("请输入结果");
+                     return;
+                }
+                
+              
+               if( $("#Flowlistbox").ligerListBox().data ==null)
+               {
+                    lj =""  ;                    
+                    
+                    document.getElementById("div_logic").style.display="block";
+               }
+               else
+               {
+                    if(lj=="")
+                    {
+                        alert("请选择操作符");
+                        return;
+                    }
+               }
+              
+                var value ="";
+                if(ys=="like")
+                {
+                    value = lj + " " + zd + " " + ys + " '%" + bd + "%'"  ;
+                }
+                else if(ys=="not like")
+                {
+                    value = lj + " " + zd + " " + ys +  " '%" + bd + "%' "  ;
+                } else if (ys == "in") {
+                    value = lj + " " + zd + " = " + bd + " ";
+                }else
+                {
+                    value = lj + " " + zd + " " + ys + " '" + bd + "' "  ;
+                }
+                
+                var data = [
+                        { id: value, text: value }
+                         ];
+                lbox.addItems(data);
+                document.getElementById("chat_where").value = "";
+                document.getElementById("txt_char_jieguo").value = "";
+          }
+
+          function newWheres() {
+              $.ligerDialog.open({ title: '值', name: 'column_name', width: 500, height: 325, url: 'SetWhereIn.htm?r=' + Math.random() + '&value=' + value, buttons: [
+                 { text: '确定', onclick: f_selectWhereOK },
+                 { text: '取消', onclick: f_selectWhereCancel }
+            ]
+              });
+          }
+          function f_selectWhereOK(item, dialog) {
+              var chat_where = dialog.frame.document.getElementById("chat_where").value;
+              if (chat_where != "") {
+                  dialog.frame.add();
+              }
+              var manager = dialog.frame.$("#Flowlistbox").ligerListBox();
+              var tablesIN = dialog.frame.$("#where_tab").val();
+              var columnIN = dialog.frame.$("#selColumn").val();
+              
+              var sql_where = "(select "+columnIN+" from "+tablesIN+" where ";
+
+              for (var i in manager.data) {
+                  sql_where = sql_where + manager.data[i].text + " ";
+              }
+              sql_where = sql_where + ")";
+              $("#txt_char_jieguo").val(sql_where);
+
+              dialog.close();
+
+
+          }
+
+          function f_selectWhereCancel(item, dialog) {
+              dialog.close();
+          }
+    </script>
+    
+</head>
+<body>
+    <div class="boddiv" style="margin: 20px;">
+        <div id="div_logic">
+            操作:
+        <select id="logic">
+            <option value="and">且</option>
+            <option value="or">或</option>
+        </select>
+        <br /></div>
+        <div>
+       
+            条件字段:
+        <input type="text" id="chat_where" />
+     
+            规则:
+           </div> 
+           <div>
+        <select id="chat_symbol">
+            <option value="=">等于</option>
+            <option value=">">大于</option>
+            <option value="<">小于</option>
+            <option value=">=">大于等于</option>
+            <option value="<=">小于等于</option>
+            <option value="<>">不等于</option>
+            <option value="like">包含</option>
+            <option value="not like">不包含</option>
+            <option value="in">子查询</option>
+        </select>
+     </div>
+      <div>
+        值:<table>
+            <tr>
+                <td><input type="text" id="txt_char_jieguo" /></td>
+                <td> <button onclick="newWheres()" >...</button></td>
+            </tr>
+        </table>
+       </div>
+       
+        <div>
+            <li style="float: left; width: 100px;"><a href="#" id="add">增加</a></li>
+            <li style="float: left; width: 100px;"><a style="float: right;" href="#" id="btn_chat_deleteList">
+                删除</a></li>
+            <li style="float: inherit;">
+                <br />
+                <div id="Flowlistbox">
+                </div>
+            </li>
+        </div>
+    </div>
+</body>
+</html>
