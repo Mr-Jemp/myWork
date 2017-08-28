@@ -1,0 +1,241 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=7">
+<title>页面左边树</title>
+<script type="text/javascript" src="/resource/js/jQuery/jquery-1.7.2.min.js"></script>
+<script src="/resource/part/ligerlib/ligerUI/js/ligerui.min.js" type="text/javascript"></script>
+<link href="/resource/part/ligerlib/ligerUI/skins/Aqua/css/ligerui-all.css" rel="stylesheet" type="text/css" />
+<link href="/resource/part/ligerlib/ligerUI/skins/ligerui-icons.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript">
+$(function() {
+	var rmenu,actionNodeID,dd,left_tree,node_conet,orderField,fieldsStr;
+	orderField=null;
+	
+	$(document).bind("contextmenu", function(e) {
+                return false;
+            });
+	$("#reset").click(function(){
+		dd.hide();
+	});
+	rmenu = $.ligerMenu({ top: 100, left: 100, width: 120,
+	items:[{ text: '添加子节点', click: add_node,icon:'add'},{ text: '更改节点名称', click: edit_node,icon:'edit'},{ text: '删除节点', click: del_node,icon:'delete'}]}); 
+	function add_node(){
+		if(node_conet.data.isLeaf)return false;
+		$("#node_id").val(actionNodeID);
+		$("#act").val("add");
+		fieldsStr="name,datatype,";
+		dd = $.ligerDialog.open({target: $("#node_form"),title: "添加节点",width:210});
+	}
+	$("#add_node_form").submit(function(){
+		var aid,valuesStr,act;	
+		var conemt=$("#filename").val();
+		aid=$("#node_id").val();
+		act=$("#act").val();		
+		if(conemt==""){
+			alert("文件名不能为空");
+			return false;
+		}
+		if(aid)
+		if(act=="add"){
+			valuesStr="'"+conemt+"','"+$("#filetype").val()+"',";//valuesStr='文件名','文件夹'
+			var parentId="parentId";
+			var tableName="tbdatainfo";
+			$.post("/handler/HBSTree.ashx",
+			{"service":".", "database":"manageuser", "operateType": "addNode", "parentId": aid, "orderField":escape(orderField), "parentField":escape(parentId),"fieldsStr":escape(fieldsStr), "valuesStr": escape(valuesStr),"tableName":escape(tableName)},
+			   function(data){
+				alert("添加成功");
+				dd.hide();			
+				//var node=left_tree.getSelected();			
+				var nodes = [];
+				if(data.values[1].value=="文件夹")data.isLeaf=false;
+				nodes.push(data);	
+					console.log(data);
+				if (node_conet)
+					left_tree.append(node_conet.target, nodes); 
+				else
+					left_tree.append(null, nodes);						
+				},"json");
+		}else if(act=="edit"){			
+			valuesStr="set name='"+conemt+"',datatype='"+$("#filetype").val()+"'";//valuesStr='文件名','文件夹'
+			$.post("/handler/HBSTree.ashx",
+			{"service":".", "database":"manageuser", "operateType": "editNode", "id": aid,"updateStr": escape(valuesStr),"tableName":"tbdatainfo"},
+			   function(data){
+					alert("修改成功");
+					if (node_conet)
+						left_tree.update(node_conet.target,{"text":conemt});
+					dd.hide();			
+				},"json");
+		}
+		$("#add_node_form input").val("");	
+		$("#add_btn").val("确定");
+		$("#reset").val("取消");
+		return false;
+	});		
+	function edit_node(){		
+		$("#node_id").val(actionNodeID);
+		$("#act").val("edit");
+		var cvalue=node_conet.data.values[0].value;
+		$("#filename").val(cvalue);
+		dd = $.ligerDialog.open({target: $("#node_form"),title: "修改 ["+cvalue+"] 节点",width:210});
+	}
+	function del_node(item){
+		alert("您没有权限操作删除！");
+		return false;		
+		$.post("/handler/HBSTree.ashx",
+		{"service":".", "database":"manageuser", "operateType": "deleteNode", "id": actionNodeID,"parentId":node_conet.data.parentId,"tableName":"tbdatainfo"},
+		   function(data){							
+			},"json");
+		if (node_conet){
+               left_tree.remove(node_conet.target);
+			   alert("删除成功");
+			   }
+        else{
+               alert('请先选择节点');
+		}
+	}
+	$("#left_tree").css("height",$(document.body).height()-10);	
+			fieldsStr="name;datatype";
+            //fieldsStr = fieldsStr.substr(0, fieldsStr.length - 1);
+			var showRoot=true;
+			$.ajax({
+                type: 'POST',
+                url: '/handler/pageinfo.ashx',
+				//url: '/handler/HBSTree.ashx',
+                dataType : 'json',
+                data: { action: "gettreedata" },
+                //data:{"service":".", "database":"manageuser", "operateType": "getRootNode", "rootId":1, "orderField":escape(orderField), "parentField":escape("parentId"),"fieldsStr":escape(fieldsStr), "showRoot":escape(showRoot),"tableName":escape("tbdatainfo")},
+                success: function(data) {
+                    ddd=[data];
+                    //树
+                    left_tree=$("#dataTree").ligerTree({
+                        data:ddd,
+                        checkbox: false,
+                        slide: false,
+                        nodeWidth: 120,
+                        render: function (item)
+                        {
+                            return item.values[0].value;
+                        },
+                        isLeaf:function(item){
+							return item.isLeaf;
+							//console.log((item.values[1].value=="文件夹"));
+                           // return !(item.values[1].value=="文件夹");
+                        },
+						isExpand: 2,
+                        onselect: function (node)
+                        {
+                            var tabid = $(node.target).attr("tabid");
+                            if (!tabid)
+                            {
+                                tabid = new Date().getTime();
+                                $(node.target).attr("tabid", tabid)
+                            }
+							if(!node.data.isLeaf)return false;							
+							window.parent.frames["mainFrame"].location.href ='/admin/new_pagedesign/editHTMLPage.htm?id='+node.data.id+'&name='+node.data.values[0].value;							
+                        },
+						onContextmenu: function (node, e)
+						 { 							
+							//if(node.data.isLeaf)return false;
+							actionNodeID = node.data.id;
+							node_conet=node;
+							rmenu.show({top:e.pageY,left:e.pageX});							
+							return false;
+						 }
+                    });
+                }, error: function(xhr, stat, e) { console.log(xhr); }
+            });  					
+});
+    </script>
+<style>
+html,body{height:100%}
+body { margin:0px;background-color: #F5F9FE; font-family:Arial, Helvetica, sans-serif; font-size:12px; color:#000000;}
+#dataTree{	
+	background-color:"#F5F9FE";
+}
+#left_tree{
+	height:300px;
+	width:195px;
+	overflow:hidden;	
+    overflow-y:auto;
+	margin-left:5px;	
+}
+dl {
+        height: 26px;
+        line-height: 26px;
+        font-size: 12px;
+        margin: 0px;
+        padding-top: 5px;
+        padding-right: 0px;
+        padding-bottom: 5px;
+        padding-left: 0px;
+        clear: both;		
+    }
+    #node_form dt {
+        float: left;
+        width: 50px;
+        text-align: right;
+			background-color:"reb";
+    }
+    #node_form dd {
+        float: left;
+        text-align: left;
+        margin: 0px;
+        padding: 0px;
+        height: 26px;
+        line-height: 26px;
+		width: 120px;
+		background-color:"#fffooo";
+    }
+    #node_form dd input {
+        height: 18px;
+        width: 110px;
+        line-height: 18px;
+        border: 1px solid #CCC;
+        padding-left:5px;
+    }
+    #node_form p
+    {
+        padding-left:10px;
+        padding-top:10px;
+    }
+    #node_form p input
+    {
+        cursor:pointer;
+        padding:2px 5px;    
+    }
+	form{
+	 margin:0px;
+	 padding:0px;
+	}
+</style>
+</head>
+<body>
+<div  class="admin_left_box">
+<div id="left_tree">
+<ul id="dataTree"></ul>
+</div>
+</div>
+<!--添加表单-->
+<div id="node_form" style="width:180px; margin:3px; display:none;">  
+<form action="" method="post" id="add_node_form">
+    <dl>
+    <dt>文件名：</dt><dd><input type="text" name="filename" id="filename" value="" /></dd>
+    </dl>    
+    <dl><dt>类型：</dt><dd>
+	<select name="filetype" id="filetype">
+    <option value="文件夹">文件夹</option>
+    <option value="页面">页面</option>
+  </select>
+  </dd></dl>    
+    <p>
+    <input type="hidden" name="node_id" id="node_id" />
+	<input type="hidden" name="act" id="act" value="add" />	
+    <input type="submit" id="add_btn" value="确定"/>&nbsp;<input type="reset" id="reset" value="取消" />
+</p>
+ </form>
+ </div>
+ <!--添加结束-->
+</body>
+</html>

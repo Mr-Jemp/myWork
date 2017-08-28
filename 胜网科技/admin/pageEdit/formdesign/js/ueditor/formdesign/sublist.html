@@ -1,0 +1,277 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <title>宏控件</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1" >
+    <meta name="generator" content="www.leipi.org" />
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.css">
+    <!--[if lte IE 6]>
+    <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap-ie6.css">
+    <![endif]-->
+    <!--[if lte IE 7]>
+    <link rel="stylesheet" type="text/css" href="bootstrap/css/ie.css">
+    <![endif]-->
+    <link rel="stylesheet" href="leipi.style.css">
+    <script type="text/javascript" src="../dialogs/internal.js"></script>
+	<script type="text/javascript" src="/resource/js/jQuery/jquery-1.11.1.min.js"></script>
+    <script type="text/javascript">
+function createElement(type, name)
+{     
+    var element = null;     
+    try {        
+        element = document.createElement('<'+type+' name="'+name+'">');     
+    } catch (e) {}   
+    if(element==null) {     
+        element = document.createElement(type);     
+        element.name = name;     
+    } 
+    return element;     
+}
+    </script>
+	
+	<script src="/resource/part/ligerlib/ligerUI/js/ligerui.min.js" type="text/javascript"></script>
+	<link href="/resource/part/ligerlib/ligerUI/skins/Aqua/css/ligerui-all.css" rel="stylesheet" type="text/css" />
+	<link href="/resource/part/ligerlib/ligerUI/skins/ligerui-icons.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<input name="orgformid" id="orgformid" type="hidden" value="">
+<input name="orgformname" id="orgformname" type="hidden" value="">
+
+<div class="content">
+    <table class="table table-bordered table-striped table-hover">
+    <thead>
+        <tr>
+            <th><span>控件名称</span><span class="label label-important">*</span></th>
+            <th><span>可见性</span></th>
+        </tr>
+        <tr>
+            <td>
+                <input id="orgname" type="text" placeholder="必填项"/>
+            </td>
+            <td><label class="checkbox"> <input id="orghide" type="checkbox"> 隐藏 </label> </td>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <th><span>参数选项</span></th>
+            <th><span>选择页面</span></th>
+        </tr>
+        <tr>
+            <td>
+				<p>表头字段：</p>
+				<table border="0"><tr>
+				<td style="border:0; background:#ffffff">
+				<select name="orgselectfield" size="10" id="orgselectfield" style="width:90px"></select>
+				  </td>
+				  <td style="border:0; background:#ffffff;20px">
+				  	<input id="rmove" type="button" value=">>">
+					<br><input id="lmove" type="button" value="<<">
+					</td>
+				<td style="border:0; background:#ffffff">
+                <select name="orgfield" size="10" id="orgfield" style="width:90px">
+				  </select></td>
+				  </tr></table>
+				<br>所选页面：<span id="formname"></span>
+            </td>
+            <td>
+                <ul id="dataTree"></ul>
+            </td>
+        </tr>
+    </tbody>
+    
+    </table>
+</div>
+<script type="text/javascript">
+var oNode = null,thePlugins = 'sublist';
+$(function()
+{
+	$("#rmove").bind("click",function()
+	{
+		var val=$("#orgselectfield  option:selected").val();
+		var txt=$("#orgselectfield  option:selected").text();
+		if(typeof(val)=="undefined" || val==""){alert("请选择字段");return;}
+		var opt=$("#orgfield  option");
+		var i=0,l=opt.length;
+		for(i=0;i<l;i++)
+		{
+			if(opt.val()!=val)continue;
+			alert("字段已添加");
+			return;
+		}
+		$("#orgfield").append("<option value=\""+val+"\">"+txt+"</option>");
+	});
+	$("#lmove").bind("click",function()
+	{
+		$("#orgfield option:selected").remove();
+	});
+});
+window.onload = function() {
+    if( UE.plugins[thePlugins].editdom ) {
+        oNode = UE.plugins[thePlugins].editdom;
+        var gTitle=oNode.getAttribute('title').replace(/&quot;/g,"\"")
+		,gHidden=oNode.getAttribute('orghide')
+		,gFormid=oNode.getAttribute('orgformid')
+		,gFormname=oNode.getAttribute('orgformname')
+		,gFieldname=oNode.getAttribute('orgfieldname')
+		,gField=oNode.getAttribute('orgfield')
+		;
+
+        gTitle = gTitle==null ? '' : gTitle;
+        $G('orgname').value = gTitle;
+        if(oNode.getAttribute('orghide')=='1'){
+            $G('orghide').checked = true;
+        }
+        $G('orgname').value    = gTitle;
+
+        $G('orgformid').value    = gFormid;
+		$G('orgformname').value    = gFormname;
+		$("#formname").html(gFormname);
+
+		$("#orgfield option").remove();		
+		var arr=gField.split(";");
+		var i=0;
+
+		for(i=0;i<arr.length;i++)
+		{
+			if(typeof(arr[i])=="undefined" || arr[i]=="")continue;
+			var arr2=arr[i].split(",");
+			$("#orgfield").append("<option value=\""+arr2[0]+"\">"+arr2[1]+"</option>");
+		}
+		
+		$("#orgselectfield option").remove();
+		
+		$("#sys_data_arithmetic_attr").show();
+		
+    }
+	
+	$.ajax({
+		type: 'POST',
+		url: '/s/function/pageinfo.php',
+		data: { action: "gettreedata" },
+		success: function(data) {
+			data = eval('(' + data + ')');
+			if (!data.IsSuccess)return;
+			data.tree=eval('[' + data.tree + ']');
+	
+			$("#dataTree").ligerTree({
+				data:data.tree,
+				checkbox: false,
+				slide: false,
+				nodeWidth: 120,
+				render: function (item)
+				{
+					return item.values[0].value;
+				},
+				isLeaf:function(item){
+					return item.isLeaf;
+				},
+				isExpand: 2,
+				onselect: function (node)
+				{
+					$("#formname").html(node.data.values[0].value);
+					$("#orgformid").val(node.data.id);
+					$('#orgformname').val(node.data.values[0].value);
+					$.ajax({
+					type: 'POST',
+					url: '/s/function/macrosfield.php',
+					data: { "from_id":node.data.id},
+					success: function(data)
+					{
+						data = eval('(' + data + ')');	
+						if(!data.IsSuccess)
+						{
+							alert(data.Message);
+							return;
+						}
+						var i=0;
+						$("#orgfield option").remove();
+						$("#orgselectfield option").remove();
+						if(data.fieldv==null)return;
+						for(i=0;i<data.fieldv.length;i++)
+						{
+							$("#orgselectfield").append("<option value=\""+data.fieldv[i]+"\">"+data.fields[i]+"</option>");
+						}
+					}});
+				}
+			});
+		}
+	});
+}
+
+dialog.oncancel = function () {
+    if( UE.plugins[thePlugins].editdom ) {
+        delete UE.plugins[thePlugins].editdom;
+    }
+};
+dialog.onok = function (){
+    if ( $G('orgname').value == '' ) {
+        alert('控件名称不能为空');
+        return false;
+    }
+    var gTitle=$G('orgname').value.replace(/\"/g,"&quot;");
+	var gFormid=$G('orgformid').value;
+	var gFormname=$G('orgformname').value;
+	
+	var opt=$("#orgfield option");
+	var i=0,l=opt.length;
+	var gField="";
+	for(i=0;i<l;i++)
+	{
+		if(gField!="")gField+=";";
+		gField+=opt.eq(i).val()+','+opt.eq(i).text();
+	}
+	
+    if( !oNode ) {
+        try {
+                oNode = createElement('input','leipiNewField');
+                oNode.setAttribute('type','text');
+                oNode.setAttribute('value','{子列表}');
+                
+                oNode.setAttribute('title',gTitle);
+                oNode.setAttribute('name','leipiNewField');
+                oNode.setAttribute('leipiPlugins',thePlugins);
+
+				oNode.setAttribute('orgformid',gFormid);
+				oNode.setAttribute('orgformname',gFormname);
+				oNode.setAttribute('orgfield',gField);
+				
+                if( $G('orghide').checked ) {
+                    oNode.setAttribute('orghide', '1' ) ;
+                } else {
+                    oNode.setAttribute('orghide', '0' ) ;
+                }
+				
+				oNode.style.width = '100%';
+				
+                editor.execCommand('insertHtml',oNode.outerHTML);
+                return true;
+            } catch ( e ) {
+                try {
+                    editor.execCommand('error');
+                } catch ( e ) {
+                    alert('控件异常');
+                }
+                return false;
+            }
+    } else {
+		oNode.setAttribute('title',gTitle);
+
+		oNode.setAttribute('orgformid',gFormid);
+		oNode.setAttribute('orgformname',gFormname);
+		oNode.setAttribute('orgfield',gField);
+		
+		if( $G('orghide').checked ) {
+			oNode.setAttribute('orghide', '1' ) ;
+		} else {
+			oNode.setAttribute('orghide', '0' ) ;
+		}
+		
+		oNode.style.width = '100%';
+		
+        delete UE.plugins[thePlugins].editdom;
+    }
+};
+</script>
+</body>
+</html>

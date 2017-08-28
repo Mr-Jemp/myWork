@@ -1,0 +1,118 @@
+[ 2015-08-29T08:42:50+08:00 ] ::1 /s/tp/wwwroot/index.php?s=/demo/formdesign/form_id/143.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.132812s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.015625s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.015625s ]
+SQL: SHOW COLUMNS FROM `ht_form` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `ht_form` WHERE `id` = 143 AND `is_del` = 0 LIMIT 1   [ RunTime:0.0156s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.015625s ]
+INFO: [ app_end ] --END-- [ RunTime:0.015625s ]
+
+[ 2015-08-29T08:42:53+08:00 ] ::1 /s/tp/wwwroot/index.php?s=/demo/formdesign/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000977s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000977s ]
+SQL: SHOW COLUMNS FROM `ht_form` [ RunTime:0.0059s ]
+SQL: SELECT * FROM `ht_form` WHERE `id` = 143 AND `is_del` = 0 LIMIT 1   [ RunTime:0.0010s ]
+NOTIC: [8] Undefined index: value D:\������\dzxt\s\tp\Application\Home\Org\Formdesign.class.php 第 78 行.
+SQL: show tables like 'ht_form_data_143' [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `ht_form_data_143` [ RunTime:0.0039s ]
+SQL: UPDATE `ht_form` SET `is_data_form`='1',`fields`='3',`content`='<p>月份：{|-<span leipiplugins=\"select\"><select orgwidth=\"150\" style=\"width: 150px;\" size=\"1\" leipiplugins=\"select\" title=\"月份\" name=\"data_1\"><option value=\"1月\">1月</option><option value=\"2月\">2月</option><option value=\"3月\">3月</option></select>&nbsp;&nbsp;</span>-|}</p><p>金额：<input orgtype=\"text\" orgwidth=\"150\" orgalign=\"left\" style=\"text-align: left; width: 150px;\" orghide=\"0\" leipiplugins=\"text\" value=\"\" title=\"金额\" name=\"data_2\" type=\"text\"/></p><p>统计：<input name=\"data_3\" type=\"text\" value=\"{macros}\" title=\"ssds\" leipiplugins=\"macros\" orgtype=\"sys_data_arithmetic\" orgyear=\"2015\" orgformid=\"139\" orgformname=\"558\" orgmonth=\"08\" orgfield=\"`data_1`\" orgfieldname=\"单价\" orgfun=\"合计\" orghide=\"0\" orgfontsize=\"\" orgwidth=\"150\" style=\"width: 150px;\"/></p>',`content_parse`='<p>月份：{data_1}</p><p>金额：{data_2}</p><p>统计：{data_3}</p>',`content_data`='a:3:{i:0;a:8:{s:12:\"leipiplugins\";s:6:\"select\";s:8:\"orgwidth\";s:3:\"150\";s:5:\"style\";s:13:\"width: 150px;\";s:4:\"size\";s:1:\"1\";s:5:\"title\";s:6:\"月份\";s:4:\"name\";s:6:\"data_1\";s:5:\"value\";s:14:\"1月,2月,3月\";s:7:\"content\";s:263:\"<span leipiplugins=\"select\"><select orgwidth=\"150\" style=\"width: 150px;\" size=\"1\" leipiplugins=\"select\" title=\"月份\" name=\"data_1\"><option value=\"1月\">1月</option><option value=\"2月\">2月</option><option value=\"3月\">3月</option></select>&nbsp;&nbsp;</span>\";}i:1;a:11:{s:7:\"orgtype\";s:4:\"text\";s:8:\"orgwidth\";s:3:\"150\";s:8:\"orgalign\";s:4:\"left\";s:5:\"style\";s:31:\"text-align: left; width: 150px;\";s:7:\"orghide\";s:1:\"0\";s:12:\"leipiplugins\";s:4:\"text\";s:5:\"value\";s:0:\"\";s:5:\"title\";s:6:\"金额\";s:4:\"name\";s:6:\"data_2\";s:4:\"type\";s:4:\"text\";s:7:\"content\";s:176:\"<input orgtype=\"text\" orgwidth=\"150\" orgalign=\"left\" style=\"text-align: left; width: 150px;\" orghide=\"0\" leipiplugins=\"text\" value=\"\" title=\"金额\" name=\"data_2\" type=\"text\"/>\";}i:2;a:18:{s:4:\"name\";s:6:\"data_3\";s:4:\"type\";s:4:\"text\";s:5:\"value\";s:8:\"{macros}\";s:5:\"title\";s:4:\"ssds\";s:12:\"leipiplugins\";s:6:\"macros\";s:7:\"orgtype\";s:19:\"sys_data_arithmetic\";s:7:\"orgyear\";s:4:\"2015\";s:9:\"orgformid\";s:3:\"139\";s:11:\"orgformname\";s:3:\"558\";s:8:\"orgmonth\";s:2:\"08\";s:8:\"orgfield\";s:8:\"`data_1`\";s:12:\"orgfieldname\";s:6:\"单价\";s:6:\"orgfun\";s:6:\"合计\";s:7:\"orghide\";s:1:\"0\";s:11:\"orgfontsize\";s:0:\"\";s:8:\"orgwidth\";s:3:\"150\";s:5:\"style\";s:13:\"width: 150px;\";s:7:\"content\";s:301:\"<input name=\"data_3\" type=\"text\" value=\"{macros}\" title=\"ssds\" leipiplugins=\"macros\" orgtype=\"sys_data_arithmetic\" orgyear=\"2015\" orgformid=\"139\" orgformname=\"558\" orgmonth=\"08\" orgfield=\"`data_1`\" orgfieldname=\"单价\" orgfun=\"合计\" orghide=\"0\" orgfontsize=\"\" orgwidth=\"150\" style=\"width: 150px;\"/>\";}}',`updatetime`='1440808973' WHERE `id` = 143 [ RunTime:0.0117s ]
+NOTIC: [2] unlink(../Application/Runtime/Temp/21d9a5adf0e55158019e1c301ccb9502.php): No such file or directory D:\������\dzxt\s\tp\ThinkPHP\Library\Think\Cache\Driver\File.class.php 第 157 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.015625s ]
+INFO: [ app_end ] --END-- [ RunTime:0.015625s ]
+
+[ 2015-08-29T08:42:55+08:00 ] ::1 /s/tp/wwwroot/index.php?s=/demo/formdesign/form_id/143.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000977s ]
+SQL: SHOW COLUMNS FROM `ht_form` [ RunTime:0.0068s ]
+SQL: SELECT * FROM `ht_form` WHERE `id` = 143 AND `is_del` = 0 LIMIT 1   [ RunTime:0.0020s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2015-08-29T08:43:16+08:00 ] ::1 /s/tp/wwwroot/index.php?s=/demo/formdesign/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000977s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000977s ]
+SQL: SHOW COLUMNS FROM `ht_form` [ RunTime:0.0049s ]
+SQL: SELECT * FROM `ht_form` WHERE `id` = 143 AND `is_del` = 0 LIMIT 1   [ RunTime:0.0020s ]
+NOTIC: [8] Undefined index: value D:\������\dzxt\s\tp\Application\Home\Org\Formdesign.class.php 第 78 行.
+SQL: show tables like 'ht_form_data_143' [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `ht_form_data_143` [ RunTime:0.0029s ]
+SQL: UPDATE `ht_form` SET `is_data_form`='1',`fields`='3',`content`='<p>月份：{|-<span leipiplugins=\"select\"><select orgwidth=\"150\" style=\"width: 150px;\" size=\"1\" leipiplugins=\"select\" title=\"月份\" name=\"data_1\"><option value=\"1月\">1月</option><option value=\"2月\">2月</option><option value=\"3月\">3月</option></select>&nbsp;&nbsp;</span>-|}</p><p>金额：<input name=\"data_3\" type=\"text\" value=\"{macros}\" title=\"统计\" leipiplugins=\"macros\" orgtype=\"sys_data_arithmetic\" orgyear=\"2015\" orgformid=\"139\" orgformname=\"558\" orgmonth=\"08\" orgfield=\"`data_1`\" orgfieldname=\"单价\" orgfun=\"合计\" orghide=\"0\" orgfontsize=\"\" orgwidth=\"150\" style=\"width: 150px;\"/></p><p><input orgtype=\"text\" orgwidth=\"150\" orgalign=\"left\" style=\"text-align: left; width: 150px;\" orghide=\"0\" leipiplugins=\"text\" value=\"\" title=\"金额\" name=\"data_2\" type=\"text\"/></p><p>统计：</p>',`content_parse`='<p>月份：{data_1}</p><p>金额：{data_3}</p><p>{data_2}</p><p>统计：</p>',`content_data`='a:3:{i:0;a:8:{s:12:\"leipiplugins\";s:6:\"select\";s:8:\"orgwidth\";s:3:\"150\";s:5:\"style\";s:13:\"width: 150px;\";s:4:\"size\";s:1:\"1\";s:5:\"title\";s:6:\"月份\";s:4:\"name\";s:6:\"data_1\";s:5:\"value\";s:14:\"1月,2月,3月\";s:7:\"content\";s:263:\"<span leipiplugins=\"select\"><select orgwidth=\"150\" style=\"width: 150px;\" size=\"1\" leipiplugins=\"select\" title=\"月份\" name=\"data_1\"><option value=\"1月\">1月</option><option value=\"2月\">2月</option><option value=\"3月\">3月</option></select>&nbsp;&nbsp;</span>\";}i:1;a:18:{s:4:\"name\";s:6:\"data_3\";s:4:\"type\";s:4:\"text\";s:5:\"value\";s:8:\"{macros}\";s:5:\"title\";s:6:\"统计\";s:12:\"leipiplugins\";s:6:\"macros\";s:7:\"orgtype\";s:19:\"sys_data_arithmetic\";s:7:\"orgyear\";s:4:\"2015\";s:9:\"orgformid\";s:3:\"139\";s:11:\"orgformname\";s:3:\"558\";s:8:\"orgmonth\";s:2:\"08\";s:8:\"orgfield\";s:8:\"`data_1`\";s:12:\"orgfieldname\";s:6:\"单价\";s:6:\"orgfun\";s:6:\"合计\";s:7:\"orghide\";s:1:\"0\";s:11:\"orgfontsize\";s:0:\"\";s:8:\"orgwidth\";s:3:\"150\";s:5:\"style\";s:13:\"width: 150px;\";s:7:\"content\";s:303:\"<input name=\"data_3\" type=\"text\" value=\"{macros}\" title=\"统计\" leipiplugins=\"macros\" orgtype=\"sys_data_arithmetic\" orgyear=\"2015\" orgformid=\"139\" orgformname=\"558\" orgmonth=\"08\" orgfield=\"`data_1`\" orgfieldname=\"单价\" orgfun=\"合计\" orghide=\"0\" orgfontsize=\"\" orgwidth=\"150\" style=\"width: 150px;\"/>\";}i:2;a:11:{s:7:\"orgtype\";s:4:\"text\";s:8:\"orgwidth\";s:3:\"150\";s:8:\"orgalign\";s:4:\"left\";s:5:\"style\";s:31:\"text-align: left; width: 150px;\";s:7:\"orghide\";s:1:\"0\";s:12:\"leipiplugins\";s:4:\"text\";s:5:\"value\";s:0:\"\";s:5:\"title\";s:6:\"金额\";s:4:\"name\";s:6:\"data_2\";s:4:\"type\";s:4:\"text\";s:7:\"content\";s:176:\"<input orgtype=\"text\" orgwidth=\"150\" orgalign=\"left\" style=\"text-align: left; width: 150px;\" orghide=\"0\" leipiplugins=\"text\" value=\"\" title=\"金额\" name=\"data_2\" type=\"text\"/>\";}}',`updatetime`='1440808996' WHERE `id` = 143 [ RunTime:0.0068s ]
+NOTIC: [2] unlink(../Application/Runtime/Temp/21d9a5adf0e55158019e1c301ccb9502.php): No such file or directory D:\������\dzxt\s\tp\ThinkPHP\Library\Think\Cache\Driver\File.class.php 第 157 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000977s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000977s ]
+
+[ 2015-08-29T08:43:17+08:00 ] ::1 /s/tp/wwwroot/index.php?s=/demo/formdesign/form_id/143.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002930s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `ht_form` [ RunTime:0.0127s ]
+SQL: SELECT * FROM `ht_form` WHERE `id` = 143 AND `is_del` = 0 LIMIT 1   [ RunTime:0.0029s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2015-08-29T08:44:08+08:00 ] ::1 /s/tp/wwwroot/index.php?s=/demo/formdesign/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000977s ]
+SQL: SHOW COLUMNS FROM `ht_form` [ RunTime:0.0117s ]
+SQL: SELECT * FROM `ht_form` WHERE `id` = 143 AND `is_del` = 0 LIMIT 1   [ RunTime:0.0039s ]
+NOTIC: [8] Undefined index: value D:\������\dzxt\s\tp\Application\Home\Org\Formdesign.class.php 第 78 行.
+SQL: show tables like 'ht_form_data_143' [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `ht_form_data_143` [ RunTime:0.0088s ]
+ERR: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'NULLcomment '好友'' at line 1
+
+[ 2015-08-29T16:33:02+08:00 ] ::1 /s/tp/wwwroot/index.php?s=/demo/formdesign/form_id/136.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `ht_form` [ RunTime:0.0059s ]
+SQL: SELECT * FROM `ht_form` WHERE `id` = 136 AND `is_del` = 0 LIMIT 1   [ RunTime:0.0020s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000977s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000977s ]
+
+[ 2015-08-29T16:33:05+08:00 ] ::1 /s/tp/wwwroot/index.php?s=/Home/Demo/del.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000977s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000976s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000976s ]
+SQL: SHOW COLUMNS FROM `ht_form` [ RunTime:0.0059s ]
+SQL: SELECT * FROM `ht_form` WHERE `pid` = 136 LIMIT 1   [ RunTime:0.0020s ]
+SQL: DELETE FROM `ht_form` WHERE `id` = 136 [ RunTime:0.0078s ]
+SQL: SHOW COLUMNS FROM `ht_power` [ RunTime:0.0039s ]
+SQL: DELETE FROM `ht_power` WHERE `form_id` = 136 [ RunTime:0.0020s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+

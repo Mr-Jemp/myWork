@@ -1,0 +1,573 @@
+[ 2015-11-10T08:52:56+08:00 ] 127.0.0.1 /s/tp/wwwroot/index.php/Home/Demodata/view3/form_id/142/id/6
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000976s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001953s ]
+SQL: SHOW COLUMNS FROM `ht_form` [ RunTime:0.0117s ]
+SQL: SELECT * FROM `ht_form` WHERE `id` = 142 AND `is_del` = 0 LIMIT 1   [ RunTime:0.0029s ]
+SQL: SHOW COLUMNS FROM `ht_form_data_142` [ RunTime:0.0088s ]
+SQL: SELECT * FROM `ht_form_data_142` WHERE `id` = 6 AND `is_del` = 0 LIMIT 1   [ RunTime:0.0020s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.024414s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.024414s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.012695s ]
+INFO: [ app_end ] --END-- [ RunTime:0.012695s ]
+
+[ 2015-11-10T08:56:22+08:00 ] 127.0.0.1 /s/tp/wwwroot/index.php/Home/Demodata/view3/form_id/135/id/20
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000976s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000976s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000976s ]
+SQL: SHOW COLUMNS FROM `ht_form` [ RunTime:0.0127s ]
+SQL: SELECT * FROM `ht_form` WHERE `id` = 135 AND `is_del` = 0 LIMIT 1   [ RunTime:0.0029s ]
+SQL: SHOW COLUMNS FROM `ht_form_data_135` [ RunTime:0.0039s ]
+SQL: SELECT * FROM `ht_form_data_135` WHERE `id` = 20 AND `is_del` = 0 LIMIT 1   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000976s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013671s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013671s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000977s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000976s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000976s ]
+
+[ 2015-11-10T08:56:34+08:00 ] 127.0.0.1 /s/tp/wwwroot/index.php/Home/Demodata/view3/form_id/135/id/20
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000976s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000976s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000977s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001953s ]
+SQL: SHOW COLUMNS FROM `ht_form` [ RunTime:0.0146s ]
+SQL: SELECT * FROM `ht_form` WHERE `id` = 135 AND `is_del` = 0 LIMIT 1   [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `ht_form_data_135` [ RunTime:0.0049s ]
+SQL: SELECT * FROM `ht_form_data_135` WHERE `id` = 20 AND `is_del` = 0 LIMIT 1   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015625s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.016601s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000977s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000977s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000977s ]
+
+[ 2015-11-10T09:44:55+08:00 ] 127.0.0.1 /s/tp/wwwroot/index.php/Home/Demodata/view3/form_id/135/id/21
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000976s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000976s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000976s ]
+SQL: SHOW COLUMNS FROM `ht_form` [ RunTime:0.0059s ]
+SQL: SELECT * FROM `ht_form` WHERE `id` = 135 AND `is_del` = 0 LIMIT 1   [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `ht_form_data_135` [ RunTime:0.0039s ]
+SQL: SELECT * FROM `ht_form_data_135` WHERE `id` = 21 AND `is_del` = 0 LIMIT 1   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013672s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013672s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000976s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000976s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000976s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001953s ]
+
+[ 2015-11-10T10:37:52+08:00 ] 127.0.0.1 /s/tp/wwwroot/index.php?s=/demo/formdesign/form_id/199.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001953s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001954s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001954s ]
+SQL: SHOW COLUMNS FROM `ht_form` [ RunTime:0.0039s ]
+SQL: SELECT * FROM `ht_form` WHERE `id` = 199 AND `is_del` = 0 LIMIT 1   [ RunTime:0.0029s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.005859s ]
+INFO: [ app_end ] --END-- [ RunTime:0.006836s ]
+
+[ 2015-11-10T10:40:34+08:00 ] 127.0.0.1 /s/tp/wwwroot/index.php?s=/demo/formdesign/form_id/142.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000976s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000976s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001953s ]
+SQL: SHOW COLUMNS FROM `ht_form` [ RunTime:0.0059s ]
+SQL: SELECT * FROM `ht_form` WHERE `id` = 142 AND `is_del` = 0 LIMIT 1   [ RunTime:0.0020s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001953s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001953s ]
+
+[ 2015-11-10T14:22:24+08:00 ] 127.0.0.1 /s/tp/wwwroot/index.php?s=/demo/formdesign/form_id/191.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000976s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001953s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001953s ]
+SQL: SHOW COLUMNS FROM `ht_form` [ RunTime:0.0107s ]
+SQL: SELECT * FROM `ht_form` WHERE `id` = 191 AND `is_del` = 0 LIMIT 1   [ RunTime:0.0020s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000976s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001953s ]
+
+[ 2015-11-10T14:36:47+08:00 ] 127.0.0.1 /s/tp/wwwroot/index.php?s=/demo/formdesign/form_id/135.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000976s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000976s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000976s ]
+SQL: SHOW COLUMNS FROM `ht_form` [ RunTime:0.0059s ]
+SQL: SELECT * FROM `ht_form` WHERE `id` = 135 AND `is_del` = 0 LIMIT 1   [ RunTime:0.0020s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000977s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001953s ]
+
+[ 2015-11-10T14:37:06+08:00 ] 127.0.0.1 /s/tp/wwwroot/index.php?s=/demo/formdesign/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000976s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000976s ]
+SQL: SHOW COLUMNS FROM `ht_form` [ RunTime:0.0117s ]
+SQL: SELECT * FROM `ht_form` WHERE `id` = 135 AND `is_del` = 0 LIMIT 1   [ RunTime:0.0029s ]
+SQL: show tables like 'ht_form_data_135' [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `ht_form_data_135` [ RunTime:0.0068s ]
+SQL: UPDATE `ht_form` SET `is_data_form`='1',`fields`='3',`content`='<p>请假人：&nbsp;<input name=\"data_1\" type=\"text\" title=\"name\" value=\"\" leipiplugins=\"text\" orghide=\"0\" orgalign=\"left\" orgwidth=\"150\" orgtype=\"text\" style=\"text-align: left; width: 150px;\"/></p><p>请假时间：<input name=\"data_2\" type=\"text\" value=\"{macros}\" title=\"dtime\" leipiplugins=\"macros\" orgtype=\"sys_date_cn\" orghide=\"0\" orgwidth=\"150\" style=\"width: 150px;\"/></p><p>请假天数：<input name=\"data_3\" type=\"text\" title=\"num\" value=\"\" leipiplugins=\"text\" orghide=\"0\" orgalign=\"left\" orgwidth=\"60\" orgtype=\"text\" style=\"text-align: left; width: 60px;\"/>&nbsp;天</p>',`content_parse`='<p>请假人：&nbsp;{data_1}</p><p>请假时间：{data_2}</p><p>请假天数：{data_3}&nbsp;天</p>',`content_data`='a:3:{i:0;a:11:{s:4:\"name\";s:6:\"data_1\";s:4:\"type\";s:4:\"text\";s:5:\"title\";s:4:\"name\";s:5:\"value\";s:0:\"\";s:12:\"leipiplugins\";s:4:\"text\";s:7:\"orghide\";s:1:\"0\";s:8:\"orgalign\";s:4:\"left\";s:8:\"orgwidth\";s:3:\"150\";s:7:\"orgtype\";s:4:\"text\";s:5:\"style\";s:31:\"text-align: left; width: 150px;\";s:7:\"content\";s:174:\"<input name=\"data_1\" type=\"text\" title=\"name\" value=\"\" leipiplugins=\"text\" orghide=\"0\" orgalign=\"left\" orgwidth=\"150\" orgtype=\"text\" style=\"text-align: left; width: 150px;\"/>\";}i:1;a:10:{s:4:\"name\";s:6:\"data_2\";s:4:\"type\";s:4:\"text\";s:5:\"value\";s:8:\"{macros}\";s:5:\"title\";s:5:\"dtime\";s:12:\"leipiplugins\";s:6:\"macros\";s:7:\"orgtype\";s:11:\"sys_date_cn\";s:7:\"orghide\";s:1:\"0\";s:8:\"orgwidth\";s:3:\"150\";s:5:\"style\";s:13:\"width: 150px;\";s:7:\"content\";s:158:\"<input name=\"data_2\" type=\"text\" value=\"{macros}\" title=\"dtime\" leipiplugins=\"macros\" orgtype=\"sys_date_cn\" orghide=\"0\" orgwidth=\"150\" style=\"width: 150px;\"/>\";}i:2;a:11:{s:4:\"name\";s:6:\"data_3\";s:4:\"type\";s:4:\"text\";s:5:\"title\";s:3:\"num\";s:5:\"value\";s:0:\"\";s:12:\"leipiplugins\";s:4:\"text\";s:7:\"orghide\";s:1:\"0\";s:8:\"orgalign\";s:4:\"left\";s:8:\"orgwidth\";s:2:\"60\";s:7:\"orgtype\";s:4:\"text\";s:5:\"style\";s:30:\"text-align: left; width: 60px;\";s:7:\"content\";s:171:\"<input name=\"data_3\" type=\"text\" title=\"num\" value=\"\" leipiplugins=\"text\" orghide=\"0\" orgalign=\"left\" orgwidth=\"60\" orgtype=\"text\" style=\"text-align: left; width: 60px;\"/>\";}}',`updatetime`='1447137426' WHERE `id` = 135 [ RunTime:0.0039s ]
+NOTIC: [2] unlink(../Application/Runtime/Temp/21d9a5adf0e55158019e1c301ccb9502.php): No such file or directory D:\wamp64\www\dzxt\s\tp\ThinkPHP\Library\Think\Cache\Driver\File.class.php 第 157 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001953s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001953s ]
+
+[ 2015-11-10T14:37:07+08:00 ] 127.0.0.1 /s/tp/wwwroot/index.php?s=/demo/formdesign/form_id/135.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000977s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000977s ]
+SQL: SHOW COLUMNS FROM `ht_form` [ RunTime:0.0039s ]
+SQL: SELECT * FROM `ht_form` WHERE `id` = 135 AND `is_del` = 0 LIMIT 1   [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000977s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001953s ]
+
+[ 2015-11-10T14:41:49+08:00 ] 127.0.0.1 /s/tp/wwwroot/index.php/Home/Demodata/view3/form_id/135/id/22
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000977s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000977s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000977s ]
+SQL: SHOW COLUMNS FROM `ht_form` [ RunTime:0.0059s ]
+SQL: SELECT * FROM `ht_form` WHERE `id` = 135 AND `is_del` = 0 LIMIT 1   [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `ht_form_data_135` [ RunTime:0.0049s ]
+SQL: SELECT * FROM `ht_form_data_135` WHERE `id` = 22 AND `is_del` = 0 LIMIT 1   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015625s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015625s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000977s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000977s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000977s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000977s ]
+
+[ 2015-11-10T14:42:02+08:00 ] 127.0.0.1 /s/tp/wwwroot/index.php/Home/Demodata/view3/form_id/135/id/22
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000977s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000976s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000976s ]
+SQL: SHOW COLUMNS FROM `ht_form` [ RunTime:0.0039s ]
+SQL: SELECT * FROM `ht_form` WHERE `id` = 135 AND `is_del` = 0 LIMIT 1   [ RunTime:0.0049s ]
+SQL: SHOW COLUMNS FROM `ht_form_data_135` [ RunTime:0.0029s ]
+SQL: SELECT * FROM `ht_form_data_135` WHERE `id` = 22 AND `is_del` = 0 LIMIT 1   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000977s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000977s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015625s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015625s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000977s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000976s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000976s ]
+
+[ 2015-11-10T15:24:29+08:00 ] 127.0.0.1 /s/tp/wwwroot/index.php/Home/Demodata/view3/form_id/135/id/22
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000977s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000977s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000977s ]
+SQL: SHOW COLUMNS FROM `ht_form` [ RunTime:0.0098s ]
+SQL: SELECT * FROM `ht_form` WHERE `id` = 135 AND `is_del` = 0 LIMIT 1   [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `ht_form_data_135` [ RunTime:0.0049s ]
+SQL: SELECT * FROM `ht_form_data_135` WHERE `id` = 22 AND `is_del` = 0 LIMIT 1   [ RunTime:0.0020s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.016602s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.017578s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000976s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000977s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000977s ]
+
+[ 2015-11-10T15:25:17+08:00 ] 127.0.0.1 /s/tp/wwwroot/index.php/Home/Demodata/view3/form_id/135/id/22
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000977s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000977s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000977s ]
+SQL: SHOW COLUMNS FROM `ht_form` [ RunTime:0.0039s ]
+SQL: SELECT * FROM `ht_form` WHERE `id` = 135 AND `is_del` = 0 LIMIT 1   [ RunTime:0.0059s ]
+SQL: SHOW COLUMNS FROM `ht_form_data_135` [ RunTime:0.0029s ]
+SQL: SELECT * FROM `ht_form_data_135` WHERE `id` = 22 AND `is_del` = 0 LIMIT 1   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000977s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013672s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013672s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.003906s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.004882s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000977s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001954s ]
+
+[ 2015-11-10T16:09:44+08:00 ] 127.0.0.1 /s/tp/wwwroot/index.php/Home/Demodata/view3/form_id/135/id/22
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000977s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000976s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001953s ]
+SQL: SHOW COLUMNS FROM `ht_form` [ RunTime:0.0049s ]
+SQL: SELECT * FROM `ht_form` WHERE `id` = 135 AND `is_del` = 0 LIMIT 1   [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `ht_form_data_135` [ RunTime:0.0039s ]
+SQL: SELECT * FROM `ht_form_data_135` WHERE `id` = 22 AND `is_del` = 0 LIMIT 1   [ RunTime:0.0020s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.014648s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015625s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000977s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000977s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000977s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000977s ]
+
+[ 2015-11-10T16:10:30+08:00 ] 127.0.0.1 /s/tp/wwwroot/index.php/Home/Demodata/view3/form_id/135/id/23
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000977s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000977s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001954s ]
+SQL: SHOW COLUMNS FROM `ht_form` [ RunTime:0.0059s ]
+SQL: SELECT * FROM `ht_form` WHERE `id` = 135 AND `is_del` = 0 LIMIT 1   [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `ht_form_data_135` [ RunTime:0.0049s ]
+SQL: SELECT * FROM `ht_form_data_135` WHERE `id` = 23 AND `is_del` = 0 LIMIT 1   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000976s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.014648s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014648s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000977s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000977s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000977s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000977s ]
+
+[ 2015-11-10T16:30:57+08:00 ] 127.0.0.1 /s/tp/wwwroot/index.php?s=/demo/formdesign/form_id/142.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000977s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000977s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000977s ]
+SQL: SHOW COLUMNS FROM `ht_form` [ RunTime:0.0059s ]
+SQL: SELECT * FROM `ht_form` WHERE `id` = 142 AND `is_del` = 0 LIMIT 1   [ RunTime:0.0020s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001953s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001953s ]
+
+[ 2015-11-10T16:34:06+08:00 ] 127.0.0.1 /s/tp/wwwroot/index.php?s=/demo/formdesign/form_id/142.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001953s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001953s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001953s ]
+SQL: SHOW COLUMNS FROM `ht_form` [ RunTime:0.0059s ]
+SQL: SELECT * FROM `ht_form` WHERE `id` = 142 AND `is_del` = 0 LIMIT 1   [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000977s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001954s ]
+
+[ 2015-11-10T16:34:21+08:00 ] 127.0.0.1 /s/tp/wwwroot/index.php?s=/demo/formdesign/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000976s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000976s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000976s ]
+SQL: SHOW COLUMNS FROM `ht_form` [ RunTime:0.0068s ]
+SQL: SELECT * FROM `ht_form` WHERE `id` = 142 AND `is_del` = 0 LIMIT 1   [ RunTime:0.0020s ]
+SQL: show tables like 'ht_form_data_142' [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `ht_form_data_142` [ RunTime:0.0049s ]
+SQL: ALTER TABLE `ht_form_data_142` ADD COLUMN `data_3` varchar(255) NOT NULL DEFAULT '' comment 'sdsd'; [ RunTime:0.0459s ]
+SQL: UPDATE `ht_form` SET `is_data_form`='1',`fields`='3',`content`='<p>收入金额：<input orgtype=\"text\" orgwidth=\"150\" orgalign=\"left\" style=\"text-align: left; width: 150px;\" orghide=\"0\" leipiplugins=\"text\" value=\"\" title=\"money\" name=\"data_1\" type=\"text\"/></p><p>税收金额：<input orgtype=\"text\" orgwidth=\"150\" orgalign=\"left\" style=\"text-align: left; width: 150px;\" orghide=\"0\" leipiplugins=\"text\" value=\"\" title=\"shui\" name=\"data_2\" type=\"text\"/></p><p><br/></p><p>ds<input title=\"sdsd\" value=\"页面树[sdsd]\" orgminheight=\"750\" class=\"dynamictree\" leipiplugins=\"dynamictree\" name=\"data_3\" type=\"text\"/></p>',`content_parse`='<p>收入金额：{data_1}</p><p>税收金额：{data_2}</p><p><br/></p><p>ds{data_3}</p>',`content_data`='a:3:{i:0;a:11:{s:7:\"orgtype\";s:4:\"text\";s:8:\"orgwidth\";s:3:\"150\";s:8:\"orgalign\";s:4:\"left\";s:5:\"style\";s:31:\"text-align: left; width: 150px;\";s:7:\"orghide\";s:1:\"0\";s:12:\"leipiplugins\";s:4:\"text\";s:5:\"value\";s:0:\"\";s:5:\"title\";s:5:\"money\";s:4:\"name\";s:6:\"data_1\";s:4:\"type\";s:4:\"text\";s:7:\"content\";s:175:\"<input orgtype=\"text\" orgwidth=\"150\" orgalign=\"left\" style=\"text-align: left; width: 150px;\" orghide=\"0\" leipiplugins=\"text\" value=\"\" title=\"money\" name=\"data_1\" type=\"text\"/>\";}i:1;a:11:{s:7:\"orgtype\";s:4:\"text\";s:8:\"orgwidth\";s:3:\"150\";s:8:\"orgalign\";s:4:\"left\";s:5:\"style\";s:31:\"text-align: left; width: 150px;\";s:7:\"orghide\";s:1:\"0\";s:12:\"leipiplugins\";s:4:\"text\";s:5:\"value\";s:0:\"\";s:5:\"title\";s:4:\"shui\";s:4:\"name\";s:6:\"data_2\";s:4:\"type\";s:4:\"text\";s:7:\"content\";s:174:\"<input orgtype=\"text\" orgwidth=\"150\" orgalign=\"left\" style=\"text-align: left; width: 150px;\" orghide=\"0\" leipiplugins=\"text\" value=\"\" title=\"shui\" name=\"data_2\" type=\"text\"/>\";}i:2;a:8:{s:5:\"title\";s:4:\"sdsd\";s:5:\"value\";s:15:\"页面树[sdsd]\";s:12:\"orgminheight\";s:3:\"750\";s:5:\"class\";s:11:\"dynamictree\";s:12:\"leipiplugins\";s:11:\"dynamictree\";s:4:\"name\";s:6:\"data_3\";s:4:\"type\";s:4:\"text\";s:7:\"content\";s:137:\"<input title=\"sdsd\" value=\"页面树[sdsd]\" orgminheight=\"750\" class=\"dynamictree\" leipiplugins=\"dynamictree\" name=\"data_3\" type=\"text\"/>\";}}',`updatetime`='1447144461' WHERE `id` = 142 [ RunTime:0.0029s ]
+NOTIC: [2] unlink(../Application/Runtime/Temp/21d9a5adf0e55158019e1c301ccb9502.php): No such file or directory D:\wamp64\www\dzxt\s\tp\ThinkPHP\Library\Think\Cache\Driver\File.class.php 第 157 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001954s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001954s ]
+
+[ 2015-11-10T16:34:22+08:00 ] 127.0.0.1 /s/tp/wwwroot/index.php?s=/demo/formdesign/form_id/142.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000977s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000977s ]
+SQL: SHOW COLUMNS FROM `ht_form` [ RunTime:0.0117s ]
+SQL: SELECT * FROM `ht_form` WHERE `id` = 142 AND `is_del` = 0 LIMIT 1   [ RunTime:0.0029s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000977s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001953s ]
+
+[ 2015-11-10T17:34:57+08:00 ] 127.0.0.1 /s/tp/wwwroot/index.php?s=/Home/Demo/add.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000976s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000977s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000977s ]
+SQL: SHOW COLUMNS FROM `ht_form` [ RunTime:0.0117s ]
+SQL: INSERT INTO `ht_form` (`form_name`,`form_desc`,`updatetime`,`type`,`dateline`,`pid`,`creater_uid`) VALUES ('任务列表','','1447148097','0','1447148097','56','79') [ RunTime:0.0137s ]
+NOTIC: [2] unlink(../Application/Runtime/Temp/21d9a5adf0e55158019e1c301ccb9502.php): No such file or directory D:\wamp64\www\dzxt\s\tp\ThinkPHP\Library\Think\Cache\Driver\File.class.php 第 157 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000977s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000977s ]
+
+[ 2015-11-10T17:35:01+08:00 ] 127.0.0.1 /s/tp/wwwroot/index.php?s=/demo/formdesign/form_id/246.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000976s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000977s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001954s ]
+SQL: SHOW COLUMNS FROM `ht_form` [ RunTime:0.0127s ]
+SQL: SELECT * FROM `ht_form` WHERE `id` = 246 AND `is_del` = 0 LIMIT 1   [ RunTime:0.0029s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000977s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000977s ]
+
+[ 2015-11-10T17:36:01+08:00 ] 127.0.0.1 /s/tp/wwwroot/index.php?s=/Home/Demo/add.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000977s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000976s ]
+SQL: SHOW COLUMNS FROM `ht_form` [ RunTime:0.0117s ]
+SQL: INSERT INTO `ht_form` (`form_name`,`form_desc`,`updatetime`,`type`,`dateline`,`pid`,`creater_uid`) VALUES ('添加任务','','1447148161','0','1447148161','56','79') [ RunTime:0.0098s ]
+NOTIC: [2] unlink(../Application/Runtime/Temp/21d9a5adf0e55158019e1c301ccb9502.php): No such file or directory D:\wamp64\www\dzxt\s\tp\ThinkPHP\Library\Think\Cache\Driver\File.class.php 第 157 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000976s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000976s ]
+
+[ 2015-11-10T17:36:05+08:00 ] 127.0.0.1 /s/tp/wwwroot/index.php?s=/demo/formdesign/form_id/247.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000977s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000976s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000976s ]
+SQL: SHOW COLUMNS FROM `ht_form` [ RunTime:0.0117s ]
+SQL: SELECT * FROM `ht_form` WHERE `id` = 247 AND `is_del` = 0 LIMIT 1   [ RunTime:0.0020s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000976s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001953s ]
+
+[ 2015-11-10T17:42:53+08:00 ] 127.0.0.1 /s/tp/wwwroot/index.php?s=/demo/formdesign/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000977s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000977s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000977s ]
+SQL: SHOW COLUMNS FROM `ht_form` [ RunTime:0.0049s ]
+SQL: SELECT * FROM `ht_form` WHERE `id` = 247 AND `is_del` = 0 LIMIT 1   [ RunTime:0.0010s ]
+SQL: show tables like 'ht_form_data_247' [ RunTime:0.0020s ]
+SQL: CREATE TABLE `ht_form_data_247` (
+              `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+              `uid` int(10) unsigned NOT NULL DEFAULT '0',
+              `foreign_id` int(10) unsigned NOT NULL DEFAULT '0',
+              `data_1` varchar(255) NOT NULL DEFAULT '' comment 'username',`data_2` varchar(255) NOT NULL DEFAULT '' comment 'title',`data_3` text NOT NULL comment 'des',
+              `is_del` tinyint(1) unsigned NOT NULL DEFAULT '0',
+              `updatetime` int(10) unsigned NOT NULL DEFAULT '0',
+              `dateline` int(10) unsigned NOT NULL DEFAULT '0',
+              PRIMARY KEY (`id`),
+              KEY `uid` (`uid`),
+              KEY `foreign_id` (`foreign_id`)
+            ) ENGINE=InnoDB DEFAULT CHARSET=utf8; [ RunTime:0.0068s ]
+SQL: UPDATE `ht_form` SET `is_data_form`='0',`fields`='3',`content`='<p>胜网内容任务添加表</p><p><br/></p><table><tbody><tr class=\"firstRow\"><td style=\"word-break: break-all;\" valign=\"top\" width=\"135\">任务提交人：<br/></td><td valign=\"top\" width=\"747\"><input orgtype=\"text\" orgwidth=\"150\" orgalign=\"left\" style=\"text-align: left; width: 150px;\" orghide=\"0\" leipiplugins=\"text\" value=\"\" title=\"username\" name=\"data_1\" type=\"text\"/></td></tr><tr><td style=\"word-break: break-all;\" valign=\"top\" width=\"135\">标 题：<br/></td><td style=\"word-break: break-all;\" valign=\"top\" width=\"747\"><input orgtype=\"text\" orgwidth=\"150\" orgalign=\"left\" style=\"text-align: left; width: 150px;\" orghide=\"0\" leipiplugins=\"text\" value=\"\" title=\"title\" name=\"data_2\" type=\"text\"/></td></tr><tr><td style=\"word-break: break-all;\" valign=\"top\" width=\"135\">描述：<br/></td><td valign=\"top\" width=\"747\"><textarea title=\"des\" name=\"data_3\" leipiplugins=\"textarea\" value=\"\" orgrich=\"0\" orgfontsize=\"\" orgwidth=\"300\" orgheight=\"80\" style=\"width:300px;height:80px;\"></textarea></td></tr><tr><td valign=\"top\" width=\"135\"><br/></td><td valign=\"top\" width=\"747\"><br/></td></tr><tr><td style=\"word-break: break-all;\" valign=\"top\" width=\"135\">附件：<br/></td><td valign=\"top\" width=\"747\"><br/></td></tr><tr><td valign=\"top\" width=\"135\"><br/></td><td valign=\"top\" width=\"747\"><br/></td></tr><tr><td valign=\"top\" width=\"135\"><br/></td><td valign=\"top\" width=\"747\"><br/></td></tr><tr><td valign=\"top\" width=\"135\"><br/></td><td valign=\"top\" width=\"747\"><br/></td></tr><tr><td valign=\"top\" width=\"135\"><br/></td><td valign=\"top\" width=\"747\"><br/></td></tr></tbody></table><p><br/></p>',`content_parse`='<p>胜网内容任务添加表</p><p><br/></p><table><tbody><tr class=\"firstRow\"><td style=\"word-break: break-all;\" valign=\"top\" width=\"135\">任务提交人：<br/></td><td valign=\"top\" width=\"747\">{data_1}</td></tr><tr><td style=\"word-break: break-all;\" valign=\"top\" width=\"135\">标 题：<br/></td><td style=\"word-break: break-all;\" valign=\"top\" width=\"747\">{data_2}</td></tr><tr><td style=\"word-break: break-all;\" valign=\"top\" width=\"135\">描述：<br/></td><td valign=\"top\" width=\"747\">{data_3}</td></tr><tr><td valign=\"top\" width=\"135\"><br/></td><td valign=\"top\" width=\"747\"><br/></td></tr><tr><td style=\"word-break: break-all;\" valign=\"top\" width=\"135\">附件：<br/></td><td valign=\"top\" width=\"747\"><br/></td></tr><tr><td valign=\"top\" width=\"135\"><br/></td><td valign=\"top\" width=\"747\"><br/></td></tr><tr><td valign=\"top\" width=\"135\"><br/></td><td valign=\"top\" width=\"747\"><br/></td></tr><tr><td valign=\"top\" width=\"135\"><br/></td><td valign=\"top\" width=\"747\"><br/></td></tr><tr><td valign=\"top\" width=\"135\"><br/></td><td valign=\"top\" width=\"747\"><br/></td></tr></tbody></table><p><br/></p>',`content_data`='a:3:{i:0;a:11:{s:7:\"orgtype\";s:4:\"text\";s:8:\"orgwidth\";s:3:\"150\";s:8:\"orgalign\";s:4:\"left\";s:5:\"style\";s:31:\"text-align: left; width: 150px;\";s:7:\"orghide\";s:1:\"0\";s:12:\"leipiplugins\";s:4:\"text\";s:5:\"value\";s:0:\"\";s:5:\"title\";s:8:\"username\";s:4:\"name\";s:6:\"data_1\";s:4:\"type\";s:4:\"text\";s:7:\"content\";s:178:\"<input orgtype=\"text\" orgwidth=\"150\" orgalign=\"left\" style=\"text-align: left; width: 150px;\" orghide=\"0\" leipiplugins=\"text\" value=\"\" title=\"username\" name=\"data_1\" type=\"text\"/>\";}i:1;a:11:{s:7:\"orgtype\";s:4:\"text\";s:8:\"orgwidth\";s:3:\"150\";s:8:\"orgalign\";s:4:\"left\";s:5:\"style\";s:31:\"text-align: left; width: 150px;\";s:7:\"orghide\";s:1:\"0\";s:12:\"leipiplugins\";s:4:\"text\";s:5:\"value\";s:0:\"\";s:5:\"title\";s:5:\"title\";s:4:\"name\";s:6:\"data_2\";s:4:\"type\";s:4:\"text\";s:7:\"content\";s:175:\"<input orgtype=\"text\" orgwidth=\"150\" orgalign=\"left\" style=\"text-align: left; width: 150px;\" orghide=\"0\" leipiplugins=\"text\" value=\"\" title=\"title\" name=\"data_2\" type=\"text\"/>\";}i:2;a:10:{s:5:\"title\";s:3:\"des\";s:4:\"name\";s:6:\"data_3\";s:12:\"leipiplugins\";s:8:\"textarea\";s:5:\"value\";s:0:\"\";s:7:\"orgrich\";s:1:\"0\";s:11:\"orgfontsize\";s:0:\"\";s:8:\"orgwidth\";s:3:\"300\";s:9:\"orgheight\";s:2:\"80\";s:5:\"style\";s:24:\"width:300px;height:80px;\";s:7:\"content\";s:170:\"<textarea title=\"des\" name=\"data_3\" leipiplugins=\"textarea\" value=\"\" orgrich=\"0\" orgfontsize=\"\" orgwidth=\"300\" orgheight=\"80\" style=\"width:300px;height:80px;\"></textarea>\";}}',`updatetime`='1447148573' WHERE `id` = 247 [ RunTime:0.0029s ]
+NOTIC: [2] unlink(../Application/Runtime/Temp/21d9a5adf0e55158019e1c301ccb9502.php): No such file or directory D:\wamp64\www\dzxt\s\tp\ThinkPHP\Library\Think\Cache\Driver\File.class.php 第 157 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000976s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000976s ]
+
+[ 2015-11-10T17:42:54+08:00 ] 127.0.0.1 /s/tp/wwwroot/index.php?s=/demo/formdesign/form_id/247.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000977s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000976s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000976s ]
+SQL: SHOW COLUMNS FROM `ht_form` [ RunTime:0.0049s ]
+SQL: SELECT * FROM `ht_form` WHERE `id` = 247 AND `is_del` = 0 LIMIT 1   [ RunTime:0.0020s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000977s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001953s ]
+
+[ 2015-11-10T17:44:20+08:00 ] 127.0.0.1 /s/tp/wwwroot/index.php?s=/demo/formdesign/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000977s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000977s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000977s ]
+SQL: SHOW COLUMNS FROM `ht_form` [ RunTime:0.0059s ]
+SQL: SELECT * FROM `ht_form` WHERE `id` = 247 AND `is_del` = 0 LIMIT 1   [ RunTime:0.0020s ]
+SQL: show tables like 'ht_form_data_247' [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `ht_form_data_247` [ RunTime:0.0049s ]
+SQL: UPDATE `ht_form` SET `is_data_form`='0',`fields`='3',`content`='<p style=\"text-align: center;\"><strong>胜网内容任务添加表</strong></p><p><br/></p><table><tbody><tr class=\"firstRow\"><td style=\"word-break: break-all;\" valign=\"top\" width=\"135\">任务提交人：<br/></td><td valign=\"top\" width=\"747\"><input orgtype=\"text\" orgwidth=\"150\" orgalign=\"left\" style=\"text-align: left; width: 150px;\" orghide=\"0\" leipiplugins=\"text\" value=\"\" title=\"username\" name=\"data_1\" type=\"text\"/></td></tr><tr><td style=\"word-break: break-all;\" valign=\"top\" width=\"135\">标 题：<br/></td><td style=\"word-break: break-all;\" valign=\"top\" width=\"747\"><input orgtype=\"text\" orgwidth=\"150\" orgalign=\"left\" style=\"text-align: left; width: 150px;\" orghide=\"0\" leipiplugins=\"text\" value=\"\" title=\"title\" name=\"data_2\" type=\"text\"/></td></tr><tr><td style=\"word-break: break-all;\" valign=\"top\" width=\"135\">描述：<br/></td><td valign=\"top\" width=\"747\"><textarea title=\"des\" name=\"data_3\" leipiplugins=\"textarea\" value=\"\" orgrich=\"0\" orgfontsize=\"\" orgwidth=\"300\" orgheight=\"80\" style=\"width:300px;height:80px;\"></textarea></td></tr><tr><td valign=\"top\" width=\"135\"><br/></td><td valign=\"top\" width=\"747\"><br/></td></tr><tr><td style=\"word-break: break-all;\" valign=\"top\" width=\"135\">附件：<br/></td><td valign=\"top\" width=\"747\"><br/></td></tr><tr><td valign=\"top\" width=\"135\"><br/></td><td valign=\"top\" width=\"747\"><br/></td></tr><tr><td valign=\"top\" width=\"135\"><br/></td><td valign=\"top\" width=\"747\"><br/></td></tr><tr><td valign=\"top\" width=\"135\"><br/></td><td valign=\"top\" width=\"747\"><br/></td></tr><tr><td valign=\"top\" width=\"135\"><br/></td><td valign=\"top\" width=\"747\"><br/></td></tr></tbody></table><p><br/></p>',`content_parse`='<p style=\"text-align: center;\"><strong>胜网内容任务添加表</strong></p><p><br/></p><table><tbody><tr class=\"firstRow\"><td style=\"word-break: break-all;\" valign=\"top\" width=\"135\">任务提交人：<br/></td><td valign=\"top\" width=\"747\">{data_1}</td></tr><tr><td style=\"word-break: break-all;\" valign=\"top\" width=\"135\">标 题：<br/></td><td style=\"word-break: break-all;\" valign=\"top\" width=\"747\">{data_2}</td></tr><tr><td style=\"word-break: break-all;\" valign=\"top\" width=\"135\">描述：<br/></td><td valign=\"top\" width=\"747\">{data_3}</td></tr><tr><td valign=\"top\" width=\"135\"><br/></td><td valign=\"top\" width=\"747\"><br/></td></tr><tr><td style=\"word-break: break-all;\" valign=\"top\" width=\"135\">附件：<br/></td><td valign=\"top\" width=\"747\"><br/></td></tr><tr><td valign=\"top\" width=\"135\"><br/></td><td valign=\"top\" width=\"747\"><br/></td></tr><tr><td valign=\"top\" width=\"135\"><br/></td><td valign=\"top\" width=\"747\"><br/></td></tr><tr><td valign=\"top\" width=\"135\"><br/></td><td valign=\"top\" width=\"747\"><br/></td></tr><tr><td valign=\"top\" width=\"135\"><br/></td><td valign=\"top\" width=\"747\"><br/></td></tr></tbody></table><p><br/></p>',`content_data`='a:3:{i:0;a:11:{s:7:\"orgtype\";s:4:\"text\";s:8:\"orgwidth\";s:3:\"150\";s:8:\"orgalign\";s:4:\"left\";s:5:\"style\";s:31:\"text-align: left; width: 150px;\";s:7:\"orghide\";s:1:\"0\";s:12:\"leipiplugins\";s:4:\"text\";s:5:\"value\";s:0:\"\";s:5:\"title\";s:8:\"username\";s:4:\"name\";s:6:\"data_1\";s:4:\"type\";s:4:\"text\";s:7:\"content\";s:178:\"<input orgtype=\"text\" orgwidth=\"150\" orgalign=\"left\" style=\"text-align: left; width: 150px;\" orghide=\"0\" leipiplugins=\"text\" value=\"\" title=\"username\" name=\"data_1\" type=\"text\"/>\";}i:1;a:11:{s:7:\"orgtype\";s:4:\"text\";s:8:\"orgwidth\";s:3:\"150\";s:8:\"orgalign\";s:4:\"left\";s:5:\"style\";s:31:\"text-align: left; width: 150px;\";s:7:\"orghide\";s:1:\"0\";s:12:\"leipiplugins\";s:4:\"text\";s:5:\"value\";s:0:\"\";s:5:\"title\";s:5:\"title\";s:4:\"name\";s:6:\"data_2\";s:4:\"type\";s:4:\"text\";s:7:\"content\";s:175:\"<input orgtype=\"text\" orgwidth=\"150\" orgalign=\"left\" style=\"text-align: left; width: 150px;\" orghide=\"0\" leipiplugins=\"text\" value=\"\" title=\"title\" name=\"data_2\" type=\"text\"/>\";}i:2;a:10:{s:5:\"title\";s:3:\"des\";s:4:\"name\";s:6:\"data_3\";s:12:\"leipiplugins\";s:8:\"textarea\";s:5:\"value\";s:0:\"\";s:7:\"orgrich\";s:1:\"0\";s:11:\"orgfontsize\";s:0:\"\";s:8:\"orgwidth\";s:3:\"300\";s:9:\"orgheight\";s:2:\"80\";s:5:\"style\";s:24:\"width:300px;height:80px;\";s:7:\"content\";s:170:\"<textarea title=\"des\" name=\"data_3\" leipiplugins=\"textarea\" value=\"\" orgrich=\"0\" orgfontsize=\"\" orgwidth=\"300\" orgheight=\"80\" style=\"width:300px;height:80px;\"></textarea>\";}}',`updatetime`='1447148660' WHERE `id` = 247 [ RunTime:0.0146s ]
+NOTIC: [2] unlink(../Application/Runtime/Temp/21d9a5adf0e55158019e1c301ccb9502.php): No such file or directory D:\wamp64\www\dzxt\s\tp\ThinkPHP\Library\Think\Cache\Driver\File.class.php 第 157 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000977s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000977s ]
+
+[ 2015-11-10T17:44:22+08:00 ] 127.0.0.1 /s/tp/wwwroot/index.php?s=/demo/formdesign/form_id/247.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000977s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000977s ]
+SQL: SHOW COLUMNS FROM `ht_form` [ RunTime:0.0039s ]
+SQL: SELECT * FROM `ht_form` WHERE `id` = 247 AND `is_del` = 0 LIMIT 1   [ RunTime:0.0020s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001953s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001953s ]
+
+[ 2015-11-10T17:50:55+08:00 ] 127.0.0.1 /s/tp/wwwroot/index.php?s=/demo/formdesign/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000977s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000976s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000976s ]
+SQL: SHOW COLUMNS FROM `ht_form` [ RunTime:0.0049s ]
+SQL: SELECT * FROM `ht_form` WHERE `id` = 247 AND `is_del` = 0 LIMIT 1   [ RunTime:0.0020s ]
+SQL: show tables like 'ht_form_data_247' [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `ht_form_data_247` [ RunTime:0.0049s ]
+SQL: UPDATE `ht_form` SET `is_data_form`='0',`fields`='3',`content`='<p style=\"text-align: center;\"><strong>胜网内容任务添加表</strong></p><p><br/></p><table><tbody><tr class=\"firstRow\"><td style=\"word-break: break-all;\" valign=\"top\" width=\"135\">任务提交人：<br/></td><td valign=\"top\" width=\"747\"><input orgtype=\"text\" orgwidth=\"150\" orgalign=\"left\" style=\"text-align: left; width: 150px;\" orghide=\"0\" leipiplugins=\"text\" value=\"\" title=\"username\" name=\"data_1\" type=\"text\"/></td></tr><tr><td style=\"word-break: break-all;\" valign=\"top\" width=\"135\">标 题：<br/></td><td style=\"word-break: break-all;\" valign=\"top\" width=\"747\"><input orgtype=\"text\" orgwidth=\"150\" orgalign=\"left\" style=\"text-align: left; width: 150px;\" orghide=\"0\" leipiplugins=\"text\" value=\"\" title=\"title\" name=\"data_2\" type=\"text\"/></td></tr><tr><td style=\"word-break: break-all;\" valign=\"top\" width=\"135\">描述：<br/></td><td valign=\"top\" width=\"747\"><textarea title=\"des\" name=\"data_3\" leipiplugins=\"textarea\" value=\"\" orgrich=\"0\" orgfontsize=\"\" orgwidth=\"300\" orgheight=\"80\" style=\"width:300px;height:80px;\"></textarea></td></tr><tr><td valign=\"top\" width=\"135\"><br/></td><td valign=\"top\" width=\"747\"><br/></td></tr><tr><td style=\"word-break: break-all;\" valign=\"top\" width=\"135\">附件：<br/></td><td valign=\"top\" width=\"747\"><br/></td></tr><tr><td valign=\"top\" width=\"135\"><br/></td><td valign=\"top\" width=\"747\"><br/></td></tr><tr><td valign=\"top\" width=\"135\"><br/></td><td valign=\"top\" width=\"747\"><br/></td></tr><tr><td valign=\"top\" width=\"135\"><br/></td><td valign=\"top\" width=\"747\"><br/></td></tr><tr><td valign=\"top\" width=\"135\"><br/></td><td valign=\"top\" width=\"747\"><br/></td></tr></tbody></table><p><br/></p>',`content_parse`='<p style=\"text-align: center;\"><strong>胜网内容任务添加表</strong></p><p><br/></p><table><tbody><tr class=\"firstRow\"><td style=\"word-break: break-all;\" valign=\"top\" width=\"135\">任务提交人：<br/></td><td valign=\"top\" width=\"747\">{data_1}</td></tr><tr><td style=\"word-break: break-all;\" valign=\"top\" width=\"135\">标 题：<br/></td><td style=\"word-break: break-all;\" valign=\"top\" width=\"747\">{data_2}</td></tr><tr><td style=\"word-break: break-all;\" valign=\"top\" width=\"135\">描述：<br/></td><td valign=\"top\" width=\"747\">{data_3}</td></tr><tr><td valign=\"top\" width=\"135\"><br/></td><td valign=\"top\" width=\"747\"><br/></td></tr><tr><td style=\"word-break: break-all;\" valign=\"top\" width=\"135\">附件：<br/></td><td valign=\"top\" width=\"747\"><br/></td></tr><tr><td valign=\"top\" width=\"135\"><br/></td><td valign=\"top\" width=\"747\"><br/></td></tr><tr><td valign=\"top\" width=\"135\"><br/></td><td valign=\"top\" width=\"747\"><br/></td></tr><tr><td valign=\"top\" width=\"135\"><br/></td><td valign=\"top\" width=\"747\"><br/></td></tr><tr><td valign=\"top\" width=\"135\"><br/></td><td valign=\"top\" width=\"747\"><br/></td></tr></tbody></table><p><br/></p>',`content_data`='a:3:{i:0;a:11:{s:7:\"orgtype\";s:4:\"text\";s:8:\"orgwidth\";s:3:\"150\";s:8:\"orgalign\";s:4:\"left\";s:5:\"style\";s:31:\"text-align: left; width: 150px;\";s:7:\"orghide\";s:1:\"0\";s:12:\"leipiplugins\";s:4:\"text\";s:5:\"value\";s:0:\"\";s:5:\"title\";s:8:\"username\";s:4:\"name\";s:6:\"data_1\";s:4:\"type\";s:4:\"text\";s:7:\"content\";s:178:\"<input orgtype=\"text\" orgwidth=\"150\" orgalign=\"left\" style=\"text-align: left; width: 150px;\" orghide=\"0\" leipiplugins=\"text\" value=\"\" title=\"username\" name=\"data_1\" type=\"text\"/>\";}i:1;a:11:{s:7:\"orgtype\";s:4:\"text\";s:8:\"orgwidth\";s:3:\"150\";s:8:\"orgalign\";s:4:\"left\";s:5:\"style\";s:31:\"text-align: left; width: 150px;\";s:7:\"orghide\";s:1:\"0\";s:12:\"leipiplugins\";s:4:\"text\";s:5:\"value\";s:0:\"\";s:5:\"title\";s:5:\"title\";s:4:\"name\";s:6:\"data_2\";s:4:\"type\";s:4:\"text\";s:7:\"content\";s:175:\"<input orgtype=\"text\" orgwidth=\"150\" orgalign=\"left\" style=\"text-align: left; width: 150px;\" orghide=\"0\" leipiplugins=\"text\" value=\"\" title=\"title\" name=\"data_2\" type=\"text\"/>\";}i:2;a:10:{s:5:\"title\";s:3:\"des\";s:4:\"name\";s:6:\"data_3\";s:12:\"leipiplugins\";s:8:\"textarea\";s:5:\"value\";s:0:\"\";s:7:\"orgrich\";s:1:\"0\";s:11:\"orgfontsize\";s:0:\"\";s:8:\"orgwidth\";s:3:\"300\";s:9:\"orgheight\";s:2:\"80\";s:5:\"style\";s:24:\"width:300px;height:80px;\";s:7:\"content\";s:170:\"<textarea title=\"des\" name=\"data_3\" leipiplugins=\"textarea\" value=\"\" orgrich=\"0\" orgfontsize=\"\" orgwidth=\"300\" orgheight=\"80\" style=\"width:300px;height:80px;\"></textarea>\";}}',`updatetime`='1447149055' WHERE `id` = 247 [ RunTime:0.0068s ]
+NOTIC: [2] unlink(../Application/Runtime/Temp/21d9a5adf0e55158019e1c301ccb9502.php): No such file or directory D:\wamp64\www\dzxt\s\tp\ThinkPHP\Library\Think\Cache\Driver\File.class.php 第 157 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000977s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000977s ]
+
+[ 2015-11-10T17:50:57+08:00 ] 127.0.0.1 /s/tp/wwwroot/index.php?s=/demo/formdesign/form_id/247.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000977s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000977s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000977s ]
+SQL: SHOW COLUMNS FROM `ht_form` [ RunTime:0.0049s ]
+SQL: SELECT * FROM `ht_form` WHERE `id` = 247 AND `is_del` = 0 LIMIT 1   [ RunTime:0.0020s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001954s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001954s ]
+
+[ 2015-11-10T17:57:23+08:00 ] 127.0.0.1 /s/tp/wwwroot/index.php?s=/demo/formdesign/form_id/231.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000977s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000977s ]
+SQL: SHOW COLUMNS FROM `ht_form` [ RunTime:0.0127s ]
+SQL: SELECT * FROM `ht_form` WHERE `id` = 231 AND `is_del` = 0 LIMIT 1   [ RunTime:0.0029s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000977s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000977s ]
+
+[ 2015-11-10T18:13:45+08:00 ] 127.0.0.1 /s/tp/wwwroot/index.php?s=/demo/formdesign/form_id/232.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000977s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000977s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000977s ]
+SQL: SHOW COLUMNS FROM `ht_form` [ RunTime:0.0117s ]
+SQL: SELECT * FROM `ht_form` WHERE `id` = 232 AND `is_del` = 0 LIMIT 1   [ RunTime:0.0029s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000976s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000976s ]
+
+[ 2015-11-10T18:16:08+08:00 ] 127.0.0.1 /s/tp/wwwroot/index.php?s=/demo/formdesign/form_id/231.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000977s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000977s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001953s ]
+SQL: SHOW COLUMNS FROM `ht_form` [ RunTime:0.0049s ]
+SQL: SELECT * FROM `ht_form` WHERE `id` = 231 AND `is_del` = 0 LIMIT 1   [ RunTime:0.0020s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000977s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001954s ]
+

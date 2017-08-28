@@ -1,0 +1,305 @@
+[ 2015-12-12T10:19:45+08:00 ] 183.21.22.228 /s/tp/wwwroot/index.php?s=/demo/formdesign/form_id/329.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000031s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000599s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000774s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000848s ]
+SQL: SHOW COLUMNS FROM `ht_form` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `ht_form` WHERE `id` = 329 AND `is_del` = 0 LIMIT 1   [ RunTime:0.0004s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001019s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001097s ]
+
+[ 2015-12-12T10:37:39+08:00 ] 183.21.22.228 /s/tp/wwwroot/index.php?s=/demo/formdesign/form_id/329.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000152s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000079s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000150s ]
+SQL: SHOW COLUMNS FROM `ht_form` [ RunTime:0.0009s ]
+SQL: SELECT * FROM `ht_form` WHERE `id` = 329 AND `is_del` = 0 LIMIT 1   [ RunTime:0.0004s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000070s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000158s ]
+
+[ 2015-12-12T11:04:42+08:00 ] 183.21.22.228 /s/tp/wwwroot/index.php?s=/demo/formdesign/form_id/329.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000032s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000178s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000079s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000154s ]
+SQL: SHOW COLUMNS FROM `ht_form` [ RunTime:0.0009s ]
+SQL: SELECT * FROM `ht_form` WHERE `id` = 329 AND `is_del` = 0 LIMIT 1   [ RunTime:0.0004s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000098s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000176s ]
+
+[ 2015-12-12T11:27:53+08:00 ] 183.21.22.228 /s/tp/wwwroot/index.php?s=/Home/Demo/add.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000154s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000064s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000137s ]
+SQL: SHOW COLUMNS FROM `ht_form` [ RunTime:0.0009s ]
+SQL: INSERT INTO `ht_form` (`form_name`,`form_desc`,`updatetime`,`type`,`dateline`,`pid`,`creater_uid`) VALUES ('周计划表1','','1449890873','0','1449890873','326','203') [ RunTime:0.0235s ]
+NOTIC: [2] unlink(../Application/Runtime/Temp/21d9a5adf0e55158019e1c301ccb9502.php): No such file or directory /var/www/dzxt/s/tp/ThinkPHP/Library/Think/Cache/Driver/File.class.php 第 157 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000069s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000150s ]
+
+[ 2015-12-12T11:28:00+08:00 ] 183.21.22.228 /s/tp/wwwroot/index.php?s=/demo/formdesign/form_id/1910.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000166s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000066s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000138s ]
+SQL: SHOW COLUMNS FROM `ht_form` [ RunTime:0.0012s ]
+SQL: SELECT * FROM `ht_form` WHERE `id` = 1910 AND `is_del` = 0 LIMIT 1   [ RunTime:0.0003s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000102s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000175s ]
+
+[ 2015-12-12T11:28:06+08:00 ] 183.21.22.228 /s/tp/wwwroot/index.php?s=/Home/Demo/del.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000154s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000058s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000132s ]
+SQL: SHOW COLUMNS FROM `ht_form` [ RunTime:0.0009s ]
+SQL: SELECT * FROM `ht_form` WHERE `pid` = 1910 LIMIT 1   [ RunTime:0.0093s ]
+SQL: DELETE FROM `ht_form` WHERE `id` = 1910 [ RunTime:0.0296s ]
+SQL: SHOW COLUMNS FROM `ht_power` [ RunTime:0.0007s ]
+SQL: DELETE FROM `ht_power` WHERE `form_id` = 1910 [ RunTime:0.0232s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000098s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000170s ]
+
+[ 2015-12-12T11:28:16+08:00 ] 183.21.22.228 /s/tp/wwwroot/index.php?s=/Home/Demo/add.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000028s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000172s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000073s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000151s ]
+SQL: SHOW COLUMNS FROM `ht_form` [ RunTime:0.0010s ]
+SQL: INSERT INTO `ht_form` (`form_name`,`form_desc`,`updatetime`,`type`,`dateline`,`pid`,`creater_uid`) VALUES ('周计划表1','','1449890896','0','1449890896','326','203') [ RunTime:0.0198s ]
+NOTIC: [2] unlink(../Application/Runtime/Temp/21d9a5adf0e55158019e1c301ccb9502.php): No such file or directory /var/www/dzxt/s/tp/ThinkPHP/Library/Think/Cache/Driver/File.class.php 第 157 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000066s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000134s ]
+
+[ 2015-12-12T11:28:22+08:00 ] 183.21.22.228 /s/tp/wwwroot/index.php?s=/Home/Demo/del.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000141s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000065s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000138s ]
+SQL: SHOW COLUMNS FROM `ht_form` [ RunTime:0.0009s ]
+SQL: SELECT * FROM `ht_form` WHERE `pid` = 1911 LIMIT 1   [ RunTime:0.0092s ]
+SQL: DELETE FROM `ht_form` WHERE `id` = 1911 [ RunTime:0.0194s ]
+SQL: SHOW COLUMNS FROM `ht_power` [ RunTime:0.0007s ]
+SQL: DELETE FROM `ht_power` WHERE `form_id` = 1911 [ RunTime:0.0232s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000107s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000193s ]
+
+[ 2015-12-12T11:28:47+08:00 ] 183.21.22.228 /s/tp/wwwroot/index.php?s=/Home/Demo/add.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000147s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000054s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000126s ]
+SQL: SHOW COLUMNS FROM `ht_form` [ RunTime:0.0009s ]
+SQL: INSERT INTO `ht_form` (`form_name`,`form_desc`,`updatetime`,`type`,`dateline`,`pid`,`creater_uid`) VALUES ('周计划表1','','1449890927','0','1449890927','326','203') [ RunTime:0.0282s ]
+NOTIC: [2] unlink(../Application/Runtime/Temp/21d9a5adf0e55158019e1c301ccb9502.php): No such file or directory /var/www/dzxt/s/tp/ThinkPHP/Library/Think/Cache/Driver/File.class.php 第 157 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000054s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000123s ]
+
+[ 2015-12-12T11:28:59+08:00 ] 183.21.22.228 /s/tp/wwwroot/index.php?s=/Home/Demo/del.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000026s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000163s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000067s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000147s ]
+SQL: SHOW COLUMNS FROM `ht_form` [ RunTime:0.0009s ]
+SQL: SELECT * FROM `ht_form` WHERE `pid` = 1912 LIMIT 1   [ RunTime:0.0093s ]
+SQL: DELETE FROM `ht_form` WHERE `id` = 1912 [ RunTime:0.0204s ]
+SQL: SHOW COLUMNS FROM `ht_power` [ RunTime:0.0007s ]
+SQL: DELETE FROM `ht_power` WHERE `form_id` = 1912 [ RunTime:0.0232s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000114s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000185s ]
+
+[ 2015-12-12T11:29:07+08:00 ] 183.21.22.228 /s/tp/wwwroot/index.php?s=/Home/Demo/add.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000154s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000071s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000146s ]
+SQL: SHOW COLUMNS FROM `ht_form` [ RunTime:0.0010s ]
+SQL: INSERT INTO `ht_form` (`form_name`,`form_desc`,`updatetime`,`type`,`dateline`,`pid`,`creater_uid`) VALUES ('周计划表1','','1449890947','0','1449890947','326','203') [ RunTime:0.0210s ]
+NOTIC: [2] unlink(../Application/Runtime/Temp/21d9a5adf0e55158019e1c301ccb9502.php): No such file or directory /var/www/dzxt/s/tp/ThinkPHP/Library/Think/Cache/Driver/File.class.php 第 157 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000066s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000135s ]
+
+[ 2015-12-12T11:29:24+08:00 ] 183.21.22.228 /s/tp/wwwroot/index.php?s=/Home/Demo/add.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000154s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000070s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000156s ]
+SQL: SHOW COLUMNS FROM `ht_form` [ RunTime:0.0009s ]
+SQL: INSERT INTO `ht_form` (`form_name`,`form_desc`,`updatetime`,`type`,`dateline`,`pid`,`creater_uid`) VALUES ('周计划表1','','1449890964','0','1449890964','326','203') [ RunTime:0.0201s ]
+NOTIC: [2] unlink(../Application/Runtime/Temp/21d9a5adf0e55158019e1c301ccb9502.php): No such file or directory /var/www/dzxt/s/tp/ThinkPHP/Library/Think/Cache/Driver/File.class.php 第 157 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000070s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000141s ]
+
+[ 2015-12-12T11:29:32+08:00 ] 183.21.22.228 /s/tp/wwwroot/index.php?s=/Home/Demo/del.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000026s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000156s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000073s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000151s ]
+SQL: SHOW COLUMNS FROM `ht_form` [ RunTime:0.0009s ]
+SQL: SELECT * FROM `ht_form` WHERE `pid` = 1914 LIMIT 1   [ RunTime:0.0093s ]
+SQL: DELETE FROM `ht_form` WHERE `id` = 1914 [ RunTime:0.0201s ]
+SQL: SHOW COLUMNS FROM `ht_power` [ RunTime:0.0007s ]
+SQL: DELETE FROM `ht_power` WHERE `form_id` = 1914 [ RunTime:0.0312s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000118s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000192s ]
+
+[ 2015-12-12T11:29:53+08:00 ] 183.21.22.228 /s/tp/wwwroot/index.php?s=/demo/formdesign/form_id/1913.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000161s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000062s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000132s ]
+SQL: SHOW COLUMNS FROM `ht_form` [ RunTime:0.0009s ]
+SQL: SELECT * FROM `ht_form` WHERE `id` = 1913 AND `is_del` = 0 LIMIT 1   [ RunTime:0.0003s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000056s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000125s ]
+
+[ 2015-12-12T11:29:55+08:00 ] 183.21.22.228 /s/tp/wwwroot/index.php?s=/demo/formdesign/form_id/329.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000141s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000057s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000128s ]
+SQL: SHOW COLUMNS FROM `ht_form` [ RunTime:0.0100s ]
+SQL: SELECT * FROM `ht_form` WHERE `id` = 329 AND `is_del` = 0 LIMIT 1   [ RunTime:0.0004s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000084s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000159s ]
+
+[ 2015-12-12T11:30:51+08:00 ] 183.21.22.228 /s/tp/wwwroot/index.php?s=/demo/formdesign/form_id/1913.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000155s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000064s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000135s ]
+SQL: SHOW COLUMNS FROM `ht_form` [ RunTime:0.0009s ]
+SQL: SELECT * FROM `ht_form` WHERE `id` = 1913 AND `is_del` = 0 LIMIT 1   [ RunTime:0.0001s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000057s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000126s ]
+
+[ 2015-12-12T11:31:10+08:00 ] 183.21.22.228 /s/tp/wwwroot/index.php?s=/demo/formdesign/form_id/329.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000152s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000068s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000144s ]
+SQL: SHOW COLUMNS FROM `ht_form` [ RunTime:0.0009s ]
+SQL: SELECT * FROM `ht_form` WHERE `id` = 329 AND `is_del` = 0 LIMIT 1   [ RunTime:0.0001s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000061s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000140s ]
+
+[ 2015-12-12T11:31:13+08:00 ] 183.21.22.228 /s/tp/wwwroot/index.php?s=/demo/formdesign/form_id/1913.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000156s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000063s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000135s ]
+SQL: SHOW COLUMNS FROM `ht_form` [ RunTime:0.0008s ]
+SQL: SELECT * FROM `ht_form` WHERE `id` = 1913 AND `is_del` = 0 LIMIT 1   [ RunTime:0.0001s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000071s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000143s ]
+
+[ 2015-12-12T11:32:15+08:00 ] 183.21.22.228 /s/tp/wwwroot/index.php?s=/demo/formdesign/form_id/329.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000173s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000076s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000149s ]
+SQL: SHOW COLUMNS FROM `ht_form` [ RunTime:0.0009s ]
+SQL: SELECT * FROM `ht_form` WHERE `id` = 329 AND `is_del` = 0 LIMIT 1   [ RunTime:0.0003s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000099s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000174s ]
+
+[ 2015-12-12T11:51:24+08:00 ] 183.21.22.228 /s/tp/wwwroot/index.php?s=/demo/formdesign/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000193s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000079s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000162s ]
+SQL: SHOW COLUMNS FROM `ht_form` [ RunTime:0.0009s ]
+SQL: SELECT * FROM `ht_form` WHERE `id` = 1913 AND `is_del` = 0 LIMIT 1   [ RunTime:0.0002s ]
+SQL: show tables like 'ht_form_data_1913' [ RunTime:0.0015s ]
+SQL: CREATE TABLE `ht_form_data_1913` (
+              `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+              `uid` int(10) unsigned NOT NULL DEFAULT '0',
+              `foreign_id` int(10) unsigned NOT NULL DEFAULT '0',
+              `data_1` text NOT NULL comment '本周工作计划',`data_2` text NOT NULL comment '负责人员',`data_3` text NOT NULL comment '需要配合部门/人员',`data_4` text NOT NULL comment '本周工作计划',`data_5` text NOT NULL comment '负责人员',`data_6` text NOT NULL comment '本周工作计划',`data_7` text NOT NULL comment '负责人员',`data_8` text NOT NULL comment '本周工作计划',`data_9` text NOT NULL comment '负责人员',`data_10` text NOT NULL comment '本周工作计划',`data_11` text NOT NULL comment '负责人员',
+              `is_del` tinyint(1) unsigned NOT NULL DEFAULT '0',
+              `updatetime` int(10) unsigned NOT NULL DEFAULT '0',
+              `dateline` int(10) unsigned NOT NULL DEFAULT '0',
+              PRIMARY KEY (`id`),
+              KEY `uid` (`uid`),
+              KEY `foreign_id` (`foreign_id`)
+            ) ENGINE=InnoDB DEFAULT CHARSET=utf8; [ RunTime:0.0495s ]
+SQL: UPDATE `ht_form` SET `is_data_form`='0',`fields`='11',`content`='<table data-sort=\"sortDisabled\"><tbody><tr class=\"firstRow\"><td style=\"word-break: break-all;\" colspan=\"1\" rowspan=\"6\" valign=\"top\" width=\"17\"><p>计</p><p>划</p><p>完</p><p>成</p><p>情</p><p>况</p></td><td style=\"word-break: break-all;\" valign=\"top\" width=\"169\">本周工作计划<br/></td><td style=\"word-break: break-all;\" valign=\"top\" width=\"110\">负责人员<br/></td><td style=\"word-break: break-all;\" valign=\"top\" width=\"214\"><p>需要配合</p><p>部门人员</p></td><td style=\"word-break: break-all;\" rowspan=\"1\" colspan=\"1\" valign=\"top\" width=\"73\">完成情况<br/></td><td style=\"word-break: break-all;\" valign=\"top\" width=\"130\">未完成原因<br/></td><td style=\"word-break: break-all;\" valign=\"top\" width=\"93\">预计完成时间<br/></td></tr><tr><td style=\"word-break: break-all;\" valign=\"top\" width=\"17\"><textarea title=\"本周工作计划\" name=\"data_1\" leipiplugins=\"textarea\" value=\"\" orgrich=\"0\" orgfontsize=\"\" orgwidth=\"200\" orgheight=\"35\" style=\"width:200px;height:35px;\"></textarea></td><td style=\"word-break: break-all;\" valign=\"top\" width=\"169\"><textarea title=\"负责人员\" name=\"data_2\" leipiplugins=\"textarea\" value=\"\" orgrich=\"0\" orgfontsize=\"\" orgwidth=\"100\" orgheight=\"35\" style=\"width: 100px; height: 35px;\"></textarea></td><td valign=\"top\" width=\"98\"><textarea title=\"需要配合部门/人员\" name=\"data_3\" leipiplugins=\"textarea\" value=\"\" orgrich=\"0\" orgfontsize=\"\" orgwidth=\"95\" orgheight=\"35\" style=\"width:95px;height:35px;\"></textarea></td><td rowspan=\"1\" colspan=\"1\" valign=\"top\" width=\"214\"><br/></td><td valign=\"top\" width=\"73\"><br/></td><td valign=\"top\" width=\"130\"><br/></td></tr><tr><td style=\"word-break: break-all;\" valign=\"top\" width=\"17\"><textarea title=\"本周工作计划\" name=\"data_4\" leipiplugins=\"textarea\" value=\"\" orgrich=\"0\" orgfontsize=\"\" orgwidth=\"200\" orgheight=\"35\" style=\"width:200px;height:35px;\"></textarea></td><td style=\"word-break: break-all;\" valign=\"top\" width=\"169\"><textarea title=\"负责人员\" name=\"data_5\" leipiplugins=\"textarea\" value=\"\" orgrich=\"0\" orgfontsize=\"\" orgwidth=\"100\" orgheight=\"35\" style=\"width: 100px; height: 35px;\"></textarea></td><td style=\"word-break: break-all;\" valign=\"top\" width=\"98\"><br/></td><td rowspan=\"1\" colspan=\"1\" valign=\"top\" width=\"214\"><br/></td><td valign=\"top\" width=\"73\"><br/></td><td valign=\"top\" width=\"130\"><br/></td></tr><tr><td style=\"word-break: break-all;\" valign=\"top\" width=\"17\"><textarea title=\"本周工作计划\" name=\"data_6\" leipiplugins=\"textarea\" value=\"\" orgrich=\"0\" orgfontsize=\"\" orgwidth=\"200\" orgheight=\"35\" style=\"width:200px;height:35px;\"></textarea></td><td style=\"word-break: break-all;\" valign=\"top\" width=\"169\"><textarea title=\"负责人员\" name=\"data_7\" leipiplugins=\"textarea\" value=\"\" orgrich=\"0\" orgfontsize=\"\" orgwidth=\"100\" orgheight=\"35\" style=\"width: 100px; height: 35px;\"></textarea></td><td valign=\"top\" width=\"98\"><br/></td><td rowspan=\"1\" colspan=\"1\" valign=\"top\" width=\"214\"><br/></td><td valign=\"top\" width=\"73\"><br/></td><td valign=\"top\" width=\"130\"><br/></td></tr><tr><td style=\"word-break: break-all;\" valign=\"top\" width=\"17\"><textarea title=\"本周工作计划\" name=\"data_8\" leipiplugins=\"textarea\" value=\"\" orgrich=\"0\" orgfontsize=\"\" orgwidth=\"200\" orgheight=\"35\" style=\"width:200px;height:35px;\"></textarea></td><td style=\"word-break: break-all;\" valign=\"top\" width=\"169\"><textarea title=\"负责人员\" name=\"data_9\" leipiplugins=\"textarea\" value=\"\" orgrich=\"0\" orgfontsize=\"\" orgwidth=\"100\" orgheight=\"35\" style=\"width: 100px; height: 35px;\"></textarea></td><td valign=\"top\" width=\"98\"><br/></td><td rowspan=\"1\" colspan=\"1\" valign=\"top\" width=\"214\"><br/></td><td valign=\"top\" width=\"73\"><br/></td><td valign=\"top\" width=\"130\"><br/></td></tr><tr><td style=\"word-break: break-all;\" valign=\"top\" width=\"17\"><textarea title=\"本周工作计划\" name=\"data_10\" leipiplugins=\"textarea\" value=\"\" orgrich=\"0\" orgfontsize=\"\" orgwidth=\"200\" orgheight=\"35\" style=\"width:200px;height:35px;\"></textarea></td><td style=\"word-break: break-all;\" valign=\"top\" width=\"169\"><textarea title=\"负责人员\" name=\"data_11\" leipiplugins=\"textarea\" value=\"\" orgrich=\"0\" orgfontsize=\"\" orgwidth=\"100\" orgheight=\"35\" style=\"width: 100px; height: 35px;\"></textarea></td><td valign=\"top\" width=\"98\"><br/></td><td rowspan=\"1\" colspan=\"1\" valign=\"top\" width=\"214\"><br/></td><td valign=\"top\" width=\"73\"><br/></td><td valign=\"top\" width=\"130\"><br/></td></tr><tr><td valign=\"top\" width=\"17\"><br/></td><td valign=\"top\" width=\"17\"><br/></td><td valign=\"top\" width=\"169\"><br/></td><td valign=\"top\" width=\"244\"><br/></td><td rowspan=\"1\" colspan=\"1\" valign=\"top\" width=\"77\"><br/></td><td valign=\"top\" width=\"130\"><br/></td><td valign=\"top\" width=\"93\"><br/></td></tr><tr><td rowspan=\"1\" colspan=\"1\" valign=\"top\" width=\"17\"><br/></td><td rowspan=\"1\" colspan=\"1\" valign=\"top\" width=\"169\"><br/></td><td rowspan=\"1\" colspan=\"1\" valign=\"top\" width=\"110\"><br/></td><td rowspan=\"1\" colspan=\"1\" valign=\"top\" width=\"244\"><br/></td><td rowspan=\"1\" colspan=\"1\" valign=\"top\" width=\"77\"><br/></td><td rowspan=\"1\" colspan=\"1\" valign=\"top\" width=\"130\"><br/></td><td rowspan=\"1\" colspan=\"1\" valign=\"top\" width=\"93\"><br/></td></tr><tr><td rowspan=\"1\" colspan=\"1\" valign=\"top\" width=\"17\"><br/></td><td rowspan=\"1\" colspan=\"1\" valign=\"top\" width=\"169\"><br/></td><td rowspan=\"1\" colspan=\"1\" valign=\"top\" width=\"110\"><br/></td><td rowspan=\"1\" colspan=\"1\" valign=\"top\" width=\"244\"><br/></td><td rowspan=\"1\" colspan=\"1\" valign=\"top\" width=\"77\"><br/></td><td rowspan=\"1\" colspan=\"1\" valign=\"top\" width=\"130\"><br/></td><td rowspan=\"1\" colspan=\"1\" valign=\"top\" width=\"93\"><br/></td></tr><tr><td rowspan=\"1\" colspan=\"1\" valign=\"top\" width=\"17\"><br/></td><td rowspan=\"1\" colspan=\"1\" valign=\"top\" width=\"169\"><br/></td><td rowspan=\"1\" colspan=\"1\" valign=\"top\" width=\"110\"><br/></td><td rowspan=\"1\" colspan=\"1\" valign=\"top\" width=\"244\"><br/></td><td rowspan=\"1\" colspan=\"1\" valign=\"top\" width=\"77\"><br/></td><td rowspan=\"1\" colspan=\"1\" valign=\"top\" width=\"130\"><br/></td><td rowspan=\"1\" colspan=\"1\" valign=\"top\" width=\"93\"><br/></td></tr><tr><td rowspan=\"1\" colspan=\"1\" valign=\"top\" width=\"17\"><br/></td><td rowspan=\"1\" colspan=\"1\" valign=\"top\" width=\"169\"><br/></td><td rowspan=\"1\" colspan=\"1\" valign=\"top\" width=\"110\"><br/></td><td rowspan=\"1\" colspan=\"1\" valign=\"top\" width=\"244\"><br/></td><td rowspan=\"1\" colspan=\"1\" valign=\"top\" width=\"77\"><br/></td><td rowspan=\"1\" colspan=\"1\" valign=\"top\" width=\"130\"><br/></td><td rowspan=\"1\" colspan=\"1\" valign=\"top\" width=\"93\"><br/></td></tr><tr><td rowspan=\"1\" colspan=\"1\" valign=\"top\" width=\"17\"><br/></td><td rowspan=\"1\" colspan=\"1\" valign=\"top\" width=\"169\"><br/></td><td rowspan=\"1\" colspan=\"1\" valign=\"top\" width=\"110\"><br/></td><td rowspan=\"1\" colspan=\"1\" valign=\"top\" width=\"244\"><br/></td><td rowspan=\"1\" colspan=\"1\" valign=\"top\" width=\"77\"><br/></td><td rowspan=\"1\" colspan=\"1\" valign=\"top\" width=\"130\"><br/></td><td rowspan=\"1\" colspan=\"1\" valign=\"top\" width=\"93\"><br/></td></tr><tr><td rowspan=\"1\" colspan=\"1\" valign=\"top\" width=\"17\"><br/></td><td rowspan=\"1\" colspan=\"1\" valign=\"top\" width=\"169\"><br/></td><td rowspan=\"1\" colspan=\"1\" valign=\"top\" width=\"110\"><br/></td><td rowspan=\"1\" colspan=\"1\" valign=\"top\" width=\"244\"><br/></td><td rowspan=\"1\" colspan=\"1\" valign=\"top\" width=\"77\"><br/></td><td rowspan=\"1\" colspan=\"1\" valign=\"top\" width=\"130\"><br/></td><td rowspan=\"1\" colspan=\"1\" valign=\"top\" width=\"93\"><br/></td></tr><tr><td rowspan=\"1\" colspan=\"1\" valign=\"top\" width=\"17\"><br/></td><td rowspan=\"1\" colspan=\"1\" valign=\"top\" width=\"169\"><br/></td><td rowspan=\"1\" colspan=\"1\" valign=\"top\" width=\"110\"><br/></td><td rowspan=\"1\" colspan=\"1\" valign=\"top\" width=\"244\"><br/></td><td rowspan=\"1\" colspan=\"1\" valign=\"top\" width=\"77\"><br/></td><td rowspan=\"1\" colspan=\"1\" valign=\"top\" width=\"130\"><br/></td><td rowspan=\"1\" colspan=\"1\" valign=\"top\" width=\"93\"><br/></td></tr><tr><td rowspan=\"1\" colspan=\"1\" valign=\"top\" width=\"17\"><br/></td><td rowspan=\"1\" colspan=\"1\" valign=\"top\" width=\"169\"><br/></td><td rowspan=\"1\" colspan=\"1\" valign=\"top\" width=\"110\"><br/></td><td rowspan=\"1\" colspan=\"1\" valign=\"top\" width=\"244\"><br/></td><td rowspan=\"1\" colspan=\"1\" valign=\"top\" width=\"77\"><br/></td><td rowspan=\"1\" colspan=\"1\" valign=\"top\" width=\"130\"><br/></td><td rowspan=\"1\" colspan=\"1\" valign=\"top\" width=\"93\"><br/></td></tr><tr><td valign=\"top\" width=\"17\"><br/></td><td valign=\"top\" width=\"169\"><br/></td><td valign=\"top\" width=\"110\"><br/></td><td valign=\"top\" width=\"244\"><br/></td><td rowspan=\"1\" colspan=\"1\" valign=\"top\" width=\"77\"><br/></td><td valign=\"top\" width=\"130\"><br/></td><td valign=\"top\" width=\"93\"><br/></td></tr><tr><td valign=\"top\" width=\"17\"><br/></td><td valign=\"top\" width=\"169\"><br/></td><td valign=\"top\" width=\"110\"><br/></td><td valign=\"top\" width=\"244\"><br/></td><td rowspan=\"1\" colspan=\"1\" valign=\"top\" width=\"77\"><br/></td><td valign=\"top\" width=\"130\"><br/></td><td valign=\"top\" width=\"93\"><br/></td></tr><tr><td valign=\"top\" width=\"17\"><br/></td><td valign=\"top\" width=\"169\"><br/></td><td valign=\"top\" width=\"110\"><br/></td><td valign=\"top\" width=\"244\"><br/></td><td rowspan=\"1\" colspan=\"1\" valign=\"top\" width=\"77\"><br/></td><td valign=\"top\" width=\"130\"><br/></td><td valign=\"top\" width=\"93\"><br/></td></tr></tbody></table><p><br/></p>',`content_parse`='<table data-sort=\"sortDisabled\"><tbody><tr class=\"firstRow\"><td style=\"word-break: break-all;\" colspan=\"1\" rowspan=\"6\" valign=\"top\" width=\"17\"><p>计</p><p>划</p><p>完</p><p>成</p><p>情</p><p>况</p></td><td style=\"word-break: break-all;\" valign=\"top\" width=\"169\">本周工作计划<br/></td><td style=\"word-break: break-all;\" valign=\"top\" width=\"110\">负责人员<br/></td><td style=\"word-break: break-all;\" valign=\"top\" width=\"214\"><p>需要配合</p><p>部门人员</p></td><td style=\"word-break: break-all;\" rowspan=\"1\" colspan=\"1\" valign=\"top\" width=\"73\">完成情况<br/></td><td style=\"word-break: break-all;\" valign=\"top\" width=\"130\">未完成原因<br/></td><td style=\"word-break: break-all;\" valign=\"top\" width=\"93\">预计完成时间<br/></td></tr><tr><td style=\"word-break: break-all;\" valign=\"top\" width=\"17\">{data_1}</td><td style=\"word-break: break-all;\" valign=\"top\" width=\"169\">{data_2}</td><td valign=\"top\" width=\"98\">{data_3}</td><td rowspan=\"1\" colspan=\"1\" valign=\"top\" width=\"214\"><br/></td><td valign=\"top\" width=\"73\"><br/></td><td valign=\"top\" width=\"130\"><br/></td></tr><tr><td style=\"word-break: break-all;\" valign=\"top\" width=\"17\">{data_4}</td><td style=\"word-break: break-all;\" valign=\"top\" width=\"169\">{data_5}</td><td style=\"word-break: break-all;\" valign=\"top\" width=\"98\"><br/></td><td rowspan=\"1\" colspan=\"1\" valign=\"top\" width=\"214\"><br/></td><td valign=\"top\" width=\"73\"><br/></td><td valign=\"top\" width=\"130\"><br/></td></tr><tr><td style=\"word-break: break-all;\" valign=\"top\" width=\"17\">{data_6}</td><td style=\"word-break: break-all;\" valign=\"top\" width=\"169\">{data_7}</td><td valign=\"top\" width=\"98\"><br/></td><td rowspan=\"1\" colspan=\"1\" valign=\"top\" width=\"214\"><br/></td><td valign=\"top\" width=\"73\"><br/></td><td valign=\"top\" width=\"130\"><br/></td></tr><tr><td style=\"word-break: break-all;\" valign=\"top\" width=\"17\">{data_8}</td><td style=\"word-break: break-all;\" valign=\"top\" width=\"169\">{data_9}</td><td valign=\"top\" width=\"98\"><br/></td><td rowspan=\"1\" colspan=\"1\" valign=\"top\" width=\"214\"><br/></td><td valign=\"top\" width=\"73\"><br/></td><td valign=\"top\" width=\"130\"><br/></td></tr><tr><td style=\"word-break: break-all;\" valign=\"top\" width=\"17\">{data_10}</td><td style=\"word-break: break-all;\" valign=\"top\" width=\"169\">{data_11}</td><td valign=\"top\" width=\"98\"><br/></td><td rowspan=\"1\" colspan=\"1\" valign=\"top\" width=\"214\"><br/></td><td valign=\"top\" width=\"73\"><br/></td><td valign=\"top\" width=\"130\"><br/></td></tr><tr><td valign=\"top\" width=\"17\"><br/></td><td valign=\"top\" width=\"17\"><br/></td><td valign=\"top\" width=\"169\"><br/></td><td valign=\"top\" width=\"244\"><br/></td><td rowspan=\"1\" colspan=\"1\" valign=\"top\" width=\"77\"><br/></td><td valign=\"top\" width=\"130\"><br/></td><td valign=\"top\" width=\"93\"><br/></td></tr><tr><td rowspan=\"1\" colspan=\"1\" valign=\"top\" width=\"17\"><br/></td><td rowspan=\"1\" colspan=\"1\" valign=\"top\" width=\"169\"><br/></td><td rowspan=\"1\" colspan=\"1\" valign=\"top\" width=\"110\"><br/></td><td rowspan=\"1\" colspan=\"1\" valign=\"top\" width=\"244\"><br/></td><td rowspan=\"1\" colspan=\"1\" valign=\"top\" width=\"77\"><br/></td><td rowspan=\"1\" colspan=\"1\" valign=\"top\" width=\"130\"><br/></td><td rowspan=\"1\" colspan=\"1\" valign=\"top\" width=\"93\"><br/></td></tr><tr><td rowspan=\"1\" colspan=\"1\" valign=\"top\" width=\"17\"><br/></td><td rowspan=\"1\" colspan=\"1\" valign=\"top\" width=\"169\"><br/></td><td rowspan=\"1\" colspan=\"1\" valign=\"top\" width=\"110\"><br/></td><td rowspan=\"1\" colspan=\"1\" valign=\"top\" width=\"244\"><br/></td><td rowspan=\"1\" colspan=\"1\" valign=\"top\" width=\"77\"><br/></td><td rowspan=\"1\" colspan=\"1\" valign=\"top\" width=\"130\"><br/></td><td rowspan=\"1\" colspan=\"1\" valign=\"top\" width=\"93\"><br/></td></tr><tr><td rowspan=\"1\" colspan=\"1\" valign=\"top\" width=\"17\"><br/></td><td rowspan=\"1\" colspan=\"1\" valign=\"top\" width=\"169\"><br/></td><td rowspan=\"1\" colspan=\"1\" valign=\"top\" width=\"110\"><br/></td><td rowspan=\"1\" colspan=\"1\" valign=\"top\" width=\"244\"><br/></td><td rowspan=\"1\" colspan=\"1\" valign=\"top\" width=\"77\"><br/></td><td rowspan=\"1\" colspan=\"1\" valign=\"top\" width=\"130\"><br/></td><td rowspan=\"1\" colspan=\"1\" valign=\"top\" width=\"93\"><br/></td></tr><tr><td rowspan=\"1\" colspan=\"1\" valign=\"top\" width=\"17\"><br/></td><td rowspan=\"1\" colspan=\"1\" valign=\"top\" width=\"169\"><br/></td><td rowspan=\"1\" colspan=\"1\" valign=\"top\" width=\"110\"><br/></td><td rowspan=\"1\" colspan=\"1\" valign=\"top\" width=\"244\"><br/></td><td rowspan=\"1\" colspan=\"1\" valign=\"top\" width=\"77\"><br/></td><td rowspan=\"1\" colspan=\"1\" valign=\"top\" width=\"130\"><br/></td><td rowspan=\"1\" colspan=\"1\" valign=\"top\" width=\"93\"><br/></td></tr><tr><td rowspan=\"1\" colspan=\"1\" valign=\"top\" width=\"17\"><br/></td><td rowspan=\"1\" colspan=\"1\" valign=\"top\" width=\"169\"><br/></td><td rowspan=\"1\" colspan=\"1\" valign=\"top\" width=\"110\"><br/></td><td rowspan=\"1\" colspan=\"1\" valign=\"top\" width=\"244\"><br/></td><td rowspan=\"1\" colspan=\"1\" valign=\"top\" width=\"77\"><br/></td><td rowspan=\"1\" colspan=\"1\" valign=\"top\" width=\"130\"><br/></td><td rowspan=\"1\" colspan=\"1\" valign=\"top\" width=\"93\"><br/></td></tr><tr><td rowspan=\"1\" colspan=\"1\" valign=\"top\" width=\"17\"><br/></td><td rowspan=\"1\" colspan=\"1\" valign=\"top\" width=\"169\"><br/></td><td rowspan=\"1\" colspan=\"1\" valign=\"top\" width=\"110\"><br/></td><td rowspan=\"1\" colspan=\"1\" valign=\"top\" width=\"244\"><br/></td><td rowspan=\"1\" colspan=\"1\" valign=\"top\" width=\"77\"><br/></td><td rowspan=\"1\" colspan=\"1\" valign=\"top\" width=\"130\"><br/></td><td rowspan=\"1\" colspan=\"1\" valign=\"top\" width=\"93\"><br/></td></tr><tr><td rowspan=\"1\" colspan=\"1\" valign=\"top\" width=\"17\"><br/></td><td rowspan=\"1\" colspan=\"1\" valign=\"top\" width=\"169\"><br/></td><td rowspan=\"1\" colspan=\"1\" valign=\"top\" width=\"110\"><br/></td><td rowspan=\"1\" colspan=\"1\" valign=\"top\" width=\"244\"><br/></td><td rowspan=\"1\" colspan=\"1\" valign=\"top\" width=\"77\"><br/></td><td rowspan=\"1\" colspan=\"1\" valign=\"top\" width=\"130\"><br/></td><td rowspan=\"1\" colspan=\"1\" valign=\"top\" width=\"93\"><br/></td></tr><tr><td rowspan=\"1\" colspan=\"1\" valign=\"top\" width=\"17\"><br/></td><td rowspan=\"1\" colspan=\"1\" valign=\"top\" width=\"169\"><br/></td><td rowspan=\"1\" colspan=\"1\" valign=\"top\" width=\"110\"><br/></td><td rowspan=\"1\" colspan=\"1\" valign=\"top\" width=\"244\"><br/></td><td rowspan=\"1\" colspan=\"1\" valign=\"top\" width=\"77\"><br/></td><td rowspan=\"1\" colspan=\"1\" valign=\"top\" width=\"130\"><br/></td><td rowspan=\"1\" colspan=\"1\" valign=\"top\" width=\"93\"><br/></td></tr><tr><td valign=\"top\" width=\"17\"><br/></td><td valign=\"top\" width=\"169\"><br/></td><td valign=\"top\" width=\"110\"><br/></td><td valign=\"top\" width=\"244\"><br/></td><td rowspan=\"1\" colspan=\"1\" valign=\"top\" width=\"77\"><br/></td><td valign=\"top\" width=\"130\"><br/></td><td valign=\"top\" width=\"93\"><br/></td></tr><tr><td valign=\"top\" width=\"17\"><br/></td><td valign=\"top\" width=\"169\"><br/></td><td valign=\"top\" width=\"110\"><br/></td><td valign=\"top\" width=\"244\"><br/></td><td rowspan=\"1\" colspan=\"1\" valign=\"top\" width=\"77\"><br/></td><td valign=\"top\" width=\"130\"><br/></td><td valign=\"top\" width=\"93\"><br/></td></tr><tr><td valign=\"top\" width=\"17\"><br/></td><td valign=\"top\" width=\"169\"><br/></td><td valign=\"top\" width=\"110\"><br/></td><td valign=\"top\" width=\"244\"><br/></td><td rowspan=\"1\" colspan=\"1\" valign=\"top\" width=\"77\"><br/></td><td valign=\"top\" width=\"130\"><br/></td><td valign=\"top\" width=\"93\"><br/></td></tr></tbody></table><p><br/></p>',`content_data`='a:11:{i:0;a:10:{s:5:\"title\";s:18:\"本周工作计划\";s:4:\"name\";s:6:\"data_1\";s:12:\"leipiplugins\";s:8:\"textarea\";s:5:\"value\";s:0:\"\";s:7:\"orgrich\";s:1:\"0\";s:11:\"orgfontsize\";s:0:\"\";s:8:\"orgwidth\";s:3:\"200\";s:9:\"orgheight\";s:2:\"35\";s:5:\"style\";s:24:\"width:200px;height:35px;\";s:7:\"content\";s:185:\"<textarea title=\"本周工作计划\" name=\"data_1\" leipiplugins=\"textarea\" value=\"\" orgrich=\"0\" orgfontsize=\"\" orgwidth=\"200\" orgheight=\"35\" style=\"width:200px;height:35px;\"></textarea>\";}i:1;a:10:{s:5:\"title\";s:12:\"负责人员\";s:4:\"name\";s:6:\"data_2\";s:12:\"leipiplugins\";s:8:\"textarea\";s:5:\"value\";s:0:\"\";s:7:\"orgrich\";s:1:\"0\";s:11:\"orgfontsize\";s:0:\"\";s:8:\"orgwidth\";s:3:\"100\";s:9:\"orgheight\";s:2:\"35\";s:5:\"style\";s:27:\"width: 100px; height: 35px;\";s:7:\"content\";s:182:\"<textarea title=\"负责人员\" name=\"data_2\" leipiplugins=\"textarea\" value=\"\" orgrich=\"0\" orgfontsize=\"\" orgwidth=\"100\" orgheight=\"35\" style=\"width: 100px; height: 35px;\"></textarea>\";}i:2;a:10:{s:5:\"title\";s:25:\"需要配合部门/人员\";s:4:\"name\";s:6:\"data_3\";s:12:\"leipiplugins\";s:8:\"textarea\";s:5:\"value\";s:0:\"\";s:7:\"orgrich\";s:1:\"0\";s:11:\"orgfontsize\";s:0:\"\";s:8:\"orgwidth\";s:2:\"95\";s:9:\"orgheight\";s:2:\"35\";s:5:\"style\";s:23:\"width:95px;height:35px;\";s:7:\"content\";s:190:\"<textarea title=\"需要配合部门/人员\" name=\"data_3\" leipiplugins=\"textarea\" value=\"\" orgrich=\"0\" orgfontsize=\"\" orgwidth=\"95\" orgheight=\"35\" style=\"width:95px;height:35px;\"></textarea>\";}i:3;a:10:{s:5:\"title\";s:18:\"本周工作计划\";s:4:\"name\";s:6:\"data_4\";s:12:\"leipiplugins\";s:8:\"textarea\";s:5:\"value\";s:0:\"\";s:7:\"orgrich\";s:1:\"0\";s:11:\"orgfontsize\";s:0:\"\";s:8:\"orgwidth\";s:3:\"200\";s:9:\"orgheight\";s:2:\"35\";s:5:\"style\";s:24:\"width:200px;height:35px;\";s:7:\"content\";s:185:\"<textarea title=\"本周工作计划\" name=\"data_4\" leipiplugins=\"textarea\" value=\"\" orgrich=\"0\" orgfontsize=\"\" orgwidth=\"200\" orgheight=\"35\" style=\"width:200px;height:35px;\"></textarea>\";}i:4;a:10:{s:5:\"title\";s:12:\"负责人员\";s:4:\"name\";s:6:\"data_5\";s:12:\"leipiplugins\";s:8:\"textarea\";s:5:\"value\";s:0:\"\";s:7:\"orgrich\";s:1:\"0\";s:11:\"orgfontsize\";s:0:\"\";s:8:\"orgwidth\";s:3:\"100\";s:9:\"orgheight\";s:2:\"35\";s:5:\"style\";s:27:\"width: 100px; height: 35px;\";s:7:\"content\";s:182:\"<textarea title=\"负责人员\" name=\"data_5\" leipiplugins=\"textarea\" value=\"\" orgrich=\"0\" orgfontsize=\"\" orgwidth=\"100\" orgheight=\"35\" style=\"width: 100px; height: 35px;\"></textarea>\";}i:5;a:10:{s:5:\"title\";s:18:\"本周工作计划\";s:4:\"name\";s:6:\"data_6\";s:12:\"leipiplugins\";s:8:\"textarea\";s:5:\"value\";s:0:\"\";s:7:\"orgrich\";s:1:\"0\";s:11:\"orgfontsize\";s:0:\"\";s:8:\"orgwidth\";s:3:\"200\";s:9:\"orgheight\";s:2:\"35\";s:5:\"style\";s:24:\"width:200px;height:35px;\";s:7:\"content\";s:185:\"<textarea title=\"本周工作计划\" name=\"data_6\" leipiplugins=\"textarea\" value=\"\" orgrich=\"0\" orgfontsize=\"\" orgwidth=\"200\" orgheight=\"35\" style=\"width:200px;height:35px;\"></textarea>\";}i:6;a:10:{s:5:\"title\";s:12:\"负责人员\";s:4:\"name\";s:6:\"data_7\";s:12:\"leipiplugins\";s:8:\"textarea\";s:5:\"value\";s:0:\"\";s:7:\"orgrich\";s:1:\"0\";s:11:\"orgfontsize\";s:0:\"\";s:8:\"orgwidth\";s:3:\"100\";s:9:\"orgheight\";s:2:\"35\";s:5:\"style\";s:27:\"width: 100px; height: 35px;\";s:7:\"content\";s:182:\"<textarea title=\"负责人员\" name=\"data_7\" leipiplugins=\"textarea\" value=\"\" orgrich=\"0\" orgfontsize=\"\" orgwidth=\"100\" orgheight=\"35\" style=\"width: 100px; height: 35px;\"></textarea>\";}i:7;a:10:{s:5:\"title\";s:18:\"本周工作计划\";s:4:\"name\";s:6:\"data_8\";s:12:\"leipiplugins\";s:8:\"textarea\";s:5:\"value\";s:0:\"\";s:7:\"orgrich\";s:1:\"0\";s:11:\"orgfontsize\";s:0:\"\";s:8:\"orgwidth\";s:3:\"200\";s:9:\"orgheight\";s:2:\"35\";s:5:\"style\";s:24:\"width:200px;height:35px;\";s:7:\"content\";s:185:\"<textarea title=\"本周工作计划\" name=\"data_8\" leipiplugins=\"textarea\" value=\"\" orgrich=\"0\" orgfontsize=\"\" orgwidth=\"200\" orgheight=\"35\" style=\"width:200px;height:35px;\"></textarea>\";}i:8;a:10:{s:5:\"title\";s:12:\"负责人员\";s:4:\"name\";s:6:\"data_9\";s:12:\"leipiplugins\";s:8:\"textarea\";s:5:\"value\";s:0:\"\";s:7:\"orgrich\";s:1:\"0\";s:11:\"orgfontsize\";s:0:\"\";s:8:\"orgwidth\";s:3:\"100\";s:9:\"orgheight\";s:2:\"35\";s:5:\"style\";s:27:\"width: 100px; height: 35px;\";s:7:\"content\";s:182:\"<textarea title=\"负责人员\" name=\"data_9\" leipiplugins=\"textarea\" value=\"\" orgrich=\"0\" orgfontsize=\"\" orgwidth=\"100\" orgheight=\"35\" style=\"width: 100px; height: 35px;\"></textarea>\";}i:9;a:10:{s:5:\"title\";s:18:\"本周工作计划\";s:4:\"name\";s:7:\"data_10\";s:12:\"leipiplugins\";s:8:\"textarea\";s:5:\"value\";s:0:\"\";s:7:\"orgrich\";s:1:\"0\";s:11:\"orgfontsize\";s:0:\"\";s:8:\"orgwidth\";s:3:\"200\";s:9:\"orgheight\";s:2:\"35\";s:5:\"style\";s:24:\"width:200px;height:35px;\";s:7:\"content\";s:186:\"<textarea title=\"本周工作计划\" name=\"data_10\" leipiplugins=\"textarea\" value=\"\" orgrich=\"0\" orgfontsize=\"\" orgwidth=\"200\" orgheight=\"35\" style=\"width:200px;height:35px;\"></textarea>\";}i:10;a:10:{s:5:\"title\";s:12:\"负责人员\";s:4:\"name\";s:7:\"data_11\";s:12:\"leipiplugins\";s:8:\"textarea\";s:5:\"value\";s:0:\"\";s:7:\"orgrich\";s:1:\"0\";s:11:\"orgfontsize\";s:0:\"\";s:8:\"orgwidth\";s:3:\"100\";s:9:\"orgheight\";s:2:\"35\";s:5:\"style\";s:27:\"width: 100px; height: 35px;\";s:7:\"content\";s:183:\"<textarea title=\"负责人员\" name=\"data_11\" leipiplugins=\"textarea\" value=\"\" orgrich=\"0\" orgfontsize=\"\" orgwidth=\"100\" orgheight=\"35\" style=\"width: 100px; height: 35px;\"></textarea>\";}}',`updatetime`='1449892284' WHERE `id` = 1913 [ RunTime:0.0314s ]
+NOTIC: [2] unlink(../Application/Runtime/Temp/21d9a5adf0e55158019e1c301ccb9502.php): No such file or directory /var/www/dzxt/s/tp/ThinkPHP/Library/Think/Cache/Driver/File.class.php 第 157 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000074s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000146s ]
+
+[ 2015-12-12T11:51:28+08:00 ] 183.21.22.228 /s/tp/wwwroot/index.php?s=/demo/formdesign/form_id/1913.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000162s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000066s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000139s ]
+SQL: SHOW COLUMNS FROM `ht_form` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `ht_form` WHERE `id` = 1913 AND `is_del` = 0 LIMIT 1   [ RunTime:0.0003s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000058s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000131s ]
+

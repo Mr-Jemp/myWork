@@ -1,0 +1,11 @@
+.expressioncss .top{background:#29AAE7;width:auto;padding: 5px;}
+.expressioncss .top #m1{width:50px; display:inline-block;*display:inline; padding-left:10px; font-weight:bold;}
+.expressioncss #m1{color:#ffffff;}
+.expressioncss .tablebox{background:#AFAFAF;}
+.expressioncss .tablebox .td{background:#ffffff;height:25px;line-height:25px;width:100px;}
+.expressioncss .tablebox .td .ellipsis{height:100%;width:auto;}/*100px;overflow:hidden;text-overflow:ellipsis;}*/
+.expressioncss .tablebox .rowtop{background:#EFEBDE;}
+
+.expressioncss #m3{height:20px;}
+.expressioncss #m2{border-radius:0px;margin-bottom:0px;padding:0;height:20px;line-height:20px;}
+.expressioncss table{height:auto!important;border-collapse: inherit!important;border-spacing:1px!important;}

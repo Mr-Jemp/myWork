@@ -1,0 +1,1576 @@
+[ 2015-09-25T10:07:22+08:00 ] 113.94.76.238 /s/tp/wwwroot/index.php?s=/Flow/run/add/flow_id/24.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000243s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000322s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000359s ]
+SQL: SHOW COLUMNS FROM `ht_flow` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `ht_flow` WHERE `id` = 24 AND `is_del` = 0 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `ht_flow_process` [ RunTime:0.0013s ]
+SQL: SELECT `id`,`flow_id`,`process_name`,`process_type`,`process_to`,`child_id`,`child_relation`,`child_after`,`child_back_process`,`return_sponsor_ids`,`return_respon_ids`,`write_fields`,`secret_fields`,`lock_fields`,`check_fields`,`auto_person`,`auto_unlock`,`auto_sponsor_ids`,`auto_sponsor_text`,`auto_respon_ids`,`auto_respon_text`,`auto_role_ids`,`auto_role_text`,`auto_process_sponsor`,`range_user_ids`,`range_user_text`,`range_dept_ids`,`range_dept_text`,`range_role_ids`,`range_role_text`,`receive_type`,`is_user_end`,`is_userop_pass`,`is_sing`,`sign_look`,`is_back`,`out_condition`,`setleft`,`settop`,`style` FROM `ht_flow_process` WHERE `flow_id` = 24 AND `is_del` = 0 ORDER BY id asc  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `ht_form` [ RunTime:0.0006s ]
+SQL: SELECT * FROM `ht_form` WHERE `id` = 746 AND `is_del` = 0 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `ht_run` [ RunTime:0.0007s ]
+SQL: INSERT INTO `ht_run` (`pid`,`uid`,`flow_id`,`run_name`,`run_flow_id`,`run_flow_process`,`dateline`) VALUES ('0','176','24','报销单(2015-09-25 10:07:22)','24','143','1443146842') [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `ht_run_process` [ RunTime:0.0007s ]
+SQL: INSERT INTO `ht_run_process` (`uid`,`run_id`,`run_flow`,`run_flow_process`,`parent_flow`,`parent_flow_process`,`run_child`,`remark`,`is_sponsor`,`status`,`js_time`,`bl_time`,`dateline`) VALUES ('176','1626','24','143','0','0','0','','1','1','1443146842','1443146842','1443146842') [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `ht_run_cache` [ RunTime:0.0006s ]
+SQL: INSERT INTO `ht_run_cache` (`run_id`,`form_id`,`flow_id`,`run_form`,`run_flow`,`run_flow_process`,`dateline`) VALUES ('1626','746','24','{\"id\":\"746\",\"form_name\":\"\\u62a5\\u9500\\u5355\",\"form_desc\":\"\",\"content\":\"<p><span style=\\\"font-size: 24px; text-decoration: none;\\\"><strong>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<\\/strong><\\/span><span style=\\\"font-size: 24px; text-decoration: underline;\\\"><strong>\\u8d39\\u7528\\u62a5\\u9500\\u5355<\\/strong><\\/span><br\\/><\\/p><p><span style=\\\"text-decoration: none;\\\">\\u62a5\\u9500\\u90e8\\u95e8\\uff1a<span leipiplugins=\\\"select\\\"><select name=\\\"data_15\\\" title=\\\"\\u62a5\\u9500\\u90e8\\u95e8\\\" leipiplugins=\\\"select\\\" size=\\\"1\\\" orgwidth=\\\"80\\\" style=\\\"width: 80px;\\\"><option value=\\\"\\u4eba\\u4e8b\\u90e8\\\">\\u4eba\\u4e8b\\u90e8<\\/option><option value=\\\"\\u7814\\u53d1\\u90e8\\\">\\u7814\\u53d1\\u90e8<\\/option><option value=\\\"\\u5e02\\u573a\\u90e8\\\">\\u5e02\\u573a\\u90e8<\\/option><option value=\\\"\\u6cd5\\u52a1\\u90e8\\\">\\u6cd5\\u52a1\\u90e8<\\/option><option value=\\\"\\u8d22\\u52a1\\u90e8\\\">\\u8d22\\u52a1\\u90e8<\\/option><option value=\\\"\\u5ba2\\u670d\\u90e8\\\">\\u5ba2\\u670d\\u90e8<\\/option><\\/select>&nbsp;<\\/span>&nbsp; &nbsp; &nbsp;<span leipiplugins=\\\"select\\\"><select name=\\\"data_16\\\" title=\\\"\\u5e74\\u4efd\\\" leipiplugins=\\\"select\\\" size=\\\"1\\\" orgwidth=\\\"60\\\" style=\\\"width: 60px;\\\"><option value=\\\"2015\\\" selected=\\\"selected\\\">2015<\\/option><option value=\\\"2016\\\">2016<\\/option><option value=\\\"2017\\\">2017<\\/option><option value=\\\"2018\\\">2018<\\/option><option value=\\\"2019\\\">2019<\\/option><option value=\\\"2020\\\">2020<\\/option><\\/select><\\/span>\\u5e74-<span leipiplugins=\\\"select\\\"><select name=\\\"data_17\\\" title=\\\"\\u6708\\u4efd\\\" leipiplugins=\\\"select\\\" size=\\\"0\\\" orgwidth=\\\"50\\\" style=\\\"width: 50px;\\\"><option value=\\\"1\\\">1<\\/option><option value=\\\"2\\\">2<\\/option><option value=\\\"3\\\">3<\\/option><option value=\\\"4\\\">4<\\/option><option value=\\\"5\\\">5<\\/option><option value=\\\"6\\\">6<\\/option><option value=\\\"7\\\">7<\\/option><option value=\\\"8\\\">8<\\/option><option value=\\\"9\\\">9<\\/option><option value=\\\"10\\\">10<\\/option><option value=\\\"11\\\">11<\\/option><option value=\\\"12\\\" selected=\\\"selected\\\">12<\\/option><\\/select><\\/span>\\u6708<span leipiplugins=\\\"select\\\"><select name=\\\"data_18\\\" title=\\\"\\u65e5\\\" leipiplugins=\\\"select\\\" size=\\\"1\\\" orgwidth=\\\"50\\\" style=\\\"width: 50px;\\\"><option value=\\\"1\\\">1<\\/option><option value=\\\"2\\\">2<\\/option><option value=\\\"3\\\">3<\\/option><option value=\\\"4\\\">4<\\/option><option value=\\\"5\\\">5<\\/option><option value=\\\"6\\\">6<\\/option><option value=\\\"7\\\">7<\\/option><option value=\\\"8\\\">8<\\/option><option value=\\\"9\\\">9<\\/option><option value=\\\"10\\\">10<\\/option><option value=\\\"11\\\">11<\\/option><option value=\\\"12\\\">12<\\/option><option value=\\\"13\\\">13<\\/option><option value=\\\"14\\\">14<\\/option><option value=\\\"15\\\">15<\\/option><option value=\\\"16\\\">16<\\/option><option value=\\\"17\\\">17<\\/option><option value=\\\"18\\\">18<\\/option><option value=\\\"19\\\">19<\\/option><option value=\\\"20\\\">20<\\/option><option value=\\\"21\\\">21<\\/option><option value=\\\"22\\\">22<\\/option><option value=\\\"23\\\">23<\\/option><option value=\\\"24\\\">24<\\/option><option value=\\\"25\\\">25<\\/option><option value=\\\"26\\\">26<\\/option><option value=\\\"27\\\">27<\\/option><option value=\\\"28\\\">28<\\/option><option value=\\\"29\\\">29<\\/option><option value=\\\"30\\\">30<\\/option><option value=\\\"31\\\">31<\\/option><\\/select><\\/span>\\u65e5 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;\\u5355\\u636e\\u53ca\\u9644<\\/span><span style=\\\"text-decoration: underline;\\\">\\u4ef6<span leipiplugins=\\\"select\\\"><select name=\\\"data_14\\\" title=\\\"\\u9875\\u6570\\\" leipiplugins=\\\"select\\\" size=\\\"1\\\" orgwidth=\\\"40\\\" style=\\\"width: 40px;\\\"><option value=\\\"1\\\" selected=\\\"selected\\\">1<\\/option><option value=\\\"2\\\">2<\\/option><option value=\\\"3\\\">3<\\/option><option value=\\\"4\\\">4<\\/option><\\/select><\\/span>\\u9875<\\/span><\\/p><p><span style=\\\"text-decoration: underline;\\\"><\\/span><\\/p><table data-sort=\\\"sortDisabled\\\"><tbody><tr class=\\\"firstRow\\\"><td width=\\\"143.66666666666666\\\" valign=\\\"top\\\" style=\\\"word-break: break-all;\\\">\\u7528\\u9014<\\/td><td width=\\\"107.66666666666669\\\" valign=\\\"top\\\" style=\\\"word-break: break-all;\\\">\\u91d1\\u989d\\uff08\\u5143)<\\/td><td valign=\\\"top\\\" colspan=\\\"1\\\" rowspan=\\\"4\\\" width=\\\"27.666666666666686\\\" style=\\\"word-break: break-all;\\\"><p><span style=\\\"font-size: 16px;\\\">\\u5907<\\/span><\\/p><p><span style=\\\"font-size: 16px;\\\"><br\\/><\\/span><\\/p><p><span style=\\\"font-size: 16px;\\\"><br\\/><\\/span><\\/p><p><span style=\\\"font-size: 16px;\\\"><br\\/><\\/span><\\/p><p><span style=\\\"font-size: 16px;\\\"><br\\/><\\/span><\\/p><p><span style=\\\"font-size: 16px;\\\">\\u6ce8<\\/span><\\/p><\\/td><td width=\\\"298.6666666666667\\\" valign=\\\"top\\\" rowspan=\\\"4\\\" colspan=\\\"1\\\"><textarea title=\\\"\\u5907\\u6ce8\\\" name=\\\"data_1\\\" leipiplugins=\\\"textarea\\\" value=\\\"\\\" orgrich=\\\"0\\\" orgfontsize=\\\"\\\" orgwidth=\\\"300\\\" orgheight=\\\"80\\\" style=\\\"width:300px;height:80px;\\\"><\\/textarea><\\/td><\\/tr><tr><td width=\\\"143.66666666666666\\\" valign=\\\"top\\\"><input name=\\\"data_2\\\" type=\\\"text\\\" title=\\\"1\\\" value=\\\"\\\" leipiplugins=\\\"text\\\" orghide=\\\"0\\\" orgalign=\\\"left\\\" orgwidth=\\\"150\\\" orgtype=\\\"text\\\" style=\\\"text-align: left; width: 150px;\\\"\\/><\\/td><td width=\\\"107.66666666666669\\\" valign=\\\"top\\\"><input name=\\\"data_3\\\" type=\\\"text\\\" title=\\\"1\\\" value=\\\"\\\" leipiplugins=\\\"text\\\" orghide=\\\"0\\\" orgalign=\\\"left\\\" orgwidth=\\\"80\\\" orgtype=\\\"text\\\" style=\\\"text-align: left; width: 80px;\\\"\\/><\\/td><\\/tr><tr><td width=\\\"143.66666666666666\\\" valign=\\\"top\\\"><input name=\\\"data_4\\\" type=\\\"text\\\" title=\\\"2\\\" value=\\\"\\\" leipiplugins=\\\"text\\\" orghide=\\\"0\\\" orgalign=\\\"left\\\" orgwidth=\\\"150\\\" orgtype=\\\"text\\\" style=\\\"text-align: left; width: 150px;\\\"\\/><\\/td><td width=\\\"107.66666666666669\\\" valign=\\\"top\\\"><input name=\\\"data_5\\\" type=\\\"text\\\" title=\\\"2\\\" value=\\\"\\\" leipiplugins=\\\"text\\\" orghide=\\\"0\\\" orgalign=\\\"left\\\" orgwidth=\\\"80\\\" orgtype=\\\"text\\\" style=\\\"text-align: left; width: 80px;\\\"\\/><\\/td><\\/tr><tr><td width=\\\"143.66666666666666\\\" valign=\\\"top\\\"><input name=\\\"data_6\\\" type=\\\"text\\\" title=\\\"3\\\" value=\\\"\\\" leipiplugins=\\\"text\\\" orghide=\\\"0\\\" orgalign=\\\"left\\\" orgwidth=\\\"150\\\" orgtype=\\\"text\\\" style=\\\"text-align: left; width: 150px;\\\"\\/><\\/td><td width=\\\"107.66666666666669\\\" valign=\\\"top\\\"><input name=\\\"data_7\\\" type=\\\"text\\\" title=\\\"3\\\" value=\\\"\\\" leipiplugins=\\\"text\\\" orghide=\\\"0\\\" orgalign=\\\"left\\\" orgwidth=\\\"80\\\" orgtype=\\\"text\\\" style=\\\"text-align: left; width: 80px;\\\"\\/><\\/td><\\/tr><tr><td width=\\\"143.66666666666666\\\" valign=\\\"top\\\"><input name=\\\"data_8\\\" type=\\\"text\\\" title=\\\"4\\\" value=\\\"\\\" leipiplugins=\\\"text\\\" orghide=\\\"0\\\" orgalign=\\\"left\\\" orgwidth=\\\"150\\\" orgtype=\\\"text\\\" style=\\\"text-align: left; width: 150px;\\\"\\/><\\/td><td width=\\\"107.66666666666669\\\" valign=\\\"top\\\"><input name=\\\"data_9\\\" type=\\\"text\\\" title=\\\"4\\\" value=\\\"\\\" leipiplugins=\\\"text\\\" orghide=\\\"0\\\" orgalign=\\\"left\\\" orgwidth=\\\"80\\\" orgtype=\\\"text\\\" style=\\\"text-align: left; width: 80px;\\\"\\/><\\/td><td valign=\\\"top\\\" colspan=\\\"1\\\" rowspan=\\\"3\\\" width=\\\"27.666666666666686\\\" style=\\\"word-break: break-all;\\\"><p><span style=\\\"font-size: 16px;\\\">\\u9886<\\/span><\\/p><p><span style=\\\"font-size: 16px;\\\">\\u5bfc\\u5ba1<\\/span><\\/p><p><span style=\\\"font-size: 16px;\\\">\\u6279<\\/span><\\/p><\\/td><td width=\\\"298.6666666666667\\\" valign=\\\"top\\\" rowspan=\\\"3\\\" colspan=\\\"1\\\"><textarea title=\\\"\\u9886\\u5bfc\\u5ba1\\u6279\\\" name=\\\"data_10\\\" leipiplugins=\\\"textarea\\\" value=\\\"\\\" orgrich=\\\"0\\\" orgfontsize=\\\"\\\" orgwidth=\\\"300\\\" orgheight=\\\"80\\\" style=\\\"width:300px;height:80px;\\\"><\\/textarea><\\/td><\\/tr><tr><td width=\\\"143.66666666666666\\\" valign=\\\"top\\\"><input name=\\\"data_11\\\" type=\\\"text\\\" title=\\\"5\\\" value=\\\"\\\" leipiplugins=\\\"text\\\" orghide=\\\"0\\\" orgalign=\\\"left\\\" orgwidth=\\\"150\\\" orgtype=\\\"text\\\" style=\\\"text-align: left; width: 150px;\\\"\\/><\\/td><td width=\\\"107.66666666666669\\\" valign=\\\"top\\\"><input name=\\\"data_12\\\" type=\\\"text\\\" title=\\\"5\\\" value=\\\"\\\" leipiplugins=\\\"text\\\" orghide=\\\"0\\\" orgalign=\\\"left\\\" orgwidth=\\\"80\\\" orgtype=\\\"text\\\" style=\\\"text-align: left; width: 80px;\\\"\\/><\\/td><\\/tr><tr><td width=\\\"143.66666666666666\\\" valign=\\\"top\\\" style=\\\"word-break: break-all;\\\">\\u5408\\u8ba1<\\/td><td width=\\\"107.66666666666669\\\" valign=\\\"top\\\"><input name=\\\"data_13\\\" type=\\\"text\\\" title=\\\"6\\\" value=\\\"\\\" leipiplugins=\\\"text\\\" orghide=\\\"0\\\" orgalign=\\\"left\\\" orgwidth=\\\"80\\\" orgtype=\\\"text\\\" style=\\\"text-align: left; width: 80px;\\\"\\/><\\/td><\\/tr><\\/tbody><\\/table><p><span style=\\\"text-decoration: underline;\\\"><\\/span><br\\/><\\/p>\",\"content_parse\":\"<p><span style=\\\"font-size: 24px; text-decoration: none;\\\"><strong>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<\\/strong><\\/span><span style=\\\"font-size: 24px; text-decoration: underline;\\\"><strong>\\u8d39\\u7528\\u62a5\\u9500\\u5355<\\/strong><\\/span><br\\/><\\/p><p><span style=\\\"text-decoration: none;\\\">\\u62a5\\u9500\\u90e8\\u95e8\\uff1a<span leipiplugins=\\\"select\\\">{data_15}&nbsp;<\\/span>&nbsp; &nbsp; &nbsp;<span leipiplugins=\\\"select\\\">{data_16}<\\/span>\\u5e74-<span leipiplugins=\\\"select\\\">{data_17}<\\/span>\\u6708<span leipiplugins=\\\"select\\\">{data_18}<\\/span>\\u65e5 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;\\u5355\\u636e\\u53ca\\u9644<\\/span><span style=\\\"text-decoration: underline;\\\">\\u4ef6<span leipiplugins=\\\"select\\\">{data_14}<\\/span>\\u9875<\\/span><\\/p><p><span style=\\\"text-decoration: underline;\\\"><\\/span><\\/p><table data-sort=\\\"sortDisabled\\\"><tbody><tr class=\\\"firstRow\\\"><td width=\\\"143.66666666666666\\\" valign=\\\"top\\\" style=\\\"word-break: break-all;\\\">\\u7528\\u9014<\\/td><td width=\\\"107.66666666666669\\\" valign=\\\"top\\\" style=\\\"word-break: break-all;\\\">\\u91d1\\u989d\\uff08\\u5143)<\\/td><td valign=\\\"top\\\" colspan=\\\"1\\\" rowspan=\\\"4\\\" width=\\\"27.666666666666686\\\" style=\\\"word-break: break-all;\\\"><p><span style=\\\"font-size: 16px;\\\">\\u5907<\\/span><\\/p><p><span style=\\\"font-size: 16px;\\\"><br\\/><\\/span><\\/p><p><span style=\\\"font-size: 16px;\\\"><br\\/><\\/span><\\/p><p><span style=\\\"font-size: 16px;\\\"><br\\/><\\/span><\\/p><p><span style=\\\"font-size: 16px;\\\"><br\\/><\\/span><\\/p><p><span style=\\\"font-size: 16px;\\\">\\u6ce8<\\/span><\\/p><\\/td><td width=\\\"298.6666666666667\\\" valign=\\\"top\\\" rowspan=\\\"4\\\" colspan=\\\"1\\\">{data_1}<\\/td><\\/tr><tr><td width=\\\"143.66666666666666\\\" valign=\\\"top\\\">{data_2}<\\/td><td width=\\\"107.66666666666669\\\" valign=\\\"top\\\">{data_3}<\\/td><\\/tr><tr><td width=\\\"143.66666666666666\\\" valign=\\\"top\\\">{data_4}<\\/td><td width=\\\"107.66666666666669\\\" valign=\\\"top\\\">{data_5}<\\/td><\\/tr><tr><td width=\\\"143.66666666666666\\\" valign=\\\"top\\\">{data_6}<\\/td><td width=\\\"107.66666666666669\\\" valign=\\\"top\\\">{data_7}<\\/td><\\/tr><tr><td width=\\\"143.66666666666666\\\" valign=\\\"top\\\">{data_8}<\\/td><td width=\\\"107.66666666666669\\\" valign=\\\"top\\\">{data_9}<\\/td><td valign=\\\"top\\\" colspan=\\\"1\\\" rowspan=\\\"3\\\" width=\\\"27.666666666666686\\\" style=\\\"word-break: break-all;\\\"><p><span style=\\\"font-size: 16px;\\\">\\u9886<\\/span><\\/p><p><span style=\\\"font-size: 16px;\\\">\\u5bfc\\u5ba1<\\/span><\\/p><p><span style=\\\"font-size: 16px;\\\">\\u6279<\\/span><\\/p><\\/td><td width=\\\"298.6666666666667\\\" valign=\\\"top\\\" rowspan=\\\"3\\\" colspan=\\\"1\\\">{data_10}<\\/td><\\/tr><tr><td width=\\\"143.66666666666666\\\" valign=\\\"top\\\">{data_11}<\\/td><td width=\\\"107.66666666666669\\\" valign=\\\"top\\\">{data_12}<\\/td><\\/tr><tr><td width=\\\"143.66666666666666\\\" valign=\\\"top\\\" style=\\\"word-break: break-all;\\\">\\u5408\\u8ba1<\\/td><td width=\\\"107.66666666666669\\\" valign=\\\"top\\\">{data_13}<\\/td><\\/tr><\\/tbody><\\/table><p><span style=\\\"text-decoration: underline;\\\"><\\/span><br\\/><\\/p>\",\"content_data\":\"a:18:{i:0;a:8:{s:4:\\\"name\\\";s:7:\\\"data_15\\\";s:5:\\\"title\\\";s:12:\\\"\\u62a5\\u9500\\u90e8\\u95e8\\\";s:12:\\\"leipiplugins\\\";s:6:\\\"select\\\";s:4:\\\"size\\\";s:1:\\\"1\\\";s:8:\\\"orgwidth\\\";s:2:\\\"80\\\";s:5:\\\"style\\\";s:12:\\\"width: 80px;\\\";s:5:\\\"value\\\";s:59:\\\"\\u4eba\\u4e8b\\u90e8,\\u7814\\u53d1\\u90e8,\\u5e02\\u573a\\u90e8,\\u6cd5\\u52a1\\u90e8,\\u8d22\\u52a1\\u90e8,\\u5ba2\\u670d\\u90e8\\\";s:7:\\\"content\\\";s:383:\\\"<select name=\\\"data_15\\\" title=\\\"\\u62a5\\u9500\\u90e8\\u95e8\\\" leipiplugins=\\\"select\\\" size=\\\"1\\\" orgwidth=\\\"80\\\" style=\\\"width: 80px;\\\"><option value=\\\"\\u4eba\\u4e8b\\u90e8\\\">\\u4eba\\u4e8b\\u90e8<\\/option><option value=\\\"\\u7814\\u53d1\\u90e8\\\">\\u7814\\u53d1\\u90e8<\\/option><option value=\\\"\\u5e02\\u573a\\u90e8\\\">\\u5e02\\u573a\\u90e8<\\/option><option value=\\\"\\u6cd5\\u52a1\\u90e8\\\">\\u6cd5\\u52a1\\u90e8<\\/option><option value=\\\"\\u8d22\\u52a1\\u90e8\\\">\\u8d22\\u52a1\\u90e8<\\/option><option value=\\\"\\u5ba2\\u670d\\u90e8\\\">\\u5ba2\\u670d\\u90e8<\\/option><\\/select>\\\";}i:1;a:9:{s:4:\\\"name\\\";s:7:\\\"data_16\\\";s:5:\\\"title\\\";s:6:\\\"\\u5e74\\u4efd\\\";s:12:\\\"leipiplugins\\\";s:6:\\\"select\\\";s:4:\\\"size\\\";s:1:\\\"1\\\";s:8:\\\"orgwidth\\\";s:2:\\\"60\\\";s:5:\\\"style\\\";s:12:\\\"width: 60px;\\\";s:5:\\\"value\\\";s:29:\\\"2015,2016,2017,2018,2019,2020\\\";s:8:\\\"selected\\\";s:8:\\\"selected\\\";s:7:\\\"content\\\";s:337:\\\"<select name=\\\"data_16\\\" title=\\\"\\u5e74\\u4efd\\\" leipiplugins=\\\"select\\\" size=\\\"1\\\" orgwidth=\\\"60\\\" style=\\\"width: 60px;\\\"><option value=\\\"2015\\\" selected=\\\"selected\\\">2015<\\/option><option value=\\\"2016\\\">2016<\\/option><option value=\\\"2017\\\">2017<\\/option><option value=\\\"2018\\\">2018<\\/option><option value=\\\"2019\\\">2019<\\/option><option value=\\\"2020\\\">2020<\\/option><\\/select>\\\";}i:2;a:9:{s:4:\\\"name\\\";s:7:\\\"data_17\\\";s:5:\\\"title\\\";s:6:\\\"\\u6708\\u4efd\\\";s:12:\\\"leipiplugins\\\";s:6:\\\"select\\\";s:4:\\\"size\\\";s:1:\\\"0\\\";s:8:\\\"orgwidth\\\";s:2:\\\"50\\\";s:5:\\\"style\\\";s:12:\\\"width: 50px;\\\";s:5:\\\"value\\\";s:26:\\\"1,2,3,4,5,6,7,8,9,10,11,12\\\";s:8:\\\"selected\\\";s:8:\\\"selected\\\";s:7:\\\"content\\\";s:475:\\\"<select name=\\\"data_17\\\" title=\\\"\\u6708\\u4efd\\\" leipiplugins=\\\"select\\\" size=\\\"0\\\" orgwidth=\\\"50\\\" style=\\\"width: 50px;\\\"><option value=\\\"1\\\">1<\\/option><option value=\\\"2\\\">2<\\/option><option value=\\\"3\\\">3<\\/option><option value=\\\"4\\\">4<\\/option><option value=\\\"5\\\">5<\\/option><option value=\\\"6\\\">6<\\/option><option value=\\\"7\\\">7<\\/option><option value=\\\"8\\\">8<\\/option><option value=\\\"9\\\">9<\\/option><option value=\\\"10\\\">10<\\/option><option value=\\\"11\\\">11<\\/option><option value=\\\"12\\\" selected=\\\"selected\\\">12<\\/option><\\/select>\\\";}i:3;a:8:{s:4:\\\"name\\\";s:7:\\\"data_18\\\";s:5:\\\"title\\\";s:3:\\\"\\u65e5\\\";s:12:\\\"leipiplugins\\\";s:6:\\\"select\\\";s:4:\\\"size\\\";s:1:\\\"1\\\";s:8:\\\"orgwidth\\\";s:2:\\\"50\\\";s:5:\\\"style\\\";s:12:\\\"width: 50px;\\\";s:5:\\\"value\\\";s:83:\\\"1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31\\\";s:7:\\\"content\\\";s:1022:\\\"<select name=\\\"data_18\\\" title=\\\"\\u65e5\\\" leipiplugins=\\\"select\\\" size=\\\"1\\\" orgwidth=\\\"50\\\" style=\\\"width: 50px;\\\"><option value=\\\"1\\\">1<\\/option><option value=\\\"2\\\">2<\\/option><option value=\\\"3\\\">3<\\/option><option value=\\\"4\\\">4<\\/option><option value=\\\"5\\\">5<\\/option><option value=\\\"6\\\">6<\\/option><option value=\\\"7\\\">7<\\/option><option value=\\\"8\\\">8<\\/option><option value=\\\"9\\\">9<\\/option><option value=\\\"10\\\">10<\\/option><option value=\\\"11\\\">11<\\/option><option value=\\\"12\\\">12<\\/option><option value=\\\"13\\\">13<\\/option><option value=\\\"14\\\">14<\\/option><option value=\\\"15\\\">15<\\/option><option value=\\\"16\\\">16<\\/option><option value=\\\"17\\\">17<\\/option><option value=\\\"18\\\">18<\\/option><option value=\\\"19\\\">19<\\/option><option value=\\\"20\\\">20<\\/option><option value=\\\"21\\\">21<\\/option><option value=\\\"22\\\">22<\\/option><option value=\\\"23\\\">23<\\/option><option value=\\\"24\\\">24<\\/option><option value=\\\"25\\\">25<\\/option><option value=\\\"26\\\">26<\\/option><option value=\\\"27\\\">27<\\/option><option value=\\\"28\\\">28<\\/option><option value=\\\"29\\\">29<\\/option><option value=\\\"30\\\">30<\\/option><option value=\\\"31\\\">31<\\/option><\\/select>\\\";}i:4;a:9:{s:4:\\\"name\\\";s:7:\\\"data_14\\\";s:5:\\\"title\\\";s:6:\\\"\\u9875\\u6570\\\";s:12:\\\"leipiplugins\\\";s:6:\\\"select\\\";s:4:\\\"size\\\";s:1:\\\"1\\\";s:8:\\\"orgwidth\\\";s:2:\\\"40\\\";s:5:\\\"style\\\";s:12:\\\"width: 40px;\\\";s:5:\\\"value\\\";s:7:\\\"1,2,3,4\\\";s:8:\\\"selected\\\";s:8:\\\"selected\\\";s:7:\\\"content\\\";s:245:\\\"<select name=\\\"data_14\\\" title=\\\"\\u9875\\u6570\\\" leipiplugins=\\\"select\\\" size=\\\"1\\\" orgwidth=\\\"40\\\" style=\\\"width: 40px;\\\"><option value=\\\"1\\\" selected=\\\"selected\\\">1<\\/option><option value=\\\"2\\\">2<\\/option><option value=\\\"3\\\">3<\\/option><option value=\\\"4\\\">4<\\/option><\\/select>\\\";}i:5;a:10:{s:5:\\\"title\\\";s:6:\\\"\\u5907\\u6ce8\\\";s:4:\\\"name\\\";s:6:\\\"data_1\\\";s:12:\\\"leipiplugins\\\";s:8:\\\"textarea\\\";s:5:\\\"value\\\";s:0:\\\"\\\";s:7:\\\"orgrich\\\";s:1:\\\"0\\\";s:11:\\\"orgfontsize\\\";s:0:\\\"\\\";s:8:\\\"orgwidth\\\";s:3:\\\"300\\\";s:9:\\\"orgheight\\\";s:2:\\\"80\\\";s:5:\\\"style\\\";s:24:\\\"width:300px;height:80px;\\\";s:7:\\\"content\\\";s:173:\\\"<textarea title=\\\"\\u5907\\u6ce8\\\" name=\\\"data_1\\\" leipiplugins=\\\"textarea\\\" value=\\\"\\\" orgrich=\\\"0\\\" orgfontsize=\\\"\\\" orgwidth=\\\"300\\\" orgheight=\\\"80\\\" style=\\\"width:300px;height:80px;\\\"><\\/textarea>\\\";}i:6;a:11:{s:4:\\\"name\\\";s:6:\\\"data_2\\\";s:4:\\\"type\\\";s:4:\\\"text\\\";s:5:\\\"title\\\";s:1:\\\"1\\\";s:5:\\\"value\\\";s:0:\\\"\\\";s:12:\\\"leipiplugins\\\";s:4:\\\"text\\\";s:7:\\\"orghide\\\";s:1:\\\"0\\\";s:8:\\\"orgalign\\\";s:4:\\\"left\\\";s:8:\\\"orgwidth\\\";s:3:\\\"150\\\";s:7:\\\"orgtype\\\";s:4:\\\"text\\\";s:5:\\\"style\\\";s:31:\\\"text-align: left; width: 150px;\\\";s:7:\\\"content\\\";s:171:\\\"<input name=\\\"data_2\\\" type=\\\"text\\\" title=\\\"1\\\" value=\\\"\\\" leipiplugins=\\\"text\\\" orghide=\\\"0\\\" orgalign=\\\"left\\\" orgwidth=\\\"150\\\" orgtype=\\\"text\\\" style=\\\"text-align: left; width: 150px;\\\"\\/>\\\";}i:7;a:11:{s:4:\\\"name\\\";s:6:\\\"data_3\\\";s:4:\\\"type\\\";s:4:\\\"text\\\";s:5:\\\"title\\\";s:1:\\\"1\\\";s:5:\\\"value\\\";s:0:\\\"\\\";s:12:\\\"leipiplugins\\\";s:4:\\\"text\\\";s:7:\\\"orghide\\\";s:1:\\\"0\\\";s:8:\\\"orgalign\\\";s:4:\\\"left\\\";s:8:\\\"orgwidth\\\";s:2:\\\"80\\\";s:7:\\\"orgtype\\\";s:4:\\\"text\\\";s:5:\\\"style\\\";s:30:\\\"text-align: left; width: 80px;\\\";s:7:\\\"content\\\";s:169:\\\"<input name=\\\"data_3\\\" type=\\\"text\\\" title=\\\"1\\\" value=\\\"\\\" leipiplugins=\\\"text\\\" orghide=\\\"0\\\" orgalign=\\\"left\\\" orgwidth=\\\"80\\\" orgtype=\\\"text\\\" style=\\\"text-align: left; width: 80px;\\\"\\/>\\\";}i:8;a:11:{s:4:\\\"name\\\";s:6:\\\"data_4\\\";s:4:\\\"type\\\";s:4:\\\"text\\\";s:5:\\\"title\\\";s:1:\\\"2\\\";s:5:\\\"value\\\";s:0:\\\"\\\";s:12:\\\"leipiplugins\\\";s:4:\\\"text\\\";s:7:\\\"orghide\\\";s:1:\\\"0\\\";s:8:\\\"orgalign\\\";s:4:\\\"left\\\";s:8:\\\"orgwidth\\\";s:3:\\\"150\\\";s:7:\\\"orgtype\\\";s:4:\\\"text\\\";s:5:\\\"style\\\";s:31:\\\"text-align: left; width: 150px;\\\";s:7:\\\"content\\\";s:171:\\\"<input name=\\\"data_4\\\" type=\\\"text\\\" title=\\\"2\\\" value=\\\"\\\" leipiplugins=\\\"text\\\" orghide=\\\"0\\\" orgalign=\\\"left\\\" orgwidth=\\\"150\\\" orgtype=\\\"text\\\" style=\\\"text-align: left; width: 150px;\\\"\\/>\\\";}i:9;a:11:{s:4:\\\"name\\\";s:6:\\\"data_5\\\";s:4:\\\"type\\\";s:4:\\\"text\\\";s:5:\\\"title\\\";s:1:\\\"2\\\";s:5:\\\"value\\\";s:0:\\\"\\\";s:12:\\\"leipiplugins\\\";s:4:\\\"text\\\";s:7:\\\"orghide\\\";s:1:\\\"0\\\";s:8:\\\"orgalign\\\";s:4:\\\"left\\\";s:8:\\\"orgwidth\\\";s:2:\\\"80\\\";s:7:\\\"orgtype\\\";s:4:\\\"text\\\";s:5:\\\"style\\\";s:30:\\\"text-align: left; width: 80px;\\\";s:7:\\\"content\\\";s:169:\\\"<input name=\\\"data_5\\\" type=\\\"text\\\" title=\\\"2\\\" value=\\\"\\\" leipiplugins=\\\"text\\\" orghide=\\\"0\\\" orgalign=\\\"left\\\" orgwidth=\\\"80\\\" orgtype=\\\"text\\\" style=\\\"text-align: left; width: 80px;\\\"\\/>\\\";}i:10;a:11:{s:4:\\\"name\\\";s:6:\\\"data_6\\\";s:4:\\\"type\\\";s:4:\\\"text\\\";s:5:\\\"title\\\";s:1:\\\"3\\\";s:5:\\\"value\\\";s:0:\\\"\\\";s:12:\\\"leipiplugins\\\";s:4:\\\"text\\\";s:7:\\\"orghide\\\";s:1:\\\"0\\\";s:8:\\\"orgalign\\\";s:4:\\\"left\\\";s:8:\\\"orgwidth\\\";s:3:\\\"150\\\";s:7:\\\"orgtype\\\";s:4:\\\"text\\\";s:5:\\\"style\\\";s:31:\\\"text-align: left; width: 150px;\\\";s:7:\\\"content\\\";s:171:\\\"<input name=\\\"data_6\\\" type=\\\"text\\\" title=\\\"3\\\" value=\\\"\\\" leipiplugins=\\\"text\\\" orghide=\\\"0\\\" orgalign=\\\"left\\\" orgwidth=\\\"150\\\" orgtype=\\\"text\\\" style=\\\"text-align: left; width: 150px;\\\"\\/>\\\";}i:11;a:11:{s:4:\\\"name\\\";s:6:\\\"data_7\\\";s:4:\\\"type\\\";s:4:\\\"text\\\";s:5:\\\"title\\\";s:1:\\\"3\\\";s:5:\\\"value\\\";s:0:\\\"\\\";s:12:\\\"leipiplugins\\\";s:4:\\\"text\\\";s:7:\\\"orghide\\\";s:1:\\\"0\\\";s:8:\\\"orgalign\\\";s:4:\\\"left\\\";s:8:\\\"orgwidth\\\";s:2:\\\"80\\\";s:7:\\\"orgtype\\\";s:4:\\\"text\\\";s:5:\\\"style\\\";s:30:\\\"text-align: left; width: 80px;\\\";s:7:\\\"content\\\";s:169:\\\"<input name=\\\"data_7\\\" type=\\\"text\\\" title=\\\"3\\\" value=\\\"\\\" leipiplugins=\\\"text\\\" orghide=\\\"0\\\" orgalign=\\\"left\\\" orgwidth=\\\"80\\\" orgtype=\\\"text\\\" style=\\\"text-align: left; width: 80px;\\\"\\/>\\\";}i:12;a:11:{s:4:\\\"name\\\";s:6:\\\"data_8\\\";s:4:\\\"type\\\";s:4:\\\"text\\\";s:5:\\\"title\\\";s:1:\\\"4\\\";s:5:\\\"value\\\";s:0:\\\"\\\";s:12:\\\"leipiplugins\\\";s:4:\\\"text\\\";s:7:\\\"orghide\\\";s:1:\\\"0\\\";s:8:\\\"orgalign\\\";s:4:\\\"left\\\";s:8:\\\"orgwidth\\\";s:3:\\\"150\\\";s:7:\\\"orgtype\\\";s:4:\\\"text\\\";s:5:\\\"style\\\";s:31:\\\"text-align: left; width: 150px;\\\";s:7:\\\"content\\\";s:171:\\\"<input name=\\\"data_8\\\" type=\\\"text\\\" title=\\\"4\\\" value=\\\"\\\" leipiplugins=\\\"text\\\" orghide=\\\"0\\\" orgalign=\\\"left\\\" orgwidth=\\\"150\\\" orgtype=\\\"text\\\" style=\\\"text-align: left; width: 150px;\\\"\\/>\\\";}i:13;a:11:{s:4:\\\"name\\\";s:6:\\\"data_9\\\";s:4:\\\"type\\\";s:4:\\\"text\\\";s:5:\\\"title\\\";s:1:\\\"4\\\";s:5:\\\"value\\\";s:0:\\\"\\\";s:12:\\\"leipiplugins\\\";s:4:\\\"text\\\";s:7:\\\"orghide\\\";s:1:\\\"0\\\";s:8:\\\"orgalign\\\";s:4:\\\"left\\\";s:8:\\\"orgwidth\\\";s:2:\\\"80\\\";s:7:\\\"orgtype\\\";s:4:\\\"text\\\";s:5:\\\"style\\\";s:30:\\\"text-align: left; width: 80px;\\\";s:7:\\\"content\\\";s:169:\\\"<input name=\\\"data_9\\\" type=\\\"text\\\" title=\\\"4\\\" value=\\\"\\\" leipiplugins=\\\"text\\\" orghide=\\\"0\\\" orgalign=\\\"left\\\" orgwidth=\\\"80\\\" orgtype=\\\"text\\\" style=\\\"text-align: left; width: 80px;\\\"\\/>\\\";}i:14;a:10:{s:5:\\\"title\\\";s:12:\\\"\\u9886\\u5bfc\\u5ba1\\u6279\\\";s:4:\\\"name\\\";s:7:\\\"data_10\\\";s:12:\\\"leipiplugins\\\";s:8:\\\"textarea\\\";s:5:\\\"value\\\";s:0:\\\"\\\";s:7:\\\"orgrich\\\";s:1:\\\"0\\\";s:11:\\\"orgfontsize\\\";s:0:\\\"\\\";s:8:\\\"orgwidth\\\";s:3:\\\"300\\\";s:9:\\\"orgheight\\\";s:2:\\\"80\\\";s:5:\\\"style\\\";s:24:\\\"width:300px;height:80px;\\\";s:7:\\\"content\\\";s:180:\\\"<textarea title=\\\"\\u9886\\u5bfc\\u5ba1\\u6279\\\" name=\\\"data_10\\\" leipiplugins=\\\"textarea\\\" value=\\\"\\\" orgrich=\\\"0\\\" orgfontsize=\\\"\\\" orgwidth=\\\"300\\\" orgheight=\\\"80\\\" style=\\\"width:300px;height:80px;\\\"><\\/textarea>\\\";}i:15;a:11:{s:4:\\\"name\\\";s:7:\\\"data_11\\\";s:4:\\\"type\\\";s:4:\\\"text\\\";s:5:\\\"title\\\";s:1:\\\"5\\\";s:5:\\\"value\\\";s:0:\\\"\\\";s:12:\\\"leipiplugins\\\";s:4:\\\"text\\\";s:7:\\\"orghide\\\";s:1:\\\"0\\\";s:8:\\\"orgalign\\\";s:4:\\\"left\\\";s:8:\\\"orgwidth\\\";s:3:\\\"150\\\";s:7:\\\"orgtype\\\";s:4:\\\"text\\\";s:5:\\\"style\\\";s:31:\\\"text-align: left; width: 150px;\\\";s:7:\\\"content\\\";s:172:\\\"<input name=\\\"data_11\\\" type=\\\"text\\\" title=\\\"5\\\" value=\\\"\\\" leipiplugins=\\\"text\\\" orghide=\\\"0\\\" orgalign=\\\"left\\\" orgwidth=\\\"150\\\" orgtype=\\\"text\\\" style=\\\"text-align: left; width: 150px;\\\"\\/>\\\";}i:16;a:11:{s:4:\\\"name\\\";s:7:\\\"data_12\\\";s:4:\\\"type\\\";s:4:\\\"text\\\";s:5:\\\"title\\\";s:1:\\\"5\\\";s:5:\\\"value\\\";s:0:\\\"\\\";s:12:\\\"leipiplugins\\\";s:4:\\\"text\\\";s:7:\\\"orghide\\\";s:1:\\\"0\\\";s:8:\\\"orgalign\\\";s:4:\\\"left\\\";s:8:\\\"orgwidth\\\";s:2:\\\"80\\\";s:7:\\\"orgtype\\\";s:4:\\\"text\\\";s:5:\\\"style\\\";s:30:\\\"text-align: left; width: 80px;\\\";s:7:\\\"content\\\";s:170:\\\"<input name=\\\"data_12\\\" type=\\\"text\\\" title=\\\"5\\\" value=\\\"\\\" leipiplugins=\\\"text\\\" orghide=\\\"0\\\" orgalign=\\\"left\\\" orgwidth=\\\"80\\\" orgtype=\\\"text\\\" style=\\\"text-align: left; width: 80px;\\\"\\/>\\\";}i:17;a:11:{s:4:\\\"name\\\";s:7:\\\"data_13\\\";s:4:\\\"type\\\";s:4:\\\"text\\\";s:5:\\\"title\\\";s:1:\\\"6\\\";s:5:\\\"value\\\";s:0:\\\"\\\";s:12:\\\"leipiplugins\\\";s:4:\\\"text\\\";s:7:\\\"orghide\\\";s:1:\\\"0\\\";s:8:\\\"orgalign\\\";s:4:\\\"left\\\";s:8:\\\"orgwidth\\\";s:2:\\\"80\\\";s:7:\\\"orgtype\\\";s:4:\\\"text\\\";s:5:\\\"style\\\";s:30:\\\"text-align: left; width: 80px;\\\";s:7:\\\"content\\\";s:170:\\\"<input name=\\\"data_13\\\" type=\\\"text\\\" title=\\\"6\\\" value=\\\"\\\" leipiplugins=\\\"text\\\" orghide=\\\"0\\\" orgalign=\\\"left\\\" orgwidth=\\\"80\\\" orgtype=\\\"text\\\" style=\\\"text-align: left; width: 80px;\\\"\\/>\\\";}}\",\"fields\":\"18\",\"is_del\":\"0\",\"updatetime\":\"1443084939\",\"dateline\":\"1443079222\",\"pid\":\"612\",\"type\":\"0\",\"is_data_form\":\"0\",\"creater_uid\":\"141\",\"sort\":\"0\"}','{\"id\":\"24\",\"cat_id\":\"0\",\"form_id\":\"746\",\"flow_type\":\"0\",\"flow_name\":\"\\u62a5\\u9500\\u5355\",\"flow_desc\":\"\",\"sort_order\":\"0\",\"status\":\"0\",\"is_del\":\"0\",\"updatetime\":\"1443083812\",\"dateline\":\"1443083812\"}','[{\"id\":\"143\",\"flow_id\":\"24\",\"process_name\":\"\\u586b\\u5355\\u4eba\",\"process_type\":\"is_one\",\"process_to\":\"144\",\"child_id\":\"0\",\"child_relation\":\"\",\"child_after\":\"1\",\"child_back_process\":\"0\",\"return_sponsor_ids\":\"\",\"return_respon_ids\":\"\",\"write_fields\":\"data_15,data_14,data_1,data_2,data_3,data_4,data_5,data_6,data_7,data_8,data_9,data_10,data_11,data_12,data_13\",\"secret_fields\":\"\",\"lock_fields\":\"\",\"check_fields\":\"\",\"auto_person\":\"0\",\"auto_unlock\":\"0\",\"auto_sponsor_ids\":\"141\",\"auto_sponsor_text\":\"\",\"auto_respon_ids\":\"\",\"auto_respon_text\":\"\",\"auto_role_ids\":\"\",\"auto_role_text\":\"\",\"auto_process_sponsor\":\"0\",\"range_user_ids\":\"\",\"range_user_text\":\"\",\"range_dept_ids\":\"\",\"range_dept_text\":\"\",\"range_role_ids\":\"\",\"range_role_text\":\"\",\"receive_type\":\"0\",\"is_user_end\":\"0\",\"is_userop_pass\":\"0\",\"is_sing\":\"1\",\"sign_look\":\"1\",\"is_back\":\"1\",\"out_condition\":\"[]\",\"setleft\":\"125\",\"settop\":\"66\",\"style\":\"{\\\"width\\\":120,\\\"height\\\":30,\\\"color\\\":\\\"#0e76a8\\\",\\\"icon\\\":\\\"icon-star\\\"}\"},{\"id\":\"144\",\"flow_id\":\"24\",\"process_name\":\"\\u8be5\\u90e8\\u95e8\\u8d1f\\u8d23\\u4eba\\u5ba1\\u6838\",\"process_type\":\"is_step\",\"process_to\":\"145\",\"child_id\":\"0\",\"child_relation\":\"\",\"child_after\":\"1\",\"child_back_process\":\"0\",\"return_sponsor_ids\":\"\",\"return_respon_ids\":\"\",\"write_fields\":\"data_15,data_14,data_1,data_2,data_3,data_4,data_5,data_6,data_7,data_8,data_9,data_10,data_11,data_12,data_13\",\"secret_fields\":\"\",\"lock_fields\":\"\",\"check_fields\":\"\",\"auto_person\":\"0\",\"auto_unlock\":\"0\",\"auto_sponsor_ids\":\"141\",\"auto_sponsor_text\":\"\",\"auto_respon_ids\":\"\",\"auto_respon_text\":\"\",\"auto_role_ids\":\"\",\"auto_role_text\":\"\",\"auto_process_sponsor\":\"0\",\"range_user_ids\":\"\",\"range_user_text\":\"\",\"range_dept_ids\":\"\",\"range_dept_text\":\"\",\"range_role_ids\":\"\",\"range_role_text\":\"\",\"receive_type\":\"0\",\"is_user_end\":\"0\",\"is_userop_pass\":\"0\",\"is_sing\":\"1\",\"sign_look\":\"1\",\"is_back\":\"1\",\"out_condition\":\"[]\",\"setleft\":\"134\",\"settop\":\"164\",\"style\":\"{\\\"width\\\":120,\\\"height\\\":30,\\\"color\\\":\\\"#0e76a8\\\",\\\"icon\\\":\\\"icon-star\\\"}\"},{\"id\":\"145\",\"flow_id\":\"24\",\"process_name\":\"\\u8d22\\u52a1\\u590d\\u6838\",\"process_type\":\"is_step\",\"process_to\":\"146\",\"child_id\":\"0\",\"child_relation\":\"\",\"child_after\":\"1\",\"child_back_process\":\"0\",\"return_sponsor_ids\":\"\",\"return_respon_ids\":\"\",\"write_fields\":\"data_15,data_14,data_1,data_2,data_3,data_4,data_5,data_6,data_7,data_8,data_9,data_10,data_11,data_12,data_13\",\"secret_fields\":\"\",\"lock_fields\":\"\",\"check_fields\":\"\",\"auto_person\":\"0\",\"auto_unlock\":\"0\",\"auto_sponsor_ids\":\"141\",\"auto_sponsor_text\":\"\",\"auto_respon_ids\":\"\",\"auto_respon_text\":\"\",\"auto_role_ids\":\"\",\"auto_role_text\":\"\",\"auto_process_sponsor\":\"0\",\"range_user_ids\":\"\",\"range_user_text\":\"\",\"range_dept_ids\":\"\",\"range_dept_text\":\"\",\"range_role_ids\":\"\",\"range_role_text\":\"\",\"receive_type\":\"0\",\"is_user_end\":\"0\",\"is_userop_pass\":\"0\",\"is_sing\":\"1\",\"sign_look\":\"1\",\"is_back\":\"1\",\"out_condition\":\"[]\",\"setleft\":\"171\",\"settop\":\"273\",\"style\":\"{\\\"width\\\":120,\\\"height\\\":30,\\\"color\\\":\\\"#0e76a8\\\",\\\"icon\\\":\\\"icon-star\\\"}\"},{\"id\":\"146\",\"flow_id\":\"24\",\"process_name\":\"\\u9886\\u5bfc\\u5ba1\\u6279\",\"process_type\":\"is_step\",\"process_to\":\"\",\"child_id\":\"0\",\"child_relation\":\"\",\"child_after\":\"1\",\"child_back_process\":\"0\",\"return_sponsor_ids\":\"\",\"return_respon_ids\":\"\",\"write_fields\":\"data_15,data_14,data_1,data_2,data_3,data_4,data_5,data_6,data_7,data_8,data_9,data_10,data_11,data_12,data_13\",\"secret_fields\":\"\",\"lock_fields\":\"\",\"check_fields\":\"\",\"auto_person\":\"0\",\"auto_unlock\":\"0\",\"auto_sponsor_ids\":\"141\",\"auto_sponsor_text\":\"\",\"auto_respon_ids\":\"\",\"auto_respon_text\":\"\",\"auto_role_ids\":\"\",\"auto_role_text\":\"\",\"auto_process_sponsor\":\"0\",\"range_user_ids\":\"\",\"range_user_text\":\"\",\"range_dept_ids\":\"\",\"range_dept_text\":\"\",\"range_role_ids\":\"\",\"range_role_text\":\"\",\"receive_type\":\"0\",\"is_user_end\":\"0\",\"is_userop_pass\":\"0\",\"is_sing\":\"1\",\"sign_look\":\"1\",\"is_back\":\"1\",\"out_condition\":\"[]\",\"setleft\":\"224\",\"settop\":\"392\",\"style\":\"{\\\"width\\\":120,\\\"height\\\":30,\\\"color\\\":\\\"#0e76a8\\\",\\\"icon\\\":\\\"icon-star\\\"}\"}]','1443146842') [ RunTime:0.0011s ]
+
+[ 2015-09-25T10:07:22+08:00 ] 113.94.76.238 /s/tp/wwwroot/index.php?s=/Flow/run/edit/process_id/2555.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000237s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000305s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000342s ]
+SQL: SHOW COLUMNS FROM `ht_run_process` [ RunTime:0.0010s ]
+SQL: SELECT `id`,`uid`,`run_id`,`run_flow`,`run_flow_process`,`parent_flow`,`parent_flow_process`,`run_child`,`remark`,`is_receive_type`,`is_sponsor`,`is_singpost`,`is_back`,`status`,`js_time`,`bl_time`,`jj_time` FROM `ht_run_process` WHERE `id` = 2555 AND `is_del` = 0 LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `ht_run` [ RunTime:0.0007s ]
+SQL: SELECT * FROM `ht_run` WHERE `id` = 1626 LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `ht_run_cache` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `ht_run_cache` WHERE `run_id` = 1626 LIMIT 1   [ RunTime:0.0003s ]
+NOTIC: [8] Undefined variable: form_data /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 221 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000048s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000087s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.005480s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.005517s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000080s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000113s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000316s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000357s ]
+
+[ 2015-09-25T11:05:26+08:00 ] 14.208.189.237 /s/tp/wwwroot/index.php?s=/Flow/demo/index/getflow/ok.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000227s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000298s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000333s ]
+SQL: SHOW COLUMNS FROM `ht_flow` [ RunTime:0.0010s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `ht_flow` WHERE `is_del` = 0 LIMIT 1   [ RunTime:0.0002s ]
+NOTIC: [8] Undefined variable: p /var/www/dzxt/s/tp/Application/Flow/Controller/DemoController.class.php 第 22 行.
+NOTIC: [8] Trying to get property of non-object /var/www/dzxt/s/tp/Application/Flow/Controller/DemoController.class.php 第 22 行.
+NOTIC: [8] Undefined variable: p /var/www/dzxt/s/tp/Application/Flow/Controller/DemoController.class.php 第 22 行.
+NOTIC: [8] Trying to get property of non-object /var/www/dzxt/s/tp/Application/Flow/Controller/DemoController.class.php 第 22 行.
+SQL: SELECT `id`,`form_id`,`flow_name`,`flow_desc`,`updatetime`,`dateline` FROM `ht_flow` WHERE `is_del` = 0 ORDER BY id desc  [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `ht_form` [ RunTime:0.0006s ]
+SQL: SELECT * FROM `ht_form` WHERE ( 1=1 AND id='746' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `ht_form` WHERE ( 1=1 AND id='730' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `ht_form` WHERE ( 1=1 AND id='635' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `ht_form` WHERE ( 1=1 AND id='587' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `ht_form` WHERE ( 1=1 AND id='266' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `ht_form` WHERE ( 1=1 AND id='328' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `ht_form` WHERE ( 1=1 AND id='329' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `ht_form` WHERE ( 1=1 AND id='128' ) LIMIT 1   [ RunTime:0.0001s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000338s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000372s ]
+
+[ 2015-09-25T16:42:29+08:00 ] 14.208.192.136 /s/tp/wwwroot/index.php?s=/Flow/demo/index/getflow/ok.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000083s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000038s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000070s ]
+SQL: SHOW COLUMNS FROM `ht_flow` [ RunTime:0.0010s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `ht_flow` WHERE `is_del` = 0 LIMIT 1   [ RunTime:0.0001s ]
+NOTIC: [8] Undefined variable: p /var/www/dzxt/s/tp/Application/Flow/Controller/DemoController.class.php 第 22 行.
+NOTIC: [8] Trying to get property of non-object /var/www/dzxt/s/tp/Application/Flow/Controller/DemoController.class.php 第 22 行.
+NOTIC: [8] Undefined variable: p /var/www/dzxt/s/tp/Application/Flow/Controller/DemoController.class.php 第 22 行.
+NOTIC: [8] Trying to get property of non-object /var/www/dzxt/s/tp/Application/Flow/Controller/DemoController.class.php 第 22 行.
+SQL: SELECT `id`,`form_id`,`flow_name`,`flow_desc`,`updatetime`,`dateline` FROM `ht_flow` WHERE `is_del` = 0 ORDER BY id desc  [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `ht_form` [ RunTime:0.0006s ]
+SQL: SELECT * FROM `ht_form` WHERE ( 1=1 AND id='746' ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `ht_form` WHERE ( 1=1 AND id='730' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `ht_form` WHERE ( 1=1 AND id='635' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `ht_form` WHERE ( 1=1 AND id='587' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `ht_form` WHERE ( 1=1 AND id='266' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `ht_form` WHERE ( 1=1 AND id='328' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `ht_form` WHERE ( 1=1 AND id='329' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `ht_form` WHERE ( 1=1 AND id='128' ) LIMIT 1   [ RunTime:0.0001s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000044s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000076s ]
+
+[ 2015-09-25T16:42:34+08:00 ] 14.208.192.136 /s/tp/wwwroot/index.php?s=/Flow/demo/add.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000080s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000036s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000069s ]
+SQL: SHOW COLUMNS FROM `ht_form` [ RunTime:0.0010s ]
+SQL: SELECT `id`,`form_name` FROM `ht_form` WHERE `is_del` = 0 AND `type` = 0  [ RunTime:0.0008s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000042s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000083s ]
+NOTIC: [8] Undefined index: id /var/www/dzxt/s/tp/Application/Runtime/Cache/Flow/a5362bfbceb71b7680a3db5baedbd843.php 第 38 行.
+NOTIC: [8] Undefined index: flow_name /var/www/dzxt/s/tp/Application/Runtime/Cache/Flow/a5362bfbceb71b7680a3db5baedbd843.php 第 43 行.
+NOTIC: [8] Undefined index: form_id /var/www/dzxt/s/tp/Application/Runtime/Cache/Flow/a5362bfbceb71b7680a3db5baedbd843.php 第 49 行.
+NOTIC: [8] Undefined index: form_id /var/www/dzxt/s/tp/Application/Runtime/Cache/Flow/a5362bfbceb71b7680a3db5baedbd843.php 第 49 行.
+NOTIC: [8] Undefined index: form_id /var/www/dzxt/s/tp/Application/Runtime/Cache/Flow/a5362bfbceb71b7680a3db5baedbd843.php 第 49 行.
+NOTIC: [8] Undefined index: form_id /var/www/dzxt/s/tp/Application/Runtime/Cache/Flow/a5362bfbceb71b7680a3db5baedbd843.php 第 49 行.
+NOTIC: [8] Undefined index: form_id /var/www/dzxt/s/tp/Application/Runtime/Cache/Flow/a5362bfbceb71b7680a3db5baedbd843.php 第 49 行.
+NOTIC: [8] Undefined index: form_id /var/www/dzxt/s/tp/Application/Runtime/Cache/Flow/a5362bfbceb71b7680a3db5baedbd843.php 第 49 行.
+NOTIC: [8] Undefined index: form_id /var/www/dzxt/s/tp/Application/Runtime/Cache/Flow/a5362bfbceb71b7680a3db5baedbd843.php 第 49 行.
+NOTIC: [8] Undefined index: form_id /var/www/dzxt/s/tp/Application/Runtime/Cache/Flow/a5362bfbceb71b7680a3db5baedbd843.php 第 49 行.
+NOTIC: [8] Undefined index: form_id /var/www/dzxt/s/tp/Application/Runtime/Cache/Flow/a5362bfbceb71b7680a3db5baedbd843.php 第 49 行.
+NOTIC: [8] Undefined index: form_id /var/www/dzxt/s/tp/Application/Runtime/Cache/Flow/a5362bfbceb71b7680a3db5baedbd843.php 第 49 行.
+NOTIC: [8] Undefined index: form_id /var/www/dzxt/s/tp/Application/Runtime/Cache/Flow/a5362bfbceb71b7680a3db5baedbd843.php 第 49 行.
+NOTIC: [8] Undefined index: form_id /var/www/dzxt/s/tp/Application/Runtime/Cache/Flow/a5362bfbceb71b7680a3db5baedbd843.php 第 49 行.
+NOTIC: [8] Undefined index: form_id /var/www/dzxt/s/tp/Application/Runtime/Cache/Flow/a5362bfbceb71b7680a3db5baedbd843.php 第 49 行.
+NOTIC: [8] Undefined index: form_id /var/www/dzxt/s/tp/Application/Runtime/Cache/Flow/a5362bfbceb71b7680a3db5baedbd843.php 第 49 行.
+NOTIC: [8] Undefined index: form_id /var/www/dzxt/s/tp/Application/Runtime/Cache/Flow/a5362bfbceb71b7680a3db5baedbd843.php 第 49 行.
+NOTIC: [8] Undefined index: form_id /var/www/dzxt/s/tp/Application/Runtime/Cache/Flow/a5362bfbceb71b7680a3db5baedbd843.php 第 49 行.
+NOTIC: [8] Undefined index: form_id /var/www/dzxt/s/tp/Application/Runtime/Cache/Flow/a5362bfbceb71b7680a3db5baedbd843.php 第 49 行.
+NOTIC: [8] Undefined index: form_id /var/www/dzxt/s/tp/Application/Runtime/Cache/Flow/a5362bfbceb71b7680a3db5baedbd843.php 第 49 行.
+NOTIC: [8] Undefined index: form_id /var/www/dzxt/s/tp/Application/Runtime/Cache/Flow/a5362bfbceb71b7680a3db5baedbd843.php 第 49 行.
+NOTIC: [8] Undefined index: form_id /var/www/dzxt/s/tp/Application/Runtime/Cache/Flow/a5362bfbceb71b7680a3db5baedbd843.php 第 49 行.
+NOTIC: [8] Undefined index: form_id /var/www/dzxt/s/tp/Application/Runtime/Cache/Flow/a5362bfbceb71b7680a3db5baedbd843.php 第 49 行.
+NOTIC: [8] Undefined index: form_id /var/www/dzxt/s/tp/Application/Runtime/Cache/Flow/a5362bfbceb71b7680a3db5baedbd843.php 第 49 行.
+NOTIC: [8] Undefined index: form_id /var/www/dzxt/s/tp/Application/Runtime/Cache/Flow/a5362bfbceb71b7680a3db5baedbd843.php 第 49 行.
+NOTIC: [8] Undefined index: form_id /var/www/dzxt/s/tp/Application/Runtime/Cache/Flow/a5362bfbceb71b7680a3db5baedbd843.php 第 49 行.
+NOTIC: [8] Undefined index: form_id /var/www/dzxt/s/tp/Application/Runtime/Cache/Flow/a5362bfbceb71b7680a3db5baedbd843.php 第 49 行.
+NOTIC: [8] Undefined index: form_id /var/www/dzxt/s/tp/Application/Runtime/Cache/Flow/a5362bfbceb71b7680a3db5baedbd843.php 第 49 行.
+NOTIC: [8] Undefined index: form_id /var/www/dzxt/s/tp/Application/Runtime/Cache/Flow/a5362bfbceb71b7680a3db5baedbd843.php 第 49 行.
+NOTIC: [8] Undefined index: form_id /var/www/dzxt/s/tp/Application/Runtime/Cache/Flow/a5362bfbceb71b7680a3db5baedbd843.php 第 49 行.
+NOTIC: [8] Undefined index: form_id /var/www/dzxt/s/tp/Application/Runtime/Cache/Flow/a5362bfbceb71b7680a3db5baedbd843.php 第 49 行.
+NOTIC: [8] Undefined index: form_id /var/www/dzxt/s/tp/Application/Runtime/Cache/Flow/a5362bfbceb71b7680a3db5baedbd843.php 第 49 行.
+NOTIC: [8] Undefined index: form_id /var/www/dzxt/s/tp/Application/Runtime/Cache/Flow/a5362bfbceb71b7680a3db5baedbd843.php 第 49 行.
+NOTIC: [8] Undefined index: form_id /var/www/dzxt/s/tp/Application/Runtime/Cache/Flow/a5362bfbceb71b7680a3db5baedbd843.php 第 49 行.
+NOTIC: [8] Undefined index: form_id /var/www/dzxt/s/tp/Application/Runtime/Cache/Flow/a5362bfbceb71b7680a3db5baedbd843.php 第 49 行.
+NOTIC: [8] Undefined index: form_id /var/www/dzxt/s/tp/Application/Runtime/Cache/Flow/a5362bfbceb71b7680a3db5baedbd843.php 第 49 行.
+NOTIC: [8] Undefined index: form_id /var/www/dzxt/s/tp/Application/Runtime/Cache/Flow/a5362bfbceb71b7680a3db5baedbd843.php 第 49 行.
+NOTIC: [8] Undefined index: form_id /var/www/dzxt/s/tp/Application/Runtime/Cache/Flow/a5362bfbceb71b7680a3db5baedbd843.php 第 49 行.
+NOTIC: [8] Undefined index: form_id /var/www/dzxt/s/tp/Application/Runtime/Cache/Flow/a5362bfbceb71b7680a3db5baedbd843.php 第 49 行.
+NOTIC: [8] Undefined index: form_id /var/www/dzxt/s/tp/Application/Runtime/Cache/Flow/a5362bfbceb71b7680a3db5baedbd843.php 第 49 行.
+NOTIC: [8] Undefined index: form_id /var/www/dzxt/s/tp/Application/Runtime/Cache/Flow/a5362bfbceb71b7680a3db5baedbd843.php 第 49 行.
+NOTIC: [8] Undefined index: form_id /var/www/dzxt/s/tp/Application/Runtime/Cache/Flow/a5362bfbceb71b7680a3db5baedbd843.php 第 49 行.
+NOTIC: [8] Undefined index: form_id /var/www/dzxt/s/tp/Application/Runtime/Cache/Flow/a5362bfbceb71b7680a3db5baedbd843.php 第 49 行.
+NOTIC: [8] Undefined index: form_id /var/www/dzxt/s/tp/Application/Runtime/Cache/Flow/a5362bfbceb71b7680a3db5baedbd843.php 第 49 行.
+NOTIC: [8] Undefined index: form_id /var/www/dzxt/s/tp/Application/Runtime/Cache/Flow/a5362bfbceb71b7680a3db5baedbd843.php 第 49 行.
+NOTIC: [8] Undefined index: form_id /var/www/dzxt/s/tp/Application/Runtime/Cache/Flow/a5362bfbceb71b7680a3db5baedbd843.php 第 49 行.
+NOTIC: [8] Undefined index: form_id /var/www/dzxt/s/tp/Application/Runtime/Cache/Flow/a5362bfbceb71b7680a3db5baedbd843.php 第 49 行.
+NOTIC: [8] Undefined index: form_id /var/www/dzxt/s/tp/Application/Runtime/Cache/Flow/a5362bfbceb71b7680a3db5baedbd843.php 第 49 行.
+NOTIC: [8] Undefined index: form_id /var/www/dzxt/s/tp/Application/Runtime/Cache/Flow/a5362bfbceb71b7680a3db5baedbd843.php 第 49 行.
+NOTIC: [8] Undefined index: form_id /var/www/dzxt/s/tp/Application/Runtime/Cache/Flow/a5362bfbceb71b7680a3db5baedbd843.php 第 49 行.
+NOTIC: [8] Undefined index: form_id /var/www/dzxt/s/tp/Application/Runtime/Cache/Flow/a5362bfbceb71b7680a3db5baedbd843.php 第 49 行.
+NOTIC: [8] Undefined index: form_id /var/www/dzxt/s/tp/Application/Runtime/Cache/Flow/a5362bfbceb71b7680a3db5baedbd843.php 第 49 行.
+NOTIC: [8] Undefined index: form_id /var/www/dzxt/s/tp/Application/Runtime/Cache/Flow/a5362bfbceb71b7680a3db5baedbd843.php 第 49 行.
+NOTIC: [8] Undefined index: form_id /var/www/dzxt/s/tp/Application/Runtime/Cache/Flow/a5362bfbceb71b7680a3db5baedbd843.php 第 49 行.
+NOTIC: [8] Undefined index: form_id /var/www/dzxt/s/tp/Application/Runtime/Cache/Flow/a5362bfbceb71b7680a3db5baedbd843.php 第 49 行.
+NOTIC: [8] Undefined index: form_id /var/www/dzxt/s/tp/Application/Runtime/Cache/Flow/a5362bfbceb71b7680a3db5baedbd843.php 第 49 行.
+NOTIC: [8] Undefined index: form_id /var/www/dzxt/s/tp/Application/Runtime/Cache/Flow/a5362bfbceb71b7680a3db5baedbd843.php 第 49 行.
+NOTIC: [8] Undefined index: form_id /var/www/dzxt/s/tp/Application/Runtime/Cache/Flow/a5362bfbceb71b7680a3db5baedbd843.php 第 49 行.
+NOTIC: [8] Undefined index: form_id /var/www/dzxt/s/tp/Application/Runtime/Cache/Flow/a5362bfbceb71b7680a3db5baedbd843.php 第 49 行.
+NOTIC: [8] Undefined index: form_id /var/www/dzxt/s/tp/Application/Runtime/Cache/Flow/a5362bfbceb71b7680a3db5baedbd843.php 第 49 行.
+NOTIC: [8] Undefined index: form_id /var/www/dzxt/s/tp/Application/Runtime/Cache/Flow/a5362bfbceb71b7680a3db5baedbd843.php 第 49 行.
+NOTIC: [8] Undefined index: form_id /var/www/dzxt/s/tp/Application/Runtime/Cache/Flow/a5362bfbceb71b7680a3db5baedbd843.php 第 49 行.
+NOTIC: [8] Undefined index: form_id /var/www/dzxt/s/tp/Application/Runtime/Cache/Flow/a5362bfbceb71b7680a3db5baedbd843.php 第 49 行.
+NOTIC: [8] Undefined index: form_id /var/www/dzxt/s/tp/Application/Runtime/Cache/Flow/a5362bfbceb71b7680a3db5baedbd843.php 第 49 行.
+NOTIC: [8] Undefined index: form_id /var/www/dzxt/s/tp/Application/Runtime/Cache/Flow/a5362bfbceb71b7680a3db5baedbd843.php 第 49 行.
+NOTIC: [8] Undefined index: form_id /var/www/dzxt/s/tp/Application/Runtime/Cache/Flow/a5362bfbceb71b7680a3db5baedbd843.php 第 49 行.
+NOTIC: [8] Undefined index: form_id /var/www/dzxt/s/tp/Application/Runtime/Cache/Flow/a5362bfbceb71b7680a3db5baedbd843.php 第 49 行.
+NOTIC: [8] Undefined index: form_id /var/www/dzxt/s/tp/Application/Runtime/Cache/Flow/a5362bfbceb71b7680a3db5baedbd843.php 第 49 行.
+NOTIC: [8] Undefined index: form_id /var/www/dzxt/s/tp/Application/Runtime/Cache/Flow/a5362bfbceb71b7680a3db5baedbd843.php 第 49 行.
+NOTIC: [8] Undefined index: form_id /var/www/dzxt/s/tp/Application/Runtime/Cache/Flow/a5362bfbceb71b7680a3db5baedbd843.php 第 49 行.
+NOTIC: [8] Undefined index: form_id /var/www/dzxt/s/tp/Application/Runtime/Cache/Flow/a5362bfbceb71b7680a3db5baedbd843.php 第 49 行.
+NOTIC: [8] Undefined index: form_id /var/www/dzxt/s/tp/Application/Runtime/Cache/Flow/a5362bfbceb71b7680a3db5baedbd843.php 第 49 行.
+NOTIC: [8] Undefined index: form_id /var/www/dzxt/s/tp/Application/Runtime/Cache/Flow/a5362bfbceb71b7680a3db5baedbd843.php 第 49 行.
+NOTIC: [8] Undefined index: form_id /var/www/dzxt/s/tp/Application/Runtime/Cache/Flow/a5362bfbceb71b7680a3db5baedbd843.php 第 49 行.
+NOTIC: [8] Undefined index: form_id /var/www/dzxt/s/tp/Application/Runtime/Cache/Flow/a5362bfbceb71b7680a3db5baedbd843.php 第 49 行.
+NOTIC: [8] Undefined index: form_id /var/www/dzxt/s/tp/Application/Runtime/Cache/Flow/a5362bfbceb71b7680a3db5baedbd843.php 第 49 行.
+NOTIC: [8] Undefined index: form_id /var/www/dzxt/s/tp/Application/Runtime/Cache/Flow/a5362bfbceb71b7680a3db5baedbd843.php 第 49 行.
+NOTIC: [8] Undefined index: form_id /var/www/dzxt/s/tp/Application/Runtime/Cache/Flow/a5362bfbceb71b7680a3db5baedbd843.php 第 49 行.
+NOTIC: [8] Undefined index: form_id /var/www/dzxt/s/tp/Application/Runtime/Cache/Flow/a5362bfbceb71b7680a3db5baedbd843.php 第 49 行.
+NOTIC: [8] Undefined index: form_id /var/www/dzxt/s/tp/Application/Runtime/Cache/Flow/a5362bfbceb71b7680a3db5baedbd843.php 第 49 行.
+NOTIC: [8] Undefined index: form_id /var/www/dzxt/s/tp/Application/Runtime/Cache/Flow/a5362bfbceb71b7680a3db5baedbd843.php 第 49 行.
+NOTIC: [8] Undefined index: form_id /var/www/dzxt/s/tp/Application/Runtime/Cache/Flow/a5362bfbceb71b7680a3db5baedbd843.php 第 49 行.
+NOTIC: [8] Undefined index: form_id /var/www/dzxt/s/tp/Application/Runtime/Cache/Flow/a5362bfbceb71b7680a3db5baedbd843.php 第 49 行.
+NOTIC: [8] Undefined index: form_id /var/www/dzxt/s/tp/Application/Runtime/Cache/Flow/a5362bfbceb71b7680a3db5baedbd843.php 第 49 行.
+NOTIC: [8] Undefined index: form_id /var/www/dzxt/s/tp/Application/Runtime/Cache/Flow/a5362bfbceb71b7680a3db5baedbd843.php 第 49 行.
+NOTIC: [8] Undefined index: form_id /var/www/dzxt/s/tp/Application/Runtime/Cache/Flow/a5362bfbceb71b7680a3db5baedbd843.php 第 49 行.
+NOTIC: [8] Undefined index: form_id /var/www/dzxt/s/tp/Application/Runtime/Cache/Flow/a5362bfbceb71b7680a3db5baedbd843.php 第 49 行.
+NOTIC: [8] Undefined index: form_id /var/www/dzxt/s/tp/Application/Runtime/Cache/Flow/a5362bfbceb71b7680a3db5baedbd843.php 第 49 行.
+NOTIC: [8] Undefined index: form_id /var/www/dzxt/s/tp/Application/Runtime/Cache/Flow/a5362bfbceb71b7680a3db5baedbd843.php 第 49 行.
+NOTIC: [8] Undefined index: form_id /var/www/dzxt/s/tp/Application/Runtime/Cache/Flow/a5362bfbceb71b7680a3db5baedbd843.php 第 49 行.
+NOTIC: [8] Undefined index: form_id /var/www/dzxt/s/tp/Application/Runtime/Cache/Flow/a5362bfbceb71b7680a3db5baedbd843.php 第 49 行.
+NOTIC: [8] Undefined index: form_id /var/www/dzxt/s/tp/Application/Runtime/Cache/Flow/a5362bfbceb71b7680a3db5baedbd843.php 第 49 行.
+NOTIC: [8] Undefined index: form_id /var/www/dzxt/s/tp/Application/Runtime/Cache/Flow/a5362bfbceb71b7680a3db5baedbd843.php 第 49 行.
+NOTIC: [8] Undefined index: form_id /var/www/dzxt/s/tp/Application/Runtime/Cache/Flow/a5362bfbceb71b7680a3db5baedbd843.php 第 49 行.
+NOTIC: [8] Undefined index: form_id /var/www/dzxt/s/tp/Application/Runtime/Cache/Flow/a5362bfbceb71b7680a3db5baedbd843.php 第 49 行.
+NOTIC: [8] Undefined index: form_id /var/www/dzxt/s/tp/Application/Runtime/Cache/Flow/a5362bfbceb71b7680a3db5baedbd843.php 第 49 行.
+NOTIC: [8] Undefined index: form_id /var/www/dzxt/s/tp/Application/Runtime/Cache/Flow/a5362bfbceb71b7680a3db5baedbd843.php 第 49 行.
+NOTIC: [8] Undefined index: form_id /var/www/dzxt/s/tp/Application/Runtime/Cache/Flow/a5362bfbceb71b7680a3db5baedbd843.php 第 49 行.
+NOTIC: [8] Undefined index: form_id /var/www/dzxt/s/tp/Application/Runtime/Cache/Flow/a5362bfbceb71b7680a3db5baedbd843.php 第 49 行.
+NOTIC: [8] Undefined index: form_id /var/www/dzxt/s/tp/Application/Runtime/Cache/Flow/a5362bfbceb71b7680a3db5baedbd843.php 第 49 行.
+NOTIC: [8] Undefined index: form_id /var/www/dzxt/s/tp/Application/Runtime/Cache/Flow/a5362bfbceb71b7680a3db5baedbd843.php 第 49 行.
+NOTIC: [8] Undefined index: form_id /var/www/dzxt/s/tp/Application/Runtime/Cache/Flow/a5362bfbceb71b7680a3db5baedbd843.php 第 49 行.
+NOTIC: [8] Undefined index: form_id /var/www/dzxt/s/tp/Application/Runtime/Cache/Flow/a5362bfbceb71b7680a3db5baedbd843.php 第 49 行.
+NOTIC: [8] Undefined index: form_id /var/www/dzxt/s/tp/Application/Runtime/Cache/Flow/a5362bfbceb71b7680a3db5baedbd843.php 第 49 行.
+NOTIC: [8] Undefined index: form_id /var/www/dzxt/s/tp/Application/Runtime/Cache/Flow/a5362bfbceb71b7680a3db5baedbd843.php 第 49 行.
+NOTIC: [8] Undefined index: form_id /var/www/dzxt/s/tp/Application/Runtime/Cache/Flow/a5362bfbceb71b7680a3db5baedbd843.php 第 49 行.
+NOTIC: [8] Undefined index: form_id /var/www/dzxt/s/tp/Application/Runtime/Cache/Flow/a5362bfbceb71b7680a3db5baedbd843.php 第 49 行.
+NOTIC: [8] Undefined index: form_id /var/www/dzxt/s/tp/Application/Runtime/Cache/Flow/a5362bfbceb71b7680a3db5baedbd843.php 第 49 行.
+NOTIC: [8] Undefined index: form_id /var/www/dzxt/s/tp/Application/Runtime/Cache/Flow/a5362bfbceb71b7680a3db5baedbd843.php 第 49 行.
+NOTIC: [8] Undefined index: form_id /var/www/dzxt/s/tp/Application/Runtime/Cache/Flow/a5362bfbceb71b7680a3db5baedbd843.php 第 49 行.
+NOTIC: [8] Undefined index: form_id /var/www/dzxt/s/tp/Application/Runtime/Cache/Flow/a5362bfbceb71b7680a3db5baedbd843.php 第 49 行.
+NOTIC: [8] Undefined index: form_id /var/www/dzxt/s/tp/Application/Runtime/Cache/Flow/a5362bfbceb71b7680a3db5baedbd843.php 第 49 行.
+NOTIC: [8] Undefined index: form_id /var/www/dzxt/s/tp/Application/Runtime/Cache/Flow/a5362bfbceb71b7680a3db5baedbd843.php 第 49 行.
+NOTIC: [8] Undefined index: form_id /var/www/dzxt/s/tp/Application/Runtime/Cache/Flow/a5362bfbceb71b7680a3db5baedbd843.php 第 49 行.
+NOTIC: [8] Undefined index: form_id /var/www/dzxt/s/tp/Application/Runtime/Cache/Flow/a5362bfbceb71b7680a3db5baedbd843.php 第 49 行.
+NOTIC: [8] Undefined index: form_id /var/www/dzxt/s/tp/Application/Runtime/Cache/Flow/a5362bfbceb71b7680a3db5baedbd843.php 第 49 行.
+NOTIC: [8] Undefined index: form_id /var/www/dzxt/s/tp/Application/Runtime/Cache/Flow/a5362bfbceb71b7680a3db5baedbd843.php 第 49 行.
+NOTIC: [8] Undefined index: form_id /var/www/dzxt/s/tp/Application/Runtime/Cache/Flow/a5362bfbceb71b7680a3db5baedbd843.php 第 49 行.
+NOTIC: [8] Undefined index: form_id /var/www/dzxt/s/tp/Application/Runtime/Cache/Flow/a5362bfbceb71b7680a3db5baedbd843.php 第 49 行.
+NOTIC: [8] Undefined index: form_id /var/www/dzxt/s/tp/Application/Runtime/Cache/Flow/a5362bfbceb71b7680a3db5baedbd843.php 第 49 行.
+NOTIC: [8] Undefined index: form_id /var/www/dzxt/s/tp/Application/Runtime/Cache/Flow/a5362bfbceb71b7680a3db5baedbd843.php 第 49 行.
+NOTIC: [8] Undefined index: form_id /var/www/dzxt/s/tp/Application/Runtime/Cache/Flow/a5362bfbceb71b7680a3db5baedbd843.php 第 49 行.
+NOTIC: [8] Undefined index: form_id /var/www/dzxt/s/tp/Application/Runtime/Cache/Flow/a5362bfbceb71b7680a3db5baedbd843.php 第 49 行.
+NOTIC: [8] Undefined index: form_id /var/www/dzxt/s/tp/Application/Runtime/Cache/Flow/a5362bfbceb71b7680a3db5baedbd843.php 第 49 行.
+NOTIC: [8] Undefined index: form_id /var/www/dzxt/s/tp/Application/Runtime/Cache/Flow/a5362bfbceb71b7680a3db5baedbd843.php 第 49 行.
+NOTIC: [8] Undefined index: form_id /var/www/dzxt/s/tp/Application/Runtime/Cache/Flow/a5362bfbceb71b7680a3db5baedbd843.php 第 49 行.
+NOTIC: [8] Undefined index: form_id /var/www/dzxt/s/tp/Application/Runtime/Cache/Flow/a5362bfbceb71b7680a3db5baedbd843.php 第 49 行.
+NOTIC: [8] Undefined index: form_id /var/www/dzxt/s/tp/Application/Runtime/Cache/Flow/a5362bfbceb71b7680a3db5baedbd843.php 第 49 行.
+NOTIC: [8] Undefined index: form_id /var/www/dzxt/s/tp/Application/Runtime/Cache/Flow/a5362bfbceb71b7680a3db5baedbd843.php 第 49 行.
+NOTIC: [8] Undefined index: form_id /var/www/dzxt/s/tp/Application/Runtime/Cache/Flow/a5362bfbceb71b7680a3db5baedbd843.php 第 49 行.
+NOTIC: [8] Undefined index: form_id /var/www/dzxt/s/tp/Application/Runtime/Cache/Flow/a5362bfbceb71b7680a3db5baedbd843.php 第 49 行.
+NOTIC: [8] Undefined index: form_id /var/www/dzxt/s/tp/Application/Runtime/Cache/Flow/a5362bfbceb71b7680a3db5baedbd843.php 第 49 行.
+NOTIC: [8] Undefined index: form_id /var/www/dzxt/s/tp/Application/Runtime/Cache/Flow/a5362bfbceb71b7680a3db5baedbd843.php 第 49 行.
+NOTIC: [8] Undefined index: form_id /var/www/dzxt/s/tp/Application/Runtime/Cache/Flow/a5362bfbceb71b7680a3db5baedbd843.php 第 49 行.
+NOTIC: [8] Undefined index: form_id /var/www/dzxt/s/tp/Application/Runtime/Cache/Flow/a5362bfbceb71b7680a3db5baedbd843.php 第 49 行.
+NOTIC: [8] Undefined index: form_id /var/www/dzxt/s/tp/Application/Runtime/Cache/Flow/a5362bfbceb71b7680a3db5baedbd843.php 第 49 行.
+NOTIC: [8] Undefined index: form_id /var/www/dzxt/s/tp/Application/Runtime/Cache/Flow/a5362bfbceb71b7680a3db5baedbd843.php 第 49 行.
+NOTIC: [8] Undefined index: form_id /var/www/dzxt/s/tp/Application/Runtime/Cache/Flow/a5362bfbceb71b7680a3db5baedbd843.php 第 49 行.
+NOTIC: [8] Undefined index: form_id /var/www/dzxt/s/tp/Application/Runtime/Cache/Flow/a5362bfbceb71b7680a3db5baedbd843.php 第 49 行.
+NOTIC: [8] Undefined index: form_id /var/www/dzxt/s/tp/Application/Runtime/Cache/Flow/a5362bfbceb71b7680a3db5baedbd843.php 第 49 行.
+NOTIC: [8] Undefined index: form_id /var/www/dzxt/s/tp/Application/Runtime/Cache/Flow/a5362bfbceb71b7680a3db5baedbd843.php 第 49 行.
+NOTIC: [8] Undefined index: form_id /var/www/dzxt/s/tp/Application/Runtime/Cache/Flow/a5362bfbceb71b7680a3db5baedbd843.php 第 49 行.
+NOTIC: [8] Undefined index: form_id /var/www/dzxt/s/tp/Application/Runtime/Cache/Flow/a5362bfbceb71b7680a3db5baedbd843.php 第 49 行.
+NOTIC: [8] Undefined index: form_id /var/www/dzxt/s/tp/Application/Runtime/Cache/Flow/a5362bfbceb71b7680a3db5baedbd843.php 第 49 行.
+NOTIC: [8] Undefined index: form_id /var/www/dzxt/s/tp/Application/Runtime/Cache/Flow/a5362bfbceb71b7680a3db5baedbd843.php 第 49 行.
+NOTIC: [8] Undefined index: form_id /var/www/dzxt/s/tp/Application/Runtime/Cache/Flow/a5362bfbceb71b7680a3db5baedbd843.php 第 49 行.
+NOTIC: [8] Undefined index: form_id /var/www/dzxt/s/tp/Application/Runtime/Cache/Flow/a5362bfbceb71b7680a3db5baedbd843.php 第 49 行.
+NOTIC: [8] Undefined index: form_id /var/www/dzxt/s/tp/Application/Runtime/Cache/Flow/a5362bfbceb71b7680a3db5baedbd843.php 第 49 行.
+NOTIC: [8] Undefined index: form_id /var/www/dzxt/s/tp/Application/Runtime/Cache/Flow/a5362bfbceb71b7680a3db5baedbd843.php 第 49 行.
+NOTIC: [8] Undefined index: form_id /var/www/dzxt/s/tp/Application/Runtime/Cache/Flow/a5362bfbceb71b7680a3db5baedbd843.php 第 49 行.
+NOTIC: [8] Undefined index: form_id /var/www/dzxt/s/tp/Application/Runtime/Cache/Flow/a5362bfbceb71b7680a3db5baedbd843.php 第 49 行.
+NOTIC: [8] Undefined index: form_id /var/www/dzxt/s/tp/Application/Runtime/Cache/Flow/a5362bfbceb71b7680a3db5baedbd843.php 第 49 行.
+NOTIC: [8] Undefined index: form_id /var/www/dzxt/s/tp/Application/Runtime/Cache/Flow/a5362bfbceb71b7680a3db5baedbd843.php 第 49 行.
+NOTIC: [8] Undefined index: form_id /var/www/dzxt/s/tp/Application/Runtime/Cache/Flow/a5362bfbceb71b7680a3db5baedbd843.php 第 49 行.
+NOTIC: [8] Undefined index: form_id /var/www/dzxt/s/tp/Application/Runtime/Cache/Flow/a5362bfbceb71b7680a3db5baedbd843.php 第 49 行.
+NOTIC: [8] Undefined index: form_id /var/www/dzxt/s/tp/Application/Runtime/Cache/Flow/a5362bfbceb71b7680a3db5baedbd843.php 第 49 行.
+NOTIC: [8] Undefined index: form_id /var/www/dzxt/s/tp/Application/Runtime/Cache/Flow/a5362bfbceb71b7680a3db5baedbd843.php 第 49 行.
+NOTIC: [8] Undefined index: form_id /var/www/dzxt/s/tp/Application/Runtime/Cache/Flow/a5362bfbceb71b7680a3db5baedbd843.php 第 49 行.
+NOTIC: [8] Undefined index: form_id /var/www/dzxt/s/tp/Application/Runtime/Cache/Flow/a5362bfbceb71b7680a3db5baedbd843.php 第 49 行.
+NOTIC: [8] Undefined index: form_id /var/www/dzxt/s/tp/Application/Runtime/Cache/Flow/a5362bfbceb71b7680a3db5baedbd843.php 第 49 行.
+NOTIC: [8] Undefined index: form_id /var/www/dzxt/s/tp/Application/Runtime/Cache/Flow/a5362bfbceb71b7680a3db5baedbd843.php 第 49 行.
+NOTIC: [8] Undefined index: form_id /var/www/dzxt/s/tp/Application/Runtime/Cache/Flow/a5362bfbceb71b7680a3db5baedbd843.php 第 49 行.
+NOTIC: [8] Undefined index: form_id /var/www/dzxt/s/tp/Application/Runtime/Cache/Flow/a5362bfbceb71b7680a3db5baedbd843.php 第 49 行.
+NOTIC: [8] Undefined index: form_id /var/www/dzxt/s/tp/Application/Runtime/Cache/Flow/a5362bfbceb71b7680a3db5baedbd843.php 第 49 行.
+NOTIC: [8] Undefined index: form_id /var/www/dzxt/s/tp/Application/Runtime/Cache/Flow/a5362bfbceb71b7680a3db5baedbd843.php 第 49 行.
+NOTIC: [8] Undefined index: form_id /var/www/dzxt/s/tp/Application/Runtime/Cache/Flow/a5362bfbceb71b7680a3db5baedbd843.php 第 49 行.
+NOTIC: [8] Undefined index: form_id /var/www/dzxt/s/tp/Application/Runtime/Cache/Flow/a5362bfbceb71b7680a3db5baedbd843.php 第 49 行.
+NOTIC: [8] Undefined index: form_id /var/www/dzxt/s/tp/Application/Runtime/Cache/Flow/a5362bfbceb71b7680a3db5baedbd843.php 第 49 行.
+NOTIC: [8] Undefined index: form_id /var/www/dzxt/s/tp/Application/Runtime/Cache/Flow/a5362bfbceb71b7680a3db5baedbd843.php 第 49 行.
+NOTIC: [8] Undefined index: form_id /var/www/dzxt/s/tp/Application/Runtime/Cache/Flow/a5362bfbceb71b7680a3db5baedbd843.php 第 49 行.
+NOTIC: [8] Undefined index: form_id /var/www/dzxt/s/tp/Application/Runtime/Cache/Flow/a5362bfbceb71b7680a3db5baedbd843.php 第 49 行.
+NOTIC: [8] Undefined index: form_id /var/www/dzxt/s/tp/Application/Runtime/Cache/Flow/a5362bfbceb71b7680a3db5baedbd843.php 第 49 行.
+NOTIC: [8] Undefined index: form_id /var/www/dzxt/s/tp/Application/Runtime/Cache/Flow/a5362bfbceb71b7680a3db5baedbd843.php 第 49 行.
+NOTIC: [8] Undefined index: form_id /var/www/dzxt/s/tp/Application/Runtime/Cache/Flow/a5362bfbceb71b7680a3db5baedbd843.php 第 49 行.
+NOTIC: [8] Undefined index: form_id /var/www/dzxt/s/tp/Application/Runtime/Cache/Flow/a5362bfbceb71b7680a3db5baedbd843.php 第 49 行.
+NOTIC: [8] Undefined index: form_id /var/www/dzxt/s/tp/Application/Runtime/Cache/Flow/a5362bfbceb71b7680a3db5baedbd843.php 第 49 行.
+NOTIC: [8] Undefined index: form_id /var/www/dzxt/s/tp/Application/Runtime/Cache/Flow/a5362bfbceb71b7680a3db5baedbd843.php 第 49 行.
+NOTIC: [8] Undefined index: form_id /var/www/dzxt/s/tp/Application/Runtime/Cache/Flow/a5362bfbceb71b7680a3db5baedbd843.php 第 49 行.
+NOTIC: [8] Undefined index: form_id /var/www/dzxt/s/tp/Application/Runtime/Cache/Flow/a5362bfbceb71b7680a3db5baedbd843.php 第 49 行.
+NOTIC: [8] Undefined index: form_id /var/www/dzxt/s/tp/Application/Runtime/Cache/Flow/a5362bfbceb71b7680a3db5baedbd843.php 第 49 行.
+NOTIC: [8] Undefined index: form_id /var/www/dzxt/s/tp/Application/Runtime/Cache/Flow/a5362bfbceb71b7680a3db5baedbd843.php 第 49 行.
+NOTIC: [8] Undefined index: form_id /var/www/dzxt/s/tp/Application/Runtime/Cache/Flow/a5362bfbceb71b7680a3db5baedbd843.php 第 49 行.
+NOTIC: [8] Undefined index: form_id /var/www/dzxt/s/tp/Application/Runtime/Cache/Flow/a5362bfbceb71b7680a3db5baedbd843.php 第 49 行.
+NOTIC: [8] Undefined index: form_id /var/www/dzxt/s/tp/Application/Runtime/Cache/Flow/a5362bfbceb71b7680a3db5baedbd843.php 第 49 行.
+NOTIC: [8] Undefined index: form_id /var/www/dzxt/s/tp/Application/Runtime/Cache/Flow/a5362bfbceb71b7680a3db5baedbd843.php 第 49 行.
+NOTIC: [8] Undefined index: form_id /var/www/dzxt/s/tp/Application/Runtime/Cache/Flow/a5362bfbceb71b7680a3db5baedbd843.php 第 49 行.
+NOTIC: [8] Undefined index: form_id /var/www/dzxt/s/tp/Application/Runtime/Cache/Flow/a5362bfbceb71b7680a3db5baedbd843.php 第 49 行.
+NOTIC: [8] Undefined index: form_id /var/www/dzxt/s/tp/Application/Runtime/Cache/Flow/a5362bfbceb71b7680a3db5baedbd843.php 第 49 行.
+NOTIC: [8] Undefined index: form_id /var/www/dzxt/s/tp/Application/Runtime/Cache/Flow/a5362bfbceb71b7680a3db5baedbd843.php 第 49 行.
+NOTIC: [8] Undefined index: form_id /var/www/dzxt/s/tp/Application/Runtime/Cache/Flow/a5362bfbceb71b7680a3db5baedbd843.php 第 49 行.
+NOTIC: [8] Undefined index: form_id /var/www/dzxt/s/tp/Application/Runtime/Cache/Flow/a5362bfbceb71b7680a3db5baedbd843.php 第 49 行.
+NOTIC: [8] Undefined index: form_id /var/www/dzxt/s/tp/Application/Runtime/Cache/Flow/a5362bfbceb71b7680a3db5baedbd843.php 第 49 行.
+NOTIC: [8] Undefined index: form_id /var/www/dzxt/s/tp/Application/Runtime/Cache/Flow/a5362bfbceb71b7680a3db5baedbd843.php 第 49 行.
+NOTIC: [8] Undefined index: form_id /var/www/dzxt/s/tp/Application/Runtime/Cache/Flow/a5362bfbceb71b7680a3db5baedbd843.php 第 49 行.
+NOTIC: [8] Undefined index: form_id /var/www/dzxt/s/tp/Application/Runtime/Cache/Flow/a5362bfbceb71b7680a3db5baedbd843.php 第 49 行.
+NOTIC: [8] Undefined index: form_id /var/www/dzxt/s/tp/Application/Runtime/Cache/Flow/a5362bfbceb71b7680a3db5baedbd843.php 第 49 行.
+NOTIC: [8] Undefined index: form_id /var/www/dzxt/s/tp/Application/Runtime/Cache/Flow/a5362bfbceb71b7680a3db5baedbd843.php 第 49 行.
+NOTIC: [8] Undefined index: form_id /var/www/dzxt/s/tp/Application/Runtime/Cache/Flow/a5362bfbceb71b7680a3db5baedbd843.php 第 49 行.
+NOTIC: [8] Undefined index: form_id /var/www/dzxt/s/tp/Application/Runtime/Cache/Flow/a5362bfbceb71b7680a3db5baedbd843.php 第 49 行.
+NOTIC: [8] Undefined index: form_id /var/www/dzxt/s/tp/Application/Runtime/Cache/Flow/a5362bfbceb71b7680a3db5baedbd843.php 第 49 行.
+NOTIC: [8] Undefined index: form_id /var/www/dzxt/s/tp/Application/Runtime/Cache/Flow/a5362bfbceb71b7680a3db5baedbd843.php 第 49 行.
+NOTIC: [8] Undefined index: form_id /var/www/dzxt/s/tp/Application/Runtime/Cache/Flow/a5362bfbceb71b7680a3db5baedbd843.php 第 49 行.
+NOTIC: [8] Undefined index: form_id /var/www/dzxt/s/tp/Application/Runtime/Cache/Flow/a5362bfbceb71b7680a3db5baedbd843.php 第 49 行.
+NOTIC: [8] Undefined index: form_id /var/www/dzxt/s/tp/Application/Runtime/Cache/Flow/a5362bfbceb71b7680a3db5baedbd843.php 第 49 行.
+NOTIC: [8] Undefined index: form_id /var/www/dzxt/s/tp/Application/Runtime/Cache/Flow/a5362bfbceb71b7680a3db5baedbd843.php 第 49 行.
+NOTIC: [8] Undefined index: form_id /var/www/dzxt/s/tp/Application/Runtime/Cache/Flow/a5362bfbceb71b7680a3db5baedbd843.php 第 49 行.
+NOTIC: [8] Undefined index: form_id /var/www/dzxt/s/tp/Application/Runtime/Cache/Flow/a5362bfbceb71b7680a3db5baedbd843.php 第 49 行.
+NOTIC: [8] Undefined index: form_id /var/www/dzxt/s/tp/Application/Runtime/Cache/Flow/a5362bfbceb71b7680a3db5baedbd843.php 第 49 行.
+NOTIC: [8] Undefined index: form_id /var/www/dzxt/s/tp/Application/Runtime/Cache/Flow/a5362bfbceb71b7680a3db5baedbd843.php 第 49 行.
+NOTIC: [8] Undefined index: form_id /var/www/dzxt/s/tp/Application/Runtime/Cache/Flow/a5362bfbceb71b7680a3db5baedbd843.php 第 49 行.
+NOTIC: [8] Undefined index: form_id /var/www/dzxt/s/tp/Application/Runtime/Cache/Flow/a5362bfbceb71b7680a3db5baedbd843.php 第 49 行.
+NOTIC: [8] Undefined index: form_id /var/www/dzxt/s/tp/Application/Runtime/Cache/Flow/a5362bfbceb71b7680a3db5baedbd843.php 第 49 行.
+NOTIC: [8] Undefined index: form_id /var/www/dzxt/s/tp/Application/Runtime/Cache/Flow/a5362bfbceb71b7680a3db5baedbd843.php 第 49 行.
+NOTIC: [8] Undefined index: form_id /var/www/dzxt/s/tp/Application/Runtime/Cache/Flow/a5362bfbceb71b7680a3db5baedbd843.php 第 49 行.
+NOTIC: [8] Undefined index: form_id /var/www/dzxt/s/tp/Application/Runtime/Cache/Flow/a5362bfbceb71b7680a3db5baedbd843.php 第 49 行.
+NOTIC: [8] Undefined index: form_id /var/www/dzxt/s/tp/Application/Runtime/Cache/Flow/a5362bfbceb71b7680a3db5baedbd843.php 第 49 行.
+NOTIC: [8] Undefined index: form_id /var/www/dzxt/s/tp/Application/Runtime/Cache/Flow/a5362bfbceb71b7680a3db5baedbd843.php 第 49 行.
+NOTIC: [8] Undefined index: form_id /var/www/dzxt/s/tp/Application/Runtime/Cache/Flow/a5362bfbceb71b7680a3db5baedbd843.php 第 49 行.
+NOTIC: [8] Undefined index: form_id /var/www/dzxt/s/tp/Application/Runtime/Cache/Flow/a5362bfbceb71b7680a3db5baedbd843.php 第 49 行.
+NOTIC: [8] Undefined index: form_id /var/www/dzxt/s/tp/Application/Runtime/Cache/Flow/a5362bfbceb71b7680a3db5baedbd843.php 第 49 行.
+NOTIC: [8] Undefined index: form_id /var/www/dzxt/s/tp/Application/Runtime/Cache/Flow/a5362bfbceb71b7680a3db5baedbd843.php 第 49 行.
+NOTIC: [8] Undefined index: form_id /var/www/dzxt/s/tp/Application/Runtime/Cache/Flow/a5362bfbceb71b7680a3db5baedbd843.php 第 49 行.
+NOTIC: [8] Undefined index: form_id /var/www/dzxt/s/tp/Application/Runtime/Cache/Flow/a5362bfbceb71b7680a3db5baedbd843.php 第 49 行.
+NOTIC: [8] Undefined index: form_id /var/www/dzxt/s/tp/Application/Runtime/Cache/Flow/a5362bfbceb71b7680a3db5baedbd843.php 第 49 行.
+NOTIC: [8] Undefined index: form_id /var/www/dzxt/s/tp/Application/Runtime/Cache/Flow/a5362bfbceb71b7680a3db5baedbd843.php 第 49 行.
+NOTIC: [8] Undefined index: form_id /var/www/dzxt/s/tp/Application/Runtime/Cache/Flow/a5362bfbceb71b7680a3db5baedbd843.php 第 49 行.
+NOTIC: [8] Undefined index: form_id /var/www/dzxt/s/tp/Application/Runtime/Cache/Flow/a5362bfbceb71b7680a3db5baedbd843.php 第 49 行.
+NOTIC: [8] Undefined index: form_id /var/www/dzxt/s/tp/Application/Runtime/Cache/Flow/a5362bfbceb71b7680a3db5baedbd843.php 第 49 行.
+NOTIC: [8] Undefined index: form_id /var/www/dzxt/s/tp/Application/Runtime/Cache/Flow/a5362bfbceb71b7680a3db5baedbd843.php 第 49 行.
+NOTIC: [8] Undefined index: form_id /var/www/dzxt/s/tp/Application/Runtime/Cache/Flow/a5362bfbceb71b7680a3db5baedbd843.php 第 49 行.
+NOTIC: [8] Undefined index: form_id /var/www/dzxt/s/tp/Application/Runtime/Cache/Flow/a5362bfbceb71b7680a3db5baedbd843.php 第 49 行.
+NOTIC: [8] Undefined index: form_id /var/www/dzxt/s/tp/Application/Runtime/Cache/Flow/a5362bfbceb71b7680a3db5baedbd843.php 第 49 行.
+NOTIC: [8] Undefined index: form_id /var/www/dzxt/s/tp/Application/Runtime/Cache/Flow/a5362bfbceb71b7680a3db5baedbd843.php 第 49 行.
+NOTIC: [8] Undefined index: form_id /var/www/dzxt/s/tp/Application/Runtime/Cache/Flow/a5362bfbceb71b7680a3db5baedbd843.php 第 49 行.
+NOTIC: [8] Undefined index: form_id /var/www/dzxt/s/tp/Application/Runtime/Cache/Flow/a5362bfbceb71b7680a3db5baedbd843.php 第 49 行.
+NOTIC: [8] Undefined index: form_id /var/www/dzxt/s/tp/Application/Runtime/Cache/Flow/a5362bfbceb71b7680a3db5baedbd843.php 第 49 行.
+NOTIC: [8] Undefined index: form_id /var/www/dzxt/s/tp/Application/Runtime/Cache/Flow/a5362bfbceb71b7680a3db5baedbd843.php 第 49 行.
+NOTIC: [8] Undefined index: form_id /var/www/dzxt/s/tp/Application/Runtime/Cache/Flow/a5362bfbceb71b7680a3db5baedbd843.php 第 49 行.
+NOTIC: [8] Undefined index: form_id /var/www/dzxt/s/tp/Application/Runtime/Cache/Flow/a5362bfbceb71b7680a3db5baedbd843.php 第 49 行.
+NOTIC: [8] Undefined index: form_id /var/www/dzxt/s/tp/Application/Runtime/Cache/Flow/a5362bfbceb71b7680a3db5baedbd843.php 第 49 行.
+NOTIC: [8] Undefined index: form_id /var/www/dzxt/s/tp/Application/Runtime/Cache/Flow/a5362bfbceb71b7680a3db5baedbd843.php 第 49 行.
+NOTIC: [8] Undefined index: form_id /var/www/dzxt/s/tp/Application/Runtime/Cache/Flow/a5362bfbceb71b7680a3db5baedbd843.php 第 49 行.
+NOTIC: [8] Undefined index: form_id /var/www/dzxt/s/tp/Application/Runtime/Cache/Flow/a5362bfbceb71b7680a3db5baedbd843.php 第 49 行.
+NOTIC: [8] Undefined index: form_id /var/www/dzxt/s/tp/Application/Runtime/Cache/Flow/a5362bfbceb71b7680a3db5baedbd843.php 第 49 行.
+NOTIC: [8] Undefined index: form_id /var/www/dzxt/s/tp/Application/Runtime/Cache/Flow/a5362bfbceb71b7680a3db5baedbd843.php 第 49 行.
+NOTIC: [8] Undefined index: form_id /var/www/dzxt/s/tp/Application/Runtime/Cache/Flow/a5362bfbceb71b7680a3db5baedbd843.php 第 49 行.
+NOTIC: [8] Undefined index: form_id /var/www/dzxt/s/tp/Application/Runtime/Cache/Flow/a5362bfbceb71b7680a3db5baedbd843.php 第 49 行.
+NOTIC: [8] Undefined index: form_id /var/www/dzxt/s/tp/Application/Runtime/Cache/Flow/a5362bfbceb71b7680a3db5baedbd843.php 第 49 行.
+NOTIC: [8] Undefined index: form_id /var/www/dzxt/s/tp/Application/Runtime/Cache/Flow/a5362bfbceb71b7680a3db5baedbd843.php 第 49 行.
+NOTIC: [8] Undefined index: form_id /var/www/dzxt/s/tp/Application/Runtime/Cache/Flow/a5362bfbceb71b7680a3db5baedbd843.php 第 49 行.
+NOTIC: [8] Undefined index: form_id /var/www/dzxt/s/tp/Application/Runtime/Cache/Flow/a5362bfbceb71b7680a3db5baedbd843.php 第 49 行.
+NOTIC: [8] Undefined index: form_id /var/www/dzxt/s/tp/Application/Runtime/Cache/Flow/a5362bfbceb71b7680a3db5baedbd843.php 第 49 行.
+NOTIC: [8] Undefined index: form_id /var/www/dzxt/s/tp/Application/Runtime/Cache/Flow/a5362bfbceb71b7680a3db5baedbd843.php 第 49 行.
+NOTIC: [8] Undefined index: form_id /var/www/dzxt/s/tp/Application/Runtime/Cache/Flow/a5362bfbceb71b7680a3db5baedbd843.php 第 49 行.
+NOTIC: [8] Undefined index: form_id /var/www/dzxt/s/tp/Application/Runtime/Cache/Flow/a5362bfbceb71b7680a3db5baedbd843.php 第 49 行.
+NOTIC: [8] Undefined index: form_id /var/www/dzxt/s/tp/Application/Runtime/Cache/Flow/a5362bfbceb71b7680a3db5baedbd843.php 第 49 行.
+NOTIC: [8] Undefined index: form_id /var/www/dzxt/s/tp/Application/Runtime/Cache/Flow/a5362bfbceb71b7680a3db5baedbd843.php 第 49 行.
+NOTIC: [8] Undefined index: form_id /var/www/dzxt/s/tp/Application/Runtime/Cache/Flow/a5362bfbceb71b7680a3db5baedbd843.php 第 49 行.
+NOTIC: [8] Undefined index: form_id /var/www/dzxt/s/tp/Application/Runtime/Cache/Flow/a5362bfbceb71b7680a3db5baedbd843.php 第 49 行.
+NOTIC: [8] Undefined index: form_id /var/www/dzxt/s/tp/Application/Runtime/Cache/Flow/a5362bfbceb71b7680a3db5baedbd843.php 第 49 行.
+NOTIC: [8] Undefined index: form_id /var/www/dzxt/s/tp/Application/Runtime/Cache/Flow/a5362bfbceb71b7680a3db5baedbd843.php 第 49 行.
+NOTIC: [8] Undefined index: form_id /var/www/dzxt/s/tp/Application/Runtime/Cache/Flow/a5362bfbceb71b7680a3db5baedbd843.php 第 49 行.
+NOTIC: [8] Undefined index: form_id /var/www/dzxt/s/tp/Application/Runtime/Cache/Flow/a5362bfbceb71b7680a3db5baedbd843.php 第 49 行.
+NOTIC: [8] Undefined index: form_id /var/www/dzxt/s/tp/Application/Runtime/Cache/Flow/a5362bfbceb71b7680a3db5baedbd843.php 第 49 行.
+NOTIC: [8] Undefined index: form_id /var/www/dzxt/s/tp/Application/Runtime/Cache/Flow/a5362bfbceb71b7680a3db5baedbd843.php 第 49 行.
+NOTIC: [8] Undefined index: form_id /var/www/dzxt/s/tp/Application/Runtime/Cache/Flow/a5362bfbceb71b7680a3db5baedbd843.php 第 49 行.
+NOTIC: [8] Undefined index: form_id /var/www/dzxt/s/tp/Application/Runtime/Cache/Flow/a5362bfbceb71b7680a3db5baedbd843.php 第 49 行.
+NOTIC: [8] Undefined index: form_id /var/www/dzxt/s/tp/Application/Runtime/Cache/Flow/a5362bfbceb71b7680a3db5baedbd843.php 第 49 行.
+NOTIC: [8] Undefined index: form_id /var/www/dzxt/s/tp/Application/Runtime/Cache/Flow/a5362bfbceb71b7680a3db5baedbd843.php 第 49 行.
+NOTIC: [8] Undefined index: form_id /var/www/dzxt/s/tp/Application/Runtime/Cache/Flow/a5362bfbceb71b7680a3db5baedbd843.php 第 49 行.
+NOTIC: [8] Undefined index: form_id /var/www/dzxt/s/tp/Application/Runtime/Cache/Flow/a5362bfbceb71b7680a3db5baedbd843.php 第 49 行.
+NOTIC: [8] Undefined index: form_id /var/www/dzxt/s/tp/Application/Runtime/Cache/Flow/a5362bfbceb71b7680a3db5baedbd843.php 第 49 行.
+NOTIC: [8] Undefined index: form_id /var/www/dzxt/s/tp/Application/Runtime/Cache/Flow/a5362bfbceb71b7680a3db5baedbd843.php 第 49 行.
+NOTIC: [8] Undefined index: form_id /var/www/dzxt/s/tp/Application/Runtime/Cache/Flow/a5362bfbceb71b7680a3db5baedbd843.php 第 49 行.
+NOTIC: [8] Undefined index: form_id /var/www/dzxt/s/tp/Application/Runtime/Cache/Flow/a5362bfbceb71b7680a3db5baedbd843.php 第 49 行.
+NOTIC: [8] Undefined index: form_id /var/www/dzxt/s/tp/Application/Runtime/Cache/Flow/a5362bfbceb71b7680a3db5baedbd843.php 第 49 行.
+NOTIC: [8] Undefined index: form_id /var/www/dzxt/s/tp/Application/Runtime/Cache/Flow/a5362bfbceb71b7680a3db5baedbd843.php 第 49 行.
+NOTIC: [8] Undefined index: form_id /var/www/dzxt/s/tp/Application/Runtime/Cache/Flow/a5362bfbceb71b7680a3db5baedbd843.php 第 49 行.
+NOTIC: [8] Undefined index: form_id /var/www/dzxt/s/tp/Application/Runtime/Cache/Flow/a5362bfbceb71b7680a3db5baedbd843.php 第 49 行.
+NOTIC: [8] Undefined index: form_id /var/www/dzxt/s/tp/Application/Runtime/Cache/Flow/a5362bfbceb71b7680a3db5baedbd843.php 第 49 行.
+NOTIC: [8] Undefined index: form_id /var/www/dzxt/s/tp/Application/Runtime/Cache/Flow/a5362bfbceb71b7680a3db5baedbd843.php 第 49 行.
+NOTIC: [8] Undefined index: form_id /var/www/dzxt/s/tp/Application/Runtime/Cache/Flow/a5362bfbceb71b7680a3db5baedbd843.php 第 49 行.
+NOTIC: [8] Undefined index: form_id /var/www/dzxt/s/tp/Application/Runtime/Cache/Flow/a5362bfbceb71b7680a3db5baedbd843.php 第 49 行.
+NOTIC: [8] Undefined index: form_id /var/www/dzxt/s/tp/Application/Runtime/Cache/Flow/a5362bfbceb71b7680a3db5baedbd843.php 第 49 行.
+NOTIC: [8] Undefined index: form_id /var/www/dzxt/s/tp/Application/Runtime/Cache/Flow/a5362bfbceb71b7680a3db5baedbd843.php 第 49 行.
+NOTIC: [8] Undefined index: form_id /var/www/dzxt/s/tp/Application/Runtime/Cache/Flow/a5362bfbceb71b7680a3db5baedbd843.php 第 49 行.
+NOTIC: [8] Undefined index: form_id /var/www/dzxt/s/tp/Application/Runtime/Cache/Flow/a5362bfbceb71b7680a3db5baedbd843.php 第 49 行.
+NOTIC: [8] Undefined index: form_id /var/www/dzxt/s/tp/Application/Runtime/Cache/Flow/a5362bfbceb71b7680a3db5baedbd843.php 第 49 行.
+NOTIC: [8] Undefined index: form_id /var/www/dzxt/s/tp/Application/Runtime/Cache/Flow/a5362bfbceb71b7680a3db5baedbd843.php 第 49 行.
+NOTIC: [8] Undefined index: form_id /var/www/dzxt/s/tp/Application/Runtime/Cache/Flow/a5362bfbceb71b7680a3db5baedbd843.php 第 49 行.
+NOTIC: [8] Undefined index: form_id /var/www/dzxt/s/tp/Application/Runtime/Cache/Flow/a5362bfbceb71b7680a3db5baedbd843.php 第 49 行.
+NOTIC: [8] Undefined index: form_id /var/www/dzxt/s/tp/Application/Runtime/Cache/Flow/a5362bfbceb71b7680a3db5baedbd843.php 第 49 行.
+NOTIC: [8] Undefined index: form_id /var/www/dzxt/s/tp/Application/Runtime/Cache/Flow/a5362bfbceb71b7680a3db5baedbd843.php 第 49 行.
+NOTIC: [8] Undefined index: form_id /var/www/dzxt/s/tp/Application/Runtime/Cache/Flow/a5362bfbceb71b7680a3db5baedbd843.php 第 49 行.
+NOTIC: [8] Undefined index: form_id /var/www/dzxt/s/tp/Application/Runtime/Cache/Flow/a5362bfbceb71b7680a3db5baedbd843.php 第 49 行.
+NOTIC: [8] Undefined index: form_id /var/www/dzxt/s/tp/Application/Runtime/Cache/Flow/a5362bfbceb71b7680a3db5baedbd843.php 第 49 行.
+NOTIC: [8] Undefined index: form_id /var/www/dzxt/s/tp/Application/Runtime/Cache/Flow/a5362bfbceb71b7680a3db5baedbd843.php 第 49 行.
+NOTIC: [8] Undefined index: form_id /var/www/dzxt/s/tp/Application/Runtime/Cache/Flow/a5362bfbceb71b7680a3db5baedbd843.php 第 49 行.
+NOTIC: [8] Undefined index: form_id /var/www/dzxt/s/tp/Application/Runtime/Cache/Flow/a5362bfbceb71b7680a3db5baedbd843.php 第 49 行.
+NOTIC: [8] Undefined index: form_id /var/www/dzxt/s/tp/Application/Runtime/Cache/Flow/a5362bfbceb71b7680a3db5baedbd843.php 第 49 行.
+NOTIC: [8] Undefined index: form_id /var/www/dzxt/s/tp/Application/Runtime/Cache/Flow/a5362bfbceb71b7680a3db5baedbd843.php 第 49 行.
+NOTIC: [8] Undefined index: form_id /var/www/dzxt/s/tp/Application/Runtime/Cache/Flow/a5362bfbceb71b7680a3db5baedbd843.php 第 49 行.
+NOTIC: [8] Undefined index: form_id /var/www/dzxt/s/tp/Application/Runtime/Cache/Flow/a5362bfbceb71b7680a3db5baedbd843.php 第 49 行.
+NOTIC: [8] Undefined index: form_id /var/www/dzxt/s/tp/Application/Runtime/Cache/Flow/a5362bfbceb71b7680a3db5baedbd843.php 第 49 行.
+NOTIC: [8] Undefined index: form_id /var/www/dzxt/s/tp/Application/Runtime/Cache/Flow/a5362bfbceb71b7680a3db5baedbd843.php 第 49 行.
+NOTIC: [8] Undefined index: form_id /var/www/dzxt/s/tp/Application/Runtime/Cache/Flow/a5362bfbceb71b7680a3db5baedbd843.php 第 49 行.
+NOTIC: [8] Undefined index: form_id /var/www/dzxt/s/tp/Application/Runtime/Cache/Flow/a5362bfbceb71b7680a3db5baedbd843.php 第 49 行.
+NOTIC: [8] Undefined index: form_id /var/www/dzxt/s/tp/Application/Runtime/Cache/Flow/a5362bfbceb71b7680a3db5baedbd843.php 第 49 行.
+NOTIC: [8] Undefined index: form_id /var/www/dzxt/s/tp/Application/Runtime/Cache/Flow/a5362bfbceb71b7680a3db5baedbd843.php 第 49 行.
+NOTIC: [8] Undefined index: form_id /var/www/dzxt/s/tp/Application/Runtime/Cache/Flow/a5362bfbceb71b7680a3db5baedbd843.php 第 49 行.
+NOTIC: [8] Undefined index: form_id /var/www/dzxt/s/tp/Application/Runtime/Cache/Flow/a5362bfbceb71b7680a3db5baedbd843.php 第 49 行.
+NOTIC: [8] Undefined index: form_id /var/www/dzxt/s/tp/Application/Runtime/Cache/Flow/a5362bfbceb71b7680a3db5baedbd843.php 第 49 行.
+NOTIC: [8] Undefined index: form_id /var/www/dzxt/s/tp/Application/Runtime/Cache/Flow/a5362bfbceb71b7680a3db5baedbd843.php 第 49 行.
+NOTIC: [8] Undefined index: form_id /var/www/dzxt/s/tp/Application/Runtime/Cache/Flow/a5362bfbceb71b7680a3db5baedbd843.php 第 49 行.
+NOTIC: [8] Undefined index: form_id /var/www/dzxt/s/tp/Application/Runtime/Cache/Flow/a5362bfbceb71b7680a3db5baedbd843.php 第 49 行.
+NOTIC: [8] Undefined index: form_id /var/www/dzxt/s/tp/Application/Runtime/Cache/Flow/a5362bfbceb71b7680a3db5baedbd843.php 第 49 行.
+NOTIC: [8] Undefined index: form_id /var/www/dzxt/s/tp/Application/Runtime/Cache/Flow/a5362bfbceb71b7680a3db5baedbd843.php 第 49 行.
+NOTIC: [8] Undefined index: form_id /var/www/dzxt/s/tp/Application/Runtime/Cache/Flow/a5362bfbceb71b7680a3db5baedbd843.php 第 49 行.
+NOTIC: [8] Undefined index: form_id /var/www/dzxt/s/tp/Application/Runtime/Cache/Flow/a5362bfbceb71b7680a3db5baedbd843.php 第 49 行.
+NOTIC: [8] Undefined index: form_id /var/www/dzxt/s/tp/Application/Runtime/Cache/Flow/a5362bfbceb71b7680a3db5baedbd843.php 第 49 行.
+NOTIC: [8] Undefined index: form_id /var/www/dzxt/s/tp/Application/Runtime/Cache/Flow/a5362bfbceb71b7680a3db5baedbd843.php 第 49 行.
+NOTIC: [8] Undefined index: form_id /var/www/dzxt/s/tp/Application/Runtime/Cache/Flow/a5362bfbceb71b7680a3db5baedbd843.php 第 49 行.
+NOTIC: [8] Undefined index: form_id /var/www/dzxt/s/tp/Application/Runtime/Cache/Flow/a5362bfbceb71b7680a3db5baedbd843.php 第 49 行.
+NOTIC: [8] Undefined index: form_id /var/www/dzxt/s/tp/Application/Runtime/Cache/Flow/a5362bfbceb71b7680a3db5baedbd843.php 第 49 行.
+NOTIC: [8] Undefined index: form_id /var/www/dzxt/s/tp/Application/Runtime/Cache/Flow/a5362bfbceb71b7680a3db5baedbd843.php 第 49 行.
+NOTIC: [8] Undefined index: form_id /var/www/dzxt/s/tp/Application/Runtime/Cache/Flow/a5362bfbceb71b7680a3db5baedbd843.php 第 49 行.
+NOTIC: [8] Undefined index: form_id /var/www/dzxt/s/tp/Application/Runtime/Cache/Flow/a5362bfbceb71b7680a3db5baedbd843.php 第 49 行.
+NOTIC: [8] Undefined index: form_id /var/www/dzxt/s/tp/Application/Runtime/Cache/Flow/a5362bfbceb71b7680a3db5baedbd843.php 第 49 行.
+NOTIC: [8] Undefined index: form_id /var/www/dzxt/s/tp/Application/Runtime/Cache/Flow/a5362bfbceb71b7680a3db5baedbd843.php 第 49 行.
+NOTIC: [8] Undefined index: form_id /var/www/dzxt/s/tp/Application/Runtime/Cache/Flow/a5362bfbceb71b7680a3db5baedbd843.php 第 49 行.
+NOTIC: [8] Undefined index: form_id /var/www/dzxt/s/tp/Application/Runtime/Cache/Flow/a5362bfbceb71b7680a3db5baedbd843.php 第 49 行.
+NOTIC: [8] Undefined index: form_id /var/www/dzxt/s/tp/Application/Runtime/Cache/Flow/a5362bfbceb71b7680a3db5baedbd843.php 第 49 行.
+NOTIC: [8] Undefined index: form_id /var/www/dzxt/s/tp/Application/Runtime/Cache/Flow/a5362bfbceb71b7680a3db5baedbd843.php 第 49 行.
+NOTIC: [8] Undefined index: form_id /var/www/dzxt/s/tp/Application/Runtime/Cache/Flow/a5362bfbceb71b7680a3db5baedbd843.php 第 49 行.
+NOTIC: [8] Undefined index: form_id /var/www/dzxt/s/tp/Application/Runtime/Cache/Flow/a5362bfbceb71b7680a3db5baedbd843.php 第 49 行.
+NOTIC: [8] Undefined index: form_id /var/www/dzxt/s/tp/Application/Runtime/Cache/Flow/a5362bfbceb71b7680a3db5baedbd843.php 第 49 行.
+NOTIC: [8] Undefined index: form_id /var/www/dzxt/s/tp/Application/Runtime/Cache/Flow/a5362bfbceb71b7680a3db5baedbd843.php 第 49 行.
+NOTIC: [8] Undefined index: form_id /var/www/dzxt/s/tp/Application/Runtime/Cache/Flow/a5362bfbceb71b7680a3db5baedbd843.php 第 49 行.
+NOTIC: [8] Undefined index: form_id /var/www/dzxt/s/tp/Application/Runtime/Cache/Flow/a5362bfbceb71b7680a3db5baedbd843.php 第 49 行.
+NOTIC: [8] Undefined index: form_id /var/www/dzxt/s/tp/Application/Runtime/Cache/Flow/a5362bfbceb71b7680a3db5baedbd843.php 第 49 行.
+NOTIC: [8] Undefined index: form_id /var/www/dzxt/s/tp/Application/Runtime/Cache/Flow/a5362bfbceb71b7680a3db5baedbd843.php 第 49 行.
+NOTIC: [8] Undefined index: form_id /var/www/dzxt/s/tp/Application/Runtime/Cache/Flow/a5362bfbceb71b7680a3db5baedbd843.php 第 49 行.
+NOTIC: [8] Undefined index: form_id /var/www/dzxt/s/tp/Application/Runtime/Cache/Flow/a5362bfbceb71b7680a3db5baedbd843.php 第 49 行.
+NOTIC: [8] Undefined index: form_id /var/www/dzxt/s/tp/Application/Runtime/Cache/Flow/a5362bfbceb71b7680a3db5baedbd843.php 第 49 行.
+NOTIC: [8] Undefined index: form_id /var/www/dzxt/s/tp/Application/Runtime/Cache/Flow/a5362bfbceb71b7680a3db5baedbd843.php 第 49 行.
+NOTIC: [8] Undefined index: form_id /var/www/dzxt/s/tp/Application/Runtime/Cache/Flow/a5362bfbceb71b7680a3db5baedbd843.php 第 49 行.
+NOTIC: [8] Undefined index: form_id /var/www/dzxt/s/tp/Application/Runtime/Cache/Flow/a5362bfbceb71b7680a3db5baedbd843.php 第 49 行.
+NOTIC: [8] Undefined index: form_id /var/www/dzxt/s/tp/Application/Runtime/Cache/Flow/a5362bfbceb71b7680a3db5baedbd843.php 第 49 行.
+NOTIC: [8] Undefined index: form_id /var/www/dzxt/s/tp/Application/Runtime/Cache/Flow/a5362bfbceb71b7680a3db5baedbd843.php 第 49 行.
+NOTIC: [8] Undefined index: form_id /var/www/dzxt/s/tp/Application/Runtime/Cache/Flow/a5362bfbceb71b7680a3db5baedbd843.php 第 49 行.
+NOTIC: [8] Undefined index: form_id /var/www/dzxt/s/tp/Application/Runtime/Cache/Flow/a5362bfbceb71b7680a3db5baedbd843.php 第 49 行.
+NOTIC: [8] Undefined index: form_id /var/www/dzxt/s/tp/Application/Runtime/Cache/Flow/a5362bfbceb71b7680a3db5baedbd843.php 第 49 行.
+NOTIC: [8] Undefined index: form_id /var/www/dzxt/s/tp/Application/Runtime/Cache/Flow/a5362bfbceb71b7680a3db5baedbd843.php 第 49 行.
+NOTIC: [8] Undefined index: form_id /var/www/dzxt/s/tp/Application/Runtime/Cache/Flow/a5362bfbceb71b7680a3db5baedbd843.php 第 49 行.
+NOTIC: [8] Undefined index: form_id /var/www/dzxt/s/tp/Application/Runtime/Cache/Flow/a5362bfbceb71b7680a3db5baedbd843.php 第 49 行.
+NOTIC: [8] Undefined index: form_id /var/www/dzxt/s/tp/Application/Runtime/Cache/Flow/a5362bfbceb71b7680a3db5baedbd843.php 第 49 行.
+NOTIC: [8] Undefined index: form_id /var/www/dzxt/s/tp/Application/Runtime/Cache/Flow/a5362bfbceb71b7680a3db5baedbd843.php 第 49 行.
+NOTIC: [8] Undefined index: form_id /var/www/dzxt/s/tp/Application/Runtime/Cache/Flow/a5362bfbceb71b7680a3db5baedbd843.php 第 49 行.
+NOTIC: [8] Undefined index: form_id /var/www/dzxt/s/tp/Application/Runtime/Cache/Flow/a5362bfbceb71b7680a3db5baedbd843.php 第 49 行.
+NOTIC: [8] Undefined index: form_id /var/www/dzxt/s/tp/Application/Runtime/Cache/Flow/a5362bfbceb71b7680a3db5baedbd843.php 第 49 行.
+NOTIC: [8] Undefined index: form_id /var/www/dzxt/s/tp/Application/Runtime/Cache/Flow/a5362bfbceb71b7680a3db5baedbd843.php 第 49 行.
+NOTIC: [8] Undefined index: form_id /var/www/dzxt/s/tp/Application/Runtime/Cache/Flow/a5362bfbceb71b7680a3db5baedbd843.php 第 49 行.
+NOTIC: [8] Undefined index: form_id /var/www/dzxt/s/tp/Application/Runtime/Cache/Flow/a5362bfbceb71b7680a3db5baedbd843.php 第 49 行.
+NOTIC: [8] Undefined index: form_id /var/www/dzxt/s/tp/Application/Runtime/Cache/Flow/a5362bfbceb71b7680a3db5baedbd843.php 第 49 行.
+NOTIC: [8] Undefined index: form_id /var/www/dzxt/s/tp/Application/Runtime/Cache/Flow/a5362bfbceb71b7680a3db5baedbd843.php 第 49 行.
+NOTIC: [8] Undefined index: form_id /var/www/dzxt/s/tp/Application/Runtime/Cache/Flow/a5362bfbceb71b7680a3db5baedbd843.php 第 49 行.
+NOTIC: [8] Undefined index: form_id /var/www/dzxt/s/tp/Application/Runtime/Cache/Flow/a5362bfbceb71b7680a3db5baedbd843.php 第 49 行.
+NOTIC: [8] Undefined index: form_id /var/www/dzxt/s/tp/Application/Runtime/Cache/Flow/a5362bfbceb71b7680a3db5baedbd843.php 第 49 行.
+NOTIC: [8] Undefined index: form_id /var/www/dzxt/s/tp/Application/Runtime/Cache/Flow/a5362bfbceb71b7680a3db5baedbd843.php 第 49 行.
+NOTIC: [8] Undefined index: form_id /var/www/dzxt/s/tp/Application/Runtime/Cache/Flow/a5362bfbceb71b7680a3db5baedbd843.php 第 49 行.
+NOTIC: [8] Undefined index: form_id /var/www/dzxt/s/tp/Application/Runtime/Cache/Flow/a5362bfbceb71b7680a3db5baedbd843.php 第 49 行.
+NOTIC: [8] Undefined index: form_id /var/www/dzxt/s/tp/Application/Runtime/Cache/Flow/a5362bfbceb71b7680a3db5baedbd843.php 第 49 行.
+NOTIC: [8] Undefined index: form_id /var/www/dzxt/s/tp/Application/Runtime/Cache/Flow/a5362bfbceb71b7680a3db5baedbd843.php 第 49 行.
+NOTIC: [8] Undefined index: form_id /var/www/dzxt/s/tp/Application/Runtime/Cache/Flow/a5362bfbceb71b7680a3db5baedbd843.php 第 49 行.
+NOTIC: [8] Undefined index: form_id /var/www/dzxt/s/tp/Application/Runtime/Cache/Flow/a5362bfbceb71b7680a3db5baedbd843.php 第 49 行.
+NOTIC: [8] Undefined index: form_id /var/www/dzxt/s/tp/Application/Runtime/Cache/Flow/a5362bfbceb71b7680a3db5baedbd843.php 第 49 行.
+NOTIC: [8] Undefined index: form_id /var/www/dzxt/s/tp/Application/Runtime/Cache/Flow/a5362bfbceb71b7680a3db5baedbd843.php 第 49 行.
+NOTIC: [8] Undefined index: form_id /var/www/dzxt/s/tp/Application/Runtime/Cache/Flow/a5362bfbceb71b7680a3db5baedbd843.php 第 49 行.
+NOTIC: [8] Undefined index: form_id /var/www/dzxt/s/tp/Application/Runtime/Cache/Flow/a5362bfbceb71b7680a3db5baedbd843.php 第 49 行.
+NOTIC: [8] Undefined index: form_id /var/www/dzxt/s/tp/Application/Runtime/Cache/Flow/a5362bfbceb71b7680a3db5baedbd843.php 第 49 行.
+NOTIC: [8] Undefined index: form_id /var/www/dzxt/s/tp/Application/Runtime/Cache/Flow/a5362bfbceb71b7680a3db5baedbd843.php 第 49 行.
+NOTIC: [8] Undefined index: form_id /var/www/dzxt/s/tp/Application/Runtime/Cache/Flow/a5362bfbceb71b7680a3db5baedbd843.php 第 49 行.
+NOTIC: [8] Undefined index: form_id /var/www/dzxt/s/tp/Application/Runtime/Cache/Flow/a5362bfbceb71b7680a3db5baedbd843.php 第 49 行.
+NOTIC: [8] Undefined index: form_id /var/www/dzxt/s/tp/Application/Runtime/Cache/Flow/a5362bfbceb71b7680a3db5baedbd843.php 第 49 行.
+NOTIC: [8] Undefined index: form_id /var/www/dzxt/s/tp/Application/Runtime/Cache/Flow/a5362bfbceb71b7680a3db5baedbd843.php 第 49 行.
+NOTIC: [8] Undefined index: form_id /var/www/dzxt/s/tp/Application/Runtime/Cache/Flow/a5362bfbceb71b7680a3db5baedbd843.php 第 49 行.
+NOTIC: [8] Undefined index: form_id /var/www/dzxt/s/tp/Application/Runtime/Cache/Flow/a5362bfbceb71b7680a3db5baedbd843.php 第 49 行.
+NOTIC: [8] Undefined index: form_id /var/www/dzxt/s/tp/Application/Runtime/Cache/Flow/a5362bfbceb71b7680a3db5baedbd843.php 第 49 行.
+NOTIC: [8] Undefined index: form_id /var/www/dzxt/s/tp/Application/Runtime/Cache/Flow/a5362bfbceb71b7680a3db5baedbd843.php 第 49 行.
+NOTIC: [8] Undefined index: form_id /var/www/dzxt/s/tp/Application/Runtime/Cache/Flow/a5362bfbceb71b7680a3db5baedbd843.php 第 49 行.
+NOTIC: [8] Undefined index: form_id /var/www/dzxt/s/tp/Application/Runtime/Cache/Flow/a5362bfbceb71b7680a3db5baedbd843.php 第 49 行.
+NOTIC: [8] Undefined index: form_id /var/www/dzxt/s/tp/Application/Runtime/Cache/Flow/a5362bfbceb71b7680a3db5baedbd843.php 第 49 行.
+NOTIC: [8] Undefined index: form_id /var/www/dzxt/s/tp/Application/Runtime/Cache/Flow/a5362bfbceb71b7680a3db5baedbd843.php 第 49 行.
+NOTIC: [8] Undefined index: form_id /var/www/dzxt/s/tp/Application/Runtime/Cache/Flow/a5362bfbceb71b7680a3db5baedbd843.php 第 49 行.
+NOTIC: [8] Undefined index: form_id /var/www/dzxt/s/tp/Application/Runtime/Cache/Flow/a5362bfbceb71b7680a3db5baedbd843.php 第 49 行.
+NOTIC: [8] Undefined index: form_id /var/www/dzxt/s/tp/Application/Runtime/Cache/Flow/a5362bfbceb71b7680a3db5baedbd843.php 第 49 行.
+NOTIC: [8] Undefined index: form_id /var/www/dzxt/s/tp/Application/Runtime/Cache/Flow/a5362bfbceb71b7680a3db5baedbd843.php 第 49 行.
+NOTIC: [8] Undefined index: form_id /var/www/dzxt/s/tp/Application/Runtime/Cache/Flow/a5362bfbceb71b7680a3db5baedbd843.php 第 49 行.
+NOTIC: [8] Undefined index: form_id /var/www/dzxt/s/tp/Application/Runtime/Cache/Flow/a5362bfbceb71b7680a3db5baedbd843.php 第 49 行.
+NOTIC: [8] Undefined index: form_id /var/www/dzxt/s/tp/Application/Runtime/Cache/Flow/a5362bfbceb71b7680a3db5baedbd843.php 第 49 行.
+NOTIC: [8] Undefined index: form_id /var/www/dzxt/s/tp/Application/Runtime/Cache/Flow/a5362bfbceb71b7680a3db5baedbd843.php 第 49 行.
+NOTIC: [8] Undefined index: flow_desc /var/www/dzxt/s/tp/Application/Runtime/Cache/Flow/a5362bfbceb71b7680a3db5baedbd843.php 第 55 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015701s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015736s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000165s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000196s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000038s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000070s ]
+
+[ 2015-09-25T16:43:28+08:00 ] 14.208.192.136 /s/tp/wwwroot/index.php?s=/Flow/demo/add.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000080s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000035s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000068s ]
+SQL: SHOW COLUMNS FROM `ht_flow` [ RunTime:0.0009s ]
+SQL: INSERT INTO `ht_flow` (`flow_name`,`form_id`,`flow_desc`,`updatetime`,`dateline`) VALUES ('工作传递单','769','','1443170608','1443170608') [ RunTime:0.0230s ]
+
+[ 2015-09-25T16:43:30+08:00 ] 14.208.192.136 /s/tp/wwwroot/index.php?s=/Flow/demo/index/getflow/ok.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000076s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000031s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000062s ]
+SQL: SHOW COLUMNS FROM `ht_flow` [ RunTime:0.0009s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `ht_flow` WHERE `is_del` = 0 LIMIT 1   [ RunTime:0.0002s ]
+NOTIC: [8] Undefined variable: p /var/www/dzxt/s/tp/Application/Flow/Controller/DemoController.class.php 第 22 行.
+NOTIC: [8] Trying to get property of non-object /var/www/dzxt/s/tp/Application/Flow/Controller/DemoController.class.php 第 22 行.
+NOTIC: [8] Undefined variable: p /var/www/dzxt/s/tp/Application/Flow/Controller/DemoController.class.php 第 22 行.
+NOTIC: [8] Trying to get property of non-object /var/www/dzxt/s/tp/Application/Flow/Controller/DemoController.class.php 第 22 行.
+SQL: SELECT `id`,`form_id`,`flow_name`,`flow_desc`,`updatetime`,`dateline` FROM `ht_flow` WHERE `is_del` = 0 ORDER BY id desc  [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `ht_form` [ RunTime:0.0006s ]
+SQL: SELECT * FROM `ht_form` WHERE ( 1=1 AND id='769' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `ht_form` WHERE ( 1=1 AND id='746' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `ht_form` WHERE ( 1=1 AND id='730' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `ht_form` WHERE ( 1=1 AND id='635' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `ht_form` WHERE ( 1=1 AND id='587' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `ht_form` WHERE ( 1=1 AND id='266' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `ht_form` WHERE ( 1=1 AND id='328' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `ht_form` WHERE ( 1=1 AND id='329' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `ht_form` WHERE ( 1=1 AND id='128' ) LIMIT 1   [ RunTime:0.0001s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000053s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000084s ]
+
+[ 2015-09-25T16:43:40+08:00 ] 14.208.192.136 /s/tp/wwwroot/index.php?s=/Flow/flowdesign/index/flow_id/25.html?r=0.6414038885745291
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000078s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000038s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000071s ]
+SQL: SHOW COLUMNS FROM `ht_flow` [ RunTime:0.0009s ]
+SQL: SELECT * FROM `ht_flow` WHERE `id` = 25 AND `is_del` = 0 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `ht_flow_process` [ RunTime:0.0093s ]
+SQL: SELECT * FROM `ht_flow_process` WHERE `flow_id` = 25 AND `is_del` = 0 ORDER BY id asc  [ RunTime:0.0003s ]
+NOTIC: [2] Invalid argument supplied for foreach() /var/www/dzxt/s/tp/Application/Flow/Controller/FlowdesignController.class.php 第 39 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000103s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000137s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006338s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006372s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000034s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000064s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000037s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000069s ]
+
+[ 2015-09-25T16:43:57+08:00 ] 14.208.192.136 /s/tp/wwwroot/index.php?s=/Flow/demo/index/getflow/ok.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000082s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000034s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000065s ]
+SQL: SHOW COLUMNS FROM `ht_flow` [ RunTime:0.0009s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `ht_flow` WHERE `is_del` = 0 LIMIT 1   [ RunTime:0.0001s ]
+NOTIC: [8] Undefined variable: p /var/www/dzxt/s/tp/Application/Flow/Controller/DemoController.class.php 第 22 行.
+NOTIC: [8] Trying to get property of non-object /var/www/dzxt/s/tp/Application/Flow/Controller/DemoController.class.php 第 22 行.
+NOTIC: [8] Undefined variable: p /var/www/dzxt/s/tp/Application/Flow/Controller/DemoController.class.php 第 22 行.
+NOTIC: [8] Trying to get property of non-object /var/www/dzxt/s/tp/Application/Flow/Controller/DemoController.class.php 第 22 行.
+SQL: SELECT `id`,`form_id`,`flow_name`,`flow_desc`,`updatetime`,`dateline` FROM `ht_flow` WHERE `is_del` = 0 ORDER BY id desc  [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `ht_form` [ RunTime:0.0006s ]
+SQL: SELECT * FROM `ht_form` WHERE ( 1=1 AND id='769' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `ht_form` WHERE ( 1=1 AND id='746' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `ht_form` WHERE ( 1=1 AND id='730' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `ht_form` WHERE ( 1=1 AND id='635' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `ht_form` WHERE ( 1=1 AND id='587' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `ht_form` WHERE ( 1=1 AND id='266' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `ht_form` WHERE ( 1=1 AND id='328' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `ht_form` WHERE ( 1=1 AND id='329' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `ht_form` WHERE ( 1=1 AND id='128' ) LIMIT 1   [ RunTime:0.0001s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000039s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000068s ]
+
+[ 2015-09-25T16:44:01+08:00 ] 14.208.192.136 /s/tp/wwwroot/index.php?s=/Flow/flowdesign/index/flow_id/25.html?r=0.663023470985448
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000080s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000039s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000071s ]
+SQL: SHOW COLUMNS FROM `ht_flow` [ RunTime:0.0009s ]
+SQL: SELECT * FROM `ht_flow` WHERE `id` = 25 AND `is_del` = 0 LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `ht_flow_process` [ RunTime:0.0013s ]
+SQL: SELECT * FROM `ht_flow_process` WHERE `flow_id` = 25 AND `is_del` = 0 ORDER BY id asc  [ RunTime:0.0001s ]
+NOTIC: [2] Invalid argument supplied for foreach() /var/www/dzxt/s/tp/Application/Flow/Controller/FlowdesignController.class.php 第 39 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000112s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000146s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006127s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006161s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000035s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000065s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000038s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000071s ]
+
+[ 2015-09-25T16:46:22+08:00 ] 14.208.192.136 /s/tp/wwwroot/index.php?s=/Flow/demo/index/getflow/ok.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000079s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000036s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000066s ]
+SQL: SHOW COLUMNS FROM `ht_flow` [ RunTime:0.0009s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `ht_flow` WHERE `is_del` = 0 LIMIT 1   [ RunTime:0.0001s ]
+NOTIC: [8] Undefined variable: p /var/www/dzxt/s/tp/Application/Flow/Controller/DemoController.class.php 第 22 行.
+NOTIC: [8] Trying to get property of non-object /var/www/dzxt/s/tp/Application/Flow/Controller/DemoController.class.php 第 22 行.
+NOTIC: [8] Undefined variable: p /var/www/dzxt/s/tp/Application/Flow/Controller/DemoController.class.php 第 22 行.
+NOTIC: [8] Trying to get property of non-object /var/www/dzxt/s/tp/Application/Flow/Controller/DemoController.class.php 第 22 行.
+SQL: SELECT `id`,`form_id`,`flow_name`,`flow_desc`,`updatetime`,`dateline` FROM `ht_flow` WHERE `is_del` = 0 ORDER BY id desc  [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `ht_form` [ RunTime:0.0006s ]
+SQL: SELECT * FROM `ht_form` WHERE ( 1=1 AND id='769' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `ht_form` WHERE ( 1=1 AND id='746' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `ht_form` WHERE ( 1=1 AND id='730' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `ht_form` WHERE ( 1=1 AND id='635' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `ht_form` WHERE ( 1=1 AND id='587' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `ht_form` WHERE ( 1=1 AND id='266' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `ht_form` WHERE ( 1=1 AND id='328' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `ht_form` WHERE ( 1=1 AND id='329' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `ht_form` WHERE ( 1=1 AND id='128' ) LIMIT 1   [ RunTime:0.0001s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000039s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000068s ]
+
+[ 2015-09-25T16:46:25+08:00 ] 14.208.192.136 /s/tp/wwwroot/index.php?s=/Flow/flowdesign/index/flow_id/25.html?r=0.40747879282571375
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000081s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000037s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000071s ]
+SQL: SHOW COLUMNS FROM `ht_flow` [ RunTime:0.0009s ]
+SQL: SELECT * FROM `ht_flow` WHERE `id` = 25 AND `is_del` = 0 LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `ht_flow_process` [ RunTime:0.0012s ]
+SQL: SELECT * FROM `ht_flow_process` WHERE `flow_id` = 25 AND `is_del` = 0 ORDER BY id asc  [ RunTime:0.0001s ]
+NOTIC: [2] Invalid argument supplied for foreach() /var/www/dzxt/s/tp/Application/Flow/Controller/FlowdesignController.class.php 第 39 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000113s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000148s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006442s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006476s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000034s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000062s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000037s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000068s ]
+
+[ 2015-09-25T16:46:39+08:00 ] 14.208.192.136 /s/tp/wwwroot/index.php?s=/Flow/demo/index/getflow/ok.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000081s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000035s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000065s ]
+SQL: SHOW COLUMNS FROM `ht_flow` [ RunTime:0.0009s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `ht_flow` WHERE `is_del` = 0 LIMIT 1   [ RunTime:0.0001s ]
+NOTIC: [8] Undefined variable: p /var/www/dzxt/s/tp/Application/Flow/Controller/DemoController.class.php 第 22 行.
+NOTIC: [8] Trying to get property of non-object /var/www/dzxt/s/tp/Application/Flow/Controller/DemoController.class.php 第 22 行.
+NOTIC: [8] Undefined variable: p /var/www/dzxt/s/tp/Application/Flow/Controller/DemoController.class.php 第 22 行.
+NOTIC: [8] Trying to get property of non-object /var/www/dzxt/s/tp/Application/Flow/Controller/DemoController.class.php 第 22 行.
+SQL: SELECT `id`,`form_id`,`flow_name`,`flow_desc`,`updatetime`,`dateline` FROM `ht_flow` WHERE `is_del` = 0 ORDER BY id desc  [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `ht_form` [ RunTime:0.0006s ]
+SQL: SELECT * FROM `ht_form` WHERE ( 1=1 AND id='769' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `ht_form` WHERE ( 1=1 AND id='746' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `ht_form` WHERE ( 1=1 AND id='730' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `ht_form` WHERE ( 1=1 AND id='635' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `ht_form` WHERE ( 1=1 AND id='587' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `ht_form` WHERE ( 1=1 AND id='266' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `ht_form` WHERE ( 1=1 AND id='328' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `ht_form` WHERE ( 1=1 AND id='329' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `ht_form` WHERE ( 1=1 AND id='128' ) LIMIT 1   [ RunTime:0.0001s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000050s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000081s ]
+
+[ 2015-09-25T16:46:43+08:00 ] 14.208.192.136 /s/tp/wwwroot/index.php?s=/Flow/flowdesign/index/flow_id/25.html?r=0.8952968833036721
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000082s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000039s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000072s ]
+SQL: SHOW COLUMNS FROM `ht_flow` [ RunTime:0.0009s ]
+SQL: SELECT * FROM `ht_flow` WHERE `id` = 25 AND `is_del` = 0 LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `ht_flow_process` [ RunTime:0.0012s ]
+SQL: SELECT * FROM `ht_flow_process` WHERE `flow_id` = 25 AND `is_del` = 0 ORDER BY id asc  [ RunTime:0.0001s ]
+NOTIC: [2] Invalid argument supplied for foreach() /var/www/dzxt/s/tp/Application/Flow/Controller/FlowdesignController.class.php 第 39 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000130s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000165s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006165s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006199s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000034s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000063s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000037s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000068s ]
+
+[ 2015-09-25T16:47:22+08:00 ] 14.208.192.136 /s/tp/wwwroot/index.php?s=/Flow/demo/index/getflow/ok.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000075s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000035s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000066s ]
+SQL: SHOW COLUMNS FROM `ht_flow` [ RunTime:0.0009s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `ht_flow` WHERE `is_del` = 0 LIMIT 1   [ RunTime:0.0001s ]
+NOTIC: [8] Undefined variable: p /var/www/dzxt/s/tp/Application/Flow/Controller/DemoController.class.php 第 22 行.
+NOTIC: [8] Trying to get property of non-object /var/www/dzxt/s/tp/Application/Flow/Controller/DemoController.class.php 第 22 行.
+NOTIC: [8] Undefined variable: p /var/www/dzxt/s/tp/Application/Flow/Controller/DemoController.class.php 第 22 行.
+NOTIC: [8] Trying to get property of non-object /var/www/dzxt/s/tp/Application/Flow/Controller/DemoController.class.php 第 22 行.
+SQL: SELECT `id`,`form_id`,`flow_name`,`flow_desc`,`updatetime`,`dateline` FROM `ht_flow` WHERE `is_del` = 0 ORDER BY id desc  [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `ht_form` [ RunTime:0.0006s ]
+SQL: SELECT * FROM `ht_form` WHERE ( 1=1 AND id='769' ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `ht_form` WHERE ( 1=1 AND id='746' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `ht_form` WHERE ( 1=1 AND id='730' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `ht_form` WHERE ( 1=1 AND id='635' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `ht_form` WHERE ( 1=1 AND id='587' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `ht_form` WHERE ( 1=1 AND id='266' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `ht_form` WHERE ( 1=1 AND id='328' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `ht_form` WHERE ( 1=1 AND id='329' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `ht_form` WHERE ( 1=1 AND id='128' ) LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000045s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000075s ]
+
+[ 2015-09-25T16:47:25+08:00 ] 14.208.192.136 /s/tp/wwwroot/index.php?s=/Flow/flowdesign/index/flow_id/25.html?r=0.7993196316529065
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000083s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000039s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000073s ]
+SQL: SHOW COLUMNS FROM `ht_flow` [ RunTime:0.0081s ]
+SQL: SELECT * FROM `ht_flow` WHERE `id` = 25 AND `is_del` = 0 LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `ht_flow_process` [ RunTime:0.0013s ]
+SQL: SELECT * FROM `ht_flow_process` WHERE `flow_id` = 25 AND `is_del` = 0 ORDER BY id asc  [ RunTime:0.0001s ]
+NOTIC: [2] Invalid argument supplied for foreach() /var/www/dzxt/s/tp/Application/Flow/Controller/FlowdesignController.class.php 第 39 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000113s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000148s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006108s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006143s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000034s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000063s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000037s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000069s ]
+
+[ 2015-09-25T16:47:34+08:00 ] 14.208.192.136 /s/tp/wwwroot/index.php?s=/Flow/Flowdesign/save_canvas.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000075s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000037s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000067s ]
+
+[ 2015-09-25T16:47:39+08:00 ] 14.208.192.136 /s/tp/wwwroot/index.php?s=/Flow/Flowdesign/save_canvas.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000078s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000034s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000064s ]
+
+[ 2015-09-25T16:47:54+08:00 ] 14.208.192.136 /s/tp/wwwroot/index.php?s=/Flow/demo/edit/flow_id/17.html?r=0.644780534086749
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000077s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000039s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000072s ]
+SQL: SHOW COLUMNS FROM `ht_flow` [ RunTime:0.0009s ]
+SQL: SELECT * FROM `ht_flow` WHERE `id` = 17 AND `is_del` = 0 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `ht_form` [ RunTime:0.0006s ]
+SQL: SELECT `id`,`form_name` FROM `ht_form` WHERE `is_del` = 0 AND `type` = 0  [ RunTime:0.0007s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000042s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000077s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.003831s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.003867s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000034s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000063s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000037s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000068s ]
+
+[ 2015-09-25T16:48:05+08:00 ] 14.208.192.136 /s/tp/wwwroot/index.php?s=/Flow/demo/edit/flow_id/25.html?r=0.8671600392553955
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000078s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000037s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000071s ]
+SQL: SHOW COLUMNS FROM `ht_flow` [ RunTime:0.0009s ]
+SQL: SELECT * FROM `ht_flow` WHERE `id` = 25 AND `is_del` = 0 LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `ht_form` [ RunTime:0.0006s ]
+SQL: SELECT `id`,`form_name` FROM `ht_form` WHERE `is_del` = 0 AND `type` = 0  [ RunTime:0.0001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000041s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000075s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.004205s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.004242s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000033s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000063s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000036s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000068s ]
+
+[ 2015-09-25T16:48:23+08:00 ] 14.208.192.136 /s/tp/wwwroot/index.php?s=/Flow/demo.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000083s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000036s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000070s ]
+SQL: SHOW COLUMNS FROM `ht_flow` [ RunTime:0.0009s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `ht_flow` WHERE `is_del` = 0 LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `id`,`form_id`,`flow_name`,`flow_desc`,`updatetime`,`dateline` FROM `ht_flow` WHERE `is_del` = 0 ORDER BY id desc LIMIT 0,5   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `ht_form` [ RunTime:0.0006s ]
+SQL: SELECT * FROM `ht_form` WHERE ( 1=1 AND id='769' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `ht_form` WHERE ( 1=1 AND id='746' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `ht_form` WHERE ( 1=1 AND id='730' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `ht_form` WHERE ( 1=1 AND id='635' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `ht_form` WHERE ( 1=1 AND id='587' ) LIMIT 1   [ RunTime:0.0001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000043s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000078s ]
+NOTIC: [8] Undefined index: fields /var/www/dzxt/s/tp/Application/Runtime/Cache/Flow/662ed522db5feac180987a31498d338d.php 第 61 行.
+NOTIC: [8] Undefined index: fields /var/www/dzxt/s/tp/Application/Runtime/Cache/Flow/662ed522db5feac180987a31498d338d.php 第 61 行.
+NOTIC: [8] Undefined index: fields /var/www/dzxt/s/tp/Application/Runtime/Cache/Flow/662ed522db5feac180987a31498d338d.php 第 61 行.
+NOTIC: [8] Undefined index: fields /var/www/dzxt/s/tp/Application/Runtime/Cache/Flow/662ed522db5feac180987a31498d338d.php 第 61 行.
+NOTIC: [8] Undefined index: fields /var/www/dzxt/s/tp/Application/Runtime/Cache/Flow/662ed522db5feac180987a31498d338d.php 第 61 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.004585s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.004621s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000034s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000064s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000035s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000065s ]
+
+[ 2015-09-25T16:48:28+08:00 ] 14.208.192.136 /s/tp/wwwroot/index.php?s=/Flow/flowdesign/index/flow_id/25.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000073s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000036s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000069s ]
+SQL: SHOW COLUMNS FROM `ht_flow` [ RunTime:0.0009s ]
+SQL: SELECT * FROM `ht_flow` WHERE `id` = 25 AND `is_del` = 0 LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `ht_flow_process` [ RunTime:0.0012s ]
+SQL: SELECT * FROM `ht_flow_process` WHERE `flow_id` = 25 AND `is_del` = 0 ORDER BY id asc  [ RunTime:0.0001s ]
+NOTIC: [2] Invalid argument supplied for foreach() /var/www/dzxt/s/tp/Application/Flow/Controller/FlowdesignController.class.php 第 39 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000112s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000145s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006104s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006138s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000035s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000064s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000038s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000069s ]
+
+[ 2015-09-25T16:48:44+08:00 ] 14.208.192.136 /s/tp/wwwroot/index.php?s=/Flow/demo/index/getflow/ok.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000084s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000037s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000068s ]
+SQL: SHOW COLUMNS FROM `ht_flow` [ RunTime:0.0009s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `ht_flow` WHERE `is_del` = 0 LIMIT 1   [ RunTime:0.0001s ]
+NOTIC: [8] Undefined variable: p /var/www/dzxt/s/tp/Application/Flow/Controller/DemoController.class.php 第 22 行.
+NOTIC: [8] Trying to get property of non-object /var/www/dzxt/s/tp/Application/Flow/Controller/DemoController.class.php 第 22 行.
+NOTIC: [8] Undefined variable: p /var/www/dzxt/s/tp/Application/Flow/Controller/DemoController.class.php 第 22 行.
+NOTIC: [8] Trying to get property of non-object /var/www/dzxt/s/tp/Application/Flow/Controller/DemoController.class.php 第 22 行.
+SQL: SELECT `id`,`form_id`,`flow_name`,`flow_desc`,`updatetime`,`dateline` FROM `ht_flow` WHERE `is_del` = 0 ORDER BY id desc  [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `ht_form` [ RunTime:0.0006s ]
+SQL: SELECT * FROM `ht_form` WHERE ( 1=1 AND id='769' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `ht_form` WHERE ( 1=1 AND id='746' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `ht_form` WHERE ( 1=1 AND id='730' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `ht_form` WHERE ( 1=1 AND id='635' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `ht_form` WHERE ( 1=1 AND id='587' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `ht_form` WHERE ( 1=1 AND id='266' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `ht_form` WHERE ( 1=1 AND id='328' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `ht_form` WHERE ( 1=1 AND id='329' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `ht_form` WHERE ( 1=1 AND id='128' ) LIMIT 1   [ RunTime:0.0001s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000052s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000083s ]
+
+[ 2015-09-25T16:48:48+08:00 ] 14.208.192.136 /s/tp/wwwroot/index.php?s=/Flow/demo/edit/flow_id/21.html?r=0.3737977035343647
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000085s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000041s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000074s ]
+SQL: SHOW COLUMNS FROM `ht_flow` [ RunTime:0.0009s ]
+SQL: SELECT * FROM `ht_flow` WHERE `id` = 21 AND `is_del` = 0 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `ht_form` [ RunTime:0.0006s ]
+SQL: SELECT `id`,`form_name` FROM `ht_form` WHERE `is_del` = 0 AND `type` = 0  [ RunTime:0.0001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000042s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000076s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.003851s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.003887s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000035s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000064s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000038s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000069s ]
+
+[ 2015-09-25T16:48:50+08:00 ] 14.208.192.136 /s/tp/wwwroot/index.php?s=/Flow/demo.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000064s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000030s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000063s ]
+SQL: SHOW COLUMNS FROM `ht_flow` [ RunTime:0.0009s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `ht_flow` WHERE `is_del` = 0 LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `id`,`form_id`,`flow_name`,`flow_desc`,`updatetime`,`dateline` FROM `ht_flow` WHERE `is_del` = 0 ORDER BY id desc LIMIT 0,5   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `ht_form` [ RunTime:0.0006s ]
+SQL: SELECT * FROM `ht_form` WHERE ( 1=1 AND id='769' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `ht_form` WHERE ( 1=1 AND id='746' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `ht_form` WHERE ( 1=1 AND id='730' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `ht_form` WHERE ( 1=1 AND id='635' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `ht_form` WHERE ( 1=1 AND id='587' ) LIMIT 1   [ RunTime:0.0001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000044s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000081s ]
+NOTIC: [8] Undefined index: fields /var/www/dzxt/s/tp/Application/Runtime/Cache/Flow/662ed522db5feac180987a31498d338d.php 第 61 行.
+NOTIC: [8] Undefined index: fields /var/www/dzxt/s/tp/Application/Runtime/Cache/Flow/662ed522db5feac180987a31498d338d.php 第 61 行.
+NOTIC: [8] Undefined index: fields /var/www/dzxt/s/tp/Application/Runtime/Cache/Flow/662ed522db5feac180987a31498d338d.php 第 61 行.
+NOTIC: [8] Undefined index: fields /var/www/dzxt/s/tp/Application/Runtime/Cache/Flow/662ed522db5feac180987a31498d338d.php 第 61 行.
+NOTIC: [8] Undefined index: fields /var/www/dzxt/s/tp/Application/Runtime/Cache/Flow/662ed522db5feac180987a31498d338d.php 第 61 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.004780s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.004814s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000028s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000058s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000030s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000061s ]
+
+[ 2015-09-25T16:49:25+08:00 ] 14.208.192.136 /s/tp/wwwroot/index.php?s=/Flow/demo/index/getflow/ok.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000076s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000036s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000067s ]
+SQL: SHOW COLUMNS FROM `ht_flow` [ RunTime:0.0009s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `ht_flow` WHERE `is_del` = 0 LIMIT 1   [ RunTime:0.0001s ]
+NOTIC: [8] Undefined variable: p /var/www/dzxt/s/tp/Application/Flow/Controller/DemoController.class.php 第 22 行.
+NOTIC: [8] Trying to get property of non-object /var/www/dzxt/s/tp/Application/Flow/Controller/DemoController.class.php 第 22 行.
+NOTIC: [8] Undefined variable: p /var/www/dzxt/s/tp/Application/Flow/Controller/DemoController.class.php 第 22 行.
+NOTIC: [8] Trying to get property of non-object /var/www/dzxt/s/tp/Application/Flow/Controller/DemoController.class.php 第 22 行.
+SQL: SELECT `id`,`form_id`,`flow_name`,`flow_desc`,`updatetime`,`dateline` FROM `ht_flow` WHERE `is_del` = 0 ORDER BY id desc  [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `ht_form` [ RunTime:0.0006s ]
+SQL: SELECT * FROM `ht_form` WHERE ( 1=1 AND id='769' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `ht_form` WHERE ( 1=1 AND id='746' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `ht_form` WHERE ( 1=1 AND id='730' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `ht_form` WHERE ( 1=1 AND id='635' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `ht_form` WHERE ( 1=1 AND id='587' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `ht_form` WHERE ( 1=1 AND id='266' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `ht_form` WHERE ( 1=1 AND id='328' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `ht_form` WHERE ( 1=1 AND id='329' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `ht_form` WHERE ( 1=1 AND id='128' ) LIMIT 1   [ RunTime:0.0001s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000039s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000068s ]
+
+[ 2015-09-25T16:50:54+08:00 ] 14.208.192.136 /s/tp/wwwroot/index.php?s=/Flow/flowdesign/index/flow_id/25.html?r=0.9271179980101272
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000092s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000037s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000070s ]
+SQL: SHOW COLUMNS FROM `ht_flow` [ RunTime:0.0009s ]
+SQL: SELECT * FROM `ht_flow` WHERE `id` = 25 AND `is_del` = 0 LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `ht_flow_process` [ RunTime:0.0013s ]
+SQL: SELECT * FROM `ht_flow_process` WHERE `flow_id` = 25 AND `is_del` = 0 ORDER BY id asc  [ RunTime:0.0001s ]
+NOTIC: [2] Invalid argument supplied for foreach() /var/www/dzxt/s/tp/Application/Flow/Controller/FlowdesignController.class.php 第 39 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000112s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000147s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006082s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006116s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000034s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000063s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000046s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000078s ]
+
+[ 2015-09-25T16:50:54+08:00 ] 14.208.192.136 /s/tp/wwwroot/index.php?s=/Flow/flowdesign/index/flow_id/25.html?r=0.7525807291067765
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000067s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000034s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000066s ]
+SQL: SHOW COLUMNS FROM `ht_flow` [ RunTime:0.0009s ]
+SQL: SELECT * FROM `ht_flow` WHERE `id` = 25 AND `is_del` = 0 LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `ht_flow_process` [ RunTime:0.0012s ]
+SQL: SELECT * FROM `ht_flow_process` WHERE `flow_id` = 25 AND `is_del` = 0 ORDER BY id asc  [ RunTime:0.0001s ]
+NOTIC: [2] Invalid argument supplied for foreach() /var/www/dzxt/s/tp/Application/Flow/Controller/FlowdesignController.class.php 第 39 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000118s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000152s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006117s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006152s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000027s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000057s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000033s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000065s ]
+
+[ 2015-09-25T16:52:07+08:00 ] 14.208.192.136 /s/tp/wwwroot/index.php?s=/Flow/demo/index/getflow/ok.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000078s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000037s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000068s ]
+SQL: SHOW COLUMNS FROM `ht_flow` [ RunTime:0.0008s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `ht_flow` WHERE `is_del` = 0 LIMIT 1   [ RunTime:0.0001s ]
+NOTIC: [8] Undefined variable: p /var/www/dzxt/s/tp/Application/Flow/Controller/DemoController.class.php 第 22 行.
+NOTIC: [8] Trying to get property of non-object /var/www/dzxt/s/tp/Application/Flow/Controller/DemoController.class.php 第 22 行.
+NOTIC: [8] Undefined variable: p /var/www/dzxt/s/tp/Application/Flow/Controller/DemoController.class.php 第 22 行.
+NOTIC: [8] Trying to get property of non-object /var/www/dzxt/s/tp/Application/Flow/Controller/DemoController.class.php 第 22 行.
+SQL: SELECT `id`,`form_id`,`flow_name`,`flow_desc`,`updatetime`,`dateline` FROM `ht_flow` WHERE `is_del` = 0 ORDER BY id desc  [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `ht_form` [ RunTime:0.0006s ]
+SQL: SELECT * FROM `ht_form` WHERE ( 1=1 AND id='769' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `ht_form` WHERE ( 1=1 AND id='746' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `ht_form` WHERE ( 1=1 AND id='730' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `ht_form` WHERE ( 1=1 AND id='635' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `ht_form` WHERE ( 1=1 AND id='587' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `ht_form` WHERE ( 1=1 AND id='266' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `ht_form` WHERE ( 1=1 AND id='328' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `ht_form` WHERE ( 1=1 AND id='329' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `ht_form` WHERE ( 1=1 AND id='128' ) LIMIT 1   [ RunTime:0.0001s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000040s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000070s ]
+
+[ 2015-09-25T16:57:19+08:00 ] 14.208.192.136 /s/tp/wwwroot/index.php?s=/Flow/demo/index/getflow/ok.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000081s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000037s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000067s ]
+SQL: SHOW COLUMNS FROM `ht_flow` [ RunTime:0.0009s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `ht_flow` WHERE `is_del` = 0 LIMIT 1   [ RunTime:0.0001s ]
+NOTIC: [8] Undefined variable: p /var/www/dzxt/s/tp/Application/Flow/Controller/DemoController.class.php 第 22 行.
+NOTIC: [8] Trying to get property of non-object /var/www/dzxt/s/tp/Application/Flow/Controller/DemoController.class.php 第 22 行.
+NOTIC: [8] Undefined variable: p /var/www/dzxt/s/tp/Application/Flow/Controller/DemoController.class.php 第 22 行.
+NOTIC: [8] Trying to get property of non-object /var/www/dzxt/s/tp/Application/Flow/Controller/DemoController.class.php 第 22 行.
+SQL: SELECT `id`,`form_id`,`flow_name`,`flow_desc`,`updatetime`,`dateline` FROM `ht_flow` WHERE `is_del` = 0 ORDER BY id desc  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ht_form` [ RunTime:0.0006s ]
+SQL: SELECT * FROM `ht_form` WHERE ( 1=1 AND id='769' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `ht_form` WHERE ( 1=1 AND id='746' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `ht_form` WHERE ( 1=1 AND id='730' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `ht_form` WHERE ( 1=1 AND id='635' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `ht_form` WHERE ( 1=1 AND id='587' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `ht_form` WHERE ( 1=1 AND id='266' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `ht_form` WHERE ( 1=1 AND id='328' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `ht_form` WHERE ( 1=1 AND id='329' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `ht_form` WHERE ( 1=1 AND id='128' ) LIMIT 1   [ RunTime:0.0001s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000040s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000070s ]
+
+[ 2015-09-25T16:57:27+08:00 ] 14.208.192.136 /s/tp/wwwroot/index.php?s=/Flow/flowdesign/index/flow_id/25.html?r=0.04596119783363217
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000100s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000041s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000074s ]
+SQL: SHOW COLUMNS FROM `ht_flow` [ RunTime:0.0009s ]
+SQL: SELECT * FROM `ht_flow` WHERE `id` = 25 AND `is_del` = 0 LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `ht_flow_process` [ RunTime:0.0014s ]
+SQL: SELECT * FROM `ht_flow_process` WHERE `flow_id` = 25 AND `is_del` = 0 ORDER BY id asc  [ RunTime:0.0001s ]
+NOTIC: [2] Invalid argument supplied for foreach() /var/www/dzxt/s/tp/Application/Flow/Controller/FlowdesignController.class.php 第 39 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000115s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000150s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006486s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006522s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000036s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000066s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000040s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000072s ]
+
+[ 2015-09-25T16:57:31+08:00 ] 14.208.192.136 /s/tp/wwwroot/index.php?s=/Flow/Flowdesign/add_process.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000084s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000037s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000067s ]
+SQL: SHOW COLUMNS FROM `ht_flow` [ RunTime:0.0009s ]
+SQL: SELECT * FROM `ht_flow` WHERE `id` = 25 AND `is_del` = 0 LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `ht_flow_process` [ RunTime:0.0013s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ht_flow_process` WHERE `flow_id` = 25 AND `is_del` = 0 LIMIT 1   [ RunTime:0.0002s ]
+SQL: INSERT INTO `ht_flow_process` (`flow_id`,`process_type`,`process_name`,`setleft`,`settop`,`process_to`,`auto_sponsor_ids`,`auto_sponsor_text`,`style`,`child_after`,`auto_unlock`) VALUES ('25','is_one','新建步骤','480','154','','154','chenxuchan','{\"icon\":\"icon-star\",\"width\":\"120\",\"height\":\"30\",\"color\":\"#0e76a8\"}','1','1') [ RunTime:0.0202s ]
+NOTIC: [8] Undefined variable: max_step /var/www/dzxt/s/tp/Application/Flow/Controller/FlowdesignController.class.php 第 130 行.
+
+[ 2015-09-25T16:57:59+08:00 ] 14.208.192.136 /s/tp/wwwroot/index.php?s=/Flow/Flowdesign/attribute/id/147.html&_t=1443171473695
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000076s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000037s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000067s ]
+SQL: SHOW COLUMNS FROM `ht_flow` [ RunTime:0.0009s ]
+SQL: SHOW COLUMNS FROM `ht_flow_process` [ RunTime:0.0013s ]
+SQL: SHOW COLUMNS FROM `ht_form` [ RunTime:0.0006s ]
+SQL: SELECT * FROM `ht_flow_process` WHERE `id` = 147 AND `is_del` = 0 LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `ht_flow` WHERE `id` = 25 AND `is_del` = 0 LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `id`,`form_name`,`content_data`,`fields` FROM `ht_form` WHERE `id` = 769 AND `is_del` = 0 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `id`,`process_name`,`process_type` FROM `ht_flow_process` WHERE `flow_id` = 25 AND `is_del` = 0  [ RunTime:0.0001s ]
+SQL: SELECT `id`,`flow_name` FROM `ht_flow` WHERE `is_del` = 0  [ RunTime:0.0001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000157s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000190s ]
+NOTIC: [2] in_array() expects parameter 2 to be array, string given /var/www/dzxt/s/tp/Application/Runtime/Cache/Flow/0b245d552096da865848fda1c84e0c24.php 第 100 行.
+NOTIC: [8] Undefined index: auto_user_text /var/www/dzxt/s/tp/Application/Runtime/Cache/Flow/0b245d552096da865848fda1c84e0c24.php 第 195 行.
+NOTIC: [8] Undefined index: auto_userop_text /var/www/dzxt/s/tp/Application/Runtime/Cache/Flow/0b245d552096da865848fda1c84e0c24.php 第 204 行.
+NOTIC: [8] Undefined index: auto_role /var/www/dzxt/s/tp/Application/Runtime/Cache/Flow/0b245d552096da865848fda1c84e0c24.php 第 213 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.019966s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.019998s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000036s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000061s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000034s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000063s ]
+
+[ 2015-09-25T16:58:32+08:00 ] 14.208.192.136 /s/tp/wwwroot/index.php?s=/Flow/demo/super_dialog/op/user.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000079s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000038s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000070s ]
+SQL: SHOW COLUMNS FROM `ht_user` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `ht_user`  [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000047s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000082s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.003103s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.003139s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000032s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000062s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000035s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000065s ]
+
+[ 2015-09-25T16:59:10+08:00 ] 14.208.192.136 /s/tp/wwwroot/index.php?s=/Flow/demo/super_dialog/op/user.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000082s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000039s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000072s ]
+SQL: SHOW COLUMNS FROM `ht_user` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `ht_user`  [ RunTime:0.0001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000049s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000084s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.003180s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.003216s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000036s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000070s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000040s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000070s ]
+
+[ 2015-09-25T16:59:21+08:00 ] 14.208.192.136 /s/tp/wwwroot/index.php?s=/Flow/demo/super_dialog/op/user.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000080s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000041s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000072s ]
+SQL: SHOW COLUMNS FROM `ht_user` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `ht_user`  [ RunTime:0.0001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000048s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000082s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.003039s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.003073s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000034s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000062s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000043s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000074s ]
+
+[ 2015-09-25T17:03:11+08:00 ] 14.208.192.136 /s/tp/wwwroot/index.php?s=/Flow/Flowdesign/save_attribute.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000080s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000037s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000070s ]
+SQL: SHOW COLUMNS FROM `ht_flow_process` [ RunTime:0.0016s ]
+SQL: SELECT * FROM `ht_flow_process` WHERE `id` = 147 AND `flow_id` = 25 AND `is_del` = 0 LIMIT 1   [ RunTime:0.0003s ]
+SQL: UPDATE `ht_flow_process` SET `process_name`='新建步骤',`process_type`='is_step',`process_to`='',`child_id`='0',`child_after`='1',`child_back_process`='0',`write_fields`='',`secret_fields`='',`auto_person`='0',`auto_unlock`='0',`auto_sponsor_ids`='83',`auto_sponsor_text`='liujuncong',`auto_respon_ids`='',`auto_respon_text`='',`auto_role_ids`='',`auto_role_text`='',`range_user_ids`='',`range_user_text`='',`range_dept_ids`='',`range_dept_text`='',`range_role_ids`='',`range_role_text`='',`receive_type`='0',`is_user_end`='0',`is_userop_pass`='0',`is_sing`='1',`sign_look`='1',`is_back`='1',`out_condition`='[]',`style`='{\"width\":120,\"height\":30,\"color\":\"#0e76a8\",\"icon\":\"icon-star\"}' WHERE `id` = 147 AND `is_del` = 0 [ RunTime:0.0190s ]
+
+[ 2015-09-25T17:04:21+08:00 ] 14.208.192.136 /s/tp/wwwroot/index.php?s=/Flow/flowdesign/index/flow_id/25.html?r=0.20812565755266688
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000085s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000050s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000083s ]
+SQL: SHOW COLUMNS FROM `ht_flow` [ RunTime:0.0009s ]
+SQL: SELECT * FROM `ht_flow` WHERE `id` = 25 AND `is_del` = 0 LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `ht_flow_process` [ RunTime:0.0013s ]
+SQL: SELECT * FROM `ht_flow_process` WHERE `flow_id` = 25 AND `is_del` = 0 ORDER BY id asc  [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000107s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000140s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006132s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006167s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000039s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000068s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000042s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000074s ]
+
+[ 2015-09-25T17:04:34+08:00 ] 14.208.192.136 /s/tp/wwwroot/index.php?s=/Flow/flowdesign/index/flow_id/24.html?r=0.7795043457687018
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000084s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000042s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000075s ]
+SQL: SHOW COLUMNS FROM `ht_flow` [ RunTime:0.0009s ]
+SQL: SELECT * FROM `ht_flow` WHERE `id` = 24 AND `is_del` = 0 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `ht_flow_process` [ RunTime:0.0013s ]
+SQL: SELECT * FROM `ht_flow_process` WHERE `flow_id` = 24 AND `is_del` = 0 ORDER BY id asc  [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000101s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000136s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006101s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006136s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000038s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000067s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000042s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000074s ]
+
+[ 2015-09-25T17:04:48+08:00 ] 14.208.192.136 /s/tp/wwwroot/index.php?s=/Flow/flowdesign/index/flow_id/25.html?r=0.8067886560864745
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000081s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000038s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000071s ]
+SQL: SHOW COLUMNS FROM `ht_flow` [ RunTime:0.0009s ]
+SQL: SELECT * FROM `ht_flow` WHERE `id` = 25 AND `is_del` = 0 LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `ht_flow_process` [ RunTime:0.0012s ]
+SQL: SELECT * FROM `ht_flow_process` WHERE `flow_id` = 25 AND `is_del` = 0 ORDER BY id asc  [ RunTime:0.0001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000106s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000141s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006114s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006148s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000035s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000063s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000037s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000069s ]
+
+[ 2015-09-25T17:05:03+08:00 ] 14.208.192.136 /s/tp/wwwroot/index.php?s=/Flow/Flowdesign/attribute/id/147.html&_t=1443171897727
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000084s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000039s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000069s ]
+SQL: SHOW COLUMNS FROM `ht_flow` [ RunTime:0.0009s ]
+SQL: SHOW COLUMNS FROM `ht_flow_process` [ RunTime:0.0013s ]
+SQL: SHOW COLUMNS FROM `ht_form` [ RunTime:0.0006s ]
+SQL: SELECT * FROM `ht_flow_process` WHERE `id` = 147 AND `is_del` = 0 LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `ht_flow` WHERE `id` = 25 AND `is_del` = 0 LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `id`,`form_name`,`content_data`,`fields` FROM `ht_form` WHERE `id` = 769 AND `is_del` = 0 LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `id`,`process_name`,`process_type` FROM `ht_flow_process` WHERE `flow_id` = 25 AND `is_del` = 0  [ RunTime:0.0002s ]
+SQL: SELECT `id`,`flow_name` FROM `ht_flow` WHERE `is_del` = 0  [ RunTime:0.0001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000157s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000189s ]
+NOTIC: [2] in_array() expects parameter 2 to be array, string given /var/www/dzxt/s/tp/Application/Runtime/Cache/Flow/0b245d552096da865848fda1c84e0c24.php 第 100 行.
+NOTIC: [8] Undefined index: auto_user_text /var/www/dzxt/s/tp/Application/Runtime/Cache/Flow/0b245d552096da865848fda1c84e0c24.php 第 195 行.
+NOTIC: [8] Undefined index: auto_userop_text /var/www/dzxt/s/tp/Application/Runtime/Cache/Flow/0b245d552096da865848fda1c84e0c24.php 第 204 行.
+NOTIC: [8] Undefined index: auto_role /var/www/dzxt/s/tp/Application/Runtime/Cache/Flow/0b245d552096da865848fda1c84e0c24.php 第 213 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.019125s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.019156s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000036s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000062s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000034s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000063s ]
+
+[ 2015-09-25T17:05:22+08:00 ] 14.208.192.136 /s/tp/wwwroot/index.php?s=/Flow/demo/super_dialog/op/user.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000081s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000039s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000071s ]
+SQL: SHOW COLUMNS FROM `ht_user` [ RunTime:0.0056s ]
+SQL: SELECT * FROM `ht_user`  [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000047s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000082s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.003062s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.003098s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000034s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000062s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000036s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000066s ]
+
+[ 2015-09-25T17:05:30+08:00 ] 14.208.192.136 /s/tp/wwwroot/index.php?s=/Flow/Flowdesign/save_attribute.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000081s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000035s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000068s ]
+SQL: SHOW COLUMNS FROM `ht_flow_process` [ RunTime:0.0016s ]
+SQL: SELECT * FROM `ht_flow_process` WHERE `id` = 147 AND `flow_id` = 25 AND `is_del` = 0 LIMIT 1   [ RunTime:0.0003s ]
+SQL: UPDATE `ht_flow_process` SET `process_name`='新建步骤',`process_type`='is_step',`process_to`='',`child_id`='0',`child_after`='1',`child_back_process`='0',`write_fields`='',`secret_fields`='',`auto_person`='0',`auto_unlock`='0',`auto_sponsor_ids`='83',`auto_sponsor_text`='liujuncong',`auto_respon_ids`='',`auto_respon_text`='',`auto_role_ids`='',`auto_role_text`='',`range_user_ids`='',`range_user_text`='',`range_dept_ids`='',`range_dept_text`='',`range_role_ids`='',`range_role_text`='',`receive_type`='0',`is_user_end`='0',`is_userop_pass`='0',`is_sing`='1',`sign_look`='1',`is_back`='1',`out_condition`='[]',`style`='{\"width\":120,\"height\":30,\"color\":\"#0e76a8\",\"icon\":\"icon-star\"}' WHERE `id` = 147 AND `is_del` = 0 [ RunTime:0.0214s ]
+
+[ 2015-09-25T17:05:54+08:00 ] 14.208.192.136 /s/tp/wwwroot/index.php?s=/Flow/flowdesign/index/flow_id/17.html?r=0.5800831191108513
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000083s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000041s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000074s ]
+SQL: SHOW COLUMNS FROM `ht_flow` [ RunTime:0.0008s ]
+SQL: SELECT * FROM `ht_flow` WHERE `id` = 17 AND `is_del` = 0 LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `ht_flow_process` [ RunTime:0.0012s ]
+SQL: SELECT * FROM `ht_flow_process` WHERE `flow_id` = 17 AND `is_del` = 0 ORDER BY id asc  [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000102s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000135s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006093s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006128s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000034s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000065s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000039s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000070s ]
+
+[ 2015-09-25T17:06:10+08:00 ] 14.208.192.136 /s/tp/wwwroot/index.php?s=/Flow/flowdesign/index/flow_id/25.html?r=0.6207371749748446
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000077s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000039s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000072s ]
+SQL: SHOW COLUMNS FROM `ht_flow` [ RunTime:0.0009s ]
+SQL: SELECT * FROM `ht_flow` WHERE `id` = 25 AND `is_del` = 0 LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `ht_flow_process` [ RunTime:0.0013s ]
+SQL: SELECT * FROM `ht_flow_process` WHERE `flow_id` = 25 AND `is_del` = 0 ORDER BY id asc  [ RunTime:0.0001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000107s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000141s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006093s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006127s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000034s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000063s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000036s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000068s ]
+
+[ 2015-09-25T17:07:18+08:00 ] 14.208.192.136 /s/tp/wwwroot/index.php?s=/Flow/flowdesign/index/flow_id/21.html?r=0.9701392254800332
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000082s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000038s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000071s ]
+SQL: SHOW COLUMNS FROM `ht_flow` [ RunTime:0.0009s ]
+SQL: SELECT * FROM `ht_flow` WHERE `id` = 21 AND `is_del` = 0 LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `ht_flow_process` [ RunTime:0.0013s ]
+SQL: SELECT * FROM `ht_flow_process` WHERE `flow_id` = 21 AND `is_del` = 0 ORDER BY id asc  [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000101s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000136s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006076s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006111s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000034s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000065s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000036s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000068s ]
+
+[ 2015-09-25T17:07:56+08:00 ] 14.208.192.136 /s/tp/wwwroot/index.php?s=/Flow/flowdesign/index/flow_id/21.html?r=0.228221158737277
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000087s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000043s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000076s ]
+SQL: SHOW COLUMNS FROM `ht_flow` [ RunTime:0.0009s ]
+SQL: SELECT * FROM `ht_flow` WHERE `id` = 21 AND `is_del` = 0 LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `ht_flow_process` [ RunTime:0.0012s ]
+SQL: SELECT * FROM `ht_flow_process` WHERE `flow_id` = 21 AND `is_del` = 0 ORDER BY id asc  [ RunTime:0.0001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000100s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000135s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006086s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006121s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000038s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000068s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000042s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000074s ]
+
+[ 2015-09-25T20:47:56+08:00 ] 120.82.18.11 /s/tp/wwwroot/index.php?s=/Flow/demo/index/getflow/ok.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000083s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000036s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000066s ]
+SQL: SHOW COLUMNS FROM `ht_flow` [ RunTime:0.0009s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `ht_flow` WHERE `is_del` = 0 LIMIT 1   [ RunTime:0.0001s ]
+NOTIC: [8] Undefined variable: p /var/www/dzxt/s/tp/Application/Flow/Controller/DemoController.class.php 第 22 行.
+NOTIC: [8] Trying to get property of non-object /var/www/dzxt/s/tp/Application/Flow/Controller/DemoController.class.php 第 22 行.
+NOTIC: [8] Undefined variable: p /var/www/dzxt/s/tp/Application/Flow/Controller/DemoController.class.php 第 22 行.
+NOTIC: [8] Trying to get property of non-object /var/www/dzxt/s/tp/Application/Flow/Controller/DemoController.class.php 第 22 行.
+SQL: SELECT `id`,`form_id`,`flow_name`,`flow_desc`,`updatetime`,`dateline` FROM `ht_flow` WHERE `is_del` = 0 ORDER BY id desc  [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `ht_form` [ RunTime:0.0006s ]
+SQL: SELECT * FROM `ht_form` WHERE ( 1=1 AND id='769' ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `ht_form` WHERE ( 1=1 AND id='746' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `ht_form` WHERE ( 1=1 AND id='730' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `ht_form` WHERE ( 1=1 AND id='635' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `ht_form` WHERE ( 1=1 AND id='587' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `ht_form` WHERE ( 1=1 AND id='266' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `ht_form` WHERE ( 1=1 AND id='328' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `ht_form` WHERE ( 1=1 AND id='329' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `ht_form` WHERE ( 1=1 AND id='128' ) LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000044s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000074s ]
+
+[ 2015-09-25T20:48:00+08:00 ] 120.82.18.11 /s/tp/wwwroot/index.php?s=/Flow/flowdesign/index/flow_id/25.html?r=0.8086986901527642
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000097s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000039s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000074s ]
+SQL: SHOW COLUMNS FROM `ht_flow` [ RunTime:0.0009s ]
+SQL: SELECT * FROM `ht_flow` WHERE `id` = 25 AND `is_del` = 0 LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `ht_flow_process` [ RunTime:0.0012s ]
+SQL: SELECT * FROM `ht_flow_process` WHERE `flow_id` = 25 AND `is_del` = 0 ORDER BY id asc  [ RunTime:0.0001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000105s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000140s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006139s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006173s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000033s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000062s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000037s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000070s ]
+

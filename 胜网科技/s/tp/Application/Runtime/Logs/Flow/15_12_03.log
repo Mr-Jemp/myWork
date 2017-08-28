@@ -1,0 +1,392 @@
+[ 2015-12-03T12:28:45+08:00 ] 183.21.27.187 /s/tp/wwwroot/index.php?s=/Flow/demo/index/getflow/ok.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000174s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000069s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000154s ]
+SQL: SHOW COLUMNS FROM `ht_flow` [ RunTime:0.0009s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `ht_flow` WHERE `is_del` = 0 LIMIT 1   [ RunTime:0.0002s ]
+NOTIC: [8] Undefined variable: p /var/www/dzxt/s/tp/Application/Flow/Controller/DemoController.class.php 第 22 行.
+NOTIC: [8] Trying to get property of non-object /var/www/dzxt/s/tp/Application/Flow/Controller/DemoController.class.php 第 22 行.
+NOTIC: [8] Undefined variable: p /var/www/dzxt/s/tp/Application/Flow/Controller/DemoController.class.php 第 22 行.
+NOTIC: [8] Trying to get property of non-object /var/www/dzxt/s/tp/Application/Flow/Controller/DemoController.class.php 第 22 行.
+SQL: SELECT `id`,`form_id`,`flow_name`,`flow_desc`,`updatetime`,`dateline` FROM `ht_flow` WHERE `is_del` = 0 ORDER BY id desc  [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `ht_form` [ RunTime:0.0006s ]
+SQL: SELECT * FROM `ht_form` WHERE ( 1=1 AND id='757' ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `ht_form` WHERE ( 1=1 AND id='775' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `ht_form` WHERE ( 1=1 AND id='772' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `ht_form` WHERE ( 1=1 AND id='769' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `ht_form` WHERE ( 1=1 AND id='746' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `ht_form` WHERE ( 1=1 AND id='730' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `ht_form` WHERE ( 1=1 AND id='587' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `ht_form` WHERE ( 1=1 AND id='266' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `ht_form` WHERE ( 1=1 AND id='328' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `ht_form` WHERE ( 1=1 AND id='329' ) LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000071s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000142s ]
+
+[ 2015-12-03T12:29:06+08:00 ] 183.21.27.187 /s/tp/wwwroot/index.php?s=/Flow/run/getflowlist/type/getmyflow
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000175s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000076s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000166s ]
+NOTIC: [2048] Declaration of Flow\Controller\RunController::show() should be compatible with Think\Controller::show($content, $charset = '', $contentType = '', $prefix = '') /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 4 行.
+SQL: SHOW COLUMNS FROM `ht_run` [ RunTime:0.0012s ]
+SQL: SELECT * FROM `ht_run` WHERE `uid` = '190'  [ RunTime:0.0004s ]
+NOTIC: [8] Undefined variable: is_finish /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 466 行.
+NOTIC: [8] Undefined variable: is_finish /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 466 行.
+NOTIC: [8] Undefined variable: is_finish /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 466 行.
+NOTIC: [8] Undefined variable: is_finish /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 466 行.
+NOTIC: [8] Undefined variable: is_finish /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 466 行.
+NOTIC: [8] Undefined variable: is_finish /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 466 行.
+NOTIC: [8] Undefined variable: is_finish /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 466 行.
+NOTIC: [8] Undefined variable: is_finish /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 466 行.
+NOTIC: [8] Undefined variable: is_finish /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 466 行.
+NOTIC: [8] Undefined variable: is_finish /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 466 行.
+NOTIC: [8] Undefined variable: is_finish /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 466 行.
+NOTIC: [8] Undefined variable: is_finish /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 466 行.
+NOTIC: [8] Undefined variable: is_finish /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 466 行.
+NOTIC: [8] Undefined variable: is_finish /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 466 行.
+NOTIC: [8] Undefined variable: is_finish /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 466 行.
+NOTIC: [8] Undefined variable: is_finish /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 466 行.
+NOTIC: [8] Undefined variable: is_finish /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 466 行.
+NOTIC: [8] Undefined variable: is_finish /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 466 行.
+NOTIC: [8] Undefined variable: is_finish /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 466 行.
+NOTIC: [8] Undefined variable: is_finish /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 466 行.
+NOTIC: [8] Undefined variable: is_finish /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 466 行.
+NOTIC: [8] Undefined variable: is_finish /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 466 行.
+NOTIC: [8] Undefined variable: is_finish /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 466 行.
+NOTIC: [8] Undefined variable: is_finish /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 466 行.
+NOTIC: [8] Undefined variable: is_finish /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 466 行.
+NOTIC: [8] Undefined variable: is_finish /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 466 行.
+NOTIC: [8] Undefined variable: is_finish /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 466 行.
+NOTIC: [8] Undefined variable: is_finish /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 466 行.
+NOTIC: [8] Undefined variable: is_finish /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 466 行.
+NOTIC: [8] Undefined variable: is_finish /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 466 行.
+NOTIC: [8] Undefined variable: is_finish /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 466 行.
+NOTIC: [8] Undefined variable: is_finish /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 466 行.
+NOTIC: [8] Undefined variable: is_finish /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 466 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000053s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000147s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009731s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009823s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000197s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000277s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000073s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000152s ]
+
+[ 2015-12-03T12:29:23+08:00 ] 183.21.27.187 /s/tp/wwwroot/index.php?s=/Flow/run/getflowlist/type/getmyendflow
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000146s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000061s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000145s ]
+NOTIC: [2048] Declaration of Flow\Controller\RunController::show() should be compatible with Think\Controller::show($content, $charset = '', $contentType = '', $prefix = '') /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 4 行.
+SQL: SHOW COLUMNS FROM `ht_run` [ RunTime:0.0011s ]
+SQL: SELECT * FROM `ht_run` WHERE `uid` = '190' AND ( `is_finish` = 2 OR `is_finish` = 4 )  [ RunTime:0.0004s ]
+NOTIC: [2] Invalid argument supplied for foreach() /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 457 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000050s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000135s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.003097s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.003184s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000058s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000135s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000058s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000137s ]
+
+[ 2015-12-03T12:29:25+08:00 ] 183.21.27.187 /s/tp/wwwroot/index.php?s=/Flow/run/getflowlist/type/getnoendflow
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000133s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000055s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000136s ]
+NOTIC: [2048] Declaration of Flow\Controller\RunController::show() should be compatible with Think\Controller::show($content, $charset = '', $contentType = '', $prefix = '') /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 4 行.
+SQL: SHOW COLUMNS FROM `ht_run` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `ht_run` WHERE `uid` = '190' AND ( `is_finish` = 2 OR `is_finish` = 4 )  [ RunTime:0.0001s ]
+NOTIC: [2] Invalid argument supplied for foreach() /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 457 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000049s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000133s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.002712s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.002797s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000051s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000128s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000054s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000144s ]
+
+[ 2015-12-03T12:29:29+08:00 ] 183.21.27.187 /s/tp/wwwroot/index.php?s=/Flow/run/getflowlist/type/getmyflow
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000144s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000063s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000147s ]
+NOTIC: [2048] Declaration of Flow\Controller\RunController::show() should be compatible with Think\Controller::show($content, $charset = '', $contentType = '', $prefix = '') /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 4 行.
+SQL: SHOW COLUMNS FROM `ht_run` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `ht_run` WHERE `uid` = '190'  [ RunTime:0.0001s ]
+NOTIC: [8] Undefined variable: is_finish /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 466 行.
+NOTIC: [8] Undefined variable: is_finish /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 466 行.
+NOTIC: [8] Undefined variable: is_finish /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 466 行.
+NOTIC: [8] Undefined variable: is_finish /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 466 行.
+NOTIC: [8] Undefined variable: is_finish /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 466 行.
+NOTIC: [8] Undefined variable: is_finish /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 466 行.
+NOTIC: [8] Undefined variable: is_finish /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 466 行.
+NOTIC: [8] Undefined variable: is_finish /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 466 行.
+NOTIC: [8] Undefined variable: is_finish /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 466 行.
+NOTIC: [8] Undefined variable: is_finish /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 466 行.
+NOTIC: [8] Undefined variable: is_finish /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 466 行.
+NOTIC: [8] Undefined variable: is_finish /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 466 行.
+NOTIC: [8] Undefined variable: is_finish /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 466 行.
+NOTIC: [8] Undefined variable: is_finish /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 466 行.
+NOTIC: [8] Undefined variable: is_finish /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 466 行.
+NOTIC: [8] Undefined variable: is_finish /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 466 行.
+NOTIC: [8] Undefined variable: is_finish /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 466 行.
+NOTIC: [8] Undefined variable: is_finish /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 466 行.
+NOTIC: [8] Undefined variable: is_finish /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 466 行.
+NOTIC: [8] Undefined variable: is_finish /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 466 行.
+NOTIC: [8] Undefined variable: is_finish /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 466 行.
+NOTIC: [8] Undefined variable: is_finish /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 466 行.
+NOTIC: [8] Undefined variable: is_finish /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 466 行.
+NOTIC: [8] Undefined variable: is_finish /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 466 行.
+NOTIC: [8] Undefined variable: is_finish /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 466 行.
+NOTIC: [8] Undefined variable: is_finish /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 466 行.
+NOTIC: [8] Undefined variable: is_finish /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 466 行.
+NOTIC: [8] Undefined variable: is_finish /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 466 行.
+NOTIC: [8] Undefined variable: is_finish /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 466 行.
+NOTIC: [8] Undefined variable: is_finish /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 466 行.
+NOTIC: [8] Undefined variable: is_finish /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 466 行.
+NOTIC: [8] Undefined variable: is_finish /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 466 行.
+NOTIC: [8] Undefined variable: is_finish /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 466 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000053s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000138s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.002754s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.002849s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000058s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000134s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000057s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000137s ]
+
+[ 2015-12-03T14:33:55+08:00 ] 113.101.184.25 /s/tp/wwwroot/index.php?s=/Flow/demo/index/getflow/ok.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000151s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000055s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000127s ]
+SQL: SHOW COLUMNS FROM `ht_flow` [ RunTime:0.0009s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `ht_flow` WHERE `is_del` = 0 LIMIT 1   [ RunTime:0.0003s ]
+NOTIC: [8] Undefined variable: p /var/www/dzxt/s/tp/Application/Flow/Controller/DemoController.class.php 第 22 行.
+NOTIC: [8] Trying to get property of non-object /var/www/dzxt/s/tp/Application/Flow/Controller/DemoController.class.php 第 22 行.
+NOTIC: [8] Undefined variable: p /var/www/dzxt/s/tp/Application/Flow/Controller/DemoController.class.php 第 22 行.
+NOTIC: [8] Trying to get property of non-object /var/www/dzxt/s/tp/Application/Flow/Controller/DemoController.class.php 第 22 行.
+SQL: SELECT `id`,`form_id`,`flow_name`,`flow_desc`,`updatetime`,`dateline` FROM `ht_flow` WHERE `is_del` = 0 ORDER BY id desc  [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `ht_form` [ RunTime:0.0006s ]
+SQL: SELECT * FROM `ht_form` WHERE ( 1=1 AND id='757' ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `ht_form` WHERE ( 1=1 AND id='775' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `ht_form` WHERE ( 1=1 AND id='772' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `ht_form` WHERE ( 1=1 AND id='769' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `ht_form` WHERE ( 1=1 AND id='746' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `ht_form` WHERE ( 1=1 AND id='730' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `ht_form` WHERE ( 1=1 AND id='587' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `ht_form` WHERE ( 1=1 AND id='266' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `ht_form` WHERE ( 1=1 AND id='328' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `ht_form` WHERE ( 1=1 AND id='329' ) LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000063s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000134s ]
+
+[ 2015-12-03T15:36:26+08:00 ] 183.21.27.187 /s/tp/wwwroot/index.php?s=/Flow/demo/index/getflow/ok.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000153s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000060s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000132s ]
+SQL: SHOW COLUMNS FROM `ht_flow` [ RunTime:0.0009s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `ht_flow` WHERE `is_del` = 0 LIMIT 1   [ RunTime:0.0003s ]
+NOTIC: [8] Undefined variable: p /var/www/dzxt/s/tp/Application/Flow/Controller/DemoController.class.php 第 22 行.
+NOTIC: [8] Trying to get property of non-object /var/www/dzxt/s/tp/Application/Flow/Controller/DemoController.class.php 第 22 行.
+NOTIC: [8] Undefined variable: p /var/www/dzxt/s/tp/Application/Flow/Controller/DemoController.class.php 第 22 行.
+NOTIC: [8] Trying to get property of non-object /var/www/dzxt/s/tp/Application/Flow/Controller/DemoController.class.php 第 22 行.
+SQL: SELECT `id`,`form_id`,`flow_name`,`flow_desc`,`updatetime`,`dateline` FROM `ht_flow` WHERE `is_del` = 0 ORDER BY id desc  [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `ht_form` [ RunTime:0.0007s ]
+SQL: SELECT * FROM `ht_form` WHERE ( 1=1 AND id='757' ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `ht_form` WHERE ( 1=1 AND id='775' ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `ht_form` WHERE ( 1=1 AND id='772' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `ht_form` WHERE ( 1=1 AND id='769' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `ht_form` WHERE ( 1=1 AND id='746' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `ht_form` WHERE ( 1=1 AND id='730' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `ht_form` WHERE ( 1=1 AND id='587' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `ht_form` WHERE ( 1=1 AND id='266' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `ht_form` WHERE ( 1=1 AND id='328' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `ht_form` WHERE ( 1=1 AND id='329' ) LIMIT 1   [ RunTime:0.0003s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000070s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000142s ]
+
+[ 2015-12-03T16:10:24+08:00 ] 113.101.184.25 /s/tp/wwwroot/index.php?s=/Flow/demo/index/getflow/ok.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000136s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000058s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000131s ]
+SQL: SHOW COLUMNS FROM `ht_flow` [ RunTime:0.0010s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `ht_flow` WHERE `is_del` = 0 LIMIT 1   [ RunTime:0.0001s ]
+NOTIC: [8] Undefined variable: p /var/www/dzxt/s/tp/Application/Flow/Controller/DemoController.class.php 第 22 行.
+NOTIC: [8] Trying to get property of non-object /var/www/dzxt/s/tp/Application/Flow/Controller/DemoController.class.php 第 22 行.
+NOTIC: [8] Undefined variable: p /var/www/dzxt/s/tp/Application/Flow/Controller/DemoController.class.php 第 22 行.
+NOTIC: [8] Trying to get property of non-object /var/www/dzxt/s/tp/Application/Flow/Controller/DemoController.class.php 第 22 行.
+SQL: SELECT `id`,`form_id`,`flow_name`,`flow_desc`,`updatetime`,`dateline` FROM `ht_flow` WHERE `is_del` = 0 ORDER BY id desc  [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `ht_form` [ RunTime:0.0006s ]
+SQL: SELECT * FROM `ht_form` WHERE ( 1=1 AND id='757' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `ht_form` WHERE ( 1=1 AND id='775' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `ht_form` WHERE ( 1=1 AND id='772' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `ht_form` WHERE ( 1=1 AND id='769' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `ht_form` WHERE ( 1=1 AND id='746' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `ht_form` WHERE ( 1=1 AND id='730' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `ht_form` WHERE ( 1=1 AND id='587' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `ht_form` WHERE ( 1=1 AND id='266' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `ht_form` WHERE ( 1=1 AND id='328' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `ht_form` WHERE ( 1=1 AND id='329' ) LIMIT 1   [ RunTime:0.0001s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000055s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000126s ]
+
+[ 2015-12-03T16:25:30+08:00 ] 113.101.184.25 /s/tp/wwwroot/index.php?s=/Flow/demo/index/getflow/ok.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000161s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000067s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000138s ]
+SQL: SHOW COLUMNS FROM `ht_flow` [ RunTime:0.0009s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `ht_flow` WHERE `is_del` = 0 LIMIT 1   [ RunTime:0.0002s ]
+NOTIC: [8] Undefined variable: p /var/www/dzxt/s/tp/Application/Flow/Controller/DemoController.class.php 第 22 行.
+NOTIC: [8] Trying to get property of non-object /var/www/dzxt/s/tp/Application/Flow/Controller/DemoController.class.php 第 22 行.
+NOTIC: [8] Undefined variable: p /var/www/dzxt/s/tp/Application/Flow/Controller/DemoController.class.php 第 22 行.
+NOTIC: [8] Trying to get property of non-object /var/www/dzxt/s/tp/Application/Flow/Controller/DemoController.class.php 第 22 行.
+SQL: SELECT `id`,`form_id`,`flow_name`,`flow_desc`,`updatetime`,`dateline` FROM `ht_flow` WHERE `is_del` = 0 ORDER BY id desc  [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `ht_form` [ RunTime:0.0006s ]
+SQL: SELECT * FROM `ht_form` WHERE ( 1=1 AND id='757' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `ht_form` WHERE ( 1=1 AND id='775' ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `ht_form` WHERE ( 1=1 AND id='772' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `ht_form` WHERE ( 1=1 AND id='769' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `ht_form` WHERE ( 1=1 AND id='746' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `ht_form` WHERE ( 1=1 AND id='730' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `ht_form` WHERE ( 1=1 AND id='587' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `ht_form` WHERE ( 1=1 AND id='266' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `ht_form` WHERE ( 1=1 AND id='328' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `ht_form` WHERE ( 1=1 AND id='329' ) LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000069s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000140s ]
+
+[ 2015-12-03T16:33:30+08:00 ] 113.101.184.25 /s/tp/wwwroot/index.php?s=/Flow/demo/index/getflow/ok.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000150s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000059s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000131s ]
+SQL: SHOW COLUMNS FROM `ht_flow` [ RunTime:0.0008s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `ht_flow` WHERE `is_del` = 0 LIMIT 1   [ RunTime:0.0002s ]
+NOTIC: [8] Undefined variable: p /var/www/dzxt/s/tp/Application/Flow/Controller/DemoController.class.php 第 22 行.
+NOTIC: [8] Trying to get property of non-object /var/www/dzxt/s/tp/Application/Flow/Controller/DemoController.class.php 第 22 行.
+NOTIC: [8] Undefined variable: p /var/www/dzxt/s/tp/Application/Flow/Controller/DemoController.class.php 第 22 行.
+NOTIC: [8] Trying to get property of non-object /var/www/dzxt/s/tp/Application/Flow/Controller/DemoController.class.php 第 22 行.
+SQL: SELECT `id`,`form_id`,`flow_name`,`flow_desc`,`updatetime`,`dateline` FROM `ht_flow` WHERE `is_del` = 0 ORDER BY id desc  [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `ht_form` [ RunTime:0.0007s ]
+SQL: SELECT * FROM `ht_form` WHERE ( 1=1 AND id='757' ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `ht_form` WHERE ( 1=1 AND id='775' ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `ht_form` WHERE ( 1=1 AND id='772' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `ht_form` WHERE ( 1=1 AND id='769' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `ht_form` WHERE ( 1=1 AND id='746' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `ht_form` WHERE ( 1=1 AND id='730' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `ht_form` WHERE ( 1=1 AND id='587' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `ht_form` WHERE ( 1=1 AND id='266' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `ht_form` WHERE ( 1=1 AND id='328' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `ht_form` WHERE ( 1=1 AND id='329' ) LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000070s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000142s ]
+
+[ 2015-12-03T16:39:28+08:00 ] 113.101.184.25 /s/tp/wwwroot/index.php?s=/Flow/demo/index/getflow/ok.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000155s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000068s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000139s ]
+SQL: SHOW COLUMNS FROM `ht_flow` [ RunTime:0.0009s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `ht_flow` WHERE `is_del` = 0 LIMIT 1   [ RunTime:0.0002s ]
+NOTIC: [8] Undefined variable: p /var/www/dzxt/s/tp/Application/Flow/Controller/DemoController.class.php 第 22 行.
+NOTIC: [8] Trying to get property of non-object /var/www/dzxt/s/tp/Application/Flow/Controller/DemoController.class.php 第 22 行.
+NOTIC: [8] Undefined variable: p /var/www/dzxt/s/tp/Application/Flow/Controller/DemoController.class.php 第 22 行.
+NOTIC: [8] Trying to get property of non-object /var/www/dzxt/s/tp/Application/Flow/Controller/DemoController.class.php 第 22 行.
+SQL: SELECT `id`,`form_id`,`flow_name`,`flow_desc`,`updatetime`,`dateline` FROM `ht_flow` WHERE `is_del` = 0 ORDER BY id desc  [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `ht_form` [ RunTime:0.0006s ]
+SQL: SELECT * FROM `ht_form` WHERE ( 1=1 AND id='757' ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `ht_form` WHERE ( 1=1 AND id='775' ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `ht_form` WHERE ( 1=1 AND id='772' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `ht_form` WHERE ( 1=1 AND id='769' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `ht_form` WHERE ( 1=1 AND id='746' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `ht_form` WHERE ( 1=1 AND id='730' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `ht_form` WHERE ( 1=1 AND id='587' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `ht_form` WHERE ( 1=1 AND id='266' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `ht_form` WHERE ( 1=1 AND id='328' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `ht_form` WHERE ( 1=1 AND id='329' ) LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000071s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000143s ]
+
+[ 2015-12-03T17:47:03+08:00 ] 113.101.184.25 /s/tp/wwwroot/index.php?s=/Flow/demo/index/getflow/ok.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000150s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000056s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000127s ]
+SQL: SHOW COLUMNS FROM `ht_flow` [ RunTime:0.0009s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `ht_flow` WHERE `is_del` = 0 LIMIT 1   [ RunTime:0.0002s ]
+NOTIC: [8] Undefined variable: p /var/www/dzxt/s/tp/Application/Flow/Controller/DemoController.class.php 第 22 行.
+NOTIC: [8] Trying to get property of non-object /var/www/dzxt/s/tp/Application/Flow/Controller/DemoController.class.php 第 22 行.
+NOTIC: [8] Undefined variable: p /var/www/dzxt/s/tp/Application/Flow/Controller/DemoController.class.php 第 22 行.
+NOTIC: [8] Trying to get property of non-object /var/www/dzxt/s/tp/Application/Flow/Controller/DemoController.class.php 第 22 行.
+SQL: SELECT `id`,`form_id`,`flow_name`,`flow_desc`,`updatetime`,`dateline` FROM `ht_flow` WHERE `is_del` = 0 ORDER BY id desc  [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `ht_form` [ RunTime:0.0006s ]
+SQL: SELECT * FROM `ht_form` WHERE ( 1=1 AND id='757' ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `ht_form` WHERE ( 1=1 AND id='775' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `ht_form` WHERE ( 1=1 AND id='772' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `ht_form` WHERE ( 1=1 AND id='769' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `ht_form` WHERE ( 1=1 AND id='746' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `ht_form` WHERE ( 1=1 AND id='730' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `ht_form` WHERE ( 1=1 AND id='587' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `ht_form` WHERE ( 1=1 AND id='266' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `ht_form` WHERE ( 1=1 AND id='328' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `ht_form` WHERE ( 1=1 AND id='329' ) LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000068s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000141s ]
+

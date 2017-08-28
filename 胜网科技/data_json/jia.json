@@ -1,0 +1,43 @@
+{
+  "status": "1",
+  "statusMsg": "success",
+  "msg": [
+    {
+      "id": 49,
+      "version": 0,
+      "createTime": 1503655039220,
+      "function_id": 0,
+      "role_id": 42,
+      "form_id": 0,
+      "function_type": 0,
+      "name": "人力资源",
+      "power_id": 13394,
+      "children":[
+        {
+          "id": 49,
+          "version": 0,
+          "createTime": 1503655039221,
+          "function_id": 0,
+          "role_id": 42,
+          "form_id": 0,
+          "function_type": 0,
+          "name": "周人力资源管理系统",
+          "power_id": 13395,
+          "children":[]
+        },
+        {
+          "id": 49,
+          "version": 0,
+          "createTime": 1503655039221,
+          "function_id": 0,
+          "role_id": 42,
+          "form_id": 0,
+          "function_type": 0,
+          "name": "办公管理",
+          "power_id": 13396,
+          "children":[]
+        }]
+    }
+
+  ]
+}

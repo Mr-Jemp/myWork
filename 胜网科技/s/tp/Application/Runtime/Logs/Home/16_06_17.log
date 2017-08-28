@@ -1,0 +1,13 @@
+[ 2016-06-17T12:27:09+08:00 ] 113.99.27.51 /s/tp/wwwroot/index.php?s=/demo/formdesign/form_id/731.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000167s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000079s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000139s ]
+SQL: SHOW COLUMNS FROM `ht_form` [ RunTime:0.0011s ]
+SQL: SELECT * FROM `ht_form` WHERE `id` = 731 AND `is_del` = 0 LIMIT 1   [ RunTime:0.0005s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000090s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000148s ]
+

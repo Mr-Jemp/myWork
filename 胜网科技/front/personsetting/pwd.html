@@ -1,0 +1,124 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head>
+<title>密码设置</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<link href="/resource/part/newtpl/css/public.css" rel="stylesheet" type="text/css" />
+<link href="/resource/part/ligerlib/ligerUI/skins/Aqua/css/ligerui-all.css" rel="stylesheet" type="text/css" /> 
+<link href="/resource/part/ligerlib/ligerUI/skins/Tab/css/form.css" rel="stylesheet" type="text/css" /> 
+
+<script type="text/javascript" charset="utf-8" src="/admin/pageEdit/formdesign/js/jquery-1.7.2.min.js"></script>
+
+<script src="/resource/part/ligerlib/ligerUI/js/ligerui.all.js" type="text/javascript"></script>  
+<script src="/resource/part/ligerlib/jquery-validation/jquery.validate.min.js"></script>
+<script src="/resource/part/ligerlib/jquery-validation/jquery.metadata.js" type="text/javascript"></script>
+<script src="/resource/part/ligerlib/jquery-validation/messages_cn.js" type="text/javascript"></script>
+
+<script src="/resource/js/jQuery/ajaxfileupload.js" type="text/javascript"></script>
+
+<style>
+body {
+	margin-left: 0px;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+	font-family:"宋体"
+}
+html,body{height:98%;}
+.title
+{
+	margin:5px;
+}
+.title a
+{
+	font-size: 14px;
+	font-weight: bold;
+	color: #006699;
+}
+.top
+{
+	padding-left: 100px;
+	border-bottom: 1px #DFEDF7 solid;
+	border-top: 1px #DFEDF7 solid;
+	background-color: #F0F8FD;
+	height: 30px;
+	line-height: 30px;
+	margin-bottom: 8px;
+	color:#00AA00;
+}
+a:link {
+	text-decoration: none;
+}
+a:visited {
+	text-decoration: none;
+}
+a:hover {
+	text-decoration: none;
+}
+a:active {
+	text-decoration: none;
+}
+.autoimg{max-width:60px;max-height:60px;cursor:pointer;}
+</style>
+</head>
+<body>
+<script>
+var ligerForm,prefix='web_';
+$(function()
+{
+	//创建表单结构 
+	$("#formid").ligerForm({
+		inputWidth: 300, labelWidth: 80, space: 40,
+		
+		fields: [
+		{ label: "　原 密 码", name: prefix+"src_pwd", newline: true, type: "password"},
+		{ label: "　新 密 码", name: prefix+"new_pwd", newline: true, type: "password"},
+		{ label: "确认新密码", name: prefix+"ok_pwd", newline: true, type: "password"}
+		]
+	});
+	
+	$("#submit").bind("click",function()
+	{
+		var src_pwd=$("[name='"+prefix+"src_pwd']").val();
+		var new_pwd=$("[name='"+prefix+"new_pwd']").val();
+		var ok_pwd=$("[name='"+prefix+"ok_pwd']").val();
+
+		$.ajax({
+			type: 'POST',
+			url: '/front/personsetting/pwd.php',
+			data: {'src_pwd':src_pwd,'new_pwd':new_pwd,'ok_pwd':ok_pwd},
+			success: function(data) {
+				data = eval('(' + data + ')');
+				console.log(data.Message);
+				if(data.IsSuccess){
+					alert(data.Message+"，请重新登录");
+					parent.location.href='/s/login/loginout.php';
+				}else{
+				 alert('保存失败：'+data.Message);
+				}
+			},error: function(xhr, stat, e)
+			{
+				alert("保存失败：找不到地址！" );
+			}
+		});
+	});
+	$(".title a").eq(0).bind("click",function()
+	{
+		window.location.href="/front/personsetting/index.htm";
+	});
+	$(".title a").eq(1).bind("click",function()
+	{
+		window.location.href="/front/personsetting/pwd.html";
+	});
+});
+</script>
+<p class="title">
+<a href="javascript:;">个人资料</a> | <a href="javascript:;">修改密码</a>
+</p>
+<p class="top">▲</p>
+<form id="formid" action="" method="post"></form> 
+<p style="margin:5px">
+	<div class="liger-button" data-click="f_validate" data-width="150" style="margin-left:97px;" id="submit">确定保存</div>
+</p>
+</body>
+</html>

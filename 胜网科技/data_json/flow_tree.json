@@ -1,0 +1,21 @@
+[
+  {
+    "text":"我发起的流程",
+    "children":[
+      {"text":"我的请求","type":"getmyflow"},
+      {"text":"办结流程","type":"getmyendflow"},
+      {"text":"待办流程","type":"getnoendflow"}
+    ],
+    "isLeaf":"true"
+  },
+  {
+    "text":"我发起的流程",
+    "children":[
+      {"text":"我的请求","type":"getmyflow"},
+      {"text":"办结流程","type":"getmyendflow"},
+      {"text":"待办流程","type":"getnoendflow"}
+    ],
+    "isLeaf":"true"
+  }
+
+]
