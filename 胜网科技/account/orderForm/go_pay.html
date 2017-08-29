@@ -65,7 +65,7 @@
 			<div class="pay_number">
 				<p class="pay_number_a"><span>订单编号：<label>{{data.orderCode}}</label></span></p>
 				<p class="pay_number_b"><span>订单状态：{{data.payStatus}}<label>（订单未付款可随时取消订单）</label></span></p>
-				<p class="pay_number_c"><span>创建时间：<label>{{timestamp2Time(data.createTime)}}</label></span></p>				
+				<p class="pay_number_c"><span>创建时间：<label>{{timestamp2Time(data.createTime.time)}}</label></span></p>				
 				<div class="contact_type clearfix">
 					<a class="contact_type_a">联系商家</a>
 					<a class="contact_type_b">拨打电话</a>

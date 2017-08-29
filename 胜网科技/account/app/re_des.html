@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+		<meta http-equiv="Access-Control-Allow-Origin" content="*">
+		<title>资源管理</title>
+		<link rel="stylesheet" href="../css/re_public.css">
+		<link rel="stylesheet" href="../css/re_des.css">
+	</head>
+
+	<body ng-app="redesApp" ng-controller="redesCtrl">
+		<div class="paly_top">
+			<video width="{{videoW}}" height="{{videoH}}" controls autobuffer>
+			    <source src="../2.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'></source>
+			</video>
+			<!--<div id="paly_top_box" style="height: 100%;width: 100%;"></div>
+    <script type="text/javascript" src="/courseware/courseware/ckplayer/ckplayer.js" charset="utf-8"></script>
+    <script type="text/javascript">
+        var flashvars={
+            p:0,
+            e:2,
+            i:'/images/re/re_icon.png'
+        };
+        var video=['http://movie.ks.js.cn/flv/other/1_0.mp4->video/mp4','http://www.ckplayer.com/webm/0.webm->video/webm','http://www.ckplayer.com/webm/0.ogv->video/ogg'];
+        var support=['all'];
+        CKobject.embedHTML5('paly_top_box','ckplayer_paly_top_box','100%',225,video,flashvars,support);
+    </script>-->
+			<spna class="paly_top_re" onclick="javascript:history.go(-1);"></spna>
+			<span class="paly_top_p"></span>
+		</div>
+		<div class="toolnav">
+			<span>播放：{{des.browse_times}}次</span>
+			<div class="toolnav_cds">
+				删除
+			</div>
+		</div>
+		<ul class="sw_des_nav">
+			<li class="sw_des_details {{curr_video_area=='details'?'curr':''}}"><span ng-click="swDesNav('details')">详情</span></li>
+			<li class="sw_des_comment {{curr_video_area=='comment'?'curr':''}}"><span ng-click="swDesNav('comment')">评论</span></li>
+		</ul>
+		<div id="sw_des_details_con" ng-if="curr_video_area=='details'">
+			<ul class="pa10">
+				<li class="sw_des_details_title">{{des.title}}</li>
+				<li class="sw_des_details_comment">
+					<img ng-repeat="i in total" src="../images/re_des/icon_xingping@2x.png" />
+		
+					<!--<img ng-repeat="i in total" src="../images/re_des/{{i<=des.comment_average?'icon_xingping_s@2x.png':'icon_xingping@2x.png'}}" />-->
+					<span>{{des.comment_average}}分 </span><span class="sw_des_details_price">￥{{des.price}}</span></li>
+				<li class="sw_des_details_other"><span class="sw_des_details_looknum">{{des.download}}次</span><span class="sw_des_details_size">{{des.file_size}}KB</span></li>
+			</ul>
+			<div class="user_info">
+				<img src="{{des.user.face}}">
+				<ul>
+					<li>{{des.user.name}}</li>
+					<li>{{des.user.school}}</li>
+					<li>上传时间：{{des.user.Uploadtime}}</li>
+				</ul>
+			</div>
+			<ul class="sw_des_course_type">
+				<li ng-repeat="t in curr_course_type">{{t.key}}：{{t.value}}</li>
+			</ul>
+			<div class="sw_des_teaching">
+				<dl class="sw_des_details_teaching">
+					<dt>教材</dt>
+					<dd>{{des.curriculum.teaching_material}}</dd>
+				</dl>
+				<dl class="sw_des_details_chapter">
+					<dt>章节内容</dt>
+					<dd ng-repeat="c in des.curriculum.chapter">{{c.title}}</dd>
+				</dl>
+				<dl class="sw_des_details_knowledgepoint">
+					<dt>知识点</dt>
+					<dd ng-repeat="k in des.curriculum.knowledge_point">{{k.title}}</dd>
+				</dl>
+			</div>
+			<div class="space10"></div>
+			<div class="sw_des_teaching">
+				<dl class="sw_des_details_explain">
+					<dt>内容说明 </dt>
+					<dd>
+						{{des.description}}
+					</dd>
+				</dl>
+			</div>
+		</div>
+		<div id="sw_des_comment_con" ng-if="curr_video_area=='comment'">
+			<ul class="sw_des_comment_area">
+				<li>
+					<img ng-repeat="i in total" src="/re/img/re_des/{{i<=des.comment_average?'icon_xingping_s@2x.png':'icon_xingping@2x.png'}}" />
+				</li>
+				<li>
+					<span class="des_comment_ave">{{des.comment_average}}分 </span><br>
+					<span class="des_comment_people">({{des.comment_total}}人评论)</span>
+				</li>
+				<li>
+					<span><a href="#!/re_comment/{{des.id}}">我要评论</a></span>
+				</li>
+			</ul>
+			<div class="des_comment_list">
+				<div class="des_comment_list_block" ng-repeat="uc in des.comment_list">
+					<img class="comment_user_face" src="{{uc.face}}">
+					<div class="user_comment_block">
+						<div class="user_name">
+							{{uc.username}}张三
+							<div class="user_score">
+								<img ng-repeat="i in total" src="/re/img/re_des/{{i<=uc.score?'icon_xingping_s@2x.png':'icon_xingping@2x.png'}}" />
+							</div>
+						</div>
+						<div class="user_comment_content">{{uc.content}}</div>
+						<div class="user_comment_time">{{uc.time}}</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script src="../../public/part/jquery/jquery-3.1.1.min.js"></script>
+		<script src="../../public/part/angular/angular.min.js"></script>
+		<script src="../../public/part/angular/angular-ui-router.min.js"></script>
+		<script src="../js/publicJs.js"></script>
+		<script src="../js/re-magment.js"></script>
+	</body>
+
+</html>

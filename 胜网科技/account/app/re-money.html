@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
+		<meta name="apple-mobile-web-app-capable" content="yes"/>
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"/>
+		<meta http-equiv="Access-Control-Allow-Origin" content="*">
+		<title>资源管理</title>
+		
+		<link rel="stylesheet" href="../../public/part/bootstrap/bootstrap.min.css" />
+		<link rel="stylesheet" href="../css/base.css" />
+		<link href="../css/mobiscroll.css" rel="stylesheet" />
+		<link href="../css/mobiscroll_date.css" rel="stylesheet" />	
+		<link rel="stylesheet" href="../css/resource-mag.css" />
+	</head>
+	<body ng-app="timeclApp" ng-controller="timeclCtrl">
+		<header class="mycollect_top_a">
+			<ul class="top_a_ul">
+				<li class="top_a_le"  >
+						<a href="#"><img src="../images/icon_fanhui.png" /></a>						
+				</li>
+				<li class="top_a_con">奖金明细</li>
+				<li class="top_a_ri" id="time—close" ng-click="timeClose()">
+					<input type="text" name="USER_AGE" id="USER_AGE" readonly class="input" placeholder="全部" />	
+					<img src="../images/icon_rili@2x.png" />
+				</li>
+			</ul>
+		</header>
+		<div class="intergal_list">
+			<ul>
+				<li  >
+					<div class="intergal_list_name col-md-8 col-xs-8">
+						<span >资源被使用15次</span>
+						<span>2017-7-25</span>
+					</div>
+					<div class="intergal_list_number col-md-4 col-xs-4">+21.00元</div>
+				</li>	
+				<li  >
+					<div class="intergal_list_name col-md-8 col-xs-8">
+						<span >资源被使用11次</span>
+						<span>2017-7-25</span>
+					</div>
+					<div class="intergal_list_number col-md-4 col-xs-4">+8.00元</div>
+				</li>	
+			</ul>
+		</div>
+		<div class="ifra"></div>
+		<script src="../../public/part/jquery/jquery-3.1.1.min.js"></script>
+		<script src="../../public/part/angular/angular.min.js"></script>
+		<script src="../../public/part/angular/angular-ui-router.min.js"></script>
+		<script src="../js/publicJs.js"></script>
+		<script src="../js/mobiscroll_date.js" charset="gb2312"></script>
+		<script src="../js/mobiscroll.js"></script>
+		<script>
+			angular.module("timeclApp",[]).
+			controller("timeclCtrl",["$scope","$http",function($scope,$http){
+				var currYear = (new Date()).getFullYear();	
+				var opt={};
+				opt.date = {preset : 'date'};
+				opt.datetime = {preset : 'datetime'};
+				opt.time = {preset : 'time'};
+				opt.default = {
+					theme: 'android-ics light', //皮肤样式
+					display: 'modal', //显示方式 
+					mode: 'scroller', //日期选择模式
+					dateFormat: 'yyyy-mm',
+					lang: 'zh',
+					dateOrder:  'yy/mm', //面板中日期排列格式
+					startYear: currYear - 50, //开始年份
+					endYear: currYear + 10, //结束年份
+					onSelect:function(valueText,inst){
+						//点击确定以后的结果
+						console.log(valueText);
+					}
+				};
+			
+				$("#USER_AGE").mobiscroll($.extend(opt['date'], opt['default']));
+			}])
+		</script>
+	</body>
+</html>
+

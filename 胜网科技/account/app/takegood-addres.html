@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+		<meta http-equiv="Access-Control-Allow-Origin" content="*">
+		<title></title>
+		<link rel="stylesheet" href="../../public/part/bootstrap/bootstrap.min.css" />
+		<link rel="stylesheet" href="../css/base.css" />
+		<link rel="stylesheet" href="../css/index.css" />
+		<link rel="stylesheet" href="../css/address.css" />
+	</head>
+
+	<body ng-app="takeaddressApp" ng-controller='takeaddreController'>
+		<header class="mycollect_top_a">
+			<ul class="top_a_ul">
+				<li class="top_a_le">
+					<img src="../images/icon_fanhui.png" />
+				</li>
+				<li class="top_a_con">收货地址</li>
+			</ul>
+		</header>
+		<div class="myAddress">
+			<ul>
+				<li ng-repeat="addres in addr" ng-click="getDetail(addres)">
+					<div class="clearfix"><span class="names">收货人：<label style="color: #666666;">{{addres.receiverName}}</label></span><span class="namesNumber" style="color: #666666;">{{addres.phone}}</span></div>
+					<div class="clearfix">收货地址：<span style="color: #666666;">{{addres.cityAddress+addres.detailedAddress}}</span></div>
+					<div class="clearfix">
+						<div class="close-stybtn">
+							<input type="radio" id="mrinput" ng-class="{'active':addres.isDefault==true}"  ng-click="addCorol($index,$event,addres.id,addres.isDefault)" />
+							<label >默认地址</label>
+						</div>
+						
+						
+					</div>
+				</li>
+			</ul>
+		</div>
+		<script src="../../public/part/jquery/jquery-3.1.1.min.js"></script>
+		<script src="../../public/part/angular/angular.min.js"></script>
+		<script src="../js/publicJs.js"></script>
+	</body>
+	<script>
+		angular.module("takeaddressApp", ["commonConfig"]).
+		controller("takeaddreController", ['$scope', '$http', function($scope, $http) {
+			
+			$http.get("http://192.168.0.21:20880/addressFacade/getAllAddress?uid=1").then(function(res){
+				$scope.addr = res.data.msg;
+				console.log($scope.addr);
+				
+				$scope.activeEd;  //标志默认地址
+				$scope.inputCorol=function(ev,idv,idDfuv){
+					if(idDfuv==true){
+						$(ev.target).attr("disabled",true);
+					}else{
+						$(ev.target).attr("disabled",false);
+						if($(ev.target).is(".active")){
+							$(ev.target).removeClass("active");
+							$scope.activeEd=false;
+							
+						}else{
+							$(ev.target).addClass("active");
+							$scope.activeEd=true;
+							$http.get('http://192.168.0.21:20880/addressFacade/updateIsDefaultAddressById?uid=1&&id='+idv).then(function(ress){
+								console.log($scope.activeEd)
+							}).catch(function(){
+								console.log("设置默认地址失败")
+							})
+						}
+						
+					}
+					
+				}
+				$scope.addCorol=function(index,even,idd,isDefau){					
+					$http.get('http://192.168.0.21:20880/addressFacade/updateIsDefaultAddressById?uid=1&&id='+idd).then(function(ress){
+						console.log(ress)
+					}).catch(function(){
+						console.log("设置默认地址失败")
+					})
+					console.log($(even.target).parent().parent().parent());
+					$(even.target).next().addClass('corBlue').parent().parent().parent().siblings().find('label').removeClass('corBlue')
+					$(even.target).addClass("active").parent().parent().parent().siblings().find('input').removeClass('active')
+				}
+			})
+			//	选中默认事件
+			$('#mrinput').click(function() {
+				if($(this).hasClass('active')) {
+					console.log("移除")
+					$(this).removeClass("active").next().removeClass('corBlue');
+				} else {
+					$(this).addClass("active").next().addClass("corBlue");
+					
+				}
+			})
+			
+		}])
+	</script>
+
+</html>

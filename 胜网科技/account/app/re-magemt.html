@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
+		<meta name="apple-mobile-web-app-capable" content="yes"/>
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"/>
+		<meta http-equiv="Access-Control-Allow-Origin" content="*">
+		<title>资源管理</title>
+		
+		<link rel="stylesheet" href="../../public/part/bootstrap/bootstrap.min.css" />
+		<link rel="stylesheet" href="../css/base.css" />
+		<link rel="stylesheet" href="../css/resource-mag.css" />
+	</head>
+	<body ng-app="resoumagApp" ng-controller="resoumagCtrl">
+		<header class="mycollect_top_a">
+			<ul class="top_a_ul">
+				<li class="top_a_le"  >
+						<a href="../index.html"><img src="../images/icon_fanhui.png" /></a>						
+				</li>
+				<li class="top_a_con"></li>
+				<li class="top_a_ri"  >
+					<a href="re-money.html"><img src="../images/icon_mingxi@2x.png" /></a>						
+				</li>
+			</ul>
+		</header>
+		<div class="infoCont-top">
+			<h4>共享资源获取奖金</h4>
+			<p class="resource-amount"><span>100.00</span>元</p>
+		</div>
+		<div class="infoCont-cont">
+			<ul class="infoCont-cont-ul clearfix">
+				<li class="prize">
+					<p>当天</p>
+					<p><span>100.00</span>元</p>
+					<p>共享资源获取奖金</p>
+				</li>
+				<li class="prize">
+					<p>当天</p>
+					<p><span>100.00</span>元</p>
+					<p>共享资源获取奖金</p>
+				</li>
+				<li class="prize">
+					<p>当天</p>
+					<p><span>100.00</span>元</p>
+					<p>共享资源获取奖金</p>
+				</li>
+			</ul>
+			<p class="resource-tip">
+				<span>？</span>上传资源奖励金额的规则
+			</p>
+		</div>
+		<div class="share-cont">
+			<div class="share-cont-title">
+				<p>共享的资源</p>
+				<span>(128条)</span>
+			</div>
+			<div class="share-cont-btn">
+				<div class="btn-teach">教案列别<span class="deBtn"></span>
+				</div>
+				<div class="btn-class">年级科目<span class="deBtn"></span>
+				</div>
+				<div class="btn-synthesize">综合排序<span class="deBtn"></span>
+				</div>
+			</div>
+			<div class="btn-teach-list">
+				<div class="btn-teach-listA">
+					<ul>
+						<li ng-repeat="btnTea in btnTeach" ng-class="{'blu':$index==corFousa,'bla':$index!=corFousa}" ng-click="fousa($index)">{{btnTea.name}}</li>						
+					</ul>
+				</div>
+				<div class="btn-teach-listB" >
+					<div ng-repeat="cou in course">
+						<p >{{cou.type}}</p>
+						<ul class="clearfix">
+							<li ng-repeat="res in cou.cont" ng-class="{'blu':$index==corFousb[cou.type],'bla':$index!=corFousb[cou.type]}" ng-click="fousb($index,cou.type)">{{res.name}}</li>							
+						</ul>
+					</div>				
+				</div>
+				<div class="btn-teach-listC">
+					<ul >
+						<li ng-repeat="syn in synthesiz" ng-class="{'blu':$index==corFousc,'bla':$index!=corFousc}" ng-click="fousc($index)">{{syn.name}}</li>
+						
+					</ul>
+				</div>
+			</div>
+			<div class="infocont-list" ng-click="closeDetail()">
+				<div class="infocont-list-img">
+					<img src="../images/icon_gouwuche.png" />
+				</div>
+				<div class="infocont-list-cont">
+					<p>巧用地图、巧用习题复习世界的地区</p>
+					<p class="delBtn" ng-click="delClose()">
+						<img src="../images/icon_kuaijie@2x.png" />
+						<span ng-click="del()">删除</span>
+					</p>
+					<p class="data-list clearfix">
+						<span><img src="../images/icon_shijian@2x.png" />
+							时间</span>
+						<span><img src="../images/icon_xiazai@2x.png"/>
+							次数 </span>
+						<span>好评 80%</span>
+						<span>￥182.00</span>
+					</p>
+				</div>
+				
+			</div>
+		</div>
+		<div class="ifra"></div>
+		<script src="../../public/part/jquery/jquery-3.1.1.min.js"></script>
+		<script src="../../public/part/angular/angular.min.js"></script>
+		<script src="../../public/part/angular/angular-ui-router.min.js"></script>
+		<script src="../js/publicJs.js"></script>
+		<script>
+			angular.module("resoumagApp",[])
+//	 config(["$stateProvider",function($stateProvider){
+//	 	$stateProvider.state("redetail",{
+//	 		url: "/redetail",
+//			templateUrl: 're_des.html',
+//			controller:function(){
+//				
+//			}
+//	 	})
+//	 }]).
+	.service("re-data",function($http){
+		var that=this;
+		that.getre=function(){
+			return $http.get();
+		}
+	})
+	.controller("resoumagCtrl",["$scope","$http",function($scope,$http){
+//				$('.infoCont-cont-ul li').css("height",$('.infoCont-cont-ul li').width())
+		$('.share-cont-btn div').click(function(){
+			$('.btn-teach-list>div').eq($(this).index()).slideToggle(520).siblings().hide();
+		})
+		$scope.btnTeach=[
+			{"name":"全部"},
+			{"name":"课件"},
+			{"name":"微课"},
+			{"name":"文档"},
+			{"name":"题目"},
+			{"name":"教案"},
+		]
+		$scope.synthesiz=[
+			{"name":"综合排序"},
+			{"name":"好评"},
+			{"name":"差评"},
+			{"name":"奖金最多"},
+			{"name":"奖金最少"},
+			{"name":"下载量最多"},
+			{"name":"下载量最少"},
+		]
+		$scope.course=[
+			{
+				"type":"年级",
+				"cont":[
+					{"name":"七年级"},
+					{"name":"八年级"},
+					{"name":"九年级"},
+				]
+			},{
+				"type":"科目",
+				"cont":[
+					{"name":"语文"},
+					{"name":"数学"},
+					{"name":"英语"},
+					{"name":"物理"},
+					{"name":"化学"},
+					{"name":"生物"},
+					{"name":"政治"},
+					{"name":"历史"},
+					{"name":"地理"},
+				]
+			}
+		]
+		$scope.corFousa=0;
+		$scope.corFousb= {
+			'年级':0,
+			'科目': 0,	
+		};
+		$scope.corFousc=0;		
+		$scope.fousa=function(ins){
+			$scope.corFousa=ins;
+
+		}
+		$scope.fousb=function(ins,type){
+			$scope.corFousb[type] = ins;
+			console.log($scope.corFousb)
+			
+		}
+		$scope.fousc=function(ins){
+			$scope.corFousc=ins;
+
+		}
+		$scope.delClose=function(){
+			$('.ifra,.delBtn>span').show();
+			$scope.del=function(){
+				$('.infocont-list').remove();
+				$('.ifra').hide();
+			}
+		}
+		$scope.closeDetail=function(){
+			window.location="re_des.html"
+		}
+	}])
+		</script>
+	</body>
+</html>

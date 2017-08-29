@@ -1,4 +1,19 @@
 angular.module("myorderApp", ["ui.router", "commonConfig"])
+//	.service('data', function(){
+//		var self = this;
+//		var apiGetRes = 'sdfsdffdsf',
+//			api = 
+//		
+//		self.getRes = fucntion(){
+//			return $http.get(apier).then(function(){
+//				return {
+//					status: 0,
+//					data: null
+//				}
+//			})
+//		}
+//		
+//	})
 	.config(["$stateProvider", "$urlRouterProvider", function($stateProvider, $urlRouterProvider) {
 		//		$locationProvider.hashPrefix('');
 			var states = [{
@@ -196,6 +211,8 @@ angular.module("myorderApp", ["ui.router", "commonConfig"])
 		//		 $urlRouterProvider.otherwise("/");  
 	}])
 	.controller('myorderCtrl', ["$scope", "$http", "$state", function($scope, $http, $state) {
+		
+		
 		$scope.delFrom = function($event, delID,index) {
 			var html_ = $($event.target).html();
 			if(html_ == "取消订单") {
@@ -257,7 +274,7 @@ angular.module("myorderApp", ["ui.router", "commonConfig"])
 
 		$scope.focus = function(name, index) {
 			var aLinks = $('.top_bal');
-
+			console.log(name)
 			for(var i = 0; i < aLinks.length; i++) {
 				console.log(aLinks.find('a').html())
 				var oldClass = aLinks[i].className; //获得现在的样式
