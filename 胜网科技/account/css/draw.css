@@ -1,0 +1,117 @@
+body{
+	background: #51dfa6;
+}
+.main_draw {
+	width: 100%;
+	background: #53dfa9;
+}
+.lunck_draw_wrap {
+	display: block;
+	width: 100%;
+	margin-right: auto;
+}
+.lunck_draw_wrap .wheel {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: relative;
+}
+.lunck_draw_wrap .wheel canvas.item {
+	position: relative;
+}
+.lunck_draw_wrap .wheel img.pointer {
+	position: absolute; 
+    top: 23.5%;
+}
+.lunck_draw_wrap .changeNumber {
+	width: 100%;
+	text-align: center;
+	padding: 0.15rem 0;
+	color: white;
+	font-size: 1.3em;
+}
+.changeNumber span{
+	color:#f0ef08 ;
+}
+.draw_newsreel{
+	width: 100%;
+	text-align: right;
+	padding: 0.4rem;
+	color: #b66f25;	
+}
+.draw_newsreel span{
+	vertical-align: middle;
+	width: 1.5em;
+	height: 1.5em;
+	display: inline-block;
+	background: url(../images/icon_bianji.png) no-repeat;
+	background-size: 60% 60%;
+	background-position: center;
+}
+.lunck_draw_rule{
+	width: 90%;
+	background: #fcf5e2;
+	padding-left: 2.9rem;
+	border: 1px solid #ffbe04;
+	margin:0.15rem auto ;
+	padding: 15px;
+}
+.lunck_draw_rule dl dt{
+	color:#9f6f25 ;
+}
+.lunck_draw_rule dl dd{
+	color:#b07234 ;
+	padding: 0.15rem 0;
+	font-size: 0.22rem;
+}
+/*中奖弹出*/
+.popBg{
+	display: none;
+	width:5.4rem;
+    height:5.4rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+    padding-bottom: 2.5rem;
+    z-index: 210;
+    text-align: center;
+	background: url(../images/img_zhonjiang.png) no-repeat;
+	background-size: 100% 100%;
+}
+.popBg p{
+	position: absolute;
+	width: 50%;
+	height: 0.35rem;
+	color: #dd324a;
+	top: 20%;
+    left: 50%;
+    margin-left: -25%;
+}
+.popBg .winImg{
+	position: absolute;
+	width: 50%;
+	top: 30%;
+    left: 50%;
+    margin-left: -25%;
+}
+.popBg .winImg img{
+	width: 100%;
+	height: 100%;
+}
+.popBg .winGood{
+	position: absolute;
+	width: 50%;
+	height: 50px;
+	height:0.88rem;
+	line-height: 0.88rem;
+	top: 80%;
+	left: 50%;
+	font-size:0.3rem;
+	color: white;
+	font-weight: 600;
+	background: url(../images/img_anniu.png) no-repeat;
+	background-size: 100% 100%;
+}

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css"/>
+		<link rel="stylesheet" type="text/css" href="css/photo.css"/>
+		<style>html,body{background-color: white;}</style>
+	</head>
+	<body ng-app="myApp">
+		<div ng-controller="myController">
+			<!--头部-->
+				<div class="class_header row" style="margin: 0;">
+					<div class="col-xs-2" onclick="javascript:history.go(-1);">
+						<img src="images/fanhui@2x.png" alt="" />
+					</div>
+					<div class="header_message col-xs-6 ">初一（2）班相册</div>
+					<div class="selectClass col-xs-4" >
+						
+					</div>
+				</div>
+				
+			
+					<!--上传相册或视频-->
+					<div class="submitPhotoOrVideo">
+						<div class="createPhoto">
+							<img src="images/tupian@2x.png"/>
+						</div>
+					
+						<div class="createButton">
+		                    <p  onclick="$('#previewImg').click();">上传照片/视频</p>
+		                 </div>         
+		                <input type="file" multiple="multiple" onchange="previewImage(this)" style="display: none;" id="previewImg">
+					</div>
+		
+					
+				<div class="showPhotos">
+					<div class="row">
+						<p class="col-xs-4" style="margin: 0;">上传到</p>
+						<p class="col-xs-8" style="margin: 0;">	
+							<!--<span>新建相册</span>-->
+							<select>
+								<option value="">春游相册</option>
+								<option value="">郊游相册</option>
+							</select>
+							<!--<img src="images/jiantouxiangyou@2x.png" alt="" />-->
+						</p>
+					</div>
+					<p></p>
+						<!-- 拿来放图片用的 -->
+					<ul id="preview">
+						<li class="photoOrVideo" onclick="$('#previewImg').click();" style="-webkit-padding-start: 0px;">
+							<img src="images/zhaoxiang@2x.png" style="width: 0.4rem;height: 0.35rem;margin: 0.5rem 0 0.1rem 0;" /><br/>
+							<span>照片/视频</span>
+							<input type="file" onchange="previewImage(this)" style="display: none;" id="previewImg">
+								<!--<img src="images/20170520130556.png" alt="" />-->
+						</li>
+					</ul>
+				</div>
+			</div>
+	</body>
+	<script type="text/javascript" src="js/jquery-1.12.4.min.js" ></script>
+	<script type="text/javascript" src="js/angular.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/publicJs.js" ></script>
+	<script type="text/javascript" src="js/photo.js"></script>
+	<script type="text/javascript">	
+	var app=angular.module("myApp",[]);
+	var submitPhotoOrVideo=$(".submitPhotoOrVideo");
+	app.controller("myController",function($scope){
+		$scope.bol=true;
+		console.log(submitPhotoOrVideo.css("display"));
+		
+		
+		$("#previewImg").change(function(){
+			if(submitPhotoOrVideo.css("display")=="none"){
+			
+			$scope.bol=false;
+		}else{
+			$scope.bol=true;
+		}
+		console.log($scope.bol);
+		})
+	})
+
+	
+	
+
+	</script>
+</html>

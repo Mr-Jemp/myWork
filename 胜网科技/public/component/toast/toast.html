@@ -1,0 +1,6 @@
+<div class="toast"
+    ng-show="toast.isShow"
+    ng-click="hide();">
+    <p class="toast__content" ng-if="!hasTrans">{{toast.msg}}</p>
+    <div ng-transclude></div>
+</div>

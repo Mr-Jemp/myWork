@@ -1,0 +1,41 @@
+html, body {
+    width: 100%;
+    height: 100%;
+}
+.both50{
+    height: 50px;
+}
+html,body,div,h1,h2,h3,h4,h5,ul,li,dl,dt,dd,textarea,label{
+    margin: 0px;
+    padding: 0px;
+}
+ul,li{
+    list-style: none;
+}
+a,a:hover{
+    text-decoration: none;
+}
+.re_upfile_top{
+    position: relative;
+    text-align: center;
+    height: 45px;
+    line-height: 45px;
+    background-color: #52DFAA;
+    width: 100%;
+    padding: 0px 10px;
+    box-sizing: border-box;
+    color: #ffffff;
+    font-size: 16px;
+}
+.top-return{
+    width: 20px;
+    height: 19px;
+    position: absolute;
+    top:50%;
+    left: 10px;
+    margin-top: -10px;
+    display: inline-block;
+    background: url('/re/img/re_icon.png') no-repeat -191px 0px;
+    background-size: 320px 240px;
+    cursor: pointer;
+}

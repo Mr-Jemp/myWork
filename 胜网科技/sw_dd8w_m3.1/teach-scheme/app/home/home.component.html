@@ -1,0 +1,42 @@
+<div class="flex-row header">
+    <div ng-click="$ctrl.goBack()">
+        <img src="img/goback.png" class="header__btn">
+    </div>
+    <h1 class="header__title h-title">教学计划</h1>
+    <div class="h-menu-title"
+        ng-click="$ctrl.toggleMenu()">{{$ctrl.curClass.title}} ▼
+    </div>
+</div>
+<div class="h-menu"
+    ng-show="$ctrl.menuShown"
+    ng-click="$event.stopPropagation();$ctrl.toggleMenu();">
+    <div class="h-menu__main"
+        ng-click="$event.stopPropagation()">
+        <p class="h-menu__title">班级</p>
+        <ul class="h-menu__list">
+            <li class="h-menu__item"
+                ng-repeat="cls in $ctrl.allClass"
+                ng-click="$ctrl.selectClass(cls)">
+                {{cls.title}}
+            </li>
+        </ul>
+    </div>
+</div>
+
+
+<ul class="h-scheme-list">
+    <li ng-repeat="scheme in $ctrl.list" class="relative h-scheme"
+    ng-click="$ctrl.goDetail(scheme)">
+        <h2 class="h-scheme__title">{{scheme.title}}</h2>
+        <p class="h-scheme__content">{{scheme.content}}</p>
+        <p class="h-scheme__create-time">发布日期：{{scheme.createTime}}</p>
+        <div class="h-edit-btn" ng-click="$ctrl.goEditScheme(scheme)">
+            <img class="h-edit-btn__img" src="img/more_666.png" alt="edit">
+        </div>
+    </li>
+</ul>
+<div class="pad-footer"></div>
+<div class="h-create-btn"
+    ng-click="$ctrl.goCreateScheme()">
+    新建计划
+</div>

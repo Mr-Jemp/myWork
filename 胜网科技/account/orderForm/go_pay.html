@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
+		<meta name="apple-mobile-web-app-capable" content="yes"/>
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"/>
+		<meta http-equiv="Access-Control-Allow-Origin" content="*">
+		<title>订单详情</title>
+		<link rel="stylesheet" href="../../public/part/bootstrap/bootstrap.min.css" />
+		<link rel="stylesheet" href="../css/base.css" />
+		<link rel="stylesheet" href="../css/orderForm.css" />
+	</head>
+	<body ng-app="confirmOrderApp" ng-controller="confirmOrderContr">
+		<header class="mycollect_top_a" >
+			<ul class="top_a_ul">
+				<li class="top_a_le">
+					<img src="../images/icon_fanhui.png" />		
+				</li>
+				<li class="top_a_con">订单详情</li>
+			</ul>
+		</header>
+		<div class="notPay_detail">
+			<div class="cardo_a">
+				<p><span>收货人：<label>{{data.receiverName}}</label></span><span>{{data.phone}}</span></p>
+			</div>
+			<div class="address_b srue_address_b">
+				<p>收货地址：<span>{{data.cityAddress+data.detailedAddress}}</span></p>
+			</div>
+		</div>		
+		<p class="caidai"></p>
+		<div class="order_from_con">
+			<ul>
+				<li>
+					<div class="order_from_con_name clearfix">
+						<p class="con_name_a">新华文具店 </p>
+						<!--<span class="con_name_b">待收货</span>-->
+					</div>
+					<div class="good_list_con container" ng-repeat="dts in data.orderDetails">
+						<div class="con_img_a">
+							<img src="{{dingList.products.img}}" />
+						</div>
+						<div class="con_img_b">
+							<p class="con_con_a">{{dts.products.name}}</p>
+							<p class="con_con_b">{{dts.products.info}}</p>
+							<p class="con_con_c">
+								<span>套餐类型:<label>套餐一</label></span>
+								<span>颜色<label>{{dts.products.size}}</label></span>
+							</p>
+							<p class="con_con_d">
+								<span class="d_a"><label class="d_a_red">￥{{dts.products.price.toFixed(2)}}  </label><label class="d_a_blc">  56.00</label></span>
+								<span class="d_b">X{{dts.amount}}</span>								
+							</p>							
+						</div>					
+					</div>
+					
+				</li>
+			</ul>
+			<div class="pay_aoumt clearfix">
+				<p class="clearfix">
+					<span class="pay_aoumt_a">订单共<label>&nbsp; {{totals}}&nbsp;  </label>件商品<i>（含运费）</i></span>
+					<span class="pay_aoumt_b pay_aoumt_bb">合计：￥<label>{{data.payment.toFixed(2)}}</label></span>
+				</p>
+			</div>
+			<div class="pay_number">
+				<p class="pay_number_a"><span>订单编号：<label>{{data.orderCode}}</label></span></p>
+				<p class="pay_number_b"><span>订单状态：{{data.payStatus}}<label>（订单未付款可随时取消订单）</label></span></p>
+				<p class="pay_number_c"><span>创建时间：<label>{{timestamp2Time(data.createTime)}}</label></span></p>				
+				<div class="contact_type clearfix">
+					<a class="contact_type_a">联系商家</a>
+					<a class="contact_type_b">拨打电话</a>
+				</div>
+			</div>
+		</div>
+		<div class="pay_btn">
+	 		<a class="pay_btn_del">取消订单</span>
+			<a class="pay_btn_go" >立即付款</span>
+		</div>
+		<!--弹出框、-->
+		<div id="bottom-pp">
+			<div class="popBottom" >
+				<p class="popTop">订单详情<span class="del" ng-click="delBob()">X</span></p>
+				<ul>
+					<li class="popBottom_a">
+						<span>支付方式</span>
+						<span>积分支付</span>
+					</li>
+					<li class="popBottom_b">
+						<span>需付款</span>
+						<span><label>￥{{data.payment.toFixed(2)}}</label><label class="jifen_red">(8600积分)</label>
+						</span>
+					</li>
+				</ul>
+				<div class="lipay_btn" ng-click="paying()">
+					立即支付
+				</div>
+			</div>
+			
+		</div>
+		<div class="ifra"></div>
+		<div class="pop">
+			<p class="popTop">请输入支付密码<span class="del" ng-click="delPop">X</span></p>
+			<p class="amount_">￥<span>99.00</span></p>
+			<form id="fromInp">
+				<input type="text" /><input type="text" /><input type="text" /><input type="text" /><input type="text" /><input type="text" />				
+			</form>
+		</div>
+	</body>
+		<script src="../../public/part/jquery/jquery-3.1.1.min.js"></script>
+		<script src="../../public/part/angular/angular.min.js"></script>	
+		<script src="../js/publicJs.js"></script>
+		
+		<script>
+			angular.module('confirmOrderApp',["commonConfig"]).
+			controller("confirmOrderContr",["$scope","$http",function($scope,$http){
+				$scope.timestamp2Time = function(timestamp) {
+						var result = "";
+						var seperator1 = "-";
+						var seperator2 = ":";
+						if(timestamp) {
+							var d = new Date();
+							d.setTime(timestamp);
+							var year = d.getFullYear();
+							var month = d.getMonth() + 1;
+							var day = d.getDate();
+							var hours = d.getHours();
+							var minutes = d.getMinutes();
+							var seconds = d.getSeconds();
+							if(month >= 1 && month <= 9) {
+								month = "0" + month;
+							}
+							if(day >= 0 && day <= 9) {
+								day = "0" + day;
+							}
+							if(hours >= 1 && hours <= 9) {
+								hours = "0" + hours;
+							}
+							if(minutes >= 0 && minutes <= 9) {
+								minutes = "0" + minutes;
+							}
+							if(seconds >= 0 && seconds <= 9) {
+								seconds = "0" + seconds;
+							}
+							result = year + seperator1 + month + seperator1 + day + "  " + hours + seperator2 + minutes + seperator2 + seconds;
+						}
+						return result;
+
+				}
+				$scope.delBob=function(){
+					$('#bottom-pp').hide();
+//					window.getComputedStyle($('.srue_address_b')[0],'::after').getPropertyValue("background:none")				
+				}
+				
+				$scope.paying=function(){  //立即支付
+					console.log($('#fromInp input').width())
+					$('#fromInp input').height()
+					$('#bottom-pp').hide();
+					$('.pop,.ifra').show();
+					$scope.delPop=function(){
+						alert(555)
+						$('#bottom-pp').show();
+						$('.ifra,.pop').hide();
+					}
+				}
+				$scope.selectPay = ["积分支付", "微信支付", "支付宝支付"];
+				var dingId=window.location.search.split("?")[1];
+				console.log(dingId)
+				$http.get("http://192.168.0.21:20880/orderFacade/getOrder?id="+dingId).then(function(res){
+					$scope.data=res.data.msg[0];
+					 var total =0;
+						for(var i in $scope.data.orderDetails){   
+								total+=$scope.data.orderDetails[i].amount;									
+						}  
+						$scope.totals=total;
+					console.log($scope.data)
+//					$scope.changAdd=function(di){
+//						window.location="../app/address.html?"+di;
+//					}
+//					//添加数量
+//					$scope.numberAdd=function(amount){
+//						if(amount>0){
+//							amount++;
+//						}
+//					}
+//					//减少数量
+//					$scope.numberDel=function(amount){
+//						if(amount==1){
+//							return;
+//						}else{
+//							amount--;
+//						}
+//					}
+				}).catch(function(){
+					
+				})
+			}])
+		</script>
+</html>

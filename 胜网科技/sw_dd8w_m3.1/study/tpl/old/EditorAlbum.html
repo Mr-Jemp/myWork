@@ -1,0 +1,226 @@
+<!-- 
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>数字社区-教师端相册</title>
+    <link href="/Public/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css"> -->
+    <link href="/Public/Css/jscss.css" rel="stylesheet" type="text/css">
+  
+    <script src="/Public/bootstrap/js/bootstrap.min.js"></script>
+     <!--  <script type="text/javascript" src="/Public/jQuery/jquery.min.js"></script>
+         <script type="text/javascript" src="/Public/jQuery/angular.min.js"></script> -->
+    <!--[if lt IE 9]>
+    <script src="//cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="//cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <link href="/Public/Css/teacher.css" rel="stylesheet" type="text/css"><!--  </head>
+    
+    <body> -->
+<!---头部内容区开始---->
+<div class="container pa0">
+    <div class="row topbg">
+        <div class="col-xs-10">
+            <a href0="/index.php?m=Teacher&c=MyClass&a=ListAlbum" class="" style="text-decoration: none; color:#fff;font-size: 20px;font-weight: bold;padding-left: 15px;">
+                &nbsp;编辑相册
+            </a>
+
+        </div>
+    </div>
+    <!--头部内容区结束-->
+    <!--按钮区开始-->
+    <div class="pa15">
+        <!--按钮区结束-->
+        <!-- <br/> -->
+        <!--图片区开始-->
+        <div class="row hide tp15 select_bow">
+            <div class="col-xs-5">
+                <select style="" name="sect" id="select" class="form-control">
+                    <option value="76;40">16计用班（1）班</option><option value="76;40">16计用班（1）班</option>                    </select>
+            </div>
+        </div>
+        <!-- <br> -->
+        <!-- <br> -->
+        <div class="row tp15" id="select_content">
+            <!--列1-->
+            <div class="col-xs-6 p_box" style="margin-bottom: 15px;">
+                <div>
+                    <!--<a href="/index.php?m=Teacher&c=MyClass&a=LookAlbum&id=204" style="cursor: hand;">-->
+                    <img  src="/Public/Uploads/albums/2017-03-13/thumb_5881aafd8e671.png " alt="..." class="album_cover img-responsive">
+                    <!--</a>-->
+                </div>
+                <p class="photo_line">
+                    <span class="photo_title pull-left">一年级3班</span><input type="text" class="p_hide_input_title hide" value="一年级3班">
+                    <span class="photo_num pull-right">共0张</span>
+                </p>
+                <p class="photo_con ">一年级3班</p><input type="text" class="p_hide_input_con hide" value="一年级3班">
+
+                <div class="col-xs-6 no_padding tp5 text-cen">
+                    <a class="btn btn-sm tt_button p_button change_name" id=204>重新命名</a>
+                </div>
+                <div class="col-xs-6 no_padding tp5 text-cen">
+                    <a id="delete204" role="button" class="btn btn-sm tt_button p_button change_description" >删除相册</a>
+                </div>
+            </div><div class="col-xs-6 p_box" style="margin-bottom: 15px;">
+            <div>
+                <!--<a href="/index.php?m=Teacher&c=MyClass&a=LookAlbum&id=205" style="cursor: hand;">-->
+                <img  src="/Public/Uploads/albums/2017-03-13/thumb_58c5f5896a383.jpg " alt="..." class="album_cover img-responsive">
+                <!--</a>-->
+            </div>
+            <p class="photo_line">
+                <span class="photo_title pull-left">历史</span><input type="text" class="p_hide_input_title hide" value="历史">
+                <span class="photo_num pull-right">共0张</span>
+            </p>
+            <p class="photo_con ">2017.03.03</p><input type="text" class="p_hide_input_con hide" value="2017.03.03">
+
+            <div class="col-xs-6 no_padding tp5 text-cen">
+                <a class="btn btn-sm tt_button p_button change_name" id=205>重新命名</a>
+            </div>
+            <div class="col-xs-6 no_padding tp5 text-cen">
+                <a id="delete205" role="button" class="btn btn-sm tt_button p_button change_description" >删除相册</a>
+            </div>
+        </div>            </div>
+        <div class="row tp36" id="page">
+            <div class="col-xs-12">
+            </div>
+        </div>
+        <!--图片区结束-->
+    </div>
+</div>
+<!--<a id="delete205" role="button" class="delete_btn" style="color: #f00;">删除</a> &nbsp;&nbsp;-->
+<!--<a data-target="#myModal205" data-toggle="modal">重命名</a>-->
+<!--<div aria-hidden="true" aria-labelledby="myModalLabel" role="dialog" tabindex="-1" class="modal fade" bs-popup="" ng-model="test" id="myModal205" style="display: none;">-->
+<!--<div class="modal-dialog">-->
+<!--<div class="modal-content">-->
+<!--<div class="modal-header alert-info" style="background-color: #07754E;color:#fff;">-->
+<!--<button aria-hidden="true" data-dismiss="modal" class="close" type="button" style="color:#fff;">×</button>-->
+<!--<h4 id="myModalLabel" class="modal-title">更改相册名</h4>-->
+<!--</div>-->
+<!--<div class="modal-body">-->
+<!--<form action="/index.php?m=Teacher&c=MyClass&a=ChangeAlbumName&id=205;76;40" method="post" enctype="multipart/form-data" role="form" class="type_t">-->
+<!--<div class="form-group">-->
+<!--<label for="name">名称:</label>-->
+<!--<input class="form-control" id="name" name="name" type="text" required>-->
+<!--<label for="name">描述:</label>-->
+<!--<input class="form-control" id="description" name="description" type="text" required>-->
+<!--</div>-->
+<!--<button type="submit" id=save205 class="btn t_button center-block">保存</button>-->
+<!--</form>-->
+<!--</div>-->
+<!--</div>-->
+<!--&lt;!&ndash; /.modal-content &ndash;&gt;-->
+<!--</div>-->
+<!--&lt;!&ndash; /.modal-dialog &ndash;&gt;-->
+<!--</div>-->
+<!--底部内容区开始-->
+<script>
+    $(document).ready(function() {
+        var Fields_data = function() {};
+        var group_id = "1";
+        if (group_id == 2) {
+            $(".select_bow").css("display", "none");
+            var back_btn = "";
+            back_btn = back_btn + "<a href='/index.php?m=Student&c=Index&a=index' class='btn btn-lg btn-warning' role='button'>" +
+                "<span class='glyphicon glyphicon-home'>" + "</span>" + "主页" + "</a>" +
+                "<a href='/index.php?m=Student&c=MyClass&a=index'  class='btn btn-lg btn-warning' role='button'>" +
+                "<span class='glyphicon glyphicon-share-alt'>" + "</span>" + " 后退" + "</a>";
+            $("#back").html(back_btn);
+        }
+        $("#album_name").blur(function() {
+            var name = $("#album_name").val();
+            $("#search_form").attr("action", "index.php?m=Teacher&c=MyClass&a=ListAlbum&album_name=" + name);
+        });
+        $(".delete_btn").on("click", function() {
+            var id = $(this).attr("id");
+            id = id.replace("delete", "");
+            if (confirm("你确定删除吗？")) {
+                $.ajax({
+                    type: 'GET',
+                    url: "/index.php?m=Teacher&c=MyClass&a=DelAlbum&id=" + id,
+                    dataType: "json",
+                    success: function(data) {
+                        if (data == 1) {
+                            alert("删除成功！！");
+                            window.location.reload();
+                        } else {
+                            alert("操作出错！！");
+                        }
+                    },
+                    error: function(e, xhl, dd) {
+                        alert("err");
+                    }
+                });
+            }
+        });
+        $("#select").on("change", function() {
+            var id = $(this).val();
+            location.href = "index.php?m=Teacher&c=MyClass&a=EditorAlbum&id=" + id;
+        });
+        /*重命名*/
+        $('.change_name').click(function(){
+            var parent=$(this).parents('.p_box');
+            var text=$(this).text();
+            var id=$(this).attr('id');
+            if(text=='重新命名'){
+                parent.find('.photo_title').addClass('hide');
+                parent.find('.photo_con').addClass('hide');
+                parent.find('.p_hide_input_title').removeClass('hide');
+                parent.find('.p_hide_input_con').removeClass('hide');
+                $(this).text('保存');
+                parent.find('.change_description').text('取消');
+            }else if(text=='保存'){
+                if(confirm("是否保存！")){
+                    parent.find('.photo_title').removeClass('hide');
+                    parent.find('.photo_con').removeClass('hide');
+                    parent.find('.p_hide_input_title').addClass('hide');
+                    parent.find('.p_hide_input_con').addClass('hide');
+                    var title=parent.find('.p_hide_input_title').val();
+                    var content=parent.find('.p_hide_input_con').val();
+                    $.post("/index.php?m=Teacher&c=MyClass&a=ChangeAlbumName",{id:id,name:title,description:title},function(data){
+                        parent.find('.photo_title').text(title);
+                        parent.find('.photo_con').text(content);
+                    });
+                    $(this).text('重新命名');
+                    parent.find('.change_description').text('删除相册');
+                }
+            }
+        });
+        $('.change_description').click(function(){
+            var text=$(this).text();
+            var parent=$(this).parents('.p_box');
+            if(text=='删除相册'){
+                var id = $(this).attr("id");
+                id = id.replace("delete", "");
+                if (confirm("你确定删除吗？")) {
+                    $.ajax({
+                        type: 'GET',
+                        url: "/index.php?m=Teacher&c=MyClass&a=DelAlbum&id=" + id,
+                        dataType: "json",
+                        success: function(data) {
+                            if (data == 1) {
+                                alert("删除成功！！");
+//                                window.location.reload();
+                                parent.remove();
+                            } else {
+                                alert("操作出错！！");
+                            }
+                        },
+                        error: function(e, xhl, dd) {
+                            alert("err");
+                        }
+                    });
+                }
+            }else if(text=='取消'){
+                parent.find('.photo_title').removeClass('hide');
+                parent.find('.photo_con').removeClass('hide');
+                parent.find('.p_hide_input_title').addClass('hide');
+                parent.find('.p_hide_input_con').addClass('hide');
+                $(this).text('删除相册');
+                parent.find('.change_name').text('重新命名');
+            }
+        });
+    })
+</script>

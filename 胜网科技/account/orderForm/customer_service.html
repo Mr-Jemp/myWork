@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
+		<meta name="apple-mobile-web-app-capable" content="yes"/>
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"/>
+		<meta http-equiv="Access-Control-Allow-Origin" content="*">
+		<title>我的订单</title>
+		<link rel="stylesheet" href="../../public/part/bootstrap/bootstrap.min.css" />
+		<link rel="stylesheet" href="../css/base.css" />
+		<link rel="stylesheet" href="../css/orderForm.css" />
+	</head>
+	<body ng-app="cusserApp" ng-controller="cusserCtrl">
+	
+		<header class="mycollect_top_a">
+			<ul class="top_a_ul">
+				<li class="top_a_le">
+					<img src="../images/icon_fanhui.png" />		
+				</li>
+				<li class="top_a_con">售后退款</li>
+			</ul>
+		</header>
+		<div class="service_back">
+			<ul class="clearfix">
+				<li ><a class="topBul" href="#/custome" >售后申请</a></li>
+				<li><a href="#/rateQuery">进度查询</a></li>
+			</ul>
+			<div ng-view></div>
+		</div>
+		<script src="../../public/part/jquery/jquery-3.1.1.min.js"></script>
+		<script src="../../public/part/angular/angular.min.js"></script>
+		<script src="../../public/part/angular/angular-route.js"></script>
+		<script src="../js/publicJs.js"></script>
+		<script src="../js/customSer.js"></script>
+	</body >
+</html>

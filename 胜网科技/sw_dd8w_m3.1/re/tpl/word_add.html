@@ -1,0 +1,85 @@
+<div class="timu_left">
+    <div class="timu_left_top pl20">
+        <i class="timu_left_flag"></i><a href="###">首页</a> > <a href="###">资源库</a> > <a href="###">上传资源</a> > <a href="###">上传word导卷</a>
+    </div>
+    <div class="timu_left_content">
+        <div class="choiceWordChapterKnowledge">
+            <dl>
+                <dt>教材章节信息：</dt>
+                <dd>
+                    <ul class="word_chapter_list">
+                        <!--<li data-wclid="2">人教版 > 一年级数学下册 > 第2单元数一数 > 第一节认识数字 <span class="del_word_chapter" ng-click="delWordChapter(2)">x</span></li>
+                        <li>人教版 > 一年级数学下册 > 第2单元数一数 > 第一节认识数字 <span class="del_word_chapter">x</span></li>-->
+                    </ul>
+                </dd>
+            </dl>
+            <dl>
+                <dt>知识点：</dt>
+                <dd>
+                    <ul class="word_knowledge_list">
+                        <!--<li>人教版 > 一年级数学下册 > 第2单元数一数 > 第一节认识数字 <span class="del_word_knowledge">x</span></li>
+                        <li>人教版 > 一年级数学下册 > 第2单元数一数 > 第一节认识数字 <span class="del_word_knowledge">x</span></li>-->
+                    </ul>
+                </dd>
+            </dl>
+        </div>
+        <div class="timu_left_timuopt timu_left_block">
+            <div class="timu_left_timuoptt">智能导卷须知：</div>
+            <ul class="timu_left_worddes">
+                <li>尊敬的老师，上传试卷前，请选阅读以下内容：</li>
+                <li>1、上传的试卷需要按模板填写内容，请先下载试卷模板文件 （标签说明.doc） </li>
+                <li>( <span style="color: #78A8E8">语文.doc 数学.doc 英语.doc 政治.doc 物理.doc 化学.doc 生物.doc 历史.doc 地理.doc</span>)</li>
+                <li>2、按照模板填写完试卷内容后，将word文件上传。</li>
+                <li>3、上传完成后，点击试卷预览，确认无误后点击保存，上传试卷成功。</li>
+            </ul>
+        </div>
+        <form action="test.php" enctype="multipart/form-data" method="post" id="upWordAddForm">
+            <div class="timu_left_block">
+            <ul>
+                <li>开始导卷：</li>
+                <li>
+                    <div class="re_upfile_block" ng-click="uploadfile()">
+                        <p>上传文档文件</p>
+                        <div class="uploadenclosurecontent">
+                            <div class="file_icon">
+                                <img src="/re/img/re_upfile_des/upfile_icon/icon_word.png">
+                            </div>
+                            <div class="file_name">
+                                上传{{des.title}}20%
+                            </div>
+                            <!--<progress id="upfile_progress_bar" value="0"></progress>-->
+                            <div class="upfile_progress_bar">
+                                <div class="upfile_progress"></div>
+                            </div>
+                            <div class="upfile_type">
+                                word/0M
+                            </div>
+                        </div>
+                        <input type="file" name="video" id="upload_add_word" onchange="angular.element(this).scope().uploadWordFile('upload_add_word')">
+                    </div>
+
+                </li>
+            </ul>
+        </div>
+
+        <div class="timu_left_block">
+            <ul>
+                <li>内容说明：</li>
+                <li>
+                    <textarea name="explain" rows="6" id="word_content"></textarea>
+                </li>
+            </ul>
+        </div>
+        </form>
+        <div class="timu_left_protocol timu_left_block">
+            <ul>
+                <li></li>
+                <li><input type="checkbox" ng-click="changeWordClause()" {{isWordAddClause?"checked":""}}>我已阅读 <a href="###">《资源上传服务条款》</a></li>
+            </ul>
+        </div>
+
+        <div class="timu_submit timu_left_block" ng-click="submitWordAdd()">
+            确定上传题目
+        </div>
+    </div>
+</div>

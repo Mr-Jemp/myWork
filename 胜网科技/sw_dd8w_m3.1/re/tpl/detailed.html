@@ -1,0 +1,14 @@
+    <link rel="stylesheet" href="/re/css/re_public.css">
+    <link rel="stylesheet" href="/re/css/re_index.css">
+    <link rel="stylesheet" href="/re/css/re_detailed.css">
+<div class="top">
+    <h1>资源详细页</h1>
+    <span class="top-return" onclick="javascript:window.history.back();"></span>
+</div>
+    <div class="detailed-content">
+        <h2>{{des.documentName}}</h2>
+        文件类型：{{des.documentTypeSuffix}}<br>
+        上传时间：{{des.updateTime|date:'yyyy-MM-dd HH:mm:ss'}}<br>
+        文件大小：{{des.softSize}}<br>
+        文件下载：<button ng-click="reDownload()">点击下载</button>
+    </div>

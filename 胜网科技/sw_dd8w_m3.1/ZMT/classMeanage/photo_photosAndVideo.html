@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css"/>
+		<link rel="stylesheet" type="text/css" href="css/photo.css"/>
+		<style>html,body{background-color: white;}</style>
+	</head>
+	<body>
+		
+			<div class="contractList row" style="margin: 0;">
+  					<p class="col-xs-4 contractListActive" >相册</p>
+  					<p class="col-xs-4">照片</p>
+  					<p class="col-xs-4">视频</p>
+  			</div>
+  			<!--新建照片等-->
+  			<ul class="photoAndvideo row">
+  				<li class="col-xs-6 col-lg-3 col-md-3 col-sm-3 createNew">
+  					<div>
+  						<img src="images/xinjianxiangce@2x.png"/>
+  						<p>创建相册</p>
+  					</div>
+  					<p></p>
+  				</li>
+  				<li class="col-xs-6 col-lg-3 col-md-3 col-sm-3 createdPhoto">
+  					<div class="createdPhoto">
+  						<img src="images/20170520142536.png"/>
+  					</div>
+  					<p>班级视频</p>
+  				</li>
+  				<li class="col-xs-6 col-lg-3 col-md-3 col-sm-3 createdPhoto">
+  					<div class="createdPhoto">
+  						<img src="images/20170520142547.png"/>
+  					</div>
+  					<p>日常学习照片</p>
+  				</li>
+  				<li class="col-xs-6 col-lg-3 col-md-3 col-sm-3 createdPhoto">
+  					<div class="createdPhoto">
+  						<img src="images/20170520130556.png"/>
+  					</div>
+  					<p>新建相册</p>
+  				</li>
+  			</ul>
+  			
+  			<div class="bottomLine row">
+  				<p class="col-xs-4"></p>
+  				<p class="col-xs-4" style="border: 0;line-height: 0;">我是有底线的</p>
+  				<p class="col-xs-4"></p>
+  			</div>
+			
+	</body>
+	<script type="text/javascript" src="js/jquery-1.12.4.min.js" ></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/publicJs.js" ></script>
+	<script type="text/javascript">
+		//点击全部 照片 视频
+		$(".contractList p").on("click",function(){
+			$(".contractList p").removeClass("contractListActive");
+			$(this).addClass("contractListActive");
+			$(".contractChange").css("display","none");
+			$(".contractChange").eq($(this).index()).css("display","block");
+	})
+		
+		//设置高
+		var widthLi=parseInt($(".photoAndvideo li").eq(0).css("width"))+15;
+		$(".photoAndvideo li").css("height",widthLi);
+		window.onresize=function(){
+			var widthLi=parseInt($(".photoAndvideo li").eq(0).css("width"))+15;
+			$(".photoAndvideo li").css("height",widthLi+"px");
+			
+//			console.log(widthLi,$(".photoAndvideo li").css("height"))	
+		}
+			//点击创建相册
+			$(".createNew").click(function(){
+				console.log(45)
+			})
+	</script>
+</html>

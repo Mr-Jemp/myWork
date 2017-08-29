@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css"/>
+		<link rel="stylesheet" type="text/css" href="css/syllabus.css"/>
+	</head>
+	<body ng-app="myApp">
+		
+		<div ng-view></div>
+			
+		
+  
+	</body>
+	<script type="text/javascript" src="js/jquery-1.12.4.min.js" ></script>
+	<script type="text/javascript" src="js/angular.min.js"></script>
+	<script type="text/javascript" src="js/angular-route.min.js" ></script>
+	<script type="text/javascript" src="js/publicJs.js" ></script>
+	<script type="text/javascript">
+		var app=angular.module("myApp",["ngRoute"]);
+		app.config(["$routeProvider",function($routeProvider){
+			$routeProvider.when("/",{
+				templateUrl:"syllabus_addClassSyllabus.html"
+			}).when("/classTime",{
+				templateUrl:"syllabus_setClassTime.html"
+			})
+		}])
+		
+		
+	</script>
+</html>

@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css"/>
+		<link rel="stylesheet" type="text/css" href="css/photo.css"/>
+		<style>html,body{background-color: white;}</style>
+	</head>
+	<body>
+
+  			<!--新建照片等-->
+  			<ul class="photoAndvideo row">
+  				<li class="col-xs-6 col-lg-3 col-md-4 col-sm-4 createNew">
+  					<div>
+  						<img src="images/xinjianxiangce@2x.png"/>
+  						<p>创建相册</p>
+  					</div>
+  					<p></p>
+  				</li>
+  				<!--<li class="col-xs-6 col-lg-3 col-md-4 col-sm-4 createdPhoto video empty">
+  					<div class="createdPhoto">
+  						<img src="images/20170520142536.png"/>
+  					</div>
+  					<p>班级视频</p>
+  					<p>浏览量：<span>20</span> <img src="images/dianzan@2x (2).png" alt="" /><sup class="dianZanActive">20</sup></p>
+  				</li>
+  		-->
+  			</ul>
+  			
+  			<div class="bottomLine row">
+  				<p class="col-xs-4"></p>
+  				<p class="col-xs-4" style="border: 0;line-height: 0;">我是有底线的</p>
+  				<p class="col-xs-4"></p>
+  			</div>
+  			
+  			<!--创建相册-->
+			<div class="createPhotoBG">
+				<ul>
+					<li>
+						<img src="images/chacha-@2x.png"/>
+						<span>保存</span>
+					</li>
+					<li style="border-bottom: 1px solid darkgray;">
+						<input type="text" placeholder="标题" style="border: 0;width: 100%;outline: none;"/>
+					</li>
+					<li>
+						<textarea class="textareaPhotoIndex" rows="" cols="">描述</textarea>
+					</li>
+				</ul>
+			</div>
+			
+			
+	</body>
+	<script type="text/javascript" src="js/jquery-1.12.4.min.js" ></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/publicJs.js" ></script>
+	<script type="text/javascript">
+		
+		
+		//讲相册信息渲染到页面
+		$.ajax({
+			type:"get",
+			url:"http://192.168.0.21:20883/classAlbumService/dataGridTypeAll?class_id=1",
+			async:true,
+			success:function(data){
+				console.log(data);
+				for(var i=0;i<data.length;i++){
+					//图片
+					
+				
+					if(data[i].is_pic=="0"){
+						var src='<img src="http://192.168.0.21:8000/'+data[i].img_url+'"/>';
+					}else{
+						var src='<video src="http://192.168.0.21:8000/'+data[i].img_url+'"></video>';
+					}
+					
+					//点赞图片
+					if(data[i].good_count>0){
+						var goodImg="images/dianzan@2x (2).png";
+						var goodClass='class="dianZanActive"';
+					}else{
+						var goodImg="images/dianzan@2x.png";
+						var goodClass='';
+					}
+					var li=$('<li class="col-xs-6 col-lg-3 col-md-4 col-sm-4 createdPhoto photos empty">'
+							+'<div class="createdPhoto">'
+								+src
+							+'</div>'
+							+'<p>'+data[i].title+'</p>'
+							+'<p>浏览量：<span>'+data[i].browse_count+'</span> <img src="'+goodImg+'" alt="" /><sup '+goodClass+'>'+data[i].good_count+'</sup></p>'
+						+'</li>');		
+						li.attr("photosId",data[i].classAlbum_id).attr("is_pic",data[i].is_pic);
+					$(".photoAndvideo").append(li);					
+				}
+			},
+			error:function(){
+				console.log("获取相册信息错误");
+			}
+		});
+
+				
+		//点击新建相册
+		$(".createNew").click(function(){
+			$(".createPhotoBG").css("display","block");
+		})
+		
+			//点击叉叉
+			$(".createPhotoBG li:first-child img").click(function(){
+				$(".createPhotoBG").css("display","none");
+			})
+			
+			//点击保存新增相册
+		$(".createPhotoBG span").click(function(){
+			var str=$(".createPhotoBG input").val();
+			var describes=$(".textareaPhotoIndex").val();
+			if(str==""){
+				str="新建相册";
+			}
+			console.log(str,describes)
+			var li= $('<li class="col-xs-6 col-lg-3 col-md-4 col-sm-4 createdPhoto photos empty"><div class="createdPhoto"><img src="images/20170520130556.png"/></div><p>'+str+'</p><p>浏览量：<span>0</span> <img src="images/dianzan@2x.png" alt="" /><sup>0</sup></p></li>');
+			$(".createPhotoBG input").val("");
+			$(".photoAndvideo").append(li);
+			$(".createPhotoBG").css("display","none");
+			$.ajax({
+				type:"post",
+				url:"http://192.168.0.21:20883/classAlbumService/Add?class_id=1&title="+str+"&describes="+describes,
+				dataTpye:"json",
+				success:function(data){
+					console.log(data);
+					window.location.reload()
+				},
+				error:function(){
+					console.log("错误");
+				}
+			})
+			
+
+		})
+		
+		//点击新建相册
+		$(".photoAndvideo").on("click",".empty",function(){
+			window.location.href="photo_photos.html?classAlbum_id="+$(this).attr("photosid")+"&is_pic="+$(this).attr('is_pic');
+		})
+		
+		
+
+		
+		
+	
+		
+
+	</script>
+</html>

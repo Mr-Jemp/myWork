@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+	<title>Document</title>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no,minimal-ui">
+	<meta name="apple-mobile-web-app-capable" content="yes"/>
+	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"/>
+	<meta http-equiv="Access-Control-Allow-Origin" content="*">
+   <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css"/>
+   <link rel="stylesheet" type="text/css" href="css/openOutsideClass.css"/>
+	
+
+</head>
+<body>
+
+			<div class="class_header row" style="margin: 0;">
+				<div class="col-xs-2" onclick="javascript:history.go(-1);">
+					<img src="images/fanhui@2x.png" alt="" />
+				</div>
+				<div class="header_message col-xs-6 ">添加学生</div>
+				<div class="selectClass col-xs-4">
+				</div>
+			</div>
+		
+			<div class="form-group">
+				<label  class=" control-label" style="margin-left: 10%;margin-top: 19px;">请输入学生ID/手机号码:</label>
+				<div>
+				<input type="number" name="userID" value="" class="form-control" style="width: 80%;margin:0 auto;">
+				</div>
+				<p class="reminedr_addStudent" style="text-align: center;color: red;"></p>
+
+			</div>
+			<div class="accept">
+				<button style="background-color: #56c399;color: white;margin-top: 0.5rem;">确定</button>
+			</div>
+	
+			
+		
+			<div class="reminedAddTeacherSuccess">
+				<p>添加成功！</p>
+			</div>
+		
+			<!--底部栏-->
+		<div id="footer">
+			<ul>
+				<li class="foot_li"><a href="/"><img src="images/nav_home_default@2x.png" class="img-responsive image_a " /><p>首页</p></a></li>
+				<li class="foot_li"><a><img src="images/nav_home_jy_default@2x.png" class="img-responsive  image_b" /><p>教研</p></a></li>
+				<li class="foot_li"><a href="classMeanage.html"><img src="images/nav_home_bj_default@2x.png" class="img-responsive  image_c" /><p>班级</p></a></li>
+				<li class="foot_li"><a><img src="images/nav_home_xywh_default@2x.png" class="img-responsive  image_d" /><p>校园文化</p></a></li>
+				<li class="foot_li"><a href="../../account/index.html#/account"><img src="images/nav_home_my_default@2x.png" class="img-responsive image_e" /><p>我</p></a></li>
+			</ul>
+		</div>
+
+	<script src="js/jquery-1.12.4.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+<script type="text/jscript" src="js/publicJs.js"></script>
+<script type="text/javascript">
+//	<!--添加学生-->
+		
+		$(".accept").click(function(){
+			var str=$(".form-group input").val();
+			if(str==""){
+				$(".reminedr_addStudent").text("请输入学生ID/手机号码");
+				return;
+			}
+			$(".reminedr_addStudent").text("");
+			var classId="";
+		//先根据账号获取班级id
+		$.ajax({
+			type:"post",
+			url:"http://192.168.0.21:20882/addClassOperation/getClassIdByAccountId",
+			data:JSON.stringify({"accountId":5}),
+			contentType: "application/json; charset=UTF-8",
+			async:true,
+			dataType:"json",
+			success:function(data){
+				console.log(data);
+				classId=data.msg;
+				//根据班级id班级信息中的年级
+				$.ajax({
+					type:"post",
+					url:"http://192.168.0.21:20882/addClassOperation/addStudentsForClass",
+					data:JSON.stringify({"classId":classId,'aidOrPhone':str}),
+					contentType: "application/json; charset=UTF-8",
+					async:true,
+					dataType:"json",
+					success:function(data){
+						console.log(data);	
+						if(data.status=="1"){
+							$(".reminedAddTeacherSuccess").css("display","block");
+							setTimeout(function(){
+								$(".reminedAddTeacherSuccess").css("display","none");
+								$(".class_header .col-xs-2").click()
+								console.log(57)
+							},1000)
+						}
+						
+					},
+					error:function(){
+						console.log("错误");
+					}
+				});
+				
+				
+			},
+			error:function(){
+				console.log("错误");
+			}
+		});
+		})
+</script>
+</body>
+</html>

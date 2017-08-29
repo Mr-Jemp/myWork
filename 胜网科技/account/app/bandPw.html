@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+		<meta http-equiv="Access-Control-Allow-Origin" content="*">
+		<title></title>
+		<link rel="stylesheet" href="../../public/part/bootstrap/bootstrap.min.css" />
+		<link rel="stylesheet" href="../css/base.css" />
+		<link rel="stylesheet" href="../css/index.css" />
+	</head>
+
+	<body>
+
+		<!--修改账号密码-->
+		<header class="mycollect_top_a">
+			<ul class="top_a_ul">
+				<li class="top_a_le">
+					<img src="../images/icon_fanhui.png" />
+				</li>
+				<li class="top_a_con">绑定手机号码</li>
+			</ul>
+		</header>
+
+		<div id="bangPw">
+			<form>
+				<span>密码</span>
+				<input type="password" placeholder="请输入登录密码" id="login_pw" name="name" />
+			</form>
+			<p class="tips_ container"><span>？</span>输入登录密码,为了安全对身份验证</p>
+			<a href="#" class="gaimimaBtn disabless" disabled>下一步</a>
+		</div>
+
+		<script src="../../public/part/jquery/jquery-3.1.1.min.js"></script>
+		<script src="../js/jquery.cookie.js"></script>
+		<script src="../js/publicJs.js"></script>
+
+		<script>
+			var accountIds=$.cookie("accountId");
+			$('#login_pw').blur(function() {
+				$('.gaimimaBtn').removeAttr('disabled').css("background", "#69e2b3"); //按钮激活
+				var accountNub = localStorage.getItem('accountNub'); //获取手机号码
+				$('.gaimimaBtn').click(function() {
+					$.ajax({
+						type: "post",
+						url: "http://192.168.0.21:20884/accountQuery/isAccountIdMatchPwd",
+						data: JSON.stringify({
+							"id":accountIds ,
+							"password": $('#login_pw').val(),
+							"account": accountNub
+						}),
+						contentType: "application/json; charset=UTF-8",
+						dataType: 'json',
+						success: function(res) {
+							if(res.status=="1"){
+							window.location = "bundNumber.html"
+							}
+
+						},error:function(){
+							console.log("密码不正确")
+						}
+					});
+					
+				})
+
+			})
+		</script>
+	</body>
+
+</html>

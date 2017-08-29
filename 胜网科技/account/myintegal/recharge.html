@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="Keywords" content="">
+	    <meta name="Description" content="">
+	    <meta name="format-detection" content="telephone=no">
+	    <meta name="apple-mobile-web-app-capable" content="yes">
+	    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+	    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0,minimum-scale=1.0">
+		<title>充值积分</title>
+		<link rel="stylesheet" href="../../public/part/bootstrap/bootstrap.min.css" />
+		<link rel="stylesheet" href="../css/base.css" />
+		<link rel="stylesheet" href="../css/myintegal.css" />
+		<script type="text/javascript" src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+		<script src="http://cdn.bootcss.com/blueimp-md5/1.1.0/js/md5.js"></script>
+	</head>
+	<body>
+		<header class="mycollect_top_a">
+			<ul class="top_a_ul">
+				<li class="top_a_le">
+					<img src="../images/icon_fanhui.png" />		
+				</li>
+				<li class="top_a_con">充值积分</li>
+			</ul>
+		</header>
+		<div class="recharge_cont  clearfix">
+			<ul>
+				<li>
+					<a class="corolmain">
+						<span>套餐1<br />
+							2000积分
+						</span>
+						<span class="recharge_cont_price">￥<label>20.00</label></span>
+					</a>
+				</li>
+				<li >
+					<a>
+						<span>套餐2<br />
+							5000积分
+						</span>
+						<span class="recharge_cont_price">￥<label>50.00</label></span>
+					</a>
+				</li>
+				<li >
+					<a>
+						<span>套餐3<br />
+							1w积分
+						</span>
+						<span class="recharge_cont_price">￥<label>100.00</label></span>
+					</a>
+				</li>				
+			</ul>
+			<ul>
+				<li >
+					<a>
+						<span>套餐4<br />
+							5w积分
+						</span>
+						<span class="recharge_cont_price">￥<label>495.00</label></span>
+					</a>
+				</li>
+				<li >
+					<a>
+						<span>套餐5<br />
+							10w积分
+						</span>
+						<span class="recharge_cont_price">￥<label>980.00</label></span>
+					</a>
+				</li>
+			</ul>
+			
+		</div>
+				<ul class="pay_type_three_box clearfix">
+				<li class="three_box clearfix">
+					<div class="box_a">
+						<img src="../images/icon_zhifubao.png" />
+					</div>
+					<div  class="box_b">
+						<span>支付宝支付</span>
+						<span>推荐有支付宝账号的用户使用</span>
+					</div>
+					<div class="box_c">
+						<input type="radio" value="支付宝" name="zhifb" class="zhifb"/>
+					</div>
+				</li>
+				<li class="three_box clearfix ">
+					<div class="box_a">
+						<img src="../images/icon_weixin22.png" />
+					</div>
+					<div  class="box_b">
+						<span>微信支付</span>
+						<span>推荐安装微信5.0以上版本的用户使用</span>
+					</div>
+					<div class="box_c">
+						<input type="radio" value="微信" name="zhifb" class="weixin"/>
+					</div>
+				</li>
+			</ul>
+				<p class="srue_argee">
+					<input type="checkbox" class="inputs"/>
+					我已阅读并同意<a>《用户付费协议》</a>
+				</p>
+			<div class="recharge_Btn bottomIfra">
+				立即充值
+			</div>
+			<div class="ifra"></div>
+			
+	</body>
+		<script src="../../public/part/jquery/jquery-3.1.1.min.js"></script>
+		<script src="../js/publicJs.js"></script>
+		<script src="../js/recharge.js"></script>
+</html>

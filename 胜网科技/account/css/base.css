@@ -1,0 +1,736 @@
+html,body,div,ul,li,ol,input,textarea,span,a,img,p,h1,h2,h3,h4,h5,h6,form,dl,dt {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+}
+/*html {
+	font-size: 12px;
+}*/
+header,section,footer,aside,nav,article,figure {
+	display: block;
+}
+select {	/*将默认的select选择框样式清除*/
+	appearance: none;
+	-moz-appearance: none;
+	-webkit-appearance: none;
+}
+body{
+	background: #f7f6f6;
+}
+select::-ms-expand { /*清除ie的默认选择框样式清除，隐藏下拉箭头*/
+	display: none;
+}
+.clearfix::before,
+.clearfix::after {
+	content: "";
+	clear: both;
+	height: 0;
+	display: block;
+	visibility: hidden;
+	overflow: hidden;
+}
+.clepadding {
+	padding-left: 0;
+	padding-right: 0;
+}
+img {
+	vertical-align: middle;
+	border: 0;
+}
+button {
+	outline-style: none;
+	outline: none;
+	resize: none;
+	-webtkit-appearance: none;
+}
+input,
+textarea {
+	outline-style: none;
+	outline: none;
+	-webkit-appearance: none;
+	border: none;
+	resize: none;
+}
+label {
+	font-weight: 400;
+}
+ul {
+	list-style: none;
+}
+a {
+	text-decoration: none;
+}
+a:hover {
+	cursor: pointer;
+	text-decoration: none;
+}
+
+img {
+	vertical-align: middle;
+}
+.iconss {
+	width: 0.11rem;
+	height: 0.2rem;
+	background: url(../images/icon_gengduo.png) no-repeat;
+	background-size: 100% 100%;
+	margin-left: 0.4rem;
+}
+/**
+@media screen and (min-width: 320px) {
+	html {
+		font-size: 12px;
+	}
+}
+
+@media screen and (min-width: 360px) {
+	html {
+		font-size: 13px;
+	}
+}
+
+@media screen and (min-width: 400px) {
+	html {
+		font-size: 14px;
+	}
+}
+
+@media screen and (min-width: 440px) {
+	html {
+		font-size: 15px;
+	}
+}
+
+@media screen and (min-width: 480px) {
+	html {
+		font-size: 16px;
+	}
+}
+
+@media screen and (min-width: 640px) {
+	html {
+		font-size: 18px;
+	}
+}
+**/
+
+/*公共部分*/
+
+.mycollect_top_a {
+	height:0.8rem;
+	overflow: hidden;
+}
+
+.mycollect_top_a {
+	background-color:#53dfa9;
+}
+.top_a_ul {
+	padding: 0 0.3rem;
+	width: 100%;
+	height: 100%;
+}
+
+.top_a_ul li {
+	float: left;
+	line-height:0.8rem;
+	height: 100%;
+	color: #E2F9F0;
+}
+.top_a_le{
+	cursor: pointer;
+	width:20%;
+	text-align: left;
+	font-size: 0.26rem;
+}
+.top_a_ri {
+	cursor: pointer;
+	width: 20%;
+	text-align: left;
+}
+.top_a_le img{
+	width:0.25rem;
+	height:0.42rem;
+}
+.top_a_ri{
+	text-align: right;
+	font-size: 0.29rem;
+}
+.top_a_ri img{
+	width:0.42rem;
+	height:0.42rem;
+}
+.top_a_con {
+	text-align: center;
+	width: 60%;
+	font-size: 0.39rem;
+	height: 100%;
+}
+
+/*提交按钮*/
+
+header form {
+	display: inline;
+	float: right;
+}
+
+header form input[type=submit] {
+	background: transparent;
+}
+
+.dropdown-menu {
+	background: #49484b;
+	font-size: 1.5rem;
+	position: absolute;
+	top: 100%;
+	left: 0;
+	z-index: 1000;
+	float: left;
+	min-width: 160px;
+	padding: 0.4rem 0;
+	margin: 0.16rem 0 0;
+	border-radius: 0.4rem;
+}
+
+.dropdown-menu>li {
+	clear: both;
+}
+
+.dropdown-menu>li>a {
+	color: white;
+	padding: 0 0.25rem;
+}
+
+
+/*取消收藏*/
+
+.noCollect {
+	display: none;
+	position: absolute;
+	width: 100%;
+	background: #53dfa9;
+	line-height: 0.92rem;
+	text-align: center;
+	color: white;
+	font-size: 0.30rem;
+	bottom: 0px;
+	z-index: 999;
+}
+
+.weiixn,.zhifubao {
+	width: 1.5rem;
+	height: 1.5rem;
+	border: 1px solid #E3E3E3;
+	border-radius: 0.8rem;
+}
+
+
+/*选中背景*/
+.active {
+	background: url(../images/icon_s_xuanzhong.png) no-repeat;
+	background-size: 100% 100%;
+	background-position: center center;
+}
+.corBlue{
+	color: #52dfaa !important;
+}
+/*带问号的提示语*/
+.tip_ {
+	padding-top: 0.83rem;
+	padding-bottom:0.83rem;
+	font-size: 1.2rem;
+}
+
+.tip_ span {
+	width: 0.83rem;
+	height:0.83rem;
+	border-radius: 5px;
+	background: #558adf;
+	text-align: center;
+	line-height: 0.42rem;
+	color: white;
+	margin-right: 0.83rem;
+}
+
+
+/*弹出背景*/
+
+.ifra {
+	position: fixed;
+	z-index: 200;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(0, 0, 0, .4);
+	display: none;
+}
+#wechatImg{
+	width:3rem;
+	height: 3rem;
+	line-height: 3rem;
+	background: white;
+	font-size: 0.3rem;
+	position: absolute;
+	border-radius: 0.3rem;
+	text-align: center;
+	top:50%;
+	left: 50%;
+	margin-left: -1.5rem;
+	margin-top:-1.5rem ;
+}
+.ifra .upPop{
+	width:3rem;
+	height: 1.5rem;
+	line-height: 1.5rem;
+	background: white;
+	font-size: 0.3rem;
+	position: absolute;
+	border-radius: 0.3rem;
+	text-align: center;
+	top:50%;
+	left: 50%;
+	margin-left: -1.5rem;
+	margin-top:-0.75rem ;
+}
+.ifrass {
+	display: none;
+	z-index: 9999;
+	left: 0;
+	top: 8rem;
+	width: 100%;
+	height: 100%;
+	background: rgba(0, 0, 0, .3);
+}
+
+.pop,.bob {
+	display: none;
+	width:5rem;
+	height:5rem;
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	margin: auto;
+	padding-bottom: 2.5rem;
+	z-index: 210;
+	border-radius: 0.41rem;
+	background-color: white;
+	box-shadow: 0 3px 18px rgba(0, 0, 0, .5);
+}
+
+.pop p.tip_list {
+	padding: 0.25rem;
+	font-size:0.22rem;
+	color: #959595;
+}
+
+.pop p.amount_ {
+	padding-top:0.3rem;
+	text-align: center;
+	font-size: 0.3rem;
+	color: #666;
+}
+
+.pop p.chongNumber {
+	width: 100%;
+}
+
+.pop p.chongNumber label {
+	position: absolute;
+	width: 20%;
+	font-size: 0.24rem;
+	left: 10%;
+	z-index: 1000;
+	padding-top: 0.11rem;
+}
+
+.pop p input[name=number] {
+	position: relative;
+	padding-left: 20%;
+	margin:0.31rem auto;
+	display: block;
+	width: 80%;
+	font-size: 0.24rem;
+	border: 1px solid #C0C0C0;
+	padding-top: 0.11rem;
+	padding-bottom: 0.11rem;
+}
+
+.pop a.tijiao {
+	width: 100%;
+	height: 3em;
+	position: absolute;
+	bottom: 0;
+	line-height: 3em;
+	display: block;
+	text-align: center;
+	background: #f2efef;
+}
+
+.pop form.passInput {
+	width: 100%;
+	padding: 0.11rem 0.6rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	/*margin-top: 0.5rem;*/
+}
+
+.pop form.passInput input {
+	outline-style: none;
+	width: 0.55rem;
+	height: 0.55rem;
+	padding: 0;
+	margin: 0;
+	border: 1px solid #C2CCD1;
+	border-right: none;
+}
+.pop form.passInput input:last-child {
+	border-right: 1px solid #C2CCD1;
+}
+/*提示语的公共样式*/
+
+p.tips_ {
+	font-size: 0.24rem;
+	padding-top:0.28rem;
+}
+
+p.tips_ span {
+	width:0.26rem;
+	height: 0.26rem;
+	line-height:0.26rem;
+	text-align: center;
+	display: inline-block;
+	border-radius: 0.13rem;
+	background: #558adf;
+	color: white;
+	margin-right: 0.1rem;
+}
+
+p.tip_list {
+	padding: 1.25rem;
+	font-size: 1.25rem;
+	color: #999;
+}
+
+p.tip_listlong {
+	margin-bottom:0.36rem;
+	padding:0.3rem;
+	font-size:0.22rem;
+	color: #999;
+}
+
+.onblock {
+	display: none;
+}
+
+
+/*底边的弹出框*/
+#bottom-pp{
+	position: fixed;
+    z-index: 200;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, .4);
+}
+.popBottom {
+	font-size: 0.24rem;
+	width: 100%;
+	background: #FFFFFF;
+	height: 23.15em;
+	z-index: 555;
+	position: fixed;
+	bottom: 0;
+	margin: auto;
+}
+
+p.popTop {
+	padding:0.3rem;
+	text-align: center;
+	width: 100%;
+	color: #333;
+	border-bottom: 1px solid #e3e3e3;
+}
+
+p.popTop span.del {
+	float: right;
+	display: inline-block;
+	width: 1.5em;
+	height: 1.5em;
+	background: #dad9d9;
+	border: 1px solid #e0e0e0;
+	border-radius: 0.8em;
+	text-align: center;
+	line-height: 1.5em;
+	color: white;
+}
+
+.popBottom ul li {
+	width: 100%;
+	padding: 0 0.25rem;
+	height: 1rem;
+	line-height: 1rem;
+	border-bottom: 1px solid #E3E3E3;
+	color: #333;
+}
+
+.popBottom ul li span {
+	width: 50%;
+	float: left;
+}
+
+.popBottom ul li.popBottom_a span:last-child {
+	text-align: right;
+}
+
+.popBottom ul li.popBottom_b span:last-child {
+	text-align: right;
+	line-height: 0.5rem;
+}
+
+.popBottom ul li.popBottom_b span:last-child label {
+	display: block;
+}
+
+.jifen_red {
+	color: #DF6353;
+	line-height: 0.5rem;
+}
+
+.lipay_btn {
+	width: 100%;
+	padding: 0.3rem 0.25rem;
+	background: #53DFA9;
+	text-align: center;
+	color: white;
+	position: absolute;
+	bottom: 0;
+}
+
+
+/*三种支付方式*/
+
+.pay_type_three_box {
+	font-size: 0.24rem;
+	width: 100%;
+	margin-top: 10px;
+	background: #fff;
+}
+
+.pay_type_three_box .three_box {
+	width: 100%;
+	padding: 0 0.3rem;
+	height:1.11rem;
+	border-bottom: 1px solid #E3E3E3;
+}
+
+.three_box div {
+	float: left;
+}
+/*领取时变暗色*/
+.three_box.okBg{
+	background: #f9f9f9;
+}
+div.box_a {
+	width: 10%;
+	height: 100%;
+	line-height:1.11rem;
+}
+
+div.box_a img {
+	width: 0.4rem;
+	height:0.3rem;
+}
+
+div.box_b {
+	padding-left: 5px;
+	width: 74%;
+	height: 100%;
+}
+
+div.box_b span {
+	padding-top:0.15rem;
+	display: block;
+	height: 50%;
+}
+
+div.box_b span i {
+	-webkit-text-size-adjust: none;
+	font-style: normal;
+	font-size: 0.22rem;
+	border: 1px solid #f9aa3b;
+	border-radius: 0.25rem;
+	color: #f9aa3b;
+	padding: 0.06rem;
+}
+
+div.box_c {
+	width: 16%;
+	height: 100%;
+	text-align: right;
+	line-height:1.41rem;
+}
+.box_c a{
+	color: #52dfaa;
+	padding: 0.11rem 0.05rem;
+	border: 1px solid #52dfaa;
+}
+/*领取时文字变色*/
+.box_c a.okGift{
+	background:#F1F1F1 ;
+	border: 1px solid #999;
+	color: #999;
+}
+div.box_c input {
+	width:0.38rem;
+	height:0.38rem;
+	border: 1px solid #C0C0C0;
+	border-radius: 0.19rem;
+}
+
+.srue_argee {
+	width: 100%;
+	margin-bottom: 0.22rem;
+	padding: 0.30rem 0.22rem;
+	background: #fff;
+	font-size:0.22rem;
+}
+
+.srue_argee input {
+	width:0.38rem;
+	height:0.38rem;
+	border: 1px solid #C0C0C0;
+	border-radius: 0.19rem;
+}
+
+/*选中模式*/
+
+.recharge_cont a.corolmain {
+	border-color: #53dfa9;
+}
+
+/*导航置顶*/
+
+.stick {
+	width: 100%;
+	position: fixed;
+	top: 0;
+}
+/*领取部分*/
+.pop form.win_input,.pop form.win_Telinput,.bob form.win_Telinput{
+	width: 100%;
+	display: inline-block;
+	padding:0.3rem;
+	font-size:0.26rem;
+}
+form.win_Telinput .telNub{
+	line-height: 0.8rem;
+}
+form.win_Telinput>input{
+	width: 100%;
+	line-height: 0.8rem;
+	border: 1px solid #C2CCD1;
+}
+form.win_Telinput #win_getTel{
+	width: 100%;
+	display: block;
+	text-align: center;
+	line-height: 0.8rem;
+	background:#52DFAA;
+	border-radius: 0.03rem;
+	margin: 2.25rem 0;
+}
+form.win_input input{
+	display: ;
+	display: block;
+	width:75%;
+	height:0.8rem;
+	float:right;
+	vertical-align: middle;
+}
+form.win_input p{
+	width: 100%;
+	line-height:0.8rem;
+}
+form.win_input p:last-child{
+	padding-top: 0.3rem;
+}
+form.win_input p span{
+	width:25%;
+	float: left;
+	display: inline-block;	
+}
+form.win_input p select{
+	width:25%;
+	padding: 2px;
+	/*height:0.5rem;*/
+	text-align: center;
+	/*line-height:0.5rem;*/
+	float: left;
+	background: #f9f9f9;
+}
+form.win_input p textarea.win_address{
+	width:75%;
+	height: 1.3rem;
+	overflow-x: hidden;
+	overflow-y: hidden;
+	float: left;
+}
+form.win_input>span{
+	display: block;
+	width: 100%;
+	text-align: center;
+	line-height:0.92rem;
+	background: #52DFAA;
+}
+header.topCo{
+	width: 100%;
+	position: fixed;
+	top: 0;
+	left: 0;
+}
+/*退出登录*/
+
+
+.ifra .exit{
+	/*height: 5rem;*/
+	width: 100%;
+	position: absolute;
+	left: 0;bottom: 0;
+}
+.exit div{
+	border-radius: 0.2rem;
+	background-color:white;
+	margin: 0.3rem;
+}
+.exit div p{
+	padding: 0.3rem;
+	text-align: center;
+	font-size: 0.26rem;
+	color: gray;
+}
+.exit div p:last-child{
+	font-size: 0.32rem;
+	color: #FF3B30;
+	font-weight: bold;
+	cursor: pointer;
+}
+.exit>p{
+	height: 1rem;
+	background-color: white;
+	/*width: 100%;*/
+	text-align: center;
+	color: #3F9BFF;
+	font-size: 0.32rem;
+	margin: 0.3rem;
+	border-radius: 0.2rem;
+	font-weight: bold;
+	line-height: 1rem;
+	cursor: pointer;
+}
+.isShow{
+	display: none;
+}

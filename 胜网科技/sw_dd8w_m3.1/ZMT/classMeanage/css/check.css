@@ -1,0 +1,111 @@
+*{
+	padding: 0;
+	margin: 0;
+}
+html,body{
+	font-family: "宋体","冬青黑体";
+}
+.class_header{
+	background-color:#56c399;
+	height: 0.66rem;
+}
+.class_header img{
+	width: 0.3rem;
+	font-size: 0.17rem;
+	line-height: 0.66rem;
+	padding-left: 0.15rem;
+}
+.header_message{
+	font-size: 0.3rem;
+	color: white;
+	text-align: center;
+	padding-left: 1.2rem;
+}
+.class_header div{
+	line-height: 0.66rem;
+}
+.class_header .selectClass{
+	font-size: 0.2rem;
+	color: white;
+	text-align: right;
+	padding-right: 0.55rem;
+}
+/*图片*/
+.checkImg{
+	margin-top: 1rem;
+	text-align: center;
+}
+.checkImg p{
+	background-repeat: no-repeat;
+    background-image: url(../images/shenhezhong-@2x.png);
+    background-size: 100% 100%;
+    width: 1.6rem;
+    display: inline-block;
+    height: 1.5rem;
+    text-align: center;
+    color: #5386EC;
+    font-size: 0.17rem;
+    line-height: 2rem
+}
+/*文字*/
+.checkContent{
+	margin-top: 0.4rem;
+	text-align: center;
+	font-size: 0.17rem;
+}
+.checkContent p{
+	display: inline-block;
+	/*width: 70%;*/
+	text-align: left;
+	color: gray;
+	font-size: 0.17rem;
+	margin-top: 0.15rem;
+	padding: 0 1rem;
+}
+/*继续申请*/
+.goOn{
+	margin-top: 1rem;
+	text-align: center;
+}
+.goOn button{
+	border-radius: 0.1rem;
+	width: 50%;
+	height: 0.4rem;
+	font-size: 0.17rem;
+	background-color: white;
+}
+
+/*升级班级*/
+.openClass{
+	height: 1rem;
+	background-color: #F7F7F7;
+	border-radius: 0.1rem;
+	margin:0.18rem 0.3rem 0 0.3rem;
+	font-size: 0.16rem;
+	line-height: 1rem;	
+	padding-left: 0.2rem;
+}
+.upTo{
+	margin:0.18rem 0.3rem 0 0.3rem;
+	font-size: 0.16rem;
+}
+.openClass img{
+	width: 0.3rem;
+	float: right;
+	margin:0.4rem 0.5rem 0 0;
+}
+
+/*底部栏*/
+#footer{width: 100%;height:100px;background:#f8f8f8;margin-top:50px;position:fixed;bottom:0px;left:0;right:0;margin-left:0;margin-right: 0}
+	
+		#footer ul{margin:0 auto;width:100%;height:100px;margin-top: 20px;-webkit-padding-start: 0px;}
+		#footer ul li{list-style:none;float:left;margin:0 auto;margin-top:10px;width:20%;padding:0;}
+		#footer ul li img{margin:0 auto;}
+		#footer ul li a{text-decoration:none;}
+		#footer ul li p{text-align: center;color:black;}
+			@media screen and (max-width:720px) and (min-width:300px){	
+				
+			.container-fluid{position: absolute;bottom:0px;width:100%;height: 100%;margin:0;padding:0;}
+			#footer ul li{list-style:none;float:left;margin:0 auto;margin-top:10px;width:20%;padding:0;}
+			#footer ul li  img{width:25px;height:25px;} 
+	}

@@ -1,0 +1,48 @@
+.m-modal-mask {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,.3);
+}
+.m-modal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 5.42rem;
+    /*height: 4.3rem;*/
+    text-align: center;
+    background-color: #fff;
+    border-radius: .27rem;
+    transform: translate(-50%, -50%);
+}
+.m-modal__info {
+    padding: .4rem .36rem .5rem;
+}
+.m-modal__title {
+    margin: 0;
+    margin-bottom: .4rem;
+    font-size: .26rem;
+    color: #333;
+}
+.m-modal__message {
+    margin: 0;
+    font-size: .25rem;
+    color: #999;
+    text-align: center;
+}
+.m-modal__btns {
+    display: flex;
+    border-top: 1px solid #e5e5e5;
+}
+.m-modal__btn {
+    flex: 1 1 auto;
+    font-size: .3rem;
+    line-height: .96rem;
+    color: #56c399;
+    cursor: pointer;
+}
+.m-modal__btn:first-child {
+    color: #999;
+    border-right: 1px solid #e5e5e5;
+}

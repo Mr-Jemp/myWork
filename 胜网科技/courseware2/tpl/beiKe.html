@@ -1,0 +1,402 @@
+<script src="../../public/part/jq-ui/jquery-ui.min.js"></script>
+<link href="../courseware2/css/beike.css" rel="stylesheet">
+<div class="main-content">
+    <div class="bk_right">
+        <div class="bk_common_btn">
+            <span class="common_btn" onclick="javascript:window.location.href='/';">返回</span>
+            <span class="common_btn myspace" ng-click="setResrouceType(0)">我的空间</span>
+            <span class="common_btn" ng-click="newBeiKe()">新建
+                <!--<em></em><div class="new_beike">
+                    <a>ppt</a>
+                    <a>word</a>
+                    <a>excel</a>
+                </div>-->
+            </span>
+            <span class="common_btn" ng-click="doSave()">保存</span>
+        </div>
+        <!--<div class="bk_title" contenteditable="true">输入备课名称</div>-->
+        <input class="bk_title" ng-model="bk_title" placeholder="输入备课名称" value="{{bk_title}}">
+        <!--<div class="bk_r_select">
+            &lt;!&ndash;<span class="my-resrouce{{rs_type==0?' rs_type':''}}" ng-click="setResrouceType(0)"></span>&ndash;&gt;
+            <span class="bxzy{{rs_type==1?' rs_type':''}}" ng-click="setResrouceType(1)">年级</span>
+            <span class="bxzy{{rs_type==2?' rs_type':''}}" ng-click="setResrouceType(2)">本校空间</span>
+            <span class="jyzy"><a target="_blank" href="http://www.gdedu.tv" style="color:black;text-decoration: none;">教育推荐</a></span>
+            <span class="resrouce-more{{rs_type==3?' rs_type':''}}" ng-click="setResrouceType(3)">更多</span>
+        </div>-->
+
+        <div class="bk_r_tool">
+            <div class="bk_resrouce">
+                <img src="./img/public/icon_dizhi.png">
+                <span ng-click="openTeachingMmaterial()" title="{{cur_teaching.school_period_name}}{{cur_teaching.subject_name}}{{cur_teaching.version_name}}{{cur_teaching.semester_name}}{{cur_teaching.section_name}}">{{cur_teaching.school_period_name}}{{cur_teaching.subject_name}}{{cur_teaching.version_name}}{{cur_teaching.semester_name}}{{cur_teaching.section_name}}</span>
+            </div>
+            <div class="bk_plugin_tool">
+                <!--教材-->
+                <div id="bk_sw_material">
+                    <div style="width: 100%;height: 100%;padding-bottom: 30px;overflow-y: auto;">
+                        <dl class="bk_sw_material_head">
+                            <dt><img src="./img/demo.png"></dt>
+                            <dd>粤人版</dd>
+                            <dd>七年级上册</dd>
+                            <dd><span class="bk_sw_teaching_material">更换</span></dd>
+                        </dl>
+                        <div class="p_sw_material_tree">
+
+                        </div>
+                        <!--<div class="p_sw_material_block">
+                            <h2>校段</h2>
+                            <ul>
+                                <li><div ng-repeat="c in school_period" class="{{gcss[$index%3]}}"><span ng-click="setSchoolPeriod(c.id,c.name)" ng-class="(c.id==tmp.school_period_id)?'pc_list_act':''">{{c.name}}</span></div></li>
+                            </ul>
+                        </div>
+                        <div class="p_sw_material_block">
+                            <h2>科目</h2>
+                            <ul>
+                                <li><div ng-repeat="s in subject" class="{{gcss[$index%3]}}"><span ng-click="setSubject(s.id,s.key,s.value)" ng-class="(s.id==tmp.subject_id)?'pc_list_act':''">{{s.value}}</span></div></li>
+                            </ul>
+                        </div>
+                        <div class="p_sw_material_block">
+                            <h2>版本</h2>
+                            <ul>
+                                <li><div ng-repeat="v in version" class="{{gcss[$index%3]}}"><span ng-click="setVersion(v.id,v.key,v.title)" ng-class="(v.id==tmp.version_id)?'pc_list_act':''">{{v.value}}</span></div></li>
+                            </ul>
+                        </div>
+                        <div class="p_sw_material_block">
+                            <h2>册数</h2>
+                            <ul>
+                                <li><div ng-repeat="t in semester" class="{{gcss[$index%3]}}"><span ng-click="setSemester(t.id,t.key,t.value)" ng-class="(t.id==tmp.semester_id)?'pc_list_act':''" title="{{t.value}}">{{t.value}}</span></div></li>
+                            </ul>
+                        </div>
+                        <div class="p_sw_material_block">
+                            <h2>单元</h2>
+                            <ul>
+                                <li><div ng-repeat="se in section" class="{{gcss[$index%3]}}"><span ng-click="setSection(se.id,se.key,se.value)" ng-class="(se.id==tmp.section_id)?'pc_list_act':''" title="{{se.value}}">{{se.value}}</span></div></li>
+                            </ul>
+                        </div>-->
+                    </div>
+                    <div class="bk_sw_submit" ng-click="updataSection()">确定</div>
+                </div>
+                <!--<ul>
+                    <li id="pptPluginBtn" class="my-tool-btn {{curr_beike_type=='pptx'?'currToolBtn':'disabled'}}" draggable="true" ng-click="setBeikeType('pptx')">pptx</li>
+                    <li id="docPluginBtn" class="my-tool-btn {{curr_beike_type=='docx'?'currToolBtn':'disabled'}}" draggable="true" ng-click="setBeikeType('docx')">word</li>
+                    <li id="pdfPluginBtn" class="my-tool-btn {{curr_beike_type=='pdf'?'currToolBtn':'disabled'}}" draggable="true" ng-click="setBeikeType('pdf')">pdf</li>
+                    <li id="excelPluginBtn" class="my-tool-btn {{curr_beike_type=='xlsx'?'currToolBtn':'disabled'}}" draggable="true" ng-click="setBeikeType('xlsx')">excel</li>
+
+                    <li id="microPluginBtn" class="my-tool-btn {{curr_beike_type=='weike'?'currToolBtn':'disabled'}}" ng-click="setBeikeType('weike')">微课</li>
+                    <li id="videoPluginBtn" class="my-tool-btn {{curr_beike_type=='video'?'currToolBtn':'disabled'}}" draggable="true" ng-click="setBeikeType('video')">视频</li>
+                    <li id="voicePluginBtn" class="my-tool-btn {{curr_beike_type=='audio'?'currToolBtn':'disabled'}}" draggable="true" ng-click="setBeikeType('audio')">
+                        音频
+                    </li>
+                    <li id="interactionPluginBtn" class="my-tool-btn {{curr_beike_type=='hudong'?'currToolBtn':'disabled'}}" draggable="true" ng-click="setBeikeType('hudong')">
+                        互动
+                    </li>
+                    <li id="questionsBtn" class="my-tool-btn {{curr_beike_type=='shiti'?'currToolBtn':'disabled'}}" draggable="true" ng-click="setBeikeType('shiti')">
+                        试题
+                    </li>
+                    <li id="taskBtn" class="my-tool-btn {{curr_beike_type=='zuoye'?'currToolBtn':'disabled'}}" draggable="true" ng-click="setBeikeType('zuoye')">
+                        作业
+                    </li>
+
+                    <li id="coursewarePluginBtn" class="my-tool-btn {{curr_beike_type=='kejian'?'currToolBtn':'disabled'}}" draggable="true" ng-click="setBeikeType('kejian')">
+                        课件
+                    </li>
+                </ul>-->
+                <div class="bk_plugin_tool_centent">
+                    <!-- 上传ppt   -->
+                    <div class="bk_tool_c_updel bk_tool_1" id="bk_ppt" style="display:block;">
+                        <a class="mybtn" href="/re/#!/re_upfile_des/11" target="_blank">上传</a>
+                        <span class="mybtn" style="position:relative;">删除</span>
+                    </div>
+                    <div class="bk-main-set">
+                        <div class="bms-left">
+                            <div class="bms_left_li">
+                                <img src="./img/bms_icon/icon_mubiao.png" class="bms_left_img">
+                                <span class="bms_left_text ">目标</span>
+                            </div>
+                            <div class="bms_left_li">
+                                <img src="./img/bms_icon/icon_yuxi.png" class="bms_left_img">
+                                <span class="bms_left_text">预习</span>
+                            </div>
+                            <div class="bms_left_li bms_curr_left_li">
+                                <img src="./img/bms_icon/icon_ketang.png" class="bms_left_img">
+                                <div><span class="bms_left_text ">课堂</span></div>
+                            </div>
+                            <div class="bms_left_li">
+                                <img src="./img/bms_icon/icon_tanglian.png" class="bms_left_img">
+                                <div><span class="bms_left_text ">堂练</span></div>
+                            </div>
+                            <div class="bms_left_li" style="background: #1fa06a;" id="jobPlush">
+                                <img src="./img/bms_icon/icon_jiahao.png" class="bms_left_img" style="margin-top:15px;">
+                            </div>
+                        </div>
+                        <div class="bms-right">
+                            <div class="bms_bk_con">
+                                <div class="bms_bk_lists">
+                                    <div class="bms-right-list bms_curr_list">
+                                        <div class="bms_right_list_time">9:10</div>
+                                        <div class="bms_right_list_img">
+                                            <img src="./img/demo_list/1.jpg">
+                                        </div>
+                                    </div>
+                                    <div class="bms-right-list">
+                                        <div class="bms_right_list_time">9:30</div>
+                                        <div class="bms_right_list_img">
+                                            <img src="./img/demo_list/2.jpg">
+                                        </div>
+                                    </div>
+                                    <div class="bms-right-list">
+                                        <div class="bms_right_list_time">9:50</div>
+                                        <div class="bms_right_list_img">
+                                            <img src="./img/demo_list/4.jpg">
+                                        </div>
+                                    </div>
+                                    <div class="bms-right-list">
+                                        <div class="bms_right_list_time">9:10</div>
+                                        <div class="bms_right_list_img">
+                                            <img src="./img/demo_list/5.jpg">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="bms_bk_lists_add">
+                                    <span class="add_bk_list_btn">+</span>
+                                </div>
+                            </div>
+                            <div class="bms_bk_reference_material">
+                                <div class="bbrm_content">
+                                    <h3>参考资源</h3>
+                                    <div class="bbrm_content_list">
+                                        <div class="bbrm_content_list_img">
+                                            <img src="./img/demo_list/6.jpg">
+                                        </div>
+                                        <div class="bbrm_content_list_title">
+                                            毕业设计答辩课件
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--<div class="beike-content-list">
+                        <dl class="bcl-block {{c.id==curr_beike_id?' curr-beike':''}}" ng-repeat="c in beikecontent">
+                            <dt><img src="{{c.pice}}" title="{{c.title}}" ng-click="doBeiKeCon(c.id,c.file)"></dt>
+                            <dd><span title="{{c.title}}" ng-click="doBeiKeCon(c.id,c.file)">{{c.title}}</span></dd>
+                        </dl>
+                        &lt;!&ndash;<dl class="bcl-block">
+                            <dt><img src="/courseware2/img/video_img.png"></dt>
+                            <dd><span>测试内容</span></dd>
+                        </dl>
+                        <dl class="bcl-block">
+                            <dt><img src="/courseware2/img/pdf_img.png"></dt>
+                            <dd><span>测试内容</span></dd>
+                        </dl>
+                        <dl class="bcl-block">
+                            <dt><img src="/courseware2/img/excel_img.png"></dt>
+                            <dd><span>测试内容</span></dd>
+                        </dl>
+                        <dl class="bcl-block">
+                            <dt><img src="/courseware2/img/doc_img.png"></dt>
+                            <dd><span>测试内容</span></dd>
+                        </dl>&ndash;&gt;
+                    </div>-->
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div class="bk_left">
+        <iframe src="http://192.168.0.93:9980/loleaflet/5.3.4/loleaflet.html?file_path=file:///home/lool/LibreOffice/%E6%97%B6%E5%B0%9A%E5%BE%AE%E7%AB%8B%E4%BD%93.pptx
+"  scrolling="yes" width="100%" height="580"></iframe>
+        <!--<script id="editor" type="text/plain" style="width:100%;height:100%;"></script>-->
+    </div>
+    <div class="bk_material_library">
+        <div class="open_material">打开</div>
+        <div style="position: relative">
+            <input type="text" class="bml_text"><span class="bml_btn">搜索</span>
+        </div>
+        <div class="bk_r_select">
+            <span class="bxzy{{rs_type==1?' rs_type':''}}" ng-click="setResrouceType(1)">年级</span>
+            <span class="bxzy{{rs_type==2?' rs_type':''}}" ng-click="setResrouceType(2)">本校空间</span>
+            <span class="jyzy"><a target="_blank" href="http://www.gdedu.tv" style="color:black;text-decoration: none;">教育推荐</a></span>
+            <span class="resrouce-more{{rs_type==3?' rs_type':''}}" ng-click="setResrouceType(3)">更多</span>
+        </div>
+        <div class="bml_nav">
+            <ul>
+                <li style="width: 3px;padding: 0px;"></li>
+                <li class="bml_nav_selected">全部</li>
+                <li>备课</li>
+                <li>微课</li>
+                <li>题目</li>
+                <li>文档</li>
+                <li>+</li>
+            </ul>
+        </div>
+        <div class="bml_material_lists">
+            <div class="bml_block_lists">
+                <dl class="bml_block" ng-repeat=" ls in beikecontent">
+                    <dt><img src="{{ls.pice}}" title="{{ls.title}}"></dt>
+                    <dd><span title="{{ls.title}}" >{{ls.title}}</span></dd>
+                </dl><!-- end ngRepeat: c in beikecontent -->
+                <!--<dl class="bml_block">
+                    <dt><img src="/courseware2/img/doc_img.png" title="小小的船"></dt>
+                    <dd><span title="小小的船">小小的船</span></dd>
+                </dl>&lt;!&ndash; end ngRepeat: c in beikecontent &ndash;&gt;
+                <dl class="bml_block ">
+                    <dt><img src="/courseware2/img/doc_img.png" title="雪地里的小画家"></dt>
+                    <dd><span title="雪地里的小画家">雪地里的小画家</span></dd>
+                </dl>&lt;!&ndash; end ngRepeat: c in beikecontent &ndash;&gt;
+                <dl class="bml_block ">
+                    <dt><img src="/courseware2/img/ppt_img.jpg" title="影子"></dt>
+                    <dd><span title="影子">影子</span></dd>
+                </dl>&lt;!&ndash; end ngRepeat: c in beikecontent &ndash;&gt;
+                <dl class="bml_block ">
+                    <dt><img src="/courseware2/img/ppt_img.jpg" title="寓言故事揠苗助长"></dt>
+                    <dd><span title="寓言故事揠苗助长">寓言故事揠苗助长</span></dd>
+                </dl>&lt;!&ndash; end ngRepeat: c in beikecontent &ndash;&gt;
+                <dl class="bml_block ">
+                    <dt><img src="/courseware2/img/ppt_img.jpg" title="上传测试"></dt>
+                    <dd><span title="上传测试">上传测试</span></dd>
+                </dl>
+                <dl class="bml_block">
+                    <dt><img src="/courseware2/img/doc_img.png" title="小小的船"></dt>
+                    <dd><span title="小小的船">小小的船</span></dd>
+                </dl>
+                <dl class="bml_block ">
+                    <dt><img src="/courseware2/img/ppt_img.jpg" title="上传测试"></dt>
+                    <dd><span title="上传测试">上传测试</span></dd>
+                </dl>
+                <dl class="bml_block">
+                    <dt><img src="/courseware2/img/doc_img.png" title="小小的船"></dt>
+                    <dd><span title="小小的船">小小的船</span></dd>
+                </dl><dl class="bml_block ">
+                <dt><img src="/courseware2/img/ppt_img.jpg" title="上传测试"></dt>
+                <dd><span title="上传测试">上传测试</span></dd>
+            </dl>
+                <dl class="bml_block">
+                    <dt><img src="/courseware2/img/doc_img.png" title="小小的船"></dt>
+                    <dd><span title="小小的船">小小的船</span></dd>
+                </dl>&lt;!&ndash; end ngRepeat: c in beikecontent &ndash;&gt;
+                <dl class="bml_block ">
+                    <dt><img src="/courseware2/img/doc_img.png" title="雪地里的小画家"></dt>
+                    <dd><span title="雪地里的小画家">雪地里的小画家</span></dd>
+                </dl>&lt;!&ndash; end ngRepeat: c in beikecontent &ndash;&gt;
+                <dl class="bml_block ">
+                    <dt><img src="/courseware2/img/ppt_img.jpg" title="影子"></dt>
+                    <dd><span title="影子">影子</span></dd>
+                </dl>&lt;!&ndash; end ngRepeat: c in beikecontent &ndash;&gt;
+                <dl class="bml_block ">
+                    <dt><img src="/courseware2/img/ppt_img.jpg" title="寓言故事揠苗助长"></dt>
+                    <dd><span title="寓言故事揠苗助长">寓言故事揠苗助长</span></dd>
+                </dl>&lt;!&ndash; end ngRepeat: c in beikecontent &ndash;&gt;
+                <dl class="bml_block ">
+                    <dt><img src="/courseware2/img/ppt_img.jpg" title="上传测试"></dt>
+                    <dd><span title="上传测试">上传测试</span></dd>
+                </dl>
+                <dl class="bml_block">
+                    <dt><img src="/courseware2/img/doc_img.png" title="小小的船"></dt>
+                    <dd><span title="小小的船">小小的船</span></dd>
+                </dl>&lt;!&ndash; end ngRepeat: c in beikecontent &ndash;&gt;
+                <dl class="bml_block ">
+                    <dt><img src="/courseware2/img/doc_img.png" title="雪地里的小画家"></dt>
+                    <dd><span title="雪地里的小画家">雪地里的小画家</span></dd>
+                </dl>&lt;!&ndash; end ngRepeat: c in beikecontent &ndash;&gt;
+                <dl class="bml_block ">
+                    <dt><img src="/courseware2/img/ppt_img.jpg" title="影子"></dt>
+                    <dd><span title="影子">影子</span></dd>
+                </dl>&lt;!&ndash; end ngRepeat: c in beikecontent &ndash;&gt;
+                <dl class="bml_block ">
+                    <dt><img src="/courseware2/img/ppt_img.jpg" title="寓言故事揠苗助长"></dt>
+                    <dd><span title="寓言故事揠苗助长">寓言故事揠苗助长</span></dd>
+                </dl>&lt;!&ndash; end ngRepeat: c in beikecontent &ndash;&gt;
+                <dl class="bml_block ">
+                    <dt><img src="/courseware2/img/ppt_img.jpg" title="上传测试"></dt>
+                    <dd><span title="上传测试">上传测试</span></dd>
+                </dl>-->
+            </div>
+        </div>
+        <div class="bml_material_des_lists">
+            <ul class="bml_material_source">
+                <li>
+                    <div class="bml_source">
+                        <img src="./img/demo_list/1.jpg">
+                    </div>
+                </li>
+                <li>
+                    <div class="bml_source">
+                        <img src="./img/demo_list/2.jpg">
+                    </div>
+                </li>
+                <li>
+                    <div class="bml_source">
+                        <img src="./img/demo_list/3.jpg">
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="plugin_shrink left_shrink"><</div>
+</div>
+<!--打开office文档-->
+<div id="open-office" style="display: none;">
+    <div id="open-office-h">文档标题<spna class="colse-open-office">X</spna></div>
+    <div class="open-office-c">
+    </div>
+</div>
+<script>
+    $(function(){
+        /*var ue = UE.getEditor('editor');
+        var ue_html='<iframe src="http://192.168.0.93:9980/loleaflet/5.3.4/loleaflet.html?file_path=file:///home/lool/LibreOffice/%E6%97%B6%E5%B0%9A%E5%BE%AE%E7%AB%8B%E4%BD%93.pptx" scrolling="yes" width="100%" height="580"></iframe>';
+        ue.ready(function(){
+            //ue.setContent(ue_html);
+            ue.execCommand('inserthtml',ue_html);
+        });*/
+        var plugin_shrink=false;
+        var win_h=$(window).height();
+        //var mh=win_h-45;
+        var mh=win_h-10;
+        $(".main-content").height(mh);
+        //$(".bk_r_tool").height(mh-42);
+        var win_w=0;
+        var oo=$( "#open-office" );
+        $(".bk-main-set").height(mh-140);
+        function setSize(){
+            win_w=$("html").width();
+            $(".bk_left").width(win_w-226-228);
+        }
+        setSize();
+        window.addEventListener("resize", function () {
+            setSize();
+        }, false);
+        $(document).on('click','.colse-open-office',function(){
+            oo.hide();
+        });
+        $(document).on("click",".plugin_shrink",function () {
+            if(plugin_shrink){
+                $(".bk_right").width(226);
+                setSize();
+                plugin_shrink=false;
+                $(this).html('<');
+                $(this).removeClass("right_shrink").addClass("left_shrink");
+            }else{
+                $(".bk_right").width(0);
+                $(".bk_left").width(win_w);
+                plugin_shrink=true;
+                $(this).html('>');
+                $(this).removeClass("left_shrink").addClass("right_shrink");
+            }
+        })
+        $(document).on("click", ".parent-node", function () {
+            var ul = $(this).parent().siblings('ul');
+            console.log(ul);
+            if (ul.hasClass("close-node")) {
+                ul.removeClass('close-node').addClass("open-node");
+            } else {
+                ul.removeClass('open-node').addClass("close-node");
+            }
+        });
+        $(document).on("click", ".unit-tree span", function () {
+            $('.cur_section').removeClass('cur_section');
+            $(this).addClass('cur_section');
+        });
+        /*oo.draggable({cursor: "move",scroll: false });*/
+    })
+
+</script>

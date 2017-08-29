@@ -1,0 +1,459 @@
+<!-- 
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>数字社区-教师端个人备课</title>-->
+    <link href="/Public/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <!--[if lt IE 9]>
+    <script src="//cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="//cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <link href="/Public/Css/jscss.css" rel="stylesheet" type="text/css">
+    <link href="/Public/Css/repository.css" rel="stylesheet" type="text/css">
+    <link href="/Public/Css/lesson.css" rel="stylesheet" type="text/css">
+    <link href="/Public/Css/teacher.css" rel="stylesheet" type="text/css"> 
+   <!--  </head>
+   <body> -->
+<!---内容区开始---->
+<div class="container repository" style="padding: 0px;">
+    <div class="row topbg">
+        <div class="col-xs-12">
+            <h3>个人备课</h3>
+        </div>
+    </div>
+    <!--新加显示效果-->
+    <div class="row beike_tabs">
+        <!-- Nav tabs -->
+        <ul class="nav nav-tabs teaching_plan" role="tablist">
+            <li role="presentation" class="active"><a href="#home" aria-controls="home" role="tab" id="my_create_btn" data-type="my" data-toggle="tab">我的备课</a></li>
+            <li role="presentation"><a href="#profile" aria-controls="profile" role="tab" data-type="ot" id="other_create_btn" data-toggle="tab">本校备课</a></li>
+            <li role="presentation"><a id="add_btn">新建备课</a></li>
+            <li role="presentation" class="pull-right">
+                <a>
+                    <div class="dropdown">
+                        <a id="dLabel" data-target="#" href="http://example.com" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                            <span class="subject hide" data-subject="47"></span><span class="grade" data-grade="40" data-semester="16">16计用班计算机应用与网络上册</span>
+                            <span class="caret cdig"></span>
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="dLabel">
+                            <li><a data-grade="40" data-subject="47" class="chang_subject" data-semester="16">16计用班计算机应用与网络上册</a>
+                            </li><li><a data-grade="40" data-subject="47" class="chang_subject" data-semester="17">16计用班计算机应用与网络下册</a>
+                        </li>                            </ul>
+                    </div>
+                </a>
+            </li>
+        </ul>
+        <!-- Tab panes -->
+        <div class="tab-content">
+            <div role="tabpanel" class="tab-pane active" id="home"></div>
+            <div role="tabpanel" class="tab-pane" id="profile"></div>
+            <div role="tabpanel" class="tab-pane" id="messages"></div>
+            <div role="tabpanel" class="tab-pane" id="settings"></div>
+        </div>
+    </div>
+    <!--新增显示卡结束-->
+    <!-- Tab panes -->
+    <div class="content">
+        <!-- 左侧知识点列表 S -->
+        <div class="contentLeft" style="height: 500px;">
+            <ul id="files" class="ml-20">
+                <li class="tree_li"><a class="tree_li_a" href="javascript:void(0);" ><span class="a_color">网络基本概念</span></a>
+                    <ul class="node_ul">
+                        <li>
+                            <a href="javascript:void(0);" class="children_btn is_click_li_a a_hover font_over" data-type="" data-date="3100">第1章  计算机网络基本概念</a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0);" class="children_btn is_click_li_a font_over" data-type="" data-date="3101">第2章   数据通信基础</a>
+                        </li>                                        <li>
+                        <a href="javascript:void(0);" class="children_btn is_click_li_a font_over" data-type="" data-date="3102">第3章  网络体系结构和网络协议</a>
+                    </li>                                        <li>
+                        <a href="javascript:void(0);" class="children_btn is_click_li_a font_over" data-type="" data-date="3103">第4章  网络操作系统</a>
+                    </li>                                        <li>
+                        <a href="javascript:void(0);" class="children_btn is_click_li_a font_over" data-type="" data-date="3104">第5章   局域网基本工作原理</a>
+                    </li>                                        <li>
+                        <a href="javascript:void(0);" class="children_btn is_click_li_a font_over" data-type="" data-date="3105">第6章   Internet 基础知识</a>
+                    </li>                            </ul>
+                </li>                </ul>
+        </div>
+        <!-- 左侧知识点列表 E -->
+        <!-- 右侧错题 S -->
+        <div class="contentRight">
+            <!--<div class="col-xs-12">
+                <a data-point="3100" class="btn tt_button pull-right text-mar_cen " id="add_btn" role="button">新建备课</a>
+            </div>-->
+            <!--2-->
+            <span id="inner_box">
+                        <div class="col-xs-12 no_padding  div_line_style">
+                                <div class="col-xs-12 tp10 font_over lrp0">第1节课:&nbsp;2017-1-6 备课<span class="pull-right">2017-01-06</span></div>
+                                <div class="col-xs-12 tp10 text-mar_cen beike_font lrp0">
+                                    <div class="col-xs-4 text-cent "><span class="a-link2"><span class="glyphicon glyphicon-edit"></span>&nbsp;&nbsp;<a href="/index.php?m=Teacher&c=BeiKe&a=editCourseware&id=935">编辑</a></span></div>
+                                    <div class="col-xs-4 text-cent "><span class="a-link"><span class="glyphicon glyphicon-trash"></span>&nbsp;&nbsp;<a href="javascript:void(0)" data-del="935" href0="/index.php?m=Teacher&c=BeiKe&a=DeleteBeike&id=935">删除</a></span></div>
+                                    <div class="col-xs-4 text-cent "><span class="a-link"><span class="glyphicon glyphicon-heart"></span>&nbsp;&nbsp;<a href="javascript:void(0)" data-shar="935" href0="/index.php?m=Teacher&c=BeiKe&a=sharBeike&id=935">分享</a></span></div>
+                                </div>
+                            </div><div class="col-xs-12 no_padding  div_line_style">
+                                <div class="col-xs-12 tp10 font_over lrp0">第2节课:&nbsp;2017-1-20 备课<span class="pull-right">2017-02-06</span></div>
+                                <div class="col-xs-12 tp10 text-mar_cen beike_font lrp0">
+                                    <div class="col-xs-4 text-cent "><span class="a-link2"><span class="glyphicon glyphicon-edit"></span>&nbsp;&nbsp;<a href="/index.php?m=Teacher&c=BeiKe&a=editCourseware&id=936">编辑</a></span></div>
+                                    <div class="col-xs-4 text-cent "><span class="a-link"><span class="glyphicon glyphicon-trash"></span>&nbsp;&nbsp;<a href="javascript:void(0)" data-del="936" href0="/index.php?m=Teacher&c=BeiKe&a=DeleteBeike&id=936">删除</a></span></div>
+                                    <div class="col-xs-4 text-cent "><span class="a-link"><span class="glyphicon glyphicon-heart"></span>&nbsp;&nbsp;<a href="javascript:void(0)" data-shar="936" href0="/index.php?m=Teacher&c=BeiKe&a=sharBeike&id=936">分享</a></span></div>
+                                </div>
+                            </div><div class="col-xs-12 no_padding  div_line_style">
+                                <div class="col-xs-12 tp10 font_over lrp0">第3节课:&nbsp;2017-2-6 备课<span class="pull-right">2017-02-06</span></div>
+                                <div class="col-xs-12 tp10 text-mar_cen beike_font lrp0">
+                                    <div class="col-xs-4 text-cent "><span class="a-link2"><span class="glyphicon glyphicon-edit"></span>&nbsp;&nbsp;<a href="/index.php?m=Teacher&c=BeiKe&a=editCourseware&id=939">编辑</a></span></div>
+                                    <div class="col-xs-4 text-cent "><span class="a-link"><span class="glyphicon glyphicon-trash"></span>&nbsp;&nbsp;<a href="javascript:void(0)" data-del="939" href0="/index.php?m=Teacher&c=BeiKe&a=DeleteBeike&id=939">删除</a></span></div>
+                                    <div class="col-xs-4 text-cent "><span class="a-link"><span class="glyphicon glyphicon-heart-empty"></span>&nbsp;&nbsp;<a href="javascript:void(0)" data-shar="939" href0="/index.php?m=Teacher&c=BeiKe&a=sharBeike&id=939">分享</a></span></div>
+                                </div>
+                            </div><div class="col-xs-12 no_padding  div_line_style">
+                                <div class="col-xs-12 tp10 font_over lrp0">第4节课:&nbsp;2017-2-6 备课<span class="pull-right">2017-02-06</span></div>
+                                <div class="col-xs-12 tp10 text-mar_cen beike_font lrp0">
+                                    <div class="col-xs-4 text-cent "><span class="a-link2"><span class="glyphicon glyphicon-edit"></span>&nbsp;&nbsp;<a href="/index.php?m=Teacher&c=BeiKe&a=editCourseware&id=941">编辑</a></span></div>
+                                    <div class="col-xs-4 text-cent "><span class="a-link"><span class="glyphicon glyphicon-trash"></span>&nbsp;&nbsp;<a href="javascript:void(0)" data-del="941" href0="/index.php?m=Teacher&c=BeiKe&a=DeleteBeike&id=941">删除</a></span></div>
+                                    <div class="col-xs-4 text-cent "><span class="a-link"><span class="glyphicon glyphicon-heart"></span>&nbsp;&nbsp;<a href="javascript:void(0)" data-shar="941" href0="/index.php?m=Teacher&c=BeiKe&a=sharBeike&id=941">分享</a></span></div>
+                                </div>
+                            </div><div class="col-xs-12 no_padding  div_line_style">
+                                <div class="col-xs-12 tp10 font_over lrp0">第5节课:&nbsp;2017-1-20 备课<span class="pull-right">2017-04-06</span></div>
+                                <div class="col-xs-12 tp10 text-mar_cen beike_font lrp0">
+                                    <div class="col-xs-4 text-cent "><span class="a-link2"><span class="glyphicon glyphicon-edit"></span>&nbsp;&nbsp;<a href="/index.php?m=Teacher&c=BeiKe&a=editCourseware&id=954">编辑</a></span></div>
+                                    <div class="col-xs-4 text-cent "><span class="a-link"><span class="glyphicon glyphicon-trash"></span>&nbsp;&nbsp;<a href="javascript:void(0)" data-del="954" href0="/index.php?m=Teacher&c=BeiKe&a=DeleteBeike&id=954">删除</a></span></div>
+                                    <div class="col-xs-4 text-cent "><span class="a-link"><span class="glyphicon glyphicon-heart-empty"></span>&nbsp;&nbsp;<a href="javascript:void(0)" data-shar="954" href0="/index.php?m=Teacher&c=BeiKe&a=sharBeike&id=954">分享</a></span></div>
+                                </div>
+                            </div>                </span>
+        </div>
+        <!-- 右侧错题 E -->
+    </div>
+    <!--
+            <div class="hide btn-group btn-group-justified navbar-fixed-bottom type_t" role="group" aria-label="主页-后退">
+                <a href="/index.php?m=Teacher&c=Index&a=index" class="btn btn-lg t_button" role="button"><span id="GoIndex" class="glyphicon glyphicon-home"></span> 主页</a>
+                <a href="/index.php?m=Teacher&c=BeiKe&a=index" class="btn btn-lg t_button" role="button">
+                    <span class="glyphicon glyphicon-share-alt"></span> 后退</a>
+            </div>-->
+    <!--模态框-->
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header modal_top_bg">
+                    <h4 class="modal-title text-cen" id="myModalLabel">年级及学期</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <!---->
+                        <!---->
+                        <!---->
+                        <!--<li><a data-grade="40" data-semester="16">16计用班上册</a></li>-->
+                        <!---->
+                        <!--<li><a data-grade="40" data-semester="18">16计用班下册</a></li>-->
+                        <!---->
+                        <!--<li><a data-grade="40" data-semester="19">16计用班中册</a></li>-->
+                        <!---->
+                        <!---->
+                        <!---->
+                        <ul class="tp10 grade_class">
+                            <li><a data-grade="4" data-semester="4">444</a>
+                            </li><li><a data-grade="1" data-semester="1">111</a>
+                        </li><li><a data-grade="7" data-semester="7">777</a>
+                        </li><li><a data-grade="�" data-semester="�">���</a>
+                        </li><li><a data-grade="4" data-semester="4">444</a>
+                        </li><li><a data-grade="�" data-semester="�">���</a>
+                        </li><li><a data-grade="�" data-semester="�">���</a>
+                        </li><li><a data-grade="1" data-semester="1">111</a>
+                        </li>                            </ul>
+                    </div>
+                </div>
+                <div class="modal-footer" style="border-top: none">
+                    <div class="col-xs-12 text-cen">
+                        <a class="btn tt_button save_btn">保存</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--模态框-->
+</div>
+<!--底部开始结束-->
+<!--中间内容区结束-->
+<!---内容区结束---->
+<script type="text/javascript" src="/Public/jQuery/jquery.min.js"></script>
+<script src="/Public/bootstrap/js/bootstrap.min.js"></script>
+<script src="/Public/Js/repository_jquery.tree.js"></script>
+<script>
+    var point_id=3100;
+    var semester_id=16;
+    var other_list='';
+    var my_list='';
+    /* 删除备课 */
+    $(function() {
+        /* 展开对应的章节列表 */
+        $('#files').tree({
+            expanded: 'li:first'
+        });
+        /*菜单按钮*/
+        $('body').delegate('a.children_btn','click',function(){
+            var type=$('.teaching_plan').find('.active').children('a').attr('data-type');
+            var parent=$(this).parents('.node_ul');
+            parent.find('.children_btn').removeClass('a_hover');
+            $(this).addClass('a_hover');
+            point_id=$(this).attr('data-date');
+            $('#add_btn').attr('data-point',point_id);
+            $.post("/index.php?m=Teacher&c=BeiKe&a=getContent",{point_id:point_id,type:type},function(data){
+                var inner='';
+                for(var i=0;i<data.length;i++){
+                    var id=data[i].id;
+                    var update_time=data[i].update_time;
+                    var prepares_name=data[i].prepares_name;
+                    var face=data[i].face;
+                    var sharinfo='glyphicon-heart-empty';
+                    if(data[i].shar==1){
+                        sharinfo='glyphicon-heart';
+                    }
+                    if(type=='my'){
+                        inner=inner+'<div class="col-xs-12 no_padding  div_line_style"><div class="col-xs-12 font_over tp10 lrp0">第'+(i+1)+'节课: '+prepares_name+'<span class="pull-right">'+update_time.substr(0,10)+'</span></div>' +
+                            '<div class="col-xs-12 tp10 text-mar_cen beike_font lrp0"><div class="col-xs-4 text-cent">' +
+                            '<span class="a-link2"><span class="glyphicon glyphicon-edit"></span>&nbsp;<a href="/index.php?m=Teacher&c=BeiKe&a=editCourseware&id='+id+'">编辑</a></span></div>' +
+                            '<div class="col-xs-4 text-cent "><span class="a-link"><span class="glyphicon glyphicon-trash"></span>&nbsp;' +
+                            '<a href="javascript:void(0)" data-del="'+id+'" href0="/index.php?m=Teacher&c=BeiKe&a=DeleteBeike&id='+id+'">删除</a></span></div>'+
+                            '<div class="col-xs-4 text-cent "><span class="a-link"><span class="glyphicon '+sharinfo+'"></span>&nbsp;&nbsp;<a href="javascript:void(0)" data-shar="'+id+'" href0="/index.php?m=Teacher&c=BeiKe&a=sharBeike&id='+id+'">分享</a></span></div>'+
+                            '</div></div>	';
+                    }else{
+                        inner=inner+'<div class="col-xs-12 tp5 no_padding " style="padding-left: 5px;">'+data[i].name+'&nbsp;&nbsp;更新日期：'+update_time+'</div><div class="col-xs-12 no_padding  ot_line_style"><div class="col-xs-6 no_padding font_over" style="padding-left: 3px;"><span><img class="" src="/Public/'+face+'"></span>&nbsp;'+prepares_name+'</div><div class="col-xs-6 no_padding  text-mar_cen beike_font"><div class="col-xs-6 no_padding text-cent "><span class="a-link2"><a href=\"/index.php?m=Teacher&c=ReLecture&a=demonstrate&id='+id+'\" target="_blank">浏览</a></span></div><div class="col-xs-6 no_padding text-cent"><span class="a-link2"><a href="javascript:otadd('+id+')" >添加</a></span></div></div></div>';
+
+                    }
+                }
+                //$('#inner_box').html(inner);
+            },'json');
+        })
+        //新建备课
+        $('#add_btn').click(function(){
+           // location.href="/index.php?m=Teacher&c=BeiKe&a=addCourseware&point_id="+point_id+'&semester_id='+semester_id;
+            location.href="/courseware";
+        });
+        /*年级选择*/
+        $('body').delegate('ul.grade_class li','click',function(){
+            $('.is_click').removeClass('is_click');
+            $(this).children('a').addClass('is_click');
+        });
+        ///却换时改变内容
+        //我的
+        $('#my_create_btn').click(function(){
+            if(other_list!=''){
+                other_list=$('#files').html();
+            }
+            if(my_list!=''){
+                $('#files').html(my_list);
+            }else{
+                var gs=$('#dLabel .grade');
+                var subject_id=$('#dLabel .subject').data('subject');
+                var grade_id=gs.data('grade');
+                var semester_id=gs.data('semester');
+                if(subject_id=='' || grade_id=='' || semester_id==''){
+                    return false;
+                }
+                $.post("/index.php?m=Teacher&c=BeiKe&a=getTree",{'grade_id':grade_id,'semester_id':semester_id,'subject_id':subject_id},function(data){
+                    var inner='';
+                    for(var i=0;i<data.length;i++){
+                        var name=data[i].name;
+                        var ul_inner='';
+                        for(var j=0;j<data[i].point.length;j++){
+                            var point_name=data[i].point[j].name;
+                            var id=data[i].point[j].id;
+                            ul_inner=ul_inner+'<li><a href="javascript:void(0);" class="children_btn font_over is_click_li_a " data-type="" data-date="'+id+'">'+point_name+'</a></li>';
+                        }
+                        inner=inner+'<li class="tree_li" role="treeitem" aria-expanded="false">' +
+                            '<a class="tree_li_a tree-parent tree-parent-collapsed a_color2 glyphicon glyphicon-triangle-right" href="javascript:void(0);" ><span class="a_color">'+name+'</span></a>' +
+                            '<ul class="node_ul tree-group-collapsed" >'+ul_inner+'</ul>' +
+                            '</li>';
+                    }
+                    $('#files').html(inner);
+                });
+            }
+            /* if($('#add_btn').hasClass('hide')){
+             $('#add_btn').removeClass('hide');
+             }
+             var point_id=$('#add_btn').attr('data-point');*/
+            var type=$(this).attr('data-type');
+            var pid=0;
+            var hove=$('#files .a_hover');
+            if(hove.length>0){
+                pid=hove.data('date');
+            }else{
+                pid=$('#files .node_ul li a:first').data('date');
+            }
+            if(pid<1){
+                return false;
+            }
+            $.post("/index.php?m=Teacher&c=BeiKe&a=getContent",{point_id:pid,type:type},function(data){
+                var inner='';
+                for(var i=0;i<data.length;i++){
+                    var id=data[i].id;
+                    var update_time=data[i].update_time;
+                    var prepares_name=data[i].prepares_name;
+                    var sharinfo='glyphicon-heart-empty';
+                    if(data[i].shar==1){
+                        sharinfo='glyphicon-heart';
+                    }
+                    inner=inner+'<div class="col-xs-12 no_padding  div_line_style"><div class="col-xs-12 font_over tp10 lrp0">第'+(i+1)+'节课: '+prepares_name+'<span class="pull-right">'+update_time.substr(0,10)+'</span></div>' +
+                        '<div class="col-xs-12 tp10 text-mar_cen beike_font lrp0"><div class="col-xs-4 text-cent">' +
+                        '<span class="glyphicon glyphicon-edit"></span>&nbsp;<span class="a-link2"><a href="/index.php?m=Teacher&c=BeiKe&a=editCourseware&id='+id+'">编辑</a></span></div>' +
+                        '<div class="col-xs-4 text-cent "><span class="a-link"><span class="glyphicon glyphicon-trash"></span>&nbsp;<span class="a-link">' +
+                        '<a href="javascript:void(0)" data-del="'+id+'" href0="/index.php?m=Teacher&c=BeiKe&a=DeleteBeike&id='+id+'">删除</a></span></div>' +
+                        '<div class="col-xs-4 text-cent "><span class="a-link"><span class="glyphicon '+sharinfo+'"></span>&nbsp;&nbsp;<a href="javascript:void(0)" data-shar="'+id+'" href0="/index.php?m=Teacher&c=BeiKe&a=sharBeike&id='+id+'">分享</a></span></div>'+
+                        '</div></div>	';
+                }
+                $('#inner_box').html(inner);
+            },'json');
+        });
+        //其他
+        $('#other_create_btn').click(function(){
+            /*$('#add_btn').addClass('hide');
+             var point_id=$('#add_btn').attr('data-point');*/
+            my_list=$('#files').html();
+            if(other_list!=''){
+                $('#files').html(other_list);
+            }else{
+                var gs=$('#dLabel .grade');
+                var subject_id=$('#dLabel .subject').data('subject');
+                var grade_id=gs.data('grade');
+                var semester_id=gs.data('semester');
+                if(subject_id=='' || grade_id=='' || semester_id==''){
+                    return false;
+                }
+                $.post("/index.php?m=Teacher&c=BeiKe&a=getSharTree",{'grade_id':grade_id,'semester_id':semester_id,'subject_id':subject_id},function(data){
+                    var inner='';
+                    for(var i=0;i<data.length;i++){
+                        var name=data[i].name;
+                        var ul_inner='';
+                        for(var j=0;j<data[i].point.length;j++){
+                            var point_name=data[i].point[j].name;
+                            var id=data[i].point[j].id;
+                            ul_inner=ul_inner+'<li><a href="javascript:void(0);" class="children_btn font_over is_click_li_a " data-type="" data-date="'+id+'">'+point_name+'</a></li>';
+                        }
+                        inner=inner+'<li class="tree_li" role="treeitem" aria-expanded="false">' +
+                            '<a class="tree_li_a tree-parent tree-parent-collapsed a_color2 glyphicon glyphicon-triangle-right" href="javascript:void(0);" ><span class="a_color">'+name+'</span></a>' +
+                            '<ul class="node_ul tree-group-collapsed" >'+ul_inner+'</ul>' +
+                            '</li>';
+                    }
+                    $('#files').html(inner);
+                });
+            }
+            var type=$(this).attr('data-type');
+            var pid=0;
+            var hove=$('#files .a_hover');
+            if(hove.length>0){
+                pid=hove.data('date');
+            }else{
+                pid=$('#files .node_ul li a:first').data('date');
+            }
+            if(pid<1){
+                return false;
+            }
+            $.post("/index.php?m=Teacher&c=BeiKe&a=getContent",{point_id:pid,type:type},function(data){
+                var inner='';
+                for(var i=0;i<data.length;i++){
+                    var id=data[i].id;
+                    var update_time=data[i].update_time;
+                    var prepares_name=data[i].prepares_name;
+                    var face=data[i].face;
+                    inner=inner+'<div class="col-xs-12 tp5 no_padding " style="padding-left: 5px;">'+data[i].name+'&nbsp;&nbsp;更新日期：'+update_time+'</div>' +
+                        '<div class="col-xs-12 no_padding  ot_line_style"><div class="col-xs-6 no_padding font_over" style="padding-left: 3px;">' +
+                        '<span><img class="" src="/Public/'+face+'"></span>&nbsp;'+prepares_name+'</div>' +
+                        '<div class="col-xs-6 no_padding  text-mar_cen beike_font"><div class="col-xs-6 no_padding text-cent ">' +
+                        '<span class="a-link2"><a href="/index.php?m=Teacher&c=ReLecture&a=demonstrate&id='+id+'" target="_blank">浏览</a></span></div>' +
+                        '<div class="col-xs-6 no_padding text-cent"><span class="a-link2"><a href="javascript:otadd('+id+')" >添加</a></span></div></div></div>';
+                }
+                $('#inner_box').html(inner);
+            },'json');
+        });
+        /*保存年级选择*/
+        $('.chang_subject').click(function(){
+            var text=$(this).text();
+            if(text!==""){
+                var parent=$(this);
+                var grade_id=parent.attr('data-grade');
+                var subject_id=parent.attr('data-subject');
+                semester_id=parent.attr('data-semester');
+                $('.subject').attr('data-subject',subject_id);
+                $('.grade').html(text).attr('data-grade',grade_id).attr('data-semester',semester_id);
+                var is_kinder=0;
+                if(is_kinder!=1){
+                    /*获取左边栏树形*/
+                    $.post("/index.php?m=Teacher&c=BeiKe&a=getTree",{grade_id:grade_id,semester_id:semester_id,subject_id:subject_id},function(data){
+                        var inner='';
+                        for(var i=0;i<data.length;i++){
+                            var name=data[i].name;
+                            var ul_inner='';
+                            for(var j=0;j<data[i].point.length;j++){
+                                var point_name=data[i].point[j].name;
+                                var id=data[i].point[j].id;
+                                ul_inner=ul_inner+'<li><a href="javascript:void(0);" class="children_btn font_over is_click_li_a " data-type="" data-date="'+id+'">'+point_name+'</a></li>';
+                            }
+                            inner=inner+'<li class="tree_li" role="treeitem" aria-expanded="false">' +
+                                '<a class="tree_li_a tree-parent tree-parent-collapsed a_color2 glyphicon glyphicon-triangle-right" href="javascript:void(0);" ><span class="a_color">'+name+'</span></a>' +
+                                '<ul class="node_ul tree-group-collapsed" >'+ul_inner+'</ul>' +
+                                '</li>';
+                        }
+                        $('#files').html(inner);
+                    });
+                }else{
+//                            var subject_id=$('.subject').attr('data-subject');
+                    /*获取左边栏树形*/
+                    $.post("/index.php?m=Teacher&c=BeiKe&a=getKinderTree",{grade_id:grade_id},function(data){
+                        var inner='';
+                        for(var i=0;i<data.length;i++){
+                            var name=data[i].name;
+                            var ul_inner='';
+                            for(var j=0;j<data[i].point.length;j++){
+                                var point_name=data[i].point[j].name;
+                                var id=data[i].point[j].id;
+                                ul_inner=ul_inner+'<li><a href="javascript:void(0);" class="children_btn font_over is_click_li_a " data-type="" data-date="'+id+'">'+point_name+'</a></li>';
+                            }
+                            inner=inner+'<li class="tree_li" role="treeitem" aria-expanded="false">' +
+                                '<a class="tree_li_a tree-parent tree-parent-collapsed a_color2 glyphicon glyphicon-triangle-right" href="javascript:void(0);" ><span class="a_color">'+name+'</span></a>' +
+                                '<ul class="node_ul tree-group-collapsed" >'+ul_inner+'</ul>' +
+                                '</li>';
+                        }
+                        $('#files').html(inner);
+                    });
+                }
+            }
+        })
+        $(document).on('click', 'a[data-del]', function(event) {
+            if (!confirm('确定要删除该备课吗？')) {
+                return false;
+            }
+            var del_id = $(this).data('del');
+            if (del_id >= 1) {
+                $.getJSON("/index.php?m=Teacher&c=BeiKe&a=DeleteBeike", {"id": del_id}, function(data) {
+                    alert(data.msg);
+                    if (data.status == true) {
+                        location.reload(true);
+                    }
+                });
+            }
+        });
+        $(document).on('click', 'a[data-shar]', function(event) {
+            var shar_id = $(this).data('shar');
+            if (shar_id >= 1) {
+                var pr=$(this).prev();
+                $.getJSON("/index.php?m=Teacher&c=BeiKe&a=sharBeike", {"id": shar_id}, function(data) {
+                    if (data.status == true) {
+                        if(data.flag=='shar'){
+                            pr.removeClass('glyphicon-heart-empty');
+                            pr.addClass('glyphicon-heart');
+                        }else{
+                            pr.removeClass('glyphicon-heart');
+                            pr.addClass('glyphicon-heart-empty');
+                        }
+                    }
+                });
+            }
+        });
+    });
+    function otadd(id){
+        $.get("/index.php?m=Teacher&c=BeiKe&a=otadd",{'id':id},function(d){
+            alert(d.msg);
+        });
+    }
+</script>

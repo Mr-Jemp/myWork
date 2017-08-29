@@ -1,0 +1,132 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no,minimal-ui">
+	<meta name="apple-mobile-web-app-capable" content="yes"/>
+	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"/>
+	<meta http-equiv="Access-Control-Allow-Origin" content="*">
+    <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css"  integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<script src="./js/jq/jquery-3.1.1.min.js"></script>
+	<script src="/js/bootstrap/bootstrap.min.js"></script>-->
+	<style>
+		 html,body {width:100%;height:100%;margin:0px;padding:0px;font-family:"微软雅黑";background: #f0f8fa;cursor:}
+		.container-fluid{position:absolute;bottom:0px;width:100%;height:100%;margin:0;padding:0;}
+		.container{margin:0;padding:0;			
+			width:100%;height:100%;overflow: auto;
+		}
+		.container a{text-decoration: none;cursor:pointer;}
+		.class_head{width:100%;height:66px;background:#56c399;margin-top: 0px;margin-right:0px;margin-left:0px;}
+		.class_head p{text-align:center;font-size: 2em;line-height:66px;color:#fff;}
+		.class_back{ width:33px;height:33px; background:url(/images/main/icon_list1.png)no-repeat;background-position:-200px -85px;float: left;background-size:468px auto;margin-top:12px;}
+		.class_o{width:100%;height:50px;background:#818cf5;border-radius:10px;}
+		.class_o .class_left{width:30px;height:30px;float: left;background:url(/images/main/icon_list1.png)no-repeat;background-position: -40px -85px;margin-left:8%;background-size:468px auto; margin-top:8px; }
+		.class_o .class_r{font-size: 1.3em;line-height:50px;float: left;margin-left:8px;}
+		.class_p{width:100%;height:50px;background:#477eff;border-radius:10px;}
+		.class_p .class_l{width:30px;height:30px;float:left;background:url(/images/main/icon_list1.png)no-repeat;background-position: -125px -85px;margin-left:8%;background-size:468px auto; margin-top:8px;}
+		.class_p .class_r{font-size: 1.3em;line-height:50px;float: left;margin-left:8px;}
+	
+		.img-a{width:30%;float:right;}
+		.img-b{width:30%;float:right;}
+		#footer{width: 100%;height:100px;background:#f8f8f8;margin-top:50px;position:fixed;bottom:0px;left:0;right:0;margin-left:0;margin-right: 0}
+		#footer ul{margin-top:20px;width:100%;height:98px;-webkit-padding-start:0px;}
+		#footer ul li{list-style:none;float:left;margin-top:10px;width:10%;margin-left:8.5%;}
+		#footer ul li div{width:30px;height: 30px;margin:0 auto;background:url(/images/main/icon_list1.png)no-repeat;background-size:468px auto;margin-top:12px;}
+		#footer ul li .foot_a{background-position:-25px -268px;}
+		#footer ul li .foot_b{background-position:-99px -268px;}
+		#footer ul li .foot_c{background-position:-166px -268px;}
+		#footer ul li .foot_d{background-position:-242px -268px;}
+		#footer ul li .foot_e{background-position:-322px -268px;}
+		#footer ul li a{text-decoration:none;}
+		#footer ul li p{ color:black;text-align: center;margin-top: 3px;}
+		@media screen and (max-width:720px) and (min-width:300px){
+			.container-fluid{position: absolute;bottom:0px;width:100%;height: 100%;margin:0;padding:0;}
+			#footer ul li{list-style:none;float:left;margin:0 auto;margin-top:10px;width:20%;}
+			#footer ul li  img{width:25px;height:25px;}
+		
+		}
+	</style><!-- 
+	</head>
+	<body> -->
+	<div class="container">
+		<div class="container-fluid">
+			<div class="class_head">
+				<div class="class_back" style="font-size:2em;float:left;line-height: 66px;color:#fff;" onclick="javascript:history.go(-1);"></div>
+				<p>班级</p>
+
+			</div>
+			<!-- 开通班级加入班级 -->
+			<div class="row" style="margin:0 auto; width:97%; margin-top:37px;">
+				<div class="col-xs-6 col-lg-6 col-md-6 col-sm-6">
+				<div class="class_o"><div class="class_left"></div><div><p class="class_r">开通班级</p></div></div>
+
+				</div>
+					<div class="col-xs-6 col-lg-6 col-md-6 col-sm-6">
+					<div  class="class_p"><div class="class_l"></div><div class="class_r"><p>加入班级</p></div></div>
+
+				</div>
+
+			</div>
+			<!-- <div id="footer">
+			<ul>
+				<li class="foot_li"><a href=""><div class="foot_a"></div><p>首页</p></a></li>
+				<li class="foot_li"><a href=""><div class="foot_b"></div><p>教研</p></a></li>
+				<li class="foot_li"><a href=""><div class="foot_c"></div><p>班级</p></a></li>
+				<li class="foot_li"><a href=""><div class="foot_d"></div><p>校园</p></a></li>
+				<li class="foot_li"><a href=""><div class="foot_e"></div><p>我的</p></a></li>	
+			</ul>
+			</div> -->
+
+				<script>
+					$(function(){
+				
+					$(".foot_a").mouseover(function(){
+						$(this).css("background-position","-"+25+"px -"+368+"px");
+					})
+					$(".foot_a").mouseout(function(){
+						$(this).css("background-position","-"+25+"px -"+268+"px");
+					});
+					$(".foot_b").mouseover(function(){
+						$(this).css("background-position","-"+99+"px -"+368+"px");
+					})
+					$(".foot_b").mouseout(function(){
+						$(this).css("background-position","-"+99+"px -"+268+"px");
+					});
+					$(".foot_c").mouseover(function(){
+						$(this).css("background-position","-"+166+"px -"+368+"px");
+					})
+					$(".foot_c").mouseout(function(){
+						$(this).css("background-position","-"+166+"px -"+268+"px");
+					});
+					$(".foot_d").mouseover(function(){
+						$(this).css("background-position","-"+242+"px -"+368+"px");
+					})
+					$(".foot_d").mouseout(function(){
+						$(this).css("background-position","-"+242+"px -"+268+"px");
+					});
+					$(".foot_e").mouseover(function(){
+						$(this).css("background-position","-"+322+"px -"+368+"px");
+					})
+					$(".foot_e").mouseout(function(){
+						$(this).css("background-position","-"+322+"px -"+268+"px");
+					});
+				
+					});
+				</script>
+
+
+		</div>
+				<script>
+					$(function(){
+						$(".class_p").click(function(){
+							window.location.href="#!/push_class";
+						})
+							$(".class_o").click(function(){
+							
+							window.location.href="#!/select_class"
+						})
+					})
+
+				</script>
+	</div>

@@ -1,0 +1,39 @@
+<div class="header">
+    <div class="d-go-back" ng-click="$ctrl.goBack()">
+        <img class="header__btn" src="img/goback.png">
+    </div>
+    <div class="d-menu-btn"
+        ng-click="$ctrl.toggleMenu()">
+        <img class="d-menu-btn__img" src="img/more.png" class="header__btn">
+    </div>
+    <h1 class="header__title">
+        {{$ctrl.scheme.title}}
+    </h1>
+</div>
+
+<div class="d-menu"
+    expand-mask
+    ng-show="$ctrl.menuShown"
+    ng-click="$ctrl.toggleMenu();$event.stopPropagation()">
+    <ul class=" relative d-menu__ul"
+        ng-click="$event.stopPropagation()">
+        <li class="d-menu__li" ng-repeat="item in $ctrl.menu"
+        ng-click="item.action();$ctrl.toggleMenu();">
+            <img class="d-menu__icon" ng-src="{{item.icon}}" >
+            {{item.title}}
+        </li>
+    </ul>
+</div>
+
+<div class="d-main">
+    {{$ctrl.scheme.content}}
+</div>
+
+<my-modal
+    ng-show="$ctrl.modalShown"
+    modal-cancel="$ctrl.cancelRemove()"
+    modal-confirm="$ctrl.confirmRemove()"
+    modal-title="提示"
+    modal-content="确认删除教学计划吗？"></my-modal>
+
+<!-- <my-footer current="teacher"></my-footer> -->

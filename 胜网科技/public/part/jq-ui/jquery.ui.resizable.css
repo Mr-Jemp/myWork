@@ -1,0 +1,20 @@
+/*!
+ * jQuery UI Resizable 1.8.23
+ *
+ * Copyright 2012, AUTHORS.txt (http://jqueryui.com/about)
+ * Dual licensed under the MIT or GPL Version 2 licenses.
+ * http://jquery.org/license
+ *
+ * http://docs.jquery.com/UI/Resizable#theming
+ */
+.ui-resizable { position: relative;}
+.ui-resizable-handle { position: absolute;font-size: 0.1px; display: block; }
+.ui-resizable-disabled .ui-resizable-handle, .ui-resizable-autohide .ui-resizable-handle { display: none; }
+.ui-resizable-n { cursor: n-resize; height: 6px; width: 6px; top: -5px; left: 50%; border:1px solid #C8A1A1; border-radius:10px;background-color: white; }
+.ui-resizable-s { cursor: s-resize; height: 6px; width: 6px; bottom: -5px; left: 50%;border:1px solid #C8A1A1; border-radius:10px; background-color: white; }
+.ui-resizable-e { cursor: e-resize; width: 6px; right: -5px; top: 50%; height: 6px; border:1px solid #C8A1A1; border-radius:10px; background-color: white;}
+.ui-resizable-w { cursor: w-resize; width: 6px; left: -5px; top: 50%; height: 6px; border:1px solid #C8A1A1; border-radius:10px; background-color: white; }
+.ui-resizable-se { cursor: se-resize; width: 6px; height: 6px; right: -4px; bottom: -5px; border: 1px solid #C8A1A1; background: white; }
+.ui-resizable-sw { cursor: sw-resize; width: 6px; height: 6px; left: -4px; bottom: -5px; border: 1px solid #C8A1A1; background: white; }
+.ui-resizable-nw { cursor: nw-resize; width: 6px; height: 6px; left: -4px; top: -5px; border: 1px solid #C8A1A1; background: white; }
+.ui-resizable-ne { cursor: ne-resize; width: 6px; height: 6px; right: -4px; top: -5px; border: 1px solid #C8A1A1; background: white; }

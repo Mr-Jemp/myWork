@@ -1,0 +1,106 @@
+{
+	"ppt":[{
+	"smalltlt": "云课件编辑资源库",
+	"img": "images/slpic1.png",
+	"pptBg":"images/slpic1.png",
+	"smallImg": "",
+	"lip": [{
+		"lip": "优质资源任你选"
+	}],
+	"css": [{
+		"fontSize": "30px",
+		"textAlign": "center"
+	}]
+}, {
+	"smalltlt": "目录",
+	"img": "images/slpic2.png",
+	"pptBg":"images/pptbg.png",
+	"tit": [{
+			"lip": "建立符合因地制宜教学资源库的紧迫性"
+		},
+		{
+			"lip": "优质教学资源库来源"
+		},
+		{
+			"lip": "快速编辑，省事高效"
+		}
+	],
+	"css": [{
+		"fontSize": "25px"
+	}]
+}, {
+	"smalltlt": "建立符合因地制宜教学资源库的紧迫性",
+	"img": "images/slpic3.jpg",
+	"pptBg":"images/pptbg.png",
+	"smallImg": [{
+		"info": "images/imgc2.png",
+		"css": [{
+			"width": "200px"
+		}]
+	}, {
+		"info": "images/imgc1.png",
+		"css": [{
+			"width": "200px"
+		}]
+	}, {
+		"info": "images/imgc3.png",
+		"css": [{
+			"width": "200px"
+		}]
+	}],
+	"lip": [{
+		"lip": "缺乏符合当地学情的优质教学素材"
+	}],
+	"css": [{
+		"fontSize": "35px"
+	}]
+}, {
+	"smalltlt": "优质教学资源库来源",
+	"img": "images/slpic4.jpg",
+	"pptBg":"images/pptbg.png",
+	"smallImg": [{
+		"info": "images/imgc4.png",
+		"css": [{
+			"width": "30px"
+		}]
+	}],
+	"lip": [{
+		"lip": "优质教学资源库优质教学资源库"
+	}],
+	"css": [{
+		"fontSize": "40px"
+	}]
+}, {
+		"smalltlt": "快速编辑，省事高效",
+		"img": "images/slpic5.png",
+		"pptBg":"images/pptbg.png",
+		"smallImg":[{
+			"info": "images/imgc5.png",
+			"css": [{
+					"width": "30px"
+				},
+				{
+					"info": "images/imgc6.png",
+					"css": [{
+						"width": "30px"
+				}]
+			}]										
+		}],
+		"lip":[{
+			"lip":"备课是教学的重中之重"
+		}],
+		"css": [{
+			"fontSize": "45px"
+		}]
+	},
+	{
+		"smalltlt": "谢谢观赏",
+		"img": "images/slpic6.jpg",
+		"pptBg":"images/pptbg.png",
+		"smallImg": "",
+		"css": [{
+			"fontSize": "30px",
+			"textAlign": "center"
+		}]
+	}]
+}

@@ -1,0 +1,112 @@
+    <link rel="stylesheet" type="text/css" href="/public/part/editor/umeditor.css">
+    <link href="/public/part/bootstrap/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="/study/css/jscss.css" rel="stylesheet" type="text/css">
+    <!--[if lt IE 9]>
+    <script src="//cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="//cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <link href="/study/css/teacher.css" rel="stylesheet" type="text/css">
+<!---内容区开始---->
+<div class="container pa0">
+    <div class="row topbg">
+        <div class="col-xs-10">
+            <h3>添加教学计划</h3>
+        </div>
+    </div>
+</div>
+<!--标题头-->
+<h3 style="text-align:center"><strong style="color: #07754E;">上传我的教学计划</strong></h3>
+<br/>
+<!--备课章节-->
+<div class="container" style="padding-bottom: 80px;">
+    <div class="row tp15">
+        <div class="col-xs-4"><label class="label_mt">输入标题：</label></div>
+        <div class="col-xs-8">
+            <input type="text" id="title" class="form-control">
+        </div>
+    </div>
+    <div class="row tp15">
+        <div class="col-xs-4"><label class="label_mt">选择教材：</label></div>
+        <div class="col-xs-8">
+            <!--<select id="select" class="form-control">-->
+            <!--<option>请选择</option>-->
+            <!---->
+            <!--</select>-->
+            <select class="form-control" id="select" name="select">
+                <option  class="option_value" value="40;76;47;16">
+                    16计用班（1）班计算机应用与网络上册                        </option><option  class="option_value" value="40;76;47;17">
+                16计用班（1）班计算机应用与网络下册                        </option>                </select>
+        </div>
+    </div>
+    <div class="row tp15">
+        <div class="col-xs-12">
+            输入内容：
+        </div>
+        <div class="col-xs-12 tp5">
+            <script id="container" name="content" type="text/plain" style="width:100%;height:220px;"></script>
+        </div>
+    </div>
+    <div class="row tp15 type_t">
+        <div class="col-xs-6">
+            <button href="#" class="btn t_button float-fr save_btn">保存</button>
+        </div>
+        <div class="col-xs-6">
+            <a href="javascript:;" onclick="javascript:history.back(-1)" class="btn t_button return">返回</a>
+        </div>
+    </div>
+</div>
+<script type="text/javascript" src="/public/part/jquery/jquery-3.1.1.min.js"></script>
+<script src="/public/part/bootstrap/bootstrap.min.js"></script>
+<!-- <script type="text/javascript" src="/Public/ueditor/ueditor.config.js"></script> -->
+<!-- <script type="text/javascript" src="/Public/ueditor/ueditor.all.js"></script> -->
+<script type="text/javascript" src="/public/part/editor/umeditor.config.js"></script>
+<script type="text/javascript" src="/public/part/editor/editor.js"></script>
+<script type="text/javascript" src="/public/part/editor/zh-cn.js"></script>
+<script>
+    $(document).ready(function() {
+        var Fields_data = function() {};
+
+        window.um = UM.getEditor('container',{
+            toolbar: ['emotion']
+        });
+
+        $(".save_btn").on("click", function() {
+            var title = $("#title").val();
+            var id = $(".option_value").val();
+            var comment = um.getContent();
+            console.log(id)
+            var reg = /<p>/g;
+            if(reg.test(comment)) {
+                comment = comment.replace("<p>","").replace("</p>","");
+            }
+            if(comment.length == 0) {
+                alert("内容不能为空");
+            } else {
+                comment = $.trim(comment.replace(/&nbsp;/g," "));
+                console.log(comment);
+                var data = new Fields_data();
+                data.title = title;
+                data.id = id;
+                data.content = comment;
+                $.ajax({
+                    type: "POST",
+                    data: data,
+                    url: "index.php?m=Teacher&c=TeachPlan&a=AddPlan",
+                    dataType: "json",
+                    success: function(data) {
+                        if (data == 1) {
+                            alert("添加成功！");
+                            window.location.href = "index.php?m=Teacher&c=TeachPlan&a=index";
+                        } else {
+                            alert("添加失败！");
+                            location.reload();
+                        }
+                    },
+                    error: function(e, xhl, dd) {
+                        alert('操作错误！');
+                    }
+                });
+            }
+        })
+    })
+</script>

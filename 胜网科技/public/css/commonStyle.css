@@ -1,0 +1,155 @@
+/*
+    主色绿色：#56c399
+    橙色：
+    蓝色：
+
+    背景灰：#f6f6f6
+    字：333 666 999
+    边：#e5e5e5
+
+*/
+
+
+*{
+    padding: 0;
+    margin: 0;
+}
+html,
+body {
+    position: relative;
+    height: 100%;
+    background-color: #F6F6F6;
+    font-family: "Microsoft YaHei", "SimSun", "宋体","冬青黑体";
+    cursor: default;
+}
+ul {
+    list-style: none;
+    margin-bottom: 0;
+}
+
+input:focus {
+    outline: none;
+}
+
+textarea {
+    resize: none
+}
+textarea:focus {
+    outline: none
+}
+
+a:link, a:hover, a:active, a:visited {
+    text-decoration: none;
+}
+
+
+::-webkit-input-placeholder { /* WebKit browsers */
+color: #aaa;
+}
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+color: #aaa;
+}
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+color: #aaa;
+}
+:-ms-input-placeholder { /* Internet Explorer 10+ */
+color: #aaa;
+}
+
+.ui-view-container {
+    position: relative;
+    margin: 0 auto;
+}
+
+/*flex grid */
+.flex-row {
+    display: flex;
+}
+.flex-row-center {
+    display: flex;
+    justify-content: center;
+}
+.flex-row-between {
+    display: flex;
+    justify-content: space-between;
+}
+.flex-row-around {
+    display: flex;
+    justify-content: space-around;
+}
+.flex-col-1 {
+    flex: 0 0 8.33%;
+}
+.flex-col-2 {
+    flex: 0 0 17%;
+}
+.flex-col-3 {
+    flex: 0 0 25%;
+}
+.flex-col-4 {
+    flex: 0 0 33.33%;
+}
+.flex-col-6 {
+    flex: 0 0 50%;
+}
+.flex-col-8 {
+    flex: 0 0 66.67%;
+}
+.flex-col-9 {
+    flex: 0 0 75%;
+}
+.flex-col-10 {
+    flex: 0 0 83.33%;
+}
+.flex-col {
+    flex: 1 1 auto;
+}
+.flex-col-static {
+    flex: 0 0 auto;
+}
+.flex-center {
+    align-items: center;
+    align-self: center;
+    text-align: center;
+    vertical-align: middle;
+}
+.flex-wrap {
+    flex-wrap: wrap;
+}
+
+.relative {
+    position: relative
+}
+
+/*header component*/
+.header {
+    padding: 0 .3rem;
+    height: 1rem;
+    line-height: 1rem;
+    background-color:#56c399;
+    color: white;
+}
+.header__btn {
+    width: 0.2rem;
+    line-height: 1rem;
+    font-size: .33rem;
+    text-align: center;
+    cursor: pointer;
+
+}
+
+.header__title {
+    margin: 0;
+    line-height: 1rem;
+    font-size: .33rem;
+    text-align: center;
+}
+
+
+.pad-footer {
+    padding-bottom: 1rem;
+    background-color: transparent;
+}
+
+
+

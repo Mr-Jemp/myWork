@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css"/>
+		<link rel="stylesheet" type="text/css" href="css/syllabus.css"/>
+	</head>
+	<body ng-app="myApp">
+		
+		<!--头部-->
+			<div class="class_header row" style="margin: 0;">
+				<div class="col-xs-2" onclick="javascript:history.go(-1);">
+					<img src="images/fanhui@2x.png" alt="" />
+				</div>
+				<div class="header_message col-xs-7">设定节数与时间</div>
+				<div class="selectClass col-xs-3">
+					保存
+				</div>
+			</div>
+			<!--设置课程表最大节数-->
+			<div class="setClassNumber">
+				<p>设置课程表最大节数 <img src="images/u71.png"/><span style="float: right;margin-right: 0.2rem;"></span></p>
+			</div>
+			<div class="classNumber">
+				
+			</div>
+			
+			<div class="setClassNumber1P">
+				<div class="setClassNumber1" >
+					<p>上课节数<span>完成</span></p>
+					<div style="overflow: hidden;height: 3.4rem;background-color: white;position: relative;">
+						<div class="kuang">1</div>
+						<ul>
+							<li>1节</li>
+							<li class="jieshu">2节</li>
+							<li>3节</li>
+							<li>4节</li>
+							<li>5节</li>
+							<li>6节</li>	
+							<li>7节</li>
+							<li>8节</li>
+							<li>9节</li>
+							<li>10节</li>
+						</ul>
+					
+					</div>
+				</div>
+			</div>
+			
+			<!--午休时间-->
+			<div class="setRelaxTimeP">
+				<div class="setRelaxTime row" style="padding: 0;margin: 0;">
+					<p>午休时间<span>完成</span></p>
+					<div style="overflow: hidden;height: 3.4rem;background-color: white;position: relative;">
+						<div class="kuang">1</div>
+						<ul class="col-xs-6 actionTime"></ul>	
+						<ul class="col-xs-6 endTime"></ul>
+					</div>
+				</div>
+			</div>
+			
+
+	</body>
+	<script type="text/javascript" src="js/jquery-1.12.4.min.js" ></script>
+	<script type="text/javascript" src="js/angular.min.js"></script>
+	<script type="text/javascript" src="js/angular-route.min.js" ></script>
+	<script type="text/javascript" src="js/publicJs.js" ></script>
+	<script type="text/javascript">		
+	var liHeight=0;
+	//记录下标
+
+	var jieWord="2节";
+	var jieNumber=1;
+	
+	
+		$(".setClassNumber").click(function(){
+			$(".setClassNumber1P").css("display","block");
+			
+		})
+		//点击完成
+		$(".setClassNumber1 p span").click(function(){
+			$(".setClassNumber1P").css("display","none");
+			$(".setClassNumber span").text(jieWord);
+			//创建div
+			$(".classNumber").html("");
+			for(var i=0;i<=jieNumber;i++){
+				var newP=$('<p>第'+eval(i+1)+'节<img src="images/u71.png"/></p>')
+				$(".classNumber").append(newP);
+			}
+
+		})
+		 
+		//选择节数 点击	
+		$(".setClassNumber1 li").click(function(){
+			jieWord=$(this).text();
+			jieNumber=$(this).index();
+			$(".setClassNumber1 li").removeClass("jieshu");
+			$(".setClassNumber1 li").eq($(this).index()).addClass("jieshu");
+			liHeight=$(this).outerHeight();
+			var i=-0.82*($(this).index()-1);
+				$(".setClassNumber1 ul").animate({
+					"margin-top":i+"rem"
+			},100)
+		})
+
+//		滚轮选择
+		var bol=false;
+		
+		mouseWheelFn(window,function(){
+			if(bol){
+				return;
+			}
+			bol=true;
+			//获取已滚动高度
+			var margin=parseInt($(".setClassNumber1 ul").css("margin-top"));
+			var liHeight=$(".setClassNumber1 li").eq(0).outerHeight();
+//			console.log(margin,liHeight);
+//			if(margin>=-liHeight*7){
+//				console.log("chaoguo向上")
+//				return;
+//			}
+			$(".setClassNumber1 ul").animate({
+				"margin-top":-liHeight+margin+"px"
+			},100,function(){
+				bol=false;
+			})
+		},function(){
+			if(bol){
+				return;
+			}
+			var margin=parseInt($(".setClassNumber1 ul").css("margin-top"));
+			var liHeight=$(".setClassNumber1 li").eq(0).outerHeight();
+			if(margin>10){
+				console.log("chaoguo乡下")
+				return;
+			}
+			bol=true;
+			$(".setClassNumber1 ul").animate({
+					"margin-top":margin+liHeight+"px"
+			},100,function(){
+				bol=false;
+			})
+		})
+		function mouseWheelFn(element,upFn,downFn){
+		element.onmousewheel = fn;
+		if(window.addEventListener){
+			element.addEventListener("DOMMouseScroll",fn,false);
+		}
+		function fn(e){
+			var e = e || window.event;
+			if(e.wheelDelta > 0 || e.detail < 0){
+				upFn();
+			}else{
+				downFn();
+			}
+			e.cancelBubble = true;
+			e.stopPropagation();
+			}
+		}
+			$(".classNumber").on("click","p",function(){
+				console.log($(this).index());
+			})
+		
+		
+		
+		
+		
+		
+		//选择具体时间
+		$(".classNumber").on('click',"p",function(){
+			console.log(4)
+			$(".setRelaxTimeP").css("display","block");
+		})
+		$(".setRelaxTime p span").click(function(){
+			$(".setRelaxTimeP").css("display","none");
+		})
+		
+		
+		//左边
+		var hour=11;
+		var min=0;
+		for(var i=0;i<31;i++){
+			var li=$("<li></li>");	
+			if(min>5){
+				hour++;
+				min=0;
+			}
+			li.text(hour+":"+min+"0");
+			$(".actionTime").append(li);
+			min++;
+		}
+		//右边
+		var hour1=11;
+		var min1=0;
+		for(var i=0;i<31;i++){
+			var li=$("<li></li>");	
+			if(min1>5){
+				hour1++;
+				min1=0;
+			}
+			li.text(hour1+":"+min1+"5");
+			$(".endTime").append(li);
+			min1++;
+		}
+		
+		//开始时间
+		$(".actionTime li").click(function(){
+			console.log(254)
+			var liHeight=$(this).outerHeight();
+			var i=-0.82*($(this).index()-1);
+				$(".actionTime").animate({
+					"margin-top":i+"rem"
+				},100)
+			$(".setClassNumber1 li").removeClass("jieshu");
+			$(".setClassNumber1 li").eq($(this).index()).addClass("jieshu");
+				
+				
+		})
+//		结束时间
+	$(".endTime li").click(function(){
+//			console.log($(this).text())
+			var liHeight=$(this).outerHeight();
+			var i=-0.82*($(this).index()-1);
+				$(".endTime").animate({
+					"margin-top":i+"rem"
+				},100)
+		})
+	
+	
+	//滚轮选择开始午休时间
+		var bol1=false;
+		var actionTime=document.getElementsByClassName("actionTime")[0];
+		mouseWheelFn(actionTime,function(){
+			console.log("向上",bol1);
+			if(bol1){
+				return;
+			}
+			bol1=true;
+			//获取已滚动高度
+			var margin=parseInt($(".actionTime").css("margin-top"));
+			var liHeight=$(".actionTime li").eq(0).outerHeight();
+			
+			console.log(margin,liHeight);
+
+			$(".actionTime").animate({
+				"margin-top":-liHeight+margin+"px"
+			},100,function(){
+				bol1=false;
+			})
+			
+			
+		},function(){
+			console.log("向下",bol1);
+			if(bol1){
+				return;
+			}
+			console.log("xxx");
+			var margin=parseInt($(".actionTime").css("margin-top"));
+			var liHeight=$(".actionTime li").eq(0).outerHeight();
+
+			console.log(margin,liHeight)
+			bol1=true;
+			$(".actionTime").animate({
+					"margin-top":margin+liHeight+"px"
+			},100,function(){
+				bol1=false;
+			})
+		})
+		
+		//滚轮选择结束午休时间
+		var bol2=false;
+		var endTime=document.getElementsByClassName("endTime")[0];
+		mouseWheelFn(endTime,function(){
+			console.log("向上",bol2);
+			if(bol2){
+				return;
+			}
+			bol2=true;
+			//获取已滚动高度
+			var margin=parseInt($(".endTime").css("margin-top"));
+			var liHeight=$(".endTime li").eq(0).outerHeight();
+			
+			console.log(margin,liHeight);
+
+			$(".endTime").animate({
+				"margin-top":-liHeight+margin+"px"
+			},100,function(){
+				bol2=false;
+			})
+			
+			
+		},function(){
+			console.log("向下",bol2);
+			if(bol2){
+				return;
+			}
+			console.log("xxx");
+			var margin=parseInt($(".endTime").css("margin-top"));
+			var liHeight=$(".endTime li").eq(0).outerHeight();
+
+			console.log(margin,liHeight)
+			bol2=true;
+			$(".endTime").animate({
+					"margin-top":margin+liHeight+"px"
+			},100,function(){
+				bol2=false;
+			})
+		})
+	
+		function mouseWheelFn(element,upFn,downFn){
+		element.onmousewheel = fn;
+		// 判断浏览器是否支持addEventListener方法
+		if(window.addEventListener){
+			element.addEventListener("DOMMouseScroll",fn,false);
+		}
+
+		// 函数,判断用户滚轮向上还是向下
+		function fn(e){
+			var e = e || window.event;
+			// 判断滚轮方向
+			// 滚轮向上
+			if(e.wheelDelta > 0 || e.detail < 0){
+				upFn();
+			}else{
+				downFn();
+			}
+
+			// 阻止冒泡
+			e.cancelBubble = true;
+			e.stopPropagation();
+		}
+	}
+	
+		
+		
+		
+		
+	</script>
+</html>
+

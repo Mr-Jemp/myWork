@@ -1,0 +1,598 @@
+<!-- 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>课程表</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1"/>
+    <link href="/Public/Css/jscss.css" rel="stylesheet" type="text/css">
+    <link href="/Public/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css"> -->
+    <link href="/Public/Css/curriculum.css" rel="stylesheet" type="text/css">
+    <link href="/Public/Css/teacher.css" rel="stylesheet" type="text/css">
+
+    <style>
+        .index_header {
+            font-size: 20px;
+            font-weight: bold;
+            line-height: 40px;
+            text-align: center;
+            color: #fff;
+            background-color: #58c399;
+        }
+
+        .index_header > span {
+            line-height: 30px;
+            position: absolute;
+            top: 5px;
+            left: 5px;
+            width: 30px;
+        }
+    </style>
+</head>
+
+<body style="color: #1B7DDE; background: #fff; padding-bottom: 0px !important;">
+
+<!--<nav class="navbar navbar-default navbar-fixed-top" role="navigation" style="border: 0; height: 0px; background-color: #fff; margin-bottom: 0;">-->
+<!--<div class="navbar-header" style="text-align: center;">-->
+<!--<i class="glyphicon glyphicon-menu-left pull-left"-->
+<!--style="line-height: 60px; left: 20px; font-size: 22px;" type="button" onclick="window.history.go(-1);"></i>-->
+<!--&lt;!&ndash; Single button &ndash;&gt;-->
+
+<!--&lt;!&ndash;<div class="btn-group">&ndash;&gt;-->
+<!--&lt;!&ndash;<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="border: 0;color: #1B7DDE;">&ndash;&gt;-->
+<!--&lt;!&ndash;<strong>第1周</strong> <span class="caret"></span>&ndash;&gt;-->
+<!--&lt;!&ndash;</button>&ndash;&gt;-->
+<!--&lt;!&ndash;<ul class="dropdown-menu" style="min-width: 80px;">&ndash;&gt;-->
+<!--&lt;!&ndash;<li><a href="#">第2周</a></li>&ndash;&gt;-->
+<!--&lt;!&ndash;<li><a href="#">第3周</a></li>&ndash;&gt;-->
+<!--&lt;!&ndash;<li><a href="#">第4周</a></li>&ndash;&gt;-->
+<!--&lt;!&ndash;<li><a href="#">第5周</a></li>&ndash;&gt;-->
+<!--&lt;!&ndash;</ul>&ndash;&gt;-->
+<!--&lt;!&ndash;</div>&ndash;&gt;-->
+
+<!--&lt;!&ndash;<br><span>大四&nbsp;&nbsp;第一学期</span>&ndash;&gt;-->
+<!--<div>课程表</div>-->
+<!--</div>-->
+<!--</nav>-->
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-xs-12 index_header">
+            <span class="glyphicon glyphicon-chevron-left" onclick="javascript:history.go(-1);"></span>
+            <!--<i class="icon-chevron-left" onclick="javascript: history.back(-1)"></i>-->
+            课程表
+        </div>
+    </div>
+</div>
+
+<!--<table id="course_table" class="table table-bordered" style="margin-top: 101px;">-->
+<table id="course_table" class="table table-bordered" style="margin-top: 10px;">
+    <thead class="header">
+    <tr>
+        <th width="9%" rowspan="2"></th>
+        <th width="13%" rowspan="2">周一<br>MON</th>
+        <th width="13%" rowspan="2">周二<br>TUE</th>
+        <th width="13%" rowspan="2">周三<br>WED</th>
+        <th width="13%" rowspan="2">周四<br>THU</th>
+        <th width="13%" rowspan="2">周五<br>FRI</th>
+        <th width="13%" rowspan="2">周六<br>SAT</th>
+        <th width="13%" rowspan="2">周日<br>SUN</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr height="60px" id="num_0">
+        <td width="9%">早读</td>
+        <td width="13%"></td>
+        <td width="13%"></td>
+        <td width="13%"></td>
+        <td width="13%"></td>
+        <td width="13%"></td>
+        <td width="13%"></td>
+        <td width="13%"></td>
+    </tr>
+    <tr height="70px" id="num_1">
+        <td>1</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr height="70px" id="num_2">
+        <td>2</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr height="70px" id="num_3">
+        <td>3</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr height="70px" id="num_4">
+        <td>4</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr height="70px" id="num_5">
+        <td>5</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr height="70px" id="num_6">
+        <td>6</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr height="70px" id="num_7">
+        <td>7</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr height="70px" id="num_8">
+        <td>8</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr height="70px" id="num_9">
+        <td>9</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr height="70px" id="num_10">
+        <td>10</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr height="70px" id="num_11">
+        <td>11</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr height="70px" id="num_12">
+        <td>12</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr height="70px" id="num_13">
+        <td>13</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+
+    </tbody>
+</table>
+
+
+
+<!-- <script type="text/javascript" src="/Public/jQuery/jquery.min.js"></script> -->
+<script src="/Public/bootstrap/js/bootstrap.min.js"></script>
+<!--将课程填充到表格并处理样式-->
+<script type="text/javascript">
+    $(function(){
+        $.get("/index.php?m=Teacher&c=Curriculum&a=getkcb",function(res){
+            console.log(res);
+            console.log(res.w1);
+
+            var w1 = res.w1;
+
+            console.log(w1.length);
+
+            //输出星期一的课程
+            for (var i=0; i<w1.length; i++){
+                //document.write(w1[i].course_title + "@" + w1[i].classroom_title +"<br>");
+                //处理@符号
+                var b = "";
+                if(w1[i].classroom_title != "")
+                    b = "@";
+                $("#course_table tr:eq(" + w1[i].class_num + ") td:nth-child(2)").html("<a href='/index.php?m=Teacher&c=Curriculum&a=kcbDetail&schedule_id=" + w1[i].id +"'>" + w1[i].course_title + b + w1[i].classroom_title + "</a>").addClass("selected-ke" + Math.floor(Math.random()*6 + 1));
+
+
+                //处理让相同的课程合并:
+                //两节课相同
+                if(w1[i].course_title == w1[i+1].course_title){
+                    console.log(i);
+                    $("#course_table tr:eq(" + (parseInt(w1[i+1].class_num)) + ") td:nth-child(2)").hide();
+
+                    $("#course_table tr:eq(" + (parseInt(w1[i].class_num)) + ") td:nth-child(2)").attr("rowSpan", 2);
+                }
+
+                //三节课相同
+                if(w1[i].course_title === w1[i+1].course_title && w1[i+1].course_title === w1[i+2].course_title){
+                    console.log("i+1====="+(parseInt(w1[i+1].class_num)));
+                    $("#course_table tr:eq(" + (parseInt(w1[i+1].class_num)) + ") td:nth-child(2)").hide().hide();
+
+                    $("#course_table tr:eq(" + (parseInt(w1[i].class_num)) + ") td:nth-child(2)").attr("rowSpan", 3);
+                }
+
+                //四节课相同
+                if(w1[i].course_title === w1[i+1].course_title && w1[i+1].course_title === w1[i+2].course_title && w1[i+2].course_title === w1[i+3].course_title){
+                    console.log("i+1====="+(parseInt(w1[i+1].class_num)));
+                    $("#course_table tr:eq(" + (parseInt(w1[i+1].class_num)) + ") td:nth-child(2)").hide().hide().hide();
+
+                    $("#course_table tr:eq(" + (parseInt(w1[i].class_num)) + ") td:nth-child(2)").attr("rowSpan", 4);
+                }
+
+
+            }
+
+
+            //var $val = $("#course_table tr:eq(1) td:nth-child(2)").html("2");
+            //console.log($val);
+
+        },"json")
+    });
+
+</script>
+
+<!--输出星期二的课程-->
+<script type="text/javascript">
+
+    $(function(){
+        $.get("/index.php?m=Teacher&c=Curriculum&a=getkcb",function(res){
+
+            var w2 = res.w2;
+
+            for (var i=0; i<w2.length; i++){
+                //处理@符号
+                var b = "";
+                if(w2[i].classroom_title != "")
+                    b = "@";
+                $("#course_table tr:eq(" + w2[i].class_num + ") td:nth-child(3)").html("<a href='/index.php?m=Teacher&c=Curriculum&a=kcbDetail&schedule_id=" + w2[i].id +"'>" + w2[i].course_title + b + w2[i].classroom_title + "</a>").addClass("selected-ke" + Math.floor(Math.random()*6 + 1));
+
+                //处理让相同的课程合并:
+                //两节课相同
+                if(w2[i].course_title == w2[i+1].course_title){
+                    console.log(i);
+                    $("#course_table tr:eq(" + (parseInt(w2[i+1].class_num)) + ") td:nth-child(3)").hide();
+
+                    $("#course_table tr:eq(" + (parseInt(w2[i].class_num)) + ") td:nth-child(3)").attr("rowSpan", 2);
+                }
+
+                //三节课相同
+                if(w2[i].course_title === w2[i+1].course_title && w2[i+1].course_title === w2[i+2].course_title){
+                    console.log("i+1====="+(parseInt(w2[i+1].class_num)));
+                    $("#course_table tr:eq(" + (parseInt(w2[i+1].class_num)) + ") td:nth-child(3)").hide().hide();
+
+                    $("#course_table tr:eq(" + (parseInt(w2[i].class_num)) + ") td:nth-child(3)").attr("rowSpan", 3);
+                }
+
+                //四节课相同
+                if(w2[i].course_title === w2[i+1].course_title && w2[i+1].course_title === w2[i+2].course_title && w2[i+2].course_title === w2[i+3].course_title){
+                    console.log("i+1====="+(parseInt(w2[i+1].class_num)));
+                    $("#course_table tr:eq(" + (parseInt(w2[i+1].class_num)) + ") td:nth-child(3)").hide().hide().hide();
+
+                    $("#course_table tr:eq(" + (parseInt(w2[i].class_num)) + ") td:nth-child(3)").attr("rowSpan", 4);
+                }
+
+
+            }
+
+        },"json")
+    });
+
+</script>
+
+<!--输出星期三的课程-->
+<script type="text/javascript">
+
+    $(function(){
+        $.get("/index.php?m=Teacher&c=Curriculum&a=getkcb",function(res){
+
+            var w3 = res.w3;
+
+            for (var i=0; i<w3.length; i++){
+                //处理@符号
+                var b = "";
+                if(w3[i].classroom_title != "")
+                    b = "@";
+                $("#course_table tr:eq(" + w3[i].class_num + ") td:nth-child(4)").html("<a href='/index.php?m=Teacher&c=Curriculum&a=kcbDetail&schedule_id=" + w3[i].id +"'>" + w3[i].course_title + b + w3[i].classroom_title + "</a>").addClass("selected-ke" + Math.floor(Math.random()*6 + 1));
+
+                //处理让相同的课程合并:
+                //两节课相同
+                if(w3[i].course_title == w3[i+1].course_title){
+                    console.log(i);
+                    $("#course_table tr:eq(" + (parseInt(w3[i+1].class_num)) + ") td:nth-child(4)").hide();
+
+                    $("#course_table tr:eq(" + (parseInt(w3[i].class_num)) + ") td:nth-child(4)").attr("rowSpan", 2);
+                }
+
+                //三节课相同
+                if(w3[i].course_title === w3[i+1].course_title && w3[i+1].course_title === w3[i+2].course_title){
+                    console.log("i+1====="+(parseInt(w3[i+1].class_num)));
+                    $("#course_table tr:eq(" + (parseInt(w3[i+1].class_num)) + ") td:nth-child(4)").hide().hide();
+
+                    $("#course_table tr:eq(" + (parseInt(w3[i].class_num)) + ") td:nth-child(4)").attr("rowSpan", 3);
+                }
+
+                //四节课相同
+                if(w3[i].course_title === w3[i+1].course_title && w3[i+1].course_title === w3[i+2].course_title && w3[i+2].course_title === w3[i+3].course_title){
+                    console.log("i+1====="+(parseInt(w3[i+1].class_num)));
+                    $("#course_table tr:eq(" + (parseInt(w3[i+1].class_num)) + ") td:nth-child(4)").hide().hide().hide();
+
+                    $("#course_table tr:eq(" + (parseInt(w3[i].class_num)) + ") td:nth-child(4)").attr("rowSpan", 4);
+                }
+
+
+            }
+
+
+        },"json")
+    });
+
+</script>
+
+<!--输出星期四的课程-->
+<script type="text/javascript">
+
+    $(function(){
+        $.get("/index.php?m=Teacher&c=Curriculum&a=getkcb",function(res){
+
+            var w4 = res.w4;
+
+            for (var i=0; i<w4.length; i++){
+                //处理@符号
+                var b = "";
+                if(w4[i].classroom_title != "")
+                    b = "@";
+                $("#course_table tr:eq(" + w4[i].class_num + ") td:nth-child(5)").html("<a href='/index.php?m=Teacher&c=Curriculum&a=kcbDetail&schedule_id=" + w4[i].id +"'>" + w4[i].course_title + b + w4[i].classroom_title + "</a>").addClass("selected-ke" + Math.floor(Math.random()*6 + 1));
+
+
+
+                //处理让相同的课程合并:
+                //两节课相同
+                if(w4[i].course_title == w4[i+1].course_title){
+                    console.log(i);
+                    $("#course_table tr:eq(" + (parseInt(w4[i+1].class_num)) + ") td:nth-child(5)").hide();
+
+                    $("#course_table tr:eq(" + (parseInt(w4[i].class_num)) + ") td:nth-child(5)").attr("rowSpan", 2);
+                }
+
+                //三节课相同
+                if(w4[i].course_title === w4[i+1].course_title && w4[i+1].course_title === w4[i+2].course_title){
+                    console.log("i+1====="+(parseInt(w4[i+1].class_num)));
+                    $("#course_table tr:eq(" + (parseInt(w4[i+1].class_num)) + ") td:nth-child(5)").hide().hide();
+
+                    $("#course_table tr:eq(" + (parseInt(w4[i].class_num)) + ") td:nth-child(5)").attr("rowSpan", 3);
+                }
+
+                //四节课相同
+                if(w4[i].course_title === w4[i+1].course_title && w4[i+1].course_title === w4[i+2].course_title && w4[i+2].course_title === w4[i+3].course_title){
+                    console.log("i+1====="+(parseInt(w4[i+1].class_num)));
+                    $("#course_table tr:eq(" + (parseInt(w4[i+1].class_num)) + ") td:nth-child(5)").hide().hide().hide();
+
+                    $("#course_table tr:eq(" + (parseInt(w4[i].class_num)) + ") td:nth-child(5)").attr("rowSpan", 4);
+                }
+
+
+            }
+
+
+        },"json")
+    });
+
+</script>
+
+<!--输出星期五的课程-->
+<script type="text/javascript">
+
+    $(function(){
+        $.get("/index.php?m=Teacher&c=Curriculum&a=getkcb",function(res){
+
+            var w5 = res.w5;
+
+            for (var i=0; i<w5.length; i++){
+                //处理@符号
+                var b = "";
+                if(w5[i].classroom_title != "")
+                    b = "@";
+                $("#course_table tr:eq(" + w5[i].class_num + ") td:nth-child(6)").html("<a href='/index.php?m=Teacher&c=Curriculum&a=kcbDetail&schedule_id=" + w5[i].id +"'>" + w5[i].course_title + b + w5[i].classroom_title + "</a>").addClass("selected-ke" + Math.floor(Math.random()*6 + 1));
+                console.log(i);
+
+                //console.log("w5[i+1].course_title+++++++++" + w5[i+1].course_title);
+
+                //处理让相同的课程合并:
+                //两节课相同
+                if(w5[i].course_title === w5[i+1].course_title){
+                    console.log("i+1"+(parseInt(w5[i+1].class_num)));
+                    $("#course_table tr:eq(" + (parseInt(w5[i+1].class_num)) + ") td:nth-child(6)").hide();
+
+                    $("#course_table tr:eq(" + (parseInt(w5[i].class_num)) + ") td:nth-child(6)").attr("rowSpan", 2);
+                }
+
+                //三节课相同
+                if(w5[i].course_title === w5[i+1].course_title && w5[i+1].course_title === w5[i+2].course_title){
+                    console.log("i+1====="+(parseInt(w5[i+1].class_num)));
+                    $("#course_table tr:eq(" + (parseInt(w5[i+1].class_num)) + ") td:nth-child(6)").hide().hide();
+
+                    $("#course_table tr:eq(" + (parseInt(w5[i].class_num)) + ") td:nth-child(6)").attr("rowSpan", 3);
+                }
+
+                //四节课相同
+                if(w5[i].course_title === w5[i+1].course_title && w5[i+1].course_title === w5[i+2].course_title && w5[i+2].course_title === w5[i+3].course_title){
+                    console.log("i+1====="+(parseInt(w5[i+1].class_num)));
+                    $("#course_table tr:eq(" + (parseInt(w5[i+1].class_num)) + ") td:nth-child(6)").hide().hide().hide();
+
+                    $("#course_table tr:eq(" + (parseInt(w5[i].class_num)) + ") td:nth-child(6)").attr("rowSpan", 4);
+                }
+
+            }
+
+
+        },"json")
+    });
+
+</script>
+
+<!--输出星期六的课程-->
+<script type="text/javascript">
+
+    $(function(){
+        $.get("/index.php?m=Teacher&c=Curriculum&a=getkcb",function(res){
+
+            var w6 = res.w6;
+
+            for (var i=0; i<w6.length; i++){
+                //处理@符号
+                var b = "";
+                if(w6[i].classroom_title != "")
+                    b = "@";
+                $("#course_table tr:eq(" + w6[i].class_num + ") td:nth-child(7)").html("<a href='/index.php?m=Teacher&c=Curriculum&a=kcbDetail&schedule_id=" + w6[i].id +"'>" + w6[i].course_title + b + w6[i].classroom_title + "</a>").addClass("selected-ke" + Math.floor(Math.random()*6 + 1));
+
+
+                //处理让相同的课程合并:
+                //两节课相同
+                if(w6[i].course_title == w6[i+1].course_title){
+                    console.log(i);
+                    $("#course_table tr:eq(" + (parseInt(w6[i+1].class_num)) + ") td:nth-child(7)").hide();
+
+                    $("#course_table tr:eq(" + (parseInt(w6[i].class_num)) + ") td:nth-child(7)").attr("rowSpan", 2);
+                }
+
+                //三节课相同
+                if(w6[i].course_title === w6[i+1].course_title && w6[i+1].course_title === w6[i+2].course_title){
+                    console.log("i+1====="+(parseInt(w6[i+1].class_num)));
+                    $("#course_table tr:eq(" + (parseInt(w6[i+1].class_num)) + ") td:nth-child(7)").hide().hide();
+
+                    $("#course_table tr:eq(" + (parseInt(w6[i].class_num)) + ") td:nth-child(7)").attr("rowSpan", 3);
+                }
+
+                //四节课相同
+                if(w6[i].course_title === w6[i+1].course_title && w6[i+1].course_title === w6[i+2].course_title && w6[i+2].course_title === w6[i+3].course_title){
+                    console.log("i+1====="+(parseInt(w6[i+1].class_num)));
+                    $("#course_table tr:eq(" + (parseInt(w6[i+1].class_num)) + ") td:nth-child(7)").hide().hide().hide();
+
+                    $("#course_table tr:eq(" + (parseInt(w6[i].class_num)) + ") td:nth-child(7)").attr("rowSpan", 4);
+                }
+
+
+            }
+
+        },"json")
+    });
+
+</script>
+
+<!--输出星期日的课程-->
+<script type="text/javascript">
+
+    $(function(){
+        $.get("/index.php?m=Teacher&c=Curriculum&a=getkcb",function(res){
+
+            var w7 = res.w7;
+
+            for (var i=0; i<w7.length; i++){
+                //处理@符号
+                var b = "";
+                if(w7[i].classroom_title != "")
+                    b = "@";
+                $("#course_table tr:eq(" + w7[i].class_num + ") td:nth-child(8)").html("<a href='/index.php?m=Teacher&c=Curriculum&a=kcbDetail&schedule_id=" + w7[i].id +"'>" + w7[i].course_title + b + w7[i].classroom_title + "</a>").addClass("selected-ke" + Math.floor(Math.random()*6 + 1));
+
+
+                //处理让相同的课程合并:
+                //两节课相同
+                if(w7[i].course_title == w7[i+1].course_title){
+                    console.log(i);
+                    $("#course_table tr:eq(" + (parseInt(w7[i+1].class_num)) + ") td:nth-child(8)").hide();
+
+                    $("#course_table tr:eq(" + (parseInt(w7[i].class_num)) + ") td:nth-child(8)").attr("rowSpan", 2);
+                }
+
+                //三节课相同
+                if(w7[i].course_title === w7[i+1].course_title && w7[i+1].course_title === w7[i+2].course_title){
+                    console.log("i+1====="+(parseInt(w7[i+1].class_num)));
+                    $("#course_table tr:eq(" + (parseInt(w7[i+1].class_num)) + ") td:nth-child(8)").hide().hide();
+
+                    $("#course_table tr:eq(" + (parseInt(w7[i].class_num)) + ") td:nth-child(8)").attr("rowSpan", 3);
+                }
+
+                //四节课相同
+                if(w7[i].course_title === w7[i+1].course_title && w7[i+1].course_title === w7[i+2].course_title && w7[i+2].course_title === w7[i+3].course_title){
+                    console.log("i+1====="+(parseInt(w7[i+1].class_num)));
+                    $("#course_table tr:eq(" + (parseInt(w7[i+1].class_num)) + ") td:nth-child(8)").hide().hide().hide();
+
+                    $("#course_table tr:eq(" + (parseInt(w7[i].class_num)) + ") td:nth-child(8)").attr("rowSpan", 4);
+                }
+
+            }
+
+
+        },"json")
+    });
+
+</script>
+
+
+<!--处理课程表格样式-->
+<script type="text/javascript">
+    // $(function(){
+    // 	console.log("+++++" + $("#course_table tr:eq(7) td:nth-child(2)").text());
+    // 	//alert($("#course_table tr:eq(7) td:nth-child(2)").text());
+    // })
+
+    $(function(){
+        $("#course_table tr td:eq(2)").css("color","#000;");
+    });
+
+</script>

@@ -1,0 +1,117 @@
+.h-title {
+    margin-left: .2rem;
+}
+
+.h-menu-title {
+    margin-left: auto;
+    font-size: .25rem;
+    cursor: pointer;
+}
+
+.h-menu {
+    position: absolute;
+    z-index: 1000;
+    top: 1rem;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,.3);
+}
+.h-menu__main {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: .15rem .3rem;
+    width: 3rem;
+    /* 6rem以下高度自适应，6rem以上固定，需子元素配合 */
+    max-height: 6rem;
+    background-color: #fff;
+    box-shadow: -1px 1px 4px 1px rgba(0,0,0,.3);
+    overflow: hidden;
+
+}
+/* 与h-menu__list 共同实现滚动并隐藏滚动条 */
+.h-menu__list {
+    padding-right: .3rem;
+    width: 124%;
+    max-height: 5rem;
+    overflow-y: scroll;
+}
+
+.h-menu__title {
+    margin: 0;
+    padding-left: .12rem;
+    font-size: .3rem;
+    color: #56c399;
+    border-left: .08rem solid #56c399;
+
+}
+/*.h-menu__list::-webkit-scrollbar {
+    display: none;
+}*/
+.h-menu__item {
+    padding: .17rem 0 .17rem .2rem ;
+    font-size: .26rem;
+    color: #666;
+    cursor: pointer;
+}
+.h-menu__item:hover {
+    background-color: #eee;
+}
+
+.h-edit-btn {
+    position: absolute;
+    top: .4rem;
+    right: .25rem;
+    cursor: pointer;
+}
+.h-edit-btn__img {
+    width: .3rem;
+    height: .3rem;
+}
+
+
+
+
+.h-scheme-list {
+    padding-top: .2rem;
+}
+
+.h-scheme {
+    margin-bottom: .2rem;
+    padding: .25rem;
+
+    background-color: #fff;
+}
+
+.h-scheme__title {
+    color: #4373a9;
+    font-size: .29rem;
+}
+
+.h-scheme__content {
+    /*max-height: 2rem;*/
+    font-size: .24rem;
+    color: #333;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.h-scheme__create-time {
+    font-size: .2rem;
+    color: #666;
+}
+
+.h-create-btn {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 1rem;
+    font-size: .3rem;
+    line-height: 1rem;
+    text-align: center;
+    color: #fff;
+    background-color: #56c399;
+    cursor: pointer;
+}
+

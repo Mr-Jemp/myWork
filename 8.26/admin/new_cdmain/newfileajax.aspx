@@ -1,1 +1,0 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="newfileajax.aspx.cs" Inherits="cdadmin.cdmain.newfileajax" %>

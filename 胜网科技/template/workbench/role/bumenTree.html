@@ -11,13 +11,14 @@
 <script src="../../../js/angular/angular.min.js"></script>
 <script src="../../../main/app.js"></script>
 <script type="text/javascript">
-	var actionCustomerID;
-	var actionPID;
+	var actionCustomerID;    //左键点击角色,当前的id
+
+	var actionParm;   //  右键点击 当前的节点
+	var actionPID;   	//右键点击,当前节点的父节点id
+	var actionName;     //右键点击,当前节点的名字
+	var actionRemark;   //右键点击,当前节点的描述
+	var actionRowIndex;  //右键点击,当前节点的索引
 	var maingrid = null;
-	var actionName;
-	var actionRemark;
-	var actionRowIndex;
-	var actionParm;
 	var g = null;
 	//请求地址
 	var getUrl = "../../../data_json/bumenTree.json"
@@ -26,13 +27,6 @@
 	var editParentNodeTreeId;
 
 
-//	$.ajax({
-//		url:"http://192.168.0.21:20896/htRoleService/getHtUserName?role_id=9",
-//		type:"GET",
-//		success:function(data){
-//			console.log(data)
-//		}
-//	})
 
 	$.extend($.ligerMethos.Grid,
 			{
@@ -49,9 +43,9 @@
 			}
 	);
 
-	$.ajax({
+	//角色配置的地址
 
-	})
+
 
 	$(function() {
 		var InfoRole;
@@ -60,13 +54,11 @@
 		$.ajax({
 			type:"GET",
 			url:"http://192.168.0.21:20896/htRoleService/getSearchInfoRole?role_id=0",
-//			headers:{"Content-Type": "application/json"},
 			async: false,
 			success: function (res){
-				console.log(res)
 				if(res.status==1){
 					Rows=res.msg
-					console.log({Rows})
+
 					maingrid = $("#maingrid").ligerGrid({
 						columns: [
 							{ display: '部门名', name: 'name',width:250, align: 'left',  },
@@ -83,13 +75,13 @@
 //                //getNewData();
 //                return false;
 //            },
-						onContextmenu: function(parm, e) {  //右击事件
-							actionParm=parm;
-							actionRowIndex=parm.rowindex;
-							actionCustomerID = parm.data.id;
-							actionPID = parm.data.parentId;
-							actionName = parm.data.name;
-							actionRemark = parm.data.remark;
+						onContextmenu: function(parm, e) {//右击事件
+							actionParm=parm;   	//当前节点
+							actionRowIndex=parm.rowindex;  	//当前节点的索引
+							actionCustomerID = parm.data.id; //当前节点的id
+							actionPID = parm.data.parentId;  //当前节点的父节点id
+							actionName = parm.data.name;    //当前节点的名字
+							actionRemark = parm.data.remark;  //当前节点的描述
 							menu.show({ top: e.pageY, left: e.pageX });
 							maingrid.select(actionRowIndex);
 							return false;
@@ -97,9 +89,6 @@
 						height:'97%'
 					});
 				}
-
-
-
 			}
 		})
 
@@ -126,15 +115,16 @@
 			url:dataTreeUrl,
 			type:"GET",
 			success:function(data){
-				console.log(data)
+
 				if(data.status==1){
 					Treedata = data.msg
-					console.log(data)
+
 					dataTree=$("#dataTree").ligerTree({
 						data:Treedata,
 						height:50,
 						childIcon:"folder",
 						textFieldName:'text',
+						autoCheckboxEven:"true",
 						isLeaf:function(item)
 						{
 //						console.log(item.type)
@@ -146,31 +136,28 @@
 			}
 		})
 		//点击左边角色,根据所点的id,把右边的权限树,选中
-		function LoadDataTree()
+		function LoadDataTree(actionCustomerID)
 		{
+			//把id接受
 			$.ajax({
-				url:"http://192.168.0.21:20896/htRoleService/getHtUserName?role_id=42",
+				url:"http://192.168.0.21:20896/htPowerService/getPowerMenu?role_id=42",
 				dataType:'json',
 				type:"GET",
 				success:function(data)
 				{
-					console.log(data)
-					console.log(dataTree)
-//					var idobj = data.msg
+					var msgdata = data.msg
 					g_isloading = true;
 					dataTree.cancelSelect(null);
 					$("div").children(".l-checkbox-checked").prop("class","l-box l-checkbox l-checkbox-unchecked");
 					dataTree.selectNode(function(tree)
 					{
-						for(var i in data)
+						for(var i in msgdata)
 						{
-
-							if(data[i]==tree.id){
+							if(msgdata[i].form_id==tree.id){
 								return true;
 							}
-
 						}
-//						return false;
+						return false;
 					});
 					g_isloading = false;
 				},
@@ -270,7 +257,7 @@
 			actionCustomerID=data.id;
 
 			var wai=$.ligerDialog.waitting('正在加载中,请稍候...');
-			LoadDataTree();
+			LoadDataTree(actionCustomerID);
 			$.ajax({ url:"http://192.168.0.21:20896/htRoleService/getHtUserName?role_id="+actionCustomerID,type:"GET",
 				success: function(data) {
 					wai.close();
@@ -582,7 +569,7 @@
 			});
 		}
 
-		console.log(actionCustomerID)
+
 		//右键添加角色成员
 		//getNewData();
 		var getzhanghao ="http://192.168.0.21:20896/htRoleService/getHtUserName?role_id=9";  // 模拟用户信息

@@ -1,0 +1,467 @@
+<!-- 
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>数字社区-班级论坛</title>
+    <link href="/Public/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css"> -->
+    <link href="/Public/Css/jscss.css" rel="stylesheet" type="text/css">
+    <link href="/Public/Css/lin.css" rel="stylesheet" type="text/css">
+    <link href="/Public/bootstrap/font-awesome/font-awesome.min.css" rel="stylesheet" type="text/css" />
+    <!--[if lt IE 9]>
+    <script src="//cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="//cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <link href="/Public/Css/teacher.css" rel="stylesheet" type="text/css"><!-- 
+    </head>
+    
+    <body style="background:#eee;"> -->
+
+<div class="container">
+    <div class="row top_title navbar-fixed-top topbg">
+        <div class="col-xs-12">
+            <span onclick="javascript:history.go(-1);" class="glyphicon glyphicon-chevron-left topReturn"></span><h3>班级论坛</h3>
+        </div>
+    </div>
+    <div class="row search_box">
+        <div class="form-div col-xs-12 search_form_div tp15">
+            <div class="input-group">
+                <input type="text" name="search_str" class="form-control" placeholder="输入关键字">
+                <span class="input-group-btn">
+                            <a class="btn_style btn button_style search_btn">
+                                <span class="glyphicon glyphicon-search"></span>
+                            </a>
+                        </span>
+            </div>
+        </div>
+        <div class="col-xs-12 no_padding">
+            <ul style="margin-top: 10px;" id="top_menu2">
+                <li onclick="setTab(0)">论坛</li>
+                <li onclick="setTab(1)" id="my_btn">我的论坛 <label class="unread_num"></label></li>
+            </ul>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-12 pa0">
+            <div id="main_content">
+                <div class="col-xs-12"><a href="#!/addForum" class="btn button_style pull-right">发起主题</a> </div>
+                <div class="tab_pane" style="background:#eee;">
+                    <div class="content_box" >
+                        <ul class="nav nav-tabs  teaching_plan" role="tablist">
+                            <li role="presentation" class="active"><a id="my_create_btn" onclick="getContent('all')"  aria-controls="begin_class" role="tab" data-toggle="tab">全部</a></li>
+                            <li role="presentation"><a id="other_create_btn" onclick="getContent('hottest')" aria-controls="class_records" role="tab" data-toggle="tab">最热的</a></li>
+                            <li role="presentation"><a id="my_collect_btn" onclick="getContent('latest')" aria-controls="class_records" role="tab" data-toggle="tab">最新的</a></li>
+                        </ul>
+                        <div class="time_sort"><a class="time_btn" data-type="down">时间<span class="glyphicon glyphicon-sort"></span></a></div>
+                        <!--<div class="content_div col-xs-12 no_padding" id="content_div">
+
+                        </div>-->
+
+                        <div class="content_div col-xs-12 no_padding" id="content_div"><a href="/index.php?m=Utility&amp;c=Forum&amp;a=lookForum&amp;id=234"><div class="col-xs-12 no_padding forum_list"><div class="forum_list_le"><img src="/Public/images/manpic.jpg"></div><div class="forum_list_ce"><div class="font_over">st1</div><div class="font_over">【fffff】</div><div class="font_over">2017-04-06 08:57:06</div></div><div class="forum_list_ri"><div class="font_over">评论 1</div><div class="font_over">回复 0</div><div class="font_over">浏览 3</div></div></div></a>	<a href="/index.php?m=Utility&amp;c=Forum&amp;a=lookForum&amp;id=233"><div class="col-xs-12 no_padding forum_list"><div class="forum_list_le"><img src="/Public/images/manpic.jpg"></div><div class="forum_list_ce"><div class="font_over">teach1</div><div class="font_over">【测试123】</div><div class="font_over">2016-11-11 10:22:24</div></div><div class="forum_list_ri"><div class="font_over">评论 0</div><div class="font_over">回复 0</div><div class="font_over">浏览 8</div></div></div></a>	<a href="/index.php?m=Utility&amp;c=Forum&amp;a=lookForum&amp;id=232"><div class="col-xs-12 no_padding forum_list"><div class="forum_list_le"><img src="/Public/images/manpic.jpg"></div><div class="forum_list_ce"><div class="font_over">teach1</div><div class="font_over">【测试】</div><div class="font_over">2016-11-11 10:22:08</div></div><div class="forum_list_ri"><div class="font_over">评论 0</div><div class="font_over">回复 0</div><div class="font_over">浏览 1</div></div></div></a>	</div>
+                        <div class="page_div text-cen  col-xs-12 no_padding"><ul class="pagination " id="infoPage"><li class="prev disabled" jp-role="first" jp-data="1"><a href="javascript:;">第一页</a></li><li class="page active" jp-role="page" jp-data="1"><a href="javascript:;">1</a></li><li class="next disabled" jp-role="last" jp-data="1"><a href="javascript:;">最后一页</a></li></ul></div>
+                        <!--<div class="page_div text-cen  col-xs-12 no_padding"><ul class="pagination " id="infoPage"></ul></div>-->
+                    </div>
+
+                </div>
+
+                <!--tab_pane-->
+                <div class="tab_pane">
+                    <div class="content_box" >
+                        <ul class="nav nav-tabs  teaching_plan" role="tablist">
+                            <li role="presentation" class="active"><a href="#"  onclick="getMyContent('my')"  aria-controls="begin_class" role="tab" data-toggle="tab">我</a></li>
+                            <li role="presentation"><a href="#"  onclick="getMyContent('join')" aria-controls="class_records" role="tab" data-toggle="tab">参与的</a></li>
+                        </ul>
+                        <div class="time_sort"><a class="my_time_btn" data-type="down">时间<span class="glyphicon glyphicon-sort"></span></a></div>
+                        <div class="content_div col-xs-12 no_padding" id="my_content"><a class="my_forum_a" href="/index.php?m=Utility&amp;c=Forum&amp;a=lookForum&amp;id=233"></a><div class="col-xs-12 no_padding forum_list"><a class="my_forum_a" href="/index.php?m=Utility&amp;c=Forum&amp;a=lookForum&amp;id=233"><div class="forum_list_le"><img src="/Public/images/manpic.jpg"></div><div class="forum_list_ce"><div class="font_over tp5">【测试123】</div><div class="font_over tp5">2016-11-11 10:22:24</div></div></a><div class="forum_list_ri text-cen"><a class="my_forum_a" href="/index.php?m=Utility&amp;c=Forum&amp;a=lookForum&amp;id=233"></a><a class="btn forum_delete" data-id="233">删除</a></div></div>	<a class="my_forum_a" href="/index.php?m=Utility&amp;c=Forum&amp;a=lookForum&amp;id=232"></a><div class="col-xs-12 no_padding forum_list"><a class="my_forum_a" href="/index.php?m=Utility&amp;c=Forum&amp;a=lookForum&amp;id=232"><div class="forum_list_le"><img src="/Public/images/manpic.jpg"></div><div class="forum_list_ce"><div class="font_over tp5">【测试】</div><div class="font_over tp5">2016-11-11 10:22:08</div></div></a><div class="forum_list_ri text-cen"><a class="my_forum_a" href="/index.php?m=Utility&amp;c=Forum&amp;a=lookForum&amp;id=232"></a><a class="btn forum_delete" data-id="232">删除</a></div></div>	</div>
+                        <div class="page_div text-cen  col-xs-12 no_padding"><ul class="pagination " id="myPage"><li class="prev disabled" jp-role="first" jp-data="1"><a href="javascript:;">第一页</a></li><li class="page active" jp-role="page" jp-data="1"><a href="javascript:;">1</a></li><li class="next disabled" jp-role="last" jp-data="1"><a href="javascript:;">最后一页</a></li></ul></div>
+                    </div>
+                </div>
+                <!--tab_pane-->
+
+            </div>
+
+        </div>
+    </div>
+
+</div>
+
+
+<br/>
+<br/>
+<br/>
+<!--底部开始结束-->
+<!--中间内容区结束-->
+<!--内容区结束-->
+<!-- <script type="text/javascript" src="/Public/jQuery/jquery.min.js"></script> -->
+<script src="/Public/bootstrap/js/bootstrap.min.js"></script>
+<script src="/Public/Js/jqPaginator.js"></script>
+<script type="text/javascript">
+    var group_id='1';
+    if(group_id==2){
+        $('.button_style').addClass('x_button');
+        $('.top_title').addClass('x_toptitle');
+        $('.bottom-style').addClass('student-style');
+        $('.nav-tabs').addClass('type_x');
+    }else if(group_id==1){
+        $('.bottom-style').addClass('teacher-style');
+        $('.button_style').addClass('tt_button');
+        $('.top_title').addClass('toptitle');
+        $('.nav-tabs').addClass('type_t');
+    }else{
+        $('.button_style').addClass('btn-primary');
+        $('.top_title').addClass('p_toptitle');
+        $('.nav-tabs').addClass('type_p');
+    }
+    var V = function(){};
+    $(document).ready(function() {
+        $('#modal_a').on('show.bs.modal', function (e) {
+            $(this).find('.modal-dialog').css({
+                'margin-top': function () {
+                    // var modalHeight = $('#modal_a').find('.modal-dialog').height();
+                    // console.log($('#modal_a').find('.modal-body').outerHeight());
+                    return ($(window).height() / 2 - 100);
+                }
+            });
+        })
+
+        $('#modal_b').on('show.bs.modal', function (e) {
+            $(this).find('.modal-dialog').css({
+                'margin-top': function () {
+                    // var modalHeight = $('#modal_a').find('.modal-dialog').height();
+                    // console.log($('#modal_a').find('.modal-body').outerHeight());
+                    return ($(window).height() / 2 - 100);
+                }
+            });
+        })
+
+        $("#publish_forum").on('click', function(){
+            var data = new V();
+            var title=$("#title").val();
+            var content=$("#content").val();
+            data.title =title;
+            data.content =content;
+            data.select_class=$('#select_class').val();
+            if(!title){
+                alert("标题不能为空！")
+                return false;
+            }else if(!content){
+                alert("内容不能为空！")
+                return false;
+            }
+            $.ajax({
+                type: 'GET',
+                data: data,
+                url: "/index.php?m=Utility&c=Forum&a=publishForum",
+                dataType: "json",
+                success: function(data) {
+                    if (data.error == 0) {
+                        $('#modal_a').modal('show');
+                    }
+                    else {
+                        alert("发布失败");
+                    }
+                },
+                error: function(e, xhl, dd) {
+                    alert("err");
+                }
+            })
+        })
+
+//            $("#check_forum").on('click', function(){
+//                alert("跳转到主题");
+//            })
+
+        $("#another_forum,#reset_forum").on('click', function(){
+            $("#forum_form")[0].reset()
+        })
+    });
+    setTab(0);
+    function setTab(n){
+        var tli=document.getElementById("top_menu2").getElementsByTagName("li");
+        var mli=document.getElementById("main_content").getElementsByClassName("tab_pane");
+        if(n==1){
+            $('.page_list').css('display','none')
+        }else{
+            $('.page_list').css('display','block')
+        }
+        if(group_id==2){
+            for(i=0;i<tli.length;i++){
+                tli[i].className=i==n?"hover":"";
+                tli[i].style.borderBottom=i==n?"4px solid #F39800":"";
+                mli[i].style.display=i==n?"block":"none";
+            }
+        }else if(group_id==1){
+            for(i=0;i<tli.length;i++){
+                tli[i].className=i==n?"hover":"";
+                tli[i].style.borderBottom=i==n?"4px solid #07754E":"";
+                mli[i].style.display=i==n?"block":"none";
+            }
+        }else{
+            for(i=0;i<tli.length;i++){
+                tli[i].className=i==n?"hover":"";
+                tli[i].style.borderBottom=i==n?"4px solid #0B6599":"";
+                mli[i].style.display=i==n?"block":"none";
+            }
+        }
+    }
+    $('.del_btn').click(function(){
+        var id=$(this).attr('id');
+        var _this=$(this);
+        if(confirm("是否删除？")){
+            $.ajax({
+                type:'GET',
+                url:"/index.php?m=Utility&c=Forum&a=delForum&id="+id,
+                dataType:'json',
+                success:function(data){
+                    _this.parents('.panel').remove();
+                }
+            })
+        }
+    })
+    $('#look_class').change(function(){
+        var select_class=$(this).val();
+//            $('#select_form').attr('action',"/index.php?m=Utility&c=Forum&a=index");
+        $('#select_form').submit();
+    })
+    /*新版*/
+    ///获取未读数
+    $.post("/index.php?m=Utility&c=Forum&a=unreadNum",function(data){
+        if(data!=0){
+            $('.unread_num').html(data);
+        }
+    });
+    //获取content
+    getContent("");//首次加载内容
+    var tab_type="";//保存类型
+    function getContent(object,time_up){
+        tab_type=object;
+        $('.time_btn').attr('data-type','down');
+        $.post("/index.php?m=Utility&c=Forum&a=getContent",{type:object},function(data){
+            var total=data.total;
+            //生成分页
+            $.jqPaginator('#infoPage', {
+                totalPages:parseInt(total==0?1:Math.ceil(total/6)),
+                visiblePages: 7,
+                currentPage: 1,
+                first: '<li class="prev"><a href="javascript:;">第一页</a></li>',
+//                    prev: '<li class="prev"><a href="javascript:;">上一页</a></li>',
+//                    next: '<li class="next"><a href="javascript:;">下一页</a></li>',
+                last: '<li class="next"><a href="javascript:;">最后一页</a></li>',
+                page: '<li class="page"><a href="javascript:;">{{page}}</a></li>',
+                onPageChange: function (num, type) {
+                    if(num!=1){
+                        $.post("/index.php?m=Utility&c=Forum&a=getContent",{type:object,page:num},function(re_data){
+                            inner_function(re_data);
+                        },'json');
+                    }else{
+                        inner_function(data);
+                    }
+                }
+            });
+        },'json')
+    }
+    ///内容插入
+    function inner_function(data){
+        var inner="";
+        var data=data.info;
+        for(var i=0;i<data.length;i++){
+            var user_name=data[i].phone;
+            var comment_num=data[i].comment_num;
+            var reply_num=data[i].comment_reply_num;
+            var update_time=data[i].update_time;
+            var look_num=data[i].look_num;
+            var id=data[i].id;
+            var face=data[i].face;
+            var title=data[i].title;
+            inner+='<a href="/index.php?m=Utility&c=Forum&a=lookForum&id='+id+'"><div class="col-xs-12 no_padding forum_list"><div class="forum_list_le">' +
+                '<img src="/Public/'+face+'"></div><div class="forum_list_ce"><div class="font_over">'+user_name+'</div>' +
+                '<div class="font_over">【'+title+'】</div><div class="font_over">'+update_time+'</div></div>' +
+                '<div class="forum_list_ri"><div class="font_over">评论 '+comment_num+'</div><div class="font_over">回复 '+reply_num+'</div>' +
+                '<div class="font_over">浏览 '+look_num+'</div></div></div></a>	';
+        }
+        $('#content_div').html(inner);
+    }
+    /*时间排序*/
+    $('.time_btn').click(function(){
+        var time_type=$(this).attr('data-type');
+        if(time_type=="up"){
+            $(this).attr('data-type','down');
+        }else{
+            $(this).attr('data-type','up');
+        }
+        $.post("/index.php?m=Utility&c=Forum&a=getContent",{type:tab_type,time_type:time_type},function(data){
+            var total=data.total;
+            //生成分页
+            $.jqPaginator('#infoPage', {
+                totalPages:parseInt(total==0?1:Math.ceil(total/6)),
+                visiblePages: 7,
+                currentPage: 1,
+                first: '<li class="prev"><a href="javascript:;">第一页</a></li>',
+//                    prev: '<li class="prev"><a href="javascript:;">上一页</a></li>',
+//                    next: '<li class="next"><a href="javascript:;">下一页</a></li>',
+                last: '<li class="next"><a href="javascript:;">最后一页</a></li>',
+                page: '<li class="page"><a href="javascript:;">{{page}}</a></li>',
+                onPageChange: function (num, type) {
+                    if(num!=1){
+                        $.post("/index.php?m=Utility&c=Forum&a=getContent",{type:tab_type,page:num,time_type:time_type},function(re_data){
+                            inner_function(re_data);
+                        },'json');
+                    }else{
+                        inner_function(data);
+                    }
+                }
+            });
+        },'json')
+    });
+
+    //搜索
+    $('.search_btn').click(function(){
+        var search_str=$('input[name=search_str]').val();
+        $.post("/index.php?m=Utility&c=Forum&a=searchContent",{keyword:search_str},function(data){
+            var total=data.total;
+            //生成分页
+            $.jqPaginator('#infoPage', {
+                totalPages:parseInt(total==0?1:Math.ceil(total/6)),
+                visiblePages: 7,
+                currentPage: 1,
+                first: '<li class="prev"><a href="javascript:;">第一页</a></li>',
+//                    prev: '<li class="prev"><a href="javascript:;">上一页</a></li>',
+//                    next: '<li class="next"><a href="javascript:;">下一页</a></li>',
+                last: '<li class="next"><a href="javascript:;">最后一页</a></li>',
+                page: '<li class="page"><a href="javascript:;">{{page}}</a></li>',
+                onPageChange: function (num, type) {
+                    if(num!=1){
+                        $.post("/index.php?m=Utility&c=Forum&a=searchContent",{keyword:search_str,page:num},function(re_data){
+                            inner_function(re_data);
+                        },'json');
+                    }else{
+                        inner_function(data);
+                    }
+                }
+            });
+        },'json')
+    })
+    /*tab却换*/
+    $('#my_btn').click(function(){
+        getMyContent('my');
+    });
+    var my_tab_type="";//保存类型
+    function getMyContent(object,time_up){
+        my_tab_type=object;
+        $('.time_btn').attr('data-type','down');
+        $.post("/index.php?m=Utility&c=Forum&a=getMyContent",{type:object},function(data){
+            var total=data.total;
+            //生成分页
+            $.jqPaginator('#myPage', {
+                totalPages:parseInt(total==0?1:Math.ceil(total/6)),
+                visiblePages: 7,
+                currentPage: 1,
+                first: '<li class="prev"><a href="javascript:;">第一页</a></li>',
+//                    prev: '<li class="prev"><a href="javascript:;">上一页</a></li>',
+//                    next: '<li class="next"><a href="javascript:;">下一页</a></li>',
+                last: '<li class="next"><a href="javascript:;">最后一页</a></li>',
+                page: '<li class="page"><a href="javascript:;">{{page}}</a></li>',
+                onPageChange: function (num, type) {
+                    if(num!=1){
+                        $.post("/index.php?m=Utility&c=Forum&a=getMyContent",{page:num},function(re_data){
+                            inner_my_function(re_data,object)
+                        },'json');
+                    }else{
+                        inner_my_function(data,object)
+                    }
+                }
+            });
+        },'json')
+    }
+    /*我的~时间排序*/
+    $('.my_time_btn').click(function(){
+        var time_type=$(this).attr('data-type');
+        if(time_type=="up"){
+            $(this).attr('data-type','down');
+        }else{
+            $(this).attr('data-type','up');
+        }
+        $.post("/index.php?m=Utility&c=Forum&a=getMyContent",{type:my_tab_type,time_type:time_type},function(data){
+            var total=data.total;
+            //生成分页
+            $.jqPaginator('#myPage', {
+                totalPages:parseInt(total==0?1:Math.ceil(total/6)),
+                visiblePages: 7,
+                currentPage: 1,
+                first: '<li class="prev"><a href="javascript:;">第一页</a></li>',
+//                    prev: '<li class="prev"><a href="javascript:;">上一页</a></li>',
+//                    next: '<li class="next"><a href="javascript:;">下一页</a></li>',
+                last: '<li class="next"><a href="javascript:;">最后一页</a></li>',
+                page: '<li class="page"><a href="javascript:;">{{page}}</a></li>',
+                onPageChange: function (num, type) {
+                    if(num!=1){
+                        $.post("/index.php?m=Utility&c=Forum&a=getMyContent",{type:my_tab_type,page:num,time_type:time_type},function(re_data){
+                            inner_my_function(re_data,my_tab_type)
+                        },'json');
+                    }else{
+                        inner_my_function(data,my_tab_type)
+                    }
+                }
+            });
+        },'json')
+    });
+    ///内容插入
+    function inner_my_function(data,type){
+        var inner="";
+        var data=data.info;
+        for(var i=0;i<data.length;i++){
+            var user_name=data[i].phone;
+            var update_time=data[i].update_time;
+            var id=data[i].id;
+            var face=data[i].face;
+            var title=data[i].title;
+            if(type=='my'){
+                inner+='<a class="my_forum_a" href="/index.php?m=Utility&c=Forum&a=lookForum&id='+id+'"><div class="col-xs-12 no_padding forum_list"><div class="forum_list_le">' +
+                    '<img src="/Public/'+face+'"></div><div class="forum_list_ce"><div class="font_over tp5">【'+title+'】</div><div class="font_over tp5">'+update_time+'</div>' +
+                    '</div><div class="forum_list_ri text-cen"><a class="btn forum_delete" data-id="'+id+'" >删除</a></div></div></a>	';
+            }else{
+                inner+='<a href="/index.php?m=Utility&c=Forum&a=lookForum&id='+id+'"><div class="col-xs-12 no_padding forum_list2"><div class="forum_list_le">' +
+                    '<img src="/Public/'+face+'"></div><div class="forum_list_ce"><div class="font_over">'+user_name+'</div><div class="font_over">'+htmlspecialchars(data[i].comment.content)+'</div>' +
+                    '<div class="font_over">'+update_time+'</div></div><div class="forum_list_ri font_over" style="background-color: #ccc">                                        '+title+'</div></div></a>	';
+            }
+
+        }
+        $('#my_content').html(inner);
+    }
+    ///删除我发表的
+    $('body').delegate('a.forum_delete','click',function(){
+        var forum_id=$(this).attr('data-id');
+        var _this=$(this);
+        if(confirm('是否删除？')){
+            $.post("/index.php?m=Utility&c=Forum&a=forumDel",{forum_id:forum_id},function(data){
+                if(data==1){
+                    _this.parents('.forum_list').addClass('hide');
+                    alert('删除成功！');
+                }else{
+                    alert('网络延迟！');
+                }
+            },'json')
+        }
+    });
+    /*新版*/
+    /*字符转换*/
+    function htmlspecialchars(str) {
+        var    s    =    "";
+        if    (str.length    ==    0)    return    "";
+
+        s    =    str.replace(/&gt;/g,    ">");
+        s    =    s.replace(/&lt;/g,        " <");
+        s    =    s.replace(/&gt;/g,        "&");
+        s    =    s.replace(/&nbsp;/g,        "    ");
+        s    =    s.replace(/&amp;nbsp;/g,      "    ");
+        s    =    s.replace(/'/g,      "\'");
+        s    =    s.replace(/&quot;/g,      "\"");
+        s    =    s.replace(/&amp;quot;/g,      "\"");
+        s    =    s.replace(/ <br>/g,      "\n");
+
+        s    =    s.replace("<p>",'').replace("</p>",'').replace("<br>",'').replace('<br/>','');
+        return    s;
+    }
+</script>

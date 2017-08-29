@@ -1,0 +1,20 @@
+<div class="footer" ng-show="footer.shown">
+    <ul class="fnav">
+        <li class="fnav__item"
+            ng-repeat="item in navItems">
+            <a class="fnav__link"
+                ng-class="{'fnav__link--active': cur==item.id || item.hover}"
+                ng-href="{{item.link}}"
+                ng-mouseover="item.hover=true"
+                ng-mouseleave="item.hover=false">
+                <img class="fnav__img"
+                    ng-show="cur != item.id && !item.hover"
+                    ng-src="{{item.img}}" >
+                <img class="fnav__img"
+                    ng-show="cur == item.id || item.hover"
+                    ng-src="{{item.imgActive}}" >
+                {{item.title}}
+            </a>
+        </li>
+    </ul>
+</div>

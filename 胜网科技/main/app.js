@@ -8,7 +8,7 @@
         $stateProvider
             .state('my',{  //设置路由状态
                 url:'/my',                      //路径
-                templateUrl:'./template/my/index.html' //加载的模版
+                templateUrl:'./template/my/my.html' //加载的模版
             })
                 //备课
             .state('beike',{
@@ -29,7 +29,7 @@
             //网站
             .state('website',{
                 url:'/website',
-                templateUrl:'./template/school/school.html'
+                templateUrl:'./template/website/website.html'
             })
             //网站页的子路由跳转页面
             .state('website.biaodan',{
@@ -81,7 +81,7 @@
             //学校
             .state('school',{
                 url:'/school',
-                templateUrl:'./template/website/website.html'
+                templateUrl:'./template/school/school.html'
             })
             ////会议视频
             //.state('meeting',{

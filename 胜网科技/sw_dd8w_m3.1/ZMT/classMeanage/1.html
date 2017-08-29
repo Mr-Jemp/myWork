@@ -1,0 +1,30 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<<html>
+ <head>
+  <meta http-equiv="Content-Type" content="text/html;charset=gb2312" />
+  <script type="text/javascript">
+   function refresh()
+   {
+    var textcontent=document.getElementById("123").value;
+    
+    if(textcontent !="")
+    {
+     var div=document.getElementById("contant1");
+     div.innerHTML=div.innerHTML+textcontent+"<br>";
+     div.scrollTop=div.scrollHeight;
+    }
+   }
+  </script>
+ </head>
+ <body onload="refresh()">
+ <!--<body>-->
+  <div>
+   
+   <div id="contant1" style="overflow:auto; height:80px; width:400px;"></div>
+   <input type="text" id="123" style=""></input>
+   <input type="button" id="btn" value="sss" onclick="refresh();"></input>
+  </div>
+ </body>
+ <script type="text/javascript" src="js/jquery-1.12.4.min.js"></script>
+</html>

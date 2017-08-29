@@ -1,0 +1,197 @@
+*{
+	padding: 0;
+	margin: 0;
+}
+html,body{
+	font-family: "宋体","冬青黑体";
+}
+.class_header{
+	background-color:#56c399;
+	height: 0.66rem;
+}
+.class_header img{
+	width: 0.3rem;
+	font-size: 0.17rem;
+	line-height: 0.66rem;
+	padding-left: 0.15rem;
+}
+.header_message{
+	font-size: 0.3rem;
+	color: white;
+	text-align: center;
+	padding-left: 1.2rem;
+}
+.class_header div{
+	line-height: 0.66rem;
+}
+.class_header .selectClass{
+	font-size: 0.2rem;
+	color: white;
+	text-align: right;
+	padding-right: 0.55rem;
+}
+/*开通班级*/
+.openClass,.openOtherClass{
+	cursor: pointer;
+	background-color: white;
+	border-radius: 0.1rem;
+	margin:0.18rem 0.3rem 0 0.3rem;
+}
+.openClass .col-xs-2{
+	line-height: 1rem;
+	height: 100%;
+	cursor: hand;
+}
+.openClass .col-xs-2 img{
+	width: 0.75rem;
+}
+.openClass .col-xs-10{
+	font-size: 0.26rem;
+	margin-top: 0.2rem;
+}
+.openClass .col-xs-10 span{
+	font-size: 0.2rem;
+}
+/*班级相册等*/
+#photo{
+	height: 1.6rem;
+	text-align: center;
+	background-color: #f3f6f8;
+}
+#photo div{
+	width: 30%;
+	display: inline-block;
+	height: 100%;
+	background-color: white;
+	border-radius: 0.1rem;
+	position: relative;
+}
+#photo .one{
+	float: left;
+}
+.public p{
+	height: 70%;
+	position: absolute;
+	left: 0;
+	top:0;
+	bottom: 0;
+	right: 0;
+	margin: auto;
+}
+.public p img{
+	width: 0.75rem;
+	margin-bottom: 0.1rem;
+}
+.public p span{
+	font-size: 0.2rem;
+}
+.three{
+	float: right	
+}
+.openOtherClass{
+	background-color:#f3f6f8 ;
+	height: 1.6rem;
+	position: relative;
+	margin-bottom: 1.222222rem
+}
+.openOtherClass .public{
+	position: relative;
+	text-align: center;
+	border-radius: 0.1rem;
+	height: 100%;
+	width: 30%;
+	background-color: white;
+}
+.openOtherClass .public p{
+	display: inline-block;
+}
+/*提示*/
+.reminderParent{
+	display: none;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0,0,0,0.5);
+}
+.reminder{
+	position: absolute;
+	top:40%;left: 0;right: 0;margin: 0 auto;
+	margin: auto;
+	width: 50%;
+	border-radius: 0.1rem;
+	background-color: white;
+}
+.reminder .comfirm{
+	margin: 0;
+	padding: 0.3rem;
+	text-align: center;
+	border-bottom: 1px solid gray;
+	font-size: 0.17rem;
+}
+.reminder .comfirm span:nth-child(1){
+	font-weight: bolder;
+	font-size: 0.17rem;
+}
+.reminder .know{
+	cursor: pointer;
+	font-weight: bold;
+	text-align: center;
+	margin: 0;
+	font-size: 0.17rem;
+	line-height: 0.8rem;
+}
+.reminder .cancel{
+	margin: 0;
+	position: relative;
+}
+.reminder .cancel a{
+	padding: 0.2rem;
+	text-align: center;
+	font-size: 0.17rem;
+	display: inline-block;
+	width: 48%;
+	height: 100%;
+	color: black;
+	text-decoration: none;
+}
+.reminder .cancel a:nth-child(1){
+	border-right: 1px solid gray;
+}
+
+/*底部栏*/
+#footer{width: 100%;height:100px;background:#f8f8f8;margin-top:50px;position:fixed;bottom:0px;left:0;right:0;margin-left:0;margin-right: 0}
+#footer ul{margin:0 auto;width:100%;height:100px;margin-top: 20px;-webkit-padding-start: 0px;}
+#footer ul li{list-style:none;float:left;margin:0 auto;margin-top:10px;width:20%;padding:0;}
+#footer ul li img{margin:0 auto;}
+#footer ul li a{text-decoration:none;}
+#footer ul li p{text-align: center;color:black;}
+@media screen and (max-width:720px) and (min-width:300px){			
+.container-fluid{position: absolute;bottom:0px;width:100%;height: 100%;margin:0;padding:0;}
+#footer ul li{list-style:none;float:left;margin:0 auto;margin-top:10px;width:20%;padding:0;}
+#footer ul li  img{width:25px;height:25px;} 
+}
+.openClassReminder{
+	display: none;
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	left: 0;top: 0;
+	/*background-color: rgba(0,0,0,0.5);*/
+	text-align: center;
+}
+.openClassReminder span{
+	display: inline-block;
+	width: 5rem;
+	height: 1rem;
+	position: absolute;
+	color: white;
+	line-height: 1rem;
+	font-size: 0.26rem;
+	left: 0;right: 0;bottom: 0;top: 0;margin: auto;
+	background-color: rgba(0,0,0,0.3);
+	border-radius: 0.2rem;
+}
+
+

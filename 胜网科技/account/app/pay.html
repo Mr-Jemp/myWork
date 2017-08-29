@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+	    <meta name="Keywords" content="">
+	    <meta name="Description" content="">
+	    <meta name="format-detection" content="telephone=no">
+	    <meta name="apple-mobile-web-app-capable" content="yes">
+	    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+	    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0,minimum-scale=1.0">
+	    <title>支付详情</title>
+	    <style>
+	    	.pay_deatil{
+	    		width: 100%;
+	    	}
+	    	.pay_deatil ul{
+	    		width: 100%;
+	    	}
+	    	.pay_deatil ul li{
+	    		width: 100%;
+	    	}
+	    	.pay_deatil ul li .pay_deatil_con{
+	    		width: 100%;
+	    		background: white;
+	    		padding: 15px;
+	    		height: 5.0em;
+	    	}
+	    	.pay_deatil_con span{
+	    		display: block;
+	    		height: 50%;
+	    	}
+	    	.pay_deatil_con span.pay_deatil_con_a{
+	    		font-size: 1.25rem;
+	    		color: #333;
+	    	}
+	    	.pay_deatil_con span.pay_deatil_con_b{
+	    		font-size: 1.10rem;
+	    		color: #df6353;
+	    	}
+	    	
+	    	#payBtn_{
+	    		width: 100%;
+	    		margin-top: 50px;
+	    		text-align: center;
+	    	}
+	    	button{
+	    		background: #53dfa9;
+	    		border: none;
+	    		outline-style: none;
+	    		width: 70%;
+	    		height: 2.5em;
+	    		margin: 0 auto;
+	    		border-radius: 1.5em;
+	    	}
+	    </style>
+	    <link rel="stylesheet" href="../../classroom/css/bootstrap.css" />
+	    <link rel="stylesheet" href="../css/base.css" />
+	    
+	</head>
+	<body>
+		<header class="mycollect_top_a">
+			<ul class="top_a_ul">
+				<li class="top_a_le">
+					<img src="../images/icon_fanhui.png" />		
+				</li>
+				<li class="top_a_con">支付详情</li>
+			</ul>
+		</header>
+		<div class="pay_deatil">
+			<ul>
+				<li>
+					<div class="pay_deatil_con">
+						<span class="pay_deatil_con_a">初三数学上册购买</span>
+						<span class="pay_deatil_con_b">￥545.00</span>
+					</div>
+				</li>
+			</ul>
+		</div>		
+		<ul class="pay_type_three_box clearfix">
+			<li class="three_box clearfix">
+				<div class="box_a">
+					<img src="../images/_u222.png" />
+				</div>
+				<div  class="box_b">
+					<span>积分支付</span>
+					<span>使用积分付款更多优惠</span>
+				</div>
+				<div class="box_c">
+					<input type="checkbox" value="" id="" class=""/>
+				</div>
+			</li>
+			<li class="three_box clearfix ">
+				<div class="box_a">
+					<img src="../images/icon_zhifubao.png" />
+				</div>
+				<div  class="box_b">
+					<span>支付宝支付</span>
+					<span><i>数字社区推荐</i>推荐有支付宝账号的用户使用</span>
+				</div>
+				<div class="box_c">
+					<input type="checkbox" value="" id="" class=""/>
+				</div>
+			</li>
+			<li class="three_box  clearfix">
+				<div class="box_a">
+					<img src="../images/icon_weixin22.png" />
+				</div>
+				<div  class="box_b">
+					<span>微信支付</span>
+					<span>推荐有微信账号的用户使用</span>
+				</div>
+				<div class="box_c">
+					<input type="checkbox" value="" id="" class=""/>
+				</div>
+			</li>
+			
+		</ul>
+		<p class="srue_argee">
+			<input type="checkbox" class="inputs"/>
+			我已阅读并同意<a>《用户付费协议》</a>
+		</p>
+		<div id="payBtn_">
+			<button>确认支付</button>
+		</div>
+	</body>
+		<script src="../../public/part/jquery/jquery-3.1.1.min.js"></script>
+		<script src="../../public/part/angular/angular.min.js"></script>
+		<script src="../../public/part/angular/angular-route.js"></script>	
+</html>

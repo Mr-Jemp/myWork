@@ -1,0 +1,56 @@
+.s-go-back {
+    float: left;
+    cursor: pointer;
+}
+
+.s-main {
+    position: absolute;
+    top: 1rem;
+    bottom: 0;
+    width: 100%;
+    background-color: #fff;
+}
+
+.s-selection {
+    padding: .45rem .25rem;
+}
+.s-selection__title {
+    margin-bottom: .4rem;
+    font-size: .28rem;
+    color: #333;
+}
+.s-selection__ul {
+
+}
+
+.s-selection__li {
+    margin-right: .7rem;
+    margin-bottom: .24rem;
+    padding: 0 .3rem;
+    height: .6rem;
+    font-size: .26rem;
+    line-height: .6rem;
+    color: #999;
+    border: 1px solid #e5e5e5;
+    border-radius: .08rem;
+    white-space: nowrap;
+    cursor: pointer;
+}
+.s-selection__li--selected {
+    color: #fff;
+    background-color: #56c399;
+    /*border: 0;*/
+}
+
+.s-next-btn {
+    margin: 0 auto;
+    height: .78rem;
+    width: 4.8rem;
+    font-size: .3rem;
+    line-height: .78rem;
+    color: #fff;
+    text-align: center;
+    background-color: #56c399;
+    border-radius: .39rem;
+    cursor: pointer;
+}

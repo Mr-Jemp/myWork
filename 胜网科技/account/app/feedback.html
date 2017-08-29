@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
+		<meta name="apple-mobile-web-app-capable" content="yes"/>
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"/>
+		<meta http-equiv="Access-Control-Allow-Origin" content="*">
+		<title></title>
+		<link rel="stylesheet" href="../../public/part/bootstrap/bootstrap.min.css" />
+		<link rel="stylesheet" href="../css/base.css" />
+		<link rel="stylesheet" href="../css/index.css" />
+	</head>
+	<body ng-app="feedbackApp" ng-controller='feedbackController'>
+		<!--意见反馈部分-->
+		<header class="mycollect_top_a">
+			<ul class="top_a_ul">
+				<li class="top_a_le">
+					<img src="../images/icon_fanhui.png" />		
+				</li>
+				<li class="top_a_con">意见反馈</li>
+				<li class="top_a_ri">提交</li>
+			</ul>
+		</header>
+		
+		<div id="feedbackPage" >
+			</form></header>
+			<p class="feedback">
+				<textarea id="face_back" ng-model="message" cols="50" rows="12" placeholder="欢迎留下你的意见和建议，我们会不断完善平台"></textarea>
+				<p class="zishu"><span ng-bind="left($event)"></span>/400</p>
+			</p>
+		</div>
+
+		<script src="../../public/part/jquery/jquery-3.1.1.min.js"></script>
+		<script src="../js/publicJs.js"></script>	
+		<script src="../../public/part/angular/angular.min.js"></script>
+		<script src="../../public/part/angular/angular-route.js"></script>		
+		<script src="../js/feedbackController.js"></script>
+	</body>
+</html>

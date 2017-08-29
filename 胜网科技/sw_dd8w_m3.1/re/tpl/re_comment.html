@@ -1,0 +1,22 @@
+<link rel="stylesheet" href="/re/css/re_public.css">
+<link rel="stylesheet" href="/re/css/re_comment.css">
+<div class="re_comment_top">
+    <span class="top-return" onclick="javascript:history.go(-1);"></span>
+    评论
+    <span class="subcomment" ng-click="subComment()">提交评论</span>
+</div>
+<div class="comment_block">
+    <div class="comment_des">
+        <textarea rows="5px" placeholder="请输入您的评论" ng-model="content" ng-change="strCount()"></textarea>
+        <span>{{strnum}}/300</span>
+    </div>
+    <div class="comment_star">
+        <ul>
+            <li>评分</li>
+            <li><img src="/re/img/re_comment/star_y.png" ng-click="setStar(1)" /><img src="/re/img/re_comment/star_n.png" ng-click="setStar(2)" /><img src="/re/img/re_comment/star_n.png" ng-click="setStar(3)" /><img src="/re/img/re_comment/star_n.png" ng-click="setStar(4)" /><img src="/re/img/re_comment/star_n.png" ng-click="setStar(5)" /></li>
+            <li>{{star}}/5分</li>
+        </ul>
+    </div>
+    <div></div>
+</div>
+<script src="/re/js/re_comment.js"></script>

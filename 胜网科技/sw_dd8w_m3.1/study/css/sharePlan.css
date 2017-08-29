@@ -1,0 +1,150 @@
+@charset "UTF-8";
+
+/*  测试用-start  */
+.B {
+    border: 1px #000 solid;
+}
+
+/*  测试用-end  */
+
+/* 复位用 */
+[class^="col-"] {
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+a:focus, a:hover,
+.btn-link:focus, .btn-link:hover {
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* 顶部导航栏 */
+.sharePlanIndex_header {
+    line-height: 40px;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    background-color: #58C399;
+    color: #ffffff;
+}
+
+.sharePlanIndex_header > i {
+    position: absolute;
+    width: 30px;
+    line-height: 30px;
+    top: 5px;
+}
+
+.sharePlanIndex_header > i:first-child {
+    left: 0;
+}
+
+.sharePlanIndex_header > i:last-child {
+    right: 5px;
+}
+
+/* 搜索框 */
+.searchBox {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+/* 选项卡 */
+.tabBox li {
+    display: inline-block;
+    list-style: none;
+    border: 1px #fff solid;
+    line-height: 30px;
+    padding: 0 10px;
+    border-radius: 5px;
+}
+
+.tabBox li.active {
+    background-color: #58C399;
+    color: #fff;
+}
+
+/* 内容列表 */
+.contentBox {
+    margin-top: 10px;
+}
+
+.contentBody {
+    display: block;
+    min-height: 92px;
+    border: 1px #A0A0A0 solid;
+    border-bottom: none;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    padding-left: 100px;
+    padding-right: 10px;
+}
+
+.contentBody > img {
+    position: absolute;
+    top: 1px;
+    left: 15px;
+    width: 90px;
+    height: 90px;
+}
+
+.contentBody > h4,
+.contentBody p {
+    overflow: hidden;
+    word-break: keep-all;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.contentBody > h4 {
+    color: #000000;
+}
+
+.contentBody p {
+    color: #b6a1a1;
+}
+
+.contentBody p:last-child {
+    font-size: 12px;
+    color: #b2b2b2;
+    margin-top: 15px;
+    margin-bottom: 0;
+}
+
+.contentBody p:last-child span {
+    float: right;
+}
+
+.contentFooter {
+    border: 1px #A0A0A0 solid;
+    border-top: none;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+.contentFooterBody {
+    text-align: center;
+}
+
+.contentFooterBody button,
+.contentFooterBody a{
+    color: #000000;
+    font-size: 13px;
+    /*width: 24%;*/
+}
+
+.contentFooterBody button i,
+.contentFooterBody a i{
+    color: #f5ca14;
+}
+
+/* 分页 */
+nav {
+    text-align: center;
+}
+
+.pagination>.active>a, .pagination>.active>a:focus, .pagination>.active>a:hover, .pagination>.active>span, .pagination>.active>span:focus, .pagination>.active>span:hover {
+    background-color: #E9BE00;
+    border-color: #E9BE00;
+}

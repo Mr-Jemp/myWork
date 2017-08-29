@@ -1,0 +1,344 @@
+    <!-- <link href="/Public/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="/Public/Js/treePlug/css/bootstrap-treeview.min.css" rel="stylesheet" type="text/css"> -->
+    <!--[if lt IE 9]>
+    <script src="//cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="//cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <link href="/Public/Css/jscss.css" rel="stylesheet" type="text/css">
+    <link href="/Public/Css/teacher.css" rel="stylesheet" type="text/css">
+<!---内容区开始---->
+<div class="container">
+    <div class="row topbg">
+        <div class="col-xs-10">
+            <h3>教案</h3>
+        </div>
+    </div>
+</div>
+<!--
+<div class="container logo">
+    <div class="row">
+        <div class="col-xs-3"><img src="/Public/images/LOGO.png" width="80" height="80" alt="教案"></div>
+        <div class="col-xs-9 text-cen">
+            <h1>欢迎来到数字社区</h1>
+        </div>
+    </div>
+</div>
+-->
+<div class="container type_t">
+    <div>
+        <form role="form" method="post" action="/index.php?m=Teacher&c=Resource&a=AddSharePlan" enctype="multipart/form-data">
+            <div class="hide form-group" style="margin-top: 15px;">
+                <label for="question_grade">选择学段：</label>
+                <select class="form-control" id="question_grade" name="question_grade">
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="name">选择学科：</label>
+                <select class="form-control" id="question_subject" name="question_subject">
+                    <option data-grade="40" data-semester="16" value="47">
+                        16计用班（1）班计算机应用与网络上册                            </option><option data-grade="40" data-semester="17" value="47">
+                    16计用班（1）班计算机应用与网络下册                            </option>                    </select>
+            </div>
+            <div class="form-group">
+                <input id="question_section" name="question_section" type="text" value="" hidden>
+                <a data-target="#myModal" data-toggle="modal" href="#" class="btn t_button">
+                    选择章节：<!-- <label></label> -->
+                </a>
+                <ul id="sectionUl" class="list-group">
+                </ul>
+            </div>
+            <div aria-hidden="true" aria-labelledby="myModalLabel" role="dialog" tabindex="-1" class="modal fade" bs-popup="" ng-model="test" id="myModal" style="display: none;">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header alert-info">
+
+                            <h4 id="myModalLabel" class="modal-title">章节列表</h4>
+                        </div>
+                        <div class="modal-body">
+                            <div id="sectionTree"></div>
+                        </div>
+                        <div class="modal-footer">
+                            <button data-dismiss="modal" id="subModal" class="btn btn-primary" type="button">确定</button>
+                            <button data-dismiss="modal" class="btn btn-default" type="button">关闭</button>
+
+                        </div>
+                    </div>
+                    <!-- /.modal-content -->
+
+                </div>
+                <!-- /.modal-dialog -->
+            </div>
+            <div class="form-group">
+                <input id="knowledge_point" name="knowledge_point" type="text" value="" hidden>
+                <a data-target="#pointModal" data-toggle="modal" href="#" class="btn t_button">
+                    知识点：<!-- <label></label> -->
+                </a>
+                <ul id="pointUl" class="list-group">
+                </ul>
+            </div>
+            <div aria-hidden="true" aria-labelledby="myModalLabel" role="dialog" tabindex="-1" class="modal fade" bs-popup="" ng-model="test" id="pointModal" style="display: none;">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header alert-info">
+
+                            <h4 id="pointModalLabel" class="modal-title">知识点列表</h4>
+                        </div>
+                        <div class="modal-body">
+                            <div id="pointTree"></div>
+                        </div>
+                        <div class="modal-footer">
+                            <button data-dismiss="modal" id="subPoint" class="btn btn-primary" type="button">确定</button>
+                            <button data-dismiss="modal" class="btn btn-default" type="button">关闭</button>
+
+                        </div>
+                    </div>
+                    <!-- /.modal-content -->
+                </div>
+                <!-- /.modal-dialog -->
+            </div>
+            <div class="form-group">
+                <label>上传文件</label>
+                <input type="file" name="sp_plan" id="input05" >
+            </div>
+            <div class="form-group">
+                <label for="sp_title">教案名称：</label>
+                <input type="text" class="form-control" id="sp_title" name="sp_title" placeholder="请输入名称">
+            </div>
+            <div class="form-group">
+                <label for="sp_describe">教案说明：</label>
+                <textarea class="form-control" name="sp_describe" rows="3" placeholder="内容描述"></textarea>
+            </div>
+            <div class="col-xs-6 text-right type_t">
+                <button type="submit" class="btn t_button">提交</button>
+            </div>
+            <div class="col-xs-6 text-left type_t">
+                <button type="button" class="btn t_button" onclick="history.go(-1)">返回</button>
+            </div>
+        </form>
+    </div>
+</div>
+<br>
+<br>
+<br>
+<br>
+<br>
+<!--底部开始-->
+<div class="hide btn-group btn-group-justified navbar-fixed-bottom type_t" role="group" aria-label="主页-后退">
+    <a href="/index.php?m=Teacher&c=Index&a=index" class="btn btn-lg t_button" role="button">
+        <span class="glyphicon glyphicon-home"></span> 主页</a>
+    <a href="/index.php?m=Teacher&c=Resource&a=SharePlan" class="btn btn-lg t_button" role="button">
+        <span class="glyphicon glyphicon-share-alt"></span> 后退</a>
+</div>
+<!--底部开始结束-->
+<!--中间内容区结束-->
+<!---内容区结束---->
+<!-- <script type="text/javascript" src="/Public/jQuery/jquery.min.js"></script> -->
+<script src="/Public/bootstrap/js/bootstrap.min.js"></script>
+<script src="/Public/Js/bootstrap-filestyle.min.js"></script>
+<script src="/Public/Js/treePlug/js/bootstrap-treeview.min.js"></script>
+<script type="text/javascript">
+    var V = function() {}
+
+    $(document).ready(function() {
+        $('#input05').filestyle({
+            buttonName : 'btn-warning'
+        });
+        var tree = null;
+
+        var section = null;
+        var selectedSectionIds = [];
+
+        var points = null;
+        var selectedPointIds = [];
+
+        getSections();
+
+        var initSelectableTree = function() {
+            return $('#sectionTree').treeview({
+                data: section,
+                multiSelect: true,
+                emptyIcon: "",
+                onNodeSelected: function(event, node) {
+
+                },
+                onNodeUnselected: function(event, node) {
+
+                }
+            });
+        };
+
+        /*$("#subModal").click(function(){
+         var selectableNodes = $('#sectionTree').treeview('getSelected');
+         if (selectableNodes.length == 0) return;
+         selectedSectionIds = [];
+         $('#sectionTree').html("");
+         console.log(selectableNodes);
+         var ul = $("#sectionUl");
+         var section_str = "";
+         for (var i = 0; i < selectableNodes.length; i++) {
+         var node = selectableNodes[i];
+         var node_id = node.id;
+         var node_text = node.text;
+         section_str = section_str + '<li class="list-group-item" id="' + node_id + '" >' + node_text + '</li>';
+         selectedSectionIds.push(node_id);
+         }
+         $("#sectionUl").html(section_str);
+         $("#question_section").val(selectedSectionIds.join(','));
+         getKPoint();
+         });*/
+
+        $('#myModal').on('hide.bs.modal', function() {
+            var selectableNodes = $('#sectionTree').treeview('getSelected');
+            if (selectableNodes.length == 0) return;
+            selectedSectionIds = [];
+            $('#sectionTree').html("");
+            console.log(selectableNodes);
+            var ul = $("#sectionUl");
+            var section_str = "";
+            for (var i = 0; i < selectableNodes.length; i++) {
+                var node = selectableNodes[i];
+                var node_id = node.id;
+                var node_text = node.text;
+                section_str = section_str + '<li class="list-group-item" id="' + node_id + '" >' + node_text + '</li>';
+                selectedSectionIds.push(node_id);
+            }
+            $("#sectionUl").html(section_str);
+            $("#question_section").val(selectedSectionIds.join(','));
+            getKPoint();
+
+        });
+
+        $('#myModal').on('show.bs.modal', function() {
+            console.log(selectedSectionIds);
+            tree = new initSelectableTree();
+        });
+
+        $('#question_subject').change(function() {
+            getSections();
+        });
+
+        $('#question_grade').on('change', function() {
+            getSections();
+        });
+
+        function getSections() {
+            var question_subject = $('#question_subject').val();
+            var question_grade = $('#question_subject').children('option:selected').attr('data-grade');
+            var question_semester = $('#question_subject').children('option:selected').attr('data-semester');
+            var data = new V();
+            data.question_grade = question_grade;
+            data.question_subject = question_subject;
+            data.question_semester=question_semester;
+            console.log(data);
+            $.ajax({
+                type: 'GET',
+                data: data,
+                url: "index.php?m=Teacher&c=Resource&a=getSection",
+                dataType: "json",
+                success: function(data) {
+                    section = data;
+                    console.log("data");
+                    console.log(data);
+                },
+                error: function(e, xhl, dd) {
+                    alert("err");
+                }
+            });
+        }
+
+        var initPointsTree = function() {
+            return $('#pointTree').treeview({
+                data: points,
+                multiSelect: true,
+                emptyIcon: "",
+                onNodeSelected: function(event, node) {
+
+                },
+                onNodeUnselected: function(event, node) {
+
+                }
+            });
+        };
+        $('#subPoint').click(function(){
+            var selectableNodes = $('#pointTree').treeview('getSelected');
+            if (selectableNodes.length == 0) return;
+            selectedPointIds = [];
+            $('#pointTree').html("");
+            var ul = $("#pointUl");
+            var section_str = "";
+            for (var i = 0; i < selectableNodes.length; i++) {
+                var node = selectableNodes[i];
+                var node_id = node.id;
+                var node_text = node.text;
+                section_str = section_str + '<li class="list-group-item" id="' + node_id + '" >' + node_text + '</li>';
+                selectedPointIds.push(node_id);
+            }
+            $("#knowledge_point").val(selectedPointIds.join(','));
+            $("#pointUl").html(section_str);
+        });
+        /*$('#pointModal').on('hide.bs.modal', function() {
+         var selectableNodes = $('#pointTree').treeview('getSelected');
+         if (selectableNodes.length == 0) return;
+         selectedPointIds = [];
+         $('#pointTree').html("");
+         var ul = $("#pointUl");
+         var section_str = "";
+         for (var i = 0; i < selectableNodes.length; i++) {
+         var node = selectableNodes[i];
+         var node_id = node.id;
+         var node_text = node.text;
+         section_str = section_str + '<li class="list-group-item" id="' + node_id + '" >' + node_text + '</li>';
+         selectedPointIds.push(node_id);
+         }
+         $("#knowledge_point").val(selectedPointIds.join(','));
+         $("#pointUl").html(section_str);
+         });*/
+
+        $('#pointModal').on('show.bs.modal', function() {
+            console.log(selectedPointIds);
+            tree = new initPointsTree();
+        });
+
+        function getKPoint() {
+            var question_section = selectedSectionIds.join(',');
+            var data = new V();
+            data.question_section = question_section;
+
+            $.ajax({
+                type: 'GET',
+                data: data,
+                url: "index.php?m=Teacher&c=Resource&a=getKnowledgePoint",
+                dataType: "json",
+                success: function(data) {
+                    points = data;
+                },
+                error: function(e, xhl, dd) {
+                    alert("err");
+                }
+            });
+        }
+
+        //  $('#submit_m_class').click(function(){
+        //     var data=new V();
+        //     data.mc_grade = $('#question_grade').val();
+        //     data.mc_subject = $('#question_subject').val();
+        //     data.mc_section = selectedSectionIds.join(',');
+        //     data.knowledge_point = selectedPointIds.join(',');
+        //     console.log(data);
+        //     $.ajax({
+        //         type: 'GET',
+        //         data:data,
+        //         url: "index.php?m=Teacher&c=Resource&a=addMicroClass",
+        //         dataType:"json",
+        //         success: function (data) {
+        //             alert("添加成功");
+        //             console.log(data);
+        //         },
+        //         error:function(e,xhl,dd){
+        //             alert("err");
+        //         }
+        //     });
+        // });
+    })
+</script>

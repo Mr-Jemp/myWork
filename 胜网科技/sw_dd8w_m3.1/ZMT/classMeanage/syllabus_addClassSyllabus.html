@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css"/>
+		<link rel="stylesheet" type="text/css" href="css/syllabus.css"/>
+	</head>
+	<body ng-app="myApp">
+		
+		<!--头部-->
+			<div class="class_header row" style="margin: 0;">
+				<div class="col-xs-2" onclick="javascript:history.go(-1);">
+					<img src="images/fanhui@2x.png" alt="" />
+				</div>
+				<div class="header_message col-xs-7">初一（2）班课程表</div>
+				<div class="selectClass col-xs-3">
+					保存
+				</div>
+			</div>
+			<p style="height: 0.25rem;background-color: #f3f6f8;margin: 0;"></p>
+			<div class="syllabusName">
+				<input type="text" placeholder="请输入课程名称" />
+			</div>
+			<p style="height: 0.25rem;background-color: #f3f6f8;margin: 0;"></p>
+			
+			<ul class="syllabusTime">
+				<li><a href="#/classTime"></a><input type="button" value="课程表节数/上课时间" /></li>
+				<li><input type="button" value="午休时间" /></li>
+			</ul>
+			
+			<!--午休时间-->
+			<div class="setRelaxTimeP">
+				<div class="setRelaxTime row" style="padding: 0;margin: 0;">
+					<p>午休时间<span>完成</span></p>
+					<div style="overflow: hidden;height: 3.4rem;background-color: white;position: relative;">
+						<div class="kuang">1</div>
+						<ul class="col-xs-6 actionTime"></ul>	
+						<ul class="col-xs-6 endTime"></ul>
+					</div>
+				</div>
+			</div>
+
+			
+	</body>
+	<script type="text/javascript" src="js/jquery-1.12.4.min.js" ></script>
+	<script type="text/javascript" src="js/angular.min.js"></script>
+	<script type="text/javascript" src="js/angular-route.min.js" ></script>
+	<script type="text/javascript" src="js/publicJs.js" ></script>
+	<script type="text/javascript">		
+		//点击午休时间
+		$(".syllabusTime li:last-child").click(function(){
+			$(".setRelaxTimeP").css("display","block");
+		})
+		$(".setRelaxTime p span").click(function(){
+			$(".setRelaxTimeP").css("display","none");
+		})
+		
+		//左边
+		var hour=11;
+		var min=0;
+		for(var i=0;i<31;i++){
+			var li=$("<li></li>");	
+			if(min>5){
+				hour++;
+				min=0;
+			}
+			li.text(hour+":"+min+"0");
+			$(".actionTime").append(li);
+			min++;
+		}
+		//右边
+		var hour1=11;
+		var min1=0;
+		for(var i=0;i<31;i++){
+			var li=$("<li></li>");	
+			if(min1>5){
+				hour1++;
+				min1=0;
+			}
+			li.text(hour1+":"+min1+"5");
+			$(".endTime").append(li);
+			min1++;
+		}
+		
+		//开始时间
+		$(".actionTime li").click(function(){
+			var liHeight=$(this).outerHeight();
+			var i=-0.82*($(this).index()-1);
+				$(".actionTime").animate({
+					"margin-top":i+"rem"
+				},100)
+		})
+//		结束时间
+	$(".endTime li").click(function(){
+//			console.log($(this).text())
+			var liHeight=$(this).outerHeight();
+			var i=-0.82*($(this).index()-1);
+				$(".endTime").animate({
+					"margin-top":i+"rem"
+				},100)
+		})
+	
+	
+	//滚轮选择开始午休时间
+		var bol1=false;
+		var actionTime=document.getElementsByClassName("actionTime")[0];
+		mouseWheelFn(actionTime,function(){
+			console.log("向上",bol1);
+			if(bol1){
+				return;
+			}
+			bol1=true;
+			//获取已滚动高度
+			var margin=parseInt($(".actionTime").css("margin-top"));
+			var liHeight=$(".actionTime li").eq(0).outerHeight();
+			
+			console.log(margin,liHeight);
+
+			$(".actionTime").animate({
+				"margin-top":-liHeight+margin+"px"
+			},100,function(){
+				bol1=false;
+			})
+			
+			
+		},function(){
+			console.log("向下",bol1);
+			if(bol1){
+				return;
+			}
+			console.log("xxx");
+			var margin=parseInt($(".actionTime").css("margin-top"));
+			var liHeight=$(".actionTime li").eq(0).outerHeight();
+
+			console.log(margin,liHeight)
+			bol1=true;
+			$(".actionTime").animate({
+					"margin-top":margin+liHeight+"px"
+			},100,function(){
+				bol1=false;
+			})
+		})
+		
+		//滚轮选择结束午休时间
+		var bol2=false;
+		var endTime=document.getElementsByClassName("endTime")[0];
+		mouseWheelFn(endTime,function(){
+			console.log("向上",bol2);
+			if(bol2){
+				return;
+			}
+			bol2=true;
+			//获取已滚动高度
+			var margin=parseInt($(".endTime").css("margin-top"));
+			var liHeight=$(".endTime li").eq(0).outerHeight();
+			
+			console.log(margin,liHeight);
+
+			$(".endTime").animate({
+				"margin-top":-liHeight+margin+"px"
+			},100,function(){
+				bol2=false;
+			})
+			
+			
+		},function(){
+			console.log("向下",bol2);
+			if(bol2){
+				return;
+			}
+			console.log("xxx");
+			var margin=parseInt($(".endTime").css("margin-top"));
+			var liHeight=$(".endTime li").eq(0).outerHeight();
+
+			console.log(margin,liHeight)
+			bol2=true;
+			$(".endTime").animate({
+					"margin-top":margin+liHeight+"px"
+			},100,function(){
+				bol2=false;
+			})
+		})
+	
+		function mouseWheelFn(element,upFn,downFn){
+		element.onmousewheel = fn;
+		// 判断浏览器是否支持addEventListener方法
+		if(window.addEventListener){
+			element.addEventListener("DOMMouseScroll",fn,false);
+		}
+
+		// 函数,判断用户滚轮向上还是向下
+		function fn(e){
+			var e = e || window.event;
+			// 判断滚轮方向
+			// 滚轮向上
+			if(e.wheelDelta > 0 || e.detail < 0){
+				upFn();
+			}else{
+				downFn();
+			}
+
+			// 阻止冒泡
+			e.cancelBubble = true;
+			e.stopPropagation();
+		}
+	}
+	
+	
+		
+	</script>
+</html>

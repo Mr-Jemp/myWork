@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="Keywords" content="">
+		<meta name="Description" content="">
+		<meta name="format-detection" content="telephone=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0,minimum-scale=1.0">
+		<title>提现积分</title>
+		<link rel="stylesheet" href="../../public/part/bootstrap/bootstrap.min.css" />
+		<link rel="stylesheet" href="../css/base.css" />
+		<link rel="stylesheet" href="../css/myintegal.css" />
+	</head>
+
+	<body ng-app="winRuleApp" ng-controller="winRuleController">
+		<header class="mycollect_top_a">
+			<ul class="top_a_ul">
+				<li class="top_a_le">
+					<img src="../images/icon_fanhui.png" />
+				</li>
+				<li class="top_a_con">中奖纪录</li>
+			</ul>
+		</header>
+		<div>
+			<ul class="pay_type_three_box clearfix">
+				<li class="three_box clearfix" ng-repeat="regas in res" ng-class="{okBg:isGet(regas.receive)=='已领取'}">
+					<div class="box_a">
+						<img src="../images/chongzhi.png" />
+					</div>
+					<div class="box_b">
+						<span>{{regas.prizeTitle}}</span>
+						<span>中奖时间:{{timestamp2Time(regas.createTime)}}</span>
+					</div>
+					<div class="box_c">
+						<a ng-click="gift(regas.typeId,$event,regas.id)" ng-class="{okGift:isGet(regas.receive)=='已领取'}">{{isGet(regas.receive)}}</a>
+					</div>
+				</li>
+			</ul>
+		</div>
+		<div class="ifra"></div>
+		<div class="pop">
+
+			<p class="popTop">填写领奖信息<span class="del" ng-click="closeDel()">X</span></p>
+			<div>
+				<form class="win_input">
+					<p class="clearfix">
+						<span>收货人</span>
+						<input type="text" placeholder="请输入收货人名字" id="win_name" />
+					</p>
+					<p class="clearfix">
+						<span>手机号码</span>
+						<input type="text" placeholder="请输入手机号码" id="win_number" />
+					</p>
+					<p class="clearfix">
+						<span>选择地区</span>
+						<select class="select" name="province" id="s1">
+							<option></option>
+						</select>
+						<select class="select" name="city" id="s2">
+							<option></option>
+						</select>
+						<select class="select" name="town" id="s3">
+							<option></option>
+						</select>
+					</p>
+					<p class="clearfix">
+						<span>详细地址</span>
+						<textarea placeholder="请填写详细地址" rows="2" class="win_address"></textarea>
+					</p>
+					<span ng-click="sumitInfo()" id="win_getinfo">确定提交</span>
+				</form>
+			</div>
+			
+		</div>
+		<div class="bob">
+			<p class="popTop">请填写手机号码<span class="del" ng-click="NubDel()">X</span></p><div >
+				<form class="win_Telinput">
+					<span class="telNub">手机号码</span>
+					<input type="text" placeholder="请输入手机号码" id="telNuber"/>
+					<span id="win_getTel" ng-click="sumitNub()">确定提交</span>
+				</form>
+		</div>;
+		</div>
+	</body>
+
+	<script src="../../public/part/jquery/jquery-3.1.1.min.js"></script>
+	<script src="../../public/part/angular/angular.min.js"></script>
+	<script src="../js/publicJs.js"></script>
+	<script src="../js/aear.js"></script>
+	<script src="../js/recharge.js"></script>
+	<script>
+		angular.module('winRuleApp', ["commonConfig"]).
+		controller("winRuleController", ["$scope", "$http", function($scope, $http) {
+			$('.top_a_le img').click(function(){
+				window.location.href = document.referrer;//返回上一页并刷新
+			})
+			$http.get("http://192.168.0.21:20889/luckilyListFacade/selectLuckilyList?uid=20889").
+			then(function(res) { 
+				$scope.res = res.data.msg;
+				console.log($scope.res)
+				$scope.isGet=function(receive){  //判断商品类型；积分默认领取
+					if(receive==true){
+						return "已领取"
+					}else{
+						return "立即领取"						
+						
+					}
+				}
+				
+				$scope.gift = function(shopId,$event,ids) {
+					console.log(this.regas)
+					if(this.regas.receive == true) {				
+						return;
+					}else if(this.regas.typeId == "2") { //领取话费						
+						$('.ifra,.bob').show();
+						$('.pop').hide();
+						$scope.sumitNub=function(){
+							$.ajax({
+								type:"get",
+								url: "http://192.168.0.21:20889/lotteryReceiveFacade/addLotteryReceive",
+								async:true,
+								data: {
+									'uid': '20889',
+									'luckilyId':ids,
+									'receivePhone':$('#telNuber').val(),
+								},
+								success:function(res){
+									console.log(res)
+									if(res.msg){
+										$('.ifra,.bob').hide();
+										window.location.reload();
+										
+										
+									}
+								},
+								error:function(resposen) {
+									console.log("提交失败")
+								}
+								
+							});
+						}
+						$scope.NubDel=function(){
+							$('.ifra,.bob').hide()
+						}
+					} else {							 //领取实物						
+						$('.ifra,.pop').show();
+						$('.bob').hide();
+						setup(); // 获取级联
+						function promptinfo() { //执行级联信息
+							var s1 = $('#s1').val();
+							var s2 = $('#s2').val();
+							var s3 = $('#s3').val();
+							address = "" + s1 + s2 + s3;
+							return address;
+						}
+						$scope.sumitInfo = function() {
+							var Name = $("#win_name").val(); //收货人
+							var Number = $("#win_number").val(); //收货人号码
+							var Address = $(".win_address").val(); //收货地址		
+							var infoAcount = promptinfo() + " " + Address; //全部信息
+							console.log(infoAcount)
+							$.ajax({
+								type:"get",
+								url: "http://192.168.0.21:20889/lotteryReceiveFacade/addLotteryReceive",
+								async:true,
+								data: {
+									'uid': '20889',
+									'luckilyId': ids,
+									'receiveName': Name,
+									'receivePhone': Number,
+									'receiveAddress': infoAcount
+								},
+								success:function(res){
+									console.log(res.msg)
+									if(res.msg){
+										$('.ifra,.pop').hide();
+										
+										
+										window.location.reload();
+										console.log($event)
+									}
+								},
+								error:function(resposen) {
+									console.log("提交失败")
+								}
+								
+							});
+						
+						}
+
+						$scope.closeDel = function() {
+							$('.ifra,.pop').hide();
+						}
+						
+
+					}
+				}
+					//时间戳
+				$scope.timestamp2Time = function(timestamp) {
+					var result = "";
+					var seperator1 = "-";
+					var seperator2 = ":";
+					if(timestamp) {
+						//			                var reg = new RegExp(/\D/, "g"); //提取数字字符串  
+						//			                var timestamp_str = timestamp.replace(reg, "");  
+
+						var d = new Date();
+						d.setTime(timestamp);
+						var year = d.getFullYear();
+						var month = d.getMonth() + 1;
+						var day = d.getDate();
+						var hours = d.getHours();
+						var minutes = d.getMinutes();
+						var seconds = d.getSeconds();
+						if(month >= 1 && month <= 9) {
+							month = "0" + month;
+						}
+						if(day >= 0 && day <= 9) {
+							day = "0" + day;
+						}
+						if(hours >= 1 && hours <= 9) {
+							hours = "0" + hours;
+						}
+						if(minutes >= 0 && minutes <= 9) {
+							minutes = "0" + minutes;
+						}
+						if(seconds >= 0 && seconds <= 9) {
+							seconds = "0" + seconds;
+						}
+						result = year + seperator1 + month + seperator1 + day + "  " + hours + seperator2 + minutes + seperator2 + seconds;
+					}
+					return result;
+
+				}
+			}).
+			catch(function() {
+				console.log("数据有误")
+
+			})
+
+		}])
+	</script>
+
+</html>

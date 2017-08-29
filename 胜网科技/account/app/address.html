@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+		<meta http-equiv="Access-Control-Allow-Origin" content="*">
+		<title></title>
+		<link rel="stylesheet" href="../../public/part/bootstrap/bootstrap.min.css" />
+		<link rel="stylesheet" href="../css/base.css" />
+		<link rel="stylesheet" href="../css/index.css" />
+		<link rel="stylesheet" href="../css/address.css" />
+	</head>
+
+	<body ng-app="addressApp" ng-controller='addreController'>
+		<header class="mycollect_top_a">
+			<ul class="top_a_ul">
+				<li class="top_a_le">
+					<img src="../images/icon_fanhui.png" />
+				</li>
+				<li class="top_a_con">我的地址</li>
+			</ul>
+		</header>
+		<!--点击可以编辑-->
+		<div class="myAddress">
+			<ul>
+				<li ng-repeat="addres in addr">
+					<div class="clearfix"><span class="names">收货人：<label style="color: #666666;">{{addres.receiverName}}</label></span><span class="namesNumber" style="color: #666666;">{{addres.phone}}</span></div>
+					<div class="clearfix">收货地址：<span style="color: #666666;">{{addres.cityAddress+addres.detailedAddress}}</span></div>
+					<div class="clearfix">
+						<div class="close-stybtn">
+							<input type="radio" id="mrinput" ng-class="{'active':addres.isDefault==true}"  ng-click="addCorol($index,$event,addres.id,addres.isDefault)" />
+							<label >默认地址</label>
+						</div>
+						<div class="addres-btn">
+							<a class=" addres-eadit" ng-click='addEadit(addres.id)'><img src="../images/icon_bianji.png" />编辑</a>
+						
+							<a class=" addres-sel" ng-click='delAddress(addres.id)'><img src="../images/icon_shanchu.png" />删除</a>
+						</div>
+						
+					</div>
+				</li>
+			</ul>
+		</div>
+
+		<!--编辑地址-->
+		<div class="address_eadit clearfix" style="display: none;">
+			<form class="">
+				<p>
+					<span class="address_title">收货人</span><input type="text" placeholder="请填写收货人名字" class="sName" value="{{addEad.receiverName}}" />
+				</p>
+				<p>
+					<span class="address_title">手机号码</span><input type="text" placeholder="请填写收货人手机号码" class="sNum" value="{{addEad.phone}}" ng-model="addEad.phone" ng-blur='yanNub(addEad.phone)'/>
+				</p>
+				<p class="clearfix">
+					<span class="address_title">城市地址</span>
+					<!--<br />-->
+					<span class="address_title_ssq">
+						<span class="down_show">{{addEad.cityAddress}}</span>
+					<span class="down_icon" ng-click="isCloseErea()"><img class="addressXiala" src="../images/icon_xiala.png"/></span>
+					</span>
+
+				</p>
+				<p>
+					<span class="address_title">详细地址</span><input type="text" placeholder="请填写收货人详细地址" class="sAddre" value="{{addEad.detailedAddress}}" />
+				</p>
+				<p class="setMoren">
+					<input type="radio" id="setinp" ng-class="{'active':addEad.isDefault==true}" ng-click="inputCorol($event,addEad.id,addEad.isDefault)"/>
+					<label >设置为默认地址</label>
+				</p>
+			</form>
+			<div class="ifra">
+				<div class="chooseCity">
+					<p>
+						请选择城市地址
+					</p>
+					<div class="box">
+						<ul>
+
+						</ul>
+					</div>
+					<div class="aboulBtn clearfix">
+						<a class="chooseDel">取消</a>
+						<a class="reset">重选</a>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!--添加地址-->
+		<div class="address_cont clearfix" style="display: none;">
+			<form class="">
+				<p>
+					<span class="address_title">收货人</span><input type="text" placeholder="请填写收货人名字" class="addName" />
+				</p>
+				<p>
+					<span class="address_title">手机号码</span><input type="text" class="addNum"  placeholder="请填写收货人手机号码" ng-model="nubVal" ng-blur='yanNub(nubVal)' />
+				</p>
+				<p class="clearfix">
+					<span class="address_title">城市地址</span>
+					<!--<br />-->
+					<span class="address_title_ssq">
+						<span class="down_show"></span>
+					<span class="down_icon" ng-click="isCloseErea()"><img class="addressXiala" src="../images/icon_xiala.png"/></span>
+					</span>
+
+				</p>
+				<p>
+					<span class="address_title">详细地址</span><input type="text" placeholder="请填写收货人详细地址" class="sAddre" />
+				</p>
+				<p class="setMoren">
+					<input type="radio" id="setinp"  ng-click="inpAddcor($event)" />
+					<label>设置为默认地址</label>
+				</p>
+			</form>
+			<div class="ifra">
+				<div class="chooseCity">
+					<p>
+						请选择城市地址
+					</p>
+					<div class="box">
+						<ul>
+
+						</ul>
+					</div>
+					<div class="aboulBtn clearfix">
+						<a class="chooseDel">取消</a>
+						<a class="reset">重选</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<footer class="addAddress">
+			<a class="add_addr" ng-click="addErea()">添加新地址</a>
+		</footer>
+		<!--<div class="ifra"></div>-->
+		<script src="../../public/part/jquery/jquery-3.1.1.min.js"></script>
+		<script src="../../public/part/angular/angular.min.js"></script>
+		<script src="../js/publicJs.js"></script>
+		<script src="../js/address.js"></script>
+	</body>
+
+</html>

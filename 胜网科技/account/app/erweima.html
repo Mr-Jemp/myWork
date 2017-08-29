@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+		<meta http-equiv="Access-Control-Allow-Origin" content="*">
+		<title></title>
+		<link rel="stylesheet" href="../../public/part/bootstrap/bootstrap.min.css" />
+		<link rel="stylesheet" href="../css/base.css" />
+		<link rel="stylesheet" href="../css/erweima.css" />
+		<!--<script src="https://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>-->
+	</head>
+
+	<body ng-app="erweimaApp" ng-controller="erweimaController">
+		<header class="mycollect_top_a">
+			<ul class="top_a_ul">
+				<li class="top_a_le">
+					<img src="../images/icon_fanhui.png" />
+				</li>
+				<li class="top_a_con">推广二维码</li>
+				<li class="top_a_ri">
+					<img src="../images/icon_fenxiang.png" />
+				</li>
+			</ul>
+		</header>
+
+		<div class="change_heard">
+
+			<img src="../images/img_erweima.png" />
+			<p>分享给好友下载数字社区平台会送积分</p>
+
+		</div>
+		<div class="ifra"></div>
+		<div class="shareList">
+
+			<ul class="clearfix  bdsharebuttonbox" data-tag="share_1">
+				<li>
+					<span><img src="../images/icon_weixin.png"/></span>
+					<p>微信好友</p>
+					<a class="bds_weixin" data-cmd="weixin">
+					</a>
+				</li>
+				<li>
+
+					<span><img src="../images/icon_pengyou.png"/></span>
+					<p>朋友圈</p>
+					<a class="bds_weixin" data-cmd="weixin">
+					</a>
+				</li>
+				<li>
+					<span><img src="../images/icon_QQ.png"/></span>
+					<p>QQ好友</p>
+					<a class="bds_sqq" data-cmd="sqq">
+
+					</a>
+				</li>
+				<li>
+					<span><img src="../images/icon_weibo.png"/></span>
+					<p>新浪微博</p>
+					<a class="bds_tsina" data-cmd="tsina">
+
+					</a>
+				</li>
+
+			</ul>
+			<p class="clearfix noshare">取消分享</p>
+		</div>
+
+		<script src="../../public/part/jquery/jquery-3.1.1.min.js"></script>
+		<script src="../../public/part/angular/angular.min.js"></script>
+		<script src="../../public/part/angular/angular-route.js"></script>
+		<script src="../js/publicJs.js"></script>
+		<script src="../js/erweima.js"></script>
+
+	</body>
+
+</html>

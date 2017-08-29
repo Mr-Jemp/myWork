@@ -1,0 +1,1406 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="Access-Control-Allow-Origin" content="*">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <http-equivhttp-equivhttp-equivhttp-equiv="pragma" content="no-cache">
+    <http-equivhttp-equivhttp-equivhttp-equiv="cache-control" content="no-cache">
+    <http-equivhttp-equivhttp-equivhttp-equiv="expires" content="0">
+    <http-equivhttp-equiv="pragma" content="no-cache">
+    <http-equivhttp-equiv="cache-control" content="no-cache">
+    <http-equivhttp-equiv="expires" content="0">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>备课</title>
+    <link href="../public/part/bootstrap/bootstrap.min.css" rel="stylesheet">
+    <link href="courseware/css/beike1.css" rel="stylesheet">
+    <link href="courseware/css/plugin.css" rel="stylesheet">
+    <link href="../public/part/jq-ui/jquery.range.css" rel="stylesheet">
+    <link href="courseware/css/elegant_font/style.css" rel="stylesheet">
+    <link href="../public/part/bootstrap/bootstrap-switch.min.css" rel="stylesheet">
+    <link type="text/css" rel="stylesheet" href="courseware/css/tool.css">
+    <link href="../public/part/jq-ui/jquery-ui.min.css" rel="stylesheet">
+    <link href="../public/part/jq-ui/jquery.ui.resizable.css" rel="stylesheet">
+	<link href="../public/part/jmeditor/mathquill-0.9.1/mathquill.css" rel="stylesheet">
+	<link href="../public/part/video/video-js.css" rel="stylesheet">
+	<script src="../public/part/video/videojs-ie8.min.js"></script>
+    <style>
+    .radio{display:inline;}
+    .div1{
+    float:left;
+    height:30px;
+    background:#07754E;
+    width:66px;
+    position:relative;
+    border-radius:7px;
+    margin-top:4px;
+    left:40px;
+    cursor: pointer;
+
+
+    }
+    .div2{
+    text-align:center;
+    padding-top:4px;
+    font-size:15px;
+   /* font-weight:800;*/
+    color:#fff;
+    cursor: pointer;
+    }
+    .inputstyle{
+    width: 144px;
+    height: 41px;
+    cursor: pointer;
+    font-size: 30px;
+    outline: medium none;
+    position: absolute;
+    filter:alpha(opacity=0);
+    -moz-opacity:0;
+    opacity:0; 
+    left:0px;
+    top: 0px;
+}
+  .cke_button__jme_icon{
+    background-size:100%;
+   }
+
+
+
+    </style>
+    <!--[if lt IE 9]>
+    <script src="http://cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="http://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <!--<script src=".//Js/pdf/generic/build/pdf.js"></script>-->
+ <script>
+ var JMEditor_BasePath = "/js/jmeditor/";
+ </script>
+</head>
+<body>
+<!-- //拖拽PPT -->
+  <div id="drag_ppt" style="position:absolute;width:960px;height:560px;visibility:hidden;left:30px;top:550px;z-index:99;">
+                    <div style="cursor:pointer;position:absolute;z-index:99;left:910px;top:10px;"
+                        class="exit">
+                        <img src="courseware/img/ppt/icon_guanbi.png">
+                        </div>
+                  
+                     
+
+                    </div>
+<!-- //遮罩层 -->
+<div class="bodyShade"></div>
+<!-- ppt预览部分 -->
+<div class="pptPreview">
+    <!-- 图片显示部分 -->
+    <div class="pptPreview-main">
+        <img src="" style="width:100%;height: 100%;" class="preview-img">
+    </div>
+    <div class="previewFoot">
+        <button class="previewFoot-on">上一页</button>
+        <button class="previewFoot-up">下一页</button>
+        <button class="previewFoot-exit">退出</button>
+    </div>
+</div>
+<div class="container-fluid bk_top">
+    <div class="row">
+        <div class="col-sm-12">
+            <a href="lenssons.html" class="btn btn-success btn-xs pull-left" id="returnLsit">返回</a>
+            <!--<span></span>-->
+            备课
+            <a class="btn btn-success btn-xs pull-right" id="preview">预览</a>
+            <a class="btn btn-primary btn-xs pull-right" id="bksave" style="margin-right: 5px;">保存</a>
+        </div>
+    </div>
+</div>
+<div style="height: auto;width: 100%;">
+
+    <div class="bk_left">
+      
+        <div class="bk_title">
+                <em></em><span class="comesz">请输入你的课程名称</span>
+        </div>
+      
+      
+    </div>
+
+    <div class="content_make">
+        <div class="teacherTool">
+            <h2 class="curDemo">关闭</h2>
+            <div class="teacherToolGroup">
+                <ul>
+                    <li><h3 class="grouptype" data-group="all"><span class="ttopen"></span><b>所有</b></h3>
+                        <ul>
+                            <li><h3 class="grouptype" data-group="g_agroup"><span class="ttopen"></span><b>A类</b></h3>
+                                <ul>
+                                    <li><h3 data-group="no_no1"><b>张三</b></h3></li>
+                                    <li><h3 data-group="no_no2"><b>李四</b></h3></li>
+                                    <li><h3 data-group="no_no3"><b>王五</b></h3></li>
+                                </ul>
+                            </li>
+                            <li><h3 class="grouptype" data-group="g_bgroup"><span class="ttclose"></span><b>B类</b></h3></li>
+                            <li><h3 class="grouptype" data-group="g_cgroup"><span class="ttclose"></span><b>C类</b></h3></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="bk_right">
+        <!--<div class="bk_plugin_layout">
+            <div class="bk_pl_list">
+                <a id="treePluginBtn2" class="bk_pl_list_1" title="树结构"></a>
+                <a id="treePluginBtn3" class="bk_pl_list_1" title="树结构"></a>
+                <a id="align_left" class="bk_pl_list_2" title="左对齐"></a>
+                <a id="align_center" class="bk_pl_list_3" title="居中对齐"></a>
+                <a id="align_right" class="bk_pl_list_4" title="右对齐"></a>
+                &lt;!&ndash;id="tool_pen"
+                <a class="bk_pl_list_brush" title="画板" id="tool_pen"></a>&ndash;&gt;
+                <a class="bk_pl_list_brush" title="画板" id="drawPluginBtn"></a>
+                <a id="tool_text" class="bk_pl_list_text"  title="文本输入" id="TxtPluginBtn"></a>
+                <a class="bk_pl_list_5  setingBtn" title="设置属性"></a>
+            </div>
+        </div>-->
+      
+     
+    </div>
+  <div class="bk-lcontent" style="width:74%;height: 580px;position: absolute;top:90px;">
+ <iframe src="http://192.168.0.93:9980/loleaflet/5.3.4/loleaflet.html?file_path=file:///home/lool/LibreOffice/%E6%97%B6%E5%B0%9A%E5%BE%AE%E7%AB%8B%E4%BD%93.pptx 
+"  scrolling="yes" width="100%" height="580"></iframe>
+  </div>
+   
+    <div class="bk_r_content" style="position:absolute;left:74%;">
+    <!-- //遮罩层 -->
+    <div class="bk_r_shade" style="display:none;"></div>
+    <div class="progressBar" style="display:none;">
+        <img src="courseware/img/beike/17336e7122c585c2a102544073446cf5.gif" class="progress-img">
+    </div>
+
+    <!-- 资源定位显示内容 -->
+    <div class="bk_resrouce_text">
+    <div class="bk_resrouce-auto">
+       <div class="bk-resrouce-text-box">
+            	<div class="bk-resrouce-text-l"></div>
+            	<div class="bk-resrouce-text-r">校段</div>
+        	</div>
+        	<div class="main-r-period">
+				<ul>
+					<li class="main-r-period-li">小学</li>
+					<li class="main-r-period-li">初中</li>
+					<li class="main-r-period-li">高中</li>
+				</ul>
+        	</div>
+        	<!-- 科目 -->
+        	<div class="clear"></div>
+        	<div class="bk-resrouce-text-box">
+            	<div class="bk-resrouce-text-l"></div>
+            	<div class="bk-resrouce-text-r">科目</div>
+        	</div>
+        	<div class="main-r-period">
+				<ul>
+					<li class="main-r-period-li">语文</li>
+					<li class="main-r-period-li">数学</li>
+					<li class="main-r-period-li">英语</li>
+					<li class="main-r-period-li">化学</li>
+					<li class="main-r-period-li">政治</li>
+					<li class="main-r-period-li">生物</li>
+					<li class="main-r-period-li">历史</li>
+				</ul>
+        	</div>
+        	<!-- 版本 -->
+        	<div class="clear"></div>
+        	<div class="bk-resrouce-text-box">
+            	<div class="bk-resrouce-text-l"></div>
+            	<div class="bk-resrouce-text-r">版本</div>
+        	</div>
+        	<div class="main-r-period">
+				<ul>
+					<li class="main-r-period-li">人教版</li>
+					<li class="main-r-period-li">粤教版</li>
+					<li class="main-r-period-li">北师教版</li>
+					<li class="main-r-period-li">鲁教版</li>
+					<li class="main-r-period-li">川教版</li>
+					<li class="main-r-period-li">沪教版</li>
+				</ul>
+        	</div>
+        	<!-- 册数 -->
+        	<div class="clear"></div>
+        	<div class="bk-resrouce-text-box">
+            	<div class="bk-resrouce-text-l"></div>
+            	<div class="bk-resrouce-text-r">册数</div>
+        	</div>
+        	<div class="main-r-period">
+				<ul>
+					<li class="main-r-period-li">七年级上</li>
+					<li class="main-r-period-li">七年级下</li>
+					<li class="main-r-period-li">八年级上</li>
+					<li class="main-r-period-li">八年级下</li>
+					<li class="main-r-period-li">九年级上</li>
+					<li class="main-r-period-li">九年级下</li>
+				</ul>
+        	</div>
+        	<!-- 章节内容 -->
+        	<div class="clear"></div>
+        	<div class="bk-resrouce-text-box">
+            	<div class="bk-resrouce-text-l"></div>
+            	<div class="bk-resrouce-text-r">章节内容</div>
+        	</div>
+        	<div class="main-r-period">
+				<div class="main-r-zj">数学第一章</div>
+        	</div>
+        	<div class="main-r-select" >
+				<ul>
+					<li class="ins-content">三角函数</li>
+					<li class="ins-content">二元一次方程</li>
+				
+				</ul>
+        	</div>
+        	</div>
+        	<!-- //确认按钮 -->
+        	<div class="bk-resrouce-ensure">确定</div>
+
+
+
+    </div>
+        <div class="bk_r_select" >
+            <span class="rs_type my-resrouce">我的资源</span>
+            <span class="bxzy">本校资源</span>
+            <span  class="jyzy"><a  target="_blank" href="http://www.gdedu.tv" style="color:black;text-decoration: none;">教育推荐</a></span>
+            <span class="resrouce-more">更多</span>
+        </div>
+        <!-- 资源定位 -->
+        <div class="bk_r_tool">
+        <div class="bk_resrouce">
+            <img src="courseware/img/beike/icon_dizhi .png">
+            <span>七年级语文(人)第一单元</span>
+        </div>
+            <div class="bk_plugin_tool" >
+
+                <ul>
+                    <li id="pptPluginBtn" class="my-tool-btn currToolBtn" draggable="true">pptx</li>
+                    <li id="docPluginBtn" class="my-tool-btn disabled" draggable="true">word</li>
+                    <li id="pdfPluginBtn" class="my-tool-btn disabled" draggable="true">pdf</li>
+                    <li id="excelPluginBtn" class="my-tool-btn disabled" draggable="true">excel</li>
+                 
+                    <li id="microPluginBtn" class="my-tool-btn disabled">微课</li>
+                    <li id="videoPluginBtn" class="my-tool-btn" draggable="true">视频</li>
+                    <li id="voicePluginBtn" class="my-tool-btn disabled" draggable="true">
+                        音频
+                    </li>
+                    <li id="interactionPluginBtn" class="my-tool-btn disabled" draggable="true">
+                        互动
+                    </li>
+                    <li id="questionsBtn" class="my-tool-btn disabled" draggable="true">
+                        试题
+                    </li>
+                    <li id="taskBtn" class="my-tool-btn disabled" draggable="true">
+                        作业
+                    </li>
+              
+                    <li id="coursewarePluginBtn" class="my-tool-btn disabled" draggable="true">
+                        课件
+                    </li>
+                </ul>
+                <div class="bk_plugin_tool_centent">
+                 
+               <!-- 上传ppt   -->
+                <div class="bk_tool_c_updel bk_tool_1" id="bk_ppt" style="display:block;">
+                
+               <div class="div1">
+                    <div class="div2" >上传</div>
+                    <form id="uppptForm_1" enctype="multipart/form-data" method="post">
+                    <input type="file" class="inputstyle" name="uppptfile_1" id="uppptfile_1">
+                    <input type="hidden" name="uId" value="0">
+                    </form>
+                </div>
+               
+                <span class="mybtn" style="position:relative;left:40px;">删除</span>
+            </div>
+                    <!--ppt文档-->
+         
+                    <div class="bk_tool_content_block" data-id="pptPluginBtn">
+                        <div class="bk_tool_tcb_list">
+                            <div class="vt_white_layer"></div>
+                            <div class="tool_ppt_list vscrolling" >
+                             
+                              
+                            </div>
+                            <div class="vb_white_layer"></div>
+                        </div>
+                        <div class="bk_tool_bcb_list bk_ppt_lists clear">
+                            <div class="vt_white_layer"></div>
+                            <div class="tool_ppt_lists">
+                                <div class="tool_ppt_a"></div>
+                            </div>
+                            <div class="vb_white_layer"></div>
+                        </div>
+                    </div>
+                    
+                  
+                    <div class="bk_tool_content_block" data-id="docPluginBtn" style="display: none;">
+                        <div class="bk_tool_tcb_list">
+                            <div class="vt_white_layer"></div>
+                            <div class="tool_doc_list vscrolling">
+                                <dl>
+                                    <dt><img src="courseware/img/doc_img.png" data-src="dd8w.com/Public/Uploads/microfile/2016-11-07/5820361351095.ppt" data-ftype="ppt"  draggable="true"></dt>
+                                    <dd>数字社区讲解.doc</dd>
+                                </dl>
+                                <dl>
+                                    <dt><img src="courseware/img/doc_img.png" data-src="dd8w.com/Public/Uploads/microfile/2016-11-07/5820361351095.ppt" data-ftype="ppt"  draggable="true"></dt>
+                                    <dd>数字社区讲解.doc</dd>
+                                </dl>
+                                <dl>
+                                    <dt><img src="courseware/img/doc_img.png" data-src="dd8w.com/Public/Uploads/microfile/2016-11-07/5820361351095.ppt" data-ftype="ppt"  draggable="true"></dt>
+                                    <dd>数字社区讲解.doc</dd>
+                                </dl>
+                            </div>
+                            <div class="vb_white_layer"></div>
+                        </div>
+                        <div class="bk_tool_bcb_list clear">
+                            <div class="vt_white_layer"></div>
+                            <div class="tool_doc_lists">
+                             
+                             
+                                <dl>
+                                    <dt><h5>1</h5><input type="checkbox"></dt>
+                                    <dd><img src="courseware/img/demo/11.jpg"></dd>
+                                </dl>
+                              
+                                <dl>
+                                    <dt><h5>2</h5><input type="checkbox"></dt>
+                                    <dd><img src="courseware/img/demo/12.jpg"></dd>
+                                </dl>
+                            </div>
+                            <div class="vb_white_layer"></div>
+                        </div>
+                    </div>
+                    <!--pdf文档-->
+                    <div class="bk_tool_content_block" data-id="pdfPluginBtn" style="display:block;">
+                        <div class="bk_tool_tcb_list">
+                            <div class="vt_white_layer"></div>
+                            <div class="tool_pdf_list vscrolling">
+                                <dl>
+                                    <dt><img src="courseware/img/pdf_img.png" data-src="dd8w.com/Public/Uploads/microfile/2016-11-07/5820361351095.ppt" data-ftype="ppt"  draggable="true"></dt>
+                                    <dd>数字社区讲解.pdf</dd>
+                                </dl>
+                                <dl>
+                                    <dt><img src="courseware/img/pdf_img.png" data-src="dd8w.com/Public/Uploads/microfile/2016-11-07/5820361351095.ppt" data-ftype="ppt"  draggable="true"></dt>
+                                    <dd>数字社区讲解.pdf</dd>
+                                </dl>
+                                <dl>
+                                    <dt><img src="courseware/img/pdf_img.png" data-src="dd8w.com/Public/Uploads/microfile/2016-11-07/5820361351095.ppt" data-ftype="ppt"  draggable="true"></dt>
+                                    <dd>数字社区讲解.pdf</dd>
+                                </dl>
+                            </div>
+                            <div class="vb_white_layer"></div>
+                        </div>
+                        <div class="bk_tool_bcb_list clear">
+                            <div class="vt_white_layer"></div>
+                            <div class="tool_pdf_lists">
+                                <dl>
+                                 
+                                    <dt><h5>1</h5><input type="checkbox"></dt>
+                                    <dd><img src="courseware/img/demo/6.jpg"></dd>
+
+                                </dl>
+                                <dl>
+                                    <dt><h5>2</h5><input type="checkbox"></dt>
+                                    <dd><img src="courseware/img/demo/7.jpg"></dd>
+                                </dl>
+                            </div>
+                            <div class="vb_white_layer"></div>
+                        </div>
+                    </div>
+                    <!--excel文档-->
+                    <div class="bk_tool_content_block" data-id="excelPluginBtn" style="display: none;">
+                        <div class="bk_tool_tcb_list">
+                            <div class="vt_white_layer"></div>
+                            <div class="tool_excel_list vscrolling">
+                                <dl>
+                                    <dt><img src="courseware/img/excel_img.png" data-src="dd8w.com/Public/Uploads/microfile/2016-11-07/5820361351095.ppt" data-ftype="ppt"  draggable="true"></dt>
+                                    <dd>数字社区讲解.xlsx</dd>
+                                </dl>
+                                <dl>
+                                    <dt><img src="courseware/img/excel_img.png" data-src="dd8w.com/Public/Uploads/microfile/2016-11-07/5820361351095.ppt" data-ftype="ppt"  draggable="true"></dt>
+                                    <dd>数字社区讲解.xlsx</dd>
+                                </dl>
+                                <dl>
+                                    <dt><img src="courseware/img/excel_img.png" data-src="dd8w.com/Public/Uploads/microfile/2016-11-07/5820361351095.ppt" data-ftype="ppt"  draggable="true"></dt>
+                                    <dd>数字社区讲解.xlsx</dd>
+                                </dl>
+                            </div>
+                            <div class="vb_white_layer"></div>
+                        </div>
+                        <div class="bk_tool_bcb_list clear">
+                            <div class="vt_white_layer"></div>
+                            <div class="tool_excel_lists">
+                             
+                                <dl>
+                                    <dt><h5>1</h5><input type="checkbox"></dt>
+                                    <dd><img src="courseware/img/demo/excel_demo1.png"></dd>
+                                </dl>
+                              
+                                <dl>
+                                    <dt><h5>2</h5><input type="checkbox"></dt>
+                                    <dd><img src="courseware/img/demo/excel_demo2.png"></dd>
+                                </dl>
+                            </div>
+                            <div class="vb_white_layer"></div>
+                        </div>
+                    </div>
+                    <!--微课-->
+                    <div class="bk_tool_content_block" data-id="microPluginBtn" style="display:none;">
+                        <div class="bk_tool_tcb_list clear" style="height: 100%;">
+                            <div class="vt_white_layer"></div>
+                            <div class="bk_tool_cb_list vscrolling">
+                                <div class="tool_micro_list">
+                                    <div class="bk_tool_cb_micro">  
+                                        <img src="courseware/img/tool_micro_img.png" draggable="true">
+                                        <span class="micro_play"></span>
+                                        <div class="tool_micro_title">
+                                            1:ADSL宽带路由调试技术
+                                            <span class="tool_micro_cut"></span>
+                                            <input type="checkbox" name="dsfsdf">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="tool_micro_list">
+                                    <div class="bk_tool_cb_micro">
+                                        <img src="courseware/img/tool_micro_img.png" draggable="true">
+                                        <span class="micro_play"></span>
+                                        <div class="tool_micro_title">
+                                            2:ADSL宽带路由调试技术
+                                            <span class="tool_micro_cut"></span>
+                                            <input type="checkbox" name="dsfsdf">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="tool_micro_list">
+                                    <div class="bk_tool_cb_micro">
+                                        <img src="courseware/img/tool_micro_img.png" draggable="true">
+                                        <span class="micro_play"></span>
+                                        <div class="tool_micro_title">
+                                            3:ADSL宽带路由调试技术
+                                            <span class="tool_micro_cut"></span>
+                                            <input type="checkbox" name="dsfsdf">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="tool_micro_list">
+                                    <div class="bk_tool_cb_micro">
+                                        <img src="courseware/img/tool_micro_img.png" draggable="true">
+                                        <span class="micro_play"></span>
+                                        <div class="tool_micro_title">
+                                            4:ADSL宽带路由调试技术
+                                            <span class="tool_micro_cut"></span>
+                                            <input type="checkbox" name="dsfsdf">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="tool_micro_list">
+                                    <div class="bk_tool_cb_micro">
+                                        <img src="courseware/img/tool_micro_img.png" draggable="true">
+                                        <span class="micro_play"></span>
+                                        <div class="tool_micro_title">
+                                            5:ADSL宽带路由调试技术
+                                            <span class="tool_micro_cut"></span>
+                                            <input type="checkbox" name="dsfsdf">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="vb_white_layer"></div>
+                        </div>
+                    </div>
+                    <!--视频-->
+                    <div class="bk_tool_c_updel bk_tool_1" style="display:none;" id="bk_sp">
+                
+                    <div class="div1">
+                    <div class="div2" >上传</div>
+                    <form id="uppptForm_2" enctype="multipart/form-data" method="post">
+                    <input type="file" class="inputstyle" name="uppptfile_1" id="uppptfile_2">
+                    <input type="hidden" name="uId" value="0">
+                    </form>
+                </div>
+               
+                <span class="mybtn" style="position:relative;left:40px;">删除</span>
+            </div>
+            
+                    <div class="bk_tool_content_block" data-id="videoPluginBtn" style="display:block;" >
+                        <div class="bk_tool_tcb_list" >
+                            <div class="vt_white_layer"></div>
+                                <div class="tool_micro_list_top vscrolling" id="Ovideo">
+                                
+                             
+                            
+                                </div>
+                            <div class="vb_white_layer"></div>
+                        </div>
+                        <div style="height:22px;line-height: 22px;color: #fff;text-align: center;background-color: #56c399;font-weight: bold;">
+                            视频剪切素材
+                        </div>
+                        <div class="bk_tool_bcb_list bk_video_lists" style="overflow:auto;">
+                            <div class="vt_white_layer"></div>
+                            <div>
+                            <div class="tool_micro_list_bot vscrolling" id="video_vsc" >
+                            
+                              
+
+                            </div>
+                              <button type="button" class="btn btn-info combine pull-right" style="margin-right:20px;">合并</button>
+                            </div>
+
+                         
+                            <div class="vb_white_layer"></div>
+                        </div>
+
+                    </div>
+                    <!--音频-->
+                    <div class="bk_tool_content_block" data-id="voicePluginBtn" style="display:none;">
+                        <div class="bk_tool_cb_list">
+                            <div style="margin-top: 20px;text-align: center;color: #00a0e9;font-size: 14px;">音频资料整理中...</div>
+                        </div>
+                    </div>
+                    <!--互动-->
+                    <div class="bk_tool_content_block" data-id="interactionPluginBtn" style="display: none;">
+                        <div class="bk_tool_cb_list">
+                            <div style="margin-top: 20px;text-align: center;color: #00a0e9;font-size: 14px;">互动资料整理中...</div>
+                        </div>
+                    </div>
+                    <!--试题-->
+                    <div class="bk_tool_content_block" data-id="questionsBtn" style="display: none;">
+                        <div class="bk_tool_cb_list">
+                            <div style="margin-top: 20px;text-align: center;color: #00a0e9;font-size: 14px;">试题资料整理中...</div>
+                        </div>
+                    </div>
+                    <!--作业-->
+                    <div class="bk_tool_content_block" data-id="taskBtn" >
+                        <div class="bk_tool_cb_list">
+                            <div style="margin-top: 20px;text-align: center;color: #00a0e9;font-size: 14px;">作业资料整理中...</div>
+                        </div>
+                    </div>
+                    <!--文本-->
+                    <div class="bk_tool_content_block" data-id="TxtPluginBtn" >
+                        <div class="bk_tool_cb_list">
+                            <div style="margin-top: 20px;text-align: center;color: #00a0e9;font-size: 14px;">文本资料整理中...</div>
+                        </div>
+                    </div>
+                    <!--画板-->
+                    <div class="bk_tool_content_block" data-id="drawPluginBtn" style="display: none;">
+                        <div class="bk_tool_cb_list">
+                            <div style="margin-top: 20px;text-align: center;color: #00a0e9;font-size: 14px;">画板资料整理中...</div>
+                        </div>
+                    </div>
+                    <!--课件-->
+                    <div class="bk_tool_content_block" data-id="coursewarePluginBtn" style="display: none;">
+                        <div class="bk_tool_cb_list">
+                            <div style="margin-top: 20px;text-align: center;color: #00a0e9;font-size: 14px;">课件资料整理中...</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--聊天区-->
+<div id="qutchatArea">
+    <div id="qutchatArea_top">
+        <div class="row">
+            <div class="col-sm-8">
+                <div class="btn-group btn-group-xs">
+                    <button type="button" id="GroupChatBtn" class="btn btn-default chat_mode_act">群聊</button>
+                    <button type="button" id="PrivateChatBtn" class="btn btn-default">私聊</button>
+                </div>
+            </div>
+            <div class="col-sm-4" style="text-align: center;">
+                <a class="btn btn-default btn-xs colseTalk">关闭</a>
+            </div>
+        </div>
+    </div>
+    <div id="qutchatArea_main">
+        <div class="area_mainleft">
+            <div class="userlists">
+                <div class="userlistsblock" id="GroupChat">
+                    <dl class="dropup">
+                        <dt>导师群<span class="caret"></span></dt>
+                        <dd>老师1</dd>
+                        <dd>老师2</dd>
+                        <dd>老师3</dd>
+                    </dl>
+                    <dl class="dropup">
+                        <dt>好友群<span class="caret"></span></dt>
+                        <dd>教师3</dd>
+                    </dl>
+                </div>
+                <div class="userlistsblock" id="PrivateChat">
+                    <dl class="dropup">
+                        <dt>同学群<span class="caret"></span></dt>
+                        <dd>同学1</dd>
+                        <dd>同学2</dd>
+                        <dd>同学3</dd>
+                    </dl>
+                    <dl class="dropup">
+                        <dt>好友群<span class="caret"></span></dt>
+                        <dd>好友3</dd>
+                    </dl>
+                </div>
+            </div>
+        </div>
+        <div class="area_mainright">
+            <div class="qutchatcontent">
+                <div class="qutchattalklist">
+                    <div class="qutchatspeaker">
+                        <div class="speakerleft">
+                            <dl>
+                                <dt><img src="courseware/img/manpic.jpg" /></dt>
+                                <dd>测试人名</dd>
+                            </dl>
+                        </div>
+                        <div class="speakerright">
+                            <div class="speakercontent">
+                                刚开始使用的时候上传附件的路径一直错误！
+                            </div>
+                            <div class="speakertime">2016-22-16 15:32:56</div>
+                        </div>
+                    </div>
+                    <div class="qutchatspeaker">
+                        <div class="speakerleft">
+                            <dl>
+                                <dt><img src="courseware/img/manpic.jpg" /></dt>
+                                <dd>测试人名</dd>
+                            </dl>
+                        </div>
+                        <div class="speakerright">
+                            <div class="speakercontent">
+                                刚开始使用的时候上传附件的路径一直错误！
+                            </div>
+                            <div class="speakertime">2016-22-16 15:32:56</div>
+                        </div>
+                    </div>
+                    <div class="qutchatspeaker">
+                        <div class="speakerright">
+                            <div class="speakercontent">
+                                刚开始使用的时候上传附直错误！
+                            </div>
+                            <div class="speakertime">2016-22-16 15:32:56</div>
+                        </div>
+                        <div class="speakerleft">
+                            <dl>
+                                <dt><img src="courseware/img/manpic2.png" /></dt>
+                                <dd>测试人名</dd>
+                            </dl>
+                        </div>
+                    </div>
+                    <div class="qutchatspeaker">
+                        <div class="speakerleft">
+                            <dl>
+                                <dt><img src="courseware/img/manpic.jpg" /></dt>
+                                <dd>测试人名</dd>
+                            </dl>
+                        </div>
+                        <div class="speakerright">
+                            <div class="speakercontent">
+                                刚开始使用的时候上传附件的路径一直错误！
+                            </div>
+                            <div class="speakertime">2016-22-16 15:32:56</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="qutchattalk">
+                    <div>
+                        <form>
+                            <div class="qutchattalkcontent">
+                                <textarea rows="2"></textarea>
+                            </div>
+                            <div class="qutchattalktool">
+                                <div class="row">
+                                    <div class="col-sm-7">
+                                      
+                                    <ul class="talk_icon_list">
+                                        <li class="talk_icon1" title="按住讲话"></li>
+                                        <li class="talk_icon2" title="上传图片"></li>
+                                        <li class="talk_icon3" title="拍照上传"></li>
+                                        <li class="talk_icon4" title="远程协助"></li>
+                                    </ul>
+                                    </div>
+                                    <div class="col-sm-5">
+                                        <button type="button" class="btn btn-info btn-xs pull-right">发送</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="talk">
+    <span class="blink">10</span>
+</div>
+<div class="modal fade" id="setTxtPlugin" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-body">
+                <div>
+                    <script type="text/plain" id="myTextPlugin"></script>
+                </div>
+                <div style="margin-top: 10px;">
+                    <form class="form-inline" role="form">
+                        <input type="hidden" id="TxtPluginId" value="">
+                        <div class="form-group">
+                            <div class="input-group">
+                                <div class="input-group-addon">宽(W)</div>
+                                <input class="form-control" id="pluginwidth" type="text" value="100">
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default btn-sm" data-dismiss="modal">关闭</button>
+                <button type="button" id="myTextPluginSave" class="btn btn-primary btn-sm">保存</button>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade bs-example-modal-lg" id="setDrawPlugin" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-body">
+                <input type="hidden" id="DrawPluginId" value="">
+                <div class="mainContent">
+                    <canvas width="200" height="100" id="canvasDraw"></canvas>
+                </div>
+                <div style="margin-top: 10px;">
+                    <form class="form-inline" role="form">
+                        <div class="form-group">
+                            <div class="input-group">
+                                <div class="input-group-addon">宽</div>
+                                <input class="form-control" name="canvasWidth" type="text" value="200">
+                                <div class="input-group-addon">px</div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="input-group">
+                                <div class="input-group-addon">高</div>
+                                <input class="form-control" name="canvasHeight" type="text" value="100">
+                                <div class="input-group-addon">px</div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <a class="btn btn-primary btn-sm" id="changeDrawSize">设置</a>
+                        </div>
+                    </form>
+                </div>
+                <hr>
+                <div style="margin-top: 10px;">
+                    <input type="color" name="myColor" class="myColor" value="#ff0000"/>
+                    <select name="pensize" id="pensize">
+                        <option value="2">2号笔</option>
+                        <option value="4">4号笔</option>
+                        <option value="6">6号笔</option>
+                        <option value="8">8号笔</option>
+                    </select>
+                    <a class="btn btn-info btn-xs" id="eraserDraw" title="画笔/橡皮檫"><i class="glyphicon glyphicon-minus"></i></a>
+                    <a class="btn btn-danger btn-xs" id="clearDraw" title="清除白板"><i class="glyphicon glyphicon-trash"></i></a>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default btn-sm" data-dismiss="modal">关闭</button>
+                <button type="button" id="myDrawPluginSave" class="btn btn-primary btn-sm">保存</button>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="setNodeTitle" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title">配置节点</h4>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <form id='uploadtreeForm' enctype="multipart/form-data" method="post">
+                        <input type="file" name="modtreenodeconup" id="modtreenodetitleup" onchange="treenodeupfile();" style="display:none;">
+                    </form>
+                    <form class="form-inline" role="form">
+                        <input type="hidden" name="nodetitlepic">
+                        <input type="hidden" id="nodeid" value="">
+                        <div class="col-sm-3">
+                            <div id="nodetitlepic" style="border: dashed 1px #ccc;font-size: 12px;color: #666;padding: 3px;height:66px;line-height: 60px;">
+                                <b>注意：</b>封面缩略图
+                            </div>
+                        </div>
+                        <div class="col-sm-9">
+                            <div class="form-group">
+                                <div class="input-group">
+                                    <div class="input-group-addon">标题</div>
+                                    <input class="form-control" id="NodeTitle" type="text" placeholder="填写标题">
+                                </div>
+                                <a type="button" class="btn btn-grey btn-sm nodetitlepicup">封面</a>
+                            </div>
+                        </div>
+                        <div class="col-sm-12" style="margin-bottom: 15px;margin-top: 10px;text-align: right;">
+                            <a type="button" class="btn btn-danger btn-sm nodetitledel">删除</a>&nbsp;&nbsp;<a type="button" class="btn btn-info btn-sm" id="NodeTitleSave">保存</a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+   
+</div>
+<div class="modal fade" id="setUploadPlugin" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-body">
+                <div class="row m10">
+                    <form id='uploadPluForm' enctype="multipart/form-data" method="post">
+                        <div class="col-sm-8 col-xs-8"><input type="file" name="upfile"></div>
+                        <div class="col-sm-4 col-xs-4"><a class="btn bg-primary btn-sm uploadPluFile">上传</a></div>
+                    </form>
+                </div>
+                <div class="m10">
+                    <h3>最新上传</h3>
+                    <ol class="breadcrumb">
+                        <li><a href="#">备课</a></li>
+                        <li class="active">文件列表</li>
+                    </ol>
+                    <div class="list-group upfile_list">
+                        <a href="#" data-url="Uploads/courseware/2017-01-09/demo.pdf" class="list-group-item"><span data-url="Uploads/courseware/2017-01-09/demo.pdf" class="pdfinsert badge">插入</span><span data-url="Uploads/courseware/2017-01-09/demo.pdf" class="pdfbrowse badge">浏览</span>物理测试题.pdf</a>
+                    </div>
+                    <nav>
+                        <ul class="pagination">
+                            <li><a href="#">«</a></li>
+                            <li class="active"><a href="#">1</a></li>
+                            <li><a href="#">2</a></li>
+                            <li><a href="#">3</a></li>
+                            <li><a href="#">4</a></li>
+                            <li><a href="#">5</a></li>
+                            <li><a href="#">»</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="setTreePlugin" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title">树型创建</h4>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <form id='uploadtreeForm' enctype="multipart/form-data" method="post">
+                        <input type="file" name="modtreenodeconup" id="modtreenodetitleup" onchange="treenodeupfile();" style="display:none;">
+                    </form>
+                    <form class="form-inline" role="form">
+                        <input type="hidden" name="treepluID" value="">
+                        <input type="hidden" name="treenodecover" value="">
+                        <div class="col-sm-3">
+                            <div class="form-group">
+                                <div class="input-group">
+                                    <div class="input-group-addon">宽</div>
+                                    <input style="width: 60px" name="modtreewidth" class="form-control" type="text" value="200">
+                                </div>
+                            </div>
+                            <div class="treenodecoverpic" style="text-align: center;"></div>
+                            <div style="border: dashed 1px #ccc;font-size: 12px;color: #666;padding: 3px;margin-top: 10px;line-height: 22px;">
+                                <b>注意：</b>右边内容只需要上传其中一项
+                            </div>
+                        </div>
+                        <div class="col-sm-9">
+                            <div class="form-group">
+                                <div class="input-group">
+                                    <div class="input-group-addon">标题</div>
+                                    <input class="form-control" name="modtreenodetitle" type="text" placeholder="填写标题">
+                                </div>
+                                <a type="button" class="btn btn-grey btn-sm modtreenodetitleup">封面</a>
+                            </div>
+                            <div class="form-group">
+                                <div class="input-group">
+                                    <div class="input-group-addon">图片</div>
+                                    <input class="form-control" name="modtreenodefile" type="text" placeholder="上传图片/文档">
+                                </div>
+                                <a type="button" class="btn btn-grey btn-sm modtreenodefileup">上传</a>
+                            </div>
+                            <div class="form-group">
+                                <div class="input-group">
+                                    <div class="input-group-addon">视频</div>
+                                    <input class="form-control" name="modtreenodevideo" type="text" placeholder="上传视频(mp4/swf)">
+                                </div>
+                                <a type="button" class="btn btn-grey btn-sm modtreenodevideoup">上传</a>
+                            </div>
+                            <div class="form-group">
+                                <div class="input-group">
+                                    <div class="input-group-addon">声音</div>
+                                    <input class="form-control" name="modtreenodevoice" type="text" placeholder="上传(mp3/wav)">
+                                </div>
+                                <a type="button" class="btn btn-grey btn-sm modtreenodevoice">上传</a>
+                            </div>
+                        </div>
+                        <div class="col-sm-12" style="margin-bottom: 15px;margin-top: 10px;text-align: right;">
+                            <a type="button" class="btn btn-info btn-sm modtreenodeadd">添加</a>&nbsp;&nbsp;<a type="button" class="btn btn-info btn-sm modtreenodeedit">修改</a>&nbsp;&nbsp;<a type="button" class="btn btn-danger btn-sm modtreenodedel">删除</a>&nbsp;&nbsp;<a type="button" class="btn btn-success btn-sm" id="TreePluginSave">保存</a>
+                        </div>
+                    </form>
+                </div>
+                <div class="modalTreeconent">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="setVideoPlugin" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title">添加媒体</h4>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-sm-8">
+                        <div class="upvideoarea">
+                     
+                           
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="row">
+                            <div class="col-sm-12" style="margin: 10px auto;text-align: center;">
+                                <form class="form-inline" role="form">
+                                    <input type="hidden" name="treepluID" value="">
+                                    <div class="form-group" style="margin-bottom: 5px;">
+                                        <div class="input-group">
+                                            <div class="input-group-addon">宽</div>
+                                            <input name="modvideowidth" class="form-control" type="text" value="200">
+                                            <div class="input-group-addon">px</div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="input-group">
+                                            <div class="input-group-addon">高</div>
+                                            <input class="form-control" name="modvideohight" type="text" value="100">
+                                            <div class="input-group-addon">px</div>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="col-sm-12" style="text-align: center;"><input id="videoautoWH" checked type="checkbox" value="auto">自动&nbsp;&nbsp;<input id="videoautoP" type="checkbox" value="auto">自动播放 </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modalTreeconent"></div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" id="videoPluginSave" class="btn btn-primary">保存</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!--互动-->
+<div class="modal fade bs-example-modal-lg" id="interactionPlugin" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title">互动创建</h4>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <form class="form-inline" role="form">
+                        <input type="hidden" name="InteractpluID" value="">
+                    
+                        <div class="col-sm-12">
+                            <div class="form-group">
+                                <div class="input-group">
+                                    <div class="input-group-addon">标题</div>
+                                    <input class="form-control" name="modInteractnodetitle" type="text" placeholder="填写标题">
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="row m10">
+                    <form>
+                        <div class="col-sm-12">
+                            <div class="form-group">
+                                <label for="exampleInputPassword1">提问内容</label>
+                                <div>
+                                    <script type="text/plain" id="myAskContent"></script>
+                                </div>
+                            </div>
+                        </div>
+                      
+                        <div class="col-sm-12">
+                            <div class="form-group">
+                                <label for="exampleInputPassword1">参考答案</label>
+                                <div>
+                                    <script type="text/plain" id="myAnswerContent"></script>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-12" style="margin-bottom: 15px;margin-top: 10px;text-align: right;">
+                            <a type="button" class="btn btn-info btn-sm modInteractnodeadd">添加</a>&nbsp;&nbsp;<a type="button" class="btn btn-info btn-sm modInteractnodeedit">修改</a>&nbsp;&nbsp;<a type="button" class="btn btn-danger btn-sm modInteractnodedel">删除</a>&nbsp;&nbsp;<a type="button" class="btn btn-success btn-sm" id="InteractPluginSave">保存</a>
+                        </div>
+                    </form>
+                </div>
+                <div class="modInteractTreeconent"></div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--设置-->
+<div class="modal fade" id="setingPlugin" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title">设置</h4>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-sm-7 col-sm-offset-3">
+                        <form class="form" role="form">
+                            <input type="hidden" name="" value="">
+                            <div class="form-group" style="margin-bottom: 5px;">
+                                <div class="input-group">
+                                    <div class="input-group-addon">宽(W)</div>
+                                    <input name="modvideowidth" class="form-control" type="text" value="200">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="input-group">
+                                    <div class="input-group-addon">高(H)</div>
+                                    <input class="form-control" name="modvideohight" type="text" value="200">
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="col-sm-7 col-sm-offset-3 seting_row">
+                        <div class="row">
+                            <div class="col-sm-4">设为默认</div>
+                            <div class="col-sm-8">
+                                <div class="switch switch-mini" tabindex="0">
+                                    <input id="notification1" type="checkbox" />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-4">步骤</div>
+                            <div class="col-sm-8"><input type="text" class="seting_text"></div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-4">动效</div>
+                            <div class="col-sm-8">
+                                <div class="switch switch-mini" tabindex="0">
+                                    <input id="notification1" type="checkbox" />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-4"></div>
+                            <div class="col-sm-8">方向&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" name="seting_direction">左&nbsp;&nbsp;<input type="radio" name="seting_direction">右&nbsp;&nbsp;<input type="radio" name="seting_direction">下&nbsp;&nbsp;<input type="radio" name="seting_direction"> 左</div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-4"></div>
+                            <div class="col-sm-8">时间&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" class="seting_text">毫秒</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary">保存</button>
+                <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!--上传剪切视频-->
+
+     <!--    <div class="modal-content" id="filed" style="display:block;background:#fff;width:600px;height:280px;border-radius:8px;position: absolute;left:27%;display: none;">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true" >&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title">上传文件</h4>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="upvideoarea">
+                            <form id='upvideoForm' enctype="multipart/form-data" method="post" style="margin:50px auto;">
+                                <input style="display:block;margin:0 auto;" type="file" name="upvideofile" value="上传视频" id="upvideofile" onchange="fileSelected()"/>
+
+                               
+                            </form>
+                       
+                        </div>
+                          <button class="btn btn-info sub_file" style="float:right;margin-top:8px;"
+                          >保存</button>
+                    </div>
+                </div>
+
+            </div>
+
+         
+        </div> -->
+  
+
+
+
+ 
+      <!--   <div class="modal-content" id="up_ppt_file" style="display:block;background:#fff;width:600px;height:280px;border-radius:8px;position: absolute;left:27%;display: none;">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true" class="close">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title">上传文件</h4>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="upvideoarea">
+                            <form id='uppptForm' enctype="multipart/form-data" method="post" style="margin:50px auto;">
+                                <input style="display:block;margin:0 auto;" type="file" name="uppptfile" value="上传PPT" id="uppptfile"/>
+
+                               
+                            </form>
+                         
+                        </div>
+                          <button class="btn btn-info sub_file sub_ppt" style="float:right;margin-top:8px;"
+                        >保存</button>
+                    </div>
+                </div>
+
+            </div>
+
+         
+        </div> -->
+    
+  
+
+
+<!--视频剪切-->
+
+<!-- 视频剪切 -->
+<div id="videoMain" style="width:640px;height: 400px;position: absolute;left:20%;top:16%;display:none;background:black;z-index: 999;">
+<div style="width:100%;height:34px;"><img src="courseware/img/video/icon_guanbi.png" title="关闭" style="float: right;cursor: pointer;" class="video-gb"></div>
+<div id="videoMain-box" style="margin:0 auto;"></div>
+</div>
+<div id="container">
+<div id="a1" style="margin:0 auto;">
+</div>
+
+<div id="foot">
+<div style="clear:both;"></div>
+<!-- 进度条部分 -->
+   <div class="demo">
+        <input class="range-slider" type="hidden" value="10,89" />
+        <!-- <button id="g2">获取值</button> -->
+    </div>
+ <div id="text"></div>
+<p style="margin-left:140px;font-size:1.2em;margin-top:20px;">请输入对应时间剪切视频:</p> 
+<div style="width:600px;height:auto;background:#ccc;margin:0 auto;margin-top:10px;" id="Input1"> 
+<div class="InputsWrapper">
+    <input type="radio" class="radio_a" name="radio" class="radio" value="1" style="width:30px;" checked="checked"/><input type="text" name="username" placeholder="请输入视频名字" value="" style="width:120px;margin-right: 10px;"  class="video_name">  
+    <span style="margin-left:3px;">开始:</span><input type="number" name="text1" class="aa" value="" placeholder="00" >:<input type="number" name="text1" class="aa1" value="" placeholder="00">:<input type="number" name="text1" class="aa2" value="" placeholder="00"><span style="margin-left:20px;">结束:</span><input type="number" name="text2" class="bb" value="" placeholder="00">:<input type="number" name="text2" class="bb1" value="" placeholder="00">:<input type="number" name="text2" class="bb2" value="" placeholder="00"><button id="btn1" style="margin-left: 10px;">添加</button><br>
+</div> 
+</div>
+</div>
+
+<button id="Obtn" class="btn btn-success" style="position: absolute;left:75%;top:89%;" >确定</button>
+<button id="Obtn1" class="btn btn-warning" style="position: absolute;left:85%;top:89%;">关闭</button>
+
+
+</div>
+<script src="../public/part/jquery/jquery-3.1.1.min.js"></script>
+<script src="../public/part/jq-ui/jquery.range.js"></script>
+<script src="courseware/js/offlights.js"></script>
+<script src="../public/part/ckplayer/ckplayer.js"></script>
+<script src="../public/part/jq-ui/jquery-ui.min.js"></script>
+<script src="courseware/js/drag.js"></script>
+<script src="../public/part/bootstrap/bootstrap.min.js"></script>
+<script src="../public/part/bootstrap/bootstrap-switch.min.js"></script>
+<script src="../public/part/video/video.min.js"></script>
+<script type="text/javascript">
+    var d={
+        "prepares_title":"网络基本概念_第1章  计算机网络基本概念",
+        "mterial_id":'178',
+        "section_id":'741',
+        "knowledge_point":'3100',
+        "subject_id":'47',
+        "grade_id":'40',
+        "semester_id":'16',
+        "action_type":'add'
+    };
+    var curNode=null;
+    var editbkid=null;
+    var obj={
+        'JiaoXueMuBiao':{
+            'title':'教学目标',
+            'nodes':{
+                "no1":{
+                    'nodepid':'top','nodeid':'no1','level':1,
+                    'teacher':
+                        {'pic':'','title':'','text':{'teacher':{'contennt':'','nodelist':[]}}},
+                    'student':{'pic':'','title':'','text':{'all':{'contennt':'','nodelist':[]}}}
+                },
+                "no2":{
+                    'nodepid':'no1','nodeid':'no2','level':2,
+                    'teacher':
+                        {'pic':'','title':'','text':{'teacher':{'contennt':'','nodelist':[]}}},
+                    'student':{'pic':'','title':'','text':{'all':{'contennt':'','nodelist':[]}}}
+                },
+                "no3":{
+                    'nodepid':'no2','nodeid':'no3','level':3,
+                    'teacher':
+                        {'pic':'','title':'','text':{'teacher':{'contennt':'','nodelist':[]}}},
+                    'student':{'pic':'','title':'','text':{'all':{'contennt':'','nodelist':[]}}}
+                }
+            }
+        },
+        'KeQianYuXi':{
+            'title':'课前预习',
+            'nodes':{
+                "no4":{
+                    'nodepid':'top','nodeid':'no4','level':1,
+                    'teacher':
+                        {'pic':'','title':'','text':{'teacher':{'contennt':'','nodelist':[]}}},
+                    'student':{'pic':'','title':'','text':{'all':{'contennt':'','nodelist':[]}}}
+                }
+            }
+        },
+        'KeTangJiaoXue':{
+            'title':'课堂教学',
+            'nodes':{
+                "no5":{
+                    'nodepid':'top','nodeid':'no5','level':1,
+                    'teacher':
+                        {'pic':'','title':'','text':{'teacher':{'contennt':'','nodelist':[]}}},
+                    'student':{'pic':'','title':'','text':{'all':{'contennt':'','nodelist':[]}}}
+                }
+            }
+        },
+        'KeTangLianXi':{
+            'title':'课堂练习',
+            'nodes':{
+                "no6":{
+                    'nodepid':'top','nodeid':'no6','level':1,
+                    'teacher':
+                        {'pic':'','title':'','text':{'teacher':{'contennt':'','nodelist':[]}}},
+                    'student':{'pic':'','title':'','text':{'all':{'contennt':'','nodelist':[]}}}
+                }
+            }
+        },
+        'KeTangXiaoJie':{
+            'title':'课堂小结',
+            'nodes':{
+                "no7":{
+                    'nodepid':'top','nodeid':'no7','level':1,
+                    'teacher':
+                        {'pic':'','title':'','text':{'teacher':{'contennt':'','nodelist':[]}}},
+                    'student':{'pic':'','title':'','text':{'all':{'contennt':'','nodelist':[]}}}
+                }
+            }
+        },
+        'KeTangZuoYe':{
+            'title':'课堂作业',
+            'nodes':{
+                "no8":{
+                    'nodepid':'top','nodeid':'no8','level':1,
+                    'teacher':
+                        {'pic':'','title':'','text':{'teacher':{'contennt':'','nodelist':[]}}},
+                    'student':{'pic':'','title':'','text':{'all':{'contennt':'','nodelist':[]}}}
+                }
+            }
+        },
+    };
+    curNode="no1";
+</script>
+<script src="courseware/js/beike1.js"></script>
+<script src="courseware/js/ppt3.js"></script>
+<script src="courseware/js/public.js"></script>
+<script src="courseware/js/RectSelect.js"></script>
+<script src='../public/part/ckeditor/ckeditor.js'></script>
+<script type="text/javascript" src="../public/part/jmeditor/mathquill-0.9.1/mathquill.min.js"></script>
+<!-- <script src="courseware/js/tool.js"></script> -->
+<!--<script type="text/javascript" async="" src="courseware/jsMind/js"></script>
+<script type="text/javascript" src="courseware/jsMind/jsmind.js"></script>
+<script type="text/javascript" src="courseware/jsMind/jsmind.draggable.js"></script>
+<script type="text/javascript" src="courseware/jsMind/analytics.js"></script>-->
+<div class="nodedescoent">
+    <div style="text-align:right;padding:5px;">
+        <a class="btn btn-sm btn-primary" data-setid="" id="nodedescoentSave">保存</a>&nbsp;<a class="btn btn-sm btn-primary" id="nodedescoentCls">关闭</a>
+    </div>
+    <div class="nodedescoentarea"></div>
+</div>
+<div id="nodeupfilestatus">
+    <img src="courseware/img/uping.jpg" style="margin-top: 200px;">
+</div>
+<div id="newTreePlugin">
+    <div class="newTree_title">
+        树型<span class="newTree_close">&times;</span>
+    </div>
+    <div id="jsmind_container"></div>
+    <div class="newTree_btn">
+        <a type="button" class="btn btn-info btn-sm modtreenodeadd">添加</a>&nbsp;&nbsp;<a type="button" class="btn btn-info btn-sm modtreenodeedit">修改</a>&nbsp;&nbsp;<a type="button" class="btn btn-danger btn-sm modtreenodedel">删除</a>&nbsp;&nbsp;<a type="button" class="btn btn-success btn-sm" id="TreePluginSave">保存</a>
+    </div>
+</div>
+<!--控件属性表单-->
+<div id="pluginAttribute">
+    <table>
+        <tr>
+            <th>属性设置</th>
+            <th style="text-align: right"><button onclick="closeAttr()">关闭</button></th>
+        </tr>
+        <tr>
+            <td class="pah">ID</td>
+            <td><input type="text" name="id" value="322452314"></td>
+        </tr>
+        <tr>
+            <td class="pah">标题</td>
+            <td><input type="text" name="id" value="测试内容"></td>
+        </tr>
+        <tr>
+            <td class="pah">内容</td>
+            <td><input type="text" name="id" value="sdlfwedfkj"></td>
+        </tr>
+        <tr>
+            <td class="pah">高</td>
+            <td><input type="text" name="id" value="50"></td>
+        </tr>
+        <tr>
+            <td class="pah">宽</td>
+            <td><input type="text" name="id" value="60"></td>
+        </tr>
+        <tr>
+            <td class="pah">左距离(left)</td>
+            <td><input type="text" name="id" value=""></td>
+        </tr>
+        <tr>
+            <td class="pah">右距离(right)</td>
+            <td><input type="text" name="id" value=""></td>
+        </tr>
+        <tr>
+            <td class="pah">顶距离(top)</td>
+            <td><input type="text" name="id" value=""></td>
+        </tr>
+        <tr>
+            <td class="pah">底距离(bottom)</td>
+            <td><input type="text" name="id" value=""></td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <button style="width: 100%;">保存</button>
+            </td>
+        </tr>
+    </table>
+</div>
+</body>
+</html>

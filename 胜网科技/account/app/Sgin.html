@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<meta name="apple-mobile-web-app-capable" content="yes"/>
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"/>
+		<meta http-equiv="Access-Control-Allow-Origin" content="*">
+		<title></title>
+		<link rel="stylesheet" href="../../public/part/bootstrap/bootstrap.min.css" />
+		<link rel="stylesheet" href="../css/base.css" />
+		<link rel="stylesheet" href="../css/index.css" />
+	</head>
+	<body  ng-app="signApp" ng-controller="signCtrl">
+		<header class="mycollect_top_a">
+			<ul class="top_a_ul">
+				<li class="top_a_le">
+					<a href="tearch_info.html">
+						<img src="../images/icon_fanhui.png" />
+					</a>		
+				</li>
+				<li class="top_a_con">个性签名</li>
+				<li class="top_a_ri">保存</li>
+			</ul>
+		</header>
+		<div class="sign_change">
+				<span>个性签名:</span>
+				<textarea ng-model="name" id="signCon" nodetype='selfdesc' placeholder="请输入你的留言" maxlength="300"></textarea>
+				<p>
+					<span >{{length}}</span>/36字
+				</p>
+		</div>
+		<div class="ifra"></div>
+		<script src="../../public/part/jquery/jquery-3.1.1.min.js"></script>
+		<script src="../../public/part/angular/angular.min.js"></script>
+		<script src="../js/publicJs.js"></script>
+		<script src="../js/index.js"></script>	
+		<script>
+			angular.module("signApp", ["commonConfig"])
+		    .controller("signCtrl", function ($scope) {
+		        $scope.length = 0;
+		        $scope.$watch('name', function (newValue, oldValue, scope) {
+		            $scope.length = newValue.length;
+		            if ($scope.length > 36) {
+		                $scope.name = oldValue;
+		                $('.ifra').show().html("<div class='upPop'>字数超出了</div>");
+							$('.ifra').fadeIn(1000,function(){
+								$('.ifra').fadeOut(1000);
+							})
+		            }
+		        });
+		    });
+		</script>
+		
+	</body>
+	
+</html>

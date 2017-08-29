@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css"/>
+		<link rel="stylesheet" type="text/css" href="css/realName.css"/>
+		<link rel="stylesheet" type="text/css" href="css/classMeanage.css"/>
+	</head>
+	<body>
+		<!--头部-->
+			<div class="class_header row">
+				<div class="col-xs-2" onclick="javascript:history.go(-1);">
+					<img src="images/fanhui@2x.png"/>
+				</div>
+				<div class="header_message col-xs-6 ">完成认证</div>
+			</div>
+			
+			<!--认证通过-->
+			<div class="pass">
+				<img src="images/shimingrenzheng@2x.png" alt="" />
+				<p>恭喜！认证通过审核</p>
+				<p>
+					<img src="images/jifen-@2x.png" alt="" />
+					<span>100积分到账</span>
+				</p>
+			</div>
+			<div class="accept">
+				<button style="background-color: #56c399;color: white;">开通班级</button>
+			</div>
+			
+			<div id="footer">
+				<ul>
+				<li class="foot_li"><a href="/"><img src="images/nav_home_default@2x.png" class="img-responsive image_a " /><p>首页</p></a></li>
+				<li class="foot_li"><a><img src="images/nav_home_jy_default@2x.png" class="img-responsive  image_b" /><p>教研</p></a></li>
+				<li class="foot_li"><a href="classMeanage.html"><img src="images/nav_home_bj_default@2x.png" class="img-responsive  image_c" /><p>班级</p></a></li>
+				<li class="foot_li"><a><img src="images/nav_home_xywh_default@2x.png" class="img-responsive  image_d" /><p>校园文化</p></a></li>
+				<li class="foot_li"><a href="../../account/index.html#/account"><img src="images/nav_home_my_default@2x.png" class="img-responsive image_e" /><p>我</p></a></li>
+				</ul>
+			</div>
+	</body>
+	<script type="text/javascript" src="js/jquery-1.12.4.min.js" ></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/publicJs.js" ></script>
+	<script type="text/javascript">
+		//按钮跳转开通班级
+//		$(".accept button").on("click",function(){
+//			window.location.href="addClass_openClass.html";
+//		})
+		var type=localStorage.getItem("type");
+		$(".accept button").on("click",function(){
+			if(type=="openClass"){
+				window.location.href="addClass_openClass.html";
+			}else{
+				window.location.href="openOutsideClass_openClass.html";
+			}
+		})
+	</script>
+</html>

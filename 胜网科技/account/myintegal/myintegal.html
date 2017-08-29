@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="Keywords" content="">
+	    <meta name="Description" content="">
+	    <meta name="format-detection" content="telephone=no">
+	    <meta name="apple-mobile-web-app-capable" content="yes">
+	    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+	    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0,minimum-scale=1.0">
+		<title>我的积分</title>
+		<link rel="stylesheet" href="../../public/part/bootstrap/bootstrap.min.css" />
+		<link rel="stylesheet" href="../css/base.css" />
+		<link rel="stylesheet" href="../css/myintegal.css" />
+	</head>
+	<body ng-app="myIntegalApp" ng-controller="myIntegalCtrl">
+		
+		<header class="mycollect_top_a">
+			<ul class="top_a_ul">
+				<li class="top_a_le">
+					<img src="../images/icon_fanhui.png" />		
+				</li>				
+			</ul>
+		</header>
+		<div class="topBar">
+			<p>当前账号积分</p>
+			<span id="nowIntegal">{{inters}}</span>
+		</div>
+		<div class="intergal">
+			<ul>
+				<li >
+					<a href="recharge.html">
+						<div class="intergal_name col-md-6 col-xs-6">
+							<img src="../images/icon_chongzhi.png" />
+							充值积分
+						</div>
+						<div class="intergal_icons col-md-6 col-xs-6">
+							<img src="../images/icon_gengduo.png" />
+						</div>
+					</a>
+				</li>
+				<li >
+					<a href="toRMB.html">
+						<div class="intergal_name col-md-6 col-xs-6">
+							<img src="../images/icon_tixian.png" />
+							提现积分
+						</div>
+						<div class="intergal_icons col-md-6 col-xs-6">
+							<img src="../images/icon_gengduo.png" />
+						</div>
+					</a>
+				</li>
+				<hr />
+				<li >
+					<a href="draw.html">
+						<div class="intergal_name col-md-6 col-xs-6">
+							<img src="../images/icon_choujiang.png" />
+							积分抽奖
+						</div>
+						<div class="intergal_icons col-md-6 col-xs-6">
+							<img src="../images/icon_gengduo.png" />
+						</div>
+					</a>
+				</li>
+				<li >
+					<a>
+						<div class="intergal_name col-md-6 col-xs-6">
+							<img src="../images/icon_shangcheng.png" />
+							积分商城
+						</div>
+						<div class="intergal_icons col-md-6 col-xs-6">
+							<img src="../images/icon_gengduo.png" />
+						</div>
+					</a>
+				</li>
+				<hr />
+				<li >
+					<a href="intergalList.html">
+						<div class="intergal_name col-md-6 col-xs-6">
+							<img src="../images/icon_mingxi.png" />
+							积分明细
+						</div>
+						<div class="intergal_icons col-md-6 col-xs-6">
+							<img src="../images/icon_gengduo.png" />
+						</div>
+					</a>
+				</li>
+				<hr />
+				<li >
+					<a href="intergalRule.html">
+						<div class="intergal_name col-md-6 col-xs-6">
+							<img src="../images/icon_jifenguize.png" />
+							积分规则
+						</div>
+						<div class="intergal_icons col-md-6 col-xs-6">
+							<img src="../images/icon_gengduo.png" />
+						</div>
+					</a>
+				</li>
+			</ul>
+		</div>
+	</body>		
+		<script src="../../public/part/jquery/jquery-3.1.1.min.js"></script>
+		<script src="../../public/part/angular/angular.min.js"></script>
+		<script src="../js/jquery.cookie.js"></script>
+		<script src="../js/publicJs.js"></script>
+		<script src="../js/recharge.js"></script>	
+		<script>
+			angular.module('myIntegalApp',["commonConfig"]).
+			controller("myIntegalCtrl",["$scope","$http",function($scope,$http){
+				$http.get("http://192.168.0.21:20889/accountIntegralManagementFacade/selectAccountIntegral?uid=20889").then(function(res){
+					console.log(res)
+					$scope.inters=res.data.msg;
+				})
+			}])
+			
+		</script>
+</html>

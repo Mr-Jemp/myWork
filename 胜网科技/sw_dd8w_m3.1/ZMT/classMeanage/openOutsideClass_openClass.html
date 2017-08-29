@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css"/>
+		<link rel="stylesheet" type="text/css" href="css/openOutsideClass.css"/>
+	</head>
+	<body>
+		<!--<!--头部-->
+			<div class="class_header row" style="margin: 0;">
+				<div class="col-xs-2" onclick="javascript:history.go(-1);">
+					<img src="images/fanhui@2x.png" alt="" />
+				</div>
+				<div class="header_message col-xs-7">开通校外班级</div>
+				<div class="selectClass col-xs-3">
+
+				</div>
+			</div>
+			
+		<ul class="xiaoduan" style="padding: 0.35rem;">
+			<li style="list-style:none;background-color: #F7F7F7;padding: 0.3rem;font-size: 0.2rem;margin-bottom: 0.35rem;">
+				<select style="width: 100%;border: 0;background-color: #F7F7F7;outline: none;">
+					<option style="outline: none;border: 0;">请选择校段</option>
+					<option value="">天河一中</option>
+					<option value="">天河二中</option>
+				</select>
+			</li>
+			<li style="list-style:none;border-top: 1px solid darkgray;margin-bottom: 0.3rem;"></li>
+			<li style="text-align: center;list-style:none;font-size: 0.2rem;margin-bottom: 0.3rem;">
+				<select style="padding: 0.3rem;float: left;width: 30%;border: 0;background-color: #F7F7F7;outline: none;">
+					<option>省份</option>
+					<option>广东</option>
+					<option>深圳</option>
+					<option>上海</option>
+					<option>北京</option>
+				</select>
+				<select style="padding: 0.3rem;width: 30%;border: 0;background-color: #F7F7F7;outline: none;">
+					<option>市</option>
+					<option>广州</option>
+					<option>清远</option>
+					<option>英德</option>
+				</select>
+				<select style="padding: 0.3rem;float: right;width: 30%;border: 0;background-color: #F7F7F7;outline: none;">
+					<option>区</option>
+				</select>
+			</li>
+			
+			
+			<li style="list-style:none;border-top: 1px solid darkgray;margin-bottom: 0.3rem;"></li>
+			<li style="list-style:none;background-color: #F7F7F7;padding: 0.3rem;font-size: 0.2rem;margin-bottom: 0.3rem;">
+				<select style="width: 100%;border: 0;background-color: #F7F7F7;outline: none;">
+					<option style="outline: none;border: 0;">请选择年级</option>
+					<option value="">初一</option>
+					<option value="">初二</option>
+				</select>
+			</li>
+			<li style="list-style:none;border-top: 1px solid darkgray;margin-bottom: 0.3rem;"></li>
+			<li style="list-style:none;background-color: #F7F7F7;padding: 0.3rem;font-size: 0.2rem;margin-bottom: 0.3rem;">
+				<input type="text" placeholder="填写班级名称" style="border: 0;outline: none;width: 100%;background-color: #F7F7F7;"/>
+			</li>
+		</ul>
+		<div class="accept">
+				<button style="background-color: #56c399;color: white;">确定</button>
+			</div>
+			
+			
+		<!--底部栏-->
+		<div id="footer">
+			<ul>
+				<li class="foot_li"><a href="/"><img src="images/nav_home_default@2x.png" class="img-responsive image_a " /><p>首页</p></a></li>
+				<li class="foot_li"><a><img src="images/nav_home_jy_default@2x.png" class="img-responsive  image_b" /><p>教研</p></a></li>
+				<li class="foot_li"><a href="classMeanage.html"><img src="images/nav_home_bj_default@2x.png" class="img-responsive  image_c" /><p>班级</p></a></li>
+				<li class="foot_li"><a><img src="images/nav_home_xywh_default@2x.png" class="img-responsive  image_d" /><p>校园文化</p></a></li>
+				<li class="foot_li"><a href="../../account/index.html#/account"><img src="images/nav_home_my_default@2x.png" class="img-responsive image_e" /><p>我</p></a></li>
+			</ul>
+		</div>
+		
+	</body>
+	<script type="text/javascript" src="js/jquery-1.12.4.min.js" ></script>
+	<script type="text/javascript" src="js/angular.min.js"></script>
+	<script type="text/javascript" src="js/angular-route.min.js" ></script>
+	<script type="text/javascript" src="js/publicJs.js" ></script>
+	<script type="text/javascript">
+		$(".accept").click(function(){
+			window.location.href="openOutsideClass_meanageChecking.html"
+		})
+	</script>
+</html>

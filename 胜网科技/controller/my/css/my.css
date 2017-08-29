@@ -16,7 +16,7 @@ body{
     height: 132px;
     background-color: #00a2d4;
     clear: both;
-    background: url("../../../template/my/static/dingbu-beijing(1).png")no-repeat;
+    background: url("../../../template/school/static/dingbu-beijing(1).png")no-repeat;
 }
 .top_nav{
     width: 1000px;
@@ -50,7 +50,7 @@ body{
     float: left;
     width: 100%;
     height: 50px;
-    background: url("../../../template/my/static/daohantiao.png")no-repeat;
+    background: url("../../../template/school/static/daohantiao.png")no-repeat;
     clear: both;
     margin-top: -1px;
 }
@@ -149,7 +149,7 @@ body{
     text-decoration: none;
 }
 .information_news ul li.active{
-    background: url("../../../template/my/static/guanguan.png")no-repeat;
+    background: url("../../../template/school/static/guanguan.png")no-repeat;
 }
 .news_content ul{
     padding: 10px  13px 0 13px ;
@@ -181,7 +181,7 @@ body{
     height: 39px;
     line-height: 39px;
     padding-left: 45px;
-    background: url("../../../template/my/static/tubiao.png")no-repeat;
+    background: url("../../../template/school/static/tubiao.png")no-repeat;
     background-position: 5px 5px;
     text-decoration: none;
 }

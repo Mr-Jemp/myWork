@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
+		<meta name="apple-mobile-web-app-capable" content="yes"/>
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"/>
+		<meta http-equiv="Access-Control-Allow-Origin" content="*">
+		<title>确认订单</title>
+		<link rel="stylesheet" href="../../public/part/bootstrap/bootstrap.min.css" />
+		<link rel="stylesheet" href="../css/base.css" />
+		<link rel="stylesheet" href="../css/orderForm.css" />
+	</head>
+	<body ng-app="confirmOrderApp" ng-controller="confirmOrderContr">
+		<header class="mycollect_top_a" >
+			<ul class="top_a_ul">
+				<li class="top_a_le">
+					<img src="../images/icon_fanhui.png" />		
+				</li>
+				<li class="top_a_con">确认订单</li>
+			</ul>
+		</header>
+		<div class="notPay_detail">
+			<div class="cardo_a">
+				<p><span>收货人:<label>张三三</label></span><span>15200454842</span></p>
+			</div>
+			<div class="address_b srue_address_b" ng-click="changAdd(di)">
+				<p>收货地址：<span>搜到接受对方就是房间打开链接付款的时间发动机</span></p>
+			</div>
+		</div>		
+		<p class="caidai"></p>
+		<div class="order_from_con">
+			<ul>
+				<li ng-repeat="dingList in dingCon track by dingList.amount">
+					<div class="order_from_con_name clearfix">
+						<p class="con_name_a">新华文具店 </p>
+						<span class="con_name_b">{{dingList.status}}</span>
+					</div>
+					<div class="good_list_con container">
+						<div class="con_img_a">
+							<img src="../images/img_touxiang.png" />
+						</div>
+						<div class="con_img_b">
+							<p class="con_con_a">{{dingList.name}}</p>
+							<p class="con_con_b">{{dingList.info}}</p>
+							<p class="con_con_c">
+								<span>套餐类型:<label>套餐一</label></span>
+								<span>颜色<label>{{dingList.size}}</label></span>
+							</p>
+							<p class="con_con_d">
+								<span class="d_a"><label class="d_a_red">￥{{dingList.price}}  </label><label class="d_a_blc">  56.00</label></span>
+								<span class="d_b">X{{dingList.amount}}</span>
+								
+							</p>
+							
+						</div>
+						
+					</div>
+					<!--<div class="amount_boxBuy clearfix">
+						<span class="amount_boxBuy_b">购买数量</span>
+						<span class="amount_boxBuy_a ">
+							<input type="button" value="-" class="boxBuy_a_a" ng-click="numberAdd(dingList.amount);"/>
+							<input type="text" value="" class="boxBuy_a_b" ng-model="dingList.amount" />
+							<input type="button" value="+" class="boxBuy_a_c" ng-click="numberDel(dingList.amount);"/>
+						</span>
+					</div>-->
+				</li>
+			</ul>
+			<div class="pay_aoumt clearfix">
+				<p class="clearfix">
+					<span class="pay_aoumt_a">运费  </span>
+					<span class="pay_aoumt_b">合计：￥<label>0.00</label></span>
+				</p>
+				<p class="clearfix">
+					<span class="pay_aoumt_a">共<label ng-bind="dingList.amount"></label>件商品<i>（含运费）</i></span>
+					<span class="pay_aoumt_b pay_aoumt_bb">合计：￥<label>{{dingCon[0].payment}}</label></span>
+				</p>
+				<p class="down_pay clearfix">
+					<span class="pay_aoumt_a">支付方式</span>
+					<select class="pay_aoumt_b" ng-init="selectedName = selectPay[0]" ng-model="selectedName" ng-options="x for x in selectPay">
+						
+					</select>
+				</p>
+			</div>
+			<div class="pay_aoumt_liuyan">
+				<span>买家留言</span>
+				<textarea placeholder="选填，请填写您和卖家达成一致的要求" maxlength="40"></textarea>
+			</div>
+		</div>
+		<div class="pay_aoumt_btn ">
+			<span>合计：<label class="d_a_red">￥{{dingCon[0].payment}}</label></span>
+			<span class="pay_btn_go">提交订单</span>
+		</div>
+		<!--弹出框、-->
+		<div id="bottom-pp">
+			<div class="popBottom" >
+				<p class="popTop">订单详情<span class="del">X</span></p>
+				<ul>
+					<li class="popBottom_a">
+						<span>支付方式</span>
+						<span>积分支付</span>
+					</li>
+					<li class="popBottom_b">
+						<span>需付款</span>
+						<span><label>￥86.00</label><label class="jifen_red">(8600积分)</label>
+						</span>
+					</li>
+				</ul>
+				<div class="lipay_btn">
+					立即支付
+				</div>
+			</div>
+			
+		</div>
+
+		<div class="pop">
+			<p class="popTop">请输入支付密码<span class="del">X</span></p>
+			<p class="amount_">￥<span>99.00</span></p>
+			<form>
+				<input type="text" /><input type="text" /><input type="text" /><input type="text" /><input type="text" /><input type="text" />				
+			</form>
+		</div>
+	</body>
+		<script src="../../public/part/jquery/jquery-3.1.1.min.js"></script>
+		<script src="../js/publicJs.js"></script>
+		<script src="../../public/part/angular/angular.min.js"></script>			
+		<script>
+			
+			angular.module('confirmOrderApp',[]).
+			controller("confirmOrderContr",["$scope","$http",function($scope,$http){
+				$('.del').click(function(){
+					$('#bottom-pp').hide()
+				})
+				$scope.selectPay = ["积分支付", "微信支付", "支付宝支付"];
+				var dingId=window.location.search;
+				dingId=dingId.split("?")[1]
+				console.log(dingId)
+				$http.get("http://192.168.0.21:20880/orderFacade/getOrder?id="+dingId).then(function(res){
+					console.log(res)
+					$scope.dingCon=res.data.msg;
+					$scope.changAdd=function(di){
+						window.location="../app/address.html?"+di;
+					}
+//					//添加数量
+//					$scope.numberAdd=function(amount){
+//						if(amount>0){
+//							amount++;
+//						}
+//					}
+//					//减少数量
+//					$scope.numberDel=function(amount){
+//						if(amount==1){
+//							return;
+//						}else{
+//							amount--;
+//						}
+//					}
+				}).catch(function(){
+					
+				})
+			}])
+		</script>
+</html>

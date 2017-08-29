@@ -1,0 +1,22 @@
+.toast {
+    position: fixed;
+    top: 30%;
+    left: 50%;
+    margin-left: -2.8rem;
+    width: 5.6rem;
+    height: 2.7rem;
+    background-color: rgba(0,0,0,.7);
+    border-radius: .2rem;
+    /*opacity: 0;*/
+    transition: opacity .2s ease-in;
+}
+.toast__content {
+    margin-top: 1.35rem;
+    font-size: .3rem;
+    color: #fff;
+    text-align: center;
+    transform: translateY(-50%);
+}
+.toast--show {
+    opacity: 100;
+}

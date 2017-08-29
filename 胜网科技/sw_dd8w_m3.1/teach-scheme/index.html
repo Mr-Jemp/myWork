@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html ng-app="TeachScheme">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
+
+        <title>教学计划</title>
+
+        <!-- vendor -->
+        <link rel="stylesheet" href="/public/part/bootstrap/bootstrap.min.css"/>
+        <!-- common -->
+        <link rel="stylesheet" href="/public/component/footer/footer.component.css">
+        <link rel="stylesheet" href="/public/css/commonStyle.css">
+        <!-- mine -->
+        <link rel="stylesheet" href="app/home/home.component.css">
+        <link rel="stylesheet" href="app/create-scheme/create-scheme.component.css">
+        <link rel="stylesheet" href="app/select-class/select-class.component.css">
+        <link rel="stylesheet" href="app/detail/detail.component.css">
+
+        <!-- vendor -->
+        <script src="/public/part/angular/angular.min.js"></script>
+        <script src="/public/part/angular/angular-ui-router.min.js"></script>
+        <!-- component -->
+        <script src="/public/component/footer/footer.component.js"></script>
+        <script src="/public/component/utils/util.service.js"></script>
+        <script src="/public/config/common.config.js"></script>
+        <!-- mine -->
+        <script src="app/app.module.js"></script>
+        <script src="app/app.routing.js"></script>
+        <script src="app/services/data.service.js"></script>
+        <script src="app/home/home.component.js"></script>
+        <script src="app/select-class/select-class.component.js"></script>
+        <script src="app/create-scheme/create-scheme.component.js"></script>
+        <script src="app/detail/detail.component.js"></script>
+    </head>
+
+    <body ng-cloak>
+
+        <ui-view ></ui-view>
+
+
+        <script src="/public/part/jquery/jquery-3.1.1.min.js" ></script>
+        <script src="/public/js/resize-font.js" ></script>
+    </body>
+
+</html>

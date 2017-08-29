@@ -1,0 +1,333 @@
+.myAddress{
+	padding:0 0.25rem;
+}
+.myAddress ul{
+	margin: 0 0 0.86rem 0;	
+	font-size: 0.26rem;
+	padding-bottom: 1.5rem;
+}
+.myAddress ul li{
+	width: 100%;
+	height: 1.8rem;
+	padding: 0.15rem 0.15rem;
+	background: white;
+	margin-top: 0.15rem;
+}
+.myAddress ul li>div{
+	width: 100%;
+	height: 33.3%;
+	display: block;
+}
+.myAddress ul li>div:nth-of-type(1) span{	
+	width: 50%;
+	float: left;
+	color: #333;
+}
+.myAddress ul li>div:nth-of-type(1) span.namesNumber{
+	text-align: right;
+}
+.myAddress ul li>div .close-stybtn{
+	display: flex;
+	justify-content: center;
+	float: left;
+}
+.close-stybtn input{
+	width: 0.38rem;
+	height: 0.38rem;
+	margin-right: 5px;
+	border: 1px solid gainsboro;
+	border-radius:100%;
+}
+.close-stybtn label{
+	display: block;
+	line-height: 0.5rem;
+	color: #666;
+}
+.addres-btn{
+	float: right;
+	padding-left: 20px;
+}
+.addres-btn a{
+	color: #666;
+	padding: 0 0.11rem;
+}
+.addres-btn a img{
+	width: 0.25rem;
+	height: 0.25rem;
+	margin-right: 0.11rem;
+}
+.isInput{
+	padding-bottom: 5px;
+	border-bottom: 1px solid #979797;
+}
+.addAddress{
+	display: block;
+	position: fixed;
+	width: 100%;
+	background:#52dfaa;
+	padding: 0.3rem 0;
+	text-align: center;
+	color: white;
+	font-size: 0.26rem;
+	bottom: 0px;
+}
+.addAddress a{
+	color: white;
+}
+/*编辑地址*/
+.address_cont,.address_eadit{
+	 z-index:-999;
+	background: white;
+	margin-top: 0.11rem;
+	padding: 0 0.25rem;
+}
+.address_cont p,.address_eadit p{
+	width: 100%;
+	padding: 0.3rem 0; 
+	font-size:0.26rem;
+}
+.address_cont p span.down_icon,.address_eadit p span.down_icon{
+	display: inline-block;
+	width: 1.0rem;
+	float: right;
+}
+.address_cont p span.down_show,.address_eadit p span.down_show{
+	display: inline-block;
+	margin-left: 1.5rem;
+}
+.address_cont p input[type=text],.address_eadit p input[type=text]{
+	width: 100%;
+	padding-left:1.5rem;
+}
+.address_cont p span.address_title,.address_eadit p span.address_title{
+	display:inline-block;
+	float: left;
+	position: absolute;
+}
+.address_cont p span.address_title_ssq,.address_eadit p span.address_title_ssq{
+	width: 100%;
+	display:inline-block;
+}
+.setMoren{
+	background: white;
+}
+.setMoren input{
+	width:0.3rem;
+	height: 0.3rem;
+	vertical-align: middle;
+	border: 1px solid gainsboro;
+	border-radius: 0.15rem;
+	
+}
+.setMoren label{
+	color: #999999;
+}
+/*弹出背景*/
+/*.ifra{
+	display: none;
+	position: absolute;
+	height: 100%;
+    width:100%;
+    background:#000;
+    background: rgba(0,0,0,.4);
+    z-index:9999;
+    top:0;
+    left:0;
+}*/
+/*弹出框*/
+.chooseCity{
+	width: 80%;
+	margin:0 auto;
+	background: white;
+	position: absolute;
+	left: 50%;
+	top:50%;
+	transform: translateX(-50%) translateY(-50%);
+	-webkit-transform: translateX(-50%) translateY(-50%);	
+	-moz-transform: translateX(-50%) translateY(-50%);
+	-ms-transform: translateX(-50%) translateY(-50%);
+	-o-transform: translateX(-50%) translateY(-50%);
+}
+.chooseCity .box{
+	height: 400px;
+	position: relative;
+    overflow-y: scroll;
+}
+.chooseCity p{
+	padding: 10px 0;
+	background: #f5f5f5;
+	color:#69e2b3 ;
+	text-align: center;
+}
+.chooseCity ul{
+	width: 100%;
+	overflow-y: scroll;
+    float: right;
+    overflow-x: hidden;
+}
+.chooseCity ul li{
+	text-align: left;
+	padding: 10px;
+	border-bottom: 1px solid #D3D3D3;
+}
+.chooseCity .aboulBtn{
+	width: 100%;
+	z-index: 999;
+	text-align: center;
+}
+.chooseCity .aboulBtn a{	
+	width: 50%;
+	display: block;
+	float: left;
+	line-height: 40px;
+	text-align: center;
+	background: #f5f5f5;
+	color: #666;
+}
+.chooseCity .aboulBtn a:first-child{
+	border-right: 1px solid #D3D3D3;
+}
+/*插件的城市列*/
+ .select-city {
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	z-index: 999999;
+}
+
+.select-city-shade {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	z-index: 1;
+	background: #000000;
+	opacity: 0.7;
+}
+
+.select-city-container {
+	position: absolute;
+	width: 200px;
+	height: 320px;
+	top: 50%;
+	left: 50%;
+	margin-top: -170px;
+	margin-left: -110px;
+	background: #ffffff;
+	z-index: 100;
+	border-radius: 8px;
+	padding-left: 10px;
+	padding-right: 10px;
+}
+
+.select-city-title {
+	position: absolute;
+	width: 94%;
+	height: 39px;
+	line-height: 50px;
+	left: 3%;
+	top: 0;
+	border-bottom: 1px #c2c2c2 solid;
+	font-weight: 700;
+	z-index: 99999;
+}
+
+.selected-prov {
+	position: relative;
+	max-width: 30%;
+	height: 40px;
+	/*float: left;*/
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	-o-text-overflow: ellipsis;
+	-webkit-text-overflow: ellipsis;
+	color: #D8AC62;
+	font-size: 14px;
+	padding-right: 5px;
+}
+
+.selected-city {
+	position: relative;
+	max-width: 30%;
+	height: 40px;
+	/*float: left;*/
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	-o-text-overflow: ellipsis;
+	-webkit-text-overflow: ellipsis;
+	color: #D8AC62;
+	font-size: 14px;
+	padding-left: 5px;
+	padding-right: 5px;
+	display: none;
+}
+
+.selected-dist {
+	position: relative;
+	max-width: 30%;
+	height: 40px;
+	/*float: left;*/
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	-o-text-overflow: ellipsis;
+	-webkit-text-overflow: ellipsis;
+	color: #D8AC62;
+	font-size: 14px;
+	padding-left: 5px;
+	padding-right: 5px;
+	display: none;
+}
+
+.select-close {
+	position: absolute;
+	width: 40px;
+	height: 40px;
+	top: -3px;
+	right: 25px;
+	line-height: 50px;
+	text-align: right;
+	font-size: 22px;
+}
+
+.select-item-container {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	box-sizing: border-box;
+	border-top: 40px solid transparent;
+	overflow: auto;
+	-webkit-overflow-scrolling: touch;
+	-webkit-text-size-adjust: none;
+	font-size: 14px;
+}
+
+.prov-item-container,
+.city-item-container,
+.dist-item-container {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+}
+
+.select-item {
+	/*position: relative;*/
+	width: 94%;
+	height: 39px;
+	border-bottom: 1px #C2C2C2 solid;
+	margin-left: 3%;
+	line-height: 40px;
+}
+
+.select-item span {
+	position: absolute;
+	width: auto;
+	height: 50%;
+	right: 0;
+	line-height: 40px;
+}

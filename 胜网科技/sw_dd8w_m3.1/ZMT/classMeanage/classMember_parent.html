@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css"/>
+		<link rel="stylesheet" type="text/css" href="css/addClass.css">
+		<style> *{margin: 0;padding: 0;}html,body{overflow-y：hidden;}</style>
+	</head>
+	<body>
+		<div class="row push_class add1" onclick='window.location.href="openClass_addParents.html"' >
+				<div class="new_class">+</div>
+				<p>添加家长</p>
+			</div>
+
+			<div class="row push_class createNewTeam">
+				<div class="new_class"><span >+</span></div>
+			    <p >新建分组</p>
+			</div>
+
+    			
+  			<!--家长.***********************************************************-->
+  	<div class="contractChange" style=" margin-bottom: 110px;">
+  				  <!--家长联系表-->
+			<ul class="list-group contractTeacher" style="margin: 0;">
+  				<li class="list-group-item">
+  					<p class="col-xs-6">全部家长（3人）</p>
+  					<p class="col-xs-6"><img class="changeImgBottomOrRight" src="images/fanhuixiangxia@2x.png"/></p>
+  				</li>
+  			</ul>
+  			
+  			<!--收缩家长部分-->
+  			
+  			<ul class="list-group contractTeacher scaleTeacher" style="margin: 0;">
+		
+  			</ul>
+  			
+
+  </div>
+  			
+
+	</body>
+	<script type="text/javascript" src="js/jquery-1.12.4.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/publicJs.js"></script>
+	<script type="text/javascript">
+		//点击全部家长
+		$(".contractChange").on("click","ul:nth-child(odd)",function(){
+			$(this).next().stop().slideToggle(500,function(){
+				console.log("结束");
+//				$(this).prev().children().children().children().attr("src","images/jiantouxiangyou@2x.png");
+				var img=$(this).prev().children().children().children();
+				if(img.attr('src')=="images/fanhuixiangxia@2x.png"){
+					img.attr("src","images/u71.png")
+				}else{
+					img.attr("src","images/fanhuixiangxia@2x.png")
+				}
+			});
+		})
+		//详情页
+		$(".scaleTeacher").on("click","li",function(){
+			window.location.href="addClass_ParDetalMessage.html";
+		})
+		//新建分组
+		$(".createNewTeam").click(function(){
+			localStorage.setItem("createNewTeam","parents");
+			window.location.href="openClass_createNewTeam.html";
+		})
+		
+		
+		
+		//渲染家长
+		$.ajax({
+			type:"post",
+			url:"http://192.168.0.21:20882/addClassOperation/getClassIdByAccountId",
+			data:JSON.stringify({"accountId":5}),
+			contentType: "application/json; charset=UTF-8",
+			dataType:"json",
+			async:true,
+			success:function(data){
+				console.log(data);
+				var classId=data.msg;
+				$.ajax({
+					type:"post",
+					url:"http://192.168.0.21:20882/addClassOperation/getPatriarchsByClassId",
+					data:JSON.stringify({"classId":classId}),
+					contentType: "application/json; charset=UTF-8",
+					dataType:"json",
+					async:true,
+					success:function(data){
+						console.log(data);
+						
+						//全部学生
+						$(".contractTeacher:first-child li>p:first-child").text("全部家长( "+eval(data.msg.students.length)+"人 )");
+						
+						for(var i=0;i<data.msg.students.length;i++){
+							var newLi=$('<li class="list-group-item row">'
+					  						+'<p class="col-xs-6"><img src="http://192.168.0.21:8888/'+data.msg.students[i].faceImgUrl+'"/><span>'+data.msg.students[i].nickName+'</span></p>'
+					  						+'<p class="col-xs-6"><img src="images/u71.png"/></p>'
+				  						+'</li>');
+				  				$(".scaleTeacher").eq(0).append(newLi);			
+						}
+						
+						//创建组的头部
+						for(var j in data.msg.groups){
+							var newUll=$('<ul class="list-group contractTeacher scaleEnd" style="margin: 0;">'
+								  				+'<li class="list-group-item">'
+								  					+'<p class="col-xs-6">'+j+'( '+data.msg.groups[j].length+'人 )</p>'
+								  					+'<p class="col-xs-6"><img class="changeImgBottomOrRight scaleOneImg" src="images/u71.png"/></p>'
+								  				+'</li>'
+								  			+'</ul>');
+								  		$(".contractChange").append(newUll);
+								  		
+								  		
+							//组的收缩
+							var newUlll=$('<ul class="list-group contractTeacher scaleTeacher" style="margin: 0;"></ul>');
+							newUlll.insertAfter(newUll);
+							//收缩的子集
+									for(var k=0;k<data.msg.groups[j].length;k++){
+											var newLi=$('<li class="list-group-item row">'
+						  							+'<p class="col-xs-6"><img src="http://192.168.0.21:8888/'+data.msg.groups[j][k].faceImgUrl+'"/><span>'+data.msg.groups[j][k].nickName+'</span></p>'
+						  							+'<p class="col-xs-6"><img src="images/u71.png"/></p>'
+						  						+'</li>');
+						  					newUlll.append(newLi)
+								  	}
+								  	console.log(data.msg.groups[j])
+
+						}
+						
+					},
+					error:function(){
+						console.log("错误");
+					}
+				})
+			},
+			error:function(){
+				console.log("获取班级id信息失败");
+			}
+		});
+	
+		
+	</script>
+</html>

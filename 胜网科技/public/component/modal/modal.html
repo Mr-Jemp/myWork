@@ -1,0 +1,17 @@
+<div class="m-modal-mask"
+    ng-show="modal.isShow"
+    ng-click="hide()">
+    <div class="m-modal" ng-click="$event.stopPropagation()">
+        <div ng-if="!hasTrans">
+            <div class="m-modal__info">
+                <h3 class="m-modal__title">{{modal.title}}</h3>
+                <p class="m-modal__message">{{modal.msg}}</p>
+            </div>
+            <div class="m-modal__btns">
+                <div class="m-modal__btn" ng-click="onClick(false)">{{modal.cancelText || '取消'}}</div>
+                <div class="m-modal__btn" ng-click="onClick(true)">{{modal.confirmText || '确认'}}</div>
+            </div>
+        </div>
+        <ng-transclude></ng-transclude>
+    </div>
+</div>

@@ -1,7 +1,0 @@
-﻿#leftmenu{border:solid #add9c0;border-width:1px;}
-#leftmenu ul{list-style: none;}
-#leftmenu{float:left;width:20%;}
-#contentpage{float:left;width:78%;margin-left:10px;}
-#leftmenu span{text-align: center;display:block;width:100%;background-color:#398FD2;height:30px;line-height:30px;color:#ffffff;}
-#leftmenu a{display: block;width:100%;text-align:center;text-decoration: none;padding-bottom: 5px;padding-top: 5px;font-size: 15px;}
-#leftmenu a:hover{display:block;background-color:#FFFF88;}

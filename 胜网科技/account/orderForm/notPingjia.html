@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+		<meta http-equiv="Access-Control-Allow-Origin" content="*">
+		<title>待评价</title>
+		<link rel="stylesheet" href="../../public/part/bootstrap/bootstrap.min.css" />
+		<link rel="stylesheet" href="../css/base.css" />
+		<link rel="stylesheet" href="../css/orderForm.css" />
+	</head>
+
+	<body ng-app="evaApp" ng-controller="evaCtrl">
+
+		<header class="mycollect_top_a">
+			<ul class="top_a_ul">
+				<li class="top_a_le">
+					<img src="../images/icon_fanhui.png" />
+				</li>
+				<li class="top_a_con">评价</li>
+				<li class="top_a_ri" ng-click="subEva()">提交评价</li>
+			</ul>
+		</header>
+		<div class="pingjia_box">
+			<ul>
+				<li ng-repeat="dts in data.orderDetails">
+					<div class="box_topa container">
+						<div class="box_top_img">
+							<img src="{{dts.products.img}}" />
+						</div>
+						<div class="box_top_detail">
+							<span class="detail_a">{{dts.products.name}}</span>
+							<span class="detail_b">{{dts.products.info}}</span>
+						</div>
+					</div>
+					<div class="box_cona">
+						<h5>发表评论</h5>
+						<textarea cols="10" autofocus="" class="text-cont" placeholder="亲！请发表您的评论，有积分送哦">
+							
+						</textarea>
+						<div class="camera_pic clearfix">
+							<form class="camera_pic_img" method="post" action="" enctype="multipart/form-data">
+								<input type="file" id="file_more" />
+							</form>
+							<div class="camera_pic_con">
+								<ul>
+									<!--<li>
+										<img src="../images/book.png" />
+									</li>-->
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div class="grade_con clearfix">
+						<p class="con_dianpu"><span></span> 商品评分</p>
+						<div class="gradecon" id="Addnewskill_119">
+							<ul class="rev_pro clearfix">
+								<li>
+									<input class="fl" type="hidden" style="margin-top:2px;" name="InterviewCommentInfoSub[expAuth]" value="0" />
+									
+									<div class="revinp">
+										<span class="level">  
+						                    <i class="level_hollow" cjmark=""></i>  
+						                    <i class="level_hollow" cjmark=""></i>  
+						                    <i class="level_hollow" cjmark=""></i>  
+						                    <i class="level_hollow" cjmark=""></i>  
+						                    <i class="level_hollow" cjmark=""></i>  
+						                </span>
+										<span class="revgrade">未评分</span>
+									</div>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</body>
+	<script src="../../public/part/jquery/jquery-3.1.1.min.js"></script>
+	<script type="text/javascript" src="http://malsup.github.io/jquery.form.js"></script>
+	<script src="../../public/part/angular/angular.min.js"></script>
+	<script src="../js/publicJs.js"></script>
+	<script>
+		angular.module('evaApp', ["commonConfig"]).
+		controller("evaCtrl", ['$scope', '$http', function($scope, $http) {
+			var goodsId = window.location.search.split("?")[1];
+			$http.get("http://192.168.0.21:20880/orderFacade/getOrderByPayStatus?id=" + goodsId + "&&payStatus=待评价").then(function(res) {
+				$scope.data = res.data.msg[0];
+				console.log($scope.data)
+				var degree = ['','很差','差','中','良','优','未评分'];
+				//点星星
+				$(document).on('mouseover','i[cjmark]',function(){
+					var num = $(this).index();
+					var pmark = $(this).parents('.revinp');
+					var mark = pmark.prevAll('input');
+					//var val = mark.val();
+					//if(mark.prop('checked')) return false;
+					
+					var list = $(this).parent().find('i');
+					for(var i=0;i<=num;i++){
+						list.eq(i).attr('class','level_solid');
+					}
+					for(var i=num+1,len=list.length-1;i<=len;i++){
+						list.eq(i).attr('class','level_hollow');
+					}
+					$(this).parent().next().html(degree[num+1]);
+					
+					/* if(val != 0){
+						for(var i=0;i<=val;i++){
+							list.eq(i).attr('class','level_solid');
+						}
+					}else{
+						for(var i=0;i<=list.length-1;i++){
+							list.eq(i).attr('class','level_hollow');
+						}
+					} */
+					
+				});
+				
+				$(document).on('mouseout','i[cjmark]',function(){
+					var num = $(this).index();
+					var pmark = $(this).parents('.revinp');
+					var mark = pmark.prevAll('input');
+					var val = parseInt(mark.val());
+					//if(mark.prop('checked')) return false;
+					
+					var list = $(this).parent().find('i');
+					//alert(list.length);
+					if(val != 0){
+						for(var i=0;i<=val;i++){
+							list.eq(i).attr('class','level_solid');
+						}
+						//alert(val);
+						for(var i=val,len=list.length-1;i<=len;i++){
+							list.eq(i).attr('class','level_hollow');
+						}
+						$(this).parent().next().html(degree[val]);
+					}else{
+						for(var i=0;i<=list.length-1;i++){
+							list.eq(i).attr('class','level_hollow');
+						}
+						$(this).parent().next().html("未评分");
+					} 
+				})
+				
+				//点击星星
+				$(document).on('click','i[cjmark]',function(){
+					var num = $(this).index();
+					var pmark = $(this).parents('.revinp');
+					var mark = pmark.prevAll('input');
+					mark.val(num+1);
+					console.log(num+1)
+				})
+		
+				//					$scope.subEva=function(){
+				//						$http.get("http://192.168.0.21:20880/orderAssessFacade/addOrderAssess?uid=1&odid="+goodsId+"&content=给力&&grade=3.5&&imgUrl").then(function(restul){
+				//							
+				//						})
+				//					}
+				
+				/**	$('#file_more').change(function(){
+					if($("#filss").val()==""){
+					  alert("请选择一个图片文件,再点击");
+					  return;
+					 }
+						
+					$(".camera_pic_img").ajaxSubmit({
+						url:'http://192.168.0.21:20882/userManage/uploadFaceImage?accountId=2',
+				        type:'post',
+				        dataType : 'json',
+				        success:function(data){
+				        	console.log(data.msg)
+				        	$('#person-img').attr("src","http//192.168.0.21:8888"+data.msg)
+				        	window.location.reload()
+				        	 $(".ifra,#uploadImg").hide();
+				        },
+				        error:function(){
+				        	console.log("更改头像失败")
+				        }
+					})
+				})	**/
+
+			})
+		}])
+	</script>
+
+</html>

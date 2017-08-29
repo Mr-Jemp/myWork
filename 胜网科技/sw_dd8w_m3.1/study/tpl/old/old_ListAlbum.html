@@ -1,0 +1,245 @@
+<!-- 
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>数字社区-相册</title>
+    <link href="/Public/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    
+    <script type="text/javascript" src="/Public/jQuery/jquery.min.js"></script>
+    
+    <script type="text/javascript" src="/Public/jQuery/angular.min.js"></script> -->
+    <link href="/Public/Css/jscss.css" rel="stylesheet" type="text/css">
+    <!--[if lt IE 9]>
+    <script src="//cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="//cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <link href="/Public/Css/teacher.css" rel="stylesheet" type="text/css"> <!-- </head>
+    <script src="/Public/bootstrap/js/bootstrap.min.js"></script>
+    <body> -->
+<!---头部内容区开始---->
+<div class="container pa0 type_t">
+    <div class="row topbg">
+        <div class="col-xs-12">
+            <span onclick="javascript:history.go(-1);" class="glyphicon glyphicon-chevron-left topReturn"></span><h3>相册</h3>
+        </div>
+    </div>
+    <div class="row tp15 select_bow">
+        <div class="col-xs-12">
+            <div class="col-xs-6 pull-right ">
+                <select style="" name="sect" id="select" class="form-control">
+                    <option value="76;40">16计用班（1）班</option>                    </select>
+            </div>
+        </div>
+    </div>
+    <div class="class_content">
+        <div class="row">
+            <div class="col-xs-6 text-center">
+                <a data-target="#myModal" data-toggle="modal" class="btn_style btn t_button">
+                    创建相册
+                </a>
+            </div>
+            <div class="col-xs-6 text-center">
+                <a href="#!/EditorAlbum" class="btn_style btn t_button">
+                    编辑相册
+                </a>
+            </div>
+        </div>
+        <div aria-hidden="true" aria-labelledby="myModalLabel" role="dialog" tabindex="-1" class="modal fade" bs-popup="" ng-model="test" id="myModal" style="display: none;">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class=" btn_style modal-header alert-info t_button" >
+                        <button aria-hidden="true" data-dismiss="modal" class="close" type="button" style="color:#fff;">×</button>
+                        <h4 id="myModalLabel" class="modal-title">添加新相册</h4>
+                    </div>
+                    <div class="modal-body">
+                        <form action="/index.php?m=Teacher&c=MyClass&a=AddAlbum" method="post" enctype="multipart/form-data" role="form" class="type_t">
+                            <div class="form-group">
+                                <label for="name">名称:</label>
+                                <input class="form-control" id="name" name="name" type="text" required>
+                            </div>
+                            <div class="form-group select_bow2">
+                                <select style="" name="sect" class="form-control">
+                                    <option value="76;40">16计用班（1）班</option>                                    </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="cover">封面图片:</label>
+                                <input style="border: 1px solid #07754E;" type="file" id="cover" name="cover">
+                            </div>
+                            <div class="form-group">
+                                <label for="description">描述:</label>
+                                <input class="form-control" id="description" name="description" type="text">
+                            </div>
+                            <button type="submit" class="btn_style btn t_button center-block">保存</button>
+                        </form>
+                    </div>
+                </div>
+                <!-- /.modal-content -->
+            </div>
+            <!-- /.modal-dialog -->
+        </div>
+        <!--按钮区结束-->
+        <!-- <br/> -->
+        <!--图片区开始-->
+        <div class="form-div search_form_div tp15">
+            <form id="search_form" action="/index.php?m=Teacher&c=MyClass&a=ListAlbum&album_name=" method="post" role="form">
+                <div class="input-group">
+                    <input type="text" id="album_name" name="album_name" value="" class="form-control" placeholder="搜索你想要的相册名称">
+                    <span class="input-group-btn type_t">
+                            <button id="sumbt" class="btn_style btn t_button" type="submit">
+                                <span class="glyphicon glyphicon-search"></span>
+                            </button>
+                        </span>
+                </div>
+            </form>
+        </div>
+
+        <!-- <br> -->
+        <!-- <br> -->
+        <div class="row tp20" id="select_content">
+            <!--列1-->
+            <div class="col-xs-6" style="margin-bottom: 15px;">
+                <div style="border: 1px solid #C9C9C9;">
+                    <a href="/index.php?m=Teacher&c=MyClass&a=LookAlbum&id=204" style="
+    display: block;
+    text-align: center;
+" >
+                        <img id="204" src="/Public/Uploads/albums/2017-03-13/thumb_5881aafd8e671.png " alt="..." class="album_cover img-responsive" style="cursor: hand;display:inline-block;height: 100px;overflow: hidden;">
+                    </a>
+                    <!-- <h4 style="text-align: center">一年级3班</h4> -->
+                    <p class="photo_line">
+                        <span class="photo_title pull-left">一年级3班</span>
+                        <span class="photo_num pull-right">共0张</span>
+                    </p>
+                    <p class="photo_con">一年级3班</p>
+                </div>
+            </div><div class="col-xs-6" style="margin-bottom: 15px;">
+            <div style="border: 1px solid #C9C9C9;">
+                <a href="/index.php?m=Teacher&c=MyClass&a=LookAlbum&id=205" style="
+    display: block;
+    text-align: center;
+" >
+                    <img id="205" src="/Public/Uploads/albums/2017-03-13/thumb_58c5f5896a383.jpg " alt="..." class="album_cover img-responsive" style="cursor: hand;display:inline-block;height: 100px;overflow: hidden;">
+                </a>
+                <!-- <h4 style="text-align: center">历史</h4> -->
+                <p class="photo_line">
+                    <span class="photo_title pull-left">历史</span>
+                    <span class="photo_num pull-right">共0张</span>
+                </p>
+                <p class="photo_con">2017.03.03</p>
+            </div>
+        </div>            </div>
+        <!--<div class="row" id="page">-->
+        <!--<div class="col-xs-12">-->
+        <!---->
+        <!--</div>-->
+        <!--</div>-->
+        <!--图片区结束-->
+    </div>
+</div>
+<br/>
+<br/>
+<br/>
+<br/>
+<!--底部内容区开始-->
+<div class="hide btn-group btn-group-justified navbar-fixed-bottom type_t" id="back" role="group" aria-label="主页-后退">
+    <a href="/index.php?m=Teacher&c=Index&a=index" class="btn btn-lg t_button" role="button">
+        <span class="glyphicon glyphicon-home"></span> 主页</a>
+    <a href="/index.php?m=Teacher&c=MyClass&a=index" class="btn btn-lg t_button" role="button">
+        <span class="glyphicon glyphicon-share-alt"></span> 后退</a>
+</div>
+<script>
+    var albumid = -1;
+    $(document).ready(function() {
+        var group_id = "1";
+        if (group_id == 2) {
+            $(".select_bow").css("display", "none");
+            $(".select_bow2").css("display", "none");
+            var back_btn = "";
+            back_btn = back_btn + "<a href='/index.php?m=Student&c=Index&a=index' class='btn btn-lg btn-warning' role='button'>" +
+                "<span class='glyphicon glyphicon-home'>" + "</span>" + "主页" + "</a>" +
+                "<a href='/index.php?m=Student&c=MyClass&a=index'  class='btn btn-lg btn-warning' role='button'>" +
+                "<span class='glyphicon glyphicon-share-alt'>" + "</span>" + " 后退" + "</a>";
+            $("#back").html(back_btn);
+            $('.btn_style').removeClass('t_button').addClass('x_button');
+        }
+
+        $("#album_name").blur(function() {
+            getAlbumName();
+        });
+
+        $("#sumbt").on("click",function() {
+            getAlbumName();
+        });
+
+        function getAlbumName() {                   // 搜索相册-函数
+            var name = $("#album_name").val();
+            if(name == "") {
+                alert("内容不能为空");
+                return false;
+            } else {
+                $("#search_form").attr("action", "index.php?m=Teacher&c=MyClass&a=ListAlbum&album_name=" + name);
+            }
+        }
+
+        $(".album_cover").on("click", function() {})
+        $(".album_cover").on("dblclick", function() {
+            albumid = $(this).attr("id");
+        })
+        $("#delete_album").on("click", function() {
+            if (albumid == -1) {
+                alert("没有指定删除的相册！！");
+            }
+            if (confirm("真的删除相册吗?")) {
+                var album_img = $("#" + albumid);
+                var div = album_img.parents(".col-xs-4")[0];
+                $.ajax({
+                    type: 'GET',
+                    url: "http://localhost/index.php?m=Teacher&c=MyClass&a=DelAlbum&album_id=" + albumid,
+                    success: function(data) {
+                        $(div).remove();
+                        albumid = -11;
+                    },
+                    error: function(data) {
+                        alert("删除相册出错，请联系管理员！！");
+                    }
+                });
+            }
+        })
+        $("#select").on("change", function() {
+            var id = $(this).val();
+            $.ajax({
+                type: 'GET',
+                url: "index.php?m=Teacher&c=MyClass&a=GradeSearch&id=" + id,
+                dataType: "json",
+                success: function(data) {
+                    var opstr = "";
+                    for (var i = 0; i < data.length; i++) {
+                        var lg_pic = data[i].cover;
+                        var sm_pic = data[i].sm_cover;
+                        var album_id = data[i].id;
+                        var album_name = data[i].name;
+                        var pic_src = "Public/Uploads/"
+                        var href = "/index.php?m=Teacher&c=MyClass&a=LookAlbum&id="
+                        opstr = opstr + "<div class='col-xs-4' style='margin-bottom: 50px;'>" +
+                            "<div style='width: 100px;height: 100px;'>" +
+                            "<a  href=" + href + album_id + " style='cursor: hand;'>" +
+                            "<img id=" + album_id + " src='" + pic_src + sm_pic + "' style='width: 100px;height: 100px;' class='album_cover img-responsive'>" +
+                            "</a>" +
+                            " <h4 style='text-align: center'>" + album_name + "</h4>" +
+                            "</div>" +
+                            "</div>";
+                    }
+                    $("#select_content").html(opstr);
+                    $("#page").html("");
+                },
+                error: function(e, xhl, dd) {
+                    alert("err");
+                }
+            });
+        });
+    })
+</script>

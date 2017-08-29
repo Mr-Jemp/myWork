@@ -1,1 +1,0 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="GetDirList.aspx.cs" Inherits="cdadmin.cdmain.GetDirList" %>

@@ -1,0 +1,70 @@
+<style>
+    #palert{height: 60px;width: 200px;position: fixed;top: 50%;left: 50%;background-color: #efe9e9;border: 1px solid #ccc;-moz-border-radius: 3px;-webkit-border-radius: 3px;border-radius:3px;text-align: center;margin-top: -30px;margin-left: -100px;line-height: 60px;}
+    #index{
+        min-height:600px;
+        overflow-y:auto;
+        padding-bottom: 100px;
+    }
+    #footer{width: 100%;height:100px;background:#f8f8f8;margin-top:50px;position:fixed;bottom:0px;left:0;right:0;margin-left:0;margin-right: 0}
+
+    #footer ul{margin:0 auto;width:100%;height:100px;margin-top: 20px;}
+    #footer ul li{list-style:none;float:left;margin:0 auto;margin-top:10px;width:20%;padding:0;}
+    #footer ul li img{margin:0 auto;}
+    #footer ul li a{text-decoration:none;}
+    #footer ul li p{text-align: center;color:black;}
+    @media screen and (max-width:720px) and (min-width:300px){
+        .container-fluid{position: absolute;bottom:0px;width:100%;height: 100%;margin:0;padding:0;}
+        #footer ul li{list-style:none;float:left;margin:0 auto;margin-top:10px;width:20%;padding:0;}
+        #footer ul li  img{width:25px;height:25px;}
+    }
+</style>
+<div id="footer">
+    <ul>
+        <li class="foot_li"><a href="/home"><img src="/public/img/footer/nav_home_default@2x.png" class="img-responsive image_a " /><p>首页</p></a></li>
+        <li class="foot_li"><a href="/study"><img src="/public/img/footer/nav_home_jy_default@2x.png" class="img-responsive  image_b" /><p>教研</p></a></li>
+        <li class="foot_li"><a href="/ZMT/classMeanage/classMeanage.html"><img src="/public/img/footer/nav_home_bj_default@2x.png" class="img-responsive  image_c" /><p>班级</p></a></li>
+        <li class="foot_li"><a><img src="/public/img/footer/nav_home_xywh_default@2x.png" class="img-responsive  image_d" /><p>校园文化</p></a></li>
+        <li class="foot_li"><a href="/account"><img src="/public/img/footer/nav_home_my_default@2x.png" class="img-responsive image_e" /><p>我</p></a></li>
+    </ul>
+</div>
+<script>
+    $(function(){
+        var h=$(document).height();
+        $('#index').height(h-100);
+        var Imgs=['u1.png','u2.png','u3.png','u4.png','u5.png'];
+        $(".image_a").mouseover(function(){
+            $(this).attr("src","/public/img/footer/u1.png");
+        }).mouseout(function(){
+            $(this).attr("src","/public/img/footer/nav_home_default@2x.png");
+        })
+        $(".image_b").mouseover(function(){
+            $(this).attr("src","/public/img/footer/u2.png");
+        }).mouseout(function(){
+            $(this).attr("src","/public/img/footer/nav_home_jy_default@2x.png");
+        })
+        $(".image_c").mouseover(function(){
+            $(this).attr("src","/public/img/footer/u3.png");
+        }).mouseout(function(){
+            $(this).attr("src","/public/img/footer/nav_home_bj_default@2x.png");
+        })
+        $(".image_d").mouseover(function(){
+            $(this).attr("src","/public/img/footer/u4.png");
+        }).mouseout(function(){
+            $(this).attr("src","/public/img/footer/nav_home_xywh_default@2x.png");
+        })
+        $(".image_e").mouseover(function(){
+            $(this).attr("src","/public/img/footer/u5.png");
+        }).mouseout(function(){
+            $(this).attr("src","/public/img/footer/nav_home_my_default@2x.png");
+        })
+
+        $(".foot_li p").each(function(){
+            $(this).hover(function(){
+                $(this).css("color","#56c399");
+            },function(){
+                $(this).css("color","black")
+            })
+        })
+
+    })
+</script>

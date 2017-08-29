@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css"/>
+		<link rel="stylesheet" type="text/css" href="css/addClass.css">
+		<style> *{margin: 0;padding: 0;}html,body{overflow-y：hidden;}</style>
+	</head>
+	<body ng-app="myApp">
+  			<div class="push_class add1">
+				<div class="new_class">+</div>
+				<p>添加老师</p>
+			</div>
+  			
+  	<!--老师.******************************************************-->
+  	<div class="contractChange" style="margin:0 0 110px 0;"> 
+  			<!--老师联系表-->
+  			<ul class="list-group contractTeacher" style="margin: 0;">
+  				<li class="list-group-item">
+  					<p class="col-xs-6">全部老师（4人）</p>
+  					<p class="col-xs-6"><img class="changeImgBottomOrRight scaleOneImg" src="images/fanhuixiangxia@2x.png"/></p>
+  				</li>
+  			</ul>
+  			
+  			<!--收缩老师部分-->
+  			<ul class="list-group contractTeacher scaleTeacher" style="margin: 0;border-bottom: 1px solid lightgray;">
+  				<!--<li class="list-group-item row">
+  					<p class="col-xs-6"><img src="images/20170518140719.png"/><span>赵晓华（语文）</span></p>
+  					<p class="col-xs-6"><img src="images/u71.png"/></p>
+  				</li>-->
+
+  			</ul>  			
+  	</div>
+
+
+	</body>
+	<script type="text/javascript" src="js/jquery-1.12.4.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/publicJs.js"></script>
+	<script type="text/javascript">
+		//点击全部老师
+		$(".contractTeacher:nth-child(odd)").click(function(){
+			$(this).next().stop().slideToggle(500,function(){
+				var img=$(this).prev().children().children().children();
+				if(img.attr('src')=="images/fanhuixiangxia@2x.png"){
+					img.attr("src","images/u71.png")
+				}else{
+					img.attr("src","images/fanhuixiangxia@2x.png")
+				}
+			});
+		})
+		
+		//进入详情列表  
+		
+		$(".scaleTeacher").on("click","li",function(){
+			window.location.href="addClass_teachDetalMessage.html";
+		})
+		
+		
+		
+		//点击添加老师
+		$(".push_class").click(function(){
+			window.location.href='openClass_addTeacer.html';
+		})
+		
+		//渲染老师
+		$.ajax({
+			type:"post",
+			url:"http://192.168.0.21:20882/addClassOperation/getClassIdByAccountId",
+			data:JSON.stringify({"accountId":5}),
+			contentType: "application/json; charset=UTF-8",
+			dataType:"json",
+			async:true,
+			success:function(data){
+				console.log(data);
+				var classId=data.msg;
+				$.ajax({
+					type:"post",
+					url:"http://192.168.0.21:20882/addClassOperation/getTeachersByClassId",
+					data:JSON.stringify({"classId":classId}),
+					contentType: "application/json; charset=UTF-8",
+					dataType:"json",
+					async:true,
+					success:function(data){
+						console.log(data);
+						$(".contractChange ul:first-child li>p:first-child").text("全部老师( "+data.msg.teachers.length+" )");
+						for(var i=0;i<data.msg.teachers.length;i++){
+							var newLi=$('<li class="list-group-item row">'
+						  					+'<p class="col-xs-6"><img src="http://192.168.0.21:8888/'+data.msg.teachers[i].faceImgUrl+'"/> <span>'+data.msg.teachers[i].nickName+"("+data.msg.teachers[i].mark+')</span></p>'
+						  					+'<p class="col-xs-6"><img src="images/u71.png"/></p>'
+			  							+'</li>');
+			  				$(".scaleTeacher").append(newLi);
+						}
+					},
+					error:function(){
+						console.log("错误");
+					}
+				})
+			},
+			error:function(){
+				console.log("获取班级id信息失败");
+			}
+		});
+		
+		
+	</script>
+</html>

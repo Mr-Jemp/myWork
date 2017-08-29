@@ -1,0 +1,262 @@
+<link rel="stylesheet" href="/re/css/re_public.css">
+<link rel="stylesheet" href="/re/css/re_upfile_des.css">
+<div class="re_upfile_top">
+    <span class="top-return" onclick="javascript:history.go(-1);"></span>
+    上传资源
+</div>
+<form action="test.php" enctype="multipart/form-data" method="post" id="uploadForm" name="upfiledes">
+    <input type="hidden" name="uId" value="1">
+    <input type="hidden" name="school_period_id" value="{{cur_var.school_period_id}}">
+    <input type="hidden" name="subject_id" value="{{cur_var.subject_id}}">
+    <input type="hidden" name="version_id" value="{{cur_var.version_id}}">
+    <input type="hidden" name="book_id" value="{{cur_var.semester_id}}">
+    <input type="hidden" name="node" value="{{section_ids}}">
+    <input type="hidden" name="knowledge" value="{{knowledge_point_ids}}">
+    <input type="hidden" name="type" value="{{cur_var.curriculum_type_id}}">
+    <input type="hidden" name="level" value="{{cur_var.curriculum_difficulty_id}}">
+    <input type="hidden" name="fileType" value="{{curtype}}">
+<ul class="re_type_list">
+    <!-- <li class="s_grade">班级<span></span></li>
+    <li class="s_subject">科目<span></span></li>
+    <li class="s_material" ng-click="setMaterial()">教材<span></span></li> -->
+    <!-- <li class="s_chapter" ng-click="swChapter()">章节内容<span></span></li> -->    
+    <li class="xiaoduan" ng-click="showSchoolPeriod()">校段<em>{{cur_var.school_period_name}}</em><span></span></li>
+    <li class="s_subject" ng-click="showSubject()">科目<em>{{cur_var.subject_name}}</em><span></span></li>
+    <li ng-click="showVersion()">版本<em>{{cur_var.version_name}}</em><span></span></li>
+    <li ng-click="showSemester()">册数<em>{{cur_var.semester_name}}</em><span></span></li>
+</ul>
+<div class="upfile_choice_chapter">
+    <dl id="section_con_area">
+        <dt>章节内容<span ng-click="showChapter()"></span></dt>
+    </dl>
+    <dl id="knowledge_con_area">
+        <dt>知识点<span ng-click="showKnowledgePoint()"></span></dt>
+    </dl>
+</div>
+<div class="resources_type">
+    <h4 class="re_upfile_title">上传空间</h4>
+      &nbsp;&nbsp;&nbsp;<input type="radio" name="to_where" value="0">我的&nbsp;&nbsp;&nbsp;<input type="radio" name="to_where" value="1">年级&nbsp;&nbsp;&nbsp;<input type="radio" name="to_where" value="2">本校
+</div>
+<div class="re_upfile_from">
+    <h4 class="re_upfile_title">上传{{des.title}}文件</h4>
+    <div class="re_upfile_block" ng-click="uploadvideo()">
+        <p>上传{{des.title}}文件</p>
+        <div class="uploadvideocontent">
+            <div class="file_icon">
+                <img src="{{des.pic}}">
+            </div>
+            <div class="file_name">
+                上传{{des.title}}20%
+            </div>
+            <!--<progress id="upfile_progress_bar" value="0"></progress>-->
+            <div class="upfile_progress_bar">
+                <div class="upfile_progress"></div>
+            </div>
+            <div class="upfile_type">
+                word/0M
+            </div>
+        </div>
+    </div>
+    <div class="re_uf_bldes">
+        限制大小为：{{des.upfile_video_size}}MB &nbsp;<span ng-if="curtype==14">数量限制：20张</span><br />（格式:{{des.upfile_video_ext|myjoin:","}} ）
+        <input type="file" name="video" id="uploadvideo" onchange="angular.element(this).scope().fileSelected('uploadvideo')" {{curtype == "picture"?' multiple="true"':''}}>
+    </div>
+</div>
+<div class="re_upfile_from" style="margin-bottom: 0px;">
+    <h4 class="re_upfile_title">{{des.title}}标题<span class="error_msg" ng-show="upfiledes.title.$error.required">(标题不能为空)</span><span class="error_msg" ng-show="upfiledes.title.$error.maxlength">(标题太长了,字数最多22个)</span></h4>
+    <div class="re_uf_style">
+        <input type="text" ng-model="title" name="title" value="" ng-maxlength="22" required placeholder="请输入{{des.title}}标题，字数最多22个">
+    </div>
+    <h4 class="re_upfile_title">内容说明<span class="error_msg" ng-show="upfiledes.explain.$error.maxlength">(内容说明太长了,字数最多150个)</span></h4>
+    <div class="re_uf_style">
+        <textarea rows="4" ng-model="explain" name="explain" ng-maxlength="150" placeholder="请输入{{des.title}}内容说明，字数最多150个"></textarea>
+    </div>
+    <h4 class="re_upfile_title">添加标签<span class="error_msg" ng-show="upfiledes.label.$error.maxlength">(标签内容过多,字数最多45个)</span></h4>
+    <div class="re_uf_style">
+        <input type="text" ng-model="label" name="label" value="" ng-maxlength="45" placeholder="每个标签用空格分隔，标签最多5个，每个标签的字数最多8个">
+    </div>
+</div>
+<ul class="re_type_list" ng-if="des.iscurriculum">
+    <li ng-click="showCurriculumType()">课程类型<em>{{cur_var.curriculum_type_name}}</em><span></span></li>
+    <li ng-click="showCurriculumDifficulty()">课程难度<em>{{cur_var.curriculum_difficulty_name}}</em><span></span></li>
+</ul>
+<div class="re_upfile_from mb0" ng-if="des.isEnclosure">
+    <h4 class="re_upfile_title">上传附件文档</h4>
+    <div class="re_upfile_block" ng-click="uploadenclosure()">
+        <p>上传文档文件</p>
+        <div class="uploadenclosurecontent">
+            <div class="file_icon">
+                <img src="{{des.pic}}">
+            </div>
+            <div class="file_name">
+                上传{{des.title}}20%
+            </div>
+            <!--<progress id="upfile_progress_bar" value="0"></progress>-->
+            <div class="upfile_progress_bar">
+                <div class="upfile_progress"></div>
+            </div>
+            <div class="upfile_type">
+                word/0M
+            </div>
+        </div>
+    </div>
+    <div class="re_uf_bldes">
+        最多可上传５个文件
+        <input type="file" name="enclosure" id="uploadenclosure" onchange="angular.element(this).scope().fileSelected('uploadenclosure')"  multiple="true">
+    </div>
+    <h4 class="re_upfile_title">上传视频封面</h4>
+    <div class="re_upfile_block" ng-click="uploadcover()">
+        <p>上传视频封面图片</p>
+        <div class="uploadcovercontent">
+            <div class="file_icon">
+                <img src="/re/img/re_upfile_des/upfile_icon/icon_tupian.png">
+            </div>
+            <div class="file_name">
+                上传{{des.title}}20%
+            </div>
+            <!--<progress id="upfile_progress_bar" value="0"></progress>-->
+            <div class="upfile_progress_bar">
+                <div class="upfile_progress"></div>
+            </div>
+            <div class="upfile_type">
+                word/0M
+            </div>
+        </div>
+    </div>
+    <div class="re_uf_bldes">
+        上传视频封面图片
+        <input type="file" accept="image/png,image/gif,image/jpeg" name="coverImg" id="uploadcover" onchange="angular.element(this).scope().fileSelected('uploadcover')">
+    </div>
+</div>
+<div class="re_upfile_sumbt">
+    <div class="re_upfile_xieyi"><input type="checkbox" ng-click="setRead()">我已阅读<a href="###">《资源上传服务条款》</a></div>
+    <div id="re_upfile_sumbt" ng-click="upfileSumbt(upfiledes.$valid)">确定上传</div>
+</div>
+<!--校段-->
+<div id="p_xiaoduan" class="p_dig">
+    <div class="p_dig_content">
+        <div class="p_head">请选择校段<span class="p_head_colse" ng-click="setTypeId('school_period',c.id,c.name,false,'')"></span></div>
+        <div class="p_content_list">
+            <ul>
+                <li ng-repeat="c in school_period" ng-click="setTypeId('school_period',c.id,c.name,true,'')" class="{{(c.id==tmp.school_period_id)?'pc_list_act':''}}">{{c.name}}</li>
+            </ul>
+        </div>
+        <div class="p_confirm" ng-click="setSchoolPeriod()">确定</div>
+    </div>
+</div>
+<!--科目-->
+<div id="p_subject" class="p_dig">
+    <div class="p_dig_content">
+        <div class="p_head">请选择科目<span class="p_head_colse" ng-click="setTypeId('subject',s.id,s.value,false,s.key)"></span></div>
+        <div class="p_content_list">
+            <ul>
+                <li ng-repeat="s in subject" ng-click="setTypeId('subject',s.id,s.value,true,s.key)" ng-class="(s.id==tmp.subject_id)?'pc_list_act':''">{{s.value}}</li>
+            </ul>
+        </div>
+        <div class="p_confirm" ng-click="setSubject()">确定</div>
+    </div>
+</div>
+<!--版本-->
+<div id="p_version" class="p_dig">
+    <div class="p_dig_content">
+        <div class="p_head">请选择版本<span class="p_head_colse" ng-click="setTypeId('version',s.id,s.value,false,s.key)"></span></div>
+        <div class="p_content_list">
+            <ul>
+                <li ng-repeat="s in version" ng-click="setTypeId('version',s.id,s.value,true,s.key)" ng-class="(s.id==tmp.version_id)?'pc_list_act':''">{{s.value}}</li>
+            </ul>
+        </div>
+        <div class="p_confirm" ng-click="setVersion()">确定</div>
+    </div>
+</div>
+<!--册数-->
+<div id="p_semester" class="p_dig">
+    <div class="p_dig_content">
+        <div class="p_head">请选择册数<span class="p_head_colse" ng-click="setTypeId('semester',s.id,s.value,false,s.key)"></span></div>
+        <div class="p_content_list">
+            <ul>
+                <li ng-repeat="s in semester" ng-click="setTypeId('semester',s.id,s.value,true,s.key)" ng-class="(s.id==tmp.semester_id)?'pc_list_act':''">{{s.value}}</li>
+            </ul>
+        </div>
+        <div class="p_confirm" ng-click="setSemester()">确定</div>
+    </div>
+</div>
+<!--教材-->
+<div id="p_material" class="p_dig">
+    <div class="p_dig_content">
+        <div class="p_head">请选择教材<span class="p_head_colse"></span></div>
+        <div class="p_switch">
+            <div class="p_switch_left {{cuswce=='up'?'p_switch_act':''}}" ng-click="swCe('up')">上册</div>
+            <div class="p_switch_right {{cuswce=='dow'?'p_switch_act':''}}" ng-click="swCe('dow')">下册</div>
+        </div>
+        <div class="p_content_list">
+            <ul>
+                <li ng-repeat="s in cursemester" ng-click="setTypeId('Teachingmaterial',s.id)" ng-class="(s.id==teachingmaterial_id)?'pc_list_act':''">{{s.title}}</li>
+            </ul>
+        </div>
+        <div class="p_confirm">确定</div>
+    </div>
+</div>
+<!--章节-->
+<div id="p_chapter" class="p_dig">
+    <div class="p_dig_content">
+        <div class="p_head">请选择章节内容<span class="p_head_colse" ng-click="setTypeIdCon('section',s.id,false,s.value,s.key)"></span></div>
+        <div class="p_chapter_content">
+            <div class="pc_left">
+                <ul>
+                    <li ng-repeat="s in section" ng-click="setTypeIdCon('section',s.id,true,s.value,s.key)" class="{{s.id==tmp.section_id?'pc_list_act':''}}">{{s.value}}</li>
+                </ul>
+            </div>
+            <div class="pc_right">
+                <ul>
+                    <li ng-repeat="p in section_child" ng-click="setTypeIdCon('section_child',p.id,true,p.value,p.key)" ng-class="{true:'pc_list_act'}[isSectionChild(p.id)]">{{p.value}}</li>
+                </ul>
+            </div>
+        </div>
+        <div class="p_confirm" ng-click="setChapter()">确定</div>
+    </div>
+</div>
+<!--知识点-->
+<div id="p_knowledge_point" class="p_dig">
+    <div class="p_dig_content">
+        <div class="p_head">请选择知识点内容<span class="p_head_colse" ng-click="setTypeIdCon('knowledge',s.id,false,s.value,s.key)"></span></div>
+        <div class="p_chapter_content">
+            <div class="pc_left">
+                <ul>
+                    <li ng-repeat="s in knowledge_point" ng-click="setTypeIdCon('knowledge',s.id,true,s.value,s.key)" class="{{s.id==tmp.knowledge_point_id?'pc_list_act':''}}">{{s.value}}</li>
+                </ul>
+            </div>
+            <div class="pc_right">
+                <ul>
+                    <li ng-repeat="p in knowledge_point_child" ng-click="setTypeIdCon('knowledge_child',p.id,true,p.value,p.key)" ng-class="{true:'pc_list_act'}[isKnowledgeChild(p.id)]">{{p.value}}</li>
+                </ul>
+            </div>
+        </div>
+        <div class="p_confirm" ng-click="setKnowledgePoint()">确定</div>
+    </div>
+</div>
+<!--课程类型-->
+<div id="p_curriculumtype" class="p_dig">
+    <div class="p_dig_content">
+        <div class="p_head">请选择课程类型<span class="p_head_colse" ng-click="setTypeId('CurriculumType',c.id,c.title,false,c.key)"></span></div>
+        <div class="p_content_list">
+            <ul>
+                <li ng-repeat="c in CurriculumType" ng-click="setTypeId('CurriculumType',c.id,c.title,true,c.key)" class="{{c.id==tmp.curriculum_type_id?'pc_list_act':''}}">{{c.title}}</li>
+            </ul>
+        </div>
+        <div class="p_confirm" ng-click="setCurriculumType()">确定</div>
+    </div>
+</div>
+<!--课程难度-->
+<div id="p_curriculumdifficulty" class="p_dig">
+    <div class="p_dig_content">
+        <div class="p_head">请选择课程难度<span class="p_head_colse" ng-click="setTypeId('CurriculumDifficulty',c.id,c.title,false,c.key)"></span></div>
+        <div class="p_content_list">
+            <ul>
+                <li ng-repeat="c in CurriculumDifficulty" ng-click="setTypeId('CurriculumDifficulty',c.id,c.title,true,c.key)" class="{{c.id==tmp.curriculum_difficulty_id?'pc_list_act':''}}">{{c.title}}</li>
+            </ul>
+        </div>
+        <div class="p_confirm" ng-click="setCurriculumDifficulty()">确定</div>
+    </div>
+</div>
+</form>
+<script src="/re/js/re_upfile_des.js"></script>

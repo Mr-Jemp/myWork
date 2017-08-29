@@ -1,0 +1,229 @@
+.topBar{
+	width: 100%;
+	height:2.75rem;
+	background:#53dfa9;
+	text-align: center;
+}
+.topBar p,.topBar span{
+	padding: 0.34rem 0;
+	color: white;
+}
+.topBar p{
+	font-size: 0.34rem;
+}
+.topBar span{
+	font-weight: 600;
+	font-size:0.54rem;
+}
+/*积分系列*/
+.intergal{
+	font-size:0.26rem;
+}
+.intergal ul li{
+	background: white;
+	width: 100%;
+	border-bottom: 1px solid #E3E3E3;
+}
+.intergal ul li a{
+	display: block;
+	width: 100%;
+	color: #333;
+	height:0.92rem;
+	padding: 0 0.3rem;
+	line-height: 0.92rem;
+}
+.intergal_icons{
+	text-align: right;
+}
+ div.intergal_name img{
+	vertical-align: middle;
+	width: 0.31rem;
+	height:0.31rem;
+}
+ div.intergal_icons img{
+	width: 0.11rem;
+	height:0.2rem;
+}
+.intergal hr{
+	margin-top: 0.05rem;
+	margin-bottom: 0.05rem;
+}
+/*充值积分*/
+.recharge_cont{
+	margin-top: 0.11rem;
+	width: 100%;
+}
+.recharge_cont ul{
+	width: 100%;
+	margin: 0 auto;
+}
+.recharge_cont ul li{
+	width: 33.3%;
+	float: left;
+	padding: 0.1rem;
+}
+.recharge_cont ul li a{
+	display: block;
+	background: white;
+	border: 1px solid #E3E3E3;
+}
+.recharge_cont ul li a span{
+	text-align: center;
+	display: block;
+	font-size: 0.24rem;
+	padding-top: 0.3rem;
+	padding-bottom:0.3rem;
+	color: #999999;
+}
+.recharge_cont ul li a span.recharge_cont_price{
+	color:#53dfa9 ;
+}
+.paly_type{
+	margin-top: 0.83rem;
+	background: white;
+}
+.paly_type ul{
+	width: 100%;
+}
+.paly_type ul li{
+	
+}
+.paly_type ul li div{
+	padding-top: 0.83rem;
+	float: left;1.6rem
+}
+.paly_type ul li div.intergal_name img{
+	padding-top: 0.41rem;
+}
+.paly_type ul li div.intergal_name span:first-child{
+	font-size: 1.15rem;
+}
+.paly_type ul li div.intergal_name span:last-child{
+	font-size: 1.0rem;
+	padding-left: 2.0rem;
+	color: #999999;
+}
+.paly_type ul li div.intergal_icons img{
+	display: block;
+	margin: 1.5rem auto;
+}
+.paly_type ul li div input{
+	margin: 1.5rem auto;
+}
+.paly_type p{
+	font-size: 1.4rem;
+	padding-bottom: 1.25rem;
+}
+/*提现积分*/
+.toRMB_{
+}
+.toRMB_>div{
+	background: white;
+	margin-bottom: 0.3rem;
+	    padding: 0 0.3rem;
+}
+.toRMB_>div p{
+	font-size:0.24rem;
+	padding-top: 0.17rem;
+	padding-bottom: 0.17rem;
+}
+.toRMB_>div p label{
+	font-size:0.36rem;
+	font-weight: 400;
+	margin-right: 0.83rem;
+}
+.toRMB_>div:first-child{
+	color: #999;
+}
+.toRMB_>div span{
+	color: #666666;
+	font-weight:550;
+	padding-right: 0.83rem;
+}
+/*积分明细*/
+.intergal_list{
+	width: 100%;
+	background: white;
+	padding: 0 0.15rem;
+	margin-top: 0.11rem;
+}
+.intergal_list ul{
+	width: 100%;
+}
+.intergal_list ul li{
+	width: 100%;
+	height:1.23rem;
+	border-bottom: 1px solid #E3E3E3;
+}
+.intergal_list ul li div{
+	float: left;
+}
+.intergal_list ul li div.intergal_list_name{
+	padding-right: 0;
+}
+.intergal_list ul li div.intergal_list_name span{
+	display: block;
+	padding-bottom:0.17rem;
+	padding-top: 0.07rem;
+}
+.intergal_list ul li div.intergal_list_name span:first-child{
+	font-size:0.3rem;
+	color: #161616;
+}
+.intergal_list ul li div.intergal_list_name span:last-child{
+	font-size: 0.22rem;
+	color: #999;
+}
+.intergal_list ul li div.intergal_list_number{
+	text-align: right;
+	font-size:0.3rem;
+	line-height:1.23rem;
+	color: #999;
+	padding-left: 0;
+}
+.intergal_list_number.corll{
+	color:#52DFAA!important ;
+}
+.bottomIfra{
+	position: fixed;
+	bottom: 0;
+	width:100%;
+	line-height:50px;
+	background:#53dfa9 ;
+	text-align: center;
+	color: white;
+	cursor: pointer;
+}
+
+/*积分规则*/
+.intergalrule{
+	margin-top:0.11rem;
+	background: white;
+	padding-bottom: 100px;
+}
+.intergalrule dt{
+	padding-top: 0.3rem;
+	padding-bottom:0.3rem;
+	color: #5c5c5c;
+}
+.intergalrule dd{
+	color: #979797;
+	font-size:0.24rem;
+}
+.intergalrule table{
+	text-align: center;
+	width: 100%;
+}
+.intergalrule table tr,.intergalrule table tr td{
+	border: 1px solid #D3D3D3;
+}
+.intergalrule table tr:first-child td{
+	color: white;
+	font-size: 0.22rem;
+	background:#53dfa9 ;
+	border: none;
+}
+.intergalrule table tr td{
+	padding: 0.24rem;
+	font-size: 0.22rem;
+}

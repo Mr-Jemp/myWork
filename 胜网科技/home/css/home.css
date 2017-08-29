@@ -1,0 +1,97 @@
+div,dl,dt,dd,ul,li{
+    margin: 0;
+    padding: 0;
+}
+li{
+    list-style: none;
+}
+.h-top{
+    height: 64px;
+    line-height: 64px;
+    background-color: #1de698;
+    width: 100%;
+}
+.h-top-head{
+    width: 90%;
+    height: 100%;
+    margin: 0 auto;
+}
+.h-top-logo{
+    color: #ffffff;
+    font-size: 14px;
+    height: 64px;
+    line-height: 64px;
+    float: left;
+}
+.h-top-logo img{
+    margin-right: 5px;
+}
+.h-top-user{
+    float: right;
+}
+.h-top-user dl{
+    margin-left: 34px;
+}
+.h-top-user a{
+    color: #ffffff;
+    text-decoration: none;
+}
+.h-top-user dl,.h-top-user dl dt,.h-top-user dl dd{
+    float: left;
+    height: 64px;
+    line-height: 64px;
+    color: #ffffff;
+}
+.h-top-user dl dt{
+    padding-right: 4px;
+}
+.h-top-user dl dd{
+    cursor: pointer;
+}
+.h-user-info img{
+    width: 40px;
+    height: 40px;
+    -moz-border-radius: 20px;
+    -webkit-border-radius: 20px;
+    border-radius:20px;
+}
+.h-user-info-down{
+    width: 0;
+    height: 0;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 7px solid #02A365;
+    display: inline-block;
+    margin-left: 3px;
+}
+/*//内容区 */
+.h-content{
+    width: 90%;
+    max-width: 900px;
+    background-color: #0b5748;
+    margin: 0 auto;
+    margin-top: 40px;
+    height: auto;
+}
+.h-content li{
+    width: 33.333%;
+    padding: 10px;
+    box-sizing: border-box;
+    position: relative;
+    text-align: center;
+    float: left;
+    overflow: hidden;
+}
+.h-content li img{
+    width: 100%;
+    cursor: pointer;
+}
+.h-content li span{
+    display: inline-block;
+    width: 100%;
+    position: absolute;
+    bottom: 18%;
+    left: 0;
+    color: #fff;
+    font-size: 24px;
+}

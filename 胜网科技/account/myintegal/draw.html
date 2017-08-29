@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+	    <meta name="Keywords" content="">
+	    <meta name="Description" content="">
+	    <meta name="format-detection" content="telephone=no">
+	    <meta name="apple-mobile-web-app-capable" content="yes">
+	    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+	    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0,minimum-scale=1.0">
+	    <title>抽奖</title>
+		<link rel="stylesheet" href="../../public/part/bootstrap/bootstrap.min.css" />
+		<link rel="stylesheet" href="../css/base.css" />
+		<link rel="stylesheet" href="../css/draw.css">
+		<body>
+		<header class="mycollect_top_a">
+			<ul class="top_a_ul">
+				<li class="top_a_le">
+					<img src="../images/icon_fanhui.png" />	
+				</li>
+			</ul>
+		</header>
+		<div class="main_draw">
+			<!--装盘内容-->
+			<div class="lunck_draw_wrap">
+				 <div class="wheel">
+					<canvas class="item" id="wheelCanvas" width="422px" height="422px"></canvas>
+					<img class="pointer" src="../images/wheel-pointer.png" />
+				</div>
+				 <p class="changeNumber">您还有 <span></span> 次机会</p>
+				 <p class="draw_newsreel"><span></span>中奖纪录</p>
+				 <div class="lunck_draw_rule">
+				 	<dl>
+				 		<dt>抽奖规则</dt>
+				 		<dd>1、每获取一次抽奖机会扣去50积分;</dd>
+				 		<dd>2、每人每天最多可获取10次抽奖机会;</dd>
+				 		<dd>3、每获取一次抽奖机会扣去50积分。</dd>
+				 	</dl>
+				 </div>
+			</div>
+		</div>
+		<div class="ifra"></div>
+		<div class="popBg">
+			<p class="winTip">
+				
+			</p>
+			<div class="winImg">
+				<img src="" />
+			</div>
+			<p class="winGood">领取</p>
+		</div>
+		
+		<div class="pop">
+		
+		</div>
+	</body>
+
+		<script src="../../public/part/jquery/jquery-3.1.1.min.js"></script>
+		<script src="../../public/part/draw/jqueryrotate.js"></script>
+		<script src="../js/publicJs.js"></script>
+		<script src="../js/aear.js"></script>
+		<script src="../js/draw.js"></script>
+		<script>
+			//	查看中奖纪录
+			$('.draw_newsreel').click(function(){
+				window.location="win_rule.html";
+			})
+			$('.top_a_le img').click(function(){
+				window.location.href = document.referrer;//返回上一页并刷新
+			})
+		</script>
+</html>

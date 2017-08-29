@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="Keywords" content="">
+	    <meta name="Description" content="">
+	    <meta name="format-detection" content="telephone=no">
+	    <meta name="apple-mobile-web-app-capable" content="yes">
+	    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+	    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0,minimum-scale=1.0">
+		<title>充值积分</title>
+		<link rel="stylesheet" href="../../public/part/bootstrap/bootstrap.min.css" />
+		<link rel="stylesheet" href="../css/base.css" />
+		<link rel="stylesheet" href="../css/myintegal.css" />
+	</head>
+	<body ng-app="interListApp" ng-controller="interListController">
+		<header class="mycollect_top_a">
+			<ul class="top_a_ul">
+				<li class="top_a_le">
+					<img src="../images/icon_fanhui.png" />		
+				</li>
+				<li class="top_a_con">我的积分明细</li>
+			</ul>
+		</header>
+		<div class="intergal_list">
+			<ul>
+				<li ng-repeat="va in purpose" >
+					<div class="intergal_list_name col-md-8 col-xs-8">
+						<span >{{va.purpose}}</span>
+						<span>{{timestamp2Time(va.createTime)}}</span>
+					</div>
+					<div class="intergal_list_number col-md-4 col-xs-4" ng-class="{corll:corInterList(va.value)=='+'}">{{va.value}}积分</div>
+				</li>			
+			</ul>
+		</div>
+	</body>
+		<script src="../../public/part/jquery/jquery-3.1.1.min.js"></script>
+		<script src="../../public/part/angular/angular.min.js"></script>
+		<script src="../js/publicJs.js"></script>
+		<script src="../js/common.js"></script>
+		<script>
+			angular.module("interListApp",["commonConfig"]).
+			controller('interListController',['$scope','$http',function($scope,$http){
+				
+				$http.get("http://192.168.0.21:20889/accountDetailManagementFacade/selectAccountDetail?uid=20889").then(function(res){
+					
+					$scope.purpose=res.data.msg;
+	 				$scope.corInterList=function(va){
+						console.log(va.slice(0,1))
+						return va.slice(0,1);
+					}
+					console.log($scope.purpose)
+					$scope.timestamp2Time = function(timestamp) {
+						var result = "";
+						var seperator1 = "-";
+						var seperator2 = ":";
+						if(timestamp) {
+							var d = new Date();
+							d.setTime(timestamp);
+							var year = d.getFullYear();
+							var month = d.getMonth() + 1;
+							var day = d.getDate();
+							var hours = d.getHours();
+							var minutes = d.getMinutes();
+							var seconds = d.getSeconds();
+							if(month >= 1 && month <= 9) {
+								month = "0" + month;
+							}
+							if(day >= 0 && day <= 9) {
+								day = "0" + day;
+							}
+							if(hours >= 1 && hours <= 9) {
+								hours = "0" + hours;
+							}
+							if(minutes >= 0 && minutes <= 9) {
+								minutes = "0" + minutes;
+							}
+							if(seconds >= 0 && seconds <= 9) {
+								seconds = "0" + seconds;
+							}
+							result = year + seperator1 + month + seperator1 + day + "  " + hours + seperator2 + minutes + seperator2 + seconds;
+						}
+						return result;
+
+				}
+			//	判断积分的加减情况赋予颜色
+					
+				}).catch(function(){
+					console.log("获取数据失败")
+				})
+			}])
+		</script>
+</html>

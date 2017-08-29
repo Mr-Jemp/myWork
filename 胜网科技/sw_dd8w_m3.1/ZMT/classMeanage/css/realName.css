@@ -1,0 +1,151 @@
+*{
+	padding: 0;
+	margin: 0;
+}
+html,body{
+	font-family: "宋体","冬青黑体";
+}
+.class_header{
+	background-color:#56c399;
+	height: 0.66rem;
+}
+.class_header img{
+	width: 0.3rem;
+	font-size: 0.17rem;
+	line-height: 0.66rem;
+	padding-left: 0.15rem;
+}
+.header_message{
+	font-size: 0.3rem;
+	color: white;
+	text-align: center;
+	padding-left: 1.2rem;
+}
+.class_header div{
+	line-height: 0.66rem;
+}
+p{
+	margin: 0;
+}
+.class_header .selectClass{
+	font-size: 0.2rem;
+	color: white;
+	text-align: right;
+	padding-right: 0.55rem;
+}
+/*真实姓名*/
+.realMessage li{
+	list-style: none;
+	padding-left: 0.2rem;
+	height: 0.6rem;
+	line-height: 0.6rem;
+	border-bottom: 1px solid gray;
+	font-size: 0.2rem;
+}
+.realMessage li input{
+	margin-left: 0.3rem;
+	width: 5rem;
+	border-width: 0 ;
+	background-color: rgba(0,0,0,0);
+	outline: none;
+}
+/*用户认证实名协议*/
+.read{
+	
+	padding-left: 0.2rem;
+	font-size:0.14rem ;
+	color: gray;
+}
+.read span{
+	color: #FFBC30;
+}
+/*证件号错误*/
+.idFail{
+	font-size: 0.14rem;
+	color: red;
+	display: none;
+}
+
+
+.accept{
+	margin-top: 1rem;
+	text-align: center;
+}
+.accept button{
+	border-radius: 0.1rem;
+	width: 50%;
+	height: 0.5rem;
+	font-size: 0.2rem;
+	border-width: 0;
+}
+.hint{
+	margin-top:1rem;
+	padding-left: 0.2rem;
+	color: #FEA18F;
+	font-size: 0.12rem;
+}
+.hint p:nth-child(1)~p{
+	color: gray;
+}
+
+/*认证通过*/
+.pass{
+	margin-top: 1rem;
+	text-align: center;
+	font-size: 0.2rem;
+	color: #0095E2;
+}
+.pass>img{
+	width: 1.5rem;
+}
+.pass span{
+	color: #F4BB19;
+}
+.pass p img{
+	width: 0.4rem;
+}
+/*上传身份证*/
+.photoRealName li{
+	padding: 0.2rem;
+	height: 2rem;
+	list-style: none;
+	display: -webkit-flex; /* Safari */
+  	display: flex;
+	align-items:center;
+	justify-content:space-between;
+	background-color: white;
+}
+.photoRealName li img{
+	height: 50%;
+	
+}
+.photoRealName li p{
+	display: inline-block;
+	margin-left: 0.2rem;
+	margin-right: 0.8rem;
+}
+.photoRealName li span{
+	display: block;
+	font-size: 0.24rem;
+}
+.photoRealName li span:last-child{
+	color: darkgray;
+	
+}
+/*校段*/
+.schoolRealName li{
+	list-style: none;
+	display: -webkit-flex; /* Safari */
+  	display: flex;
+	align-items:center;
+	justify-content:space-between;
+	background-color: white;
+	padding: 0.2rem;
+	font-size: 0.24rem;
+	border-bottom: 1px solid #F3F1F1
+}
+.schoolRealName input{
+	border: 0;
+	width: 5rem;
+	outline: none;
+}

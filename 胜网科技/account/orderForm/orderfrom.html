@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html ng-app="myorderApp" >
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
+		<meta name="apple-mobile-web-app-capable" content="yes"/>
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"/>
+		<meta http-equiv="Access-Control-Allow-Origin" content="*">
+		<title>我的订单</title>
+		
+		<link rel="stylesheet" href="../../public/part/bootstrap/bootstrap.min.css" />
+		<link rel="stylesheet" href="../css/base.css" />
+		<link rel="stylesheet" href="../css/orderForm.css" />
+		
+		
+		
+	</head>
+	<body ng-controller="myorderCtrl">
+		<header class="mycollect_top_a">
+			<ul class="top_a_ul">
+				<li class="top_a_le"  >
+						<a href="../index.html"><img src="../images/icon_fanhui.png" /></a>						
+				</li>
+				<li class="top_a_con">我的订单</li>
+			</ul>
+		</header>
+		<div class="order_from_top clearfix">
+			<ul>
+				<li class="top_bal topBul " id="target">
+					<a  ng-click="focus('order',0)">全部</a>
+				</li>
+				<li class="top_bal">
+					<a  ng-click="focus('notpay',1)">待付款</a>
+				</li>
+				<li class="top_bal">
+					<a ng-click="focus('notgoods',2)">待发货</a>
+				</li>
+				<li class="top_bal">
+					<a  ng-click="focus('nottakes',3)">待收货</a>
+				</li>
+				<li class="top_bal">
+					<a  ng-click="focus('noteav',4)">待评价</a>
+				</li>
+			</ul>
+		</div>
+		<div class="orderConts" ui-view></div>
+			
+		<div class="come_top">
+			<img src="../images/fantop.png" />
+		</div>
+		<div class="ifra"></div>
+	
+		<script src="../../public/part/jquery/jquery-3.1.1.min.js"></script>
+		<script src="../../public/part/angular/angular.min.js"></script>
+		<script src="../../public/part/angular/angular-ui-router.min.js"></script>
+		<script src="../js/publicJs.js"></script>
+		<script src="../js/orderForm.js"></script>
+	</body>		
+</html>

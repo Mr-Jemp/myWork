@@ -1,0 +1,172 @@
+.re_upfile_top{
+    position: relative;
+    text-align: center;
+    height: 45px;
+    line-height: 45px;
+    background-color: #52DFAA;
+    width: 100%;
+    padding: 0px 10px;
+    box-sizing: border-box;
+    color: #ffffff;
+    font-size: 16px;
+}
+.re_upfile_title{
+    height: 50px;
+    line-height: 50px;
+    background-color: #f9f9f9;
+    border-bottom: 1px solid #e6e6e6;
+    border-top: 1px solid #e6e6e6;
+    padding-top: 14px;
+    box-sizing: border-box;
+    padding-left: 5px;
+}
+.re_upfile_title h2{
+    font-size:16px;
+    line-height: 20px;
+    height: 20px;
+    border-left: solid 4px #53dfa9;
+    padding-left: 5px;
+}
+.re_upfile_title h2.blcolor{
+    border-left: solid 5px #dfa953;
+}
+.top-return{
+    width: 20px;
+    height: 19px;
+    position: absolute;
+    top:50%;
+    left: 10px;
+    margin-top: -10px;
+    display: inline-block;
+    background: url('../img/re_icon.png') no-repeat -191px 0px;
+    background-size: 320px 240px;
+    cursor: pointer;
+}
+.re_upfile_list{
+    height: auto;
+    overflow: hidden;
+}
+.re_upfile_list li{
+    width: 33.333%;
+    float: left;
+    border-bottom: 1px solid #E6E6E6;
+    border-right: 1px solid #E6E6E6;
+    height: 100px;
+    box-sizing: border-box;
+}
+.re_upfile_list li.nredge{
+    border-right: none;
+}
+.re_upfile_list li.nobtt{
+    border-bottom: none;
+}
+.re_upfile_img{
+    height: 60px;
+    text-align: center;
+}
+.re_upfile_img span{
+    width: 32px;
+    height: 32px;
+    display: inline-block;
+    background: url('../img/re_icon.png') no-repeat -39px -25px;
+    background-size: 320px 240px;
+    margin-top: 26px;
+    cursor: pointer;
+}
+.re_u-class span{
+    background-position: -77px -23px;
+}
+.re_doc span{
+    background-position: -112px -25px;
+}
+.re_cer_volume span{
+    background-position: -39px -60px;
+}
+.re_subject span{
+    background-position: -77px -60px;
+}
+.re_word span{
+    background-position: -117px -60px;
+}
+.re_courseware span{
+    background-position: -39px -96px;
+}
+.re_teaching_plan span{
+    background-position: -76px -95px;
+}
+.re_guiding_case span{
+    background-position: -115px -95px;
+}
+.re_video span{
+    background-position: -40px -127px;
+}
+.re_audio span{
+    background-position: -80px -127px;
+}
+.re_pic span{
+    background-position: -118px -127px;
+}
+
+.re_upfile_name{
+    height: 40px;
+    text-align: center;
+    height: 30px;
+    width: 100%;
+}
+.re_upfile_name a{
+    color: #666666;
+}
+.re_upfile_name a:hover{
+    color: #0000ff;
+}
+
+@media only screen and (min-width: 700px) {
+    .re_upfile_img span{
+        background-position: -77px -54px;
+        background-size: 640px 480px;
+    }
+    .re_upfile_list li{
+        height: 140px;
+    }
+    .re_upfile_img {
+        height: 90px;
+    }
+    .re_upfile_img span {
+        width: 67px;
+        height: 60px;
+        margin-top: 25px;
+    }
+    .re_u-class span{
+        background-position: -152px -50px;
+    }
+    .re_doc span{
+        background-position: -224px -54px;
+    }
+    .re_cer_volume span{
+        background-position: -79px -124px;
+    }
+    .re_subject span{
+        background-position: -152px -127px;
+    }
+    .re_word span{
+        background-position: -229px -128px;
+    }
+    .re_courseware span{
+        background-position: -77px -194px;
+    }
+    .re_teaching_plan span{
+        background-position: -152px -194px;
+    }
+    .re_guiding_case span{
+        background-position: -233px -195px;
+    }
+    .re_video span{
+        background-position: -76px -254px;
+    }
+    .re_audio span{
+        background-position: -156px -258px;
+    }
+    .re_pic span{
+        background-position: -234px -256px;
+    }
+}

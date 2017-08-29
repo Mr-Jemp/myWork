@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css"/>
+		<link rel="stylesheet" type="text/css" href="css/realName.css"/>
+		<link rel="stylesheet" type="text/css" href="css/classMeanage.css"/>
+	</head>
+	<style>body,html{background-color: #F3F1F1;}</style>
+	<body>
+			<!--头部-->
+			<div class="class_header row">
+				<div class="col-xs-2" onclick="javascript:history.go(-1);">
+					<img src="images/fanhui@2x.png"/>
+				</div>
+				<div class="header_message col-xs-7 ">信息认证</div>
+				<div class="selectClass col-xs-3">提交</div>
+			</div>
+			<p style="height: 0.2rem;background-color: #F3F1F1;"></p>
+			<!--真实姓名 证件号-->
+			<ul class="realMessage" style="margin: 0;background-color: white;">
+				<li style="border: 1px solid #F3F1F1;">
+					<span>姓名：</span>
+					<input type="text" placeholder="请填写真实姓名"/>
+				</li>
+				<li style="border: 0;">
+					<span>身份证号：</span>
+					<input type="number" placeholder="请明天写真实身份证号码"/>
+					<span class="idFail">*证件号码错误</span>
+				</li>
+			</ul>
+			<p style="height: 0.2rem;background-color: #F3F1F1;"></p>
+			<ul class="photoRealName" style="margin: 0;">
+				<li style="border: 1px solid #F3F1F1;">
+					<img  src="images/矢量智能对象@3x.png"/>
+					<p><span style="font-size: 0.3rem;">身份证正面</span><span>请上传身份证正面照片</span></p>
+					<img style="height: 90%;float: right;cursor: pointer;" src="images/添加图片@3x.png" alt="" />
+				</li>
+				<li style="border: 0;">
+					<img src="images/身份证@3x.png"/>
+					<p><span style="font-size: 0.3rem;">身份证反面</span><span>请上传身份证反面照片</span></p>
+					<img style="height: 90%;float: right;cursor: pointer;" src="images/添加图片@3x.png" alt="" />
+				</li>
+			</ul>
+			<p style="height: 0.2rem;background-color: #F3F1F1;"></p>
+		
+			<ul class="schoolRealName">
+				<li>
+					<p>校段</p>
+					<p style="color:darkgray;">请选择校段<img style="margin-left: 0.1rem;width: 0.15rem;" src="images/小箭头@3x.png"/></p>
+				</li>
+				<li>
+					<p>教学科目</p>
+					<p style="color:darkgray ;">请选择教学科目<img style="margin-left: 0.1rem;width: 0.15rem;" src="images/小箭头@3x.png"/></p>
+				</li>
+				<li>
+					<p>手机号码：<input type="number" /></p>
+					
+				</li>
+			</ul>
+		
+			<!--校段-->
+			
+		
+		
+			<!--<div id="footer">
+			<ul>
+			<li class="foot_li"><a href="../index.html"><img src="../images/footer/nav_home_default@2x.png" class="img-responsive image_a " /><p>首页</p></a></li>
+			<li class="foot_li"><a><img src="../images/footer/nav_home_jy_default@2x.png" class="img-responsive  image_b" /><p>教研</p></a></li>
+			<li class="foot_li"><a href="classMeanage.html"><img src="../images/footer/nav_home_bj_default@2x.png" class="img-responsive  image_c" /><p>班级</p></a></li>
+			<li class="foot_li"><a><img src="../images/footer/nav_home_xywh_default@2x.png" class="img-responsive  image_d" /><p>校园文化</p></a></li>
+			<li class="foot_li"><a><img src="../images/footer/nav_home_my_default@2x.png" class="img-responsive image_e" /><p>我</p></a></li>
+			</ul>
+			</div>-->
+	</body>
+	<script type="text/javascript" src="js/jquery-1.12.4.min.js" ></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/publicJs.js" ></script>
+	<script type="text/javascript">
+		//选择校段
+		$(".schoolRealName li:first-child").click(function(){
+			
+		})
+
+	</script>
+	
+</html>
+

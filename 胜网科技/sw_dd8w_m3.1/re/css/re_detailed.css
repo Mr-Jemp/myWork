@@ -1,0 +1,10 @@
+.detailed-content{
+    padding: 10px;
+}
+.detailed-content h2{
+    font-size: 18px;
+    text-align: center;
+}
+.re-download{
+    cursor: pointer;
+}

@@ -1,0 +1,74 @@
+		/*提示*/
+.reminderParent{
+	display: none;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0,0,0,0.5);
+}
+.reminder{
+	position: absolute;
+	top:40%;left: 0;right: 0;margin: 0 auto;
+	margin: auto;
+	width: 50%;
+	border-radius: 0.1rem;
+	background-color: white;
+}
+.reminder .comfirm{
+	margin: 0;
+	padding: 0.3rem;
+	text-align: center;
+	border-bottom: 1px solid gray;
+	font-size: 0.28rem;
+}
+.reminder .comfirm span:nth-child(1){
+	font-weight: bolder;
+	font-size: 0.28rem;
+}
+.reminder .know{
+	cursor: pointer;
+	color: #007AFF;
+	font-weight: bold;
+	text-align: center;
+	margin: 0;
+	font-size: 0.24rem;
+	line-height: 0.8rem;
+}
+.reminder .cancel{
+	margin: 0;
+	position: relative;
+}
+.reminder .cancel a{
+	padding: 0.2rem;
+	text-align: center;
+	font-size: 0.26rem;
+	display: inline-block;
+	width: 48%;
+	height: 100%;
+	color: #007AFF;
+	text-decoration: none;
+}
+.reminder .cancel a:nth-child(1){
+	border-right: 1px solid gray;
+}
+/*确定取消*/
+.cancelSure{
+	display: none;
+	padding: 0.4rem;
+	text-align: center;
+	border-radius:0.222222rem ;
+	width: 5rem;
+	background-color: rgba(0,0,0,0.5);
+	position: fixed;
+	top: 45%;
+	left: 0;right: 0;
+	margin: auto;	
+	color: white;
+	font-size: 0.2rem;
+}
+.cancelSure p:nth-child(2){
+	text-align: left;
+	font-size: 0.17rem;
+}

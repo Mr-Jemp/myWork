@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
+		<meta name="apple-mobile-web-app-capable" content="yes"/>
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"/>
+		<meta http-equiv="Access-Control-Allow-Origin" content="*">
+		<title></title>
+		<link rel="stylesheet" href="../../public/part/bootstrap/bootstrap.min.css" />
+		<link rel="stylesheet" href="../css/base.css" />
+		<link rel="stylesheet" href="../css/index.css" />
+	</head>
+	<body >
+
+		<!--课程记录-->
+		<div id="" ng-app="lessonApp" ng-controller="lessonController" class="">
+			<header class="mycollect_top_a">
+			<ul class="top_a_ul">
+				<li class="top_a_le">
+					<img src="../images/icon_fanhui.png" />		
+				</li>
+				<li class="top_a_con">
+					学习课程
+				</li>
+				<li class="top_a_ri">编辑</li>
+			</ul>
+		</header>
+		
+			<nav class="clearfix">
+			<div class="overTime">
+			  <div class="overTime_A col-md-6  col-xs-6 clepadding">
+			    <p class="col-md-12  col-xs-12 clepadding">完成程度  <span class="caret"></span></p>
+			  	<ul class="overTime_A_list">
+				    <li><a href="#">全部</a></li>
+				    <li><a href="#">进行中</a></li>
+				    <li><a href="#">已完成</a></li>
+				 </ul>
+			  </div>		  
+			  <div class="overTime_B col-md-6  col-xs-6 clepadding">
+			    <p  class="col-md-12  col-xs-12 clepadding">课程类型  <span class="caret"></span></p>
+			  	<ul class="overTime_B_list">
+				    <li><a href="#">计算机</a></li>
+				    <li><a href="#">音乐</a></li>
+				    <li><a href="#">设计</a></li>
+				    <li><a href="#">语文</a></li>
+				    <li><a href="#">数学</a></li>
+				    <li><a href="#">英语</a></li>
+				    <li><a href="#">物理</a></li>
+				 </ul>
+			  </div>
+			</div>
+		</nav>
+		<!--内容部分-->
+		<!--学习课程-->
+		<div class=" lesson_list_cont clearfix" >
+			<div class="lesson_listcont clearfix ">
+				<ul>
+					<li class="clearfix">
+						<div class="tabcon_collect"> 		                	
+		                	<div class="tabcon_collect_input" style="display: none;">
+		                		<input type="checkbox" class="isCollect" id=""/>	
+		                	</div>	                	
+		                	<div class="tabcon_collect_img "><img src="../images/img_touxiang.png" /></div>								
+							<div class="tabcon_collect_info ">
+								<p class="tabcon_collect_name col-md-12 col-xs-12 " ><a>文具店未收到货肯定文具店未收到货肯定</a></p>
+								<p class="tabcon_collect_amount col-md-12 col-xs-12 ">
+									<span class="clepadding tabcon_col_a"><img src="../images/icon_kecheng.png"/> 化学</span>
+									<span class="clepadding tabcon_col_b"><img src="../images/time.png"/></i>已经完成<label>1</label>/11课</span>
+								</p>
+							</div>               	
+		                </div>
+					</li>
+				</ul>
+			</div>
+
+		</div>
+		<div class="noCollect">删除</div>
+		</div>
+		<div class="ifrass "></div>
+		<script src="../../public/part/jquery/jquery-3.1.1.min.js"></script>
+		<script src="../../public/part/angular/angular.min.js"></script>
+		<script src="../../public/part/angular/angular-route.js"></script>	
+		<script src="../js/publicJs.js"></script>
+		<script src="../js/lessonNotes.js"></script>
+	</body>
+</html>
+
+

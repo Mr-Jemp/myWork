@@ -1,0 +1,664 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>课堂</title>
+		<link rel="stylesheet" href="../public/part/bootstrap/bootstrap.min.css" />
+		<link rel="stylesheet" href="css/base.css" />
+		<link rel="stylesheet" href="css/index.css" />
+		<script src="http://cdn.bootcss.com/jquery/1.12.0/jquery.min.js"></script>
+		<script src="//apps.bdimg.com/libs/jqueryui/1.10.4/jquery-ui.min.js"></script>
+		<script src="/public/part/pdf/generic/build/pdf.js"></script>
+	</head>
+	<body>
+		<div id="cont">
+			<!--<div class="cent clearfix">-->
+			<!--中间展示区-->
+			<div id="main" class="column">
+				<!--画板部分-->
+				<canvas id="painter" class="painter ishide" style="cursor: default;">
+		        			Your browser does not support the canvas element.
+		       		</canvas>
+				<!--各种形式展示-->
+				<div class="show_cont">
+
+				</div>
+				<div class="pdf">
+					<canvas id="the-canvas"></canvas>
+				</div>
+			</div>
+			<!--底部功能区-->
+				<footer id="footer" class="">
+					<!--上传-->
+					<!--即时聊天消息-->
+		<div class="chatBox">
+					<div class="chatLeft">
+						<div class="chat01">
+							<div class="chat01_title">
+								<ul class="talkTo">
+									<li>
+										<a href="javascript:;">王旭</a>
+									</li>
+								</ul>
+								<a class="close_btn" href="javascript:;"></a>
+							</div>
+							<div class="chat01_content">
+								<div class="message_box mes1">
+								</div>
+								<div class="message_box mes2">
+								</div>
+								<div class="message_box mes3" style="display: block;">
+								</div>
+								<div class="message_box mes4">
+								</div>
+								<div class="message_box mes5">
+								</div>
+								<div class="message_box mes6">
+								</div>
+								<div class="message_box mes7">
+								</div>
+								<div class="message_box mes8">
+								</div>
+								<div class="message_box mes9">
+								</div>
+								<div class="message_box mes10">
+								</div>
+							</div>
+						</div>
+						<div class="chat02">
+							<div class="chat02_title">
+								<a class="chat02_title_btn ctb01" href="javascript:;"></a>
+								<a class="chat02_title_btn ctb02" href="javascript:;" title="选择文件">
+									<embed width="15" height="16" flashvars="swfid=2556975203&amp;maxSumSize=50&amp;maxFileSize=50&amp;maxFileNum=1&amp;multiSelect=0&amp;uploadAPI=http%3A%2F%2Fupload.api.weibo.com%2F2%2Fmss%2Fupload.json%3Fsource%3D209678993%26tuid%3D1887188824&amp;initFun=STK.webim.ui.chatWindow.msgToolBar.upload.initFun&amp;sucFun=STK.webim.ui.chatWindow.msgToolBar.upload.sucFun&amp;errFun=STK.webim.ui.chatWindow.msgToolBar.upload.errFun&amp;beginFun=STK.webim.ui.chatWindow.msgToolBar.upload.beginFun&amp;showTipFun=STK.webim.ui.chatWindow.msgToolBar.upload.showTipFun&amp;hiddenTipFun=STK.webim.ui.chatWindow.msgToolBar.upload.hiddenTipFun&amp;areaInfo=0-16|12-16&amp;fExt=*.jpg;*.gif;*.jpeg;*.png|*&amp;fExtDec=选择图片|选择文件" data="upload.swf" wmode="transparent" bgcolor="" allowscriptaccess="always" allowfullscreen="true" scale="noScale" menu="false" type="application/x-shockwave-flash" src="http://service.weibo.com/staticjs/tools/upload.swf?v=36c9997f1313d1c4" id="swf_3140">
+								</a>
+								<a class="chat02_title_btn ctb03" href="javascript:;" title="选择附件">
+									<embed width="15" height="16" flashvars="swfid=2556975203&amp;maxSumSize=50&amp;maxFileSize=50&amp;maxFileNum=1&amp;multiSelect=0&amp;uploadAPI=http%3A%2F%2Fupload.api.weibo.com%2F2%2Fmss%2Fupload.json%3Fsource%3D209678993%26tuid%3D1887188824&amp;initFun=STK.webim.ui.chatWindow.msgToolBar.upload.initFun&amp;sucFun=STK.webim.ui.chatWindow.msgToolBar.upload.sucFun&amp;errFun=STK.webim.ui.chatWindow.msgToolBar.upload.errFun&amp;beginFun=STK.webim.ui.chatWindow.msgToolBar.upload.beginFun&amp;showTipFun=STK.webim.ui.chatWindow.msgToolBar.upload.showTipFun&amp;hiddenTipFun=STK.webim.ui.chatWindow.msgToolBar.upload.hiddenTipFun&amp;areaInfo=0-16|12-16&amp;fExt=*.jpg;*.gif;*.jpeg;*.png|*&amp;fExtDec=选择图片|选择文件" data="upload.swf" wmode="transparent" bgcolor="" allowscriptaccess="always" allowfullscreen="true" scale="noScale" menu="false" type="application/x-shockwave-flash" src="http://service.weibo.com/staticjs/tools/upload.swf?v=36c9997f1313d1c4" id="swf_3140">
+								</a>
+								<label class="chat02_title_t">
+                            <a href="chat.htm" target="_blank">聊天记录</a></label>
+								<div class="wl_faces_box">
+									<div class="wl_faces_content">
+										<div class="title">
+											<ul>
+												<li class="title_name">常用表情</li>
+												<li class="wl_faces_close"><span>&nbsp;</span></li>
+											</ul>
+										</div>
+										<!--<div class="wl_faces_main">
+											<ul>
+												<li>
+													<a href="javascript:;">
+														<img src="img/emo_01.gif" /></a>
+												</li>
+												<li>
+													<a href="javascript:;">
+														<img src="img/emo_02.gif" /></a>
+												</li>
+												<li>
+													<a href="javascript:;">
+														<img src="img/emo_03.gif" /></a>
+												</li>
+												<li>
+													<a href="javascript:;">
+														<img src="img/emo_04.gif" /></a>
+												</li>
+												<li>
+													<a href="javascript:;">
+														<img src="img/emo_05.gif" /></a>
+												</li>
+												<li>
+													<a href="javascript:;">
+														<img src="img/emo_06.gif" /></a>
+												</li>
+												<li>
+													<a href="javascript:;">
+														<img src="img/emo_07.gif" /></a>
+												</li>
+												<li>
+													<a href="javascript:;">
+														<img src="img/emo_08.gif" /></a>
+												</li>
+												<li>
+													<a href="javascript:;">
+														<img src="img/emo_09.gif" /></a>
+												</li>
+												<li>
+													<a href="javascript:;">
+														<img src="img/emo_10.gif" /></a>
+												</li>
+												<li>
+													<a href="javascript:;">
+														<img src="img/emo_11.gif" /></a>
+												</li>
+												<li>
+													<a href="javascript:;">
+														<img src="img/emo_12.gif" /></a>
+												</li>
+												<li>
+													<a href="javascript:;">
+														<img src="img/emo_13.gif" /></a>
+												</li>
+												<li>
+													<a href="javascript:;">
+														<img src="img/emo_14.gif" /></a>
+												</li>
+												<li>
+													<a href="javascript:;">
+														<img src="img/emo_15.gif" /></a>
+												</li>
+												<li>
+													<a href="javascript:;">
+														<img src="img/emo_16.gif" /></a>
+												</li>
+												<li>
+													<a href="javascript:;">
+														<img src="img/emo_17.gif" /></a>
+												</li>
+												<li>
+													<a href="javascript:;">
+														<img src="img/emo_18.gif" /></a>
+												</li>
+												<li>
+													<a href="javascript:;">
+														<img src="img/emo_19.gif" /></a>
+												</li>
+												<li>
+													<a href="javascript:;">
+														<img src="img/emo_20.gif" /></a>
+												</li>
+												<li>
+													<a href="javascript:;">
+														<img src="img/emo_21.gif" /></a>
+												</li>
+												<li>
+													<a href="javascript:;">
+														<img src="img/emo_22.gif" /></a>
+												</li>
+												<li>
+													<a href="javascript:;">
+														<img src="img/emo_23.gif" /></a>
+												</li>
+												<li>
+													<a href="javascript:;">
+														<img src="img/emo_24.gif" /></a>
+												</li>
+												<li>
+													<a href="javascript:;">
+														<img src="img/emo_25.gif" /></a>
+												</li>
+												<li>
+													<a href="javascript:;">
+														<img src="img/emo_26.gif" /></a>
+												</li>
+												<li>
+													<a href="javascript:;">
+														<img src="img/emo_27.gif" /></a>
+												</li>
+												<li>
+													<a href="javascript:;">
+														<img src="img/emo_28.gif" /></a>
+												</li>
+												<li>
+													<a href="javascript:;">
+														<img src="img/emo_29.gif" /></a>
+												</li>
+												<li>
+													<a href="javascript:;">
+														<img src="img/emo_30.gif" /></a>
+												</li>
+												<li>
+													<a href="javascript:;">
+														<img src="img/emo_31.gif" /></a>
+												</li>
+												<li>
+													<a href="javascript:;">
+														<img src="img/emo_32.gif" /></a>
+												</li>
+												<li>
+													<a href="javascript:;">
+														<img src="img/emo_33.gif" /></a>
+												</li>
+												<li>
+													<a href="javascript:;">
+														<img src="img/emo_34.gif" /></a>
+												</li>
+												<li>
+													<a href="javascript:;">
+														<img src="img/emo_35.gif" /></a>
+												</li>
+												<li>
+													<a href="javascript:;">
+														<img src="img/emo_36.gif" /></a>
+												</li>
+												<li>
+													<a href="javascript:;">
+														<img src="img/emo_37.gif" /></a>
+												</li>
+												<li>
+													<a href="javascript:;">
+														<img src="img/emo_38.gif" /></a>
+												</li>
+												<li>
+													<a href="javascript:;">
+														<img src="img/emo_39.gif" /></a>
+												</li>
+												<li>
+													<a href="javascript:;">
+														<img src="img/emo_40.gif" /></a>
+												</li>
+												<li>
+													<a href="javascript:;">
+														<img src="img/emo_41.gif" /></a>
+												</li>
+												<li>
+													<a href="javascript:;">
+														<img src="img/emo_42.gif" /></a>
+												</li>
+												<li>
+													<a href="javascript:;">
+														<img src="img/emo_43.gif" /></a>
+												</li>
+												<li>
+													<a href="javascript:;">
+														<img src="img/emo_44.gif" /></a>
+												</li>
+												<li>
+													<a href="javascript:;">
+														<img src="img/emo_45.gif" /></a>
+												</li>
+												<li>
+													<a href="javascript:;">
+														<img src="img/emo_46.gif" /></a>
+												</li>
+												<li>
+													<a href="javascript:;">
+														<img src="img/emo_47.gif" /></a>
+												</li>
+												<li>
+													<a href="javascript:;">
+														<img src="img/emo_48.gif" /></a>
+												</li>
+												<li>
+													<a href="javascript:;">
+														<img src="img/emo_49.gif" /></a>
+												</li>
+												<li>
+													<a href="javascript:;">
+														<img src="img/emo_50.gif" /></a>
+												</li>
+												<li>
+													<a href="javascript:;">
+														<img src="img/emo_51.gif" /></a>
+												</li>
+												<li>
+													<a href="javascript:;">
+														<img src="img/emo_52.gif" /></a>
+												</li>
+												<li>
+													<a href="javascript:;">
+														<img src="img/emo_53.gif" /></a>
+												</li>
+												<li>
+													<a href="javascript:;">
+														<img src="img/emo_54.gif" /></a>
+												</li>
+												<li>
+													<a href="javascript:;">
+														<img src="img/emo_55.gif" /></a>
+												</li>
+												<li>
+													<a href="javascript:;">
+														<img src="img/emo_56.gif" /></a>
+												</li>
+												<li>
+													<a href="javascript:;">
+														<img src="img/emo_57.gif" /></a>
+												</li>
+												<li>
+													<a href="javascript:;">
+														<img src="img/emo_58.gif" /></a>
+												</li>
+												<li>
+													<a href="javascript:;">
+														<img src="img/emo_59.gif" /></a>
+												</li>
+												<li>
+													<a href="javascript:;">
+														<img src="img/emo_60.gif" /></a>
+												</li>
+											</ul>
+										</div>-->
+									</div>
+									<div class="wlf_icon">
+									</div>
+								</div>
+							</div>
+							<div class="chat02_content">
+								<textarea id="textarea"></textarea>
+							</div>
+							<div class="chat02_bar">
+								<ul>
+									<li style="left: 20px; top: 10px; padding-left: 30px;">
+										<a href="http://www.internetke.com/" target="_blank"></a>
+									</li>
+									<li style="right: 5px; top: 5px;">
+										<a href="javascript:;">
+											<img src="images/send_btn.jpg"></a>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div class="chatRight">
+						<div class="chat03">
+							<div class="chat03_title">
+								<label class="chat03_title_t">
+                            成员列表</label>
+							</div>
+							<div class="chat03_content">
+								<ul>
+									<li>
+										<label class="online">
+                                </label>
+										<a href="javascript:;">
+											<img src="images/icon_dagang_s.png"></a>
+										<a href="javascript:;" class="chat03_name">刘秀</a>
+									</li>
+									<li>
+										<label class="offline">
+                                </label>
+										<a href="javascript:;">
+											<img src="images/icon_dagang_s.png"></a>
+										<a href="javascript:;" class="chat03_name">陈诚</a>
+									</li>
+									<li class="choosed">
+										<label class="offline">
+                                </label>
+										<a href="javascript:;">
+											<img src="images/icon_dagang_s.png"></a>
+										<a href="javascript:;" class="chat03_name">王旭</a>
+									</li>
+									<li>
+										<label class="offline">
+                                </label>
+										<a href="javascript:;">
+											<img src="images/icon_dagang_s.png"></a>
+										<a href="javascript:;" class="chat03_name">张灵</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div style="clear: both;">
+					</div>
+				</div>
+					<!--大纲-->
+					<div class="is_outline ishide">
+						<span class="isol_le">
+			    				<img src="images/icon_zuofan.png" />
+			    		</span>
+
+						<div class="isol_center_slider">
+							<ul>
+
+							</ul>
+						</div>
+
+						<span class="isol_ri">
+			    			<img src="images/icon_youfan _s.png" />
+			    		</span>
+					</div>
+					<!--讲授-->
+					<div class="lecture ishide ft_center">
+						<ul>
+							
+							<li>
+								<a>
+									<span>
+			    						<img src="images/default/icon_zhibo.png" />
+			    					</span>
+									<span>直播</span>
+								</a>
+							</li>
+							<li>
+								<a>
+									<span>
+		    					<img src="images/default/icon_luzhi.png" />
+		    				</span>
+								<span>录制</span>
+								</a>
+								<!--录屏部分-->
+								<div class="is_videoBox ishide">
+									<p class="vb_a">录屏</p>
+									<p class="vb_b">录像</p>
+								</div>
+							</li>
+							<li>
+								<a>
+									<span>
+		    					<img src="images/default/icon_jieping.png" />
+		    				</span>
+								<span>截屏</span>
+								</a>
+								<!--截屏-->
+								<div class="is_screenCut ishide">
+									<p class="vb_a">截屏</p>
+									<p class="vb_b">纪录</p>
+								</div>
+							</li>
+							<li>
+								<a>
+									<span>
+		    					<img src="images/default/icon_fangdajing.png" />
+		    				</span>
+								<span>放大镜</span>
+								</a>
+								<!--放大缩小-->
+								<div class="is_maxGlass ishide">
+									<p class="vb_a" id="fontadd">  放大</p>
+									<p class="vb_b" id="fontdec">  缩小</p>
+								</div>
+							</li>
+							<li>
+								<a>
+									<span>
+		    					<img src="images/default/icon_hudong.png" />
+		    				</span>
+								<span>互动</span>
+								</a>
+							</li>
+							<li>
+								<a>
+									<span>
+		    					<img src="images/default/icon_dayi.png" />
+		    				</span>
+								<span>答疑</span>
+								</a>
+							</li>
+							
+							<li>
+								<a>
+									<span>
+		    					<img src="images/icon_biji.png" />
+		    				</span>
+								<span>笔记</span>
+								</a>
+								
+							</li>
+							<li>
+								<a>
+									<span>
+		    					<img src="images/icon_quanping.png" />
+		    				</span>
+								<span>全屏</span>
+								</a>
+							</li>
+							
+							<li>
+								<a>
+									<span>
+		    					<img src="images/default/icon_suoping.png" />
+		    				</span>
+								<span>锁屏</span>
+								</a>
+							</li>
+							<li>
+								<a>
+									<span>
+		    					<img src="images/default/icon_xiake.png" />
+		    				</span>
+								<span>下课</span>
+								</a>
+
+							</li>
+							<li>
+								<a>
+									<span>
+		    					<img src="images/icon_fanhui.png" />
+		    				</span>
+								<span>返回</span>
+								</a>
+
+							</li>
+						</ul>
+					</div>
+					
+				</footer>
+			<!--左边功能-->
+			<span id="left" class="column">
+				<ul class="fc_leUp ">
+					<li>					
+						<a class="time_a">
+							<span>10</span>
+			</a>
+			</li>
+			<li>
+				<a class="page_a">
+					<span id="page_num">1</span> /
+					<span id="page_count">30</span>
+				</a>
+			</li>
+
+			</ul>
+			<ul class="fc_leDown fn_icon ">
+				<li class="clearfix">
+					<a>
+						<form id='upload_form' enctype='multipart/form-data'>
+							<input id='file_upload' name='file_upload' type='file' multiple='true'/>
+						</form>
+						<img src="images/icon_shangchuan_s.png" />						
+					</a>
+				</li>
+				<li class="clearfix">
+					<a>
+						<img src="images/icon_xiaoxi_s.png" />
+					</a>
+				</li>
+				<li class="clearfix">
+					<a>
+						<img src="images/icon_dagang_s.png" />
+					</a>
+				</li>
+				<li class="clearfix">
+					<a>
+						<img src="images/icon_jiangshou.png" />
+					</a>
+				</li>
+			</ul>
+		</div>
+
+		<!--右边功能-->
+		<div id="right" class="column">
+			<ul class="fc_riUp ">
+				<li>
+					<img src="images/icon_touxiang.png" />
+					<p class="teath_a">徐小密老师</p>
+				</li>
+				<li>
+					<p class="lesson_b">等腰三角形原理与性质</p>
+				</li>
+			</ul>
+			<ul class="fc_riDown fn_icon">
+				<li class="clearfix">
+					<a class="domain" id="eraser">
+						<img src="images/icon_xiangpica_s.png" />
+					</a>
+				</li>
+				<li class="clearfix">
+					<a class="huabi" id="huaH">
+						<img src="images/icon_huabi_s.png" />
+					</a>
+
+				</li>
+				<li class="clearfix">
+					<a class="next_a">
+						<img src="images/icon_xiaye_s.png" class="pdfup" />
+					</a>
+				</li>
+				<li class="clearfix">
+					<a class="prev_a" id="btnShare">
+						<img src="images/icon_xiaye_s1.png" class="pdfnext" />
+					</a>
+				</li>
+
+			</ul>
+			<!--画笔-->
+				<div class="is_huabi" id="is_huabi" style="display: none;">
+					<div class="huabi_a" id="font">
+						<!--<span>大小</span>-->
+						<div id="change_pen_width">
+							<!-- 修改了一下脚本之家的lijiao的代码 http://www.jb51.net/article/105845.htm -->
+							<div id="lineDiv" class="lineDiv">
+								<div id="minDiv" class="minDiv">
+									<div id="vals" class="vals">1</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!--<div class="huabi_b " id="color">
+						<span>颜色</span>
+						<ul>
+							<li>
+								<a style="background:#FF0000;"></a>
+							</li>
+							<li>
+								<a style="background: #000000;"></a>
+							</li>
+							<li>
+								<a style="background: #80FF00;"></a>
+							</li>
+							<li>
+								<a style="background: #00FFFF;"></a>
+							</li>
+							<li>
+								<input id="this_color_input" type="color" />
+							</li>
+						</ul>
+					</div>-->
+					<!--<div class="huabi_c ishide" id="color">
+						<span class="autoCom " id="clear_canvas">清除全部</span>
+					</div>-->
+
+				</div>
+		</div>
+		<!--</div>-->
+		
+		
+		<div class="ifra ishide" style="cursor: crosshair;">
+
+		</div>
+
+		<script src="../public/part/jquery/jquery-3.1.1.min.js"></script>
+		<script src="js/publicJs.js"></script>
+		<script src="../public/part/classroom/chat.js"></script>
+		<script src="../public/part/classroom/hammer.js"></script>
+		<script src="../public/part/classroom/jquery.touchSwipe.min.js"></script>
+		<script src="js/index.js"></script>
+		<script src="../public/part/classroom/blockUI.js"></script>
+		<script src="../public/part/classroom/jquery.slideunlock.min.js"></script>
+		<script src="../public/part/classroom/html2canvas.js"></script>
+		<script src="js/pdf.js"></script>
+
+</html>

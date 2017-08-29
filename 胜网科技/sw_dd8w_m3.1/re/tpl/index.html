@@ -1,0 +1,217 @@
+<link rel="stylesheet" href="/re/css/re_public.css">
+<link rel="stylesheet" href="/re/css/re_index.css">
+<div class="top">
+    <h1>资源库</h1>
+    <a href="#!/re_upfile"><div class="re_up"></div></a>
+    <a href="#!/re_search"><div class="re_search"></div></a>
+</div>
+<div class="re-material lrp10 mt10">
+        <div class="re-material_l"><span><i></i>教材：{{cur_teaching.school_period_name}} {{cur_teaching.subject_name}} {{cur_teaching.semester_name}}</span></div>
+        <div class="re-material_r"><h5 ng-click="sw_teaching()">切换教材</h5></div>
+</div>
+<div class="classify">
+    <ul>
+        <li><div class="s_sys" ng-click="swLibrary()">{{cur_teaching.library_type_title}}<!--公共资源--><i></i></div></li>
+        <li><div class="s_chapter" ng-click="swChapter()">{{cur_teaching.r_section_name==null?cur_teaching.section_name:cur_teaching.r_section_name}}<!--章节内容--><i></i></div></li>
+        <li><div class="s_teaching" ng-click="swTeaching()">{{cur_teaching.teaching_plan_type_title}}<!--教案类别--><i></i></div></li>
+    </ul>
+</div>
+<div class="zj_content_lists" ng-if="listContentType=='timulist'">
+    <div class="zj_content_head">
+        <ul>
+            <li>题型</li>
+            <li><span ng-click="setTimuTypes(0)" ng-class="timu_types_cuid==0?'pc_list_act':''" title="全部">全部</span><span ng-repeat="tt in timu_types" ng-class="timu_types_cuid==tt.id?'pc_list_act':''" ng-click="setTimuTypes(tt.id)" title="{{tt.type_name}}">{{tt.type_name}}</span></li>
+        </ul>
+        <ul>
+            <li>难度</li>
+            <li><span ng-click="setTimuDifficulty(0)" ng-class="timu_difficulty_cuid==0?'pc_list_act':''">全部</span><span ng-repeat="td in timu_difficulty" ng-class="timu_difficulty_cuid==td.id?'pc_list_act':''" ng-click="setTimuDifficulty(td.id)" title="{{td.level_name}}">{{td.level_name}}</span></li>
+        </ul>
+    </div>
+    <div class="zj_content_list" ng-repeat="d in redata">        
+        <ul class="zj_content">
+            <li>{{$index+1}}、{{d.title}}<span>( )</span></li>
+            <li ng-repeat="c in d.choice_answer">{{c}}</li>
+        </ul>
+        <ul class="zj_content_list_head">
+            <li>{{d.type_name}}&nbsp;&nbsp;{{d.difficulty}}</li>
+            <li><span>收藏</span><span ng-click="setJieXi(d.id)">答案解析</span></li>
+        </ul>
+    </div>    
+</div>
+<div class="re_content" ng-if="listContentType=='list'">    
+        <li class="reli_br_bot" ng-repeat="d in redata">
+            <a href="#!/re_des/{{d.id}}/{{d.fileType}}"><div class="re_content_digimg"><img src="{{d.coverImg==null?'/data/img/re/re_list.png':d.coverImg}}" /><span class="re_content_smallimg"></span></div></a>
+            <div class="re_content_des">
+                <p><a href="#!/re_des/{{d.id}}/{{d.fileType}}">{{d.title}}</a></p>
+                <ul>
+                    <li><i></i><a href="#!/re_des/{{d.id}}/{{d.fileType}}">{{d.username}}用户名</a></li>
+                    <li><i></i>1983</li>
+                    <li>¥232</li>
+                </ul>
+                <div class="re_collection_fdown_tool_show">
+                    <span></span>
+                </div>
+            </div>            
+            <div class="re_collection_fdown_tool">
+                <dl>
+                <dt><span ng-click="setCollection($index)" class="{{d.is_collection ? 're_collection_y' :'re_collection_n'}}"></span></dt>
+                <dd>收藏</dd>
+                </dl>
+                <dl>
+                <dt><a href="filedown?id={{d.id}}" target="_blank"><span class="filedown"></span></a></dt>
+                <dd>下载</dd>
+                </dl>
+            </div>            
+        </li>        
+    </ul>
+</div>
+<div class="re_content" ng-if="listContentType=='partlist'">
+    <div style="padding: 10px;">
+        <ul class="list-group">
+            <li class="list-group-item" ng-repeat="o in redata">
+                <span class="badge">{{o.documentTypeSuffix}}</span>
+                <span class="badge">{{teaching_plan_type[o.documentTypeId].title}}</span>
+                <div><a href="#!/detailed/{{cur_teaching.school_period_id}}/{{o.documentId}}">{{o.documentName}}</a><br/><span>author：{{o.author}}</span></div>
+            </li>
+        </ul>
+    </div>
+</div>
+<div class="no-resources" ng-if="redata.length<1">没有相关资源</div>
+<!-- 页脚显示固定 -->
+</div>
+<!--收藏、下载透明层-->
+<div class="p_transparent_layer" style="display: none;">
+</div>
+<!--选择章节内容-->
+<div id="p_chapter" class="p_dig">
+    <div class="p_dig_content">
+        <div class="p_head">请选择章节内容<span class="p_head_colse" ng-click="colseDig()"></span></div>
+        <div class="p_chapter_content">
+            <div class="pc_left">
+                <ul>
+                    <li ng-repeat="s in section" ng-click="getSection(s.id,s.key,s.value)" class="{{s.id==tmp.section_id?'pc_list_act':''}}">{{s.value}}</li>
+                </ul>
+            </div>
+            <div class="pc_right">
+                <ul>
+                    <li ng-repeat="p in r_section" ng-click="setSection(p.id,p.key,p.value)" class="{{p.id==tmp.r_section_id?'pc_list_act':''}}">{{p.value}}</li>
+                </ul>
+            </div>
+        </div>
+        <div class="p_confirm" ng-click="chapterSubmit()">确定</div>
+    </div>
+</div>
+
+<!--选择系统资源-->
+<div id="p_sys" class="p_dig">
+    <div class="p_dig_content">
+        <div class="p_head">请选择系统资源<span class="p_head_colse" ng-click="colseDig()"></span></div>
+        <div class="p_sys_content">
+            <ul>
+                <li ng-repeat="s in library_type" ng-click="setLibrary(s.id,s.title)" class="{{s.id==tmp.library_type_id?'pc_list_act':''}}">{{s.title}}</li>
+               <!-- <li class="pc_list_act">本校资源</li>
+                <li>我的资源</li>
+                <li>更多资源</li>-->
+            </ul>
+        </div>
+        <div class="p_confirm" ng-click="sysLibraryConfirm()">确定</div>
+    </div>
+</div>
+
+<!--选择教案类别-->
+<div id="p_teaching" class="p_dig">
+    <div class="p_dig_content">
+        <div class="p_head">请选择教案类别<span class="p_head_colse" ng-click="colseDig()"></span></div>
+        <div class="p_teaching_content">
+            <ul>
+                <li ng-repeat="t in teaching_plan_type" ng-click="setTeachingPlanType(t.id,t.title)" class="{{t.id==tmp.teaching_plan_type_id?'pc_list_act':''}}">{{t.title}}</li>
+            </ul>
+        </div>
+        <div class="p_confirm" ng-click="teachingPlanTypeConfirm()">确定</div>
+    </div>
+</div>
+<!--切换教材-->
+<div id="p_sw_material" class="p_dig">
+    <div class="p_dig_content" style="padding-bottom: 50px;">
+        <!-- <div class="p_head">请选择教材<span class="p_head_colse"></span></div> -->
+        <div class="p_head">
+            <ul class="p_head_swtool">
+                <li><span class="{{teaching_material_type==1?'swtool_act':''}}" ng-click="setTeachingMaterialType(1)">教材</span></li>
+                <li><span class="{{teaching_material_type==2?'swtool_act':''}}" ng-click="setTeachingMaterialType(2)">试卷</span></li>
+                <li><span class="{{teaching_material_type==3?'swtool_act':''}}" ng-click="setTeachingMaterialType(3)">知识点</span></li>
+            </ul>
+        </div>
+        <div class="p_sw_material_content">
+            <div ng-if="teaching_material_type<3">
+                <div class="p_sw_material_block">
+                    <h2>校段</h2>
+                        <ul>
+                            <li><div ng-repeat="c in school_period" class="{{gcss[$index%3]}}"><span ng-click="setSchoolPeriod(c.id,c.name)" ng-class="(c.id==tmp.school_period_id)?'pc_list_act':''">{{c.name}}</span></div></li>
+                        </ul>
+                </div>
+                <div class="p_sw_material_block">
+                    <h2>科目</h2>
+                    <ul>
+                        <li><div ng-repeat="s in subject" class="{{gcss[$index%3]}}"><span ng-click="setSubject(s.id,s.key,s.value)" ng-class="(s.id==tmp.subject_id)?'pc_list_act':''">{{s.value}}</span></div></li>
+                    </ul>
+                </div>
+                <div class="p_sw_material_block">
+                    <h2>版本</h2>
+                    <ul>
+                        <li><div ng-repeat="v in version" class="{{gcss[$index%3]}}"><span ng-click="setVersion(v.id,v.key,v.title)" ng-class="(v.id==tmp.version_id)?'pc_list_act':''">{{v.value}}</span></div></li>
+                    </ul>
+                </div>
+                <div class="p_sw_material_block">
+                    <h2>册数</h2>
+                    <ul>
+                        <li><div ng-repeat="t in semester" class="{{gcss[$index%3]}}"><span ng-click="setSemester(t.id,t.key,t.value)" ng-class="(t.id==tmp.semester_id)?'pc_list_act':''">{{t.value}}</span></div></li>
+                    </ul>
+                </div> 
+            </div>  
+            <div ng-if="teaching_material_type==3">
+                <div class="p_sw_material_block">
+                    <h2>科目</h2>
+                    <ul>
+                        <li><div ng-repeat="s in subject" class="{{gcss[$index%3]}}"><span ng-click="setSubject(s.id,s.value)" ng-class="(s.id==cur_teaching.subject_id)?'pc_list_act':''">{{s.value}}</span></div></li>
+                    </ul>
+                </div>
+            </div>                  
+        </div>
+        <div class="clear p_sw_bttool">
+            <div class="p_cancelBtn" ng-click="materialCancel()">取消</div>
+            <div class="p_confirmBtn" ng-click="materialSubmit()">确定</div>
+        </div>        
+    </div>
+</div>
+
+<!--题目解析答案-->
+<div id="p_tm_jiexi" class="p_dig">
+    <div class="p_dig_content">
+        <div class="p_head">题目解析答案<span class="p_head_colse"></span></div>
+        <div class="p_tm_jiexi_content">
+            <dl>
+                <dt>题目</dt>
+                <dd>
+                    <ul class="p_zj_content">
+                        <li>{{curJieXi.title}}<span>( )</span></li>
+                        <li ng-repeat="c in curJieXi.choice_answer">{{c}}</li>
+                    </ul>
+                </dd>
+            </dl>
+            <dl>
+                <dt>答案</dt>
+                <dd>
+                    答案：{{curJieXi.answer}}
+                </dd>
+            </dl>
+            <dl>
+                <dt>答案解析</dt>
+                <dd>
+                    解析：{{curJieXi.answer_analysis}}
+                </dd>
+            </dl>
+        </div>
+    </div>
+</div>
+<script src="/re/js/re_index.js"></script>
+<!-- <script src="/js/re/recontroller.js"></script> -->

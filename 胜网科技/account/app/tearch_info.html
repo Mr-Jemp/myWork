@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<meta name="apple-mobile-web-app-capable" content="yes"/>
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"/>
+		<meta http-equiv="Access-Control-Allow-Origin" content="*">
+		<title></title>
+		<link rel="stylesheet" href="../../public/part/bootstrap/bootstrap.min.css" />
+		<link rel="stylesheet" href="../css/base.css" />
+		<link rel="stylesheet" href="../css/index.css" />
+
+	</head>
+	<body ng-app="perInfoApp" ng-controller="perInfoCtrl">
+		<header class="mycollect_top_a">
+			<ul class="top_a_ul">
+				<li class="top_a_le">
+					<a href="../index.html">
+						<img src="../images/icon_fanhui.png" />		
+					</a>
+				</li>
+				<li class="top_a_con">个人信息</li>
+				<li class="top_a_ri"></li>
+			</ul>
+		</header>
+		<div class="myInfo">
+			<ul class="infoMelf">
+				<li class="clearfix">					
+						<span >头像</span>
+						<div id="touxiang_">
+							<a href="javascript:;">
+								<img id="person-img" src="http://192.168.0.21:8888/{{req.faceImgUrl}}"/>								
+							</a>
+							<span>
+								<img src="../images/icon_gengduo.png" />
+							</span>
+						</div>					
+				</li>
+				
+				<li class="clearfix">					
+						<span>教师编号</span>
+						<div><a>{{req.number}}</a></div>					
+				</li>
+				<li class="clearfix">					
+						<span>会员等级</span>
+						<div><a>{{req.vipId}}</a></div>					
+				</li>
+				<li class="clearfix">					
+						<span>名字</span>
+						<div><a>{{req.nick_name}}</a></div>					
+				</li>
+				<li class="clearfix">					
+						<span>性别</span>
+						<div><a>{{req.sex}}</a></div>					
+				</li>
+				<li class="clearfix">					
+						<span>校段</span>
+						<div><a>{{req.stageNmae}}</a></div>					
+				</li>
+				<li class="clearfix ">					
+						<span>教学科目</span>
+						<div><a>{{req.mark}}</a></div>					
+				</li>
+				
+				<li class="clearfix">					
+						<span>电话</span>
+						<div><a>{{req.phone}}</a></div>					
+				</li>
+				<li class="clearfix">					
+						<span>邮箱</span>
+						<div><a>{{req.email}}</a></div>					
+				</li>
+				<li class="clearfix">					
+						<span>地址</span>
+						<div><a>{{req.address}}</a></div>					
+				</li>
+				<li class="clearfix signs">					
+						<span>个性签名</span>
+						<p class="_signChange">
+							{{req.personalityText}}
+							<span>
+								<img src="../images/icon_gengduo.png" />
+							</span>
+						</p>					
+				</li>
+			</ul>
+		</div>
+			<form  id="uploadImg" method="post" action="" enctype="multipart/form-data">
+				<ul>
+					<li><a href="#"><img src="../images/cremra.png" /><input id="upload" type="file" accept="image/*;" capture="camera" />拍摄照片</a></li>
+					<li><a href="#"><img src="../images/icon_xiangce.png" /><input type="file" name="myfile" id="filss" value="" multiple="multiple"/>本地相册</a></li>
+					<li><a href="#" class="uploadImgBtn" style="background: white;">取消</a></li>
+				</ul>
+			</form>
+		<div class="ifra"></div>
+		<script src="../../public/part/jquery/jquery-3.1.1.min.js"></script>
+		<script type="text/javascript" src="http://malsup.github.io/jquery.form.js"></script>		
+		<script src="../../public/part/angular/angular.min.js"></script>
+		<script src="../../public/part/angular/angular-route.js"></script>
+		<script src="../js/jquery.cookie.js"></script>
+		<script src="../js/publicJs.js"></script>
+		<script>
+			angular.module("perInfoApp",["commonConfig"]).
+			controller("perInfoCtrl",["$scope","$http",function($scope,$http){
+				var accountIds=$.cookie("accountId");
+				$http({  
+				    method:'post',  			
+				   	url:'http://192.168.0.21:20882/userManage/getTeacherPersonalInfo',  				
+				    data:JSON.stringify({'accountId':accountIds}),
+					contentType:"application/json; charset=UTF-8",
+			        dataType:"json"				
+				}).then(function(req){  						
+				    $scope.req=req.data.msg;
+				   
+				    /*点击提交签名信息*/		
+					$("._signChange").click(function(){
+						window.location="../app/Sgin.html?"+encodeURI(encodeURI($scope.req.personalityText));
+					})
+				    console.log(req)
+				}) .catch(function(){
+					console.log("用户信息获取失败")
+				})
+				//更换头像显示隐藏
+				$('#touxiang_').click(function(){
+					$(".ifra,#uploadImg").show();
+				})
+				$('.bgWidth').click(function(){
+					$(".ifra,#uploadImg").hide();
+				})
+				$("#uploadImg ul li a").click(function(){
+					$("#uploadImg ul li a").css("background","");
+			          $(this).css("background","white");
+				})
+				$('.uploadImgBtn').click(function(){
+					$(".ifra,#uploadImg").hide();
+				})
+	
+					//照片上传
+				
+				$('#filss').change(function(){
+					if($("#filss").val()==""){
+					  alert("请选择一个图片文件,再点击");
+					  return;
+					 }
+//					console.log("预览")
+					$("#uploadImg").ajaxSubmit({
+						url:'http://192.168.0.21:20882/userManage/uploadFaceImage?accountId='+accountIds,
+				        type:'post',		        
+				        success:function(data){
+				        	console.log(data.msg)
+				        	$('#person-img').attr("src","http//192.168.0.21:8888"+data.msg)
+				        	window.location.reload();
+				        	 $(".ifra,#uploadImg").hide();
+				        },
+				        error:function(){
+				        	console.log("更改头像失败")
+				        }
+					})
+				})	
+//					var fr=new FileReader();
+//					var allowExtention=".jpg,.png,.gif,.bmp";
+//					var extention=$(this).val().substring($(this).val().lastIndexOf("."));
+//					if(allowExtention.indexOf(extention)>=0){		
+//								var files=this.files[0];	
+//								var img=$('#touxiang_ a img')[0];
+//								fr=new FileReader();//读取照片
+//								fr.readAsDataURL(files);
+//								fr.onloadend=function(){
+//									$.ajax({
+//								        url:'http://192.168.0.21:20882/userManage/uploadFaceImage',
+//								        type: 'post',
+//								        dataType:'json',
+//								        success: function (data) {
+//								        	console.log(data)
+//								        }
+//								      })
+//
+//			//						img.src=fr.result.split(',')[1];截取后的字符串传给后台
+//									img.src=fr.result;
+//									console.log(img.src)
+//									$('#uploadImg,.ifra').hide();//成功后返回界面
+//								}									
+//							}else{
+//								alert("图片格式不对，要以.jpg,.png,.gif,.bmg格式的图片")
+//							}		
+			
+
+				//	点击拍照按钮
+				$(document).ready( function(){
+				    cameraUload.init();
+				} );		
+					var cameraUload = {
+					    init:function(){
+					        this.eventBind();
+					    },
+					    eventBind:function(){
+					        var that = this;
+					        $("#upload").change(function(){
+					            var reader = new FileReader();
+					            reader.onload = function (e) {
+					                that.compress(this.result);
+					            };
+					            reader.readAsDataURL(this.files[0]);		           
+					        });
+					    },
+					    compress : function (res) {
+					        var that = this;
+					        var img = new Image(),
+					            maxH = 80;		 
+					        img.onload = function () {		        	
+					            var cvs = document.createElement('canvas'),
+					                ctx = cvs.getContext('2d');		 
+					            if(img.height > maxH) {
+					                img.width *= maxH / img.height;
+					                img.height = maxH;
+					            }
+					            cvs.width = img.width;
+					            cvs.height = img.height;
+					 
+					            ctx.clearRect(0, 0, cvs.width, cvs.height);
+					            ctx.drawImage(img, 0, 0, img.width, img.height);
+					           
+					            var dataUrl = cvs.toDataURL('image/png', 1);
+					             console.log(dataUrl)
+					            $("#touxiang_ a img").attr("src",dataUrl);
+					            $("#touxiang_ a img").show();
+					            // 上传略
+					            that.upload( dataUrl );
+					            $('#uploadImg,.ifra').hide();//成功后返回界面
+					        };
+					 
+					        img.src = res;
+					    },
+					    upload:function( image_data ){
+					        /*这里写上次方法,图片流是base64_encode的*/
+					       $.ajax({
+					       	type:"get",
+					       	url:"",
+					       	async:true,
+					       	
+					       });
+					    }
+					};
+	
+			}])
+		</script>
+		
+	</body>
+	
+</html>

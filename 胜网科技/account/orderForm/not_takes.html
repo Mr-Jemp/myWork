@@ -1,0 +1,38 @@
+<!--全部-->
+<div class="order_from_con " ng-repeat="orders in data">
+	<ul >
+		<li >
+			<div class="order_from_con_name clearfix">
+				<p class="con_name_a">新华文具店 </p>
+				<span class="con_name_b">{{payStatus(orders.payStatus,$index)}}</span>
+			</div>
+			
+			<div class="good_list_con container" ng-repeat="ord in orders.orderDetails">
+				<div class="con_img_a">
+					<img src="{{ord.products.img}}" />
+				</div>
+				<div class="con_img_b ">
+					<p class="con_con_a">{{ord.products.name}}</p>
+					<p class="con_con_b">{{ord.products.info}}</p>
+					<p class="con_con_c">
+						<span>套餐类型:<label>套餐一</label></span>
+						<span>颜色<label>{{ord.products.size}}</label></span>
+					</p>
+					<p class="con_con_d clearfix">
+						<span class="d_a"><label class="d_a_red">￥{{ord.products.price.toFixed(2)}}  </label><label class="d_a_blc">  56.00</label></span>
+						<span class="d_b">X{{ord.amount}}</span>		
+					</p>
+				</div>
+			</div>
+		</li>
+	</ul>
+	<div class="paly_con_list">
+		<p class="list_a">
+			<span>共<label class="nopay_amounts">{{getTotal[$index]}}</label>件商品，合计：<label>￥{{orders.payment.toFixed(2)}}</label></span>
+		</p>
+		<div class="list_b">
+			<span class="b_del" ng-click="delFrom($event,orders.id)">查看物流</span>
+			<a class="b_pay"  ng-click="getHtml($event,orders.id)">确认收货</a>
+		</div>
+	</div>
+</div>

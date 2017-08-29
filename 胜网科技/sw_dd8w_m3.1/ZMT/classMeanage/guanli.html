@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no,minimal-ui">
+	<meta name="apple-mobile-web-app-capable" content="yes"/>
+	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"/>
+	<meta http-equiv="Access-Control-Allow-Origin" content="*">
+    <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="css/reminder.css"/>
+     <link rel="stylesheet" type="text/css" href="css/classMeanage.css"/>
+	<script src="js/jquery-1.12.4.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/publicJs.js" ></script>
+	<style>
+		html,body {width:100%;height:100%;margin:0px;padding:0px;font-family:"宋体","冬青黑体";}
+		.container-fluid{position:absolute;bottom:0px;width:100%;height:100%;margin:0;padding:0;}
+		.container{margin:0;padding:0;			
+			width:100%;height:100%;overflow: auto;
+		}
+		.row{margin:0;padding:0;}
+		.container a{text-decoration: none;cursor:pointer;}
+		.class_head{width:100%;height:60px;background:#56c399;margin-top: 0px;margin-right:0px;margin-left:0px;color:#fff;}
+		.class_head div{float: left;}
+		.class_head  div span{font-size:1.6em;line-height: 60px;color:#fff;}
+		.class_head  div p{font-size:1.6em;line-height: 60px;color:#fff;text-align: center;}
+		.class_head  div img{margin-top:20px;float:right;}
+		.seter div{margin-left:4%;}
+		.seter div span{font-size: 1.2em;}
+		.mange_a span{font-size: 1.2em;line-height: 60px;vertical-align: middle;margin-left:1%;}
+		.mange_a img{vertical-align: middle;}
+	
+		#footer{width: 100%;height:100px;background:#f8f8f8;margin-top:50px;position:fixed;bottom:0px;left:0;right:0;margin-left:0;margin-right: 0}
+		#footer ul{margin:0 auto;width:100%;height:100px;margin-top: 20px;-webkit-padding-start: 0px;}
+		#footer ul li{list-style:none;float:left;margin:0 auto;margin-top:10px;width:20%;padding:0;}
+		#footer ul li img{margin:0 auto;}
+		#footer ul li a{text-decoration:none;}
+		#footer ul li p{text-align: center;color:black;}
+			@media screen and (max-width:720px) and (min-width:300px){	
+			.container-fluid{position: absolute;bottom:0px;width:100%;height: 100%;margin:0;padding:0;}
+			#footer ul li{list-style:none;float:left;margin:0 auto;margin-top:10px;width:20%;padding:0;}
+			#footer ul li  img{width:25px;height:25px;} 
+		  	}
+	</style>
+</head>
+<body>
+	<div class="container">
+	<div class="container-fluid">
+		<!--<div class="class_head row">
+				<div style="margin-left: 4%;float: left;width:10%;"><span class="class_back"><</span></div>
+				<div style="width:70%;"><p>管理</p></div>
+				
+			</div>-->
+			<div class="class_header row" style="margin: 0;">
+				<div class="col-xs-2" onclick="javascript:history.go(-1);">
+					<img src="images/fanhui@2x.png" alt="" />
+				</div>
+				<div class="header_message col-xs-7 ">管理</div>
+				<div class="selectClass col-xs-3 manage" style="font-size: 0.24rem;">
+				</div>
+			</div>
+			
+			<div style="width:100%;height:10px;background: #eee;"></div>
+			<div  style="width: 95%;height: 60px;border-bottom: 1px solid #eee;float: right;" class="mange_a mange_1">
+				<img src="images/u180.png">
+				<span>升级班级</span><span style="float: right;margin-right:4%;">></span>
+			</div>
+			<div  style="width: 95%;height: 60px;border-bottom: 1px solid #eee;float: right;" class="mange_a mange_2">
+				<img src="images/u180.png">
+				<span>转让班级</span><span style="float: right;margin-right:4%;">></span>
+			</div>
+			<div  style="width: 95%;height: 60px;border-bottom: 1px solid #eee;float: right;" class="mange_a mange_3">
+				<img src="images/u180.png">
+				<span>批量导入</span><span style="float: right;margin-right:4%;">></span>
+			</div>
+			<div  style="width: 95%;height: 60px;float: right;" class="mange_a mange_4">
+				<img src="images/u180.png">
+				<span>批量导出</span><span style="float: right;margin-right:4%;">></span>
+			</div>
+			<div style="clear:both;"></div>
+			<div style="width:100%;height:10px;background: #eee;"></div>
+			<div  style="width: 95%;height: 60px;float: right;" class="mange_a mange_5">
+				<img src="images/u180.png">
+				<span >解散班级</span><span style="float: right;margin-right:4%;">></span>
+			</div>
+			<div style="clear:both;"></div>
+			<div style="width:100%;height:10px;background: #eee;"></div>
+
+			<div id="footer">
+				<ul>
+					<li class="foot_li"><a href="index.html"><img src="images/nav_home_default@2x.png" class="img-responsive image_a " /><p>首页</p></a></li>
+					<li class="foot_li"><a><img src="images/nav_home_jy_default@2x.png" class="img-responsive  image_b" /><p>教研</p></a></li>
+					<li class="foot_li"><a href="classMeanage.html"><img src="images/nav_home_bj_default@2x.png" class="img-responsive  image_c" /><p>班级</p></a></li>
+					<li class="foot_li"><a><img src="images/nav_home_xywh_default@2x.png" class="img-responsive  image_d" /><p>校园文化</p></a></li>
+					<li class="foot_li"><a><img src="images/nav_home_my_default@2x.png" class="img-responsive image_e" /><p>我</p></a></li>
+				</ul>
+			</div>
+			<!--提示-->
+		<div class="reminderParent">
+			<div class="reminder">
+			<p class="comfirm">
+				<span>提示</span><br/>
+				<span>目前手机不支持该功能，请移步到PC端操作！</span>
+			</p>
+			<p class="know">
+				知道了
+			</p>
+
+			</div>			
+		</div>
+		<!--解散班级提示-->
+		<div class="reminderParent">
+			<div class="reminder">
+			<p class="comfirm">
+				<span>提示</span><br/>
+				<span style="margin-top: 0.2rem;display: inline-block;">确认解散班级吗?</span>
+			</p>
+			<p class="cancel">
+				<a href="#">取消</a>
+				<a href="#">确定</a>
+			</p>
+			</div>			
+		</div>
+		<!--点击解散班级的确定-->
+		<!--1111-->
+		<div class="cancelSure">
+			<p>等待校方审核中...</p>
+			<p>校方会在三个工作日内处理，审核过程中班级不可使用，请耐心等候哦！</p>
+		</div>
+		<!--解散成功-->
+		<div class="cancelSure"> 
+			解散成功
+		</div>
+		<!--解散失败-->
+		<div class="cancelSure">
+			<p>解散失败</p>
+			<p>您的申请未通过，详情请联系校方！</p>
+		</div>
+		<div class="cancelSure">
+			<p>解散失败</p>
+			<p>您的申请已超时，详情请联系校方！</p>
+		</div>
+		
+	</div>
+	</div>
+	<script>
+	$(function(){
+		$(".class_back").click(function(){
+			window.location.href="班级列表.html";
+		})
+		$(".manage").click(function(){
+			window.location.href="guanli.html";
+		})
+		$(".mange_1").click(function(){
+			window.location.href="upClass.html";
+		})
+		$(".mange_2").click(function(){
+			window.location.href="转让班级.html";
+		})
+		
+	})
+
+	</script>
+	<script>
+
+
+	//点击批量导入导出
+	$(".mange_3,.mange_4").on("click",function(){
+		//判断是手机端还是移动端
+		var ua=window.navigator.userAgent;
+		if(ua.indexOf("Mobile")>-1){
+			$(".reminderParent").eq(0).css("display","block");
+			
+		}
+		console.log("apop")
+	})
+//点击知道了
+	$(".know").on("click",function(){
+		$(".reminderParent").eq(0).css("display","none");
+	})
+	
+//点击解散班级
+$(".mange_5").on("click",function(){
+	$(".reminderParent").eq(1).css("display","block");
+})
+//点击取消
+$(".cancel a:nth-child(1)").on("click",function(){
+	$(".reminderParent").eq(1).css("display","none");
+})
+//点击确定
+$(".cancel a:nth-child(2)").on("click",function(){
+	$(this).parent().parent().parent().css("display","none");
+	$(".cancelSure").eq(0).css("display","block");
+	
+	setTimeout(function(){
+		$(".cancelSure").eq(0).css("display","none");
+		$(".cancelSure").eq(1).css("display","block");
+		
+		setTimeout(function(){
+			$(".cancelSure").eq(1).css("display","none");
+		},2000)
+	},2000)
+})
+	
+
+	
+</script>
+</body>
+</html>

@@ -5,8 +5,7 @@ myApp.controller("main",["$scope","$http",function($scope,$http){
     //角色请求地址
     $scope.power_tree ="http://192.168.0.21:20896/htRoleService/getSearchInfoRole"
     //功能请求地址
-    $scope.tissue_nav_tree ="./data_json/tissue_nav_tree.json"
-    $scope.naw ="./data_json/roleTree.json"
+    $scope.tissue_nav_tree ="http://192.168.0.21:20898/formMenuFacade/getFormMenu?pid=0"
     //流程请求地址
     $scope.appflow_tree="./data_json/appflow_tree.json"
     $scope.appflow_tree02="./data_json/flow_tree.json"
@@ -20,26 +19,11 @@ myApp.controller("main",["$scope","$http",function($scope,$http){
 myApp.controller("work1Controller",["$scope","$http",function($scope,$http){
 
     $http({
-        method:"POST",
-        url:"http://192.168.0.21:20896/htRoleService/getHtUserName",
-        data:{"role_id":9},
-//                headers:{'Content-Type': 'application/json'}
-    }).then(function(req){
-        console.log(req)
-        var ObjData = req.msg
-    },function(err){
-        $scope.err = err
-        console.log(err)
-    })
-
-
-
-
-    $http({
         method:'GET',
         url:$scope.power_tree,
     }).success(function(data){
         var Objdata = data.msg
+        console.log(Objdata)
         var power_tree=$("#power_tree").ligerTree(
             {
                 textFieldName:'name',
@@ -67,7 +51,7 @@ myApp.controller("work1Controller",["$scope","$http",function($scope,$http){
         );
 
     }).error(function(data){
-        alert("失败")
+        console.log("失败")
     })
 
 }])
@@ -77,59 +61,63 @@ myApp.controller("work2Controller",["$scope","$http",function($scope,$http){
         method: 'GET',
         url:$scope.tissue_nav_tree
     }).success(function(data){
-        //console.log(data)
-        // //异步请求,需要在这里保存数据
-        // $scope.work2data = angular.fromJson($scope.work2data)
-        // $scope.roleList4 = [$scope.work2data[1]]
-        // $scope.roleList = $scope.roleList4;
-        //alert("成功")
-        $scope.data = data
-        $("#tissue_nav_tree").ligerTree({
-            data:$scope.data,
-            checkbox: false,
-            slide: false,
-            nodeWidth: 120,
-            isExpand: 2,
-            onContextmenu: function (node, e)
-            {
-                console.log(node)
-                if(node.data.isLeaf)return false;
-                rmenu_id = node.data.id;
-                rmenu_ti=node.data.children[0].text;
-                //这里有个小bug,如果数据没有chinldren下面没有内容了,就会报错
-                rmenu.show({ top: e.pageY, left: e.pageX });
-                return false;
-            },
-            onselect: function (node)
-            {
-                var tabid = $(node.target).attr("tabid");
-                if (!tabid)
+        if(data.status==1){
+            var ngdata = data.msg
+            $("#tissue_nav_tree").ligerTree({
+                data:ngdata,
+                checkbox:false,
+                textFieldName:'formName',
+                slide: false,
+                nodeWidth: 120,
+                isExpand: 2,
+                onContextmenu: function (node, e)  //右键点击,打开网络银盘
                 {
-                    tabid = new Date().getTime();
-                    $(node.target).attr("tabid", tabid)
-                }
-                if (node.data.isLeaf)
+                    console.log(node)
+                    if(node.data.isLeaf)return false;
+                    rmenu_id = node.data.id;
+                    //rmenu_ti=node.data.children[0].formName;
+                    rmenu_ti=node.data.formName;
+                    //这里有个小bug,如果数据没有chinldren下面没有内容了,就会报错
+                    rmenu.show({ top: e.pageY, left: e.pageX });
+                    return false;
+                },
+                onselect: function (node)
                 {
-                    if(node.data.form_type==1)
-                        f_addTab(tabid,node.data.children[0].text,encodeURI("./template/workbench/role/bumenTree.html"));
-                    else if(node.data.type==2)
-                    {
-                        f_addTab(tabid,node.data.children[0].text,encodeURI(node.data.content));
-                    }else if(node.data.form_type==2)
-                    {
-                        f_addTab(tabid,node.data.children[0].text,encodeURI("./template/workbench/role/bumenTree.html"));
-                    }else
-                        f_addTab(tabid,node.data.children[0].text,encodeURI("./template/workbench/role/bumenTree.html"));
-                }
-                else {
-                    f_addTab(tabid,node.data.children[0].text+" 网盘硬盘",encodeURI("./template/workbench/role/bumenTree.html"));
-                }
+                    var tabid = $(node.target).attr("tabid");
 
-            }
-        });
+                    if (!tabid)
+                    {
+                        tabid = new Date().getTime();
+                        $(node.target).attr("tabid", tabid) //为当前点击的节点,设置一个自定义属性,id是随机时间
+                    }
+                    console.log(node)
+                    //isLeaf  是否子节点的判断函数
+                    if (node.data.isLeaf)
+                    {
+
+                        if(node.data.pid==0)
+                            f_addTab(tabid,node.data.formName,encodeURI("./template/workbench/role/bumenTree.html"));
+                        else if(node.data.pid==1)
+                        {
+                            f_addTab(tabid,node.data.formName,encodeURI(node.data.content));
+                        }else if(node.data.pid==2)
+                        {
+                            f_addTab(tabid,node.data.formName,encodeURI("./template/workbench/role/bumenTree.html"));
+                        }else
+                            f_addTab(tabid,node.data.formName,encodeURI("./template/workbench/role/bumenTree.html"));
+                    }
+                    else {
+                        f_addTab(tabid,node.data.formName+" 网盘硬盘",encodeURI("./template/workbench/role/bumenTree.html"));
+                    }
+
+                }
+            });
+        }
+
+
 
     }).error(function(data){
-        alert("失败")
+        console.log("失败")
     })
 
 }])
@@ -209,8 +197,10 @@ myApp.controller("role1Controller",["$scope","$http",function($scope,$http){
         method: 'GET',
         url: $scope.tissue_nav_tree,
     }).success(function(data){
+        var gndata = data.msg
         $("#tissue_nav_tree2").ligerTree({
-            data:data,
+            data:gndata,
+            textFieldName:'formName',
             checkbox: false,
             slide: false,
             nodeWidth: 120,
@@ -220,7 +210,7 @@ myApp.controller("role1Controller",["$scope","$http",function($scope,$http){
                 console.log(node)
                 if(node.data.isLeaf)return false;
                 rmenu_id = node.data.id;
-                rmenu_ti=node.data.children[0].text;
+                rmenu_ti=node.data.formName;
                 //这里有个小bug,如果数据没有chinldren下面没有内容了,就会报错
                 rmenu.show({ top: e.pageY, left: e.pageX });
                 return false;
@@ -236,25 +226,25 @@ myApp.controller("role1Controller",["$scope","$http",function($scope,$http){
                 if (node.data.isLeaf)
                 {
                     if(node.data.form_type==1)
-                        f_addTab(tabid,node.data.children[0].text,encodeURI("./template/workbench/role/bumenTree.html"));
+                        f_addTab(tabid,node.data.formName,encodeURI("./template/workbench/role/bumenTree.html"));
                     else if(node.data.type==2)
                     {
-                        f_addTab(tabid,node.data.children[0].text,encodeURI(node.data.content));
+                        f_addTab(tabid,node.data.formName,encodeURI(node.data.content));
                     }else if(node.data.form_type==2)
                     {
-                        f_addTab(tabid,node.data.children[0].text,encodeURI("./template/workbench/role/bumenTree.html"));
+                        f_addTab(tabid,node.data.formName,encodeURI("./template/workbench/role/bumenTree.html"));
                     }else
-                        f_addTab(tabid,node.data.children[0].text,encodeURI("./template/workbench/role/bumenTree.html"));
+                        f_addTab(tabid,node.data.formName,encodeURI("./template/workbench/role/bumenTree.html"));
                 }
                 else {
-                    f_addTab(tabid,node.data.children[0].text+" 网盘硬盘",encodeURI("./template/workbench/role/bumenTree.html"));
+                    f_addTab(tabid,node.data.formName+" 网盘硬盘",encodeURI("./template/workbench/role/bumenTree.html"));
                 }
 
             }
         });
 
     }).error(function(data){
-        alert("失败")
+        console.log("失败")
     })
 
 

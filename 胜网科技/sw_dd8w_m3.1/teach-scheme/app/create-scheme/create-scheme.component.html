@@ -1,0 +1,28 @@
+<div class="header">
+    <div class="c-go-back">
+        <img class=" " src="img/goback.png" ng-click="$ctrl.goBack()">
+    </div>
+
+    <h1 class="header__title">
+        {{$ctrl.headerTitle || '新建教学计划'}}
+    </h1>
+</div>
+<div class="c-main">
+    <div class="c-input-title">
+        <input class="c-input-title__input"
+            placeholder="请输入计划标题"
+            ng-model="$ctrl.scheme.title">
+    </div>
+    <div class="c-input-content">
+        <textarea class="c-input-content__textarea"
+        placeholder="请输入计划内容描述"
+        ng-model="$ctrl.scheme.content"></textarea>
+    </div>
+
+    <div class="c-save-btn" ng-click="$ctrl.save()">
+        保存
+    </div>
+
+</div>
+
+

@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no,minimal-ui">
+	<meta name="apple-mobile-web-app-capable" content="yes"/>
+	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"/>
+	<meta http-equiv="Access-Control-Allow-Origin" content="*">
+    <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="css/classMeanage.css"/>
+	<script src="js/jquery-1.12.4.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/publicJs.js" ></script>
+	<style>
+		html,body {width:100%;height:100%;margin:0px;padding:0px;font-family:"宋体","冬青黑体";}
+		.container-fluid{position:absolute;bottom:0px;width:100%;height:100%;margin:0;padding:0;}
+		.container{margin:0;padding:0;			
+			width:100%;height:100%;overflow: auto;
+		}
+		.row{margin:0;padding:0;}
+		.container a{text-decoration: none;cursor:pointer;}
+		.class_head{width:100%;height:60px;background:#56c399;margin-top: 0px;margin-right:0px;margin-left:0px;color:#fff;}
+		.class_head div{float: left;}
+		.class_head  div span{font-size:1.6em;line-height: 60px;color:#fff;}
+		.class_head  div p{font-size:1.6em;line-height: 60px;color:#fff;text-align: center;}
+		.class_head  div img{margin-top:20px;float:right;}
+		.seter div{margin-left:4%;}
+		.seter div span{font-size: 1.2em;}
+	
+		#footer{width: 100%;height:100px;background:#f8f8f8;margin-top:50px;position:fixed;bottom:0px;left:0;right:0;margin-left:0;margin-right: 0}
+	
+		#footer ul{margin:0 auto;width:100%;height:100px;margin-top: 20px;-webkit-padding-start: 0px;}
+		#footer ul li{list-style:none;float:left;margin:0 auto;margin-top:10px;width:20%;padding:0;}
+		#footer ul li img{margin:0 auto;}
+		#footer ul li a{text-decoration:none;}
+		#footer ul li p{text-align: center;color:black;}
+			@media screen and (max-width:720px) and (min-width:300px){	
+			.container-fluid{position: absolute;bottom:0px;width:100%;height: 100%;margin:0;padding:0;}
+			#footer ul li{list-style:none;float:left;margin:0 auto;margin-top:10px;width:20%;padding:0;}
+			#footer ul li  img{width:25px;height:25px;} 
+		  	}
+	</style>
+</head>
+<body>
+
+
+			<div class="class_header row" style="margin: 0;">
+				<div class="col-xs-2" onclick="javascript:history.go(-1);">
+					<img src="images/fanhui@2x.png" alt="" />
+				</div>
+				<div class="header_message col-xs-6 ">天河一中</div>
+				<div class="selectClass col-xs-4 manage">管理
+				</div>
+			</div>
+			
+			
+			<div style="clear: both;"></div>
+
+		<div class="row seter">
+		<div><span>班级:</span><span>1班</span></div>
+		<div><span>班级编号:</span><span>000000001</span></div>
+		<div><span>所属学校:</span><span>广州天河一中</span></div>
+		<div><span>所属年级:</span><span>初一</span></div>
+		<div><span>创建日期:</span><span>20170.05</span></div>
+		<div><span>创建人:</span><span>陈文丽</span></div>
+		<div><span>班级链接:</span><span class="linkSheZhi">http://www.dd8w.com/0000001</span><span class="copySheZhi" style="cursor:pointer;color:#56c399;">点击复制</span></div>
+		<div><span>班级二维码:</span></div>
+		<img src="images/u628.png" style="margin-left: 4%;width: 2rem;">
+		</div>
+
+	
+
+	<div id="footer">
+		<ul>
+			<li class="foot_li"><a href="index.html"><img src="images/nav_home_default@2x.png" class="img-responsive image_a " /><p>首页</p></a></li>
+			<li class="foot_li"><a><img src="images/nav_home_jy_default@2x.png" class="img-responsive  image_b" /><p>教研</p></a></li>
+			<li class="foot_li"><a href="classMeanage.html"><img src="images/nav_home_bj_default@2x.png" class="img-responsive  image_c" /><p>班级</p></a></li>
+			<li class="foot_li"><a><img src="images/nav_home_xywh_default@2x.png" class="img-responsive  image_d" /><p>校园文化</p></a></li>
+			<li class="foot_li"><a><img src="images/nav_home_my_default@2x.png" class="img-responsive image_e" /><p>我</p></a></li>
+		</ul>
+	</div>
+
+	<script>
+	
+	$(function(){
+		$(".manage").click(function(){
+			window.location.href="guanli.html";
+		})
+	})
+	
+	//渲染班级信息
+	$.ajax({
+		type:"post",
+		url:"http://192.168.0.21:20882/addClassOperation/getClassIdByAccountId",
+		data:JSON.stringify({"accountId":4}),
+		contentType: "application/json; charset=UTF-8",
+		async:true,
+		dataType:"json",
+		success:function(data){
+			console.log(data);
+			classId=data.msg;
+			//根据班级id班级信息中的年级
+			$.ajax({
+				type:"post",
+				url:"http://192.168.0.21:20882/addClassOperation/getMessageByClassId",
+				data:JSON.stringify({"classId":classId}),
+				contentType: "application/json; charset=UTF-8",
+				async:true,
+				dataType:"json",
+				success:function(data){
+					console.log(data);	
+				}
+			})
+		},
+	})
+		
+			
+
+	
+
+	</script>
+
+</body>
+</html>

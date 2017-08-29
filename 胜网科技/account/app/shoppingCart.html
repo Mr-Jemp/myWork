@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="Keywords" content="">
+		<meta name="Description" content="">
+		<meta name="format-detection" content="telephone=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0,minimum-scale=1.0">
+		<title>购物车</title>
+		<link rel="stylesheet" href="../../public/part/bootstrap/bootstrap.min.css" />
+		<link rel="stylesheet" href="../css/base.css" />
+		<link rel="stylesheet" href="../css/shoppCat.css" />
+	</head>
+
+	<body ng-app="shoppCatApp" ng-controller="shopcatControl" style="background: white;">
+		<header class="mycollect_top_a">
+			<ul class="top_a_ul">
+				<li class="top_a_le">
+					<img src="../images/icon_fanhui.png" />
+				</li>
+				<li class="top_a_con">购物车</li>
+				<li class="top_a_ri" ng-click="emptying()">
+					清空
+				</li>
+			</ul>
+		</header>
+		<!--主体 begin-->
+		<div class="shop_cart_warp">
+
+			<!--店铺及商品列表 begin-->
+
+			<div class="shop_con">
+				<!--该店铺的所有选中商品的总价-->
+				<input type="hidden" class="shop_total" value="0" />
+				<div class="shop_name">
+					<span class="choice"><input type="checkbox" class="select ShopCheck"/></span>
+					<a href="#">新文具店<img src="../images/icon_gengduo.png" alt="" class="mmd_icon" /></a>
+					<span class="edit">编辑</span>
+				</div>
+				<ul class="shop_product_list">
+					<li ng-repeat="intess in cart">
+						<span class="choice"><input type="checkbox" class="select GoodsCheck"   ng-click="cheClick($event,intess,$index)"/></span>
+						<a href="#" class="mmd_product">
+							<img src="../images/img_touxiang.png" alt="" class="mmd_pic" />
+							<div class="CommDescr">
+								<span class="col-size"> {{intess.name}}</span>
+								<span class="mmd_prod_tit">{{intess.info}}</span>
+								<span class="product_price">
+	                                <i class="shop_price">￥{{intess.price}}</i>
+	                                <i class="product_num">X{{intess.amount}}</i>
+	                            </span>
+							</div>
+							<div class="delete">
+								<div class="del_con">
+									<div class="gw_num">
+										<em class="mmd_jian" my-minus id="{{intess.id}}">-</em>
+										<input type="text" value="1" readonly class="mmd_num" ng-model="intess.amount" id="{{intess.id}}" />
+										<em class="mmd_add" my-adds id="{{intess.id}}">+</em>
+									</div>
+									<div class="color_class">
+										<span class="color_classA">课程种类: 化学</span>
+										<span class="color_classB">金额：{{(intess.price*intess.amount).toFixed(2)}}</span>
+									</div>
+									<div class="del_btn" ng-click="removeShop($index)">删除</div>
+								</div>
+							</div>
+						</a>
+
+						<!--<span class="totMoney ">金额：<label class="totMoney_box">{{intess.price*intess.amount}}</label></span>-->
+					</li>
+				</ul>
+			</div>
+		</div>
+		<!--结算 begin-->
+		<div class="Settlement">
+			<div class="inps">
+				<span class="inps-text">全选</span>
+				<span class="choice">
+           		 	<input type="checkbox" class="all_select select allChoose" id="all_select" ng-click="all_select()"/>
+	       		</span>
+				
+			</div>
+			<div class="amou">
+				<span class="Total">合计 : <i>0.00</i></span>
+				<span type="submit" class="Sett">结算(0)</span>
+			</div>
+		</div>
+		<!--结算 end-->
+		<!--如果没有商品时-->
+		<div class="no_product">
+			<p>
+				<img src="../images/cremra.png" />
+			</p>
+			<p>当前购物车为空<br/>赶紧逛一下吧</p>
+			<p>
+				<span ng-click="goIndex()">首页</span>
+				<span>教育超市</span>
+			</p>
+		</div>
+		<!--主体 end-->
+		<script src="../../public/part/jquery/jquery-3.1.1.min.js"></script>		
+		<script src="../../public/part/angular/angular.min.js"></script>
+		<script src="../../public/part/angular/angular-route.js"></script>		
+		<script src="../js/publicJs.js"></script>
+		<script src="../js/Cat.js"></script>
+
+	</body>
+
+</html>

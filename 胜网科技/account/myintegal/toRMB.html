@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="Keywords" content="">
+	    <meta name="Description" content="">
+	    <meta name="format-detection" content="telephone=no">
+	    <meta name="apple-mobile-web-app-capable" content="yes">
+	    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+	    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0,minimum-scale=1.0">
+		<title>提现积分</title>
+		<link rel="stylesheet" href="../../public/part/bootstrap/bootstrap.min.css" />
+		<link rel="stylesheet" href="../css/base.css" />
+		<link rel="stylesheet" href="../css/myintegal.css" />
+	</head>
+	<body>
+		<header class="mycollect_top_a">
+			<ul class="top_a_ul">
+				<li class="top_a_le">
+					<img src="../images/icon_fanhui.png" />		
+				</li>
+				<li class="top_a_con">提现积分</li>
+			</ul>
+		</header>
+		<div class="toRMB_">			
+				<div >
+					<p>提现积分</p>
+					<p><label>￥</label><input type="text" onkeyup="(this.v=function(){this.value=this.value.replace(/[^0-9-]+/,'');}).call(this)" onblur="this.v();" id="numberBox" /> </p>
+				</div>
+				<div >
+					<p><span>姓名</span><input type="text" id="nameBox" /></p>
+					<hr />
+					<p><span>提现账号</span><input type="text" id="accountBox" /></p>
+				</div>
+					<ul class="pay_type_three_box clearfix">
+				<li class="three_box clearfix">
+					<div class="box_a">
+						<img src="../images/icon_zhifubao.png" />
+					</div>
+					<div  class="box_b">
+						<span>支付宝提现</span>
+						<span>推荐有支付宝账号的用户使用</span>
+					</div>
+					<div class="box_c">
+						<input type="radio" value="支付宝" name="zhifb" class="zhifb"/>
+					</div>
+				</li>
+				<li class="three_box clearfix ">
+					<div class="box_a">
+						<img src="../images/icon_weixin22.png" />
+					</div>
+					<div  class="box_b">
+						<span>微信提现</span>
+						<span>推荐安装微信5.0以上版本的用户使用</span>
+					</div>
+					<div class="box_c">
+						<input type="radio" value="微信" name="zhifb" class="weixin"/>
+					</div>
+				</li>
+			</ul>
+				
+				<p class="tips_ container"><span>？</span>提现规则说明</p>
+				<p class="tip_listlong">
+					要满10000积分（100元）才可体现，提现的积分要以10000积分的倍数来提
+					现，提现以100积分=1元人民币的兑换方式进行兑现现金；提现5W以下的积
+					分,会扣取1%的手续费，提现5W以上的积分,会扣取2%的手续费,每个月最多可
+					提现3次；
+				</p>
+		</div>
+		<div class="toRMB_Btn bottomIfra">
+				确定提现
+		</div>
+		<div class="ifra"></div>
+		<div class="pop">
+			<p class="popTop">请输入提现密码<span class="del">X</span></p>
+			<p class="tip_list">您好，您扣取的手续费是提现金额的1%,提现到账的金额</p>
+			<p class="amount_">￥<span>99.00</span></p>
+			<form id="passInput">
+				<input type="number" /><input type="number" /><input type="number" /><input type="number" /><input type="number" /><input type="number" />				
+			</form>
+		</div>
+	</body>
+		
+		<script src="../../public/part/jquery/jquery-3.1.1.min.js"></script>
+		<script src="../js/publicJs.js"></script>
+</html>

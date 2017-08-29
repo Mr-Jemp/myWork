@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no,minimal-ui">
+	<meta name="apple-mobile-web-app-capable" content="yes"/>
+	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"/>
+	<meta http-equiv="Access-Control-Allow-Origin" content="*">
+    <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<script src="./js/jq/jquery-3.1.1.min.js"></script>
+	<script src="./js/bootstrap/bootstrap.min.js"></script>
+	<style>
+		html,body {width:100%;height:100%;margin:0px;padding:0px;font-family: "宋体","冬青黑体";}
+		.container-fluid{position:absolute;bottom:0px;width:100%;height:100%;margin:0;padding:0;}
+		.container{margin:0;padding:0;			
+			width:100%;height:100%;overflow: auto;
+		}
+		.row{margin:0;padding:0;}
+		.container a{text-decoration: none;cursor:pointer;}
+		.class_head{width:100%;height:60px;background:#56c399;margin-top: 0px;margin-right:0px;margin-left:0px;color:#fff;}
+		.class_head div{float: left;}
+		.class_head  div span{font-size:1.6em;line-height: 60px;color:#fff;}
+		.class_head  div p{font-size:1.6em;line-height: 60px;color:#fff;text-align: center;}
+		.class_head  div img{margin-top:20px;float:right;}
+		.up_class{width:92%;margin:0 auto;height: 80px;background: #f7f7f7;margin-top:15px;}
+		.up_class p{font-size: 1.2em;line-height: 80px;margin-left:4%;}
+
+		#footer{width: 100%;height:100px;background:#f8f8f8;margin-top:50px;position:fixed;bottom:0px;left:0;right:0;margin-left:0;margin-right: 0}
+	
+		#footer ul{margin:0 auto;width:100%;height:100px;margin-top: 20px;-webkit-padding-start: 0px;}
+		#footer ul li{list-style:none;float:left;margin:0 auto;margin-top:10px;width:20%;padding:0;}
+		#footer ul li img{margin:0 auto;}
+		#footer ul li a{text-decoration:none;}
+		#footer ul li p{text-align: center;color:black;}
+			@media screen and (max-width:720px) and (min-width:300px){	
+			.container-fluid{position: absolute;bottom:0px;width:100%;height: 100%;margin:0;padding:0;}
+			#footer ul li{list-style:none;float:left;margin:0 auto;margin-top:10px;width:20%;padding:0;}
+			#footer ul li  img{width:25px;height:25px;} 
+		  	}
+	</style>
+</head>
+<body>
+	<div class="container">
+	<div class="container-fluid">
+		<div class="class_head row">
+				<div style="margin-left:4%;float: left;width:15%;"><span class="class_back"><</span></div>
+				<div style="width:60%;"><p>升级班级</p></div>
+				<div style="float:right;margin-right: 4%;width:15%;"><p style="text-align: right;font-size: 1.2em;" >保存</p></div>
+			</div>
+			<div class="up_class"><p>天河一中初一一班</p></div>
+			<div style="margin-left: 4%;margin-top: 12px;"><p style="font-size: 1.2em;">升级到</p></div>
+			<div class="up_class">
+				<p style="float: left;color:#5bc59c;">请选择年级</p>
+				<p style="float: right;margin-right: 4%;">v</p>
+
+			</div>
+			<div class="up_class"><p style="color:#5bc59c;">请输入班级</p></div>
+			
+		
+
+
+			<div id="footer">
+			<ul>
+			<li class="foot_li"><a href="index.html"><img src="./images/footer/nav_home_default@2x.png" class="img-responsive image_a " /><p>首页</p></a></li>
+			<li class="foot_li"><a><img src="./images/footer/nav_home_jy_default@2x.png" class="img-responsive  image_b" /><p>教研</p></a></li>
+			<li class="foot_li"><a href="classMeanage/classMeanage.html"><img src="./images/footer/nav_home_bj_default@2x.png" class="img-responsive  image_c" /><p>班级</p></a></li>
+			<li class="foot_li"><a><img src="./images/footer/nav_home_xywh_default@2x.png" class="img-responsive  image_d" /><p>校园文化</p></a></li>
+			<li class="foot_li"><a><img src="./images/footer/nav_home_my_default@2x.png" class="img-responsive image_e" /><p>我</p></a></li>
+			
+			</ul>
+			</div>
+	</div>
+	</div>
+	<script>
+	$(function(){
+		$(".class_back").click(function(){
+			window.location.href="班级列表.html";
+		})
+		$(".manage").click(function(){
+			window.location.href="guanli.html";
+		})
+		$(".class_back").click(function(){
+			window.location.href="guanli.html";
+		})
+	})
+
+	</script>
+	<script>
+$(function(){
+	var Imgs=['u1.png','u2.png','u3.png','u4.png','u5.png'];
+	$(".image_a").mouseover(function(){
+		$(this).attr("src","./images/footer/u1.png");
+	}).mouseout(function(){
+		$(this).attr("src","./images/footer/nav_home_default@2x.png");
+	})
+	$(".image_b").mouseover(function(){
+		$(this).attr("src","./images/footer/u2.png");
+	}).mouseout(function(){
+		$(this).attr("src","./images/footer/nav_home_jy_default@2x.png");
+	})
+	$(".image_c").mouseover(function(){
+		$(this).attr("src","./images/footer/u3.png");
+	}).mouseout(function(){
+		$(this).attr("src","./images/footer/nav_home_bj_default@2x.png");
+	})
+	$(".image_d").mouseover(function(){
+		$(this).attr("src","./images/footer/u4.png");
+	}).mouseout(function(){
+		$(this).attr("src","./images/footer/nav_home_xywh_default@2x.png");
+	})
+	$(".image_e").mouseover(function(){
+		$(this).attr("src","./images/footer/u5.png");
+	}).mouseout(function(){
+		$(this).attr("src","./images/footer/nav_home_my_default@2x.png");
+	})
+	
+	
+	$(".foot_li p").each(function(){
+		$(this).hover(function(){
+			$(this).css("color","#56c399");
+		},function(){
+			$(this).css("color","black")
+		})
+	})
+
+})
+
+</script>
+</body>
+</html>
