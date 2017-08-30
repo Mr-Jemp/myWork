@@ -16,6 +16,18 @@
       {"text":"待办流程","type":"getnoendflow"}
     ],
     "isLeaf":"true"
+  },
+  {
+    "text":"应用流程",
+    "children":[
+      {"text":"客户资料汇总","type":"getmyflow"},
+      {"text":"工单流程","type":"getmyendflow"},
+      {"text":"离职申请表","type":"getnoendflow"},
+      {"text":"每日工作日报表","type":"getnoendflow"},
+      {"text":"每周工作计划","type":"getnoendflow"},
+      {"text":"请假流程","type":"getnoendflow"}
+    ],
+    "isLeaf":"true"
   }
 
 ]

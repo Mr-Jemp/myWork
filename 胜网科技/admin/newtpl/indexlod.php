@@ -3,8 +3,8 @@ require('../../s/function/is_admin.php');
 $url=$_REQUEST['main_url'];
 if(strlen($url)<1)$url='main.php';
 $left_url='left.html';
-if($url=='/admin/new_pagedesign/form_index.html')
-$left_url='/admin/new_pagedesign/pdesign_left.php';
+if($url=='../new_pagedesign/form_index.html')
+$left_url='../new_pagedesign/pdesign_left.html';
 ?>
 <html>
 <head>

@@ -5,21 +5,21 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <link href="css/bootstrap/css/bootstrap.css?2023" rel="stylesheet" type="text/css" />
+    <link href="css/bootstrap/css/bootstrap.css" rel="stylesheet" type="text/css" />
     <!--[if lte IE 6]>
-    <link rel="stylesheet" type="text/css" href="css/bootstrap/css/bootstrap-ie6.css?2023">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap/css/bootstrap-ie6.css">
     <![endif]-->
     <!--[if lte IE 7]>
-    <link rel="stylesheet" type="text/css" href="css/bootstrap/css/ie.css?2023">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap/css/ie.css">
     <![endif]-->
-    <link href="css/site.css?2023" rel="stylesheet" type="text/css" />
-	<script type="text/javascript" charset="utf-8" src="js/jquery-1.7.2.min.js?2023"></script>
+    <link href="css/site.css" rel="stylesheet" type="text/css" />
+	<script type="text/javascript" charset="utf-8" src="js/jquery-1.7.2.min.js"></script>
     <script type="text/javascript">
         var _root='http://form/index.php?s=/',_controller = 'index';
 		$(function()
 		{
 			$("#leftArrows").css({"position":"absolute"});
-			$("#leftArrows").css({"background":"url('/resource/images/common/ueditor_right.png') no-repeat -26px"});
+			$("#leftArrows").css({"background":"url('../../../resource/images/common/ueditor_right.png') no-repeat -26px"});
 			$("#leftArrows").css({"top":"0px"});
 			$("#leftArrows").css({"left":"0px"});
 			$("#leftArrows").css({"cursor":"pointer"});
@@ -39,14 +39,14 @@
 				if($("#leftArrows").attr("bg")=="1_05")
 				{
 					 
-					$("#leftArrows").css({"background":"url('/resource/images/common/ueditor_left.png') no-repeat -26px"});
+					$("#leftArrows").css({"background":"url('../../../resource/images/common/ueditor_left.png') no-repeat -26px"});
 					$("#leftArrows").attr("bg","1_032");
 					$(".well-small-box").slideToggle("hide");
 					return;
 				}
 				$(".well-small-box").slideToggle("show");
 				$("#leftArrows").attr("bg","1_05");
-				$("#leftArrows").css({"background":"url('/resource/images/common/ueditor_right.png') no-repeat -26px"});
+				$("#leftArrows").css({"background":"url('../../../resource/images/common/ueditor_right.png') no-repeat -26px"});
 			});
 		});
     </script>
@@ -116,7 +116,7 @@
 <!--建议手动加在语言，避免在ie下有时因为加载语言失败导致编辑器加载失败-->
 <!--这里加载的语言文件会覆盖你在配置项目里添加的语言类型，比如你在配置项目里配置的是英文，这里加载的中文，那最后就是中文-->
 <script type="text/javascript" charset="utf-8" src="js/ueditor/lang/zh-cn/zh-cn.js"></script>
-<script type="text/javascript" charset="utf-8" src="js/ueditor/formdesign/leipi.formdesign.v4.js?2023"></script>
+<script type="text/javascript" charset="utf-8" src="js/ueditor/formdesign/leipi.formdesign.v4.js"></script>
 <!-- script start-->  
 <script type="text/javascript">
 var modelId=0;
@@ -128,7 +128,7 @@ $(window).load(function()
 {
 	$.ajax({
         type: 'get',
-        url: '/s/tp/wwwroot/index.php?s=/demo/formdesign/form_id/'+modelId+'.html',
+        url: '../../../s/tp/wwwroot/index.php?s=/demo/formdesign/form_id/'+modelId+'.html',
         dataType :'html',
         success: function(data) {
        		if(typeof data!="object")
@@ -138,7 +138,7 @@ $(window).load(function()
     });
 	$.ajax({
         type: 'get',
-        url: '/s/function/pagetype.php',
+        url: '../../../s/function/pagetype.php',
 		data:{'formid':modelId},
         dataType :'text',
         success: function(data) {
@@ -382,7 +382,7 @@ function startEditor()
                     //异步提交数据
                     $.ajax({
                         type: 'POST',
-                        url: '/s/tp/wwwroot/index.php?s=/demo/formdesign/',
+                        url: '../../../s/tp/wwwroot/index.php?s=/demo/formdesign/',
                         data: {form_id: modelId,'design_content':formeditor,'formtype':formtype},
                         dataType : 'json',
                         success: function(data) {
@@ -604,21 +604,21 @@ toPreviewHead=function(preview)
 		out+="<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">";
 		out+="<meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge,chrome=1\">";
 		out+="<meta name=\"author\" content=\"leipi.org\">";
-		out+="<link href=\"/admin/pageEdit/formdesign/css/bootstrap/css/bootstrap.css\" rel=\"stylesheet\" type=\"text/css\" />";
+		out+="<link href=\"./css/bootstrap/css/bootstrap.css\" rel=\"stylesheet\" type=\"text/css\" />";
 		out+="\r\n<!--[if lte IE 6]>";
-		out+="\r\n<link rel=\"stylesheet\" type=\"text/css\" href=\"/admin/pageEdit/formdesign/css/bootstrap/css/bootstrap-ie6.css\">";
+		out+="\r\n<link rel=\"stylesheet\" type=\"text/css\" href=\"./css/bootstrap/css/bootstrap-ie6.css\">";
 		out+="\r\n<![endif]-->";
 		out+="\r\n<!--[if lte IE 7]>";
-		out+="\r\n<link rel=\"stylesheet\" type=\"text/css\" href=\"/admin/pageEdit/formdesign/css/bootstrap/css/ie.css\">";
+		out+="\r\n<link rel=\"stylesheet\" type=\"text/css\" href=\"./css/bootstrap/css/ie.css\">";
 		out+="\r\n<![endif]-->";
-		out+="\r\n<link href=\"/admin/pageEdit/formdesign/css/site.css\" rel=\"stylesheet\" type=\"text/css\" />";
+		out+="\r\n<link href=\"./css/site.css\" rel=\"stylesheet\" type=\"text/css\" />";
 		
-		out+="<script type=\"text/javascript\" charset=\"utf-8\" src=\"/admin/pageEdit/formdesign/js/jquery-1.7.2.min.js\"><"+"/script>";
-		out+="<script type=\"text/javascript\" charset=\"utf-8\" src=\"/admin/pageEdit/formdesign/js/ueditor/ueditor.config.js\"><"+"/script>";
-		out+="<script type=\"text/javascript\" charset=\"utf-8\" src=\"/admin/pageEdit/formdesign/js/ueditor/ueditor.all.js\"> <"+"/script>";
-		out+="<script type=\"text/javascript\" charset=\"utf-8\" src=\"/admin/pageEdit/formdesign/js/ueditor/lang/zh-cn/zh-cn.js\"><"+"/script>";
+		out+="<script type=\"text/javascript\" charset=\"utf-8\" src=\"./js/jquery-1.7.2.min.js\"><"+"/script>";
+		out+="<script type=\"text/javascript\" charset=\"utf-8\" src=\"./js/ueditor/ueditor.config.js\"><"+"/script>";
+		out+="<script type=\"text/javascript\" charset=\"utf-8\" src=\"./js/ueditor/ueditor.all.js\"> <"+"/script>";
+		out+="<script type=\"text/javascript\" charset=\"utf-8\" src=\"./js/ueditor/lang/zh-cn/zh-cn.js\"><"+"/script>";
 		
-		out+="<script type=\"text/javascript\" charset=\"utf-8\" src=\"/admin/pageEdit/formdesign/js/ueditor/formdesign/tolist.js\"><"+"/script>";
+		out+="<script type=\"text/javascript\" charset=\"utf-8\" src=\"./js/ueditor/formdesign/tolist.js\"><"+"/script>";
 		
 		out+="<script type=\"text/javascript\">";
 			out+="var _root=\"\",_controller = \"index\";";

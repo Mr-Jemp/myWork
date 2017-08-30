@@ -2,11 +2,11 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <title></title>
-<script type="text/javascript" src="/resource/js/jQuery/jquery-1.9.1.js"></script> 
-<script type="text/javascript" src="/resource/js/common/url_get.js"></script> 
-<link href="/resource/part/newtpl/css/public.css" rel="stylesheet" type="text/css" />
-<script type="text/javascript" src="/resource/part/newtpl/js/public.js"></script>
-<link href="/resource/part/newtpl/css/rheight.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="../../resource/js/jQuery/jquery-1.9.1.js"></script> 
+<script type="text/javascript" src="../../resource/js/common/url_get.js"></script> 
+<link href="../../resource/part/newtpl/css/public.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="../../resource/part/newtpl/js/public.js"></script>
+<link href="../../resource/part/newtpl/css/rheight.css" rel="stylesheet" type="text/css" />
 <script type="text/javascript">
 	$(function() {
 		var mId;
@@ -15,12 +15,12 @@
 		mId=$_GET["id"];
 		mName=$_GET["name"];		
 		//$("#pageFrame").attr("src", "/s/tp/wwwroot/index.php?s=/demo/formdesign/form_id/"+mId+".html");
-        $("#pageFrame").attr("src", "/admin/pageEdit/formdesign/index.htm?modelId="+mId+"&modelName="+mName);
+        $("#pageFrame").attr("src", "../pageEdit/formdesign/index.htm?modelId="+mId+"&modelName="+mName);
 		$("#edit_nav input").bind("click",function()
 			{	
 				mType = 'formdesign/index';//$(this).val();
                 //$("#pageFrame").attr("src", "/s/tp/wwwroot/index.php?s=/demo/formdesign/form_id/"+mId+".html");
-				$("#pageFrame").attr("src", "/admin/pageEdit/" + mType + ".htm?modelId=" + mId + "&modelName=" + decodeURI(mName));
+				$("#pageFrame").attr("src", "../pageEdit/" + mType + ".htm?modelId=" + mId + "&modelName=" + decodeURI(mName));
             });
 	});
 </script>  

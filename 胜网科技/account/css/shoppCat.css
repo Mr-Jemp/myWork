@@ -162,7 +162,7 @@ li .mmd_product .mmd_pic{
 	margin-right: 0.15rem;
 }
 .Settlement .amou{
-	width: 86%;
+	width: 100%;
 	font-size: 0.3rem;
 	float: right;
 	text-align: right;
@@ -185,7 +185,7 @@ li .mmd_product .mmd_pic{
 }
 .amou .Sett{
 	display: inline-block;
-	height:1.31rem;
+	height:1.2rem;
 	background:#53dfa9 ;
 	color:#fff;
 	text-align: center;

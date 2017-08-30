@@ -6,7 +6,7 @@
 		$(this).blur();
 		var linkID = $(this).prop("id");
 		if(linkID=="pagesetting"){
-			window.parent.frames["leftFrame"].location.href =  "../new_pagedesign/pdesign_left.php";
+			window.parent.frames["leftFrame"].location.href =  "../new_pagedesign/pdesign_left.html";
 			parent.document.getElementsByTagName("frameset")[1].cols = "200,*";
 		}else if(linkID=="frontsetting"){			
 			window.parent.frames["leftFrame"].location.href =  "../new_frontsetting/front_left.html";

@@ -4,10 +4,10 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta http-equiv="X-UA-Compatible" content="IE=7">
 <title>页面左边树</title>
-<script type="text/javascript" src="/resource/js/jQuery/jquery-1.7.2.min.js"></script>
-<script src="/resource/part/ligerlib/ligerUI/js/ligerui.min.js" type="text/javascript"></script>
-<link href="/resource/part/ligerlib/ligerUI/skins/Aqua/css/ligerui-all.css" rel="stylesheet" type="text/css" />
-<link href="/resource/part/ligerlib/ligerUI/skins/ligerui-icons.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="../../resource/js/jQuery/jquery-1.7.2.min.js"></script>
+<script src="../../resource/part/ligerlib/ligerUI/js/ligerui.min.js" type="text/javascript"></script>
+<link href="../../resource/part/ligerlib/ligerUI/skins/Aqua/css/ligerui-all.css" rel="stylesheet" type="text/css" />
+<link href="../../resource/part/ligerlib/ligerUI/skins/ligerui-icons.css" rel="stylesheet" type="text/css" />
 <script type="text/javascript">
 $(function() {
 	var rmenu,actionNodeID,dd,left_tree,node_conet,orderField,fieldsStr;
@@ -100,23 +100,25 @@ $(function() {
             //fieldsStr = fieldsStr.substr(0, fieldsStr.length - 1);
 			var showRoot=true;
 			$.ajax({
-                type: 'POST',
-                url: '/handler/pageinfo.ashx',
+                type: 'get',
+                url: 'http://192.168.0.21:20898/formMenuFacade/getFormMenu?pid=0',	
 				//url: '/handler/HBSTree.ashx',
                 dataType : 'json',
-                data: { action: "gettreedata" },
+//              data: { action: "gettreedata" },
                 //data:{"service":".", "database":"manageuser", "operateType": "getRootNode", "rootId":1, "orderField":escape(orderField), "parentField":escape("parentId"),"fieldsStr":escape(fieldsStr), "showRoot":escape(showRoot),"tableName":escape("tbdatainfo")},
                 success: function(data) {
-                    ddd=[data];
+                	console.log(data)
+                    ddd=data.msg;
                     //树
                     left_tree=$("#dataTree").ligerTree({
                         data:ddd,
                         checkbox: false,
                         slide: false,
                         nodeWidth: 120,
+                        textFileName:"formName",
                         render: function (item)
                         {
-                            return item.values[0].value;
+                            return item.formName;
                         },
                         isLeaf:function(item){
 							return item.isLeaf;
@@ -126,6 +128,7 @@ $(function() {
 						isExpand: 2,
                         onselect: function (node)
                         {
+                        	console.log(111)
                             var tabid = $(node.target).attr("tabid");
                             if (!tabid)
                             {
@@ -133,7 +136,7 @@ $(function() {
                                 $(node.target).attr("tabid", tabid)
                             }
 							if(!node.data.isLeaf)return false;							
-							window.parent.frames["mainFrame"].location.href ='/admin/new_pagedesign/editHTMLPage.htm?id='+node.data.id+'&name='+node.data.values[0].value;							
+							window.parent.frames["mainFrame"].location.href ='../new_pagedesign/editHTMLPage.htm?id='+node.data.id+'&name='+node.data.values[0].value;							
                         },
 						onContextmenu: function (node, e)
 						 { 							
@@ -214,7 +217,9 @@ dl {
 <body>
 <div  class="admin_left_box">
 <div id="left_tree">
-<ul id="dataTree"></ul>
+<ul id="dataTree">
+	<!--Hello World!-->
+</ul>
 </div>
 </div>
 <!--添加表单-->

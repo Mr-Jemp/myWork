@@ -4,12 +4,12 @@
 <head>
 <title>胜网</title>
 <meta charset="utf-8" />
-<link href="/resource/part/ligerlib/ligerUI/skins/Aqua/css/ligerui-all.css" rel="stylesheet" type="text/css" />
-<link href="/resource/part/ligerlib/ligerUI/skins/ligerui-icons.css" rel="stylesheet" type="text/css" />
-<script src="/resource/part/ligerlib/jquery/jquery-1.11.1.min.js" type="text/javascript"></script>
-<script src="/resource/part/ligerlib/ligerUI/js/ligerui.all.js" type="text/javascript"></script>
-<script src="/resource/part/ligerlib/jquery.cookie.js" type="text/javascript"></script>
-<script src="/resource/part/ligerlib/json2.js"></script>
+<link href="../../resource/part/ligerlib/ligerUI/skins/Aqua/css/ligerui-all.css" rel="stylesheet" type="text/css" />
+<link href="../../resource/part/ligerlib/ligerUI/skins/ligerui-icons.css" rel="stylesheet" type="text/css" />
+<script src="../../resource/part/ligerlib/jquery/jquery-1.11.1.min.js" type="text/javascript"></script>
+<script src="../../resource/part/ligerlib/ligerUI/js/ligerui.all.js" type="text/javascript"></script>
+<script src="../../resource/part/ligerlib/jquery.cookie.js" type="text/javascript"></script>
+<script src="../../resource/part/ligerlib/json2.js"></script>
 <script type="text/javascript">
 var tab = null;
 var accordion = null;
@@ -17,7 +17,7 @@ var tree = null;
 var tabItems = [];
 var ddd,rmenu_id,rmenu_ti,cu_tabid;
 var rmenu,actionNodeID,dd,left_tree,node_conet;
-var url="/s/tp/wwwroot/index.php?s=/Home/";
+var url="../../s/tp/wwwroot/index.php?s=/Home/";
 $(function() {
     //布局
     $("#layout1").ligerLayout({ leftWidth: 200, height: '100%', heightDiff: -5, space: 4, onHeightChanged: f_heightChanged});
@@ -90,7 +90,7 @@ $(function() {
             var data = eval(json);
             $.ajax({
                 type: "POST",
-                url: "/s/function/freeparent.php",
+                url: "../../s/function/freeparent.php",
                 data: {"id":node_conet.data.id,"pid":data[0].selectid},
                 success: function(data)
                 {
@@ -112,7 +112,7 @@ $(function() {
     {
         $.ajax({
             type: "POST",
-            url: "/s/function/movefreenode.php",
+            url: "../../s/function/movefreenode.php",
             data: {"id":node.data.id,"pid":node.data.parentId,"type":type},
             success: function(data)
             {
@@ -177,7 +177,7 @@ $(function() {
                     for(i=0;i<roleids.length;i++)
                     {
                         $.ajax({
-                            url:"/s/power/saveviewpower.php",
+                            url:"../../s/power/saveviewpower.php",
                             type:"post",
                             data:"role_id="+roleids[i]+"&form_id="+formid
                         });
@@ -280,11 +280,11 @@ $(function() {
             }
             if(!node.data.isLeaf)return false;
             if(node.data.type==3)
-                f_addTab(tabid,node.data.values[0].value,encodeURI('/admin/new_pagedesign/editReportForm2.php?id='+node.data.id+'&name='+node.data.values[0].value));
+                f_addTab(tabid,node.data.values[0].value,encodeURI('./editReportForm2.php?id='+node.data.id+'&name='+node.data.values[0].value));
             else if(node.data.type==2)
-                f_addTab(tabid,node.data.values[0].value,encodeURI('/admin/new_pagedesign/editLINKPage2.php?id='+node.data.id+'&name='+node.data.values[0].value));
+                f_addTab(tabid,node.data.values[0].value,encodeURI('./editLINKPage2.php?id='+node.data.id+'&name='+node.data.values[0].value));
             else
-                f_addTab(tabid,node.data.values[0].value,encodeURI('/admin/new_pagedesign/editHTMLPage2.htm?id='+node.data.id+'&name='+node.data.values[0].value));
+                f_addTab(tabid,node.data.values[0].value,encodeURI('./editHTMLPage2.htm?id='+node.data.id+'&name='+node.data.values[0].value));
         },
         onContextmenu: function (node, e)
         {
@@ -341,7 +341,7 @@ $(function() {
         $("#dataTree").html("");
         $.ajax({
             type: 'POST',
-            url: '/s/function/pageinfo.php',
+            url: '../../s/function/pageinfo.php',
             data: { type: "1" },
             success: function(data) {
                 data = eval('(' + data + ')');
@@ -539,14 +539,14 @@ function tuichu() {
     .l-link2{text-decoration:underline; color:white; margin-left:2px;margin-right:2px;}
     .l-layout-top{background:#102A49; color:White;}
     .l-layout-bottom{ background:#E5EDEF; text-align:center;}
-    #pageloading{position:absolute; left:0px; top:0px; background:white url('/resource/part/ligerlib/images/loading.gif') no-repeat center; width:100%; height:100%;z-index:99999;}
+    #pageloading{position:absolute; left:0px; top:0px; background:white url('../../resource/part/ligerlib/images/loading.gif') no-repeat center; width:100%; height:100%;z-index:99999;}
     .l-link{ display:block; line-height:22px; height:22px; padding-left:16px;border:1px solid white; margin:4px;}
     .l-link-over{ background:#FFEEAC; border:1px solid #DB9F00;}
     .l-winbar{ background:#2B5A76; height:30px; position:absolute; left:0px; bottom:0px; width:100%; z-index:99999;}
     .space{ color:#E7E7E7;}
     /* 顶部 */
-    .l-topmenu{ margin:0; padding:0; height:31px; line-height:31px; background:url('/resource/part/ligerlib/images/top.jpg') repeat-x bottom;  position:relative; border-top:1px solid #1D438B;  }
-    .l-topmenu-logo{ color:#E7E7E7; padding-left:35px; line-height:26px;background:url('/resource/part/ligerlib/images/topicon.gif') no-repeat 10px 5px;}
+    .l-topmenu{ margin:0; padding:0; height:31px; line-height:31px; background:url('../../resource/part/ligerlib/images/top.jpg') repeat-x bottom;  position:relative; border-top:1px solid #1D438B;  }
+    .l-topmenu-logo{ color:#E7E7E7; padding-left:35px; line-height:26px;background:url('../../resource/part/ligerlib/images/topicon.gif') no-repeat 10px 5px;}
     .l-topmenu-welcome{  position:absolute; height:24px; line-height:24px;  right:30px; top:2px;color:#070A0C;}
     .l-topmenu-welcome a{ color:#E7E7E7; text-decoration:none}
     .l-topmenu-welcome a:hover{

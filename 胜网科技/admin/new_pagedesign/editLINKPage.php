@@ -2,21 +2,21 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <title>跳转地址参数设置</title>
-<script type="text/javascript" src="/resource/js/jQuery/jquery-1.9.1.js"></script> 
-<link href="/resource/part/newtpl/css/public.css" rel="stylesheet" type="text/css" />
-<script type="text/javascript" src="/resource/part/newtpl/js/public.js"></script>
-<link href="/resource/part/newtpl/css/rheight.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="../../resource/js/jQuery/jquery-1.9.1.js"></script> 
+<link href="../../resource/part/newtpl/css/public.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="../../resource/part/newtpl/js/public.js"></script>
+<link href="../../resource/part/newtpl/css/rheight.css" rel="stylesheet" type="text/css" />
 
 
 
-<link href="/resource/part/ligerlib/ligerUI/skins/Aqua/css/ligerui-all.css" rel="stylesheet" type="text/css" /> 
-<link href="/resource/part/ligerlib/ligerUI/skins/Tab/css/form.css" rel="stylesheet" type="text/css" /> 
-<script src="/resource/part/ligerlib/jquery/jquery-1.3.2.min.js" type="text/javascript"></script>
-<script src="/resource/part/ligerlib/ligerUI/js/ligerui.all.js" type="text/javascript"></script>  
+<link href="../../resource/part/ligerlib/ligerUI/skins/Aqua/css/ligerui-all.css" rel="stylesheet" type="text/css" /> 
+<link href="../../resource/part/ligerlib/ligerUI/skins/Tab/css/form.css" rel="stylesheet" type="text/css" /> 
+<script src="../../resource/part/ligerlib/jquery/jquery-1.3.2.min.js" type="text/javascript"></script>
+<script src="../../resource/part/ligerlib/ligerUI/js/ligerui.all.js" type="text/javascript"></script>  
 
-<script src="/resource/part/ligerlib/jquery-validation/jquery.validate.min.js"></script>
-<script src="/resource/part/ligerlib/jquery-validation/jquery.metadata.js" type="text/javascript"></script>
-<script src="/resource/part/ligerlib/jquery-validation/messages_cn.js" type="text/javascript"></script>
+<script src="../../resource/part/ligerlib/jquery-validation/jquery.validate.min.js"></script>
+<script src="../../resource/part/ligerlib/jquery-validation/jquery.metadata.js" type="text/javascript"></script>
+<script src="../../resource/part/ligerlib/jquery-validation/messages_cn.js" type="text/javascript"></script>
 
 <script>
 <?php
