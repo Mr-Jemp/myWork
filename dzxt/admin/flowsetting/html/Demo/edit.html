@@ -1,0 +1,54 @@
+<!DOCTYPE HTML>
+<html>
+ <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <link href="../css/resource/part/bootstrap/css/bootstrap.css" rel="stylesheet" type="text/css" />
+    <!--[if lte IE 6]>
+    <link rel="stylesheet" type="text/css" href="__PUBLIC__/css/resource/part/bootstrap/css/bootstrap-ie6.css?{$_cjv}">
+    <![endif]-->
+    <!--[if lte IE 7]>
+    <link rel="stylesheet" type="text/css" href="__PUBLIC__/css/resource/part/bootstrap/css/ie.css?{$_cjv}">
+    <![endif]-->
+    <link href="../css/site.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript">
+        var _root='{$_site_url}{:U('/')}',_controller = '{$_controller}';
+    </script>
+    <title>流程设计器</title>
+ </head>
+<body>
+<div class="container">
+<br />
+<div class="row">
+    <ol class="breadcrumb">
+        <li><a href="/">流程设计器</a> <span class="divider">/</span></li>
+        <li><a href="{:U('/demo')}">实例</a> <span class="divider">/</span></li>
+        <li class="active"><if condition="empty($one)">添加<else/>编辑</if></li>
+    </ol>
+</div>
+<div class="row">
+<form action="{:U('/demo/'.$_action)}" method="post" style="width:600px; padding-left:30px;">
+<input type="hidden" value="{$one.id}" name="flow_id">
+<p>
+    <label>流程名称</label>
+    <input type="text" class="span6" placeholder="必填项" name="flow_name" value="{$one.flow_name}">
+</p>
+<p>
+    <label>选择表单</label>
+    <select name="form_id">
+        <volist name="form_list" id="vo">
+        <option value="{$vo.id}" <if condition="$vo['id'] eq $one['form_id']">selected="selected"</if>>{$vo.form_name}</option>
+        </volist>
+    </select>
+</p>
+<p>
+    <label>流程描述</label>
+    <textarea rows="2" class="span6" placeholder="简单描述一下也好呀" name="flow_desc">{$one.flow_desc}</textarea>
+</p>
+<button type="submit" name="submit_to_save" value="save" class="btn btn-success">确定保存</button>
+</form>
+</div>
+</div>
+</body>
+</html>

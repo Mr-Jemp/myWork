@@ -1,0 +1,75 @@
+﻿html{
+	background-color:#E0F0FE;
+}
+body { margin:0px; font-family:Arial, Helvetica, sans-serif; font-size:12px; color:#000000;}
+input {font-family:Arial, Helvetica, sans-serif;vertical-align:middle; font-size:12px;}
+form,p,h1,h2,h3,h4,li,ul{ margin:0px; padding:0px;}
+li {line-height:180%;list-style-type:none;}
+.clear{clear:both;}
+/*-----顶部提示--------*/
+.pagetit{ padding-top:7px; padding-bottom:15px; padding-left:3px;}
+.pagetit .ptit{ font-size:14px; font-weight:bold; color: #006699; width:auto; float:left; margin-right:26px; line-height:25px; padding-left:6px;}
+.toptip{line-height:180%;}
+.toptip h2{padding-left:20px; display:block;color: #000000;   font-size:12px; margin-bottom:8px;border-bottom:1px  #DFEDF7 solid;border-top:1px #DFEDF7 solid; background-color:#F0F8FD; height:30px; line-height:30px; margin-bottom:8px; font-weight:100}
+.toptip p{ color:#666666; padding-bottom:10px;padding-left:20px;}
+.toptit{line-height:180%;padding-left:20px;border-bottom:1px  #DFEDF7 solid;border-top:1px #DFEDF7 solid; background-color:#F0F8FD; height:30px; line-height:30px; margin-bottom:8px;}
+.link_w a:link {color: #FFFFFF;	text-decoration: none;}
+.link_w a:visited {text-decoration: none;color: #FFFFFF;}
+.link_w a:hover {text-decoration: underline;color: #FFFFFF;}
+.link_w a:active {text-decoration: none;color: #FFFFFF;}
+/*-----页面内部上方导航--------*/
+.topnav{ font-weight:bold; float:left;}
+.topnav a{display:block; float:left; height:23px; width:auto;color: #666666; margin-right:10px; cursor:pointer;text-decoration:none; }
+.topnav a u{display:block; float:left; height:23px; line-height:25px;width:auto; font-size:12px;text-decoration:none; padding-left:8px; margin-right:8px; }
+.topnav a:hover{background:url(../images/topnavbg.gif) no-repeat right 0px;}
+.topnav a:hover u{background:url(../images/topnavbg.gif) no-repeat 0px 0px}
+.topnav a.select{background:url(../images/topnavbg.gif) no-repeat right -24px; color:#fff}
+.topnav a:hover.select{background:url(../images/topnavbg.gif) no-repeat right -24px; color:#fff}
+.topnav a.select u{background:url(../images/topnavbg.gif) no-repeat 0px -24px;}
+.topnav a:hover.select u{background:url(../images/topnavbg.gif) no-repeat 0px -24px;}
+/*-----footer--------*/
+.footer {font-size:10px;text-align:center;border:1px #A9BAE2 solid; height:40px; line-height:40px; margin:5px;background-color:#F0F5FD; color:#666666 }
+.footer a {text-decoration: none;}
+.footer a:hover {	text-decoration: underline;}
+/*-----框架页面--------------------------------------*/
+/*-----框架-top--------*/
+.admin_top_bg {background-color:#1450A0; width:100%; height:70px; color:#FFFFFF}
+.admin_top_nav {}
+.admin_top_nav a{ display:block;float:left;height:30px; font-size:14px; line-height:30px; text-align:center; font-weight:bold;margin-right:4px; background-color:#164885; padding-left:12px; padding-right:12px; border:1px #295CA2 solid; border-bottom:0px;color:#CADEF9;text-decoration: none;}
+.admin_top_nav a:hover {color: #CCFF00;}
+.admin_top_nav a.select{color:#006699; border-color: #003399;background-image:url(../images/admin_tit_bg.jpg); background-repeat:repeat-x}
+.admin_top_nav a:hover.select{color:#006699;}
+/*-----框架-left--------*/
+.admin_left_box { margin-top:15px;background-color: #F5F9FE; padding:3px;}
+.admin_left_box ul{ margin:0px; padding:0px;}
+.admin_left_box  li { padding-left:40px; height:25px; line-height:25px;}
+.admin_left_box  li a {color: #666666;text-decoration:none;background-image: url(../images/admin_left_li.gif); background-repeat:no-repeat; padding-left:15px; background-position:0px 2px;}
+.admin_left_box  li a:hover{ color:#009900}
+.admin_left_box .hover{background-color:#E0F0FE;}
+.admin_left_box .hover a{color:#009900}
+/*-----框架-main--------*/
+.admin_main_nr_dbox {border:1px #95AADB solid;background-color:#FFFFFF; margin-left:5px; margin-right:5px; padding:10px;margin-top:5px;}
+/*-----Frameset全屏--------*/
+.admin_frameset{ position:absolute; left:0px; top:0px;width:26px; height:26px;}
+.admin_frameset .open_frame{background:url(../images/open_frame.gif) no-repeat; cursor:pointer;width:26px; height:26px;}
+.admin_frameset .open_frame_hover{background:url(../images/open_frame.gif) no-repeat 0px -26px; cursor:pointer;width:26px; height:26px;}
+.admin_frameset .close_frame{background:url(../images/close_frame.gif) no-repeat; cursor:pointer; display:none;width:26px; height:26px;}
+.admin_frameset .close_frame_hover{background:url(../images/close_frame.gif) no-repeat 0px -26px; cursor:pointer;width:26px; height:26px;}
+.login_title h1{
+ font-size:16px;
+ line-height:18px;
+}
+.login_title span{
+ font-family: Arial,Helvetica,sans-serif;
+ font-size:12px;
+ color:#9ad665;
+}
+#loading {
+    background: rgba(0, 0, 0, 0) url("../../ligerlib/images/loading.gif") no-repeat scroll center center;
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 99999;
+}

@@ -1,0 +1,10 @@
+[12/25/2015 09:38:38] Success	Update started: C:\Program Files (x86)\NetSarang\Xshell 5\LiveUpdate.exe
+[12/25/2015 09:38:38] Notice	Update engine version: 3.7.0.0
+[12/25/2015 09:38:38] Notice	Product: Xshell 5
+[12/25/2015 09:38:38] Success	Language set: Primary = 4, Secondary = 2
+[12/25/2015 09:38:38] Success	Include script: _TU20_Global_Functions.lua
+[12/25/2015 09:39:35] Success	Language set: Primary = 9, Secondary = 1
+[12/25/2015 09:39:35] Notice	Automatic update required.
+[12/25/2015 09:39:59] Notice	Dat file updated: 'C:\Program Files (x86)\NetSarang\Xshell 5\LiveUpdate.dat'
+[12/25/2015 09:39:59] Success	Run client data event: Client Script
+[12/25/2015 09:39:59] Notice	Exit update process (Return code: 11)

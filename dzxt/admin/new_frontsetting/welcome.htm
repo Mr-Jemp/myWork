@@ -1,0 +1,123 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>编辑页面</title>
+<style type="text/css">
+<!--
+html{height:100%;}
+body {
+	height:100%;
+	margin-left: 0px;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+}
+-->
+</style>
+</head>
+
+<body>
+<script type="text/javascript" src="../../resource/js/jQuery/jquery-1.9.1.js"></script>
+<!-- 加载编辑器的容器 -->
+<script id="container" name="content" type="text/plain" style="width:98.9%;height:84%;"></script>
+<!-- 配置文件 -->
+<script type="text/javascript" src="../pageEdit/formdesign/js/ueditor/ueditor.config.js"></script>
+<!-- 编辑器源码文件 -->
+<script type="text/javascript" src="../pageEdit/formdesign/js/ueditor/ueditor.all.js"></script>
+<!-- 实例化编辑器 -->
+<script type="text/javascript">
+function getpar(name)
+{
+	var reg = new RegExp("(^|&)"+name+"=([^&]*)(&|$)","i");
+	var r = window.location.search.substr(1).match(reg);
+	if(r!=null) return r[2];
+	return "";
+}
+var pageId=getpar("id");
+var pageType=getpar("ty");//角色过的=role
+
+$(window).load(function()
+{
+	$.ajax({
+		type: 'POST',
+		url: '/加载数据的URL.ashx',
+		data: {id:pageId},
+		success: function(data) {
+			if(typeof data!="object")
+			$("#container").val(data);
+			startEditor();
+		}, error: function(xhr, stat, e) {startEditor(); }
+	});
+});
+function toSave()
+{
+	var toBody=UE.getContent();
+	$.ajax({
+		type: 'POST',
+		url: '/保存数据的URL.ashx',
+		data: {id:pageId,data:encodeURIComponent(toBody)},
+		success: function(data) {
+			if(typeof data!="object")
+			$("#container").val(data);
+			startEditor();
+		}, error: function(xhr, stat, e) { $.ligerDialog.error("保存数据失败：找不到地址！");startEditor(); }
+	});
+	
+}
+function startEditor()
+{
+	UE.getEditor('container',{
+	autoHeight:true,
+	toolleipi:true,
+	toolbars:[[
+            'source', '|', 'undo', 'redo', '|',
+            'bold', 'italic', 'underline', 'fontborder', 'strikethrough', 'superscript', 'subscript', 'removeformat', 'formatmatch', 'autotypeset', 'blockquote', 'pasteplain', '|', 'forecolor', 'backcolor', 'insertorderedlist', 'insertunorderedlist', 'selectall', 'cleardoc', '|',
+            'rowspacingtop', 'rowspacingbottom', 'lineheight', '|',
+            'customstyle', 'paragraph', 'fontfamily', 'fontsize', '|',
+            'directionalityltr', 'directionalityrtl', 'indent', '|',
+            'justifyleft', 'justifycenter', 'justifyright', 'justifyjustify', '|', 'touppercase', 'tolowercase', '|',
+            'link', 'unlink', 'anchor', '|', 'imagenone', 'imageleft', 'imageright', 'imagecenter', '|',
+            'simpleupload', 'insertimage', 'emotion', 'scrawl', 'insertvideo', 'music', 'attachment', 'map', 'gmap', 'insertframe', 'insertcode', /*'webapp',*/ 'pagebreak', 'template', 'background', '|',
+            'horizontal', 'date', 'time', 'spechars', 'snapscreen', 'wordimage', '|',
+            'inserttable', 'deletetable', 'insertparagraphbeforetable', 'insertrow', 'deleterow', 'insertcol', 'deletecol', 'mergecells', 'mergeright', 'mergedown', 'splittocells', 'splittorows', 'splittocols', 'charts', '|',
+            'print', 'searchreplace', 'help', 'drafts','textfield']],
+	});
+	
+	UE.registerUI('page_save',function(editor,uiName)
+	{
+		if(!this.options.toolleipi)
+		{
+			return false;
+		}
+		//注册按钮执行时的command命令，使用命令默认就会带有回退操作
+		editor.registerCommand(uiName,{
+			execCommand:function(){
+				try {
+					toSave();
+				} catch ( e ) {
+					$.ligerDialog.error('保存异常');
+				}
+			}
+		});
+		//创建一个button
+		var btn = new UE.ui.Button({
+			//按钮的名字
+			name:uiName,
+			//提示
+			title:"保存编辑",
+			//需要添加的额外样式，指定icon图标，这里默认使用一个重复的icon
+			cssRules :'background-position: -481px -20px;',
+			//点击时执行的命令
+			onclick:function () {
+				//这里可以不用执行命令,做你自己的操作也可
+			   editor.execCommand(uiName);
+			}
+		});
+		//因为你是添加button,所以需要返回这个button
+		return btn;
+	});
+}
+</script>
+</body>
+</html>

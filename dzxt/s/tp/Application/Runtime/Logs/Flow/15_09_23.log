@@ -1,0 +1,27 @@
+[ 2015-09-23T15:13:34+08:00 ] 127.0.0.1 /s/tp/wwwroot/index.php?s=/Flow/demo/index/getflow/ok.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `ht_flow` [ RunTime:0.0156s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `ht_flow` WHERE `is_del` = 0 LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [8] Undefined variable: p D:\project\dzxt\s\tp\Application\Flow\Controller\DemoController.class.php 第 22 行.
+NOTIC: [8] Trying to get property of non-object D:\project\dzxt\s\tp\Application\Flow\Controller\DemoController.class.php 第 22 行.
+NOTIC: [8] Undefined variable: p D:\project\dzxt\s\tp\Application\Flow\Controller\DemoController.class.php 第 22 行.
+NOTIC: [8] Trying to get property of non-object D:\project\dzxt\s\tp\Application\Flow\Controller\DemoController.class.php 第 22 行.
+SQL: SELECT `id`,`form_id`,`flow_name`,`flow_desc`,`updatetime`,`dateline` FROM `ht_flow` WHERE `is_del` = 0 ORDER BY id desc  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ht_form` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `ht_form` WHERE ( 1=1 AND id='142' ) LIMIT 1   [ RunTime:0.0156s ]
+SQL: SELECT * FROM `ht_form` WHERE ( 1=1 AND id='191' ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `ht_form` WHERE ( 1=1 AND id='58' ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `ht_form` WHERE ( 1=1 AND id='142' ) LIMIT 1   [ RunTime:0.0156s ]
+SQL: SELECT * FROM `ht_form` WHERE ( 1=1 AND id='135' ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `ht_form` WHERE ( 1=1 AND id='136' ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `ht_form` WHERE ( 1=1 AND id='135' ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `ht_form` WHERE ( 1=1 AND id='58' ) LIMIT 1   [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+

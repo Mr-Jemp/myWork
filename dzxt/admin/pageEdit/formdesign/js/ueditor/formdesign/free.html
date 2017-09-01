@@ -1,0 +1,342 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <title>树控件</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1" >
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.css">
+    <!--[if lte IE 6]>
+    <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap-ie6.css">
+    <![endif]-->
+    <!--[if lte IE 7]>
+    <link rel="stylesheet" type="text/css" href="bootstrap/css/ie.css">
+    <![endif]-->
+    <link rel="stylesheet" href="leipi.style.css">
+    <script type="text/javascript" src="../dialogs/internal.js"></script>
+    <script type="text/javascript" src="/resource/js/jQuery/jquery-1.9.1.js"></script>
+	
+    <script type="text/javascript">
+function createElement(type, name)
+{     
+    var element = null;     
+    try {        
+        element = document.createElement('<'+type+' name="'+name+'">');     
+    } catch (e) {}   
+    if(element==null) {     
+        element = document.createElement(type);     
+        element.name = name;     
+    } 
+    return element;     
+}
+
+function fnAdd() {
+	
+	var olistText    = document.getElementById( "orgtext" ) ;
+	if(olistText.value==""){alert("请输入节点文本");return;}
+	var olistLink    = document.getElementById( "orglink" ) ;
+	if(olistLink.value==""){alert("请输入连接地址");return;}
+	
+	if(oListText.selectedIndex<0)
+	{
+		free.addhead(olistText.value,olistLink.value);
+		return;
+	}
+	var id=oListText.options[oListText.selectedIndex].value;
+	var obj=free.find(id);
+	free.add(obj,olistText.value,olistLink.value);
+}
+
+function fnModify() {
+	var olistText    = document.getElementById( "orgtext" ) ;
+	if(olistText.value==""){alert("请输入节点文本");return;}
+	var olistLink    = document.getElementById( "orglink" ) ;
+	if(olistLink.value==""){alert("请输入连接地址");return;}
+	
+	if(oListText.selectedIndex<0)
+	{
+		alert("请选择树节点");
+		return;
+	}
+	var id=oListText.options[oListText.selectedIndex].value;
+	var obj=free.find(id);
+	free.edit(obj,olistText.value,olistLink.value);
+}
+
+function fnDelete()
+{
+	if(oListText.selectedIndex<0)
+	{
+		alert("请选择树节点");
+		return;
+	}
+	var id=oListText.options[oListText.selectedIndex].value;
+	free.del(id);
+}
+function fnDeleteAll()
+{
+	for ( var i = oListText.length - 1 ; i >= 0 ; i-- ) {
+        oListText.remove(i) ;
+    }
+}
+
+// Add a new option to a SELECT object (combo or list)
+function fnAddComboOption( combo, optionText, optionValue, documentObject, index ) {
+    var oOption ;
+    if ( documentObject ) {
+        oOption = documentObject.createElement("option") ;
+    } else {
+        oOption = document.createElement("option") ;
+    }
+    if ( index != null ) {
+        combo.options.add( oOption, index ) ;
+    } else {
+        combo.options.add( oOption ) ;
+    }
+    oOption.innerHTML = optionText.length > 0 ? fnHTMLEncode( optionText ) : '&nbsp;' ;
+    oOption.value     = optionValue ;
+    return oOption ;
+}
+
+function fnHTMLEncode( text ) {
+    if ( !text ) {
+        return '' ;
+    }
+    text = text.replace( /&/g, '&amp;' ) ;
+    text = text.replace( /</g, '&lt;' ) ;
+    text = text.replace( />/g, '&gt;' ) ;
+    return text ;
+}
+
+
+function fnHTMLDecode( text ) {
+    if ( !text ) {
+        return '' ;
+    }
+    text = text.replace( /&gt;/g, '>' ) ;
+    text = text.replace( /&lt;/g, '<' ) ;
+    text = text.replace( /&amp;/g, '&' ) ;
+    return text ;
+}
+
+    </script>
+</head>
+<body>
+<div class="content">
+    <table class="table table-bordered table-striped table-hover">
+    <tr>
+        <th  ><span>控件名称</span><span class="label label-important">*</span></th>
+        <th  >默认高度<span class="label label-important">*</span></th>
+    </tr>
+    <tr>
+        <td  > <input id="orgname" type="text" placeholder="必填项" /> </td>
+        <td  ><input id="orgminheight" type="text" placeholder="必填项" value="750"/></td>
+    </tr>
+    <tr>
+        <th colspan="2" >
+            <span>树数据</span><span class="label label-important">*</span>        </th>
+    </tr>
+    <tr>
+        <td colspan="2" >
+            <select id="orglist" multiple="multiple" class="span14"></select>        </td>
+    </tr>
+    <tr>
+        <td colspan="2">
+            <div class="btn-group pull-right">
+                <a title="新增" onclick="fnAdd();" class="btn btn-primary"><i class="icon-white icon-plus"></i></a>
+                <a title="修改" onclick="fnModify();" class="btn btn-default"><i class="icon-edit"></i></a>
+				<button title="删除" onclick="fnDelete();" class="btn btn-default"><i class="icon-ban-circle"></i></button>
+            </div>
+            文本：<input type="text" placeholder="请输入节点文本..." class="span2" id="orgtext">
+			参数：<input type="text" placeholder="请输入连接地址..." class="span2" id="orglink" value="/s/listform.php?fieldtype=key&key=">        </td>
+    </tr>
+    </table>
+    <div class="alert alert-danger">提示：需要预览才能看到实际效果</div>
+</div>
+<script type="text/javascript">
+
+var oListText ;
+var oNode = null,thePlugins = 'free';
+var free_nodeid=0;
+var free={
+	nodes:new Array(),
+	addhead:function(title,url)
+	{
+		var length=free.nodes.length;
+		free.nodes[length]={}
+		free.nodes[length].text=title;
+		free.nodes[length].url=url;
+		free.nodes[length].id=0;
+		free.nodes[length].children=null;
+		free.draw();
+	},
+	add:function(node,title,url)
+	{
+		var arr=new Array();
+		if(node.children==null){node.children=new Array();}
+		var length=node.children.length;
+		node.children[length]={};
+		node.children[length].text=title;
+		node.children[length].url=url
+		node.children[length].id=0;
+		node.children[length].children=null;
+		free.draw();
+	},
+	edit:function(obj,title,url)
+	{
+		obj.text=title;
+		obj.url=url
+		free.draw();
+	},
+	delitem:function(obj,id)
+	{
+		for(xx in obj)
+		{
+			if(id==obj[xx].id)
+			{
+				obj.splice(xx,1);
+				return true;
+			}
+			if(obj[xx].children==null)continue;
+			var re=free.delitem(obj[xx].children,id);
+			if(re==true)return true;
+		}
+		return false;
+	},
+	del:function(id)
+	{
+		for(xx in free.nodes)
+		{
+			if(free.nodes[xx].id==id)
+			{
+				free.nodes.splice(xx,1);
+				break;
+			}
+			if(free.nodes[xx].children==null)continue;
+			var obj=free.delitem(free.nodes[xx].children,id);
+			if(obj==true)break;
+		}
+		free.draw();
+	},
+	drawitem:function(data,title)
+	{
+		data.id=free_nodeid;free_nodeid++;
+		fnAddComboOption(oListText,title+data.text,data.id);
+		if(typeof data.children!="object")return;
+		for(xx in data.children)free.drawitem(data.children[xx],title+'　');		
+	},
+	draw:function()
+	{
+		fnDeleteAll();free_nodeid=0;
+		for(xx in free.nodes) free.drawitem(free.nodes[xx],'');
+	},
+	get:function(obj,id)
+	{
+		for(xx in obj)
+		{
+			if(id==obj[xx].id)return obj[xx];
+			if(obj[xx].children==null)continue;
+			var re=free.get(obj[xx].children,id);
+			if(re!=null)return re;
+		}
+		return null;
+	},
+	find:function(id)
+	{
+		for(xx in free.nodes)
+		{
+			if(free.nodes[xx].id==id)return free.nodes[xx];
+			if(free.nodes[xx].children==null)continue;
+			var obj=free.get(free.nodes[xx].children,id);
+			if(obj!=null)return obj;
+		}
+		return null;
+	}
+};
+
+window.onload = function() {
+	oListText = $G('orglist');
+	free.nodes=new Array();
+
+    if( UE.plugins[thePlugins].editdom ){
+        oNode = UE.plugins[thePlugins].editdom;
+        var gTitle=oNode.getAttribute('title').replace(/&quot;/g,"\""),gListData=decodeURI(oNode.getAttribute('listtext'));
+        gTitle = gTitle==null ? '' : gTitle;
+        $G('orgname').value = gTitle;
+        var gMinHeight=oNode.getAttribute('orgminheight');
+        $G('orgminheight').value = gMinHeight;
+		
+		free.nodes=JSON.parse(gListData);
+		free.draw();
+    }else
+	{
+		var str='';//'[{"text":"第一节","children":[{"text":"1.节","children":[{"text":"2.节","children":null}]}]},{"text":"第二节","children":null}]';
+		free.nodes=JSON.parse(str);
+		free.draw();	
+	}
+}
+dialog.oncancel = function () {
+    if( UE.plugins[thePlugins].editdom ) {
+        delete UE.plugins[thePlugins].editdom;
+    }
+};
+dialog.onok = function (){
+    if($G('orgname').value == '') {
+        alert('控件名称不能为空');
+        return false;
+    }
+    var gTitle=$G('orgname').value.replace(/\"/g,"&quot;");
+	var gListData=JSON.stringify(free.nodes);
+	gListData=gListData.substring(0,gListData.length-1);
+	gListData=gListData.substring(1,gListData.length);
+	if(gListData==""){
+        alert('树数据不能为空');
+        return false;
+	}
+	
+	var gMinHeight=$G('orgminheight').value;
+	
+
+    if( !oNode ) {
+        try {
+            oNode = createElement('input','leipiNewField');
+			oNode.setAttribute('leipiPlugins',thePlugins );
+			oNode.setAttribute('class','freeid' );
+            oNode.setAttribute('title',gTitle);
+            oNode.setAttribute('name','leipiNewField');
+            oNode.setAttribute('listtext',encodeURI('['+gListData+']'));
+			oNode.setAttribute('value',"树控件["+gTitle+"]");
+			
+			oNode.setAttribute('orgminheight',gMinHeight);
+			
+            editor.execCommand('insertHtml',oNode.outerHTML);
+            return true ;
+        } catch ( e ) {
+            try {
+                editor.execCommand('error');
+            } catch ( e ) {
+                alert('控件异常！');
+            }
+            return false;
+        }
+    } else {
+		oNode.setAttribute('leipiPlugins',thePlugins );
+        oNode.setAttribute('title',gTitle);
+        oNode.setAttribute('listtext',encodeURI('['+gListData+']'));
+		oNode.setAttribute("value","树控件["+gTitle+"]");
+		oNode.setAttribute('orgminheight',gMinHeight);
+		
+        delete UE.plugins[thePlugins].editdom;
+        return true;
+    }
+};
+$(function(){
+	$("#orglist").bind("click",function(){
+		var id=$(this).val();
+		var obj=free.find(id);
+		$("#orgtext").val(obj.text);
+		$("#orglink").val(obj.url);
+	});
+});
+</script>
+</body>
+</html>

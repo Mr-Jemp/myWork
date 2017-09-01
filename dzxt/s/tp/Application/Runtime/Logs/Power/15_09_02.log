@@ -1,0 +1,298 @@
+[ 2015-09-02T16:30:24+08:00 ] ::1 /s/tp/wwwroot/index.php?s=/Power/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.074219s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.012695s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.012695s ]
+SQL: SHOW COLUMNS FROM `ht_role` [ RunTime:0.0029s ]
+SQL: SELECT * FROM `ht_role` ORDER BY id asc  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `ht_role` WHERE `pid` = 0  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `ht_role` WHERE `pid` = 1  [ RunTime:0.0000s ]
+NOTIC: [2] Invalid argument supplied for foreach() D:\¹¤³ÌÇø\dzxt\s\tp\Application\Power\Controller\IndexController.class.php ç¬¬ 22 è¡Œ.
+SQL: SELECT * FROM `ht_role` WHERE `pid` = 7  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `ht_role` WHERE `pid` = 28  [ RunTime:0.0010s ]
+NOTIC: [2] Invalid argument supplied for foreach() D:\¹¤³ÌÇø\dzxt\s\tp\Application\Power\Controller\IndexController.class.php ç¬¬ 22 è¡Œ.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.023438s ]
+INFO: [ app_end ] --END-- [ RunTime:0.023438s ]
+
+[ 2015-09-02T16:30:24+08:00 ] ::1 /s/tp/wwwroot/index.php?s=/Power/Index/getform.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.073242s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.015625s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.015625s ]
+SQL: SHOW COLUMNS FROM `ht_form` [ RunTime:0.0068s ]
+SQL: SELECT `id`,`form_name`,`pid`,`type` FROM `ht_form` WHERE `pid` = 0  [ RunTime:0.0020s ]
+SQL: SELECT `id`,`form_name`,`pid`,`type` FROM `ht_form` WHERE `pid` = 52  [ RunTime:0.0020s ]
+SQL: SELECT `id`,`form_name`,`pid`,`type` FROM `ht_form` WHERE `pid` = 56  [ RunTime:0.0020s ]
+SQL: SELECT `id`,`form_name`,`pid`,`type` FROM `ht_form` WHERE `pid` = 58  [ RunTime:0.0010s ]
+SQL: SELECT `id`,`form_name`,`pid`,`type` FROM `ht_form` WHERE `pid` = 62  [ RunTime:0.0010s ]
+NOTIC: [2] Invalid argument supplied for foreach() D:\¹¤³ÌÇø\dzxt\s\tp\Application\Power\Controller\IndexController.class.php ç¬¬ 59 è¡Œ.
+SQL: SELECT `id`,`form_name`,`pid`,`type` FROM `ht_form` WHERE `pid` = 135  [ RunTime:0.0010s ]
+NOTIC: [2] Invalid argument supplied for foreach() D:\¹¤³ÌÇø\dzxt\s\tp\Application\Power\Controller\IndexController.class.php ç¬¬ 59 è¡Œ.
+SQL: SELECT `id`,`form_name`,`pid`,`type` FROM `ht_form` WHERE `pid` = 142  [ RunTime:0.0010s ]
+NOTIC: [2] Invalid argument supplied for foreach() D:\¹¤³ÌÇø\dzxt\s\tp\Application\Power\Controller\IndexController.class.php ç¬¬ 59 è¡Œ.
+SQL: SELECT `id`,`form_name`,`pid`,`type` FROM `ht_form` WHERE `pid` = 145  [ RunTime:0.0010s ]
+NOTIC: [2] Invalid argument supplied for foreach() D:\¹¤³ÌÇø\dzxt\s\tp\Application\Power\Controller\IndexController.class.php ç¬¬ 59 è¡Œ.
+SQL: SELECT `id`,`form_name`,`pid`,`type` FROM `ht_form` WHERE `pid` = 146  [ RunTime:0.0010s ]
+NOTIC: [2] Invalid argument supplied for foreach() D:\¹¤³ÌÇø\dzxt\s\tp\Application\Power\Controller\IndexController.class.php ç¬¬ 59 è¡Œ.
+SQL: SELECT `id`,`form_name`,`pid`,`type` FROM `ht_form` WHERE `pid` = 147  [ RunTime:0.0020s ]
+NOTIC: [2] Invalid argument supplied for foreach() D:\¹¤³ÌÇø\dzxt\s\tp\Application\Power\Controller\IndexController.class.php ç¬¬ 59 è¡Œ.
+SQL: SELECT `id`,`form_name`,`pid`,`type` FROM `ht_form` WHERE `pid` = 177  [ RunTime:0.0010s ]
+NOTIC: [2] Invalid argument supplied for foreach() D:\¹¤³ÌÇø\dzxt\s\tp\Application\Power\Controller\IndexController.class.php ç¬¬ 59 è¡Œ.
+SQL: SELECT `id`,`form_name`,`pid`,`type` FROM `ht_form` WHERE `pid` = 129  [ RunTime:0.0010s ]
+SQL: SELECT `id`,`form_name`,`pid`,`type` FROM `ht_form` WHERE `pid` = 137  [ RunTime:0.0010s ]
+NOTIC: [2] Invalid argument supplied for foreach() D:\¹¤³ÌÇø\dzxt\s\tp\Application\Power\Controller\IndexController.class.php ç¬¬ 59 è¡Œ.
+SQL: SELECT `id`,`form_name`,`pid`,`type` FROM `ht_form` WHERE `pid` = 138  [ RunTime:0.0010s ]
+NOTIC: [2] Invalid argument supplied for foreach() D:\¹¤³ÌÇø\dzxt\s\tp\Application\Power\Controller\IndexController.class.php ç¬¬ 59 è¡Œ.
+SQL: SELECT `id`,`form_name`,`pid`,`type` FROM `ht_form` WHERE `pid` = 139  [ RunTime:0.0010s ]
+NOTIC: [2] Invalid argument supplied for foreach() D:\¹¤³ÌÇø\dzxt\s\tp\Application\Power\Controller\IndexController.class.php ç¬¬ 59 è¡Œ.
+SQL: SELECT `id`,`form_name`,`pid`,`type` FROM `ht_form` WHERE `pid` = 140  [ RunTime:0.0010s ]
+SQL: SELECT `id`,`form_name`,`pid`,`type` FROM `ht_form` WHERE `pid` = 141  [ RunTime:0.0010s ]
+NOTIC: [2] Invalid argument supplied for foreach() D:\¹¤³ÌÇø\dzxt\s\tp\Application\Power\Controller\IndexController.class.php ç¬¬ 59 è¡Œ.
+SQL: SELECT `id`,`form_name`,`pid`,`type` FROM `ht_form` WHERE `pid` = 157  [ RunTime:0.0010s ]
+NOTIC: [2] Invalid argument supplied for foreach() D:\¹¤³ÌÇø\dzxt\s\tp\Application\Power\Controller\IndexController.class.php ç¬¬ 59 è¡Œ.
+SQL: SELECT `id`,`form_name`,`pid`,`type` FROM `ht_form` WHERE `pid` = 160  [ RunTime:0.0010s ]
+NOTIC: [2] Invalid argument supplied for foreach() D:\¹¤³ÌÇø\dzxt\s\tp\Application\Power\Controller\IndexController.class.php ç¬¬ 59 è¡Œ.
+SQL: SELECT `id`,`form_name`,`pid`,`type` FROM `ht_form` WHERE `pid` = 173  [ RunTime:0.0010s ]
+NOTIC: [2] Invalid argument supplied for foreach() D:\¹¤³ÌÇø\dzxt\s\tp\Application\Power\Controller\IndexController.class.php ç¬¬ 59 è¡Œ.
+SQL: SELECT `id`,`form_name`,`pid`,`type` FROM `ht_form` WHERE `pid` = 144  [ RunTime:0.0010s ]
+NOTIC: [2] Invalid argument supplied for foreach() D:\¹¤³ÌÇø\dzxt\s\tp\Application\Power\Controller\IndexController.class.php ç¬¬ 59 è¡Œ.
+SQL: SELECT `id`,`form_name`,`pid`,`type` FROM `ht_form` WHERE `pid` = 149  [ RunTime:0.0010s ]
+NOTIC: [2] Invalid argument supplied for foreach() D:\¹¤³ÌÇø\dzxt\s\tp\Application\Power\Controller\IndexController.class.php ç¬¬ 59 è¡Œ.
+SQL: SELECT `id`,`form_name`,`pid`,`type` FROM `ht_form` WHERE `pid` = 150  [ RunTime:0.0010s ]
+NOTIC: [2] Invalid argument supplied for foreach() D:\¹¤³ÌÇø\dzxt\s\tp\Application\Power\Controller\IndexController.class.php ç¬¬ 59 è¡Œ.
+SQL: SELECT `id`,`form_name`,`pid`,`type` FROM `ht_form` WHERE `pid` = 151  [ RunTime:0.0000s ]
+NOTIC: [2] Invalid argument supplied for foreach() D:\¹¤³ÌÇø\dzxt\s\tp\Application\Power\Controller\IndexController.class.php ç¬¬ 59 è¡Œ.
+SQL: SELECT `id`,`form_name`,`pid`,`type` FROM `ht_form` WHERE `pid` = 155  [ RunTime:0.0010s ]
+NOTIC: [2] Invalid argument supplied for foreach() D:\¹¤³ÌÇø\dzxt\s\tp\Application\Power\Controller\IndexController.class.php ç¬¬ 59 è¡Œ.
+SQL: SELECT `id`,`form_name`,`pid`,`type` FROM `ht_form` WHERE `pid` = 156  [ RunTime:0.0010s ]
+NOTIC: [2] Invalid argument supplied for foreach() D:\¹¤³ÌÇø\dzxt\s\tp\Application\Power\Controller\IndexController.class.php ç¬¬ 59 è¡Œ.
+SQL: SELECT `id`,`form_name`,`pid`,`type` FROM `ht_form` WHERE `pid` = 143  [ RunTime:0.0010s ]
+NOTIC: [2] Invalid argument supplied for foreach() D:\¹¤³ÌÇø\dzxt\s\tp\Application\Power\Controller\IndexController.class.php ç¬¬ 59 è¡Œ.
+SQL: SELECT `id`,`form_name`,`pid`,`type` FROM `ht_form` WHERE `pid` = 163  [ RunTime:0.0010s ]
+NOTIC: [2] Invalid argument supplied for foreach() D:\¹¤³ÌÇø\dzxt\s\tp\Application\Power\Controller\IndexController.class.php ç¬¬ 59 è¡Œ.
+SQL: SELECT `id`,`form_name`,`pid`,`type` FROM `ht_form` WHERE `pid` = 165  [ RunTime:0.0010s ]
+SQL: SELECT `id`,`form_name`,`pid`,`type` FROM `ht_form` WHERE `pid` = 54  [ RunTime:0.0010s ]
+SQL: SELECT `id`,`form_name`,`pid`,`type` FROM `ht_form` WHERE `pid` = 92  [ RunTime:0.0020s ]
+NOTIC: [2] Invalid argument supplied for foreach() D:\¹¤³ÌÇø\dzxt\s\tp\Application\Power\Controller\IndexController.class.php ç¬¬ 59 è¡Œ.
+SQL: SELECT `id`,`form_name`,`pid`,`type` FROM `ht_form` WHERE `pid` = 93  [ RunTime:0.0010s ]
+NOTIC: [2] Invalid argument supplied for foreach() D:\¹¤³ÌÇø\dzxt\s\tp\Application\Power\Controller\IndexController.class.php ç¬¬ 59 è¡Œ.
+SQL: SELECT `id`,`form_name`,`pid`,`type` FROM `ht_form` WHERE `pid` = 95  [ RunTime:0.0010s ]
+NOTIC: [2] Invalid argument supplied for foreach() D:\¹¤³ÌÇø\dzxt\s\tp\Application\Power\Controller\IndexController.class.php ç¬¬ 59 è¡Œ.
+SQL: SELECT `id`,`form_name`,`pid`,`type` FROM `ht_form` WHERE `pid` = 97  [ RunTime:0.0010s ]
+NOTIC: [2] Invalid argument supplied for foreach() D:\¹¤³ÌÇø\dzxt\s\tp\Application\Power\Controller\IndexController.class.php ç¬¬ 59 è¡Œ.
+SQL: SELECT `id`,`form_name`,`pid`,`type` FROM `ht_form` WHERE `pid` = 98  [ RunTime:0.0010s ]
+NOTIC: [2] Invalid argument supplied for foreach() D:\¹¤³ÌÇø\dzxt\s\tp\Application\Power\Controller\IndexController.class.php ç¬¬ 59 è¡Œ.
+SQL: SELECT `id`,`form_name`,`pid`,`type` FROM `ht_form` WHERE `pid` = 100  [ RunTime:0.0010s ]
+NOTIC: [2] Invalid argument supplied for foreach() D:\¹¤³ÌÇø\dzxt\s\tp\Application\Power\Controller\IndexController.class.php ç¬¬ 59 è¡Œ.
+SQL: SELECT `id`,`form_name`,`pid`,`type` FROM `ht_form` WHERE `pid` = 167  [ RunTime:0.0010s ]
+SQL: SELECT `id`,`form_name`,`pid`,`type` FROM `ht_form` WHERE `pid` = 175  [ RunTime:0.0010s ]
+NOTIC: [2] Invalid argument supplied for foreach() D:\¹¤³ÌÇø\dzxt\s\tp\Application\Power\Controller\IndexController.class.php ç¬¬ 59 è¡Œ.
+SQL: SELECT `id`,`form_name`,`pid`,`type` FROM `ht_form` WHERE `pid` = 176  [ RunTime:0.0010s ]
+NOTIC: [2] Invalid argument supplied for foreach() D:\¹¤³ÌÇø\dzxt\s\tp\Application\Power\Controller\IndexController.class.php ç¬¬ 59 è¡Œ.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000976s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000976s ]
+
+[ 2015-09-02T16:56:00+08:00 ] ::1 /s/tp/wwwroot/index.php?s=/Power/Index/getform.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.121094s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.015625s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.015625s ]
+SQL: SHOW COLUMNS FROM `ht_form` [ RunTime:0.0156s ]
+SQL: SELECT `id`,`form_name`,`pid`,`type` FROM `ht_form` WHERE `pid` = 0  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`form_name`,`pid`,`type` FROM `ht_form` WHERE `pid` = 52  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`form_name`,`pid`,`type` FROM `ht_form` WHERE `pid` = 56  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`form_name`,`pid`,`type` FROM `ht_form` WHERE `pid` = 58  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`form_name`,`pid`,`type` FROM `ht_form` WHERE `pid` = 62  [ RunTime:0.0000s ]
+NOTIC: [2] Invalid argument supplied for foreach() D:\¹¤³ÌÇø\dzxt\s\tp\Application\Power\Controller\IndexController.class.php ç¬¬ 59 è¡Œ.
+SQL: SELECT `id`,`form_name`,`pid`,`type` FROM `ht_form` WHERE `pid` = 135  [ RunTime:0.0000s ]
+NOTIC: [2] Invalid argument supplied for foreach() D:\¹¤³ÌÇø\dzxt\s\tp\Application\Power\Controller\IndexController.class.php ç¬¬ 59 è¡Œ.
+SQL: SELECT `id`,`form_name`,`pid`,`type` FROM `ht_form` WHERE `pid` = 142  [ RunTime:0.0000s ]
+NOTIC: [2] Invalid argument supplied for foreach() D:\¹¤³ÌÇø\dzxt\s\tp\Application\Power\Controller\IndexController.class.php ç¬¬ 59 è¡Œ.
+SQL: SELECT `id`,`form_name`,`pid`,`type` FROM `ht_form` WHERE `pid` = 145  [ RunTime:0.0000s ]
+NOTIC: [2] Invalid argument supplied for foreach() D:\¹¤³ÌÇø\dzxt\s\tp\Application\Power\Controller\IndexController.class.php ç¬¬ 59 è¡Œ.
+SQL: SELECT `id`,`form_name`,`pid`,`type` FROM `ht_form` WHERE `pid` = 146  [ RunTime:0.0000s ]
+NOTIC: [2] Invalid argument supplied for foreach() D:\¹¤³ÌÇø\dzxt\s\tp\Application\Power\Controller\IndexController.class.php ç¬¬ 59 è¡Œ.
+SQL: SELECT `id`,`form_name`,`pid`,`type` FROM `ht_form` WHERE `pid` = 147  [ RunTime:0.0166s ]
+NOTIC: [2] Invalid argument supplied for foreach() D:\¹¤³ÌÇø\dzxt\s\tp\Application\Power\Controller\IndexController.class.php ç¬¬ 59 è¡Œ.
+SQL: SELECT `id`,`form_name`,`pid`,`type` FROM `ht_form` WHERE `pid` = 177  [ RunTime:0.0010s ]
+NOTIC: [2] Invalid argument supplied for foreach() D:\¹¤³ÌÇø\dzxt\s\tp\Application\Power\Controller\IndexController.class.php ç¬¬ 59 è¡Œ.
+SQL: SELECT `id`,`form_name`,`pid`,`type` FROM `ht_form` WHERE `pid` = 129  [ RunTime:0.0010s ]
+SQL: SELECT `id`,`form_name`,`pid`,`type` FROM `ht_form` WHERE `pid` = 137  [ RunTime:0.0010s ]
+NOTIC: [2] Invalid argument supplied for foreach() D:\¹¤³ÌÇø\dzxt\s\tp\Application\Power\Controller\IndexController.class.php ç¬¬ 59 è¡Œ.
+SQL: SELECT `id`,`form_name`,`pid`,`type` FROM `ht_form` WHERE `pid` = 138  [ RunTime:0.0010s ]
+NOTIC: [2] Invalid argument supplied for foreach() D:\¹¤³ÌÇø\dzxt\s\tp\Application\Power\Controller\IndexController.class.php ç¬¬ 59 è¡Œ.
+SQL: SELECT `id`,`form_name`,`pid`,`type` FROM `ht_form` WHERE `pid` = 140  [ RunTime:0.0010s ]
+SQL: SELECT `id`,`form_name`,`pid`,`type` FROM `ht_form` WHERE `pid` = 141  [ RunTime:0.0010s ]
+NOTIC: [2] Invalid argument supplied for foreach() D:\¹¤³ÌÇø\dzxt\s\tp\Application\Power\Controller\IndexController.class.php ç¬¬ 59 è¡Œ.
+SQL: SELECT `id`,`form_name`,`pid`,`type` FROM `ht_form` WHERE `pid` = 157  [ RunTime:0.0010s ]
+NOTIC: [2] Invalid argument supplied for foreach() D:\¹¤³ÌÇø\dzxt\s\tp\Application\Power\Controller\IndexController.class.php ç¬¬ 59 è¡Œ.
+SQL: SELECT `id`,`form_name`,`pid`,`type` FROM `ht_form` WHERE `pid` = 160  [ RunTime:0.0000s ]
+NOTIC: [2] Invalid argument supplied for foreach() D:\¹¤³ÌÇø\dzxt\s\tp\Application\Power\Controller\IndexController.class.php ç¬¬ 59 è¡Œ.
+SQL: SELECT `id`,`form_name`,`pid`,`type` FROM `ht_form` WHERE `pid` = 173  [ RunTime:0.0010s ]
+NOTIC: [2] Invalid argument supplied for foreach() D:\¹¤³ÌÇø\dzxt\s\tp\Application\Power\Controller\IndexController.class.php ç¬¬ 59 è¡Œ.
+SQL: SELECT `id`,`form_name`,`pid`,`type` FROM `ht_form` WHERE `pid` = 144  [ RunTime:0.0010s ]
+NOTIC: [2] Invalid argument supplied for foreach() D:\¹¤³ÌÇø\dzxt\s\tp\Application\Power\Controller\IndexController.class.php ç¬¬ 59 è¡Œ.
+SQL: SELECT `id`,`form_name`,`pid`,`type` FROM `ht_form` WHERE `pid` = 149  [ RunTime:0.0010s ]
+NOTIC: [2] Invalid argument supplied for foreach() D:\¹¤³ÌÇø\dzxt\s\tp\Application\Power\Controller\IndexController.class.php ç¬¬ 59 è¡Œ.
+SQL: SELECT `id`,`form_name`,`pid`,`type` FROM `ht_form` WHERE `pid` = 150  [ RunTime:0.0010s ]
+NOTIC: [2] Invalid argument supplied for foreach() D:\¹¤³ÌÇø\dzxt\s\tp\Application\Power\Controller\IndexController.class.php ç¬¬ 59 è¡Œ.
+SQL: SELECT `id`,`form_name`,`pid`,`type` FROM `ht_form` WHERE `pid` = 151  [ RunTime:0.0010s ]
+NOTIC: [2] Invalid argument supplied for foreach() D:\¹¤³ÌÇø\dzxt\s\tp\Application\Power\Controller\IndexController.class.php ç¬¬ 59 è¡Œ.
+SQL: SELECT `id`,`form_name`,`pid`,`type` FROM `ht_form` WHERE `pid` = 155  [ RunTime:0.0010s ]
+NOTIC: [2] Invalid argument supplied for foreach() D:\¹¤³ÌÇø\dzxt\s\tp\Application\Power\Controller\IndexController.class.php ç¬¬ 59 è¡Œ.
+SQL: SELECT `id`,`form_name`,`pid`,`type` FROM `ht_form` WHERE `pid` = 156  [ RunTime:0.0010s ]
+NOTIC: [2] Invalid argument supplied for foreach() D:\¹¤³ÌÇø\dzxt\s\tp\Application\Power\Controller\IndexController.class.php ç¬¬ 59 è¡Œ.
+SQL: SELECT `id`,`form_name`,`pid`,`type` FROM `ht_form` WHERE `pid` = 143  [ RunTime:0.0010s ]
+NOTIC: [2] Invalid argument supplied for foreach() D:\¹¤³ÌÇø\dzxt\s\tp\Application\Power\Controller\IndexController.class.php ç¬¬ 59 è¡Œ.
+SQL: SELECT `id`,`form_name`,`pid`,`type` FROM `ht_form` WHERE `pid` = 163  [ RunTime:0.0010s ]
+NOTIC: [2] Invalid argument supplied for foreach() D:\¹¤³ÌÇø\dzxt\s\tp\Application\Power\Controller\IndexController.class.php ç¬¬ 59 è¡Œ.
+SQL: SELECT `id`,`form_name`,`pid`,`type` FROM `ht_form` WHERE `pid` = 165  [ RunTime:0.0010s ]
+SQL: SELECT `id`,`form_name`,`pid`,`type` FROM `ht_form` WHERE `pid` = 54  [ RunTime:0.0010s ]
+SQL: SELECT `id`,`form_name`,`pid`,`type` FROM `ht_form` WHERE `pid` = 92  [ RunTime:0.0010s ]
+NOTIC: [2] Invalid argument supplied for foreach() D:\¹¤³ÌÇø\dzxt\s\tp\Application\Power\Controller\IndexController.class.php ç¬¬ 59 è¡Œ.
+SQL: SELECT `id`,`form_name`,`pid`,`type` FROM `ht_form` WHERE `pid` = 93  [ RunTime:0.0010s ]
+NOTIC: [2] Invalid argument supplied for foreach() D:\¹¤³ÌÇø\dzxt\s\tp\Application\Power\Controller\IndexController.class.php ç¬¬ 59 è¡Œ.
+SQL: SELECT `id`,`form_name`,`pid`,`type` FROM `ht_form` WHERE `pid` = 95  [ RunTime:0.0010s ]
+NOTIC: [2] Invalid argument supplied for foreach() D:\¹¤³ÌÇø\dzxt\s\tp\Application\Power\Controller\IndexController.class.php ç¬¬ 59 è¡Œ.
+SQL: SELECT `id`,`form_name`,`pid`,`type` FROM `ht_form` WHERE `pid` = 97  [ RunTime:0.0010s ]
+NOTIC: [2] Invalid argument supplied for foreach() D:\¹¤³ÌÇø\dzxt\s\tp\Application\Power\Controller\IndexController.class.php ç¬¬ 59 è¡Œ.
+SQL: SELECT `id`,`form_name`,`pid`,`type` FROM `ht_form` WHERE `pid` = 98  [ RunTime:0.0010s ]
+NOTIC: [2] Invalid argument supplied for foreach() D:\¹¤³ÌÇø\dzxt\s\tp\Application\Power\Controller\IndexController.class.php ç¬¬ 59 è¡Œ.
+SQL: SELECT `id`,`form_name`,`pid`,`type` FROM `ht_form` WHERE `pid` = 100  [ RunTime:0.0010s ]
+NOTIC: [2] Invalid argument supplied for foreach() D:\¹¤³ÌÇø\dzxt\s\tp\Application\Power\Controller\IndexController.class.php ç¬¬ 59 è¡Œ.
+SQL: SELECT `id`,`form_name`,`pid`,`type` FROM `ht_form` WHERE `pid` = 167  [ RunTime:0.0010s ]
+SQL: SELECT `id`,`form_name`,`pid`,`type` FROM `ht_form` WHERE `pid` = 175  [ RunTime:0.0010s ]
+SQL: SELECT `id`,`form_name`,`pid`,`type` FROM `ht_form` WHERE `pid` = 139  [ RunTime:0.0010s ]
+NOTIC: [2] Invalid argument supplied for foreach() D:\¹¤³ÌÇø\dzxt\s\tp\Application\Power\Controller\IndexController.class.php ç¬¬ 59 è¡Œ.
+SQL: SELECT `id`,`form_name`,`pid`,`type` FROM `ht_form` WHERE `pid` = 176  [ RunTime:0.0010s ]
+NOTIC: [2] Invalid argument supplied for foreach() D:\¹¤³ÌÇø\dzxt\s\tp\Application\Power\Controller\IndexController.class.php ç¬¬ 59 è¡Œ.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.011719s ]
+INFO: [ app_end ] --END-- [ RunTime:0.011719s ]
+
+[ 2015-09-02T16:56:00+08:00 ] ::1 /s/tp/wwwroot/index.php?s=/Power/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.121094s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.016602s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.016602s ]
+SQL: SHOW COLUMNS FROM `ht_role` [ RunTime:0.0049s ]
+SQL: SELECT * FROM `ht_role` ORDER BY id asc  [ RunTime:0.0020s ]
+SQL: SELECT * FROM `ht_role` WHERE `pid` = 0  [ RunTime:0.0020s ]
+SQL: SELECT * FROM `ht_role` WHERE `pid` = 1  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `ht_role` WHERE `pid` = 28  [ RunTime:0.0010s ]
+NOTIC: [2] Invalid argument supplied for foreach() D:\¹¤³ÌÇø\dzxt\s\tp\Application\Power\Controller\IndexController.class.php ç¬¬ 22 è¡Œ.
+SQL: SELECT * FROM `ht_role` WHERE `pid` = 7  [ RunTime:0.0020s ]
+NOTIC: [2] Invalid argument supplied for foreach() D:\¹¤³ÌÇø\dzxt\s\tp\Application\Power\Controller\IndexController.class.php ç¬¬ 22 è¡Œ.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000976s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000976s ]
+
+[ 2015-09-02T16:56:09+08:00 ] ::1 /s/tp/wwwroot/index.php?s=/Power/Index/getform.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000976s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `ht_form` [ RunTime:0.0059s ]
+SQL: SELECT `id`,`form_name`,`pid`,`type` FROM `ht_form` WHERE `pid` = 0  [ RunTime:0.0020s ]
+SQL: SELECT `id`,`form_name`,`pid`,`type` FROM `ht_form` WHERE `pid` = 52  [ RunTime:0.0010s ]
+SQL: SELECT `id`,`form_name`,`pid`,`type` FROM `ht_form` WHERE `pid` = 56  [ RunTime:0.0010s ]
+SQL: SELECT `id`,`form_name`,`pid`,`type` FROM `ht_form` WHERE `pid` = 58  [ RunTime:0.0010s ]
+SQL: SELECT `id`,`form_name`,`pid`,`type` FROM `ht_form` WHERE `pid` = 62  [ RunTime:0.0010s ]
+NOTIC: [2] Invalid argument supplied for foreach() D:\¹¤³ÌÇø\dzxt\s\tp\Application\Power\Controller\IndexController.class.php ç¬¬ 59 è¡Œ.
+SQL: SELECT `id`,`form_name`,`pid`,`type` FROM `ht_form` WHERE `pid` = 135  [ RunTime:0.0010s ]
+NOTIC: [2] Invalid argument supplied for foreach() D:\¹¤³ÌÇø\dzxt\s\tp\Application\Power\Controller\IndexController.class.php ç¬¬ 59 è¡Œ.
+SQL: SELECT `id`,`form_name`,`pid`,`type` FROM `ht_form` WHERE `pid` = 142  [ RunTime:0.0010s ]
+NOTIC: [2] Invalid argument supplied for foreach() D:\¹¤³ÌÇø\dzxt\s\tp\Application\Power\Controller\IndexController.class.php ç¬¬ 59 è¡Œ.
+SQL: SELECT `id`,`form_name`,`pid`,`type` FROM `ht_form` WHERE `pid` = 145  [ RunTime:0.0010s ]
+NOTIC: [2] Invalid argument supplied for foreach() D:\¹¤³ÌÇø\dzxt\s\tp\Application\Power\Controller\IndexController.class.php ç¬¬ 59 è¡Œ.
+SQL: SELECT `id`,`form_name`,`pid`,`type` FROM `ht_form` WHERE `pid` = 146  [ RunTime:0.0020s ]
+NOTIC: [2] Invalid argument supplied for foreach() D:\¹¤³ÌÇø\dzxt\s\tp\Application\Power\Controller\IndexController.class.php ç¬¬ 59 è¡Œ.
+SQL: SELECT `id`,`form_name`,`pid`,`type` FROM `ht_form` WHERE `pid` = 147  [ RunTime:0.0010s ]
+NOTIC: [2] Invalid argument supplied for foreach() D:\¹¤³ÌÇø\dzxt\s\tp\Application\Power\Controller\IndexController.class.php ç¬¬ 59 è¡Œ.
+SQL: SELECT `id`,`form_name`,`pid`,`type` FROM `ht_form` WHERE `pid` = 177  [ RunTime:0.0010s ]
+NOTIC: [2] Invalid argument supplied for foreach() D:\¹¤³ÌÇø\dzxt\s\tp\Application\Power\Controller\IndexController.class.php ç¬¬ 59 è¡Œ.
+SQL: SELECT `id`,`form_name`,`pid`,`type` FROM `ht_form` WHERE `pid` = 129  [ RunTime:0.0010s ]
+SQL: SELECT `id`,`form_name`,`pid`,`type` FROM `ht_form` WHERE `pid` = 137  [ RunTime:0.0010s ]
+NOTIC: [2] Invalid argument supplied for foreach() D:\¹¤³ÌÇø\dzxt\s\tp\Application\Power\Controller\IndexController.class.php ç¬¬ 59 è¡Œ.
+SQL: SELECT `id`,`form_name`,`pid`,`type` FROM `ht_form` WHERE `pid` = 138  [ RunTime:0.0010s ]
+NOTIC: [2] Invalid argument supplied for foreach() D:\¹¤³ÌÇø\dzxt\s\tp\Application\Power\Controller\IndexController.class.php ç¬¬ 59 è¡Œ.
+SQL: SELECT `id`,`form_name`,`pid`,`type` FROM `ht_form` WHERE `pid` = 140  [ RunTime:0.0010s ]
+SQL: SELECT `id`,`form_name`,`pid`,`type` FROM `ht_form` WHERE `pid` = 141  [ RunTime:0.0010s ]
+NOTIC: [2] Invalid argument supplied for foreach() D:\¹¤³ÌÇø\dzxt\s\tp\Application\Power\Controller\IndexController.class.php ç¬¬ 59 è¡Œ.
+SQL: SELECT `id`,`form_name`,`pid`,`type` FROM `ht_form` WHERE `pid` = 157  [ RunTime:0.0000s ]
+NOTIC: [2] Invalid argument supplied for foreach() D:\¹¤³ÌÇø\dzxt\s\tp\Application\Power\Controller\IndexController.class.php ç¬¬ 59 è¡Œ.
+SQL: SELECT `id`,`form_name`,`pid`,`type` FROM `ht_form` WHERE `pid` = 160  [ RunTime:0.0010s ]
+NOTIC: [2] Invalid argument supplied for foreach() D:\¹¤³ÌÇø\dzxt\s\tp\Application\Power\Controller\IndexController.class.php ç¬¬ 59 è¡Œ.
+SQL: SELECT `id`,`form_name`,`pid`,`type` FROM `ht_form` WHERE `pid` = 173  [ RunTime:0.0010s ]
+NOTIC: [2] Invalid argument supplied for foreach() D:\¹¤³ÌÇø\dzxt\s\tp\Application\Power\Controller\IndexController.class.php ç¬¬ 59 è¡Œ.
+SQL: SELECT `id`,`form_name`,`pid`,`type` FROM `ht_form` WHERE `pid` = 144  [ RunTime:0.0010s ]
+NOTIC: [2] Invalid argument supplied for foreach() D:\¹¤³ÌÇø\dzxt\s\tp\Application\Power\Controller\IndexController.class.php ç¬¬ 59 è¡Œ.
+SQL: SELECT `id`,`form_name`,`pid`,`type` FROM `ht_form` WHERE `pid` = 149  [ RunTime:0.0010s ]
+NOTIC: [2] Invalid argument supplied for foreach() D:\¹¤³ÌÇø\dzxt\s\tp\Application\Power\Controller\IndexController.class.php ç¬¬ 59 è¡Œ.
+SQL: SELECT `id`,`form_name`,`pid`,`type` FROM `ht_form` WHERE `pid` = 150  [ RunTime:0.0020s ]
+NOTIC: [2] Invalid argument supplied for foreach() D:\¹¤³ÌÇø\dzxt\s\tp\Application\Power\Controller\IndexController.class.php ç¬¬ 59 è¡Œ.
+SQL: SELECT `id`,`form_name`,`pid`,`type` FROM `ht_form` WHERE `pid` = 151  [ RunTime:0.0010s ]
+NOTIC: [2] Invalid argument supplied for foreach() D:\¹¤³ÌÇø\dzxt\s\tp\Application\Power\Controller\IndexController.class.php ç¬¬ 59 è¡Œ.
+SQL: SELECT `id`,`form_name`,`pid`,`type` FROM `ht_form` WHERE `pid` = 155  [ RunTime:0.0059s ]
+NOTIC: [2] Invalid argument supplied for foreach() D:\¹¤³ÌÇø\dzxt\s\tp\Application\Power\Controller\IndexController.class.php ç¬¬ 59 è¡Œ.
+SQL: SELECT `id`,`form_name`,`pid`,`type` FROM `ht_form` WHERE `pid` = 156  [ RunTime:0.0010s ]
+NOTIC: [2] Invalid argument supplied for foreach() D:\¹¤³ÌÇø\dzxt\s\tp\Application\Power\Controller\IndexController.class.php ç¬¬ 59 è¡Œ.
+SQL: SELECT `id`,`form_name`,`pid`,`type` FROM `ht_form` WHERE `pid` = 143  [ RunTime:0.0020s ]
+NOTIC: [2] Invalid argument supplied for foreach() D:\¹¤³ÌÇø\dzxt\s\tp\Application\Power\Controller\IndexController.class.php ç¬¬ 59 è¡Œ.
+SQL: SELECT `id`,`form_name`,`pid`,`type` FROM `ht_form` WHERE `pid` = 163  [ RunTime:0.0020s ]
+NOTIC: [2] Invalid argument supplied for foreach() D:\¹¤³ÌÇø\dzxt\s\tp\Application\Power\Controller\IndexController.class.php ç¬¬ 59 è¡Œ.
+SQL: SELECT `id`,`form_name`,`pid`,`type` FROM `ht_form` WHERE `pid` = 165  [ RunTime:0.0010s ]
+SQL: SELECT `id`,`form_name`,`pid`,`type` FROM `ht_form` WHERE `pid` = 54  [ RunTime:0.0010s ]
+SQL: SELECT `id`,`form_name`,`pid`,`type` FROM `ht_form` WHERE `pid` = 92  [ RunTime:0.0010s ]
+NOTIC: [2] Invalid argument supplied for foreach() D:\¹¤³ÌÇø\dzxt\s\tp\Application\Power\Controller\IndexController.class.php ç¬¬ 59 è¡Œ.
+SQL: SELECT `id`,`form_name`,`pid`,`type` FROM `ht_form` WHERE `pid` = 93  [ RunTime:0.0010s ]
+NOTIC: [2] Invalid argument supplied for foreach() D:\¹¤³ÌÇø\dzxt\s\tp\Application\Power\Controller\IndexController.class.php ç¬¬ 59 è¡Œ.
+SQL: SELECT `id`,`form_name`,`pid`,`type` FROM `ht_form` WHERE `pid` = 95  [ RunTime:0.0010s ]
+NOTIC: [2] Invalid argument supplied for foreach() D:\¹¤³ÌÇø\dzxt\s\tp\Application\Power\Controller\IndexController.class.php ç¬¬ 59 è¡Œ.
+SQL: SELECT `id`,`form_name`,`pid`,`type` FROM `ht_form` WHERE `pid` = 97  [ RunTime:0.0010s ]
+NOTIC: [2] Invalid argument supplied for foreach() D:\¹¤³ÌÇø\dzxt\s\tp\Application\Power\Controller\IndexController.class.php ç¬¬ 59 è¡Œ.
+SQL: SELECT `id`,`form_name`,`pid`,`type` FROM `ht_form` WHERE `pid` = 98  [ RunTime:0.0010s ]
+NOTIC: [2] Invalid argument supplied for foreach() D:\¹¤³ÌÇø\dzxt\s\tp\Application\Power\Controller\IndexController.class.php ç¬¬ 59 è¡Œ.
+SQL: SELECT `id`,`form_name`,`pid`,`type` FROM `ht_form` WHERE `pid` = 100  [ RunTime:0.0010s ]
+NOTIC: [2] Invalid argument supplied for foreach() D:\¹¤³ÌÇø\dzxt\s\tp\Application\Power\Controller\IndexController.class.php ç¬¬ 59 è¡Œ.
+SQL: SELECT `id`,`form_name`,`pid`,`type` FROM `ht_form` WHERE `pid` = 167  [ RunTime:0.0010s ]
+SQL: SELECT `id`,`form_name`,`pid`,`type` FROM `ht_form` WHERE `pid` = 175  [ RunTime:0.0010s ]
+SQL: SELECT `id`,`form_name`,`pid`,`type` FROM `ht_form` WHERE `pid` = 139  [ RunTime:0.0010s ]
+NOTIC: [2] Invalid argument supplied for foreach() D:\¹¤³ÌÇø\dzxt\s\tp\Application\Power\Controller\IndexController.class.php ç¬¬ 59 è¡Œ.
+SQL: SELECT `id`,`form_name`,`pid`,`type` FROM `ht_form` WHERE `pid` = 176  [ RunTime:0.0010s ]
+NOTIC: [2] Invalid argument supplied for foreach() D:\¹¤³ÌÇø\dzxt\s\tp\Application\Power\Controller\IndexController.class.php ç¬¬ 59 è¡Œ.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000976s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000976s ]
+
+[ 2015-09-02T16:56:09+08:00 ] ::1 /s/tp/wwwroot/index.php?s=/Power/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000977s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000977s ]
+SQL: SHOW COLUMNS FROM `ht_role` [ RunTime:0.0039s ]
+SQL: SELECT * FROM `ht_role` ORDER BY id asc  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `ht_role` WHERE `pid` = 0  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `ht_role` WHERE `pid` = 1  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `ht_role` WHERE `pid` = 28  [ RunTime:0.0010s ]
+NOTIC: [2] Invalid argument supplied for foreach() D:\¹¤³ÌÇø\dzxt\s\tp\Application\Power\Controller\IndexController.class.php ç¬¬ 22 è¡Œ.
+SQL: SELECT * FROM `ht_role` WHERE `pid` = 7  [ RunTime:0.0010s ]
+NOTIC: [2] Invalid argument supplied for foreach() D:\¹¤³ÌÇø\dzxt\s\tp\Application\Power\Controller\IndexController.class.php ç¬¬ 22 è¡Œ.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000977s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000977s ]
+

@@ -1,0 +1,36 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title></title>
+<script type="text/javascript" src="../../resource/js/jQuery/jquery-1.9.1.js"></script> 
+<script type="text/javascript" src="../../resource/js/common/url_get.js"></script> 
+<link href="../../resource/part/newtpl/css/rheight.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript">
+	$(function() {
+		var mId;
+		var mName;
+		var mType;
+		mId=$_GET["id"];
+		mName=$_GET["name"];		
+		//$("#pageFrame").attr("src", "/s/tp/wwwroot/index.php?s=/demo/formdesign/form_id/"+mId+".html");
+        $("#pageFrame").attr("src", "/admin/pageEdit/formdesign/index.htm?modelId="+mId+"&modelName="+mName);
+		$("#edit_nav input").bind("click",function()
+			{	
+				mType = 'formdesign/index';//$(this).val();
+                //$("#pageFrame").attr("src", "/s/tp/wwwroot/index.php?s=/demo/formdesign/form_id/"+mId+".html");
+				$("#pageFrame").attr("src", "/admin/pageEdit/" + mType + ".htm?modelId=" + mId + "&modelName=" + decodeURI(mName));
+            });
+	});
+</script>  
+<style>
+</style>    
+</head>
+<body style="background-color:#E0F0FE">
+<div class="admin_main_nr_dbox">
+<div id="edit_nav"><span id="setTitle"></span></div>
+	<iframe id="pageFrame" src="" style="width: 100%; height: 100%">
+	</iframe>
+</div>
+</div>
+ </body>
+</html>

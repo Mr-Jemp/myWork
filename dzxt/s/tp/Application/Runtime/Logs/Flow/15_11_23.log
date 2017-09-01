@@ -1,0 +1,1515 @@
+[ 2015-11-23T09:04:51+08:00 ] 119.134.107.68 /s/tp/wwwroot/index.php?s=/Flow/run/getflow/flow_id/32.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000548s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000747s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000834s ]
+NOTIC: [2048] Declaration of Flow\Controller\RunController::show() should be compatible with Think\Controller::show($content, $charset = '', $contentType = '', $prefix = '') /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 4 行.
+SQL: SHOW COLUMNS FROM `ht_flow_process` [ RunTime:0.0016s ]
+SQL: SHOW COLUMNS FROM `ht_flow` [ RunTime:0.0006s ]
+SQL: SELECT * FROM `ht_flow` WHERE `id` = 32 AND `is_del` = 0 LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `ht_flow_process` WHERE `flow_id` = 32 AND `is_del` = 0 AND `process_type` = 'is_one' LIMIT 1   [ RunTime:0.0001s ]
+NOTIC: [8] Undefined index: powers /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 158 行.
+NOTIC: [8] Undefined index: form_id /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 164 行.
+NOTIC: [8] Undefined index: form_id /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 169 行.
+NOTIC: [8] Undefined index: nav /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 191 行.
+NOTIC: [8] Undefined index: formcon /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 201 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000863s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000948s ]
+
+[ 2015-11-23T09:04:55+08:00 ] 119.134.107.68 /s/tp/wwwroot/index.php?s=/Flow/run/getflow/flow_id/30.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000145s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000060s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000143s ]
+NOTIC: [2048] Declaration of Flow\Controller\RunController::show() should be compatible with Think\Controller::show($content, $charset = '', $contentType = '', $prefix = '') /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 4 行.
+SQL: SHOW COLUMNS FROM `ht_flow_process` [ RunTime:0.0015s ]
+SQL: SHOW COLUMNS FROM `ht_flow` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `ht_flow` WHERE `id` = 30 AND `is_del` = 0 LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `ht_flow_process` WHERE `flow_id` = 30 AND `is_del` = 0 AND `process_type` = 'is_one' LIMIT 1   [ RunTime:0.0001s ]
+ERR: Think\Controller:show_msg方法不存在！
+
+[ 2015-11-23T09:04:59+08:00 ] 119.134.107.68 /s/tp/wwwroot/index.php?s=/Flow/run/getflow/flow_id/25.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000152s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000063s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000148s ]
+NOTIC: [2048] Declaration of Flow\Controller\RunController::show() should be compatible with Think\Controller::show($content, $charset = '', $contentType = '', $prefix = '') /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 4 行.
+SQL: SHOW COLUMNS FROM `ht_flow_process` [ RunTime:0.0673s ]
+SQL: SHOW COLUMNS FROM `ht_flow` [ RunTime:0.0006s ]
+SQL: SELECT * FROM `ht_flow` WHERE `id` = 25 AND `is_del` = 0 LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `ht_flow_process` WHERE `flow_id` = 25 AND `is_del` = 0 AND `process_type` = 'is_one' LIMIT 1   [ RunTime:0.0001s ]
+ERR: Think\Controller:show_msg方法不存在！
+
+[ 2015-11-23T09:05:02+08:00 ] 119.134.107.68 /s/tp/wwwroot/index.php?s=/Flow/run/getflow/flow_id/24.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000137s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000066s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000150s ]
+NOTIC: [2048] Declaration of Flow\Controller\RunController::show() should be compatible with Think\Controller::show($content, $charset = '', $contentType = '', $prefix = '') /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 4 行.
+SQL: SHOW COLUMNS FROM `ht_flow_process` [ RunTime:0.0014s ]
+SQL: SHOW COLUMNS FROM `ht_flow` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `ht_flow` WHERE `id` = 24 AND `is_del` = 0 LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `ht_flow_process` WHERE `flow_id` = 24 AND `is_del` = 0 AND `process_type` = 'is_one' LIMIT 1   [ RunTime:0.0001s ]
+NOTIC: [8] Undefined index: powers /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 158 行.
+NOTIC: [8] Undefined index: form_id /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 164 行.
+NOTIC: [8] Undefined index: form_id /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 169 行.
+NOTIC: [8] Undefined index: nav /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 191 行.
+NOTIC: [8] Undefined index: formcon /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 201 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000060s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000139s ]
+
+[ 2015-11-23T09:05:06+08:00 ] 119.134.107.68 /s/tp/wwwroot/index.php?s=/Flow/run/getflow/flow_id/19.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000130s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000058s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000140s ]
+NOTIC: [2048] Declaration of Flow\Controller\RunController::show() should be compatible with Think\Controller::show($content, $charset = '', $contentType = '', $prefix = '') /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 4 行.
+SQL: SHOW COLUMNS FROM `ht_flow_process` [ RunTime:0.0014s ]
+SQL: SHOW COLUMNS FROM `ht_flow` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `ht_flow` WHERE `id` = 19 AND `is_del` = 0 LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `ht_flow_process` WHERE `flow_id` = 19 AND `is_del` = 0 AND `process_type` = 'is_one' LIMIT 1   [ RunTime:0.0001s ]
+NOTIC: [8] Undefined index: powers /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 158 行.
+NOTIC: [8] Undefined index: form_id /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 164 行.
+NOTIC: [8] Undefined index: form_id /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 169 行.
+NOTIC: [8] Undefined index: nav /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 191 行.
+NOTIC: [8] Undefined index: formcon /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 201 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000059s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000139s ]
+
+[ 2015-11-23T09:05:10+08:00 ] 119.134.107.68 /s/tp/wwwroot/index.php?s=/Flow/run/getflow/flow_id/18.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000127s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000057s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000140s ]
+NOTIC: [2048] Declaration of Flow\Controller\RunController::show() should be compatible with Think\Controller::show($content, $charset = '', $contentType = '', $prefix = '') /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 4 行.
+SQL: SHOW COLUMNS FROM `ht_flow_process` [ RunTime:0.0014s ]
+SQL: SHOW COLUMNS FROM `ht_flow` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `ht_flow` WHERE `id` = 18 AND `is_del` = 0 LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `ht_flow_process` WHERE `flow_id` = 18 AND `is_del` = 0 AND `process_type` = 'is_one' LIMIT 1   [ RunTime:0.0001s ]
+NOTIC: [8] Undefined index: powers /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 158 行.
+NOTIC: [8] Undefined index: form_id /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 164 行.
+NOTIC: [8] Undefined index: form_id /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 169 行.
+NOTIC: [8] Undefined index: nav /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 191 行.
+NOTIC: [8] Undefined index: formcon /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 201 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000059s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000138s ]
+
+[ 2015-11-23T09:05:13+08:00 ] 119.134.107.68 /s/tp/wwwroot/index.php?s=/Flow/run/getflow/flow_id/17.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000151s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000062s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000145s ]
+NOTIC: [2048] Declaration of Flow\Controller\RunController::show() should be compatible with Think\Controller::show($content, $charset = '', $contentType = '', $prefix = '') /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 4 行.
+SQL: SHOW COLUMNS FROM `ht_flow_process` [ RunTime:0.0016s ]
+SQL: SHOW COLUMNS FROM `ht_flow` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `ht_flow` WHERE `id` = 17 AND `is_del` = 0 LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `ht_flow_process` WHERE `flow_id` = 17 AND `is_del` = 0 AND `process_type` = 'is_one' LIMIT 1   [ RunTime:0.0001s ]
+NOTIC: [8] Undefined index: powers /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 158 行.
+NOTIC: [8] Undefined index: form_id /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 164 行.
+NOTIC: [8] Undefined index: form_id /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 169 行.
+NOTIC: [8] Undefined index: nav /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 191 行.
+NOTIC: [8] Undefined index: formcon /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 201 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000061s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000141s ]
+
+[ 2015-11-23T09:20:35+08:00 ] 183.21.26.151 /s/tp/wwwroot/index.php?s=/Flow/demo/index/getflow/ok.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000169s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000068s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000140s ]
+SQL: SHOW COLUMNS FROM `ht_flow` [ RunTime:0.0009s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `ht_flow` WHERE `is_del` = 0 LIMIT 1   [ RunTime:0.0003s ]
+NOTIC: [8] Undefined variable: p /var/www/dzxt/s/tp/Application/Flow/Controller/DemoController.class.php 第 22 行.
+NOTIC: [8] Trying to get property of non-object /var/www/dzxt/s/tp/Application/Flow/Controller/DemoController.class.php 第 22 行.
+NOTIC: [8] Undefined variable: p /var/www/dzxt/s/tp/Application/Flow/Controller/DemoController.class.php 第 22 行.
+NOTIC: [8] Trying to get property of non-object /var/www/dzxt/s/tp/Application/Flow/Controller/DemoController.class.php 第 22 行.
+SQL: SELECT `id`,`form_id`,`flow_name`,`flow_desc`,`updatetime`,`dateline` FROM `ht_flow` WHERE `is_del` = 0 ORDER BY id desc  [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `ht_form` [ RunTime:0.0006s ]
+SQL: SELECT * FROM `ht_form` WHERE ( 1=1 AND id='757' ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `ht_form` WHERE ( 1=1 AND id='775' ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `ht_form` WHERE ( 1=1 AND id='772' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `ht_form` WHERE ( 1=1 AND id='769' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `ht_form` WHERE ( 1=1 AND id='746' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `ht_form` WHERE ( 1=1 AND id='730' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `ht_form` WHERE ( 1=1 AND id='587' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `ht_form` WHERE ( 1=1 AND id='266' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `ht_form` WHERE ( 1=1 AND id='328' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `ht_form` WHERE ( 1=1 AND id='329' ) LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000096s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000171s ]
+
+[ 2015-11-23T09:34:42+08:00 ] 183.21.26.151 /s/tp/wwwroot/index.php?s=/Flow/run/getflowlist/type/getmyflow
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000539s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000710s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000794s ]
+NOTIC: [2048] Declaration of Flow\Controller\RunController::show() should be compatible with Think\Controller::show($content, $charset = '', $contentType = '', $prefix = '') /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 4 行.
+SQL: SHOW COLUMNS FROM `ht_run` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `ht_run` WHERE `uid` = '215'  [ RunTime:0.0003s ]
+NOTIC: [2] Invalid argument supplied for foreach() /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 457 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000052s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000140s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009082s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009165s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000186s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000266s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000778s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000860s ]
+
+[ 2015-11-23T12:04:43+08:00 ] 183.21.26.151 /s/tp/wwwroot/index.php?s=/Flow/run/getflowlist/type/getmyflow
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000158s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000061s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000144s ]
+NOTIC: [2048] Declaration of Flow\Controller\RunController::show() should be compatible with Think\Controller::show($content, $charset = '', $contentType = '', $prefix = '') /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 4 行.
+SQL: SHOW COLUMNS FROM `ht_run` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `ht_run` WHERE `uid` = '202'  [ RunTime:0.0004s ]
+NOTIC: [8] Undefined variable: is_finish /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 466 行.
+NOTIC: [8] Undefined variable: is_finish /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 466 行.
+NOTIC: [8] Undefined variable: is_finish /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 466 行.
+NOTIC: [8] Undefined variable: is_finish /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 466 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000049s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000133s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.003010s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.003093s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000056s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000132s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000057s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000135s ]
+
+[ 2015-11-23T12:04:53+08:00 ] 183.21.26.151 /s/tp/wwwroot/index.php?s=/Flow/run/getflowlist/type/getmyendflow
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000142s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000059s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000139s ]
+NOTIC: [2048] Declaration of Flow\Controller\RunController::show() should be compatible with Think\Controller::show($content, $charset = '', $contentType = '', $prefix = '') /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 4 行.
+SQL: SHOW COLUMNS FROM `ht_run` [ RunTime:0.0009s ]
+SQL: SELECT * FROM `ht_run` WHERE `uid` = '202' AND ( `is_finish` = 2 OR `is_finish` = 4 )  [ RunTime:0.0003s ]
+NOTIC: [2] Invalid argument supplied for foreach() /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 457 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000048s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000129s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.002687s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.002770s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000056s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000133s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000057s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000135s ]
+
+[ 2015-11-23T12:05:53+08:00 ] 183.21.26.151 /s/tp/wwwroot/index.php?s=/Flow/run/getflow/flow_id/30.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000148s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000058s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000139s ]
+NOTIC: [2048] Declaration of Flow\Controller\RunController::show() should be compatible with Think\Controller::show($content, $charset = '', $contentType = '', $prefix = '') /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 4 行.
+SQL: SHOW COLUMNS FROM `ht_flow_process` [ RunTime:0.0017s ]
+SQL: SHOW COLUMNS FROM `ht_flow` [ RunTime:0.0006s ]
+SQL: SELECT * FROM `ht_flow` WHERE `id` = 30 AND `is_del` = 0 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `ht_flow_process` WHERE `flow_id` = 30 AND `is_del` = 0 AND `process_type` = 'is_one' LIMIT 1   [ RunTime:0.0003s ]
+ERR: Think\Controller:show_msg方法不存在！
+
+[ 2015-11-23T12:06:06+08:00 ] 183.21.26.151 /s/tp/wwwroot/index.php?s=/Flow/run/getflowlist/type/chulinode
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000153s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000061s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000151s ]
+NOTIC: [2048] Declaration of Flow\Controller\RunController::show() should be compatible with Think\Controller::show($content, $charset = '', $contentType = '', $prefix = '') /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 4 行.
+SQL: SHOW COLUMNS FROM `ht_run_process` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `ht_run_process` WHERE `uid` = 202 AND `status` = 1  [ RunTime:0.0003s ]
+NOTIC: [2] Invalid argument supplied for foreach() /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 375 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000050s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000131s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.002734s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.002817s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000057s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000184s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000058s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000137s ]
+
+[ 2015-11-23T12:06:09+08:00 ] 183.21.26.151 /s/tp/wwwroot/index.php?s=/Flow/run/getflowlist/type/chuliendnode
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000139s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000062s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000145s ]
+NOTIC: [2048] Declaration of Flow\Controller\RunController::show() should be compatible with Think\Controller::show($content, $charset = '', $contentType = '', $prefix = '') /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 4 行.
+SQL: SHOW COLUMNS FROM `ht_run_process` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `ht_run_process` WHERE ( uid=202 )  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `ht_run` [ RunTime:0.0007s ]
+SQL: SELECT * FROM `ht_run` WHERE ( id=1901 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `ht_flow_process` [ RunTime:0.0012s ]
+SQL: SELECT * FROM `ht_flow_process` WHERE ( id=128 ) LIMIT 1   [ RunTime:0.0002s ]
+NOTIC: [8] Undefined offset: 0 /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 413 行.
+SQL: SELECT * FROM `ht_run` WHERE ( id=1907 ) LIMIT 1   [ RunTime:0.0002s ]
+NOTIC: [8] Undefined offset: 0 /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 413 行.
+SQL: SELECT * FROM `ht_run` WHERE ( id=1908 ) LIMIT 1   [ RunTime:0.0001s ]
+NOTIC: [8] Undefined offset: 0 /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 413 行.
+SQL: SELECT * FROM `ht_run` WHERE ( id=1909 ) LIMIT 1   [ RunTime:0.0001s ]
+NOTIC: [8] Undefined offset: 0 /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 413 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000056s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000138s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.002690s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.002777s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000058s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000135s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000058s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000138s ]
+
+[ 2015-11-23T12:07:11+08:00 ] 183.21.26.151 /s/tp/wwwroot/index.php?s=/Flow/run/getflow/flow_id/32.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000146s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000061s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000143s ]
+NOTIC: [2048] Declaration of Flow\Controller\RunController::show() should be compatible with Think\Controller::show($content, $charset = '', $contentType = '', $prefix = '') /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 4 行.
+SQL: SHOW COLUMNS FROM `ht_flow_process` [ RunTime:0.0015s ]
+SQL: SHOW COLUMNS FROM `ht_flow` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `ht_flow` WHERE `id` = 32 AND `is_del` = 0 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `ht_flow_process` WHERE `flow_id` = 32 AND `is_del` = 0 AND `process_type` = 'is_one' LIMIT 1   [ RunTime:0.0003s ]
+NOTIC: [8] Undefined index: powers /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 158 行.
+NOTIC: [8] Undefined index: form_id /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 164 行.
+NOTIC: [8] Undefined index: form_id /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 169 行.
+NOTIC: [8] Undefined index: nav /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 191 行.
+NOTIC: [8] Undefined index: formcon /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 201 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000060s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000140s ]
+
+[ 2015-11-23T12:07:15+08:00 ] 183.21.26.151 /s/tp/wwwroot/index.php?s=/Flow/run/getflow/flow_id/33.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000132s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000059s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000141s ]
+NOTIC: [2048] Declaration of Flow\Controller\RunController::show() should be compatible with Think\Controller::show($content, $charset = '', $contentType = '', $prefix = '') /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 4 行.
+SQL: SHOW COLUMNS FROM `ht_flow_process` [ RunTime:0.0014s ]
+SQL: SHOW COLUMNS FROM `ht_flow` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `ht_flow` WHERE `id` = 33 AND `is_del` = 0 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `ht_flow_process` WHERE `flow_id` = 33 AND `is_del` = 0 AND `process_type` = 'is_one' LIMIT 1   [ RunTime:0.0002s ]
+NOTIC: [8] Undefined index: powers /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 158 行.
+NOTIC: [8] Undefined index: form_id /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 164 行.
+NOTIC: [8] Undefined index: form_id /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 169 行.
+NOTIC: [8] Undefined index: nav /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 191 行.
+NOTIC: [8] Undefined index: formcon /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 201 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000059s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000139s ]
+
+[ 2015-11-23T12:07:18+08:00 ] 183.21.26.151 /s/tp/wwwroot/index.php?s=/Flow/run/getflow/flow_id/30.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000147s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000061s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000144s ]
+NOTIC: [2048] Declaration of Flow\Controller\RunController::show() should be compatible with Think\Controller::show($content, $charset = '', $contentType = '', $prefix = '') /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 4 行.
+SQL: SHOW COLUMNS FROM `ht_flow_process` [ RunTime:0.0016s ]
+SQL: SHOW COLUMNS FROM `ht_flow` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `ht_flow` WHERE `id` = 30 AND `is_del` = 0 LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `ht_flow_process` WHERE `flow_id` = 30 AND `is_del` = 0 AND `process_type` = 'is_one' LIMIT 1   [ RunTime:0.0001s ]
+ERR: Think\Controller:show_msg方法不存在！
+
+[ 2015-11-23T12:07:20+08:00 ] 183.21.26.151 /s/tp/wwwroot/index.php?s=/Flow/run/getflow/flow_id/25.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000144s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000057s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000141s ]
+NOTIC: [2048] Declaration of Flow\Controller\RunController::show() should be compatible with Think\Controller::show($content, $charset = '', $contentType = '', $prefix = '') /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 4 行.
+SQL: SHOW COLUMNS FROM `ht_flow_process` [ RunTime:0.0015s ]
+SQL: SHOW COLUMNS FROM `ht_flow` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `ht_flow` WHERE `id` = 25 AND `is_del` = 0 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `ht_flow_process` WHERE `flow_id` = 25 AND `is_del` = 0 AND `process_type` = 'is_one' LIMIT 1   [ RunTime:0.0003s ]
+ERR: Think\Controller:show_msg方法不存在！
+
+[ 2015-11-23T12:07:22+08:00 ] 183.21.26.151 /s/tp/wwwroot/index.php?s=/Flow/run/getflow/flow_id/24.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000133s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000057s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000139s ]
+NOTIC: [2048] Declaration of Flow\Controller\RunController::show() should be compatible with Think\Controller::show($content, $charset = '', $contentType = '', $prefix = '') /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 4 行.
+SQL: SHOW COLUMNS FROM `ht_flow_process` [ RunTime:0.0014s ]
+SQL: SHOW COLUMNS FROM `ht_flow` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `ht_flow` WHERE `id` = 24 AND `is_del` = 0 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `ht_flow_process` WHERE `flow_id` = 24 AND `is_del` = 0 AND `process_type` = 'is_one' LIMIT 1   [ RunTime:0.0002s ]
+NOTIC: [8] Undefined index: powers /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 158 行.
+NOTIC: [8] Undefined index: form_id /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 164 行.
+NOTIC: [8] Undefined index: form_id /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 169 行.
+NOTIC: [8] Undefined index: nav /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 191 行.
+NOTIC: [8] Undefined index: formcon /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 201 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000060s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000140s ]
+
+[ 2015-11-23T12:07:24+08:00 ] 183.21.26.151 /s/tp/wwwroot/index.php?s=/Flow/run/getflow/flow_id/23.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000122s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000054s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000136s ]
+NOTIC: [2048] Declaration of Flow\Controller\RunController::show() should be compatible with Think\Controller::show($content, $charset = '', $contentType = '', $prefix = '') /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 4 行.
+SQL: SHOW COLUMNS FROM `ht_flow_process` [ RunTime:0.0014s ]
+SQL: SHOW COLUMNS FROM `ht_flow` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `ht_flow` WHERE `id` = 23 AND `is_del` = 0 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `ht_flow_process` WHERE `flow_id` = 23 AND `is_del` = 0 AND `process_type` = 'is_one' LIMIT 1   [ RunTime:0.0002s ]
+NOTIC: [8] Undefined index: powers /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 158 行.
+NOTIC: [8] Undefined index: form_id /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 164 行.
+NOTIC: [8] Undefined index: form_id /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 169 行.
+NOTIC: [8] Undefined index: nav /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 191 行.
+NOTIC: [8] Undefined index: formcon /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 201 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000055s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000134s ]
+
+[ 2015-11-23T14:23:24+08:00 ] 183.21.26.151 /s/tp/wwwroot/index.php?s=/Flow/run/getflow/flow_id/17.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000149s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000082s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000165s ]
+NOTIC: [2048] Declaration of Flow\Controller\RunController::show() should be compatible with Think\Controller::show($content, $charset = '', $contentType = '', $prefix = '') /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 4 行.
+SQL: SHOW COLUMNS FROM `ht_flow_process` [ RunTime:0.0017s ]
+SQL: SHOW COLUMNS FROM `ht_flow` [ RunTime:0.0006s ]
+SQL: SELECT * FROM `ht_flow` WHERE `id` = 17 AND `is_del` = 0 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `ht_flow_process` WHERE `flow_id` = 17 AND `is_del` = 0 AND `process_type` = 'is_one' LIMIT 1   [ RunTime:0.0002s ]
+NOTIC: [8] Undefined index: powers /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 158 行.
+NOTIC: [8] Undefined index: form_id /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 164 行.
+NOTIC: [8] Undefined index: form_id /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 169 行.
+NOTIC: [8] Undefined index: nav /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 191 行.
+NOTIC: [8] Undefined index: formcon /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 201 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000079s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000158s ]
+
+[ 2015-11-23T14:23:29+08:00 ] 183.21.26.151 /s/tp/wwwroot/index.php?s=/Flow/run/getflow/flow_id/18.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000151s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000063s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000145s ]
+NOTIC: [2048] Declaration of Flow\Controller\RunController::show() should be compatible with Think\Controller::show($content, $charset = '', $contentType = '', $prefix = '') /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 4 行.
+SQL: SHOW COLUMNS FROM `ht_flow_process` [ RunTime:0.0016s ]
+SQL: SHOW COLUMNS FROM `ht_flow` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `ht_flow` WHERE `id` = 18 AND `is_del` = 0 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `ht_flow_process` WHERE `flow_id` = 18 AND `is_del` = 0 AND `process_type` = 'is_one' LIMIT 1   [ RunTime:0.0002s ]
+NOTIC: [8] Undefined index: powers /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 158 行.
+NOTIC: [8] Undefined index: form_id /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 164 行.
+NOTIC: [8] Undefined index: form_id /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 169 行.
+NOTIC: [8] Undefined index: nav /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 191 行.
+NOTIC: [8] Undefined index: formcon /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 201 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000064s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000142s ]
+
+[ 2015-11-23T14:23:47+08:00 ] 183.21.26.151 /s/tp/wwwroot/index.php?s=/Flow/run/getflow/flow_id/17.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000147s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000068s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000149s ]
+NOTIC: [2048] Declaration of Flow\Controller\RunController::show() should be compatible with Think\Controller::show($content, $charset = '', $contentType = '', $prefix = '') /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 4 行.
+SQL: SHOW COLUMNS FROM `ht_flow_process` [ RunTime:0.0015s ]
+SQL: SHOW COLUMNS FROM `ht_flow` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `ht_flow` WHERE `id` = 17 AND `is_del` = 0 LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `ht_flow_process` WHERE `flow_id` = 17 AND `is_del` = 0 AND `process_type` = 'is_one' LIMIT 1   [ RunTime:0.0001s ]
+NOTIC: [8] Undefined index: powers /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 158 行.
+NOTIC: [8] Undefined index: form_id /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 164 行.
+NOTIC: [8] Undefined index: form_id /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 169 行.
+NOTIC: [8] Undefined index: nav /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 191 行.
+NOTIC: [8] Undefined index: formcon /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 201 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000068s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000148s ]
+
+[ 2015-11-23T14:23:51+08:00 ] 183.21.26.151 /s/tp/wwwroot/index.php?s=/Flow/run/flowsave.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000145s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000057s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000140s ]
+NOTIC: [2048] Declaration of Flow\Controller\RunController::show() should be compatible with Think\Controller::show($content, $charset = '', $contentType = '', $prefix = '') /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 4 行.
+SQL: SHOW COLUMNS FROM `ht_run_process` [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `ht_run` [ RunTime:0.0007s ]
+SQL: INSERT INTO `ht_run` (`uid`,`flow_id`,`run_name`,`run_flow_process`,`updatetime`,`dateline`) VALUES ('140','17','dc','126','1448259831','1448259831') [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `ht_message` [ RunTime:0.0004s ]
+SQL: INSERT INTO `ht_message` (`send_user`,`receive_user`,`send_date`,`message`) VALUES ('1','140','1448259831','<strong style=\"color:#ff0000\">dc 申请成功</strong>  相关信息正在处理中...') [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `ht_flow_process` [ RunTime:0.0012s ]
+SQL: SELECT `process_name`,`process_to`,`auto_sponsor_ids`,`out_condition` FROM `ht_flow_process` WHERE ( id=126 ) LIMIT 1   [ RunTime:0.0002s ]
+NOTIC: [8] Undefined variable: form_data_id /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 287 行.
+SQL: INSERT INTO `ht_run_process` (`uid`,`run_flow_process`,`updatetime`,`dateline`,`run_id`,`js_time`,`bl_time`,`jj_time`,`status`,`run_flow`) VALUES ('104','126','1448259831','1448259831','2008','1448259831','1448259831','1448259831','2','17') [ RunTime:0.0002s ]
+SQL: UPDATE `ht_run` SET `is_finish`='2' WHERE ( id=2008 ) [ RunTime:0.0199s ]
+SQL: SELECT * FROM `ht_run` WHERE ( id=2008 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: INSERT INTO `ht_message` (`send_user`,`receive_user`,`send_date`,`message`) VALUES ('1','140','1448259831','<strong style=\"color:#ff0000\">dc 请求完成</strong> 详细信息到管理流程查看') [ RunTime:0.0194s ]
+
+[ 2015-11-23T14:23:53+08:00 ] 183.21.26.151 /s/tp/wwwroot/index.php?s=/Flow/Run/getflowlist/type/chulinode.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000140s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000058s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000141s ]
+NOTIC: [2048] Declaration of Flow\Controller\RunController::show() should be compatible with Think\Controller::show($content, $charset = '', $contentType = '', $prefix = '') /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 4 行.
+SQL: SHOW COLUMNS FROM `ht_run_process` [ RunTime:0.0008s ]
+SQL: SELECT * FROM `ht_run_process` WHERE `uid` = 140 AND `status` = 1  [ RunTime:0.0003s ]
+NOTIC: [2] Invalid argument supplied for foreach() /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 375 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000053s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000137s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.003072s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.003156s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000060s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000137s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000059s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000138s ]
+
+[ 2015-11-23T14:24:03+08:00 ] 183.21.26.151 /s/tp/wwwroot/index.php?s=/Flow/run/getflow/flow_id/17.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000142s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000062s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000145s ]
+NOTIC: [2048] Declaration of Flow\Controller\RunController::show() should be compatible with Think\Controller::show($content, $charset = '', $contentType = '', $prefix = '') /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 4 行.
+SQL: SHOW COLUMNS FROM `ht_flow_process` [ RunTime:0.0015s ]
+SQL: SHOW COLUMNS FROM `ht_flow` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `ht_flow` WHERE `id` = 17 AND `is_del` = 0 LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `ht_flow_process` WHERE `flow_id` = 17 AND `is_del` = 0 AND `process_type` = 'is_one' LIMIT 1   [ RunTime:0.0001s ]
+NOTIC: [8] Undefined index: powers /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 158 行.
+NOTIC: [8] Undefined index: form_id /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 164 行.
+NOTIC: [8] Undefined index: form_id /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 169 行.
+NOTIC: [8] Undefined index: nav /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 191 行.
+NOTIC: [8] Undefined index: formcon /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 201 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000063s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000141s ]
+
+[ 2015-11-23T14:24:13+08:00 ] 183.21.26.151 /s/tp/wwwroot/index.php?s=/Flow/run/getflow/flow_id/19.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000143s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000064s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000146s ]
+NOTIC: [2048] Declaration of Flow\Controller\RunController::show() should be compatible with Think\Controller::show($content, $charset = '', $contentType = '', $prefix = '') /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 4 行.
+SQL: SHOW COLUMNS FROM `ht_flow_process` [ RunTime:0.0014s ]
+SQL: SHOW COLUMNS FROM `ht_flow` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `ht_flow` WHERE `id` = 19 AND `is_del` = 0 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `ht_flow_process` WHERE `flow_id` = 19 AND `is_del` = 0 AND `process_type` = 'is_one' LIMIT 1   [ RunTime:0.0002s ]
+NOTIC: [8] Undefined index: powers /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 158 行.
+NOTIC: [8] Undefined index: form_id /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 164 行.
+NOTIC: [8] Undefined index: form_id /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 169 行.
+NOTIC: [8] Undefined index: nav /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 191 行.
+NOTIC: [8] Undefined index: formcon /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 201 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000067s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000148s ]
+
+[ 2015-11-23T14:24:15+08:00 ] 183.21.26.151 /s/tp/wwwroot/index.php?s=/Flow/run/getflow/flow_id/21.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000140s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000058s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000142s ]
+NOTIC: [2048] Declaration of Flow\Controller\RunController::show() should be compatible with Think\Controller::show($content, $charset = '', $contentType = '', $prefix = '') /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 4 行.
+SQL: SHOW COLUMNS FROM `ht_flow_process` [ RunTime:0.0015s ]
+SQL: SHOW COLUMNS FROM `ht_flow` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `ht_flow` WHERE `id` = 21 AND `is_del` = 0 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `ht_flow_process` WHERE `flow_id` = 21 AND `is_del` = 0 AND `process_type` = 'is_one' LIMIT 1   [ RunTime:0.0002s ]
+NOTIC: [8] Undefined index: powers /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 158 行.
+NOTIC: [8] Undefined index: form_id /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 164 行.
+NOTIC: [8] Undefined index: form_id /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 169 行.
+NOTIC: [8] Undefined index: nav /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 191 行.
+NOTIC: [8] Undefined index: formcon /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 201 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000058s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000150s ]
+
+[ 2015-11-23T14:24:18+08:00 ] 183.21.26.151 /s/tp/wwwroot/index.php?s=/Flow/run/getflow/flow_id/33.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000146s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000065s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000149s ]
+NOTIC: [2048] Declaration of Flow\Controller\RunController::show() should be compatible with Think\Controller::show($content, $charset = '', $contentType = '', $prefix = '') /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 4 行.
+SQL: SHOW COLUMNS FROM `ht_flow_process` [ RunTime:0.0015s ]
+SQL: SHOW COLUMNS FROM `ht_flow` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `ht_flow` WHERE `id` = 33 AND `is_del` = 0 LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `ht_flow_process` WHERE `flow_id` = 33 AND `is_del` = 0 AND `process_type` = 'is_one' LIMIT 1   [ RunTime:0.0001s ]
+NOTIC: [8] Undefined index: powers /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 158 行.
+NOTIC: [8] Undefined index: form_id /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 164 行.
+NOTIC: [8] Undefined index: form_id /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 169 行.
+NOTIC: [8] Undefined index: nav /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 191 行.
+NOTIC: [8] Undefined index: formcon /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 201 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000063s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000143s ]
+
+[ 2015-11-23T14:24:20+08:00 ] 183.21.26.151 /s/tp/wwwroot/index.php?s=/Flow/run/getflowlist/type/chuliendnode
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000143s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000058s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000142s ]
+NOTIC: [2048] Declaration of Flow\Controller\RunController::show() should be compatible with Think\Controller::show($content, $charset = '', $contentType = '', $prefix = '') /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 4 行.
+SQL: SHOW COLUMNS FROM `ht_run_process` [ RunTime:0.0009s ]
+SQL: SELECT * FROM `ht_run_process` WHERE ( uid=140 )  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `ht_run` [ RunTime:0.0007s ]
+SQL: SELECT * FROM `ht_run` WHERE ( id=994 ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `ht_flow_process` [ RunTime:0.0012s ]
+SQL: SELECT * FROM `ht_flow_process` WHERE ( id=126 ) LIMIT 1   [ RunTime:0.0002s ]
+NOTIC: [8] Undefined offset: 0 /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 413 行.
+SQL: SELECT * FROM `ht_run` WHERE ( id=997 ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `ht_flow_process` WHERE ( id=114 ) LIMIT 1   [ RunTime:0.0002s ]
+NOTIC: [2] unlink(../Application/Runtime/Temp/69ea4b7e03a87702ea4d53feac5ca7c9.php): No such file or directory /var/www/dzxt/s/tp/ThinkPHP/Library/Think/Cache/Driver/File.class.php 第 157 行.
+NOTIC: [8] Undefined offset: 0 /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 413 行.
+SQL: SELECT * FROM `ht_run` WHERE ( id=1252 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `ht_flow_process` WHERE ( id=128 ) LIMIT 1   [ RunTime:0.0001s ]
+NOTIC: [8] Undefined offset: 0 /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 413 行.
+SQL: SELECT * FROM `ht_run` WHERE ( id=1255 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `ht_flow_process` WHERE ( id=114 ) LIMIT 1   [ RunTime:0.0001s ]
+NOTIC: [2] unlink(../Application/Runtime/Temp/69ea4b7e03a87702ea4d53feac5ca7c9.php): No such file or directory /var/www/dzxt/s/tp/ThinkPHP/Library/Think/Cache/Driver/File.class.php 第 157 行.
+NOTIC: [8] Undefined offset: 0 /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 413 行.
+SQL: SELECT * FROM `ht_run` WHERE ( id=1256 ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `ht_flow_process` WHERE ( id=130 ) LIMIT 1   [ RunTime:0.0002s ]
+NOTIC: [8] Undefined offset: 0 /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 413 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000049s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000145s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.002697s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.002782s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000060s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000136s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000052s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000130s ]
+
+[ 2015-11-23T14:24:31+08:00 ] 183.21.26.151 /s/tp/wwwroot/index.php?s=/Flow/run/show/run_process/1782
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000148s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000061s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000153s ]
+NOTIC: [2048] Declaration of Flow\Controller\RunController::show() should be compatible with Think\Controller::show($content, $charset = '', $contentType = '', $prefix = '') /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 4 行.
+SQL: SHOW COLUMNS FROM `ht_run_process` [ RunTime:0.0009s ]
+SQL: SELECT * FROM `ht_run_process` WHERE `id` = 1782 AND `status` = 1 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `ht_run` [ RunTime:0.0007s ]
+ERR: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') LIMIT 1' at line 1
+
+[ 2015-11-23T14:24:37+08:00 ] 183.21.26.151 /s/tp/wwwroot/index.php?s=/Flow/run/getflowlist/type/chulinode
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000151s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000062s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000147s ]
+NOTIC: [2048] Declaration of Flow\Controller\RunController::show() should be compatible with Think\Controller::show($content, $charset = '', $contentType = '', $prefix = '') /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 4 行.
+SQL: SHOW COLUMNS FROM `ht_run_process` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `ht_run_process` WHERE `uid` = 140 AND `status` = 1  [ RunTime:0.0001s ]
+NOTIC: [2] Invalid argument supplied for foreach() /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 375 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000048s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000133s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.002703s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.002790s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000055s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000133s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000059s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000137s ]
+
+[ 2015-11-23T14:24:40+08:00 ] 183.21.26.151 /s/tp/wwwroot/index.php?s=/Flow/run/getflowlist/type/getnoendflow
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000142s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000062s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000144s ]
+NOTIC: [2048] Declaration of Flow\Controller\RunController::show() should be compatible with Think\Controller::show($content, $charset = '', $contentType = '', $prefix = '') /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 4 行.
+SQL: SHOW COLUMNS FROM `ht_run` [ RunTime:0.0009s ]
+SQL: SELECT * FROM `ht_run` WHERE `uid` = '140' AND ( `is_finish` = 2 OR `is_finish` = 4 )  [ RunTime:0.0004s ]
+NOTIC: [8] Undefined variable: is_finish /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 466 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000049s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000135s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.002667s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.002763s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000055s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000132s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000055s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000134s ]
+
+[ 2015-11-23T14:24:42+08:00 ] 183.21.26.151 /s/tp/wwwroot/index.php?s=/Flow/run/getflowlist/type/getmyflow
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000137s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000056s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000139s ]
+NOTIC: [2048] Declaration of Flow\Controller\RunController::show() should be compatible with Think\Controller::show($content, $charset = '', $contentType = '', $prefix = '') /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 4 行.
+SQL: SHOW COLUMNS FROM `ht_run` [ RunTime:0.0009s ]
+SQL: SELECT * FROM `ht_run` WHERE `uid` = '140'  [ RunTime:0.0003s ]
+NOTIC: [8] Undefined variable: is_finish /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 466 行.
+NOTIC: [8] Undefined variable: is_finish /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 466 行.
+NOTIC: [8] Undefined variable: is_finish /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 466 行.
+NOTIC: [8] Undefined variable: is_finish /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 466 行.
+NOTIC: [8] Undefined variable: is_finish /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 466 行.
+NOTIC: [8] Undefined variable: is_finish /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 466 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000049s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000136s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.002701s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.002787s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000051s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000127s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000053s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000130s ]
+
+[ 2015-11-23T14:24:44+08:00 ] 183.21.26.151 /s/tp/wwwroot/index.php?s=/Flow/run/getflowlist/type/getmyendflow
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000129s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000056s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000136s ]
+NOTIC: [2048] Declaration of Flow\Controller\RunController::show() should be compatible with Think\Controller::show($content, $charset = '', $contentType = '', $prefix = '') /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 4 行.
+SQL: SHOW COLUMNS FROM `ht_run` [ RunTime:0.0009s ]
+SQL: SELECT * FROM `ht_run` WHERE `uid` = '140' AND ( `is_finish` = 2 OR `is_finish` = 4 )  [ RunTime:0.0001s ]
+NOTIC: [8] Undefined variable: is_finish /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 466 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000048s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000128s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.002534s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.002618s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000054s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000132s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000055s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000132s ]
+
+[ 2015-11-23T16:57:55+08:00 ] 183.21.26.151 /s/tp/wwwroot/index.php?s=/Flow/run/getflow/flow_id/30.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000160s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000071s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000157s ]
+NOTIC: [2048] Declaration of Flow\Controller\RunController::show() should be compatible with Think\Controller::show($content, $charset = '', $contentType = '', $prefix = '') /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 4 行.
+SQL: SHOW COLUMNS FROM `ht_flow_process` [ RunTime:0.0017s ]
+SQL: SHOW COLUMNS FROM `ht_flow` [ RunTime:0.0006s ]
+SQL: SELECT * FROM `ht_flow` WHERE `id` = 30 AND `is_del` = 0 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `ht_flow_process` WHERE `flow_id` = 30 AND `is_del` = 0 AND `process_type` = 'is_one' LIMIT 1   [ RunTime:0.0003s ]
+ERR: Think\Controller:show_msg方法不存在！
+
+[ 2015-11-23T16:57:57+08:00 ] 183.21.26.151 /s/tp/wwwroot/index.php?s=/Flow/run/getflow/flow_id/32.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000145s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000059s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000143s ]
+NOTIC: [2048] Declaration of Flow\Controller\RunController::show() should be compatible with Think\Controller::show($content, $charset = '', $contentType = '', $prefix = '') /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 4 行.
+SQL: SHOW COLUMNS FROM `ht_flow_process` [ RunTime:0.0015s ]
+SQL: SHOW COLUMNS FROM `ht_flow` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `ht_flow` WHERE `id` = 32 AND `is_del` = 0 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `ht_flow_process` WHERE `flow_id` = 32 AND `is_del` = 0 AND `process_type` = 'is_one' LIMIT 1   [ RunTime:0.0003s ]
+NOTIC: [8] Undefined index: powers /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 158 行.
+NOTIC: [8] Undefined index: form_id /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 164 行.
+NOTIC: [8] Undefined index: form_id /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 169 行.
+NOTIC: [8] Undefined index: nav /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 191 行.
+NOTIC: [8] Undefined index: formcon /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 201 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000080s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000160s ]
+
+[ 2015-11-23T17:31:19+08:00 ] 183.21.26.151 /s/tp/wwwroot/index.php?s=/Flow/run/getflow/flow_id/21.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000155s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000074s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000158s ]
+NOTIC: [2048] Declaration of Flow\Controller\RunController::show() should be compatible with Think\Controller::show($content, $charset = '', $contentType = '', $prefix = '') /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 4 行.
+SQL: SHOW COLUMNS FROM `ht_flow_process` [ RunTime:0.0016s ]
+SQL: SHOW COLUMNS FROM `ht_flow` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `ht_flow` WHERE `id` = 21 AND `is_del` = 0 LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `ht_flow_process` WHERE `flow_id` = 21 AND `is_del` = 0 AND `process_type` = 'is_one' LIMIT 1   [ RunTime:0.0002s ]
+NOTIC: [8] Undefined index: powers /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 158 行.
+NOTIC: [8] Undefined index: form_id /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 164 行.
+NOTIC: [8] Undefined index: form_id /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 169 行.
+NOTIC: [8] Undefined index: nav /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 191 行.
+NOTIC: [8] Undefined index: formcon /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 201 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000081s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000189s ]
+
+[ 2015-11-23T17:31:30+08:00 ] 183.21.26.151 /s/tp/wwwroot/index.php?s=/Flow/run/getflow/flow_id/19.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000150s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000061s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000144s ]
+NOTIC: [2048] Declaration of Flow\Controller\RunController::show() should be compatible with Think\Controller::show($content, $charset = '', $contentType = '', $prefix = '') /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 4 行.
+SQL: SHOW COLUMNS FROM `ht_flow_process` [ RunTime:0.0015s ]
+SQL: SHOW COLUMNS FROM `ht_flow` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `ht_flow` WHERE `id` = 19 AND `is_del` = 0 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `ht_flow_process` WHERE `flow_id` = 19 AND `is_del` = 0 AND `process_type` = 'is_one' LIMIT 1   [ RunTime:0.0002s ]
+NOTIC: [8] Undefined index: powers /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 158 行.
+NOTIC: [8] Undefined index: form_id /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 164 行.
+NOTIC: [8] Undefined index: form_id /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 169 行.
+NOTIC: [8] Undefined index: nav /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 191 行.
+NOTIC: [8] Undefined index: formcon /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 201 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000060s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000140s ]
+
+[ 2015-11-23T17:31:40+08:00 ] 183.21.26.151 /s/tp/wwwroot/index.php?s=/Flow/run/getflow/flow_id/32.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000149s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000061s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000144s ]
+NOTIC: [2048] Declaration of Flow\Controller\RunController::show() should be compatible with Think\Controller::show($content, $charset = '', $contentType = '', $prefix = '') /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 4 行.
+SQL: SHOW COLUMNS FROM `ht_flow_process` [ RunTime:0.0015s ]
+SQL: SHOW COLUMNS FROM `ht_flow` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `ht_flow` WHERE `id` = 32 AND `is_del` = 0 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `ht_flow_process` WHERE `flow_id` = 32 AND `is_del` = 0 AND `process_type` = 'is_one' LIMIT 1   [ RunTime:0.0003s ]
+NOTIC: [8] Undefined index: powers /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 158 行.
+NOTIC: [8] Undefined index: form_id /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 164 行.
+NOTIC: [8] Undefined index: form_id /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 169 行.
+NOTIC: [8] Undefined index: nav /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 191 行.
+NOTIC: [8] Undefined index: formcon /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 201 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000062s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000142s ]
+
+[ 2015-11-23T17:31:46+08:00 ] 183.21.26.151 /s/tp/wwwroot/index.php?s=/Flow/run/getflowlist/type/chulinode
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000152s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000062s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000143s ]
+NOTIC: [2048] Declaration of Flow\Controller\RunController::show() should be compatible with Think\Controller::show($content, $charset = '', $contentType = '', $prefix = '') /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 4 行.
+SQL: SHOW COLUMNS FROM `ht_run_process` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `ht_run_process` WHERE `uid` = 214 AND `status` = 1  [ RunTime:0.0003s ]
+NOTIC: [2] Invalid argument supplied for foreach() /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 375 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000050s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000141s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009848s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009931s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000195s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000275s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000059s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000146s ]
+
+[ 2015-11-23T17:31:56+08:00 ] 183.21.26.151 /s/tp/wwwroot/index.php?s=/Flow/run/getflowlist/type/chuliendnode
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000143s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000060s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000142s ]
+NOTIC: [2048] Declaration of Flow\Controller\RunController::show() should be compatible with Think\Controller::show($content, $charset = '', $contentType = '', $prefix = '') /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 4 行.
+SQL: SHOW COLUMNS FROM `ht_run_process` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `ht_run_process` WHERE ( uid=214 )  [ RunTime:0.0002s ]
+NOTIC: [2] Invalid argument supplied for foreach() /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 400 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000053s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000136s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.002739s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.002824s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000057s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000134s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000057s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000137s ]
+
+[ 2015-11-23T17:32:00+08:00 ] 183.21.26.151 /s/tp/wwwroot/index.php?s=/Flow/run/getflow/flow_id/30.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000148s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000061s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000145s ]
+NOTIC: [2048] Declaration of Flow\Controller\RunController::show() should be compatible with Think\Controller::show($content, $charset = '', $contentType = '', $prefix = '') /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 4 行.
+SQL: SHOW COLUMNS FROM `ht_flow_process` [ RunTime:0.0015s ]
+SQL: SHOW COLUMNS FROM `ht_flow` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `ht_flow` WHERE `id` = 30 AND `is_del` = 0 LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `ht_flow_process` WHERE `flow_id` = 30 AND `is_del` = 0 AND `process_type` = 'is_one' LIMIT 1   [ RunTime:0.0003s ]
+ERR: Think\Controller:show_msg方法不存在！
+
+[ 2015-11-23T17:32:03+08:00 ] 183.21.26.151 /s/tp/wwwroot/index.php?s=/Flow/run/getflow/flow_id/25.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000142s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000061s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000144s ]
+NOTIC: [2048] Declaration of Flow\Controller\RunController::show() should be compatible with Think\Controller::show($content, $charset = '', $contentType = '', $prefix = '') /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 4 行.
+SQL: SHOW COLUMNS FROM `ht_flow_process` [ RunTime:0.0015s ]
+SQL: SHOW COLUMNS FROM `ht_flow` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `ht_flow` WHERE `id` = 25 AND `is_del` = 0 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `ht_flow_process` WHERE `flow_id` = 25 AND `is_del` = 0 AND `process_type` = 'is_one' LIMIT 1   [ RunTime:0.0003s ]
+ERR: Think\Controller:show_msg方法不存在！
+
+[ 2015-11-23T17:32:06+08:00 ] 183.21.26.151 /s/tp/wwwroot/index.php?s=/Flow/run/getflow/flow_id/24.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000142s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000062s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000146s ]
+NOTIC: [2048] Declaration of Flow\Controller\RunController::show() should be compatible with Think\Controller::show($content, $charset = '', $contentType = '', $prefix = '') /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 4 行.
+SQL: SHOW COLUMNS FROM `ht_flow_process` [ RunTime:0.0013s ]
+SQL: SHOW COLUMNS FROM `ht_flow` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `ht_flow` WHERE `id` = 24 AND `is_del` = 0 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `ht_flow_process` WHERE `flow_id` = 24 AND `is_del` = 0 AND `process_type` = 'is_one' LIMIT 1   [ RunTime:0.0003s ]
+NOTIC: [8] Undefined index: powers /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 158 行.
+NOTIC: [8] Undefined index: form_id /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 164 行.
+NOTIC: [8] Undefined index: form_id /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 169 行.
+NOTIC: [8] Undefined index: nav /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 191 行.
+NOTIC: [8] Undefined index: formcon /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 201 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000064s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000144s ]
+
+[ 2015-11-23T17:32:12+08:00 ] 183.21.26.151 /s/tp/wwwroot/index.php?s=/Flow/run/getflow/flow_id/17.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000138s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000059s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000141s ]
+NOTIC: [2048] Declaration of Flow\Controller\RunController::show() should be compatible with Think\Controller::show($content, $charset = '', $contentType = '', $prefix = '') /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 4 行.
+SQL: SHOW COLUMNS FROM `ht_flow_process` [ RunTime:0.0015s ]
+SQL: SHOW COLUMNS FROM `ht_flow` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `ht_flow` WHERE `id` = 17 AND `is_del` = 0 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `ht_flow_process` WHERE `flow_id` = 17 AND `is_del` = 0 AND `process_type` = 'is_one' LIMIT 1   [ RunTime:0.0002s ]
+NOTIC: [8] Undefined index: powers /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 158 行.
+NOTIC: [8] Undefined index: form_id /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 164 行.
+NOTIC: [8] Undefined index: form_id /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 169 行.
+NOTIC: [8] Undefined index: nav /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 191 行.
+NOTIC: [8] Undefined index: formcon /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 201 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000065s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000146s ]
+
+[ 2015-11-23T17:32:15+08:00 ] 183.21.26.151 /s/tp/wwwroot/index.php?s=/Flow/run/getflow/flow_id/18.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000136s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000060s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000143s ]
+NOTIC: [2048] Declaration of Flow\Controller\RunController::show() should be compatible with Think\Controller::show($content, $charset = '', $contentType = '', $prefix = '') /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 4 行.
+SQL: SHOW COLUMNS FROM `ht_flow_process` [ RunTime:0.0015s ]
+SQL: SHOW COLUMNS FROM `ht_flow` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `ht_flow` WHERE `id` = 18 AND `is_del` = 0 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `ht_flow_process` WHERE `flow_id` = 18 AND `is_del` = 0 AND `process_type` = 'is_one' LIMIT 1   [ RunTime:0.0003s ]
+NOTIC: [8] Undefined index: powers /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 158 行.
+NOTIC: [8] Undefined index: form_id /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 164 行.
+NOTIC: [8] Undefined index: form_id /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 169 行.
+NOTIC: [8] Undefined index: nav /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 191 行.
+NOTIC: [8] Undefined index: formcon /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 201 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000060s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000141s ]
+
+[ 2015-11-23T17:33:00+08:00 ] 183.21.26.151 /s/tp/wwwroot/index.php?s=/Flow/run/getflowlist/type/getmyflow
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000147s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000061s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000144s ]
+NOTIC: [2048] Declaration of Flow\Controller\RunController::show() should be compatible with Think\Controller::show($content, $charset = '', $contentType = '', $prefix = '') /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 4 行.
+SQL: SHOW COLUMNS FROM `ht_run` [ RunTime:0.0009s ]
+SQL: SELECT * FROM `ht_run` WHERE `uid` = '214'  [ RunTime:0.0002s ]
+NOTIC: [2] Invalid argument supplied for foreach() /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 457 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000049s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000130s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.002658s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.002741s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000054s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000132s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000057s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000135s ]
+
+[ 2015-11-23T17:33:36+08:00 ] 183.21.26.151 /s/tp/wwwroot/index.php?s=/Flow/run/flowsave.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000150s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000054s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000138s ]
+NOTIC: [2048] Declaration of Flow\Controller\RunController::show() should be compatible with Think\Controller::show($content, $charset = '', $contentType = '', $prefix = '') /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 4 行.
+SQL: SHOW COLUMNS FROM `ht_run_process` [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `ht_run` [ RunTime:0.0007s ]
+SQL: INSERT INTO `ht_run` (`uid`,`flow_id`,`run_name`,`run_flow_process`,`updatetime`,`dateline`) VALUES ('214','18','第一天上班','128','1448271216','1448271216') [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `ht_message` [ RunTime:0.0004s ]
+SQL: INSERT INTO `ht_message` (`send_user`,`receive_user`,`send_date`,`message`) VALUES ('1','214','1448271216','<strong style=\"color:#ff0000\">第一天上班 申请成功</strong>  相关信息正在处理中...') [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `ht_flow_process` [ RunTime:0.0012s ]
+SQL: SELECT `process_name`,`process_to`,`auto_sponsor_ids`,`out_condition` FROM `ht_flow_process` WHERE ( id=128 ) LIMIT 1   [ RunTime:0.0002s ]
+NOTIC: [8] Undefined variable: form_data_id /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 287 行.
+SQL: INSERT INTO `ht_run_process` (`uid`,`run_flow_process`,`updatetime`,`dateline`,`run_id`,`js_time`,`bl_time`,`jj_time`,`status`,`run_flow`) VALUES ('18','128','1448271216','1448271216','2009','1448271216','1448271216','1448271216','2','18') [ RunTime:0.0002s ]
+SQL: SELECT * FROM `ht_flow_process` WHERE ( id=129 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: INSERT INTO `ht_run_process` (`uid`,`run_id`,`run_flow`,`js_time`,`bl_time`,`jj_time`,`status`,`run_flow_process`,`updatetime`,`dateline`) VALUES ('18','2009','18','1448271216','1448271216','1448271216','1','129','1448271216','1448271216') [ RunTime:0.0193s ]
+SQL: INSERT INTO `ht_message` (`send_user`,`receive_user`,`send_date`,`message`) VALUES ('1','18','1448271216','<strong style=\"color:#ff0000\">审核</strong>  最新信息') [ RunTime:0.0198s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000083s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000170s ]
+
+[ 2015-11-23T17:33:38+08:00 ] 183.21.26.151 /s/tp/wwwroot/index.php?s=/Flow/Run/getflowlist/type/chulinode.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000130s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000055s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000136s ]
+NOTIC: [2048] Declaration of Flow\Controller\RunController::show() should be compatible with Think\Controller::show($content, $charset = '', $contentType = '', $prefix = '') /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 4 行.
+SQL: SHOW COLUMNS FROM `ht_run_process` [ RunTime:0.0009s ]
+SQL: SELECT * FROM `ht_run_process` WHERE `uid` = 214 AND `status` = 1  [ RunTime:0.0003s ]
+NOTIC: [2] Invalid argument supplied for foreach() /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 375 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000048s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000130s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.002620s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.002703s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000054s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000131s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000053s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000132s ]
+
+[ 2015-11-23T17:34:35+08:00 ] 183.21.26.151 /s/tp/wwwroot/index.php?s=/Flow/run/getflow/flow_id/33.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000147s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000061s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000143s ]
+NOTIC: [2048] Declaration of Flow\Controller\RunController::show() should be compatible with Think\Controller::show($content, $charset = '', $contentType = '', $prefix = '') /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 4 行.
+SQL: SHOW COLUMNS FROM `ht_flow_process` [ RunTime:0.0015s ]
+SQL: SHOW COLUMNS FROM `ht_flow` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `ht_flow` WHERE `id` = 33 AND `is_del` = 0 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `ht_flow_process` WHERE `flow_id` = 33 AND `is_del` = 0 AND `process_type` = 'is_one' LIMIT 1   [ RunTime:0.0003s ]
+NOTIC: [8] Undefined index: powers /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 158 行.
+NOTIC: [8] Undefined index: form_id /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 164 行.
+NOTIC: [8] Undefined index: form_id /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 169 行.
+NOTIC: [8] Undefined index: nav /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 191 行.
+NOTIC: [8] Undefined index: formcon /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 201 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000061s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000141s ]
+
+[ 2015-11-23T17:34:37+08:00 ] 183.21.26.151 /s/tp/wwwroot/index.php?s=/Flow/run/getflow/flow_id/32.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000134s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000055s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000137s ]
+NOTIC: [2048] Declaration of Flow\Controller\RunController::show() should be compatible with Think\Controller::show($content, $charset = '', $contentType = '', $prefix = '') /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 4 行.
+SQL: SHOW COLUMNS FROM `ht_flow_process` [ RunTime:0.0015s ]
+SQL: SHOW COLUMNS FROM `ht_flow` [ RunTime:0.0006s ]
+SQL: SELECT * FROM `ht_flow` WHERE `id` = 32 AND `is_del` = 0 LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `ht_flow_process` WHERE `flow_id` = 32 AND `is_del` = 0 AND `process_type` = 'is_one' LIMIT 1   [ RunTime:0.0001s ]
+NOTIC: [8] Undefined index: powers /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 158 行.
+NOTIC: [8] Undefined index: form_id /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 164 行.
+NOTIC: [8] Undefined index: form_id /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 169 行.
+NOTIC: [8] Undefined index: nav /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 191 行.
+NOTIC: [8] Undefined index: formcon /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 201 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000062s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000150s ]
+
+[ 2015-11-23T17:34:39+08:00 ] 183.21.26.151 /s/tp/wwwroot/index.php?s=/Flow/run/getflow/flow_id/30.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000143s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000059s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000141s ]
+NOTIC: [2048] Declaration of Flow\Controller\RunController::show() should be compatible with Think\Controller::show($content, $charset = '', $contentType = '', $prefix = '') /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 4 行.
+SQL: SHOW COLUMNS FROM `ht_flow_process` [ RunTime:0.0015s ]
+SQL: SHOW COLUMNS FROM `ht_flow` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `ht_flow` WHERE `id` = 30 AND `is_del` = 0 LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `ht_flow_process` WHERE `flow_id` = 30 AND `is_del` = 0 AND `process_type` = 'is_one' LIMIT 1   [ RunTime:0.0001s ]
+ERR: Think\Controller:show_msg方法不存在！
+
+[ 2015-11-23T17:36:29+08:00 ] 183.21.26.151 /s/tp/wwwroot/index.php?s=/Flow/run/getflow/flow_id/25.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000168s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000076s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000159s ]
+NOTIC: [2048] Declaration of Flow\Controller\RunController::show() should be compatible with Think\Controller::show($content, $charset = '', $contentType = '', $prefix = '') /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 4 行.
+SQL: SHOW COLUMNS FROM `ht_flow_process` [ RunTime:0.0016s ]
+SQL: SHOW COLUMNS FROM `ht_flow` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `ht_flow` WHERE `id` = 25 AND `is_del` = 0 LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `ht_flow_process` WHERE `flow_id` = 25 AND `is_del` = 0 AND `process_type` = 'is_one' LIMIT 1   [ RunTime:0.0001s ]
+ERR: Think\Controller:show_msg方法不存在！
+
+[ 2015-11-23T17:36:31+08:00 ] 183.21.26.151 /s/tp/wwwroot/index.php?s=/Flow/run/getflow/flow_id/24.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000135s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000055s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000140s ]
+NOTIC: [2048] Declaration of Flow\Controller\RunController::show() should be compatible with Think\Controller::show($content, $charset = '', $contentType = '', $prefix = '') /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 4 行.
+SQL: SHOW COLUMNS FROM `ht_flow_process` [ RunTime:0.0014s ]
+SQL: SHOW COLUMNS FROM `ht_flow` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `ht_flow` WHERE `id` = 24 AND `is_del` = 0 LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `ht_flow_process` WHERE `flow_id` = 24 AND `is_del` = 0 AND `process_type` = 'is_one' LIMIT 1   [ RunTime:0.0001s ]
+NOTIC: [8] Undefined index: powers /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 158 行.
+NOTIC: [8] Undefined index: form_id /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 164 行.
+NOTIC: [8] Undefined index: form_id /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 169 行.
+NOTIC: [8] Undefined index: nav /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 191 行.
+NOTIC: [8] Undefined index: formcon /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 201 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000071s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000151s ]
+
+[ 2015-11-23T17:59:13+08:00 ] 183.21.26.151 /s/tp/wwwroot/index.php?s=/Flow/run/getflowlist/type/chulinode
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000159s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000074s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000169s ]
+NOTIC: [2048] Declaration of Flow\Controller\RunController::show() should be compatible with Think\Controller::show($content, $charset = '', $contentType = '', $prefix = '') /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 4 行.
+SQL: SHOW COLUMNS FROM `ht_run_process` [ RunTime:0.0011s ]
+SQL: SELECT * FROM `ht_run_process` WHERE `uid` = 214 AND `status` = 1  [ RunTime:0.0003s ]
+NOTIC: [2] Invalid argument supplied for foreach() /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 375 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000050s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000140s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.003165s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.003254s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000057s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000134s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000071s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000150s ]
+
+[ 2015-11-23T17:59:26+08:00 ] 183.21.26.151 /s/tp/wwwroot/index.php?s=/Flow/run/getflow/flow_id/18.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000154s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000074s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000158s ]
+NOTIC: [2048] Declaration of Flow\Controller\RunController::show() should be compatible with Think\Controller::show($content, $charset = '', $contentType = '', $prefix = '') /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 4 行.
+SQL: SHOW COLUMNS FROM `ht_flow_process` [ RunTime:0.0016s ]
+SQL: SHOW COLUMNS FROM `ht_flow` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `ht_flow` WHERE `id` = 18 AND `is_del` = 0 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `ht_flow_process` WHERE `flow_id` = 18 AND `is_del` = 0 AND `process_type` = 'is_one' LIMIT 1   [ RunTime:0.0002s ]
+NOTIC: [8] Undefined index: powers /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 158 行.
+NOTIC: [8] Undefined index: form_id /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 164 行.
+NOTIC: [8] Undefined index: form_id /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 169 行.
+NOTIC: [8] Undefined index: nav /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 191 行.
+NOTIC: [8] Undefined index: formcon /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 201 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000082s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000161s ]
+
+[ 2015-11-23T18:00:18+08:00 ] 183.21.26.151 /s/tp/wwwroot/index.php?s=/Flow/run/getflow/flow_id/32.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000147s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000061s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000144s ]
+NOTIC: [2048] Declaration of Flow\Controller\RunController::show() should be compatible with Think\Controller::show($content, $charset = '', $contentType = '', $prefix = '') /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 4 行.
+SQL: SHOW COLUMNS FROM `ht_flow_process` [ RunTime:0.0015s ]
+SQL: SHOW COLUMNS FROM `ht_flow` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `ht_flow` WHERE `id` = 32 AND `is_del` = 0 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `ht_flow_process` WHERE `flow_id` = 32 AND `is_del` = 0 AND `process_type` = 'is_one' LIMIT 1   [ RunTime:0.0003s ]
+NOTIC: [8] Undefined index: powers /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 158 行.
+NOTIC: [8] Undefined index: form_id /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 164 行.
+NOTIC: [8] Undefined index: form_id /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 169 行.
+NOTIC: [8] Undefined index: nav /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 191 行.
+NOTIC: [8] Undefined index: formcon /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 201 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000062s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000141s ]
+
+[ 2015-11-23T18:00:21+08:00 ] 183.21.26.151 /s/tp/wwwroot/index.php?s=/Flow/run/getflow/flow_id/30.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000149s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000062s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000145s ]
+NOTIC: [2048] Declaration of Flow\Controller\RunController::show() should be compatible with Think\Controller::show($content, $charset = '', $contentType = '', $prefix = '') /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 4 行.
+SQL: SHOW COLUMNS FROM `ht_flow_process` [ RunTime:0.0015s ]
+SQL: SHOW COLUMNS FROM `ht_flow` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `ht_flow` WHERE `id` = 30 AND `is_del` = 0 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `ht_flow_process` WHERE `flow_id` = 30 AND `is_del` = 0 AND `process_type` = 'is_one' LIMIT 1   [ RunTime:0.0003s ]
+ERR: Think\Controller:show_msg方法不存在！
+
+[ 2015-11-23T18:00:23+08:00 ] 183.21.26.151 /s/tp/wwwroot/index.php?s=/Flow/run/getflow/flow_id/25.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000122s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000052s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000133s ]
+NOTIC: [2048] Declaration of Flow\Controller\RunController::show() should be compatible with Think\Controller::show($content, $charset = '', $contentType = '', $prefix = '') /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 4 行.
+SQL: SHOW COLUMNS FROM `ht_flow_process` [ RunTime:0.0014s ]
+SQL: SHOW COLUMNS FROM `ht_flow` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `ht_flow` WHERE `id` = 25 AND `is_del` = 0 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `ht_flow_process` WHERE `flow_id` = 25 AND `is_del` = 0 AND `process_type` = 'is_one' LIMIT 1   [ RunTime:0.0002s ]
+ERR: Think\Controller:show_msg方法不存在！
+
+[ 2015-11-23T18:00:34+08:00 ] 183.21.26.151 /s/tp/wwwroot/index.php?s=/Flow/run/getflowlist/type/chuliendnode
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000147s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000063s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000146s ]
+NOTIC: [2048] Declaration of Flow\Controller\RunController::show() should be compatible with Think\Controller::show($content, $charset = '', $contentType = '', $prefix = '') /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 4 行.
+SQL: SHOW COLUMNS FROM `ht_run_process` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `ht_run_process` WHERE ( uid=214 )  [ RunTime:0.0003s ]
+NOTIC: [2] Invalid argument supplied for foreach() /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 400 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000051s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000139s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.003137s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.003220s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000058s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000135s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000056s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000135s ]
+
+[ 2015-11-23T22:56:54+08:00 ] 14.215.238.182 /s/tp/wwwroot/index.php?s=/Flow/run/add/flow_id/33.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000158s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000078s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000160s ]
+NOTIC: [2048] Declaration of Flow\Controller\RunController::show() should be compatible with Think\Controller::show($content, $charset = '', $contentType = '', $prefix = '') /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 4 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000068s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000151s ]
+
+[ 2015-11-23T22:57:20+08:00 ] 14.215.238.182 /s/tp/wwwroot/index.php?s=/Flow/run/getflowlist/type/getmyflow
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000184s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000075s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000159s ]
+NOTIC: [2048] Declaration of Flow\Controller\RunController::show() should be compatible with Think\Controller::show($content, $charset = '', $contentType = '', $prefix = '') /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 4 行.
+SQL: SHOW COLUMNS FROM `ht_run` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `ht_run` WHERE `uid` = '190'  [ RunTime:0.0004s ]
+NOTIC: [8] Undefined variable: is_finish /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 466 行.
+NOTIC: [8] Undefined variable: is_finish /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 466 行.
+NOTIC: [8] Undefined variable: is_finish /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 466 行.
+NOTIC: [8] Undefined variable: is_finish /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 466 行.
+NOTIC: [8] Undefined variable: is_finish /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 466 行.
+NOTIC: [8] Undefined variable: is_finish /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 466 行.
+NOTIC: [8] Undefined variable: is_finish /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 466 行.
+NOTIC: [8] Undefined variable: is_finish /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 466 行.
+NOTIC: [8] Undefined variable: is_finish /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 466 行.
+NOTIC: [8] Undefined variable: is_finish /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 466 行.
+NOTIC: [8] Undefined variable: is_finish /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 466 行.
+NOTIC: [8] Undefined variable: is_finish /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 466 行.
+NOTIC: [8] Undefined variable: is_finish /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 466 行.
+NOTIC: [8] Undefined variable: is_finish /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 466 行.
+NOTIC: [8] Undefined variable: is_finish /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 466 行.
+NOTIC: [8] Undefined variable: is_finish /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 466 行.
+NOTIC: [8] Undefined variable: is_finish /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 466 行.
+NOTIC: [8] Undefined variable: is_finish /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 466 行.
+NOTIC: [8] Undefined variable: is_finish /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 466 行.
+NOTIC: [8] Undefined variable: is_finish /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 466 行.
+NOTIC: [8] Undefined variable: is_finish /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 466 行.
+NOTIC: [8] Undefined variable: is_finish /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 466 行.
+NOTIC: [8] Undefined variable: is_finish /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 466 行.
+NOTIC: [8] Undefined variable: is_finish /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 466 行.
+NOTIC: [8] Undefined variable: is_finish /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 466 行.
+NOTIC: [8] Undefined variable: is_finish /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 466 行.
+NOTIC: [8] Undefined variable: is_finish /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 466 行.
+NOTIC: [8] Undefined variable: is_finish /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 466 行.
+NOTIC: [8] Undefined variable: is_finish /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 466 行.
+NOTIC: [8] Undefined variable: is_finish /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 466 行.
+NOTIC: [8] Undefined variable: is_finish /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 466 行.
+NOTIC: [8] Undefined variable: is_finish /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 466 行.
+NOTIC: [8] Undefined variable: is_finish /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 466 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000049s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000137s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.003107s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.003195s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000059s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000135s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000065s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000144s ]
+
+[ 2015-11-23T22:57:22+08:00 ] 14.215.238.182 /s/tp/wwwroot/index.php?s=/Flow/run/getflowlist/type/chulinode
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000124s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000053s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000136s ]
+NOTIC: [2048] Declaration of Flow\Controller\RunController::show() should be compatible with Think\Controller::show($content, $charset = '', $contentType = '', $prefix = '') /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 4 行.
+SQL: SHOW COLUMNS FROM `ht_run_process` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `ht_run_process` WHERE `uid` = 190 AND `status` = 1  [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `ht_flow_process` [ RunTime:0.0012s ]
+SQL: SELECT * FROM `ht_flow_process` WHERE ( id=158 ) LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000052s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000139s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.002600s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.002688s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000051s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000127s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000053s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000131s ]
+
+[ 2015-11-23T22:57:25+08:00 ] 14.215.238.182 /s/tp/wwwroot/index.php?s=/Flow/run/getflow/flow_id/33.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000155s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000065s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000149s ]
+NOTIC: [2048] Declaration of Flow\Controller\RunController::show() should be compatible with Think\Controller::show($content, $charset = '', $contentType = '', $prefix = '') /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 4 行.
+SQL: SHOW COLUMNS FROM `ht_flow_process` [ RunTime:0.0016s ]
+SQL: SHOW COLUMNS FROM `ht_flow` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `ht_flow` WHERE `id` = 33 AND `is_del` = 0 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `ht_flow_process` WHERE `flow_id` = 33 AND `is_del` = 0 AND `process_type` = 'is_one' LIMIT 1   [ RunTime:0.0003s ]
+NOTIC: [8] Undefined index: powers /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 158 行.
+NOTIC: [8] Undefined index: form_id /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 164 行.
+NOTIC: [8] Undefined index: form_id /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 169 行.
+NOTIC: [8] Undefined index: nav /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 191 行.
+NOTIC: [8] Undefined index: formcon /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 201 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000064s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000144s ]
+
+[ 2015-11-23T22:58:57+08:00 ] 14.215.238.182 /s/tp/wwwroot/index.php?s=/Flow/run/add/flow_id/33.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000172s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000074s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000156s ]
+NOTIC: [2048] Declaration of Flow\Controller\RunController::show() should be compatible with Think\Controller::show($content, $charset = '', $contentType = '', $prefix = '') /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 4 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000077s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000160s ]
+
+[ 2015-11-23T22:58:57+08:00 ] 14.215.238.182 /s/tp/wwwroot/index.php?s=/Flow/run/getflowlist/type/getmyflow
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000144s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000059s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000147s ]
+NOTIC: [2048] Declaration of Flow\Controller\RunController::show() should be compatible with Think\Controller::show($content, $charset = '', $contentType = '', $prefix = '') /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 4 行.
+SQL: SHOW COLUMNS FROM `ht_run` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `ht_run` WHERE `uid` = '190'  [ RunTime:0.0001s ]
+NOTIC: [8] Undefined variable: is_finish /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 466 行.
+NOTIC: [8] Undefined variable: is_finish /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 466 行.
+NOTIC: [8] Undefined variable: is_finish /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 466 行.
+NOTIC: [8] Undefined variable: is_finish /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 466 行.
+NOTIC: [8] Undefined variable: is_finish /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 466 行.
+NOTIC: [8] Undefined variable: is_finish /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 466 行.
+NOTIC: [8] Undefined variable: is_finish /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 466 行.
+NOTIC: [8] Undefined variable: is_finish /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 466 行.
+NOTIC: [8] Undefined variable: is_finish /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 466 行.
+NOTIC: [8] Undefined variable: is_finish /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 466 行.
+NOTIC: [8] Undefined variable: is_finish /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 466 行.
+NOTIC: [8] Undefined variable: is_finish /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 466 行.
+NOTIC: [8] Undefined variable: is_finish /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 466 行.
+NOTIC: [8] Undefined variable: is_finish /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 466 行.
+NOTIC: [8] Undefined variable: is_finish /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 466 行.
+NOTIC: [8] Undefined variable: is_finish /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 466 行.
+NOTIC: [8] Undefined variable: is_finish /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 466 行.
+NOTIC: [8] Undefined variable: is_finish /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 466 行.
+NOTIC: [8] Undefined variable: is_finish /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 466 行.
+NOTIC: [8] Undefined variable: is_finish /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 466 行.
+NOTIC: [8] Undefined variable: is_finish /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 466 行.
+NOTIC: [8] Undefined variable: is_finish /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 466 行.
+NOTIC: [8] Undefined variable: is_finish /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 466 行.
+NOTIC: [8] Undefined variable: is_finish /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 466 行.
+NOTIC: [8] Undefined variable: is_finish /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 466 行.
+NOTIC: [8] Undefined variable: is_finish /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 466 行.
+NOTIC: [8] Undefined variable: is_finish /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 466 行.
+NOTIC: [8] Undefined variable: is_finish /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 466 行.
+NOTIC: [8] Undefined variable: is_finish /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 466 行.
+NOTIC: [8] Undefined variable: is_finish /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 466 行.
+NOTIC: [8] Undefined variable: is_finish /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 466 行.
+NOTIC: [8] Undefined variable: is_finish /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 466 行.
+NOTIC: [8] Undefined variable: is_finish /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 466 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000049s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000138s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.003128s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.003219s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000059s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000137s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000053s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000131s ]
+
+[ 2015-11-23T22:58:57+08:00 ] 14.215.238.182 /s/tp/wwwroot/index.php?s=/Flow/run/getflowlist/type/chulinode
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000120s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000053s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000135s ]
+NOTIC: [2048] Declaration of Flow\Controller\RunController::show() should be compatible with Think\Controller::show($content, $charset = '', $contentType = '', $prefix = '') /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 4 行.
+SQL: SHOW COLUMNS FROM `ht_run_process` [ RunTime:0.0009s ]
+SQL: SELECT * FROM `ht_run_process` WHERE `uid` = 190 AND `status` = 1  [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `ht_flow_process` [ RunTime:0.0012s ]
+SQL: SELECT * FROM `ht_flow_process` WHERE ( id=158 ) LIMIT 1   [ RunTime:0.0001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000055s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000137s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.002685s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.002771s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000052s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000128s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000052s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000132s ]
+
+[ 2015-11-23T22:58:57+08:00 ] 14.215.238.182 /s/tp/wwwroot/index.php?s=/Flow/run/getflow/flow_id/33.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000122s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000055s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000139s ]
+NOTIC: [2048] Declaration of Flow\Controller\RunController::show() should be compatible with Think\Controller::show($content, $charset = '', $contentType = '', $prefix = '') /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 4 行.
+SQL: SHOW COLUMNS FROM `ht_flow_process` [ RunTime:0.0013s ]
+SQL: SHOW COLUMNS FROM `ht_flow` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `ht_flow` WHERE `id` = 33 AND `is_del` = 0 LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `ht_flow_process` WHERE `flow_id` = 33 AND `is_del` = 0 AND `process_type` = 'is_one' LIMIT 1   [ RunTime:0.0001s ]
+NOTIC: [8] Undefined index: powers /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 158 行.
+NOTIC: [8] Undefined index: form_id /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 164 行.
+NOTIC: [8] Undefined index: form_id /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 169 行.
+NOTIC: [8] Undefined index: nav /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 191 行.
+NOTIC: [8] Undefined index: formcon /var/www/dzxt/s/tp/Application/Flow/Controller/RunController.class.php 第 201 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000053s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000132s ]
+

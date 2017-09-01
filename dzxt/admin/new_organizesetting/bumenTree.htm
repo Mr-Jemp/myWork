@@ -1,0 +1,605 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>组织架构</title>
+    <link href="../../resource/part/ligerlib/ligerUI/skins/Aqua/css/ligerui-all.css" rel="stylesheet" type="text/css" /> 
+    <script src="../../resource/js/jQuery/jquery-1.9.1.js" type="text/javascript"></script>
+    <script src="../../resource/part/ligerlib/ligerUI/js/core/base.js" type="text/javascript"></script>
+    <script src="../../resource/part/ligerlib/ligerUI/js/ligerui.all.js"></script>
+    <script src="../../resource/part/ligerlib/json2.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        var actionCustomerID;
+        var actionPID;
+        var maingrid = null;
+		var actionName;
+		var actionRemark;
+		var actionRowIndex;
+		var actionParm;
+		
+		var ediPparentNodeDialog;
+		var editParentNodeTree;
+		var editParentNodeTreeId;
+		
+        $.extend($.ligerMethos.Grid,
+            {
+                alert3: function() {
+                    var rowdata = this.getSelectedRow();
+                    if (!rowdata)
+                        return null;
+                    else
+                        return rowdata.id;
+                }
+            }
+        );
+        $(function() {
+			editParentNodeTree=$("#editParentNodeTree").ligerGrid({
+                columns: [
+                        { display: '部门名', name: 'name', width: 128, align: 'left', editor: { type: 'text'} },
+                        { display: '部门描述', name: 'remark', width: 128, align: 'left', editor: { type: 'text'} }
+                    ], width: '98%',
+                onSelectRow: function(rowdata, rowindex) {
+                    editParentNodeTreeId=rowdata.id;
+                },
+                data: { Rows: [] }, tree: { columnName: 'name' },
+				 height:'auto',
+				 onReload: function() {
+					return false;
+                }
+            });
+            var menu = $.ligerMenu({ width: 120, items:
+            [
+            { text: '增加子节点', click: addChildNode, icon: 'add' },
+            { text: '增加兄弟节点', click: addBrotherNode, icon: 'add' },
+            { text: '修改节点信息', click: editNode },
+             { text: '删除节点', click: deleteNode },
+             { text: '修改父结点', click: ediPparentNode },
+            { line: true },
+             { text: '添加角色成员', click: f_import },
+			{line:true},
+            { text: '关闭', click: itemclick }
+            ]
+            });
+            var mdata='';
+            maingrid = $("#maingrid").ligerGrid({
+                columns: [
+                        { display: '部门名', name: 'name',width:250, align: 'left', editor: { type: 'text'} },
+                        { display: '部门描述', name: 'remark',width:80,align: 'left', editor: { type: 'text'}}
+                    ], width: '100%', pageSizeOptions: [5, 10, 15, 20],
+                onSelectRow: function(rowdata, rowindex) {
+                    $("#txtrowindex").val(rowindex);
+                },
+                url:"/s/organizesetting/roletree.php", alternatingRow: false, tree: { columnName: 'name' },
+                autoCheckChildren: false, onReload: function() {
+                    //getNewData();
+					return false;
+                },
+                onContextmenu: function(parm, e) {
+					actionParm=parm;
+				    actionRowIndex=parm.rowindex;
+                    actionCustomerID = parm.data.id;
+                    actionPID = parm.data.parentId;
+                    actionName = parm.data.name;
+                    actionRemark = parm.data.remark;
+                    menu.show({ top: e.pageY, left: e.pageX });
+					maingrid.select(actionRowIndex);
+                    return false;
+                },
+				 height:'97%'
+            });
+            maingrid.bind('selectRow', function(data) 
+			{
+				var wai=$.ligerDialog.waitting('正在加载中,请稍候...');
+				actionCustomerID=data.id;
+				LoadDataTree();
+                $.ajax({ url: "/s/organizesetting/treelist.php",  type: "POST", data: { operatetype: "getStaffsForRole", roleId: escape(maingrid.alert3()) },
+                    success: function(data) {
+						wai.close();
+						data = eval('(' + data + ')');
+                        if (data.IsSuccess) {
+                            var ss = g.rows;
+                            g.deleteRange(ss);
+                            g.addRows(data.Data);
+                        } else {
+                            var ss = g.rows;
+                            g.deleteRange(ss);
+                        }
+                    },
+                    error: function(er) {
+                        //  alert(er);
+						wai.close();
+                    }
+                });
+
+            });
+			
+			//getNewData();
+        });
+
+        function itemclick(item, i) {
+
+        }
+        function cancel(item, i) {
+            i.hidden();
+        }
+        function getNewData() {
+			ajaxNewData(function(data)
+			{
+				if(typeof(data)=="object")
+				{
+					var ss = maingrid.rows;
+					maingrid.deleteRange(ss);
+					maingrid.addRows(data);
+					return;
+				}
+				alert(data);
+			});
+        }
+		function ajaxNewData(callback)
+		{
+            $.ajax({ url: "/s/organizesetting/roletree.php", type: "POST", async: false, data: { "rtype": "ajaxNewData"} ,
+                success: function(data) {
+                /*jsonobj = eval('(' + data + ')');
+				if(jsonobj.state!="ok")return jsonobj.error;*/
+				//jsondata=eval('[' + data + ']');
+				callback(data);
+                },
+                error: function(er) {
+					callback("网络出错");
+                }
+            });
+		}
+
+        function addChildNode(item, i) {
+            $.ligerDialog.open({ left: '38%', top: '35%', target: $("#addChildNode"), title: "添加子节点", buttons: [{ text: "添加", onclick: addChildN }, { text: "取消", onclick: cancel}] });
+         }
+        function addChildN(item, i) {
+            $.ajax({ url: "/s/organizesetting/treeadd.php", type: "POST", data: { operateType: "addNode", id: actionCustomerID, orderField: escape(null), parentField: escape("parentid"), fieldsStr: escape("部门,角色,"),name: $("#addChildName").val(),rname:$("#addChildPresentation").val() , tableName: escape("tbdepartmentandrole") }
+             , success: function(data) {
+				jsonobj = eval('(' + data + ')');				
+				if(jsonobj.pw_flag==1){alert(jsonobj.msg);return false;}
+				if(jsonobj.state!="ok"){alert(jsonobj.error);return;}
+				if((jsonobj.id*1)<1){alert("添加失败：re id<0");return;}
+				
+				getNewData();
+                i.hidden();
+
+             },
+                error: function(er) {
+                    alert(er);
+                }
+            });
+        }
+
+        function addBrotherNode(item, i) {
+            $.ligerDialog.open({ left: '38%', top: '35%', target: $("#addBrotherNode"), title: "添加兄弟节点", buttons: [{ text: "添加", onclick: addBrotherN }, { text: "取消", onclick: cancel}] });
+
+        }
+        function addBrotherN(item, i) {
+		
+		  $.ajax({ url: "/s/organizesetting/treeadd.php", type: "POST", data: { operateType: "addNode", id: actionPID, orderField: escape(null), parentField: escape("parentid"), fieldsStr: escape("部门,角色,"),name: $("#addBrotherName").val(),rname:$("#addBrotherPresentation").val() , tableName: escape("tbdepartmentandrole") }
+          , success: function(data) {
+
+				jsonobj = eval('(' + data + ')');				
+				if(jsonobj.pw_flag==1){alert(jsonobj.msg);return false;}
+				if(jsonobj.state!="ok"){alert(jsonobj.error);return;}
+				if((jsonobj.id*1)<1){alert("添加失败：re id<0");return;}
+				
+				getNewData();
+                i.hidden();
+
+          },
+                error: function(er) {
+                    $.ligerDialog.error(er); 
+                }
+            });
+        }
+
+        function editNode(item, i) {
+			$("#editNodeName").val(actionName);
+			$("#editNodePresentation").val(actionRemark);
+            $.ligerDialog.open({ left: '38%', top: '35%', target: $("#editNode"), title: "修改节点", buttons: [{ text: "修改", onclick: editN }, { text: "取消", onclick: cancel}] });
+
+        }
+        function editN(item, i) {
+            $.ajax({ url: "/s/organizesetting/treeedit.php", type: "POST", data: { operateType: "editNode", id: actionCustomerID, name: $("#editNodeName").val(),pid:actionPID,rname:$("#editNodePresentation").val(), tableName: escape("tbdepartmentandrole") }
+			
+             , success: function(data) {
+				 jsonobj = eval('(' + data + ')');
+				 if(jsonobj.pw_flag==1){alert(jsonobj.msg);return false;}
+				 if(jsonobj.state!="ok"){alert(jsonobj.error);return;}
+				 
+                 i.hidden();
+                 maingrid.updateRow(actionRowIndex,{"name":$("#editNodeName").val(),"remark":$("#editNodePresentation").val()});
+
+             },
+                error: function(er) {
+                    $.ligerDialog.error(er); 
+                }
+            });
+
+
+        }
+		function ediPparentNode()
+		{
+			editParentNodeTreeId=-1;
+			ediPparentNodeDialog=$.ligerDialog.open({
+				target: $("#ediPparentNode"), left: '38%', top: '35%',width:"350"
+				, title: "修改【"+actionName+"】父结点"
+				, buttons: [{ text: "确定", onclick: function()
+				{
+					if(editParentNodeTreeId<0){alert("请选择父节点");return;}
+					ediPparentNodeDialog.hide();
+					
+					$.ajax({ url: "/s/organizesetting/treeparentnode.php", type: "POST", data:{id: actionCustomerID, pid:editParentNodeTreeId}
+						, success: function(data)
+						{
+							data = eval('(' + data + ')');
+							if(data.pw_flag==1){alert(data.msg);return;}
+							if(data.state=="ok")
+							{
+								getNewData();
+								return;
+							}
+							alert(data.error);
+						
+						},
+						error: function(er)
+						{
+							alert(er.statusText);
+						}
+					});
+			
+				} }
+				, { text: "取消", onclick:function()
+				{
+					ediPparentNodeDialog.hide();
+				}}]
+			});
+			ajaxNewData(function(data)
+			{
+				if(typeof(data)=="object")
+				{
+					var ss = editParentNodeTree.rows;
+					editParentNodeTree.deleteRange(ss);
+					editParentNodeTree.addRows(data);
+					return;
+				}
+				alert(data);
+			});
+		}
+        function deleteNode(item, i) {
+			if(!confirm('确定要删除该内容吗?'))return false;
+            var lo = $.ligerDialog.open({ left: '38%', top: '35%', title: "删除节点："+actionName, buttons: [{ text: "删除", onclick: deleteN }, { text: "取消", onclick: cancel}] });
+
+        }
+
+        function deleteN(item, i) {
+			$.ajax({ url: "/s/organizesetting/treedelete.php", type: "POST", data: { operateType: "deleteNode", id: actionCustomerID, parentid: escape(actionPID), tableName: escape("tbdepartmentandrole") }
+
+             , success: function(data) {
+				data = eval('(' + data + ')');
+				if(data.pw_flag==1){alert(data.msg);return false;}
+				if(data.state=="ok")
+				{
+					maingrid.deleteRow(actionRowIndex);
+					i.hidden();
+					var manager = $.ligerDialog.success(data.error); setTimeout(function () { manager.close(); }, 1000);
+					//alert(data.error);
+				}else
+				{
+					i.hidden();
+					$.ligerDialog.error(data.error); 
+				}
+
+             },
+                error: function(er) {
+                    alert(er.statusText);
+                }
+            });
+        }
+    </script>
+
+    <script type="text/javascript">
+	var dataTree;
+	var url="/s/tp/wwwroot/index.php?s=/Power"; 
+        $(function() {
+            $("#layout1").ligerLayout({
+			height:"97%",
+				centerWidth:"65%",
+                rightWidth: "33%",
+                space: 0
+            });
+			
+			 $("#tab1").ligerTab();
+        });
+    </script>
+
+    <script type="text/javascript">
+        var EmployeeData;
+        var fn = null;
+        function f_import() {
+            var getmaingrid = maingrid.alert3();
+            if (getmaingrid == null) {
+                alert("请先左键点击选择部门");
+                return;
+            } else {
+
+            }
+            $.ajax({ url: "/s/organizesetting/treepower.php", async: false, type: "POST", data: { operatetype: "getAllStaff" },
+                success: function(data) {
+					
+					data = eval('(' + data + ')');
+					if(data.pw_flag==1){alert(data.msg);return false;}
+                    $("#showStaffDiv").html("");
+                    if (data.IsSuccess) {
+                        EmployeeData = data.Data;
+
+						 fn = $.ligerui.getPopupFn({
+						top: 80,
+						onSelect: function(e) {
+							var isno = false;
+							for (var i = 0; i < e.data.length; i++) {
+								$.ajax({ url: "/s/organizesetting/treeuser.php",  type: "POST", async: false, data: { operatetype: "appointEmployeer", roleId: escape(getmaingrid), staffId: escape(e.data[i].Id) },
+									success: function(data) {
+										data = eval('(' + data + ')');
+										if (data.IsSuccess) {
+											isno = true;
+										}
+										else {
+											alert(data.Message);
+										}
+									},
+									error: function(xhr, stat, e) {
+										alert(e);
+									}
+								});
+							}
+							if (isno) {
+								g.addRows(e.data);
+							}
+		
+						},
+						grid: {
+							columns: [
+								{ display: '账号', name: 'Zhanghao', width: 50, type: 'text' },
+								{ display: '名字', name: 'Name', width: 50, type: 'text' }
+		
+							], isScroll: false, checkbox: true,
+							data: { Rows: EmployeeData },
+							width: '95%'
+						}
+					});
+                    }
+                    else {
+                    }
+                },
+                error: function(xhr, stat, e) {
+                    alert(e);
+                }
+            });
+           
+
+            fn();
+        }
+
+        $(f_initGrid);
+
+        var g = null;
+        function f_initGrid() {
+            g = $("#maingrid23").ligerGrid({
+                columns: [
+                    { display: '账号', name: 'Zhanghao', width: 50, type: 'text' },
+                    { display: '名字', name: 'Name', width: 100,
+                        editor: { type: 'text' }
+                    }, {
+                        display: '操作', isSort: false, width: 120, render: function() {
+                            var h = "<a href='javascript:deleteRow()'>删除</a> ";
+
+                            return h;
+                        }
+                    }
+
+                ],onReload: function() {return false;}, data: { Rows: [] },
+                enabledEdit: false, isScroll: true,
+                width: '100%',height:'97%'
+            });
+        }
+        function deleteRow() {
+            var rowid = g.getSelectedRow().Id;
+            if (confirm('是否真的解除角色?')) {
+                $.ajax({ url: "/s/organizesetting/treeuserdelete.php", type: "POST", data: { operatetype: "fireEmployeer", staffId: escape(rowid) },
+                    success: function(data) {
+						data = eval('(' + data + ')');
+						if(data.pw_flag==1){alert(data.msg);return false;}
+                        if (data.IsSuccess) {
+                            g.deleteSelectedRow();
+                        }
+                        else {
+                            alert(data.Message);
+                        }
+                    },
+                    error: function(xhr, stat, e) {
+                        alert(e);
+                    }
+                });
+
+            }
+        }
+
+    </script>
+	<!--权限方面-->
+	<script>
+	var g_isloading = false;
+	$(function()
+	{
+			 //权限设置
+		 dataTree=$("#dataTree").ligerTree(
+		 {
+		 	height:50,
+			data:[],
+			isLeaf:function(item)
+			{
+				return (item.type==1)?false:true;
+			},
+			onSelect:onTreeSelect
+		});
+		dataTree.loadData(null,url+"/Index/getform.html",null);
+	});
+	function LoadDataTree()
+	{
+		$.ajax({
+			url:url+"/index/getUserRole/role_id/"+actionCustomerID+".html",			
+			dataType:'json',
+			type:"get",
+			success:function(data)
+			{
+				g_isloading = true;
+				dataTree.cancelSelect(null);
+				$("div").children(".l-checkbox-checked").prop("class","l-box l-checkbox l-checkbox-unchecked");
+				dataTree.selectNode(function(tree)
+				{
+					for(var i in data)
+					{
+						if(data[i]==tree.id)
+						return true;
+					}
+					return false;
+				});
+				g_isloading = false;
+			},
+			error:function(xhr,stat,e){
+			}
+		});	
+	}
+	function get_treeconent()
+	{
+		if(actionCustomerID=="undefined" || actionCustomerID==''){		
+				$.ligerDialog.warn("请选择角色");
+				return false;
+		}
+		var notes = dataTree.getChecked();
+		var text = "";
+		for (var i = 0; i < notes.length; i++)
+		{
+			text += notes[i].data.id + ",";
+		}
+		
+		if(text=='')text='delall';
+		$.ajax({
+			url:url+"/index/upRole",
+			type:"post",
+			data:"role_id="+actionCustomerID+"&from_id="+text,
+			datatype:"json",
+			success:function(data){					
+				if(data.pw_flag==1){$.ligerDialog.error(data.msg);return false;}
+				isuptree=false;	
+				$.ligerDialog.success("保存成功");   
+			},
+				error:function(xhr,stat,e){                
+			}
+							
+		});
+	}
+	function onTreeSelect(note){
+		if (g_isloading) {return;}
+		if(typeof(actionCustomerID)=="undefined" || actionCustomerID=='' || actionCustomerID<1)
+		{
+			$.ligerDialog.warn("请选择角色");
+			return;
+		}
+		if(note.data.type==2)
+		{
+			$.ligerDialog.warn("跳转页面不能设置记录集权限");
+			return;		
+		}
+		actionFromId=note.data.id;
+		$.ajax({
+				url:"/s/power/legalpower.php",
+				type:"post",
+				data:"role_id="+actionCustomerID+"&from_id="+actionFromId,
+				success: function(data)
+				{
+					expression_field=data;
+					expressionComplete=function(obj)
+					{
+						addFunction.hide();
+						if(typeof(actionCustomerID)=="undefined" || actionCustomerID=='' || actionCustomerID<1)
+						{
+							$.ligerDialog.warn("请选择角色");
+							return;
+						}
+						if(typeof(actionFromId)=="undefined" || actionFromId=='' || actionFromId<1)
+						{
+							$.ligerDialog.warn("请选择角色");
+							return;
+						}
+						$.ajax({
+							url:"/s/power/savepower.php",
+							type:"post",
+							data:{"role_id":actionCustomerID,"form_id":actionFromId,"json":JSON.stringify(obj)},
+							success: function(data){								
+								data=eval('('+data+')');
+								if(data.pw_flag==1){$.ligerDialog.error(data.msg);return false;}
+								$.ligerDialog.success(data.Message);
+							}
+						});
+					}
+					addFunction=$.ligerDialog.open({url: '/s/power/expression.html',title: "【"+note.data.text+"】角色权限分配",width:800,height:700});
+				}
+			});
+	
+	}
+	</script>
+
+	<!--权限END-->
+<style>
+#tab1 .l-tab-content{height:98%;}
+#maingrid23 .l-grid-body-inner{height:auto!important;}
+
+#maingrid .l-grid-header-inner{width:auto!important;}
+#maingrid .l-grid table{width:100%}
+#maingrid .l-grid-body-inner{width:auto!important;}
+</style>
+</head>
+<body style="background-color:#E0F0FE;">
+<div class="admin_main_nr_dbox">
+    <div id="addChildNode" style="display: none;line-height:35px;">
+        子节点名字：<input id="addChildName" type="text" /><br />
+        子节点简介：<input id="addChildPresentation" type="text" /><br />
+    </div>
+    <div id="addBrotherNode" style="display: none;line-height:35px;">
+        兄弟节点名字：<input id="addBrotherName" type="text" /><br />
+        兄弟节点简介：<input id="addBrotherPresentation" type="text" /><br />
+    </div>
+    <div id="editNode" style="display: none;line-height:35px;">
+        节点名字：<input id="editNodeName" type="text" /><br />
+        节点简介：<input id="editNodePresentation" type="text" /><br />
+    </div>
+    <div id="layout1">
+        <div position="center" title="角色信息">
+            <div id="maingrid">
+            </div>
+        </div>
+        <div position="right" title="角色成员与权限" style="height:100%">
+			<div id="tab1" style="height:100%">
+				<div title="角色成员">
+					<div id="maingrid23">
+					</div>
+				</div>
+				<div title="角色权限" style="height:96%;overflow-y:scroll">
+					<a style="padding:0px 4px 0px 4px;text-align:center;font-size:14px;position:absolute;width:35px;height:26px;line-height:26px;z-index:10000;right:30px;top:10px;background-color:rgb(18,147,147);color:#FFF;text-decoration:none;" href="#" onclick="get_treeconent();">保存</a>
+					<div id="dataTree" >
+					</div>
+				</div>
+			</div>
+        </div>
+    </div>
+	<!-- start -->
+	<div id="ediPparentNode" style="width:auto;height:auto; margin:3px; display:none; overflow:hidden;">
+		<input name="selectid" type="hidden" value="" id="selectid"/>
+		<div id="editParentNodeTree"></div>
+	 </div>
+	<!-- ebd -->
+</div>
+</body>
+</html>

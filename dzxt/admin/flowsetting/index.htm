@@ -1,0 +1,193 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head runat="server">
+    <title></title>
+    <link rel="Stylesheet" type="text/css" href="js/lib/ligerUI/skins/Aqua/css/ligerui-all.css" />
+    <link href="js/lib/ligerUI/skins/Gray/css/all.css" rel="stylesheet" type="text/css" />
+    <link href="js/lib/ligerUI/skins/ligerui-icons.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script src="js/lib/ligerUI/js/core/base.js" type="text/javascript"></script>
+    <link href="js/lib/ligerUI/skins/ligerui-icons.css" rel="stylesheet" type="text/css" />
+    <script src="js/lib/ligerUI/js/plugins/ligerGrid.js" type="text/javascript"></script>
+    <script src="js/lib/ligerUI/js/plugins/ligerToolBar.js" type="text/javascript"></script>
+    <script src="js/lib/ligerUI/js/plugins/ligerLayout.js" type="text/javascript"></script>
+    <script type="text/javascript" src="js/json2.js"></script>
+    <script type="text/javascript" src="js/GooFlow.js"></script>
+    <script src="js/lib/ligerUI/js/plugins/ligerDrag.js" type="text/javascript"></script>
+    <script src="js/lib/ligerUI/js/plugins/ligerDialog.js" type="text/javascript"></script>
+    <script src="js/lib/ligerUI/js/plugins/ligerResizable.js" type="text/javascript"></script>
+    <script type="text/javascript">
+    //var url="http://localhost/236/wwwroot/index.php?s=/Flow/";
+	//var url="http://fd.zz/index.php?s=/Flow/";
+    var url="/s/tp/wwwroot/index.php?s=/Flow/";
+	var g,$dfDialog;
+            $(function () {
+            BindData();	
+            window['g'].bind('selectRow', function (data) {//给grid添加选中事件,一班用于选中行，显示明细
+            });
+            $("#pageloading").hide();
+        });
+
+  // 绑定数据
+  var $dfDialog;
+        function BindData(where) {
+            if (typeof (where) == "undefined") {
+                where = "";
+            }
+            var Type = "0";
+            $("#radiolist input:radio").each(function () {
+                if (this.checked) {
+                    Type = this.value;
+
+                }
+            });
+
+            // js获取url传参
+            g = $("#maingrid4").ligerGrid({
+                columns:
+                [
+                   { display: 'ID', name: 'id', align: 'center', width: 50 },				   
+                   { display: '流程名称', name: 'flow_name', align: 'center', width: 150 },
+                   { display: '表单', name: 'form_name', align: 'center', width: 150 },
+                   { display: '添加时间', name: 'dateline', type: 'date', format: 'yyyy年MM月dd',  align: 'center', width: 100 },
+                   { display: '流程描述', name: 'flow_desc', align: 'center'}				   
+                 ],
+                url: url+"demo/index/getflow/ok.html",
+                pageSize: 20,
+                toolbar: { items: [
+                    { text: ' 新 增 ', click: add, icon: 'add' },
+					{ text: ' 设计流程 ', click: design, icon: 'edit' },
+                    { text: ' 修 改 ', click: edit, icon: 'edit' },
+                    { text: ' 删 除 ', click: del, icon: 'delete' },
+                    { text: ' 刷 新 ', click: Refresh, icon: 'refresh' }
+					<!--{ text: '发起流程', click: runFlow, icon: 'add' }-->
+                    ]
+                },
+                checkbox: false,height: '99%'
+            });
+        }    
+	function runFlow(){
+		var data = g.getSelected(); //获取grid选中项
+		//var openflow=window.open(url+'run/add/flow_id/'+data.id+'.html');
+        if (data) {	
+				$dfDialog=$.ligerDialog.open({ url:url+'run/add/flow_id/'+data.id+'.html', width: null, width: 1000, height: 600, modal: false, isResize: true, showMax: true });
+		$dfDialog.max();
+		}else {
+                var tip = $.ligerDialog.tip({ title: '提示信息', content: '请选中行后，单击删除' });
+                setTimeout(function () {
+                    tip.close();
+                }, 2000);
+            }
+	}   
+     // 刷新  
+    function Refresh() {
+        var where = $("#txtWhere").val();
+        
+        BindData(where);
+    }
+  
+
+ 
+    function add() {
+        $dfDialog = $.ligerDialog.open({ url: url+'demo/add.html', width: null, width: 1000, height: 600, modal: false, isResize: true, showMax: true });
+		$dfDialog.max();
+    }
+    
+    function design() {
+            var data = g.getSelected(); //获取grid选中项
+            if (data) {				
+				var eurl=url+"flowdesign/index/flow_id/"+data.id+".html";
+               $dfDialog = $.ligerDialog.open({ url: eurl+'?r='+ Math.random(), width: null, width:1000, height: 500, modal: false, isResize: true, showMax: true });
+			   $dfDialog.max();
+
+            }
+            else {
+                var tip = $.ligerDialog.tip({ title: '提示信息', content: '请选中行后，单击删除' });
+                setTimeout(function () {
+                    tip.close();
+                }, 2000);
+            }
+
+
+    } 
+	function edit() {
+            var data = g.getSelected(); //获取grid选中项
+            if (data) {
+				var eurl=url+"demo/edit/flow_id/"+data.id+".html";
+               $dfDialog = $.ligerDialog.open({ url: eurl+'?r='+ Math.random(), width: null, width:1000, height: 500, modal: false, isResize: true, showMax: true });
+			   $dfDialog.max();
+
+            }
+            else {
+                var tip = $.ligerDialog.tip({ title: '提示信息', content: '请选中行后，单击删除' });
+                setTimeout(function () {
+                    tip.close();
+                }, 2000);
+            }
+
+    } 
+    
+        //  删除数据
+    function del() {
+            var data = window['g'].getSelected(); //获取grid选中项
+            if (data) {
+                $.ligerDialog.confirm('确认删除数据吗？', function (yes) {
+                    if (yes) {
+                        $.ajax({
+                            type: "POST",
+                            url: url+"demo/del/flow_id/"+data.id+".html",
+                            contentType: "application/json: charset=utf-8",
+                            dataType: "text",
+                            success: function (basdict) {								
+                                var data=JSON.parse(basdict);								
+								if(data.pw_flag==1){$.ligerDialog.success(data.msg);return false;}
+                                if (data.flag>0) {
+                                 Refresh();
+                                 $.ligerDialog.error('删除成功');
+                                }
+                                else {
+									Refresh();
+                                    $.ligerDialog.error(data.msg, "提示");
+                                }
+                            },
+                            error: function (msg) {
+                                //                alert("添加错误");
+                            }
+                        });
+                    }
+                });
+            }
+            else {
+                var tip = $.ligerDialog.tip({ title: '提示信息', content: '请选中行后，单击删除' });
+                setTimeout(function () {
+                    tip.close();
+                }, 2000);
+            }
+
+        }
+        
+    function f_open4() {
+        $.ligerDialog.open({ url: 'Flow.html', width: null, width:900, height: 650, modal: false, isResize: true, showMax: true });
+    }
+
+    function addNewRow() {
+        window.location.href = "Flow.html";
+    }
+    </script>
+    <style type="text/css">
+.l-case-title {
+	font-weight: bold;
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+</style>
+</head>
+<body style="background-color:#E0F0FE;overflow: hidden;">
+<div class="admin_main_nr_dbox">
+<div id="maingrid4" style="margin: 0; padding: 0"></div>
+<div style="display: none;">
+  <!-- g data total ttt -->
+</div>
+</div>
+</body>
+</html>

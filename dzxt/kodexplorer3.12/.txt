@@ -1,0 +1,29 @@
+Successful!
+
+您可以用如下账号登陆
+管理员：admin/admin(请务必修改密码)
+普通用户：demo/demo
+游客用户：guest/guest
+
+
+点击
+检查是否有该用户
+ 否
+  添加
+  设置他的所在目录
+
+登录该用户
+用户名就用文件夹的名吗？
+?desktop
+?explorer
+?member/add&name=ddd&password=ddd&role=guest|root|default
+?member/del&name=ddd
+?user/loginSubmit&name=admin&check_code=undefined&password=admin&rember_password=0
+?member/get
+
+?explorer/pathDelete
+<script src="/resource/js/jQuery/jquery-1.11.1.min.js"></script>
+static/js/lib/ztree/style/img/loading.gif
+
+http://www.oschina.net/p/navphp
+

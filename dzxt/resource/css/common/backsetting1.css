@@ -1,0 +1,5 @@
+/* CSS Document */
+
+#leftmenu{border:solid #add9c0;border-width:1px;}
+#leftmenu ul{list-style: none;}
+#leftmenu a{width:100%;text-align:center;text-decoration: none;padding-bottom: 5px;padding-top: 5px;font-size: 15px;}

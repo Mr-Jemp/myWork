@@ -1,0 +1,872 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width,minimum-scale=1,maximum-scale=1" />
+    <title>表单设计器</title>
+    <link href="/resource/js/jQuery/ui/thems/base/jquery.ui.all.css" rel="stylesheet" type="text/css" />
+    <link href="/resource/part/ligerlib/ligerUI/skins/Aqua/css/ligerui-all.css" rel="stylesheet" type="text/css" />
+    <link href="/resource/css/htmlcss//EditPageLightUi.css" rel="stylesheet" type="text/css" />
+    <link href="/resource/css/htmlcss//icocss.css" rel="stylesheet" type="text/css" />
+
+    <script src="/resource/js/jQuery/jquery-1.9.1.js" type="text/javascript"></script>
+
+    <script type="text/javascript" src="/resource/js/jQuery/ui/jquery.ui.core.js"></script>
+
+    <script type="text/javascript" src="/resource/js/jQuery/ui/jquery.ui.widget.js"></script>
+
+    <script type="text/javascript" src="/resource/js/jQuery/ui/jquery.ui.mouse.js"></script>
+
+    <script type="text/javascript" src="/resource/js/jQuery/ui/jquery.ui.position.js"></script>
+
+    <script type="text/javascript" src="/resource/js/jQuery/ui/jquery.ui.accordion.js"></script>
+
+    <script type="text/javascript" src="/resource/js/jQuery/ui/jquery.ui.tabs.js"></script>
+
+    <script type="text/javascript" src="/resource/js/jQuery/ui/jquery.ui.dialog.js"></script>
+
+    <script type="text/javascript" src="/resource/js/jQuery/ui/jquery.ui.resizable.js"></script>
+
+    <script type="text/javascript" src="/resource/js/jQuery/ui/jquery.ui.draggable.js"></script>
+
+    <script src="/resource/js/jQuery/ui/jquery.ui.sortable.js" type="text/javascript"></script>
+
+    <script type="text/javascript" src="/resource/js/jQuery/ui/jquery.ui.droppable.js"></script>
+
+    <script type="text/javascript" src="/resource/part/ligerlib/ligerUI/js/ligerui.all.js"></script>
+
+    <script type="text/javascript" src="/resource/part/ligerlib/ligerUI/js/plugins/ligerForm.js"></script>
+
+    <script type="text/javascript" src="/resource/part/ligerlib/json2.js"></script>
+
+    <script src="/resource/js/common/validate.js" type="text/javascript"></script>
+
+    <script src="/resource/js/common/simpleOp.js" type="text/javascript"></script>
+
+    <script src="/resource/js/common/library.js" type="text/javascript"></script>
+
+    <script src="/admin/pageEdit/HBSJsBaseProperties.js" type="text/javascript"></script>
+
+    <script src="/admin/pageEdit/HBSJsCssProperties.js" type="text/javascript"></script>
+
+    <script type="text/javascript" src="/admin/pageEdit/EditMobilePageLightUi.js"></script>
+
+    <script src="/admin/pageEdit/HBSJsMobilePage.js" type="text/javascript"></script>
+
+    <script src="/admin/pageEdit/HBSJsUl.js" type="text/javascript"></script>
+
+    <script src="/admin/pageEdit/HBSJsLi.js" type="text/javascript"></script>
+
+    <script src="/admin/pageEdit/HBSJsLabel.js" type="text/javascript"></script>
+
+    <script src="/admin/pageEdit/HBSJsTextbox.js" type="text/javascript"></script>
+
+    <script src="/admin/pageEdit/HBSJsTableColumn.js" type="text/javascript"></script>
+
+    <script src="/admin/pageEdit/HBSJsSelect.js" type="text/javascript"></script>
+
+    <script src="/admin/pageEdit/HBSJsRadio.js" type="text/javascript"></script>
+
+    <script src="/admin/pageEdit/HBSJsListTable.js" type="text/javascript"></script>
+
+    <script src="/admin/pageEdit/HBSJsImage.js" type="text/javascript"></script>
+
+    <script src="/admin/pageEdit/HBSJsIframe.js" type="text/javascript"></script>
+
+    <script src="/admin/pageEdit/HBSJsDate.js" type="text/javascript"></script>
+
+    <script src="/admin/pageEdit/HBSJsCheckbox.js" type="text/javascript"></script>
+
+    <script src="/admin/pageEdit/HBSJsInnerPageLogicDiv.js" type="text/javascript"></script>
+
+    <script src="/admin/pageEdit/HBSJsInsertMethodDiv.js" type="text/javascript"></script>
+
+    <script src="/admin/pageEdit/HBSWheresDiv.js" type="text/javascript"></script>
+
+    <script src="/resource/js/common/HBSJsExpress.js" type="text/javascript"></script>
+
+    <script src="/admin/pageEdit/HBSJsApeakTree.js" type="text/javascript"></script>
+
+    <script src="/admin/pageEdit/HBSJsPlaneTree.js" type="text/javascript"></script>
+
+    <script src="/admin/pageEdit/HBSJsFroms.js" type="text/javascript"></script>
+
+    <script src="/admin/pageEdit/HBSJsTree.js" type="text/javascript"></script>
+
+    <script src="/resource/js/flot/excanvas.js" type="text/javascript"></script>
+
+    <script src="/resource/js/flot/jquery.flot.js" type="text/javascript"></script>
+
+    <script src="/resource/js/flot/jquery.flot.pie.js" type="text/javascript"></script>
+
+    <script src="/admin/pageEdit/HBSJsFlot.js" type="text/javascript"></script>
+
+    <script src="/admin/pageEdit/HBSJsReply.js" type="text/javascript"></script>
+
+    <script src="/admin/pageEdit/HBSJsOrderNo.js" type="text/javascript"></script>
+
+    <script src="/admin/pageEdit/HBSJsMoney.js" type="text/javascript"></script>
+
+    <script src="/admin/pageEdit/HBSJsModelControl.js" type="text/javascript"></script>
+
+    <script src="/admin/pageEdit/HBSJsFileListing.js" type="text/javascript"></script>
+
+    <script src="/admin/pageEdit/HBSJsUploadFile.js" type="text/javascript"></script>
+
+    <script src="/resource/js/treejs/HBSTree.js" type="text/javascript"></script>
+
+    <script src="/admin/pageEdit/HBSJsDefaultValueDiv.js" type="text/javascript"></script>
+
+    <script src="/m/jquery.mobile-1.4.5/jquery.mobile-1.4.5.min.js" type="text/javascript"
+        id="jqmobile"></script>
+
+    <script src="/admin/pageEdit/HBSJsReturn.js" type="text/javascript"></script>
+
+    <script src="/admin/pageEdit/HBSJsHeader.js" type="text/javascript"></script>
+
+    <script src="/admin/pageEdit/HBSJsButton.js" type="text/javascript"></script>
+
+    <script src="/admin/pageEdit/HBSJsList3T.js" type="text/javascript"></script>
+
+    <script src="/admin/pageEdit/HBSJsMobileImageList.js" type="text/javascript"></script>
+    <script src="/admin/pageEdit/HBSJsMobileDate.js" type="text/javascript"></script>
+    <script src="/admin/pageEdit/HBSJsMobileImage.js" type="text/javascript"></script>
+    <link href="/m/jquery.mobile-1.4.5/jquery.mobile-1.4.5.min.css" rel="stylesheet"
+        type="text/css" />
+    <link href="/resource/css/htmlcss//style.css" rel="stylesheet" />
+    <link href="/resource/css/htmlcss//icocss.css" rel="stylesheet" type="text/css" />
+    <style type="text/css">
+        .middle input
+        {
+            display: block;
+            width: 30px;
+            margin: 2px;
+        }
+        .l-layout-left
+        {
+            padding-bottom: 60px;
+        }
+        .l-layout-center
+        {
+            padding-bottom: 60px;
+        }
+        .l-layout-right
+        {
+            padding-bottom: 60px;
+        }
+        #designPanel
+        {
+            height: 100% !important;
+        }
+        #designDiv li
+        {
+            padding: 0;
+            line-height: 0px;
+            width: 100%;
+        }
+        body
+        {
+            margin: 0px;
+        }
+    </style>
+</head>
+<body style="padding: 0px;">
+    <div id="layout1" style="width: 99.2%; margin: 0 auto; margin-top: 4px; font-size: 12px;
+        margin-bottom: 8px;">
+        <div position="left" id="frameleft" title="控件选项">
+            <div id="controlToolbox">
+                <label style="margin-left: 10px; width: auto; margin-top: 10px;" id='header'>
+                    头部</label><br />
+                <label style="margin-left: 10px; width: auto;" id='button'>
+                    按扭</label><br />
+                <label style="margin-left: 10px; width: auto;" id='list3t'>
+                    列表3T</label><br />
+                <label style="margin-left: 10px; width: auto;" id='mobiledate'>
+                    日期时间</label><br />
+                <label style="margin-left: 10px; width: auto;" id='mobileimage'>
+                    图片</label><br />
+                <label style="margin-left: 10px; width: auto;" id='return'>
+                    返回上一页</label><br />
+                <label style="margin-left: 10px; width: auto;" id='imageList'>
+                    图片列表</label><br />
+                <label style="margin-left: 10px; width: auto;" id='details'>
+                    详情控件</label><br />
+                <label style="margin-left: 10px; width: auto;" id='label'>
+                    标签</label><br />
+                <label style="margin-left: 10px; width: auto;" id='textbox'>
+                    文本框</label><br />
+                <label style="margin-left: 10px; width: auto;" id='checkbox'>
+                    复选框</label><br />
+                <label style="margin-left: 10px; width: auto;" id='radio'>
+                    单选按钮</label><br />
+                <label style="margin-left: 10px; width: auto;" id='select'>
+                    列表框</label><br />
+                <label style="margin-left: 10px; width: auto;" id='image'>
+                    图片框</label><br />
+                <label style="margin-left: 10px; width: auto;" id='date'>
+                    日期控件</label><br />
+                <label style="margin-left: 10px; width: auto;" id='listTable'>
+                    列表子表</label><br />
+                <label style="margin-left: 10px; width: auto;" id='tree'>
+                    树型</label><br />
+                <label style="margin-left: 10px; width: auto;" id='uploadFile'>
+                    上传文件</label><br />
+                <label style="margin-left: 10px; width: auto;" id='fileListing'>
+                    文件列表</label><br />
+                <label style="margin-left: 10px; width: auto;" id='iframe'>
+                    页面容器</label><br />
+                <label style="margin-left: 10px; width: auto;" id='orderNo'>
+                    单号生成器</label><br />
+                <label style="margin-left: 10px; width: auto;" id='money'>
+                    金额转换</label><br />
+                <label style="margin-left: 10px; width: auto;" id='modelControl'>
+                    模版排版</label><br />
+            </div>
+        </div>
+        <div position="center" title="设计表单" id="designPanel">
+            <div id="btnSelectFields" style="margin: 5px; float: left;">
+            </div>
+            <div id="btnSaveToFile" style="margin: 5px; float: left; width: 100%; border-bottom: 1px solid black;">
+                <input type="button" id="saveForm" value="保存" />
+                <input type="button" id="previewBt" value="预览" />
+            </div>
+            <div id="formDesign" style="clear: both; width: 480px; height: 480px; overflow: hidden;
+                overflow-y: scroll; margin: 0 auto; margin-top: 5px; border: 8px solid #000000;
+                border-radius: 5px;">
+                <div data-role="page">
+                    <div id="designDiv">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div position="right" id="propertyDiv" title="属性栏" style="width: 99.2%; margin: 0 auto;
+            margin-top: 4px; font-size: 12px;">
+            <ul style="width: 100%;">
+                <li style="float: left;"><a style="" href="#basePropertiesDiv">逻辑属性</a></li>
+                <li style="float: left;"><a style="" href="#cssPropertiesDiv">样式属性</a></li>
+            </ul>
+            <div id="basePropertiesDiv" style="overflow: auto;" style="width: 99.2%; margin: 0 auto;
+                margin-top: 4px; font-size: 12px;">
+                <table id="basePropertiesTable">
+                    <thead>
+                    </thead>
+                    <tbody>
+                        <tr class="page label text checkbox radio select image date listtable column statistics button header list3t mobileimage imageList details">
+                            <td style="border: 1px solid black; width: 40%; text-align: left; color: Black;">
+                                名称
+                            </td>
+                            <td style="border: 1px solid black; width: 60%; text-align: left;">
+                                <input id="nameInput" type="text" style="width: 95%;" />
+                            </td>
+                        </tr>
+                        <tr class="page">
+                            <td style="border: 1px solid black; width: 40%; text-align: left; color: Black;">
+                                页面输入参数
+                            </td>
+                            <td style="border: 1px solid black; width: 60%; text-align: left;">
+                                <input id="inputParameterInput" type="text" style="width: 95%;" />
+                            </td>
+                        </tr>
+                        <tr class="page">
+                            <td style="border: 1px solid black; width: 40%; text-align: left; color: Black;">
+                                页面输出参数
+                            </td>
+                            <td style="border: 1px solid black; width: 60%; text-align: left;">
+                                <input id="outputParameterInput" type="text" style="width: 95%;" />
+                            </td>
+                        </tr>
+                        <tr class="list3t">
+                            <td style="border: 1px solid black; width: 40%; text-align: left; color: Black;">
+                                控件静态参数
+                            </td>
+                            <td style="border: 1px solid black; width: 60%; text-align: left;">
+                                <input id="staticParameterInput" type="text" style="width: 95%;" />
+                            </td>
+                        </tr>
+                        <tr class="imageList">
+                            <td style="border: 1px solid black; width: 40%; text-align: left; color: Black;">
+                                几列
+                            </td>
+                            <td style="border: 1px solid black; width: 60%; text-align: left;">
+                                <input id="lineNumInput" type="text" style="width: 95%;" />
+                            </td>
+                        </tr>
+                        <tr class="imageList">
+                            <td style="border: 1px solid black; width: 40%; text-align: left; color: Black;">
+                                视图src
+                            </td>
+                            <td style="border: 1px solid black; width: 60%; text-align: left;">
+                                <input id="lineNumSrcInput" type="text" style="width: 95%;" />
+                            </td>
+                        </tr>
+                        <tr class="list3t">
+                            <td style="border: 1px solid black; width: 40%; text-align: left; color: Black;">
+                                选项设定
+                            </td>
+                            <td style="border: 1px solid black; width: 60%; text-align: left;">
+                                <input id="List3TOption" type="text" style="width: 95%;" />
+                            </td>
+                        </tr>
+                        <tr class="mobileimage">
+                            <td style="border: 1px solid black; width: 40%; text-align: left; color: Black;">
+                                宽度
+                            </td>
+                            <td style="border: 1px solid black; width: 60%; text-align: left;">
+                                <input id="basewidthInput" type="text" style="width: 95%;" />
+                            </td>
+                        </tr>
+                        <tr class="mobileimage">
+                            <td style="border: 1px solid black; width: 40%; text-align: left; color: Black;">
+                                高度
+                            </td>
+                            <td style="border: 1px solid black; width: 60%; text-align: left;">
+                                <input id="baseheightInput" type="text" style="width: 95%;" />
+                            </td>
+                        </tr>
+                        <tr class="label text checkbox radio select image date listtable column statistics imageList">
+                            <td style="border: 1px solid black; width: 40%; text-align: left; color: Black;">
+                                控件类型
+                            </td>
+                            <td style="border: 1px solid black; width: 60%; text-align: left;">
+                                <input id='controlTypeInput' disabled="disabled" type="text" style="width: 95%;" />
+                            </td>
+                        </tr>
+                        <tr class="page">
+                            <td style="border: 1px solid black; width: 40%; text-align: left; color: Black;">
+                                页面类型
+                            </td>
+                            <td style="border: 1px solid black; width: 60%; text-align: left;">
+                                <input id='pageTypeInput' disabled="disabled" type="text" style="width: 95%;" />
+                            </td>
+                        </tr>
+                        <tr class="text date column statistics readonlyClass">
+                            <td style="border: 1px solid black; width: 40%; text-align: left; color: Black;">
+                                只读属性
+                            </td>
+                            <td style="border: 1px solid black; width: 60%; text-align: left;">
+                                <span></span>
+                                <input id='readonly' value='readonly' type='radio' name='readonlyRdo' />只读&nbsp;&nbsp;<input
+                                    id='readAndwrite' value='readAndwrite' type='radio' name='readonlyRdo' />读写</span>
+                            </td>
+                        </tr>
+                        <tr class="text checkbox radio select image date column statistics disabledClass">
+                            <td style="border: 1px solid black; width: 40%; text-align: left; color: Black;">
+                                禁止使用
+                            </td>
+                            <td style="border: 1px solid black; width: 60%; text-align: left;">
+                                <input id='disabled' value='disabled' type='radio' name='disabledRdo' />是&nbsp;&nbsp;<input
+                                    id='abled' value='abled' type='radio' name='disabledRdo' />否
+                            </td>
+                        </tr>
+                        <tr class="text">
+                            <td style="border: 1px solid black; width: 40%; text-align: left; color: Black;">
+                                数据类型
+                            </td>
+                            <td style="border: 1px solid black; width: 60%; text-align: left;">
+                                <input id="dataTypeInput" type="text" style="width: 95%;" />
+                            </td>
+                        </tr>
+                        <tr class="date">
+                            <td style="border: 1px solid black; width: 40%; text-align: left; color: Black;">
+                                日期格式
+                            </td>
+                            <td style="border: 1px solid black; width: 60%; text-align: left;">
+                                <input id="dateFormatInput" type="text" style="width: 95%;" />
+                            </td>
+                        </tr>
+                        <tr class="text">
+                            <td style="border: 1px solid black; width: 40%; text-align: left; color: Black;">
+                                数据长度
+                            </td>
+                            <td style="border: 1px solid black; width: 60%; text-align: left;">
+                                <input id="dataLengthInput" type="text" style="width: 95%;" />
+                            </td>
+                        </tr>
+                        <tr class="text image date listtable column isFieldClass">
+                            <td style="border: 1px solid black; width: 40%; text-align: left; color: Black;">
+                                是字段控件
+                            </td>
+                            <td style="border: 1px solid black; width: 60%; text-align: left;">
+                                <input id='isField' value='isField' type='radio' name='isFieldRdo' />是&nbsp;&nbsp;<input
+                                    id='notIs' value='notIs' type='radio' name='isFieldRdo' />不是
+                            </td>
+                        </tr>
+                        <tr class="text select column">
+                            <td style="border: 1px solid black; width: 40%; text-align: left; color: Black;">
+                                取值字段
+                            </td>
+                            <td style="border: 1px solid black; width: 60%; text-align: left;">
+                                <input id="valueFieldInput" type="text" style="width: 95%;" />
+                            </td>
+                        </tr>
+                        <tr class="text select column">
+                            <td style="border: 1px solid black; width: 40%; text-align: left; color: Black;">
+                                文本字段
+                            </td>
+                            <td style="border: 1px solid black; width: 60%; text-align: left;">
+                                <input id="textFieldInput" type="text" style="width: 95%;" />
+                            </td>
+                        </tr>
+                        <tr class="list3t details">
+                            <td style="border: 1px solid black; width: 40%; text-align: left; color: Black;">
+                                第三字段
+                            </td>
+                            <td style="border: 1px solid black; width: 60%; text-align: left;">
+                                <input id="threeFieldInput" type="text" style="width: 95%;" />
+                            </td>
+                        </tr>
+                        <tr class="list3t details">
+                            <td style="border: 1px solid black; width: 40%; text-align: left; color: Black;">
+                                次字段
+                            </td>
+                            <td style="border: 1px solid black; width: 60%; text-align: left;">
+                                <input id="twoFieldInput" type="text" style="width: 95%;" />
+                            </td>
+                        </tr>
+                        <tr class="list3t details">
+                            <td style="border: 1px solid black; width: 40%; text-align: left; color: Black;">
+                                首字段
+                            </td>
+                            <td style="border: 1px solid black; width: 60%; text-align: left;">
+                                <input id="oneFieldInput" type="text" style="width: 95%;" />
+                            </td>
+                        </tr>
+                        <tr class="list3t">
+                            <td style="border: 1px solid black; width: 40%; text-align: left; color: Black;">
+                                图片链接
+                            </td>
+                            <td style="border: 1px solid black; width: 60%; text-align: left;">
+                                <input id="listImgSrcInput" type="text" style="width: 95%;" />
+                            </td>
+                        </tr>
+                        <tr class="select getOptionType">
+                            <td style="border: 1px solid black; width: 40%; text-align: left; color: Black;">
+                                选项获取
+                            </td>
+                            <td style="border: 1px solid black; width: 60%; text-align: left;">
+                                <input id='static' type='radio' value='static' name='getOptionRdo' />静态&nbsp;&nbsp;<input
+                                    id='dynamic' type='radio' value='dynamic' name='getOptionRdo' />动态
+                            </td>
+                        </tr>
+                        <tr class="select checkbox radio">
+                            <td style="border: 1px solid black; width: 40%; text-align: left; color: Black;">
+                                选项设定
+                            </td>
+                            <td style="border: 1px solid black; width: 60%; text-align: left;">
+                                <input id="optionInput" type="text" style="width: 95%;" />
+                            </td>
+                        </tr>
+                        <tr class="text passwordClass">
+                            <td style="border: 1px solid black; width: 40%; text-align: left; color: Black;">
+                                密码文本框
+                            </td>
+                            <td style="border: 1px solid black; width: 60%; text-align: left;">
+                                <input id='password' type='radio' value='password' name='passwordRdo' />是&nbsp;&nbsp;<input
+                                    id='notPassword' type='radio' value='notPassword' name='passwordRdo' />不是
+                            </td>
+                        </tr>
+                        <tr class="text_li">
+                            <td style="border: 1px solid black; width: 40%; text-align: left; color: Black;">
+                                节点值
+                            </td>
+                            <td style="border: 1px solid black; width: 60%; text-align: left;">
+                                <input id="liTextInput" type="text" style="width: 95%;" />
+                            </td>
+                        </tr>
+                        <tr class="text_li">
+                            <td style="border: 1px solid black; width: 40%; text-align: left; color: Black;">
+                                网页打开方式
+                            </td>
+                            <td style="border: 1px solid black; width: 60%; text-align: left;">
+                                <input id="linkEmbedInput" type="text" style="width: 95%;" />
+                            </td>
+                        </tr>
+                        <tr class="text_li button">
+                            <td style="border: 1px solid black; width: 40%; text-align: left; color: Black;">
+                                网页链接
+                            </td>
+                            <td style="border: 1px solid black; width: 60%; text-align: left;">
+                                <input id="liHrefInput" type="text" style="width: 95%;" />
+                            </td>
+                        </tr>
+
+                        <tr class="image mobileimage button">
+                            <td style="border: 1px solid black; width: 40%; text-align: left; color: Black;">
+                                链接地址
+                            </td>
+                            <td style="border: 1px solid black; width: 60%; text-align: left;">
+                                <input id="imageSrcInput" type="text" style="width: 95%;" />
+                            </td>
+                        </tr>
+                        <tr class="treeSrcInput">
+                            <td style="border: 1px solid black; width: 40%; text-align: left; color: Black;">
+                                链接地址
+                            </td>
+                            <td style="border: 1px solid black; width: 60%; text-align: left;">
+                                <input id="srcInput" type="text" style="width: 95%;" />
+                            </td>
+                        </tr>
+                        <tr class="uploadFileInput">
+                            <td style="border: 1px solid black; width: 40%; text-align: left; color: Black;">
+                                上传文件的作用区
+                            </td>
+                            <td style="border: 1px solid black; width: 60%; text-align: left;">
+                                <input id="uploadFileInput" type="text" style="width: 95%;" />
+                            </td>
+                        </tr>
+                        <tr class="treeSrcInput">
+                            <td style="border: 1px solid black; width: 40%; text-align: left; color: Black;">
+                                链接文本
+                            </td>
+                            <td style="border: 1px solid black; width: 60%; text-align: left;">
+                                <input id="TreeSrcInput" type="text" style="width: 95%;" />
+                            </td>
+                        </tr>
+                        <tr class="srcOpen">
+                            <td style="border: 1px solid black; width: 40%; text-align: left; color: Black;">
+                                链接打开方式
+                            </td>
+                            <td style="border: 1px solid black; width: 60%; text-align: left;">
+                                <input id="srcOpenInput" type="text" style="width: 95%;" />
+                            </td>
+                        </tr>
+                        <tr class="treeSrcInput">
+                            <td style="border: 1px solid black; width: 40%; text-align: left; color: Black;">
+                                绑定树型表
+                            </td>
+                            <td style="border: 1px solid black; width: 60%; text-align: left;">
+                                <input id="treeTbaleInput" type="text" style="width: 95%;" />
+                            </td>
+                        </tr>
+                        <tr class="treeSrcInput">
+                            <td style="border: 1px solid black; width: 40%; text-align: left; color: Black;">
+                                创建树型表
+                            </td>
+                            <td style="border: 1px solid black; width: 40%; text-align: left; color: Black;">
+                                <font id="treeTbaleCreateInput" color="#00FF33" style="width: 95%; cursor: pointer;">
+                                    当前可以创建树型数据表</font>
+                            </td>
+                        </tr>
+                        <tr class="page">
+                            <td style="border: 1px solid black; width: 40%; text-align: left; color: Black;">
+                                标识字段
+                            </td>
+                            <td style="border: 1px solid black; width: 60%; text-align: left;">
+                                <input id="signFieldInput" type="text" value="id" style="width: 95%;" />
+                            </td>
+                        </tr>
+                        <tr class="text">
+                            <td style="border: 1px solid black; width: 40%; text-align: left; color: Black;">
+                                简单验证规则
+                            </td>
+                            <td style="border: 1px solid black; width: 60%; text-align: left;">
+                                <input id="regexInput" type="text" style="width: 95%;" />
+                            </td>
+                        </tr>
+                        <tr class="statistics">
+                            <td style="border: 1px solid black; width: 40%; text-align: left; color: Black;">
+                                统计字段
+                            </td>
+                            <td style="border: 1px solid black; width: 60%; text-align: left;">
+                                <input id="statisticsFieldInput" type="text" style="width: 95%;" />
+                            </td>
+                        </tr>
+                        <tr class="statistics">
+                            <td style="border: 1px solid black; width: 40%; text-align: left; color: Black;">
+                                统计方法
+                            </td>
+                            <td style="border: 1px solid black; width: 60%; text-align: left;">
+                                <input id="statisticsMethodInput" type="text" style="width: 95%;" />
+                            </td>
+                        </tr>
+                        <tr class="listtable importData">
+                            <td style="border: 1px solid black; width: 40%; text-align: left; color: Black;">
+                                导入数据
+                            </td>
+                            <td style="border: 1px solid black; width: 60%; text-align: left;">
+                                <input id='importData' type='radio' name='importRdo' />是&nbsp;&nbsp;<input id='notImport'
+                                    type='radio' name='importRdo' />不是
+                            </td>
+                        </tr>
+                        <tr class="list3t getDataType imageList details">
+                            <td style="border: 1px solid black; width: 40%; text-align: left; color: Black;">
+                                数据获取方式
+                            </td>
+                            <td style="border: 1px solid black; width: 60%; text-align: left;">
+                                <input value="static" type='radio' name='getDataTypeRdo' />静态&nbsp;&nbsp;<input type='radio'
+                                    value="dynamic" name='getDataTypeRdo' />动态
+                            </td>
+                        </tr>
+                        <tr class="list3t">
+                            <td style="border: 1px solid black; width: 40%; text-align: left; color: Black;">
+                                链接地址
+                            </td>
+                            <td style="border: 1px solid black; width: 60%; text-align: left;">
+                                <input value="" id="linkUrlInput" type="text" style="width: 95%;" />
+                            </td>
+                        </tr>
+                        <tr class="list3t">
+                            <td style="border: 1px solid black; width: 40%; text-align: left; color: Black;">
+                                静态链接地址
+                            </td>
+                            <td style="border: 1px solid black; width: 60%; text-align: left;">
+                                <input value="" id="staticUrlInput" type="text" style="width: 95%;" />
+                            </td>
+                        </tr>
+                        <tr class="column">
+                            <td style="border: 1px solid black; width: 40%; text-align: left; color: Black;">
+                                从视图取值
+                            </td>
+                            <td style="border: 1px solid black; width: 60%; text-align: left;">
+                                <input id="importViewFieldInput" type="text" style="width: 95%;" />
+                            </td>
+                        </tr>
+                        <tr class="column showColumnHead">
+                            <td style="border: 1px solid black; width: 40%; text-align: left; color: Black;">
+                                显示列头
+                            </td>
+                            <td style="border: 1px solid black; width: 60%; text-align: left;">
+                                <input id='showHead' type='radio' value='showHead' name='showColumnHeadRdo' />是&nbsp;&nbsp;<input
+                                    id='hideHead' type='radio' value='hideHead' name='showColumnHeadRdo' />不是
+                            </td>
+                        </tr>
+                        <tr class="text select listtable list3t imageList details">
+                            <td style="border: 1px solid black; width: 40%; text-align: left; color: Black;">
+                                数据视图
+                            </td>
+                            <td style="border: 1px solid black; width: 60%; text-align: left;">
+                                <input id="datasourceInput" type="text" style="width: 68%;" /><span style="width: 30%;">视图</span>
+                            </td>
+                        </tr>
+                        <tr class="column">
+                            <td style="border: 1px solid black; width: 40%; text-align: left; color: Black;">
+                                控件类型
+                            </td>
+                            <td style="border: 1px solid black; width: 60%; text-align: left;">
+                                <input id="domTypeInput" type="text" style="width: 95%;" />
+                            </td>
+                        </tr>
+                        <tr class="page">
+                            <td style="border: 1px solid black; width: 40%; text-align: left; color: Black;">
+                                页内逻辑
+                            </td>
+                            <td style="border: 1px solid black; width: 60%; text-align: left;">
+                                <input id="innerPageLogicInput" type="text" style="width: 95%;" />
+                            </td>
+                        </tr>
+                        <tr class="listtable">
+                            <td style="border: 1px solid black; width: 40%; text-align: left; color: Black;">
+                                表格的列
+                            </td>
+                            <td style="border: 1px solid black; width: 60%; text-align: left;">
+                                <input id="columnsInput" type="text" style="width: 95%;" />
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div id="cssPropertiesDiv" style="width: 99.2%; margin: 0 auto; margin-top: 4px;
+                font-size: 12px;">
+                <table id="cssPropertiesTable" class="table table-bordered">
+                    <thead>
+                    </thead>
+                    <tbody>
+                        <tr class="text select image date listtable statistics page">
+                            <td style="border: 1px solid black; width: 40%; text-align: left; color: Black;">
+                                宽度
+                            </td>
+                            <td style="border: 1px solid black; width: 60%; text-align: left;">
+                                <input type="text" id="widthInput" style="width: 95%;" />
+                            </td>
+                        </tr>
+                        <tr class="image listtable page">
+                            <td style="border: 1px solid black; width: 40%; text-align: left; color: Black;">
+                                高度
+                            </td>
+                            <td style="border: 1px solid black; width: 60%; text-align: left;">
+                                <input type="text" id="heightInput" style="width: 95%;" />
+                            </td>
+                        </tr>
+                        <tr class="label text checkbox radio select date listtable statistics column">
+                            <td style="border: 1px solid black; width: 40%; text-align: left; color: Black;">
+                                字体大小
+                            </td>
+                            <td style="border: 1px solid black; width: 60%; text-align: left;">
+                                <input type="text" id="FontSizeInput" style="width: 95%;" />
+                            </td>
+                        </tr>
+                        <tr class="label text checkbox radio select date listtable statistics column">
+                            <td style="border: 1px solid black; text-align: left; text-align: left;">
+                                字体粗细
+                            </td>
+                            <td style="border: 1px solid black; width: 60%; text-align: left;">
+                                <input type="text" id="FontWeightInput" style="width: 95%;" />
+                            </td>
+                        </tr>
+                        <tr class="column blockDisplay">
+                            <td style="border: 1px solid black; width: 40%; text-align: left; color: Black;">
+                                可视
+                            </td>
+                            <td style="border: 1px solid black; width: 60%; text-align: left;">
+                                <input id='blockDisplay' type='radio' name='displayRdo' />可视&nbsp;&nbsp;<input id='noneDisplay'
+                                    type='radio' name='displayRdo' />不可
+                            </td>
+                        </tr>
+                        <tr class="label text checkbox radio select date listtable statistics column">
+                            <td style="border: 1px solid black; width: 40%; text-align: left; color: Black;">
+                                前景色
+                            </td>
+                            <td style="border: 1px solid black; width: 60%; text-align: left;">
+                                <input type="text" id="colorInput" style="width: 95%;" />
+                            </td>
+                        </tr>
+                        <tr class="label text checkbox radio select date listtable statistics column page">
+                            <td style="border: 1px solid black; width: 40%; text-align: left; color: Black;">
+                                背景色
+                            </td>
+                            <td style="border: 1px solid black; width: 60%; text-align: left;">
+                                <input type="text" id="backgroundColorInput" style="width: 95%;" />
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <div id="popMobilePropertyDiv">
+        <div id="lineNumDiv" style="display: none; width: 180px; height: 150px;">
+            <ul id="lineNumUl" style="font-size: 14px;">
+                <li>
+                    <input type="radio" value="4" name="lineNumRd" /><label style="font-size: 14px;">4</label></li>
+                <li>
+                    <input type="radio" value="5" name="lineNumRd" /><label style="font-size: 14px;">5</label></li>
+            </ul>
+        </div>
+        <div id="dataTypeDiv" style="display: none; width: 180px; height: 150px;">
+            <ul id="dataTypeUl" style="font-size: 14px;">
+                <li>
+                    <input type="radio" id="nvarcharRd" value="character varying" name="dataTypeRd" /><label
+                        style="font-size: 14px;">字符串</label></li>
+                <li>
+                    <input type="radio" id="intRd" value="int" name="dataTypeRd" /><label style="font-size: 14px;">整数</label></li>
+                <li>
+                    <input type="radio" id="decimalRd" value="decimal" name="dataTypeRd" /><label style="font-size: 14px;">小数</label></li>
+                <li>
+                    <input type="radio" id="boolRd" value="bool" name="dataTypeRd" /><label style="font-size: 14px;">布尔值</label></li>
+            </ul>
+        </div>
+        <div id="fontWeightDiv" style="display: none; width: 180px; height: 150px;">
+            <ul id="fontWeightUl" style="font-size: 14px;">
+                <li>
+                    <input type="radio" id="Radio1" value="normal" name="fontweightRd" /><label style="font-size: 14px;">适中</label></li>
+                <li>
+                    <input type="radio" id="Radio2" value="bold" name="fontweightRd" /><label style="font-size: 14px;">粗</label></li>
+                <li>
+                    <input type="radio" id="Radio3" value="bolder" name="fontweightRd" /><label style="font-size: 14px;">较粗</label></li>
+                <li>
+                    <input type="radio" id="Radio13" value="lighter" name="fontweightRd" /><label style="font-size: 14px;">较细的</label></li>
+            </ul>
+        </div>
+        <div id="setMobilePropertyDiv" style="display: block;">
+            <ul id="setMobilePropertyUl" style="font-size: 14px;">
+            </ul>
+        </div>
+        <div id="itemsDiv" style="display: none; width: 250px; height: 150px;">
+            <table id="itemsTable" style="border-collapse: collapse; width: 95%; font-size: 12px;
+                text-align: center;">
+                <thead>
+                    <tr>
+                        <th style="border: 1px solid black; width: 40px; text-align: center;">
+                            <a id="addItemA" href="#">添加</a>
+                        </th>
+                        <th style="border: 1px solid black; width: 100px; text-align: center;">
+                            显示文本
+                        </th>
+                        <th style="display: block; border: 1px solid black; width: 100px; text-align: center;">
+                            选项取值
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                </tbody>
+            </table>
+        </div>
+        <div id="columnsDiv" style="display: none; width: 580px; height: 250px;">
+            <table id="columnsTable" style="border-collapse: collapse; width: 95%; font-size: 12px;
+                text-align: center;">
+                <thead>
+                    <tr>
+                        <th style="border: 1px solid black; text-align: center; width: 35px;">
+                            <a id="addTableColumn" href="#">添加</a>
+                        </th>
+                        <th style="border: 1px solid black; text-align: center; width: 65px;">
+                            列名
+                        </th>
+                        <th style="border: 1px solid black; text-align: center; width: 65px;">
+                            控件类型
+                        </th>
+                        <th style="border: 1px solid black; text-align: center; width: 65px;">
+                            是字段
+                        </th>
+                        <th style="border: 1px solid black; text-align: center; width: 35px;">
+                            数据
+                        </th>
+                        <th style="border: 1px solid black; text-align: center; width: 65px;">
+                            数据类型
+                        </th>
+                        <th style="border: 1px solid black; text-align: center; width: 65px;">
+                            数据长度
+                        </th>
+                        <th style="border: 1px solid black; text-align: center; width: 65px;">
+                            从视图取值
+                        </th>
+                        <th style="border: 1px solid black; text-align: center; width: 45px;">
+                            可视
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                </tbody>
+            </table>
+        </div>
+        <div id="list3tDiv55" style="display: none; width: 550px; height: 150px;">
+            <table id="list3tTableMobile" style="border-collapse: collapse; width: 95%; font-size: 12px;
+                text-align: center;">
+                <thead>
+                    <tr>
+                        <th style="border: 1px solid black; width: 40px; text-align: center;">
+                            <a id="addTableList3T" href="#">添加</a>
+                        </th>
+                        <th style="border: 1px solid black; width: 100px; text-align: center;">
+                            首字段
+                        </th>
+                        <th style="border: 1px solid black; width: 100px; text-align: center;">
+                            次字段
+                        </th>
+                        <th style="border: 1px solid black; width: 100px; text-align: center;">
+                            季字段
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                </tbody>
+            </table>
+        </div>
+        <div id="buttonicoDiv" style="display: none; width: 260px; height: 150px;">
+            <table id="buttonicoTable" style="border-collapse: collapse; width: 95%; font-size: 12px;
+                text-align: center;">
+                <thead>
+                </thead>
+                <tbody>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>
+
+<script>
+    $(function() {
+        $("#formDesign").ligerLayout();
+    });
+</script>
+
+</html>

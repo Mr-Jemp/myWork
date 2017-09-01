@@ -1,0 +1,288 @@
+[ 2015-11-17T09:07:15+08:00 ] 127.0.0.1 /s/tp/wwwroot/index.php?s=/Home/Demo/add.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `ht_form` [ RunTime:0.0156s ]
+SQL: INSERT INTO `ht_form` (`form_name`,`form_desc`,`updatetime`,`type`,`dateline`,`pid`,`creater_uid`) VALUES ('sfsdf','','1447722435','0','1447722435','56','79') [ RunTime:0.0156s ]
+NOTIC: [2] unlink(../Application/Runtime/Temp/21d9a5adf0e55158019e1c301ccb9502.php): No such file or directory D:\wamp64\www\dzxt\s\tp\ThinkPHP\Library\Think\Cache\Driver\File.class.php 第 157 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2015-11-17T09:07:21+08:00 ] 127.0.0.1 /s/tp/wwwroot/index.php?s=/Home/Demo/add.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `ht_form` [ RunTime:0.0156s ]
+SQL: INSERT INTO `ht_form` (`form_name`,`form_desc`,`updatetime`,`type`,`dateline`,`pid`,`creater_uid`) VALUES ('sfwe3we','','1447722441','0','1447722441','56','79') [ RunTime:0.0000s ]
+NOTIC: [2] unlink(../Application/Runtime/Temp/21d9a5adf0e55158019e1c301ccb9502.php): No such file or directory D:\wamp64\www\dzxt\s\tp\ThinkPHP\Library\Think\Cache\Driver\File.class.php 第 157 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2015-11-17T09:08:12+08:00 ] 127.0.0.1 /s/tp/wwwroot/index.php?s=/Home/Demo/add.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `ht_form` [ RunTime:0.0000s ]
+SQL: INSERT INTO `ht_form` (`form_name`,`form_desc`,`updatetime`,`type`,`dateline`,`pid`,`creater_uid`) VALUES ('dsdsdsd','','1447722492','0','1447722492','56','79') [ RunTime:0.0000s ]
+NOTIC: [2] unlink(../Application/Runtime/Temp/21d9a5adf0e55158019e1c301ccb9502.php): No such file or directory D:\wamp64\www\dzxt\s\tp\ThinkPHP\Library\Think\Cache\Driver\File.class.php 第 157 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2015-11-17T09:08:17+08:00 ] 127.0.0.1 /s/tp/wwwroot/index.php?s=/Home/Demo/add.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `ht_form` [ RunTime:0.0156s ]
+SQL: INSERT INTO `ht_form` (`form_name`,`form_desc`,`updatetime`,`type`,`dateline`,`pid`,`creater_uid`) VALUES ('sewqewewe','','1447722497','0','1447722497','56','79') [ RunTime:0.0156s ]
+NOTIC: [2] unlink(../Application/Runtime/Temp/21d9a5adf0e55158019e1c301ccb9502.php): No such file or directory D:\wamp64\www\dzxt\s\tp\ThinkPHP\Library\Think\Cache\Driver\File.class.php 第 157 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2015-11-17T09:08:23+08:00 ] 127.0.0.1 /s/tp/wwwroot/index.php?s=/Home/Demo/add.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `ht_form` [ RunTime:0.0156s ]
+SQL: INSERT INTO `ht_form` (`form_name`,`form_desc`,`updatetime`,`type`,`dateline`,`pid`,`creater_uid`) VALUES ('dsdfsd','','1447722503','0','1447722503','56','79') [ RunTime:0.0156s ]
+NOTIC: [2] unlink(../Application/Runtime/Temp/21d9a5adf0e55158019e1c301ccb9502.php): No such file or directory D:\wamp64\www\dzxt\s\tp\ThinkPHP\Library\Think\Cache\Driver\File.class.php 第 157 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2015-11-17T09:16:03+08:00 ] 127.0.0.1 /s/tp/wwwroot/index.php?s=/Home/Demo/add.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000977s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001953s ]
+SQL: SHOW COLUMNS FROM `ht_form` [ RunTime:0.0225s ]
+SQL: INSERT INTO `ht_form` (`form_name`,`form_desc`,`updatetime`,`type`,`dateline`,`pid`,`creater_uid`) VALUES ('dddddddddddddd','','1447722963','0','1447722963','56','18') [ RunTime:0.0156s ]
+NOTIC: [2] unlink(../Application/Runtime/Temp/21d9a5adf0e55158019e1c301ccb9502.php): No such file or directory D:\wamp64\www\dzxt\s\tp\ThinkPHP\Library\Think\Cache\Driver\File.class.php 第 157 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2015-11-17T09:16:13+08:00 ] 127.0.0.1 /s/tp/wwwroot/index.php?s=/Home/Demo/add.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000977s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000977s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000977s ]
+SQL: SHOW COLUMNS FROM `ht_form` [ RunTime:0.0000s ]
+SQL: INSERT INTO `ht_form` (`form_name`,`form_desc`,`updatetime`,`type`,`dateline`,`pid`,`creater_uid`) VALUES ('ffffffffffff','','1447722973','0','1447722973','56','18') [ RunTime:0.0156s ]
+NOTIC: [2] unlink(../Application/Runtime/Temp/21d9a5adf0e55158019e1c301ccb9502.php): No such file or directory D:\wamp64\www\dzxt\s\tp\ThinkPHP\Library\Think\Cache\Driver\File.class.php 第 157 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2015-11-17T09:19:54+08:00 ] 127.0.0.1 /s/tp/wwwroot/index.php?s=/Home/Demo/add.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000977s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000976s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000976s ]
+SQL: SHOW COLUMNS FROM `ht_form` [ RunTime:0.0020s ]
+SQL: INSERT INTO `ht_form` (`form_name`,`form_desc`,`updatetime`,`type`,`dateline`,`pid`,`creater_uid`) VALUES ('fffffffffd','','1447723194','1','1447723194','56','18') [ RunTime:0.0156s ]
+NOTIC: [2] unlink(../Application/Runtime/Temp/21d9a5adf0e55158019e1c301ccb9502.php): No such file or directory D:\wamp64\www\dzxt\s\tp\ThinkPHP\Library\Think\Cache\Driver\File.class.php 第 157 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2015-11-17T09:23:25+08:00 ] 127.0.0.1 /s/tp/wwwroot/index.php?s=/Home/Demo/add.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000976s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000976s ]
+SQL: SHOW COLUMNS FROM `ht_form` [ RunTime:0.0166s ]
+SQL: INSERT INTO `ht_form` (`form_name`,`form_desc`,`updatetime`,`type`,`dateline`,`pid`,`creater_uid`) VALUES ('dfsdf','','1447723405','0','1447723405','56','18') [ RunTime:0.0000s ]
+NOTIC: [2] unlink(../Application/Runtime/Temp/21d9a5adf0e55158019e1c301ccb9502.php): No such file or directory D:\wamp64\www\dzxt\s\tp\ThinkPHP\Library\Think\Cache\Driver\File.class.php 第 157 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2015-11-17T09:23:35+08:00 ] 127.0.0.1 /s/tp/wwwroot/index.php?s=/Home/Demo/add.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000976s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000977s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000977s ]
+SQL: SHOW COLUMNS FROM `ht_form` [ RunTime:0.0195s ]
+SQL: INSERT INTO `ht_form` (`form_name`,`form_desc`,`updatetime`,`type`,`dateline`,`pid`,`creater_uid`) VALUES ('dsfdsfdf','','1447723415','0','1447723415','56','18') [ RunTime:0.0000s ]
+NOTIC: [2] unlink(../Application/Runtime/Temp/21d9a5adf0e55158019e1c301ccb9502.php): No such file or directory D:\wamp64\www\dzxt\s\tp\ThinkPHP\Library\Think\Cache\Driver\File.class.php 第 157 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2015-11-17T09:32:12+08:00 ] 127.0.0.1 /s/tp/wwwroot/index.php?s=/Home/Demo/add.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.015625s ]
+SQL: SHOW COLUMNS FROM `ht_form` [ RunTime:0.0156s ]
+SQL: INSERT INTO `ht_form` (`form_name`,`form_desc`,`updatetime`,`type`,`dateline`,`pid`,`creater_uid`) VALUES ('dsfdf','','1447723932','0','1447723932','56','79') [ RunTime:0.0000s ]
+NOTIC: [2] unlink(../Application/Runtime/Temp/21d9a5adf0e55158019e1c301ccb9502.php): No such file or directory D:\wamp64\www\dzxt\s\tp\ThinkPHP\Library\Think\Cache\Driver\File.class.php 第 157 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2015-11-17T15:32:25+08:00 ] 127.0.0.1 /s/tp/wwwroot/index.php?s=/Home/Demo/add.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.008789s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000977s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001953s ]
+SQL: SHOW COLUMNS FROM `ht_form` [ RunTime:0.0078s ]
+SQL: INSERT INTO `ht_form` (`form_name`,`form_desc`,`updatetime`,`type`,`dateline`,`pid`,`creater_uid`) VALUES ('dddddddddd','','1447745544','0','1447745544','56','79') [ RunTime:0.0811s ]
+NOTIC: [2] unlink(../Application/Runtime/Temp/21d9a5adf0e55158019e1c301ccb9502.php): No such file or directory D:\wamp64\www\dzxt\s\tp\ThinkPHP\Library\Think\Cache\Driver\File.class.php 第 157 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.015625s ]
+
+[ 2015-11-17T15:32:31+08:00 ] 127.0.0.1 /s/tp/wwwroot/index.php?s=/demo/formdesign/form_id/274.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.019531s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000976s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000976s ]
+SQL: SHOW COLUMNS FROM `ht_form` [ RunTime:0.0049s ]
+SQL: SELECT * FROM `ht_form` WHERE `id` = 274 AND `is_del` = 0 LIMIT 1   [ RunTime:0.0020s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000976s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000976s ]
+
+[ 2015-11-17T15:33:17+08:00 ] 127.0.0.1 /s/tp/wwwroot/index.php?s=/demo/formdesign/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000977s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000977s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001953s ]
+SQL: SHOW COLUMNS FROM `ht_form` [ RunTime:0.0049s ]
+SQL: SELECT * FROM `ht_form` WHERE `id` = 274 AND `is_del` = 0 LIMIT 1   [ RunTime:0.0010s ]
+SQL: show tables like 'ht_form_data_274' [ RunTime:0.0039s ]
+SQL: CREATE TABLE `ht_form_data_274` (
+              `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+              `uid` int(10) unsigned NOT NULL DEFAULT '0',
+              `foreign_id` int(10) unsigned NOT NULL DEFAULT '0',
+              `data_1` varchar(255) NOT NULL DEFAULT '' comment 'sfd',
+              `is_del` tinyint(1) unsigned NOT NULL DEFAULT '0',
+              `updatetime` int(10) unsigned NOT NULL DEFAULT '0',
+              `dateline` int(10) unsigned NOT NULL DEFAULT '0',
+              PRIMARY KEY (`id`),
+              KEY `uid` (`uid`),
+              KEY `foreign_id` (`foreign_id`)
+            ) ENGINE=InnoDB DEFAULT CHARSET=utf8; [ RunTime:0.0078s ]
+SQL: UPDATE `ht_form` SET `is_data_form`='0',`fields`='1',`content`='<p><input name=\"data_1\" leipiplugins=\"free\" class=\"freeid\" title=\"sfd\" listtext=\"%5B%7B%22text%22:%22ddd%22,%22url%22:%22/s/listform.php?fieldtype=key&amp;key=%22,%22id%22:0,%22children%22:null%7D%5D\" value=\"树控件[sfd]\" orgminheight=\"750\"/></p>',`content_parse`='<p>{data_1}</p>',`content_data`='a:1:{i:0;a:8:{s:4:\"name\";s:6:\"data_1\";s:12:\"leipiplugins\";s:4:\"free\";s:5:\"class\";s:6:\"freeid\";s:5:\"title\";s:3:\"sfd\";s:8:\"listtext\";s:118:\"%5B%7B%22text%22:%22ddd%22,%22url%22:%22/s/listform.php?fieldtype=key&amp;key=%22,%22id%22:0,%22children%22:null%7D%5D\";s:5:\"value\";s:14:\"树控件[sfd]\";s:12:\"orgminheight\";s:3:\"750\";s:7:\"content\";s:241:\"<input name=\"data_1\" leipiplugins=\"free\" class=\"freeid\" title=\"sfd\" listtext=\"%5B%7B%22text%22:%22ddd%22,%22url%22:%22/s/listform.php?fieldtype=key&amp;key=%22,%22id%22:0,%22children%22:null%7D%5D\" value=\"树控件[sfd]\" orgminheight=\"750\"/>\";}}',`updatetime`='1447745597' WHERE `id` = 274 [ RunTime:0.0000s ]
+NOTIC: [2] unlink(../Application/Runtime/Temp/21d9a5adf0e55158019e1c301ccb9502.php): No such file or directory D:\wamp64\www\dzxt\s\tp\ThinkPHP\Library\Think\Cache\Driver\File.class.php 第 157 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.015625s ]
+
+[ 2015-11-17T15:33:21+08:00 ] 127.0.0.1 /s/tp/wwwroot/index.php?s=/demo/formdesign/form_id/274.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `ht_form` [ RunTime:0.0166s ]
+SQL: SELECT * FROM `ht_form` WHERE `id` = 274 AND `is_del` = 0 LIMIT 1   [ RunTime:0.0020s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000977s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000977s ]
+
+[ 2015-11-17T15:37:03+08:00 ] 127.0.0.1 /s/tp/wwwroot/index.php?s=/demo/formdesign/form_id/255.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000977s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000977s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000977s ]
+SQL: SHOW COLUMNS FROM `ht_form` [ RunTime:0.0127s ]
+SQL: SELECT * FROM `ht_form` WHERE `id` = 255 AND `is_del` = 0 LIMIT 1   [ RunTime:0.0029s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000976s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000976s ]
+
+[ 2015-11-17T15:37:32+08:00 ] 127.0.0.1 /s/tp/wwwroot/index.php?s=/demo/formdesign/form_id/274.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000976s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000977s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001953s ]
+SQL: SHOW COLUMNS FROM `ht_form` [ RunTime:0.0117s ]
+SQL: SELECT * FROM `ht_form` WHERE `id` = 274 AND `is_del` = 0 LIMIT 1   [ RunTime:0.0020s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000976s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000976s ]
+
+[ 2015-11-17T15:38:12+08:00 ] 127.0.0.1 /s/tp/wwwroot/index.php?s=/demo/formdesign/form_id/256.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000976s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000976s ]
+SQL: SHOW COLUMNS FROM `ht_form` [ RunTime:0.0059s ]
+SQL: SELECT * FROM `ht_form` WHERE `id` = 256 AND `is_del` = 0 LIMIT 1   [ RunTime:0.0020s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000977s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000977s ]
+
+[ 2015-11-17T16:54:35+08:00 ] 127.0.0.1 /s/tp/wwwroot/index.php?s=/demo/formdesign/form_id/143.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000977s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000977s ]
+SQL: SHOW COLUMNS FROM `ht_form` [ RunTime:0.0137s ]
+SQL: SELECT * FROM `ht_form` WHERE `id` = 143 AND `is_del` = 0 LIMIT 1   [ RunTime:0.0039s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000977s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001954s ]
+
+[ 2015-11-17T16:58:32+08:00 ] 127.0.0.1 /s/tp/wwwroot/index.php?s=/Home/Demo/add.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000977s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001953s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001953s ]
+SQL: SHOW COLUMNS FROM `ht_form` [ RunTime:0.0117s ]
+SQL: INSERT INTO `ht_form` (`form_name`,`form_desc`,`updatetime`,`type`,`dateline`,`pid`,`creater_uid`) VALUES ('ddhh','','1447750712','1','1447750712','52','79') [ RunTime:0.0059s ]
+NOTIC: [2] unlink(../Application/Runtime/Temp/21d9a5adf0e55158019e1c301ccb9502.php): No such file or directory D:\wamp64\www\dzxt\s\tp\ThinkPHP\Library\Think\Cache\Driver\File.class.php 第 157 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000976s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000976s ]
+

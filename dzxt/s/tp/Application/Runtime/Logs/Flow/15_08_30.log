@@ -1,0 +1,44 @@
+[ 2015-08-30T00:35:33+08:00 ] 120.82.18.20 /s/tp/wwwroot/index.php?s=/Flow/demo/index/getflow/ok.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000078s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000035s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000064s ]
+SQL: SHOW COLUMNS FROM `ht_flow` [ RunTime:0.0008s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `ht_flow` WHERE `is_del` = 0 LIMIT 1   [ RunTime:0.0001s ]
+NOTIC: [8] Undefined variable: p /var/www/dzxt/s/tp/Application/Flow/Controller/DemoController.class.php 第 22 行.
+NOTIC: [8] Trying to get property of non-object /var/www/dzxt/s/tp/Application/Flow/Controller/DemoController.class.php 第 22 行.
+NOTIC: [8] Undefined variable: p /var/www/dzxt/s/tp/Application/Flow/Controller/DemoController.class.php 第 22 行.
+NOTIC: [8] Trying to get property of non-object /var/www/dzxt/s/tp/Application/Flow/Controller/DemoController.class.php 第 22 行.
+SQL: SELECT `id`,`form_id`,`flow_name`,`flow_desc`,`updatetime`,`dateline` FROM `ht_flow` WHERE `is_del` = 0 ORDER BY id desc  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ht_form` [ RunTime:0.0006s ]
+SQL: SELECT * FROM `ht_form` WHERE ( 1=1 AND id='128' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `ht_form` WHERE ( 1=1 AND id='128' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `ht_form` WHERE ( 1=1 AND id='128' ) LIMIT 1   [ RunTime:0.0001s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000050s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000081s ]
+
+[ 2015-08-30T00:42:50+08:00 ] 120.82.18.20 /s/tp/wwwroot/index.php?s=/Flow/demo/index/getflow/ok.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000087s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000035s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000064s ]
+SQL: SHOW COLUMNS FROM `ht_flow` [ RunTime:0.0007s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `ht_flow` WHERE `is_del` = 0 LIMIT 1   [ RunTime:0.0001s ]
+NOTIC: [8] Undefined variable: p /var/www/dzxt/s/tp/Application/Flow/Controller/DemoController.class.php 第 22 行.
+NOTIC: [8] Trying to get property of non-object /var/www/dzxt/s/tp/Application/Flow/Controller/DemoController.class.php 第 22 行.
+NOTIC: [8] Undefined variable: p /var/www/dzxt/s/tp/Application/Flow/Controller/DemoController.class.php 第 22 行.
+NOTIC: [8] Trying to get property of non-object /var/www/dzxt/s/tp/Application/Flow/Controller/DemoController.class.php 第 22 行.
+SQL: SELECT `id`,`form_id`,`flow_name`,`flow_desc`,`updatetime`,`dateline` FROM `ht_flow` WHERE `is_del` = 0 ORDER BY id desc  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ht_form` [ RunTime:0.0006s ]
+SQL: SELECT * FROM `ht_form` WHERE ( 1=1 AND id='128' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `ht_form` WHERE ( 1=1 AND id='128' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `ht_form` WHERE ( 1=1 AND id='128' ) LIMIT 1   [ RunTime:0.0001s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000050s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000081s ]
+

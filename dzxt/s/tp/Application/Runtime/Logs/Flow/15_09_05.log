@@ -1,0 +1,270 @@
+[ 2015-09-05T07:52:39+08:00 ] 120.82.18.5 /s/tp/wwwroot/index.php?s=/Flow/demo/index/getflow/ok.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000086s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000036s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000068s ]
+SQL: SHOW COLUMNS FROM `ht_flow` [ RunTime:0.0009s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `ht_flow` WHERE `is_del` = 0 LIMIT 1   [ RunTime:0.0002s ]
+NOTIC: [8] Undefined variable: p /var/www/dzxt/s/tp/Application/Flow/Controller/DemoController.class.php 第 22 行.
+NOTIC: [8] Trying to get property of non-object /var/www/dzxt/s/tp/Application/Flow/Controller/DemoController.class.php 第 22 行.
+NOTIC: [8] Undefined variable: p /var/www/dzxt/s/tp/Application/Flow/Controller/DemoController.class.php 第 22 行.
+NOTIC: [8] Trying to get property of non-object /var/www/dzxt/s/tp/Application/Flow/Controller/DemoController.class.php 第 22 行.
+SQL: SELECT `id`,`form_id`,`flow_name`,`flow_desc`,`updatetime`,`dateline` FROM `ht_flow` WHERE `is_del` = 0 ORDER BY id desc  [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `ht_form` [ RunTime:0.0006s ]
+SQL: SELECT * FROM `ht_form` WHERE ( 1=1 AND id='128' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `ht_form` WHERE ( 1=1 AND id='128' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `ht_form` WHERE ( 1=1 AND id='128' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `ht_form` WHERE ( 1=1 AND id='128' ) LIMIT 1   [ RunTime:0.0001s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000055s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000086s ]
+
+[ 2015-09-05T07:52:42+08:00 ] 120.82.18.5 /s/tp/wwwroot/index.php?s=/Flow/flowdesign/index/flow_id/15.html?r=0.5777318695162624
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000085s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000038s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000072s ]
+SQL: SHOW COLUMNS FROM `ht_flow` [ RunTime:0.0009s ]
+SQL: SELECT * FROM `ht_flow` WHERE `id` = 15 AND `is_del` = 0 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `ht_flow_process` [ RunTime:0.0013s ]
+SQL: SELECT * FROM `ht_flow_process` WHERE `flow_id` = 15 AND `is_del` = 0 ORDER BY id asc  [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000103s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000143s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.012623s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012659s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000161s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000193s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000039s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000071s ]
+
+[ 2015-09-05T07:52:47+08:00 ] 120.82.18.5 /s/tp/wwwroot/index.php?s=/Flow/Flowdesign/attribute/id/0.html&_t=1441410767556
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000087s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000038s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000069s ]
+SQL: SHOW COLUMNS FROM `ht_flow` [ RunTime:0.0009s ]
+SQL: SHOW COLUMNS FROM `ht_flow_process` [ RunTime:0.0013s ]
+SQL: SHOW COLUMNS FROM `ht_form` [ RunTime:0.0006s ]
+SQL: SELECT * FROM `ht_flow_process` WHERE `id` = 0 AND `is_del` = 0 LIMIT 1   [ RunTime:0.0003s ]
+
+[ 2015-09-05T07:52:50+08:00 ] 120.82.18.5 /s/tp/wwwroot/index.php?s=/Flow/Flowdesign/attribute/id/0.html&_t=1441410770284
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000084s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000038s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000068s ]
+SQL: SHOW COLUMNS FROM `ht_flow` [ RunTime:0.0009s ]
+SQL: SHOW COLUMNS FROM `ht_flow_process` [ RunTime:0.0012s ]
+SQL: SHOW COLUMNS FROM `ht_form` [ RunTime:0.0006s ]
+SQL: SELECT * FROM `ht_flow_process` WHERE `id` = 0 AND `is_del` = 0 LIMIT 1   [ RunTime:0.0001s ]
+
+[ 2015-09-05T07:52:57+08:00 ] 120.82.18.5 /s/tp/wwwroot/index.php?s=/Flow/demo/index/getflow/ok.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000085s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000035s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000065s ]
+SQL: SHOW COLUMNS FROM `ht_flow` [ RunTime:0.0007s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `ht_flow` WHERE `is_del` = 0 LIMIT 1   [ RunTime:0.0001s ]
+NOTIC: [8] Undefined variable: p /var/www/dzxt/s/tp/Application/Flow/Controller/DemoController.class.php 第 22 行.
+NOTIC: [8] Trying to get property of non-object /var/www/dzxt/s/tp/Application/Flow/Controller/DemoController.class.php 第 22 行.
+NOTIC: [8] Undefined variable: p /var/www/dzxt/s/tp/Application/Flow/Controller/DemoController.class.php 第 22 行.
+NOTIC: [8] Trying to get property of non-object /var/www/dzxt/s/tp/Application/Flow/Controller/DemoController.class.php 第 22 行.
+SQL: SELECT `id`,`form_id`,`flow_name`,`flow_desc`,`updatetime`,`dateline` FROM `ht_flow` WHERE `is_del` = 0 ORDER BY id desc  [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `ht_form` [ RunTime:0.0006s ]
+SQL: SELECT * FROM `ht_form` WHERE ( 1=1 AND id='128' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `ht_form` WHERE ( 1=1 AND id='128' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `ht_form` WHERE ( 1=1 AND id='128' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `ht_form` WHERE ( 1=1 AND id='128' ) LIMIT 1   [ RunTime:0.0001s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000046s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000075s ]
+
+[ 2015-09-05T07:53:00+08:00 ] 120.82.18.5 /s/tp/wwwroot/index.php?s=/Flow/flowdesign/index/flow_id/15.html?r=0.894181327790009
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000078s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000037s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000070s ]
+SQL: SHOW COLUMNS FROM `ht_flow` [ RunTime:0.0009s ]
+SQL: SELECT * FROM `ht_flow` WHERE `id` = 15 AND `is_del` = 0 LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `ht_flow_process` [ RunTime:0.0013s ]
+SQL: SELECT * FROM `ht_flow_process` WHERE `flow_id` = 15 AND `is_del` = 0 ORDER BY id asc  [ RunTime:0.0001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000111s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000146s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006566s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006602s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000036s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000065s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000038s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000069s ]
+
+[ 2015-09-05T07:53:09+08:00 ] 120.82.18.5 /s/tp/wwwroot/index.php?s=/Flow/flowdesign/index/flow_id/14.html?r=0.22916730266015278
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000073s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000037s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000071s ]
+SQL: SHOW COLUMNS FROM `ht_flow` [ RunTime:0.0009s ]
+SQL: SELECT * FROM `ht_flow` WHERE `id` = 14 AND `is_del` = 0 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `ht_flow_process` [ RunTime:0.0013s ]
+SQL: SELECT * FROM `ht_flow_process` WHERE `flow_id` = 14 AND `is_del` = 0 ORDER BY id asc  [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000103s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000138s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006525s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006562s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000033s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000065s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000037s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000068s ]
+
+[ 2015-09-05T07:53:26+08:00 ] 120.82.18.5 /s/tp/wwwroot/index.php?s=/Flow/flowdesign/index/flow_id/12.html?r=0.003789614139893316
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000072s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000038s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000071s ]
+SQL: SHOW COLUMNS FROM `ht_flow` [ RunTime:0.0009s ]
+SQL: SELECT * FROM `ht_flow` WHERE `id` = 12 AND `is_del` = 0 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `ht_flow_process` [ RunTime:0.0013s ]
+SQL: SELECT * FROM `ht_flow_process` WHERE `flow_id` = 12 AND `is_del` = 0 ORDER BY id asc  [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000110s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000144s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006530s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006565s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000034s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000064s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000036s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000068s ]
+
+[ 2015-09-05T07:53:40+08:00 ] 120.82.18.5 /s/tp/wwwroot/index.php?s=/Flow/flowdesign/index/flow_id/13.html?r=0.9017487623947461
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000075s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000038s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000071s ]
+SQL: SHOW COLUMNS FROM `ht_flow` [ RunTime:0.0009s ]
+SQL: SELECT * FROM `ht_flow` WHERE `id` = 13 AND `is_del` = 0 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `ht_flow_process` [ RunTime:0.0013s ]
+SQL: SELECT * FROM `ht_flow_process` WHERE `flow_id` = 13 AND `is_del` = 0 ORDER BY id asc  [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000099s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000133s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006122s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006158s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000033s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000064s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000036s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000067s ]
+
+[ 2015-09-05T07:53:52+08:00 ] 120.82.18.5 /s/tp/wwwroot/index.php?s=/Flow/Flowdesign/attribute/id/117.html&_t=1441410832705
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000072s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000037s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000067s ]
+SQL: SHOW COLUMNS FROM `ht_flow` [ RunTime:0.0009s ]
+SQL: SHOW COLUMNS FROM `ht_flow_process` [ RunTime:0.0013s ]
+SQL: SHOW COLUMNS FROM `ht_form` [ RunTime:0.0006s ]
+SQL: SELECT * FROM `ht_flow_process` WHERE `id` = 117 AND `is_del` = 0 LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `ht_flow` WHERE `id` = 13 AND `is_del` = 0 LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `id`,`form_name`,`content_data`,`fields` FROM `ht_form` WHERE `id` = 128 AND `is_del` = 0 LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `id`,`process_name`,`process_type` FROM `ht_flow_process` WHERE `flow_id` = 13 AND `is_del` = 0  [ RunTime:0.0001s ]
+SQL: SELECT `id`,`flow_name` FROM `ht_flow` WHERE `is_del` = 0  [ RunTime:0.0001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000165s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000198s ]
+NOTIC: [2] in_array() expects parameter 2 to be array, string given /var/www/dzxt/s/tp/Application/Runtime/Cache/Flow/0b245d552096da865848fda1c84e0c24.php 第 100 行.
+NOTIC: [2] in_array() expects parameter 2 to be array, string given /var/www/dzxt/s/tp/Application/Runtime/Cache/Flow/0b245d552096da865848fda1c84e0c24.php 第 100 行.
+NOTIC: [2] in_array() expects parameter 2 to be array, string given /var/www/dzxt/s/tp/Application/Runtime/Cache/Flow/0b245d552096da865848fda1c84e0c24.php 第 100 行.
+NOTIC: [8] Undefined index: auto_user_text /var/www/dzxt/s/tp/Application/Runtime/Cache/Flow/0b245d552096da865848fda1c84e0c24.php 第 195 行.
+NOTIC: [8] Undefined index: auto_userop_text /var/www/dzxt/s/tp/Application/Runtime/Cache/Flow/0b245d552096da865848fda1c84e0c24.php 第 204 行.
+NOTIC: [8] Undefined index: auto_role /var/www/dzxt/s/tp/Application/Runtime/Cache/Flow/0b245d552096da865848fda1c84e0c24.php 第 213 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.020282s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.020314s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000036s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000062s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000035s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000065s ]
+
+[ 2015-09-05T08:47:52+08:00 ] 120.82.18.5 /s/tp/wwwroot/index.php?s=/Flow/demo/index/getflow/ok.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000082s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000035s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000066s ]
+SQL: SHOW COLUMNS FROM `ht_flow` [ RunTime:0.0009s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `ht_flow` WHERE `is_del` = 0 LIMIT 1   [ RunTime:0.0001s ]
+NOTIC: [8] Undefined variable: p /var/www/dzxt/s/tp/Application/Flow/Controller/DemoController.class.php 第 22 行.
+NOTIC: [8] Trying to get property of non-object /var/www/dzxt/s/tp/Application/Flow/Controller/DemoController.class.php 第 22 行.
+NOTIC: [8] Undefined variable: p /var/www/dzxt/s/tp/Application/Flow/Controller/DemoController.class.php 第 22 行.
+NOTIC: [8] Trying to get property of non-object /var/www/dzxt/s/tp/Application/Flow/Controller/DemoController.class.php 第 22 行.
+SQL: SELECT `id`,`form_id`,`flow_name`,`flow_desc`,`updatetime`,`dateline` FROM `ht_flow` WHERE `is_del` = 0 ORDER BY id desc  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ht_form` [ RunTime:0.0006s ]
+SQL: SELECT * FROM `ht_form` WHERE ( 1=1 AND id='128' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `ht_form` WHERE ( 1=1 AND id='128' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `ht_form` WHERE ( 1=1 AND id='128' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `ht_form` WHERE ( 1=1 AND id='128' ) LIMIT 1   [ RunTime:0.0001s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000036s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000065s ]
+
+[ 2015-09-05T22:24:41+08:00 ] 120.82.18.5 /s/tp/wwwroot/index.php?s=/Flow/demo/index/getflow/ok.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000085s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000038s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000069s ]
+SQL: SHOW COLUMNS FROM `ht_flow` [ RunTime:0.0009s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `ht_flow` WHERE `is_del` = 0 LIMIT 1   [ RunTime:0.0001s ]
+NOTIC: [8] Undefined variable: p /var/www/dzxt/s/tp/Application/Flow/Controller/DemoController.class.php 第 22 行.
+NOTIC: [8] Trying to get property of non-object /var/www/dzxt/s/tp/Application/Flow/Controller/DemoController.class.php 第 22 行.
+NOTIC: [8] Undefined variable: p /var/www/dzxt/s/tp/Application/Flow/Controller/DemoController.class.php 第 22 行.
+NOTIC: [8] Trying to get property of non-object /var/www/dzxt/s/tp/Application/Flow/Controller/DemoController.class.php 第 22 行.
+SQL: SELECT `id`,`form_id`,`flow_name`,`flow_desc`,`updatetime`,`dateline` FROM `ht_flow` WHERE `is_del` = 0 ORDER BY id desc  [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `ht_form` [ RunTime:0.0006s ]
+SQL: SELECT * FROM `ht_form` WHERE ( 1=1 AND id='128' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `ht_form` WHERE ( 1=1 AND id='128' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `ht_form` WHERE ( 1=1 AND id='128' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `ht_form` WHERE ( 1=1 AND id='128' ) LIMIT 1   [ RunTime:0.0001s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000065s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000097s ]
+
