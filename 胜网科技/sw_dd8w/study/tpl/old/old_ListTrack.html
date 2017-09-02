@@ -1,0 +1,724 @@
+<!-- 
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>数字社区-足迹</title>
+    <link href="/Public/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css"> -->
+    <link href="/Public/Css/jscss.css" rel="stylesheet" type="text/css">
+    <link href="/Public/bootstrap/font-awesome/font-awesome.min.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="/Public/umeditor/themes/default/css/umeditor.min.css">
+<!--     <script type="text/javascript" src="/Public/jQuery/jquery.min.js"></script> -->
+    <script src="/Public/bootstrap/js/bootstrap.min.js"></script>
+<!--     <script type="text/javascript" src="/Public/jQuery/angular.min.js"></script> -->
+    <!--<script type="text/javascript" src="/Public/Js/Teacher/MyClass/Teacher_MyClass_Track.js"></script>-->
+    <!--[if lt IE 9]>
+    <script src="//cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="//cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <link href="/Public/Css/teacher.css" rel="stylesheet" type="text/css">
+<!---头部内容区开始---->
+<div class="row">
+    <div class="col-xs-12 topbg">
+        <div class="col-xs-2">
+            <span onclick="javascript:history.go(-1);" class="glyphicon glyphicon-chevron-left topReturn"></span>
+        </div>
+        <div class="col-xs-8">
+            <h3>足迹</h3>
+        </div>
+        <div class="col-xs-2">
+            <a href="#!/old_ListAddTalkNotice" class="btn float-fr btn_adjust" role="button"><img src="/Public/images/jiahao.png"></a>
+        </div>
+    </div>
+    <div class="row" style="background-color:#94CAEF;">
+        <div class="col-xs-12 "><img src="/Public/images/js_ico_zujiLOGO.jpg" class="img-responsive center-block" alt="数字社区"></div>
+    </div>
+    <div style="margin-top:-25px">
+        <div class="row">
+            <div class="col-xs-8">
+                <p class="pull-right" style="margin-top:-30px; color:#fff;">teach1</p>
+            </div>
+            <div class="col-xs-3 radius_img"><img src="/Public/images/manpic.jpg"  class="img-responsive" style="margin-top:-55px" alt="用户头像" width="110px" height="100px"></div>
+        </div>
+    </div>
+</div>
+<!--头部内容区结束-->
+<!--中间内容区开始-->
+<br/>
+<div class="container track_adjust">
+    <!--<div class="row">-->
+    <!--<div class="col-xs-12">-->
+    <!--<h3>共有记录：4条</h3>-->
+    <!--</div>-->
+    <!--</div>-->
+    <!--按钮区结束-->
+    <!-- <br/> -->
+    <!--图片区开始-->
+
+    <div class="show_box">
+        <div class="row clearfix mar-tp25" style="height:10px;background-color: #ECECEC;"></div>
+        <div class="row mar-tp25">
+            <!--测试-->
+            <div class="col-xs-3  ">
+                <a tabindex="0" style="outline: none" role="button" data-toggle="popover" data-trigger="focus"  title="陈文丽的信息" data-content="姓名：陈文丽
+            地址：广东省茂名市敬老路12号
+            电话：13543322588">
+                    <img src="/Public/images/manpic.jpg" class="img-responsive img-circle" alt="头像">
+                </a>
+            </div>
+            <div class="col-xs-9 track_title">
+                <div class="">
+                    <h4>teach1</h4>
+                    <!--<h4>甲乙丙</h4>-->
+                    <p class="ul_li tp15">2017-03-11 11:57:51</p>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+
+            <div class="col-xs-12">
+                <h4>123</h4>
+                <!--<h4>测试123456789，测试123456789，测试123456789，测试123456789，测试123456789！！</h4>-->
+            </div>
+        </div>
+        <div class="row tp5">
+            <div class="col-xs-12">
+            </div>
+            <!-- <img src="/Public/Uploads/" class="img-responsive"> -->
+        </div>
+        <div class="row">
+            <div class="col-xs-12 tp15 track_btn">
+                <button type="button" class="btn btn-default btn-sm dianzan" id="12084dianzan">
+                    <span class="glyphicon glyphicon-heart" aria-hidden="true"></span>
+                    <span class="dianzan_num">1</span>
+                </button>
+                <a role="button" class="btn btn-default btn-sm reply" id="12084" onClick="showdiv('contentid239','showtext239')" id="showtext239">
+                    <i class="icon-comment"></i>
+                    <span class="publish_num" id="publish_num12084">0</span>
+                </a>
+                <a type="button" class="btn btn-default btn-sm  delete_btn" id="239">
+                    删除
+                </a>
+            </div>
+        </div>
+
+        <div class="row pa10" id="show_comments">
+
+            <div class="col-xs-12 pa0 tp10">
+                <div class="col-xs-12 pa0 show_div" id="show_div12084" style="display: none;">
+                    <script id="container12084" name="content" type="text/plain" style="width:100%;height:60px;"></script>
+                    <div class="float-fr tp5">
+                        <a role="button" class="btn_style btn btn-success publish" >评论</a>
+                    </div>
+                    <div class="inner_box" id="inner_box12084">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div><div class="show_box">
+    <div class="row clearfix mar-tp25" style="height:10px;background-color: #ECECEC;"></div>
+    <div class="row mar-tp25">
+        <!--测试-->
+        <div class="col-xs-3  ">
+            <a tabindex="0" style="outline: none" role="button" data-toggle="popover" data-trigger="focus"  title="陈文丽的信息" data-content="姓名：陈文丽
+            地址：广东省茂名市敬老路12号
+            电话：13543322588">
+                <img src="/Public/images/manpic.jpg" class="img-responsive img-circle" alt="头像">
+            </a>
+        </div>
+        <div class="col-xs-9 track_title">
+            <div class="">
+                <h4>teach1</h4>
+                <!--<h4>甲乙丙</h4>-->
+                <p class="ul_li tp15">2017-03-08 17:06:59</p>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+
+        <div class="col-xs-12">
+            <h4>吃饭时间到了!!</h4>
+            <!--<h4>测试123456789，测试123456789，测试123456789，测试123456789，测试123456789！！</h4>-->
+        </div>
+    </div>
+    <div class="row tp5">
+        <div class="col-xs-12">
+        </div>
+        <!-- <img src="/Public/Uploads/" class="img-responsive"> -->
+    </div>
+    <div class="row">
+        <div class="col-xs-12 tp15 track_btn">
+            <button type="button" class="btn btn-default btn-sm dianzan" id="12082dianzan">
+                <span class="glyphicon glyphicon-heart" aria-hidden="true"></span>
+                <span class="dianzan_num">1</span>
+            </button>
+            <a role="button" class="btn btn-default btn-sm reply" id="12082" onClick="showdiv('contentid238','showtext238')" id="showtext238">
+                <i class="icon-comment"></i>
+                <span class="publish_num" id="publish_num12082">1</span>
+            </a>
+            <a type="button" class="btn btn-default btn-sm  delete_btn" id="238">
+                删除
+            </a>
+        </div>
+    </div>
+
+    <div class="row pa10" id="show_comments">
+
+        <div class="col-xs-12 pa0 tp10">
+            <div class="col-xs-12 pa0 show_div" id="show_div12082" style="display: none;">
+                <script id="container12082" name="content" type="text/plain" style="width:100%;height:60px;"></script>
+                <div class="float-fr tp5">
+                    <a role="button" class="btn_style btn btn-success publish" >评论</a>
+                </div>
+                <div class="inner_box" id="inner_box12082">
+                    <div class="col-xs-12 pa0 tp15 inner_reply">
+                        <a class="pull-left inner_icon">
+                            <img src="/Public/images/manpic.jpg" onerror="javascript:this.src='/Public/images/manpic.jpg';">
+                        </a>
+                        <div class="inner_content">
+                            <span>teach1：</span><img src="http://img.baidu.com/hi/jx2/j_0014.gif" _src="http://img.baidu.com/hi/jx2/j_0014.gif"/>                                            </div>
+                        <a role="button" class="btn btn-link pull-right inner_del" id="del528">删除</a>
+                        <a type="button" class="btn btn-link pull-right  reply_comment" id="528">
+                            回复
+                        </a>
+                        <div class="col-xs-12 pa0 show_div" id="show_div528" style="display: none;">
+                            <script id="container528" name="content" type="text/plain" style="width:100%;height:60px;"></script>
+                            <div class="float-fr tp5">
+                                <a role="button" class="btn_style btn btn-success reply_comment_publish" >回复</a>
+                            </div>
+                            <div class="inner_box" id="inner_box528">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-xs-12" style="margin:10px 0; border-bottom: 2px #ccc dashed;"></div>                            </div>
+            </div>
+        </div>
+
+    </div>
+</div><div class="show_box">
+    <div class="row clearfix mar-tp25" style="height:10px;background-color: #ECECEC;"></div>
+    <div class="row mar-tp25">
+        <!--测试-->
+        <div class="col-xs-3  ">
+            <a tabindex="0" style="outline: none" role="button" data-toggle="popover" data-trigger="focus"  title="陈文丽的信息" data-content="姓名：陈文丽
+            地址：广东省茂名市敬老路12号
+            电话：13543322588">
+                <img src="/Public/images/manpic.jpg" onerror="javascript:this.src='/Public/images/manpic.jpg';"class="img-responsive img-circle" alt="头像">
+            </a>
+        </div>
+        <div class="col-xs-9 track_title">
+            <div class="">
+                <h4>teach1</h4>
+                <!--<h4>甲乙丙</h4>-->
+                <p class="ul_li tp15">2016-11-11 10:22:52</p>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+
+        <div class="col-xs-12">
+            <h4>咩咩</h4>
+            <!--<h4>测试123456789，测试123456789，测试123456789，测试123456789，测试123456789！！</h4>-->
+        </div>
+    </div>
+    <div class="row tp5">
+        <div class="col-xs-12">
+        </div>
+        <!-- <img src="/Public/Uploads/" class="img-responsive"> -->
+    </div>
+    <div class="row">
+        <div class="col-xs-12 tp15 track_btn">
+            <button type="button" class="btn btn-default btn-sm dianzan" id="12071dianzan">
+                <span class="glyphicon glyphicon-heart" aria-hidden="true"></span>
+                <span class="dianzan_num">2</span>
+            </button>
+            <a role="button" class="btn btn-default btn-sm reply" id="12071" onClick="showdiv('contentid237','showtext237')" id="showtext237">
+                <i class="icon-comment"></i>
+                <span class="publish_num" id="publish_num12071">1</span>
+            </a>
+            <a type="button" class="btn btn-default btn-sm  delete_btn" id="237">
+                删除
+            </a>
+        </div>
+    </div>
+
+    <div class="row pa10" id="show_comments">
+
+        <div class="col-xs-12 pa0 tp10">
+            <div class="col-xs-12 pa0 show_div" id="show_div12071" style="display: none;">
+                <script id="container12071" name="content" type="text/plain" style="width:100%;height:60px;"></script>
+                <div class="float-fr tp5">
+                    <a role="button" class="btn_style btn btn-success publish" >评论</a>
+                </div>
+                <div class="inner_box" id="inner_box12071">
+                    <div class="col-xs-12 pa0 tp15 inner_reply">
+                        <a class="pull-left inner_icon">
+                            <img src="/Public/images/manpic.jpg" onerror="javascript:this.src='/Public/images/manpic.jpg';">
+                        </a>
+                        <div class="inner_content">
+                            <span>teach2：</span><img src="http://img.baidu.com/hi/jx2/j_0003.gif" _src="http://img.baidu.com/hi/jx2/j_0003.gif"/>                                            </div>
+                        <a role="button" class="btn btn-link pull-right inner_del" id="del521">删除</a>
+                        <a type="button" class="btn btn-link pull-right  reply_comment" id="521">
+                            回复
+                        </a>
+                        <div class="col-xs-12 pa0 show_div" id="show_div521" style="display: none;">
+                            <script id="container521" name="content" type="text/plain" style="width:100%;height:60px;"></script>
+                            <div class="float-fr tp5">
+                                <a role="button" class="btn_style btn btn-success reply_comment_publish" >回复</a>
+                            </div>
+                            <div class="inner_box" id="inner_box521">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-xs-12" style="margin:10px 0; border-bottom: 2px #ccc dashed;"></div>                            </div>
+            </div>
+        </div>
+
+    </div>
+</div><div class="show_box">
+    <div class="row clearfix mar-tp25" style="height:10px;background-color: #ECECEC;"></div>
+    <div class="row mar-tp25">
+        <!--测试-->
+        <div class="col-xs-3  ">
+            <a tabindex="0" style="outline: none" role="button" data-toggle="popover" data-trigger="focus"  title="陈文丽的信息" data-content="姓名：陈文丽
+            地址：广东省茂名市敬老路12号
+            电话：13543322588">
+                <img src="/Public/images/manpic.jpg" onerror="javascript:this.src='/Public/images/manpic.jpg';"class="img-responsive img-circle" alt="头像">
+            </a>
+        </div>
+        <div class="col-xs-9 track_title">
+            <div class="">
+                <h4>teach1</h4>
+                <!--<h4>甲乙丙</h4>-->
+                <p class="ul_li tp15">2016-11-11 10:20:58</p>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+
+        <div class="col-xs-12">
+            <h4>测试
+                啦啦啦啦啦啦啦啦啦啦啦啦啦</h4>
+            <!--<h4>测试123456789，测试123456789，测试123456789，测试123456789，测试123456789！！</h4>-->
+        </div>
+    </div>
+    <div class="row tp5">
+        <div class="col-xs-12">
+        </div>
+        <!-- <img src="/Public/Uploads/" class="img-responsive"> -->
+    </div>
+    <div class="row">
+        <div class="col-xs-12 tp15 track_btn">
+            <button type="button" class="btn btn-default btn-sm dianzan" id="12070dianzan">
+                <span class="glyphicon glyphicon-heart" aria-hidden="true"></span>
+                <span class="dianzan_num">1</span>
+            </button>
+            <a role="button" class="btn btn-default btn-sm reply" id="12070" onClick="showdiv('contentid236','showtext236')" id="showtext236">
+                <i class="icon-comment"></i>
+                <span class="publish_num" id="publish_num12070">1</span>
+            </a>
+            <a type="button" class="btn btn-default btn-sm  delete_btn" id="236">
+                删除
+            </a>
+        </div>
+    </div>
+
+    <div class="row pa10" id="show_comments">
+
+        <div class="col-xs-12 pa0 tp10">
+            <div class="col-xs-12 pa0 show_div" id="show_div12070" style="display: none;">
+                <script id="container12070" name="content" type="text/plain" style="width:100%;height:60px;"></script>
+                <div class="float-fr tp5">
+                    <a role="button" class="btn_style btn btn-success publish" >评论</a>
+                </div>
+                <div class="inner_box" id="inner_box12070">
+                    <div class="col-xs-12 pa0 tp15 inner_reply">
+                        <a class="pull-left inner_icon">
+                            <img src="/Public/images/manpic.jpg" onerror="javascript:this.src='/Public/images/manpic.jpg';">
+                        </a>
+                        <div class="inner_content">
+                            <span>teach2：</span><img src="http://img.baidu.com/hi/jx2/j_0012.gif" _src="http://img.baidu.com/hi/jx2/j_0012.gif"/>                                            </div>
+                        <a role="button" class="btn btn-link pull-right inner_del" id="del522">删除</a>
+                        <a type="button" class="btn btn-link pull-right  reply_comment" id="522">
+                            回复
+                        </a>
+                        <div class="col-xs-12 pa0 show_div" id="show_div522" style="display: none;">
+                            <script id="container522" name="content" type="text/plain" style="width:100%;height:60px;"></script>
+                            <div class="float-fr tp5">
+                                <a role="button" class="btn_style btn btn-success reply_comment_publish" >回复</a>
+                            </div>
+                            <div class="inner_box" id="inner_box522">
+                                <div class="col-xs-12 pa0 tp15 inner_reply">
+                                    <a class="pull-left inner_icon">
+                                        <img src="/Public/images/manpic.jpg" onerror="javascript:this.src='/Public/images/manpic.jpg';">
+                                    </a>
+                                    <div class="inner_content">
+                                        <span>teach1：</span><img src="http://img.baidu.com/hi/jx2/j_0071.gif" _src="http://img.baidu.com/hi/jx2/j_0071.gif"/>                                                            </div>
+                                    <a role="button" class="btn btn-link pull-right reply_del" id="del242">删除</a>
+                                </div>
+                                <div class="col-xs-12" style="margin:10px 0; border-bottom: 2px #ccc dashed;"></div>                                                </div>
+                        </div>
+                    </div>
+
+                    <div class="col-xs-12" style="margin:10px 0; border-bottom: 2px #ccc dashed;"></div>                            </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+    <!--测试-->
+    <div class="row">
+        <div class="col-xs-12 text-center"> <ul class="pagination"><li><span>1/1 页</span></li>          </ul></div>
+    </div>
+    <!--图片区结束-->
+
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <!--底部内容区开始-->
+    <div class="hide btn-group btn-group-justified navbar-fixed-bottom type_t" id="back" role="group" aria-label="主页-后退">
+        <a href="/index.php?m=Teacher&c=Index&a=index" class="btn btn-lg t_button" role="button"> <span class="glyphicon glyphicon-home"></span> 主页</a>
+        <a href="/index.php?m=Teacher&c=MyClass&a=index" class="btn btn-lg t_button" role="button"> <span class="glyphicon glyphicon-share-alt"></span> 后退</a>
+    </div>    
+    <!--底部内容区结束-->
+</div>
+
+<!--模态框-->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+            </div>
+            <div class="modal-body">
+                ...
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Save changes</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!--模态框-->
+
+<!---内容区结束---->
+<script type="text/javascript" src="/Public/umeditor/umeditor.config.js"></script>
+<script type="text/javascript" src="/Public/umeditor/umeditor.min.js"></script>
+<script type="text/javascript" src="/Public/umeditor/lang/zh-cn/zh-cn.js"></script>
+<script>
+    $(function () {
+        $('[data-toggle="popover"]').popover()
+    })
+
+    var group_id = "1";
+    if (group_id == 2) {
+        $('.btn_style').removeClass('btn-success').addClass("btn-warning");
+        $(".select_bow").css("display", "none");
+        var back_btn = "";
+        back_btn = back_btn + "<a href='/index.php?m=Student&c=Index&a=index' class='btn btn-lg btn-warning' role='button'>" +
+            "<span class='glyphicon glyphicon-home'>" + "</span>" + "主页" + "</a>" +
+            "<a href='/index.php?m=Student&c=MyClass&a=index'  class='btn btn-lg btn-warning' role='button'>" +
+            "<span class='glyphicon glyphicon-share-alt'>" + "</span>" + " 后退" + "</a>";
+        $("#back").html(back_btn);
+    }
+
+    /*删除发表内容*/
+    $('.delete_btn').click(function(){
+        var id=$(this).attr('id');
+        console.log(id)
+        var _this=$(this);
+        if(confirm("是否删除评论！")){
+            $.ajax({
+                type:'GTE',
+                url:"/index.php?m=Teacher&c=MyClass&a=delMessage&id="+id,
+                dataType:'json',
+                success:function(data){
+                    _this.parents('.show_box').remove();
+                    alert("删除成功！");
+
+                }
+            })
+        }
+    })
+    function showdiv(targetid, objN) {
+        var target = document.getElementById(targetid);
+        var clicktext = document.getElementById(objN);
+        if (target.style.display == "block") {
+            target.style.display = "none";
+        } else {
+            target.style.display = "block";
+        }
+    }
+    $(document).ready(function() {
+
+        // 评论
+        $("body").delegate("a.reply", "click", function() {
+            var editor;
+            var id = $(this).attr("id");
+            var dd = document.getElementById("show_div" + id);
+            if(dd.style.display == "block") {
+                dd.style.display = "none";
+                editor = null;
+            } else {
+                dd.style.display = "block";
+                editor = UM.getEditor('container'+id, {
+                    toolbar: ['emotion']
+                });
+                return editor;
+            }
+        });
+        // 评论回复
+        $("body").delegate("a.reply_comment", "click", function() {
+            var editor;
+            var id = $(this).attr("id");
+            var dd = document.getElementById("show_div" + id);
+            if(dd.style.display == "block") {
+                dd.style.display = "none";
+                editor = null;
+            } else {
+                dd.style.display = "block";
+                editor = UM.getEditor('container'+id, {
+                    toolbar: ['emotion']
+                });
+                return editor;
+            }
+        });
+        var data_data = function() {};
+        $(".checkpinlun").on("click", function() {
+            var id = $(this).attr("id");
+            id = id.replace("pinlun", "");
+            var parentDiv = $(this).parents(".msgdiv")[0];
+            var checkpinlunk = $(parentDiv).find(".checkpinlunk")[0];
+            $(checkpinlunk).html("");
+            var displaycss = $(checkpinlunk).css("display");
+            if (displaycss == "none") {
+                $(checkpinlunk).css("display", "block");
+                $.ajax({
+                    type: 'GET',
+                    url: "index.php?m=Teacher&c=MyClass&a=Commentspl&id=" + id,
+                    dataType: "json",
+                    success: function(data) {
+                        var ul = document.createElement("ul");
+                        for (var i = 0; i < data.length; i++) {
+                            var id = data[i].id;
+                            var msgid = data[i].ms_id;
+                            var pinlun = data[i].content;
+                            var pinlunren = data[i].name;
+                            var li = document.createElement("li");
+                            $(li).html("<span>" + pinlunren + ':' + pinlun + "</span>");
+                            $(ul).append(li);
+                        }
+                        $(checkpinlunk).append(ul);
+                    },
+                    error: function(e, xhl, dd) {
+                        alert("err");
+                    }
+                });
+            } else {
+                $(checkpinlunk).css("display", "none");
+            }
+        })
+        $(".dianzan").on("click", function() {
+            var id = $(this).attr("id");
+            id = id.replace("dianzan", "");
+            var pDiv = $(this).parent();
+            var dianzan = $(pDiv).find(".dianzan_num")[0];
+            $.ajax({
+                type: 'GET',
+                url: "index.php?m=Teacher&c=MyClass&a=Thumbup&id=" + id,
+                dataType: "json",
+                success: function(data) {
+                    if (data == 0) {
+                        alert("你已经点赞！");
+                    } else {
+                        $(dianzan).text(data);
+                    }
+                },
+                error: function(e, xhl, dd) {
+                    alert("err");
+                }
+            });
+        })
+        $("body").delegate("a.publish", "click", function() {
+
+            var id = $(this).parents(".show_div").attr("id").substring(8);
+
+            var inner_um = UM.getEditor('container' + id);
+            var comment = inner_um.getContent();
+            var reg = /<p>/g;
+            if(reg.test(comment)) {
+                comment = comment.replace("<p>","").replace("</p>","");
+            }
+            comment = $.trim(comment.replace(/&nbsp;/g," "));
+
+            if(comment.length == 0) {
+                alert("内容不能为空");
+            } else {
+                var data = new data_data();
+                data.comment = comment;
+                data.resource_id = id;
+                if (confirm("是否评论？")) {
+                    $.ajax({
+                        type: 'GET',
+                        data: data,
+                        url: "index.php?m=Teacher&c=MyClass&a=Comments",
+                        dataType: "json",
+                        success: function(data) {
+                            if (data != "") {
+                                var user_name=data[0].phone;
+                                var comments_content=data[0].comments_content;
+                                var comments_id=data[0].comments_id;
+                                var face=data[0].face;
+                                var inner='<div class="col-xs-12 pa0 tp15 inner_reply"><a class="pull-left inner_icon">' +
+                                    '<img src="/Public/'+face+'"></a><div class="inner_content">' +
+                                    '<span>'+user_name+'：</span>'+comment+'</div>' +
+                                    '<a role="button" class="btn btn-link pull-right inner_del" id="del'+comments_id+'">删除</a></div>' +
+                                    '<div class="col-xs-12" style="margin:10px 0; border-bottom: 2px #ccc dashed;"></div>	';
+                                fn_reply("#inner_box"+id,inner);
+                                var publish_num=$('#publish_num'+id).text();
+                                $('#publish_num'+id).text( parseInt(publish_num)+1);
+                                inner_um.setContent("");
+                            } else {
+                                alert("error");
+                            }
+                        },
+                        error: function(e, xhl, dd) {
+                            alert("error");
+                        }
+                    });
+                }
+            }
+        });
+        $("body").delegate("a.reply_comment_publish", "click", function() {
+            var id = $(this).parents(".show_div").attr("id").substring(8);
+            var inner_um = UM.getEditor('container' + id);
+            var comment = inner_um.getContent();
+            var reg = /<p>/g;
+            if(reg.test(comment)) {
+                comment = comment.replace("<p>","").replace("</p>","");
+            }
+            comment = $.trim(comment.replace(/&nbsp;/g," "));
+            console.log(comment);
+            if(comment.length == 0) {
+                alert("内容不能为空");
+            } else {
+                var data = new data_data();
+                data.comment = comment;
+                data.resource_id = id;
+                if (confirm("是否评论？")) {
+                    $.ajax({
+                        type: 'GET',
+                        data: data,
+                        url: "index.php?m=Teacher&c=MyClass&a=CommentReply",
+                        dataType: "json",
+                        success: function(data) {
+                            if (data != "") {
+                                var user_name=data[0].phone;
+                                var content=data[0].content;
+                                var reply_id=data[0].reply_id;
+                                var face=data[0].face;
+                                var inner='<div class="col-xs-12 pa0 tp15 inner_reply"><a class="pull-left inner_icon">' +
+                                    '<img src="/Public/'+face+'"></a><div class="inner_content">' +
+                                    '<span>'+user_name+'：</span>'+comment+'</div>' +
+                                    '<a role="button" class="btn btn-link pull-right reply_del" id="del'+reply_id+'">删除</a></div>' +
+                                    '<div class="col-xs-12" style="margin:10px 0; border-bottom: 2px #ccc dashed;"></div>	';
+                                fn_reply("#inner_box"+id,inner);
+                                inner_um.setContent("");
+                            } else {
+                                alert("error");
+                            }
+                        },
+                        error: function(e, xhl, dd) {
+                            alert("error");
+                        }
+                    });
+                }
+            }
+        });
+        // 回复按钮函数
+        function fn_reply(id_name,inner) {
+            if($(id_name+">div").length !=0) {
+                $(id_name+">div:first-child").before(inner);
+            } else {
+                $(id_name).append(inner);
+            }
+        }
+
+        // 删除按钮事件
+        $("body").delegate("a.inner_del","click",function() {
+            var id = $(this).attr("id").substring(3);
+//            console.log(id);
+            if(confirm("是否删除回复？")) {
+                $.ajax({
+                    type: "GET",
+                    url: "index.php?m=Teacher&c=MyClass&a=delComment&id="+id,
+                    dataType: "json",
+                    success: function(data) {
+                        if(data!=""){
+                            alert("删除成功");
+                        }
+                    },
+                    error: function(e) {
+                        alert("error");
+                    }
+                });
+                $(this).parent().hide();
+            }
+        });
+        $("body").delegate("a.reply_del","click",function() {
+            var id = $(this).attr("id").substring(3);
+//            console.log(id);
+            if(confirm("是否删除回复？")) {
+                $.ajax({
+                    type: "GET",
+                    url: "index.php?m=Teacher&c=MyClass&a=delReply&id="+id,
+                    dataType: "json",
+                    success: function(data) {
+                        if(data!=""){
+                            alert("删除成功");
+                        }
+                    },
+                    error: function(e) {
+                        alert("error");
+                    }
+                });
+                $(this).parent().hide();
+            }
+        });
+//        $(".publish").on("click", function() {
+//            var id = $(this).attr("id");
+//            id = id.replace("publish", "");
+//            var parentDiv = $(this).parents(".msgdiv")[0];
+//            var publish_num = $(parentDiv).find(".publish_num")[0];
+//            var pDiv = $(this).parent();
+//            //            var publish=$(pDiv).find("span")[2];
+//            var contents = $(pDiv).find(".contents");
+//            var content = contents.val();
+//            var data = new data_data();
+//            data.id = id;
+//            data.content = content;
+//            $.ajax({
+//                type: 'GET',
+//                data: data,
+//                url: "index.php?m=Teacher&c=MyClass&a=Comments",
+//                dataType: "json",
+//                success: function(data) {
+//                    alert("评论成功！");
+//                    $(publish_num).text(data);
+//                    $(contents).val("");
+//                },
+//                error: function(e, xhl, dd) {
+//                    alert("err");
+//                }
+//            });
+//        })
+    })
+</script>

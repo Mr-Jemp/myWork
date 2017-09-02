@@ -1,0 +1,151 @@
+@charset "UTF-8";
+/*  测试用-start  */
+.B {
+    border: 1px #000 solid;
+}
+/*  测试用-end  */
+
+/* 复位用 */
+[class^='col-'] {
+    padding-right: 10px;
+    padding-left: 10px;
+}
+
+a:focus,
+a:hover,
+.btn-link:focus,
+.btn-link:hover {
+    cursor: pointer;
+    text-decoration: none;
+}
+/* 复位用-end */
+
+/* 顶部导航栏 */
+.teachPlanIndex_header {
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 40px;
+
+    text-align: center;
+
+    color: #fff;
+    background-color: #58c399;
+}
+
+.teachPlanIndex_header > i {
+    line-height: 30px;
+
+    position: absolute;
+    top: 5px;
+
+    width: 30px;
+}
+
+.teachPlanIndex_header > i:first-child {
+    left: 0;
+}
+
+.teachPlanIndex_header > i:last-child {
+    right: 5px;
+}
+
+/* 搜索框 */
+.searchBox {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+/* 选项卡 */
+.tabBox li {
+    line-height: 30px;
+
+    display: inline-block;
+
+    padding: 0 10px;
+
+    list-style: none;
+
+    border: 1px #fff solid;
+    border-radius: 5px;
+}
+
+.tabBox li.active {
+    color: #fff;
+    background-color: #58c399;
+}
+
+/* 内容列表 */
+.contentBox {
+    margin-top: 10px;
+}
+
+.contentBody {
+    display: block;
+
+    padding-right: 65px;
+    padding-left: 10px;
+
+    border: 1px #a0a0a0 solid;
+    border-bottom: none;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+.contentBody p {
+    overflow: hidden;
+
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    word-break: keep-all;
+
+    font-size: 14px;
+
+    margin-top: 15px;
+    margin-bottom: 0;
+    color: #000;
+}
+
+.contentBody p span {
+    position: absolute;
+    right: 20px;
+    top: 17px;
+}
+
+.contentFooter {
+    border: 1px #a0a0a0 solid;
+    border-top: none;
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+
+.contentFooterBody {
+    text-align: center;
+}
+
+.contentFooterBody button,
+.contentFooterBody a {
+    font-size: 13px;
+
+    color: #000;
+}
+
+.contentFooterBody button i,
+.contentFooterBody a i {
+    color: #f5ca14;
+}
+
+/* 分页 */
+
+nav {
+    text-align: center;
+}
+
+.pagination > .active > a,
+.pagination > .active > a:focus,
+.pagination > .active > a:hover,
+.pagination > .active > span,
+.pagination > .active > span:focus,
+.pagination > .active > span:hover {
+    border-color: #e9be00;
+    background-color: #e9be00;
+}

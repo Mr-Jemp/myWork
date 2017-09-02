@@ -1,0 +1,62 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>文件上传</title>
+</head>
+<body>
+		<form enctype="multipart/form-data" id="form1" method="post" action="">  
+		
+			<input type="file" name="fileName" multiple="multiple" id="input1">
+		<!-- <button type="submit+">提交</button> -->
+		<input  type="submit" class="sumbit" value="提交"/>
+	</form>
+	
+	<button onclick='$(".sumbit").prev().click();'>选择照片</button>
+	
+	
+	<button class="tijiao">按钮提交</button>
+	
+</body>
+<script type="text/javascript" src="js/jquery-1.12.4.min.js"></script>
+<script type="text/javascript">
+
+	$("form").on("change",$(".sumbit").prev(),function(){
+		var newInput=$('<input type="file" name="fileName" multiple="multiple">');
+		$(".sumbit").before(newInput);		
+	})
+	
+	$(".tijiao").click(function(){
+		$(".sumbit").prev().remove();
+		
+		$(".sumbit").click()
+
+	
+	})
+	$("form").on("submit",function(e){
+		console.log(524)
+		
+		 $("#form1").ajaxSubmit({
+		  url:"http://192.168.0.21:20883/uploadXCSPService/upload?describes=13&album_id=1&class_id=1&is_pic=0",
+		  type:"POST",
+		  //date:"upfile=upfile",
+		  success:function(response){
+		  alert(response);
+		
+		  },
+		  error:function(msg){
+		  alert("出错了");
+		  }
+		 });
+
+		
+		
+	})
+
+
+</script>
+</html>
+
+
+
+

@@ -1,0 +1,92 @@
+<!-- 
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>数字社区-教师端发表说说</title>
+    <link href="/Public/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css"> -->
+    <link href="/Public/Css/jscss.css" rel="stylesheet" type="text/css">
+    <!--[if lt IE 9]>
+    <script src="//cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="//cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <link href="/Public/Css/teacher.css" rel="stylesheet" type="text/css"> <!-- </head>
+    
+    <body style="background-color:fff"> -->
+<!---内容区开始---->
+<div class="container">
+    <!--标题头-->
+    <div class="row ">
+        <form action="/index.php?m=Teacher&c=MyClass&a=ListAddTalkNotice" method="post" enctype="multipart/form-data">
+            <div class="col-xs-12 topbg">
+                <div class="col-xs-3"><a class="btn btn-default" href="/index.php?m=Teacher&c=MyClass&a=ListTrack" role="button">&nbsp;&nbsp;&nbsp;取&nbsp;消&nbsp;&nbsp;&nbsp;</a></div>
+                <div class="col-xs-6">
+                    <h3 class="text-center">足迹</h3>
+                </div>
+                <div class="col-xs-3">
+                    <div class="pull-right">
+                        <button type="submit" class="btn btn-default">&nbsp;&nbsp;&nbsp;发&nbsp;表&nbsp;&nbsp;&nbsp;</button>
+                    </div>
+                </div>
+            </div>
+            <!--说说输入内容区体-->
+            <div class="col-xs-12">
+                <div class="panel panel-default">
+                    <div class="panel-body" style="font-size:20px">
+                        <textarea class="talk-notice" name="content" id="contents" placeholder="说点什么吧..." autofocus></textarea>
+                        <div style="margin:0px 20px">
+                            <!-- <div>
+                                <a href="#" role="button">
+                                    <input style="font-size: 16px;margin-right: 0px;" id="pic" type="file" name="pic">
+                                </a>
+                            </div> -->
+                            <div class="row">
+                                <hr/>
+                                <div class="col-xs-6"></div>
+                                <div class="col-xs-6 text-right">
+                                    <a href="#"></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+    <!--所有人看见-->
+    <!--container-->
+</div>
+<!--底部内容区开始-->
+<div class="hide btn-group btn-group-justified navbar-fixed-bottom type_t" role="group" aria-label="主页-后退">
+    <a href="/index.php?m=Teacher&c=Index&a=index" id="back" class="btn btn-lg t_button" role="button"> <span class="glyphicon glyphicon-home"></span> 主页</a>
+    <a href="javascript:history.go(-1)" class="btn btn-lg t_button" role="button"> <span class="glyphicon glyphicon-share-alt"></span> 后退</a>
+</div>
+<!--底部内容区结束-->
+<!---内容区结束---->
+<!-- <script type="text/javascript" src="/Public/jQuery/jquery.min.js"></script> -->
+<script src="/Public/bootstrap/js/bootstrap.min.js"></script>
+<script>
+    $(document).ready(function() {
+        var user_group='1';
+        if(user_group==2){
+            $('#back').attr('href',"/index.php?m=Student&c=Index&a=index");
+            $('.t_button').removeClass('t_button').addClass('x_button');
+        }
+        var data_content = function() {};
+        $("#submit").on("click", function() {
+            $.post("/index.php?m=Teacher&c=MyClass&a=ListAddTalkNotice",{content: $("#contents").val(),pic: $("#pic").val()},function(data){
+                console.log(data);
+                if (data == 1) {
+                    alert("发表成功！");
+                    location.href="/index.php?m=Teacher&c=MyClass&a=ListTrack";
+                } else {
+                    alert("操作出错！");
+                }
+
+            });
+        })
+    })
+</script>

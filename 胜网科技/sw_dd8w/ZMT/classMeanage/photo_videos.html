@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
+		<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css"/>
+		<link rel="stylesheet" type="text/css" href="css/photo.css"/>
+	</head>
+	<body>
+		
+		<!--罗列照片-->
+		<div class="photos_list">
+			<!--<p class="time">2017/5/<span>18</span></p>
+			<ul class="row">
+				<li class="col-xs-4 col-lg-2 col-md-3 col-sm-3">
+					<video src="images/a0179zkbnu2m701.mp4" controls="controls" alt="" /></video>
+					<span class="longTime">0.50</span>
+				</li>
+			</ul>-->
+		</div>
+		
+		<div class="bottomLine row">
+  				<p class="col-xs-4"></p>
+  				<p class="col-xs-4" style="border: 0;line-height: 0;">我是有底线的</p>
+  				<p class="col-xs-4"></p>
+  			</div>
+	</body>
+	<script type="text/javascript" src="js/jquery-1.12.4.min.js" ></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/publicJs.js" ></script>
+	<script type="text/javascript" src="js/photo.js"></script>
+	<script type="text/javascript">
+	
+		//渲染视频
+		
+		$.ajax({
+			type:"get",
+			url:"http://192.168.0.21:20883/classAlbumService/dataGridTypeSP?class_id=1",
+			async:true,
+			success:function(data){
+				console.log(data);
+				
+				for(var i in data){
+				console.log(i);
+				var newI=i.split("-");
+				var newP=$('<p class="time">'+newI[0]+"/"+newI[1]+'/<span>'+newI[2]+'</span></p>');
+				$(".photos_list").append(newP);
+				var newUl=$('<ul class="row"></ul>');
+				$(".photos_list").append(newUl);
+				
+				for(var j=0;j<data[i].length;j++){
+
+					var newLi=$('<li class="col-xs-4 col-lg-2 col-md-3 col-sm-3">'
+								+'<video controls="controls" src="http://192.168.0.21:8000/'+data[i][j].file_url+'"/></video>'
+							  +'</li>')
+					newUl.append(newLi);
+				}
+			}
+				
+				
+			},
+			error:function(){
+				console.log("错误")
+			}
+		});
+	
+	</script>
+</html>

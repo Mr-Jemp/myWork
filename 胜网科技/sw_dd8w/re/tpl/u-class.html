@@ -1,0 +1,183 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>上传资源</title>
+    <meta name="viewport"
+          content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no,minimal-ui">
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"/>
+    <meta http-equiv="Access-Control-Allow-Origin" content="*">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <script src="./js/jquery-3.1.1.min.js"></script>
+    <script src="./js/bootstrap.min.js"></script> -->
+    <link rel="stylesheet" href="/css/re_public.css">
+    <link rel="stylesheet" href="/css/re_upfile_des.css">
+<!-- </head>
+<body> -->
+<div class="re_upfile_top">
+    <span class="top-return" onclick="javascript:history.go(-1);"></span>
+    上传资源
+</div>
+<ul class="re_type_list">
+    <li class="s_grade">班级<span></span></li>
+    <li class="s_subject">科目<span></span></li>
+    <li class="s_material">教材<span></span></li>
+    <li class="s_chapter">章节内容<span></span></li>
+</ul>
+<div class="re_upfile_from">
+    <h4 class="re_upfile_title">上传视频文件</h4>
+    <div class="re_upfile_block">
+        <p>上传视频文件</p>
+    </div>
+    <div class="re_uf_bldes">
+        限制大小为：400MB<br />（格式:mp4,flv,avi,rmvb,3gp,mpeg,swf ）
+    </div>
+</div>
+
+<div class="re_upfile_from" style="margin-bottom: 0px;">
+    <h4 class="re_upfile_title">优课标题</h4>
+    <div class="re_uf_style">
+        <input type="text" value="" placeholder="请输入优课标题，字数最多22个">
+    </div>
+    <h4 class="re_upfile_title">内容说明</h4>
+    <div class="re_uf_style">
+        <textarea rows="4" placeholder="请输入视频内容说明，字数最多150个"></textarea>
+    </div>
+    <h4 class="re_upfile_title">添加标签</h4>
+    <div class="re_uf_style">
+        <input type="text" value="" placeholder="每个标签用空格分隔，标签最多5个，每个标签的字数最多8个">
+    </div>
+</div>
+<div class="re_upfile_from re_uf_power">
+    <h4 class="re_upfile_title">权限设置</h4>
+    <div class="re_uf_rblock">
+        <div class="re_uf_radio"><input type="radio" name="power">原创</div>
+        <div class="re_uf_radio"><input type="radio" name="power">转载</div>
+    </div>
+    <h4 class="re_upfile_title">分享设置<span>（私人使用无法被其他用户搜索，只能通过链接地址查看）</span></h4>
+    <div class="re_uf_rblock">
+        <div class="re_uf_radio"><input type="radio" name="power_type">本校分享</div>
+        <div class="re_uf_radio"><input type="radio" name="power_type">公开分享</div>
+        <div class="re_uf_radio"><input type="radio" name="power_type">私人使用</div>
+    </div>
+</div>
+<ul class="re_type_list">
+    <li>课程类型<span></span></li>
+    <li>课程难度<span></span></li>
+</ul>
+<div class="re_upfile_from mb0">
+    <h4 class="re_upfile_title">上传附件文档</h4>
+    <div class="re_upfile_block">
+        <p>上传文档文件</p>
+    </div>
+    <div class="re_uf_bldes">
+        最多可上传５个文件
+    </div>
+    <h4 class="re_upfile_title">上传视频封面</h4>
+    <div class="re_upfile_block">
+        <p>上传视频封面图片</p>
+    </div>
+    <div class="re_uf_bldes">
+        上传视频封面图片
+    </div>
+</div>
+<div class="re_upfile_sumbt">
+    <div class="re_upfile_xieyi"><input type="radio">我已阅读<a href="###">《资源上传服务条款》</a></div>
+    <div id="re_upfile_sumbt">确定上传</div>
+</div>
+<!--年级-->
+<div id="p_grade" class="p_dig">
+    <div class="p_dig_content">
+        <div class="p_head">请选择年级<span class="p_head_colse"></span></div>
+        <div class="p_content_list">
+            <ul>
+                <li>一年级</li>
+                <li class="pc_list_act">二年级</li>
+                <li>三年级</li>
+                <li>四年级</li>
+                <li>五年级</li>
+                <li>六年级</li>
+            </ul>
+        </div>
+        <div class="p_confirm">确定</div>
+    </div>
+</div>
+<!--科目-->
+<div id="p_subject" class="p_dig">
+    <div class="p_dig_content">
+        <div class="p_head">请选择科目<span class="p_head_colse"></span></div>
+        <div class="p_content_list">
+            <ul>
+                <li>语文</li>
+                <li class="pc_list_act">数学</li>
+                <li>英语</li>
+                <li>物理</li>
+                <li>化学</li>
+                <li>政治</li>
+                <li>地理</li>
+                <li>生物</li>
+            </ul>
+        </div>
+        <div class="p_confirm">确定</div>
+    </div>
+</div>
+<!--教材-->
+<div id="p_material" class="p_dig">
+    <div class="p_dig_content">
+        <div class="p_head">请选择教材<span class="p_head_colse"></span></div>
+        <div class="p_switch">
+            <div class="p_switch_left p_switch_act">上册</div>
+            <div class="p_switch_right">下册</div>
+        </div>
+        <div class="p_content_list">
+            <ul>
+                <li>人教版 一年级上册</li>
+                <li>鲁教版 一年级上册</li>
+                <li class="pc_list_act">川教版 一年级上册</li>
+                <li>粤教版 一年级上册</li>
+                <li>北师教版 一年级上册</li>
+                <li>西师教版 一年级上册</li>
+                <li>泸教版 一年级上册</li>
+            </ul>
+        </div>
+        <div class="p_confirm">确定</div>
+    </div>
+</div>
+<!--章节-->
+<div id="p_chapter" class="p_dig">
+    <div class="p_dig_content">
+        <div class="p_head">请选择章节内容<span class="p_head_colse"></span></div>
+        <div class="p_chapter_content">
+            <div class="pc_left">
+                <ul>
+                    <li class="pc_list_act">第五单元 20以内 的数</li>
+                    <li>第五单元 20以内 的数</li>
+                    <li>第五单元 20以内 的数</li>
+                    <li>第五单元 20以内 的数</li>
+                    <li>第五单元 20以内 的数</li>
+                    <li>第五单元 20以内 的数</li>
+                    <li>第五单元 20以内 的数</li>
+                    <li>第五单元 20以内 的数</li>
+                    <li>第五单元 20以内 的数</li>
+                </ul>
+            </div>
+            <div class="pc_right">
+                <ul>
+                    <li class="pc_list_act">分一分</li>
+                    <li>数一数</li>
+                    <li>几个与第几个</li>
+                    <li>比一比</li>
+                    <li>点动物分类连线</li>
+                    <li>数射线</li>
+                    <li>认识一下</li>
+                    <li>点图数数</li>
+                </ul>
+            </div>
+        </div>
+        <div class="p_confirm">确定</div>
+    </div>
+</div>
+<!-- <script src="./js/re_des.js"></script>
+</body>
+</html> -->

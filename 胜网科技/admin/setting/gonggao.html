@@ -17,6 +17,8 @@ is_power('setting_anou','网站公告',false,'/admin/setting/init.html');
 <script type="text/javascript" src="../../resource/part/newtpl/js/public.js"></script>
 <link href="../../resource/part/newtpl/css/rheight.css" rel="stylesheet" type="text/css" />
 <link href="../../resource/part/newtpl/css/public.css" rel="stylesheet" type="text/css" />
+<link rel="stylesheet" type="text/css" href="../../resource/part/bootstrap/css/bootstrap.min.css"/>
+<script src="../../resource/part/bootstrap/js/bootstrap.min.js" type="text/javascript" charset="utf-8"></script>
 <style>
 body {
 	margin-left: 0px;
@@ -30,7 +32,7 @@ body {
 <div class="admin_main_nr_dbox">
 <script id="myFormDesign" type="text/plain" style="width:100%;"></script>
 <p style="margin:5px">
-<button type="submit" name="submit_to_save" value="save" id="submit_to_save">确定保存</button>
+<button type="submit" class="btn btn-primary" name="submit_to_save" value="save" id="submit_to_save">确定保存</button>
 </p>
 </div>
 <div class="admin_frameset" >
@@ -49,7 +51,7 @@ $(function()
 
 		$.ajax({
 			type: 'POST',
-			url: '/s/setting/gong.php',
+			url: '../../s/setting/gong.php',
 			data: {'content':formeditor,"get":"no"},
 			success: function(data) {
 				data = eval('(' + data + ')');
@@ -69,7 +71,7 @@ $(window).load(function()
 {
 	$.ajax({
 		type: 'POST',
-		url: '/s/setting/gong.php',
+		url: '../../s/setting/gong.php',
 		data: {"get":"yes"},
 		success: function(data) {
 			data = eval('(' + data + ')');

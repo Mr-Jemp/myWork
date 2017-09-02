@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css"/>
+		<link rel="stylesheet" type="text/css" href="css/check.css"/>
+		<link rel="stylesheet" type="text/css" href="css/addClass.css"/>
+		<style>html,body{background-color: white;}</style>
+	</head>
+	<body>
+		<!--头部-->
+			<div class="class_header row">
+				<div class="col-xs-2" onclick="javascript:history.go(-1);">
+					<img src="images/fanhui@2x.png" alt="" />
+				</div>
+				<div class="header_message col-xs-6 ">审核成功</div>
+			</div>
+			<!--审核中-->
+			<div class="checkImg">
+				<p style="background-image: url(images/shenhechenggong-@2x.png);color: #9BD584;">审核成功</p>
+			</div>
+		
+		<div class="checkContent">
+			审核成功，您以成功加入该班级！<br/>
+			<p style="width: 5.4rem;">恭喜您！加入班级成功，赶紧进入该班级吧！</p>
+		</div>
+		
+		<div class="submit">
+			<button style="margin-top: 1rem;background-color: white;color: black;border: 1px solid lightgray;">进入班级</button>
+		</div>
+		
+	</body>
+	<script type="text/javascript" src="js/jquery-1.12.4.min.js" ></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/publicJs.js" ></script>
+	<script type="text/javascript">
+		//点击进入班级
+		
+		$(".submit").click(function(){
+			window.location.href="addClass_contractLst.html";
+		})
+	</script>
+</html>
+

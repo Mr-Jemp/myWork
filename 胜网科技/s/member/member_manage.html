@@ -17,6 +17,7 @@ mysql_close($conn);
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <title></title>
+    <meta charset="UTF-8"/>
 	
 	<link href="../../resource/part/ligerlib/ligerUI/skins/Aqua/css/ligerui-all.css" rel="stylesheet" type="text/css" />
 	
@@ -67,7 +68,7 @@ mysql_close($conn);
 			$("#add_user_form").submit(function() {
                  if ($("#add_btn").val() == "保存") {			
 					var ajax_option={
-						url:"/s/member/member_action.php",
+						url:"./member_action.php",
 						type: 'post',
 						datatype:"json",
 						data:{
@@ -94,7 +95,7 @@ mysql_close($conn);
 				 else {
 					 
 					var ajax_option={
-						url:"/s/member/member_action.php",
+						url:"./member_action.php",
 						type: 'post',
 						datatype:"json",
 						data:{
@@ -194,7 +195,7 @@ mysql_close($conn);
         {
 			var op ="HELLO WORD";
 			if (confirm('确定删除?')) {							
-				$.ajax({ url: "/s/member/member_action.php",type: "POST",datatype:"text",data: { operatetype: "deletemen", staffId: escape(rowid) },
+				$.ajax({ url: "./member_action.php",type: "POST",datatype:"text",data: { operatetype: "deletemen", staffId: escape(rowid) },
 					success: function(data) {
 					   //data='{"pw_flag":1,"msg":"你没有权限操作删除人员"}';
 						try

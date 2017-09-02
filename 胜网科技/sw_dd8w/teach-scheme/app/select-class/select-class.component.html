@@ -1,0 +1,26 @@
+<div class="header">
+    <div class="s-go-back" ng-click="$ctrl.goBack()">
+        <img src="img/goback.png">
+    </div>
+    <h1 class="header__title">
+        新建教学计划
+    </h1>
+</div>
+<div class="s-main">
+    <div class="s-selection">
+        <p class="s-selection__title">请选择新建教学计划的班级科目</p>
+        <ul class="flex-row flex-wrap s-selection__ul">
+            <li class="s-selection__li"
+                ng-repeat="cls in $ctrl.allClass"
+                ng-class="{'s-selection__li--selected': $index===$ctrl.selectedClass}"
+                ng-click="$ctrl.selectClass($index)">
+                {{cls.title}}
+            </li>
+        </ul>
+    </div>
+    <div class="s-next-btn" ng-click="$ctrl.goNext()">
+        下一步
+    </div>
+</div>
+
+<!-- <my-footer current="teacher"></my-footer> -->

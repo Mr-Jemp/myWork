@@ -1,0 +1,561 @@
+<link href="/js/jmeditor/mathquill-0.9.1/mathquill.css" rel="stylesheet" type="text/css" />
+<script src='/js/ckeditor/ckeditor.js'></script>
+<script type="text/javascript" src="/js/jmeditor/mathquill-0.9.1/mathquill.min.js"></script>
+
+<div class="timu_left">
+    <div class="timu_left_top pl20">
+        <i class="timu_left_flag"></i><a href="###">首页</a> > <a href="###">资源库</a> > <a href="###">上传资源</a> > <a href="###">组卷</a>
+        <span>手动上传试题</span>
+    </div>
+    <div class="timu_zujuan_content">
+        <ul class="timu_left_nav">
+            <li ng-class="{'timu_nav_curr':zujuan_dig_type==1}" ng-click="changType(1)">我的题目</li>
+            <li ng-class="{'timu_nav_curr':zujuan_dig_type==2}" ng-click="changType(2)">系统推荐</li>
+            <li ng-class="{'timu_nav_curr':zujuan_dig_type==3}" ng-click="changType(3)">本校试题</li>
+            <li ng-class="{'timu_nav_curr':zujuan_dig_type==4}" ng-click="changType(4)">更多试题</li>
+        </ul>
+        <div class="timu_left_type timu_left_block" style="padding-left: 10px;">
+            <ul>
+                <li>题型：
+                    <select name="question_types" onchange="angular.element(this).scope().swTiType(this.value)">
+                        <option ng-repeat="q in question_types" value="{{q.id}}">{{q.title}}</option>
+                    </select>
+                </li>
+                <li>难度：
+                    <select name="difficulty">
+                        <option value="0">全部</option>
+                        <option value="21">简单</option>
+                        <option value="22">容易</option>
+                        <option value="23">困难</option>
+                        <!--<option ng-repeat="d in timu_difficulty" value="{{d.id}}">{{d.title}}</option>-->
+                    </select>
+                </li>
+            </ul>
+        </div>
+        <div class="choiceWordChapterKnowledge" style="padding-left: 10px;">
+            <dl>
+                <dt>教材章节信息：</dt>
+                <dd>
+                    <ul class="word_chapter_list">
+                    </ul>
+                </dd>
+            </dl>
+            <dl>
+                <dt>知识点：</dt>
+                <dd>
+                    <ul class="word_knowledge_list">
+                    </ul>
+                </dd>
+            </dl>
+        </div>
+    </div>
+    <div class="timu_zujuan_block" ng-repeat="zj in zujuan_lists">
+        <div class="zujuan_block_head">
+            <span class="fcolor1">第{{($index+1)}}题</span>   {{zj.question_name}}     {{zj.difficulty_name}}  分值：{{zj.total_score}}分
+            </span><span class="zujuan_edit" ng-click="zujuanEdit(zj.id)"></span><span class="zujuan_add">
+        </div>
+        <div class="zujuan_block_title">
+            {{zj.title}}
+        </div>
+        <div class="zujuan_block_reference_answer">
+            <ul>
+                <li ng-repeat="(k,v) in zj.items">{{k}}、{{v}}</li>
+            </ul>
+        </div>
+        <div class="zujuan_block_answer">
+            <ul>
+                <li>【正确答案】：</li>
+                <li>{{zj.answer}}</li>
+            </ul>
+            <ul>
+                <li>【答案解析】：</li>
+                <li>{{zj.analysis}}</li>
+            </ul>
+        </div>
+        <div class="zujuan_block_down">
+            <span></span>
+        </div>
+    </div>
+</div>
+<div class="zujuan_car">
+    <span>5</span>
+    <h5>试题篮</h5>
+</div>
+<div class="zujuan_car_list">
+    <ul class="zujuan_car_list_head">
+        <li>共1题</li>
+        <li>平均难度（中等）</li>
+    </ul>
+    <div class="zujuan_car_content">
+        <h2>小学一年级人教版数学单元测试</h2>
+        <ul>
+            <li><span>单选题</span><span>1题</span><span><i class="del_car_timu"></i></span></li>
+            <li><span>单选题</span><span>1题</span><span><i class="del_car_timu"></i></span></li>
+        </ul>
+    </div>
+    <ul class="zujuan_car_list_bottom">
+        <li><span>清空全部</span></li>
+        <li><a href="re_make_paper.html">生成试卷</a></li>
+    </ul>
+</div>
+
+<!--手动上传试题-->
+<div class="pop_box" id="pop_add_timu_box">
+    <div class="pop_box_content">
+        <div class="pop_head">添加试题<span class="pop_head_colse"><img src="images/re/icon_guanbi.png" /></span></div>
+        <div class="pop_add_timu_box">
+            <form id="add_timu_form">
+                <div class="timu_left_type timu_left_block">
+                    <ul>
+                        <li>题型：
+                            <select name="timu_question_types" onchange="angular.element(this).scope().swTiType(this.value)">
+                                <option ng-repeat="q in question_types" value="{{q.id}}">{{q.title}}</option>
+                            </select>
+                        </li>
+                        <li>难度：
+                            <select name="timu_difficulty" onchange="angular.element(this).scope().swDiffType(this.value)">
+                                <option ng-repeat="d in timu_difficulty" value="{{d.id}}">{{d.title}}</option>
+                            </select>
+                        </li>
+                    </ul>
+                </div>
+                <div class="timu_left_block">
+                    <ul>
+                        <li class="timu_flag_name"><span class="cred">*</span> 题干内容：</li>
+                        <li class="timu_flag_content">
+                            <div id="timu_tigan_con_p" class="timu_tigan_con" contenteditable="true"></div>
+                        </li>
+                    </ul>
+                </div>
+                <div ng-if="(titype==1)" class="timu_left_block">
+                    <ul>
+                        <li class="timu_flag_name"><span class="cred">*</span> 答案选项：</li>
+                        <li class="timu_flag_content timu_radio_list">
+                            <div class="timu_left_timuoptt">&nbsp;<button class="timu_radio_option_add">添加选项</button></div>
+                            <ul class="timu_answer_choice">
+                                <li><i class="del_f"></i><div class="timu_opte_num">A、</div><div class="timu_optt_input" id="timu_radio_1pa" contenteditable="true"></div><label class="radiostyle_y"></label><span>正确答案</span></li>
+                                <li><i class="del_f"></i><div class="timu_opte_num">B、</div><div class="timu_optt_input" id="timu_radio_1pb" contenteditable="true"></div><label class="radiostyle_n"></label><span></span></li>
+                                <li><i class="del_f"></i><div class="timu_opte_num">C、</div><div class="timu_optt_input" id="timu_radio_1pc" contenteditable="true"></div><label class="radiostyle_n"></label><span></span></li>
+                                <li><i class="del_f"></i><div class="timu_opte_num">D、</div><div class="timu_optt_input" id="timu_radio_1pd" contenteditable="true"></div><label class="radiostyle_n"></label><span></span></li>
+                                <!--<li><i class="del_f"></i>A、<input class="timu_optt_input" type="text" contenteditable="true"><label class="radiostyle_y" for="r_a"></label><input type="radio" name="timuoptt" id="r_a"><span>正确答案</span> </li>
+                                <li><i class="del_f"></i>B、<input class="timu_optt_input" type="text"><label class="radiostyle_n" for="r_b"></label><input type="radio" name="timuoptt" id="r_b"> </li>
+                                <li><i class="del_f"></i>C、<input class="timu_optt_input" type="text"><label class="radiostyle_n" for="r_c"></label><input type="radio" name="timuoptt" id="r_c"> </li>
+                                <li><i class="del_f"></i>D、<input class="timu_optt_input" type="text"><label class="radiostyle_n" for="r_d"></label><input type="radio" name="timuoptt" id="r_d"></li>-->
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <div ng-if="(titype==2)" class="timu_left_block">
+                    <ul>
+                        <li class="timu_flag_name"><span class="cred">*</span> 答案选项：</li>
+                        <li class="timu_flag_content timu_multiselect_list">
+                            <div class="timu_left_timuoptt">&nbsp;<button class="timu_radio_option_add">添加选项</button></div>
+                            <ul class="timu_answer_choice">
+                                <li><i class="del_f"></i><div class="timu_opte_num">A、</div><div class="timu_optt_input" id="timu_multiselect_2pa" contenteditable="true"></div><label class="radiostyle_y"></label><span>正确答案</span></li>
+                                <li><i class="del_f"></i><div class="timu_opte_num">B、</div><div class="timu_optt_input" id="timu_multiselect_2pb" contenteditable="true"></div><label class="radiostyle_n"></label><span></span></li>
+                                <li><i class="del_f"></i><div class="timu_opte_num">C、</div><div class="timu_optt_input" id="timu_multiselect_2pc" contenteditable="true"></div><label class="radiostyle_n"></label><span></span></li>
+                                <li><i class="del_f"></i><div class="timu_opte_num">D、</div><div class="timu_optt_input" id="timu_multiselect_2pd" contenteditable="true"></div><label class="radiostyle_n"></label><span></span></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <div ng-if="(titype==3)" class="timu_left_block">
+                    <ul>
+                        <li class="timu_flag_name"><span class="cred">*</span> 答案选项：</li>
+                        <li class="timu_flag_content">
+                            <ul class="timu_answer_choice">
+                                <li style="height: 30px;"></li>
+                                <li><div class="timu_opte_num">A、</div><div class="timu_optt_input" id="timu_multiselect_3pa" contenteditable="true">对</div><label class="radiostyle_y"></label><span>正确答案</span></li>
+                                <li><div class="timu_opte_num">B、</div><div class="timu_optt_input" id="timu_multiselect_3pb" contenteditable="true">错</div><label class="radiostyle_n"></label><span></span></li>
+                                <!-- <li>A、<input type="text" value="对"><label class="radiostyle_y" for="r_a"></label><input type="checkbox" name="timuoptt" id="r_a"><span>正确答案</span> </li>
+                                 <li>B、<input type="text" value="错"><label class="radiostyle_n" for="r_b"></label><input type="checkbox" name="timuoptt" id="r_b"> </li>
+                             </ul>-->
+                                </li>
+                            </ul>
+                </div>
+                <div ng-if="(titype==4)" class="timu_left_block">
+                    <ul>
+                        <li class="timu_flag_name"><span class="cred">*</span> 答案选项：</li>
+                        <li class="timu_flag_content">
+                            <div class="timu_left_timuoptt"><button class="timu_radio_option_add">添加填空</button></div>
+                            <ul class="timu_answer_choice">
+                                <li><i class="del_f"></i><div class="timu_opte_num">A、</div><div class="timu_optt_input" id="timu_multiselect_4pa" contenteditable="true"></div><!--<label class="radiostyle_y"></label><span>正确答案</span>--></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <div ng-if="(titype==5)" class="timu_left_block">
+                    <ul>
+                        <li class="timu_flag_name">答案：</li>
+                        <li class="timu_flag_content">
+                            <ul class="timu_answer_choice">
+                                <li>
+                                    <div id="timu_tigan_answer_p" class="timu_tigan_con" contenteditable="true">回答</div>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <div ng-if="(titype==6)" class="timu_left_block">
+                    <ul>
+                        <li class="timu_flag_name">答案：</li>
+                        <li class="timu_flag_content">
+                            <ul class="timu_answer_choice">
+                                <li>
+                                    <div id="timu_other_answer_p" class="timu_tigan_con" contenteditable="true">综合</div>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <div class="timu_left_analysis timu_left_block">
+                    <ul>
+                        <li class="timu_flag_name">答案解析：</li>
+                        <li class="timu_flag_content">
+                            <div id="timu_tigan_analysis_p" class="timu_tigan_con" contenteditable="true"></div>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="timu_left_protocol timu_left_block">
+                    <ul>
+                        <li class="timu_flag_name"></li>
+                        <li class="timu_flag_content"><input type="checkbox" ng-click="changeWordClause()">我已阅读 <a href="###">《资源上传服务条款》</a></li>
+                    </ul>
+                </div>
+                <div class="timu_submit timu_left_block" ng-click="submitTiMuForm()">
+                    确定上传题目
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<!--编辑试题-->
+<div class="pop_box" id="pop_edit_timu_box">
+    <div class="pop_box_content">
+        <div class="pop_head">编辑试题<span class="pop_head_colse"><img src="images/re/icon_guanbi.png" /></span></div>
+        <div class="pop_add_timu_box">
+            <form id="edit_timu_form">
+                <input type="hidden" name="questiontype" value="{{zujuan_tmpcontent.questiontype}}">
+                <input type="hidden" name="difficulty" value="{{zujuan_tmpcontent.difficulty}}">
+                <div class="timu_left_block">
+                    <ul>
+                        <li class="timu_flag_name"><span class="cred">*</span> 题干内容：</li>
+                        <li class="timu_flag_content">
+                            <div id="timu_tigan_con_e" class="timu_tigan_con" contenteditable="true">{{zujuan_tmpcontent.title}}</div>
+                        </li>
+                    </ul>
+                </div>
+                <div ng-if="(zujuan_tmpcontent.questiontype==1)" class="timu_left_block">
+                    <ul>
+                        <li class="timu_flag_name"><span class="cred">*</span> 答案选项：</li>
+                        <li class="timu_flag_content timu_radio_list">
+                            <div class="timu_left_timuoptt">&nbsp;<button class="timu_radio_option_add">添加选项</button></div>
+                            <ul class="timu_answer_choice">
+                                <li ng-repeat="(item,vl) in zujuan_tmpcontent.items"><i class="del_f"></i><div class="timu_opte_num">{{item}}、</div><div class="timu_optt_input" id="timu_radio_a{{zujuan_tmpcontent.id}}{{$index}}" contenteditable="true">{{vl}}</div><label class="{{zujuan_tmpcontent.answer==item?'radiostyle_y':'radiostyle_n'}}"></label><span>{{zujuan_tmpcontent.answer==item?'正确答案':''}}</span></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <div ng-if="(zujuan_tmpcontent.questiontype==2)" class="timu_left_block">
+                    <ul>
+                        <li class="timu_flag_name"><span class="cred">*</span> 答案选项：</li>
+                        <li class="timu_flag_content timu_multiselect_list">
+                            <div class="timu_left_timuoptt">&nbsp;<button class="timu_radio_option_add">添加选项</button></div>
+                            <ul class="timu_answer_choice">
+                                <li><i class="del_f"></i><div class="timu_opte_num">A、</div><div class="timu_optt_input" id="timu_multiselect_a" contenteditable="true"></div><label class="radiostyle_y"></label><span>正确答案</span></li>
+                                <li><i class="del_f"></i><div class="timu_opte_num">B、</div><div class="timu_optt_input" id="timu_multiselect_b" contenteditable="true"></div><label class="radiostyle_n"></label><span></span></li>
+                                <li><i class="del_f"></i><div class="timu_opte_num">C、</div><div class="timu_optt_input" id="timu_multiselect_c" contenteditable="true"></div><label class="radiostyle_n"></label><span></span></li>
+                                <li><i class="del_f"></i><div class="timu_opte_num">D、</div><div class="timu_optt_input" id="timu_multiselect_d" contenteditable="true"></div><label class="radiostyle_n"></label><span></span></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <div ng-if="(zujuan_tmpcontent.questiontype==3)" class="timu_left_block">
+                    <ul>
+                        <li class="timu_flag_name"><span class="cred">*</span> 答案选项：</li>
+                        <li class="timu_flag_content">
+                            <ul class="timu_answer_choice">
+                                <li style="height: 30px;"></li>
+                                <li><div class="timu_opte_num">A、</div><div class="timu_optt_input" id="timu_multiselect_a" contenteditable="true">对</div><label class="radiostyle_y"></label><span>正确答案</span></li>
+                                <li><div class="timu_opte_num">B、</div><div class="timu_optt_input" id="timu_multiselect_b" contenteditable="true">错</div><label class="radiostyle_n"></label><span></span></li>
+                                <!-- <li>A、<input type="text" value="对"><label class="radiostyle_y" for="r_a"></label><input type="checkbox" name="timuoptt" id="r_a"><span>正确答案</span> </li>
+                                 <li>B、<input type="text" value="错"><label class="radiostyle_n" for="r_b"></label><input type="checkbox" name="timuoptt" id="r_b"> </li>
+                             </ul>-->
+                                </li>
+                            </ul>
+                </div>
+                <div ng-if="(zujuan_tmpcontent.questiontype==4)" class="timu_left_block">
+                    <ul>
+                        <li class="timu_flag_name"><span class="cred">*</span> 答案选项：</li>
+                        <li class="timu_flag_content">
+                            <div class="timu_left_timuoptt"><button class="timu_radio_option_add">添加填空</button></div>
+                            <ul class="timu_answer_choice">
+                                <li><i class="del_f"></i><div class="timu_opte_num">A、</div><div class="timu_optt_input" id="timu_multiselect_a" contenteditable="true"></div><!--<label class="radiostyle_y"></label><span>正确答案</span>--></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <div ng-if="(zujuan_tmpcontent.questiontype==5)" class="timu_left_block">
+                    <ul>
+                        <li class="timu_flag_name">答案：</li>
+                        <li class="timu_flag_content">
+                            <ul class="timu_answer_choice">
+                                <li>
+                                    <div id="timu_tigan_answer" class="timu_tigan_con" contenteditable="true">回答</div>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <div ng-if="(zujuan_tmpcontent.questiontype==6)" class="timu_left_block">
+                    <ul>
+                        <li class="timu_flag_name">答案：</li>
+                        <li class="timu_flag_content">
+                            <ul class="timu_answer_choice">
+                                <li>
+                                    <div id="timu_other_answer" class="timu_tigan_con" contenteditable="true">综合</div>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <div class="timu_left_analysis timu_left_block">
+                    <ul>
+                        <li class="timu_flag_name">答案解析：</li>
+                        <li class="timu_flag_content">
+                            <div id="timu_tigan_analysis_e" class="timu_tigan_con" contenteditable="true">{{zujuan_tmpcontent.analysis}}</div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="timu_submit timu_left_block" ng-click="submitTiMuForm()">
+                    保存并加入试题蓝
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<div id="timu_show_shiti_add" class="p_dig">
+    <div class="p_dig_content">
+        <div class="p_head">编辑上传试题<span class="p_head_colse"><img src="images/re/icon_guanbi.png" /></span></div>
+        <div class="p_shiti_add_content">
+            <div class="timu_left_type timu_left_block">
+                <ul>
+                    <li>题型：
+                        <select  onchange="angular.element(this).scope().swTiType(this.value)">
+                            <option value="1">单选题</option>
+                            <option value="2">多选题</option>
+                            <option value="3">判断题</option>
+                            <option value="4">填空题</option>
+                            <option value="5">回答题</option>
+                            <option value="6">综合题</option>
+                        </select>
+                    </li>
+                    <li>难度：
+                        <select>
+                            <option value="全部">全部</option>
+                            <option value="简单">简单</option>
+                            <option value="容易">容易</option>
+                            <option value="困难">困难</option>
+                        </select>
+                    </li>
+                </ul>
+            </div>
+            <div class="timu_left_block">
+                <ul>
+                    <li class="timu_flag_name"><span class="cred">*</span> 题干内容：</li>
+                    <li class="timu_flag_content"><textarea class="wd600" rows="5"></textarea></li>
+                </ul>
+            </div>
+            <div ng-if="(titype==1)" class="timu_left_block">
+                <ul>
+                    <li class="timu_flag_name"><span class="cred">*</span> 答案选项：</li>
+                    <li class="timu_flag_content">
+                        <div class="timu_left_timuoptt">&nbsp;<button>添加选项</button></div>
+                        <ul>
+                            <li><i class="del_f"></i>A、<input class="timu_optt_input" type="text"><label class="radiostyle_y" for="r_a"></label><input type="radio" name="timuoptt" id="r_a"><span>正确答案</span> </li>
+                            <li><i class="del_f"></i>B、<input class="timu_optt_input" type="text"><label class="radiostyle_n" for="r_b"></label><input type="radio" name="timuoptt" id="r_b"> </li>
+                            <li><i class="del_f"></i>C、<input class="timu_optt_input" type="text"><label class="radiostyle_n" for="r_c"></label><input type="radio" name="timuoptt" id="r_c"> </li>
+                            <li><i class="del_f"></i>D、<input class="timu_optt_input" type="text"><label class="radiostyle_n" for="r_d"></label><input type="radio" name="timuoptt" id="r_d"></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <div ng-if="(titype==2)" class="timu_left_block">
+                <ul>
+                    <li class="timu_flag_name"><span class="cred">*</span> 答案选项：</li>
+                    <li class="timu_flag_content">
+                        <div class="timu_left_timuoptt">&nbsp;<button>添加选项</button></div>
+                        <ul>
+                            <li><i class="del_f"></i>A、<input class="timu_optt_input" type="text"><label class="radiostyle_y" for="r_a"></label><input type="radio" name="timuoptt" id="r_a"><span>正确答案</span> </li>
+                            <li><i class="del_f"></i>B、<input class="timu_optt_input" type="text"><label class="radiostyle_n" for="r_b"></label><input type="radio" name="timuoptt" id="r_b"> </li>
+                            <li><i class="del_f"></i>C、<input class="timu_optt_input" type="text"><label class="radiostyle_n" for="r_c"></label><input type="radio" name="timuoptt" id="r_c"> </li>
+                            <li><i class="del_f"></i>D、<input class="timu_optt_input" type="text"><label class="radiostyle_n" for="r_d"></label><input type="radio" name="timuoptt" id="r_d"></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <div ng-if="(titype==3)" class="timu_left_block">
+                <ul>
+                    <li class="timu_flag_name"><span class="cred">*</span> 答案选项：</li>
+                    <li class="timu_flag_content">
+                        <ul>
+                            <li style="height: 30px;"></li>
+                            <li>A、对<label class="radiostyle_y" for="r_a"></label><input type="checkbox" name="timuoptt" id="r_a"><span>正确答案</span> </li>
+                            <li>B、错<label class="radiostyle_n" for="r_b"></label><input type="checkbox" name="timuoptt" id="r_b"> </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <div ng-if="(titype==4)" class="timu_left_block">
+                <ul>
+                    <li class="timu_flag_name"><span class="cred">*</span> 答案选项：</li>
+                    <li class="timu_flag_content">
+                        <div class="timu_left_timuoptt"><button>添加填空</button></div>
+                        <ul>
+                            <li><i class="del_f"></i>A、<input class="timu_optt_input" type="text"></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <div ng-if="(titype>=5)" class="timu_left_block">
+                <ul>
+                    <li class="timu_flag_name">答案：</li>
+                    <li class="timu_flag_content">
+                        <ul>
+                            <li><textarea class="wd600" rows="5"></textarea></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <div class="timu_left_analysis timu_left_block">
+                <ul>
+                    <li class="timu_flag_name">答案解析：</li>
+                    <li class="timu_flag_content"><textarea class="wd600" rows="5"></textarea></li>
+                </ul>
+            </div>
+
+            <div class="timu_left_protocol timu_left_block">
+                <ul>
+                    <li class="timu_flag_name"></li>
+                    <li class="timu_flag_content"><input type="checkbox">我已阅读 <a href="###">《资源上传服务条款》</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="p_timu_confirm" ng-click="materialSubmit()">保存并加入试题篮</div>
+    </div>
+</div>
+
+<!--编辑试题-->
+<div id="timu_show_shiti_edit" class="p_dig">
+    <div class="p_dig_content">
+        <div class="p_head">编辑试题<span class="p_head_colse"><img src="images/re/icon_guanbi.png" /></span></div>
+        <div class="p_shiti_add_content">
+            <div class="timu_left_timucon timu_left_block">
+                <ul>
+                    <li><span class="cred">*</span> 题干内容：</li>
+                    <li><textarea class="wd600" rows="5"></textarea></li>
+                </ul>
+            </div>
+            <div class="timu_left_timuopt timu_left_block">
+                <div class="timu_left_timuoptt"><span class="cred">*</span> 答案选项：&nbsp;<button>添加选项</button></div>
+                <ul>
+                    <li><i class="del_f"></i>A、<input class="timu_optt_input" type="text"><label class="radiostyle_y" for="r_a"></label><input type="radio" name="timuoptt" id="r_a"><span>正确答案</span> </li>
+                    <li><i class="del_f"></i>B、<input class="timu_optt_input" type="text"><label class="radiostyle_n" for="r_b"></label><input type="radio" name="timuoptt" id="r_b"> </li>
+                    <li><i class="del_f"></i>C、<input class="timu_optt_input" type="text"><label class="radiostyle_n" for="r_c"></label><input type="radio" name="timuoptt" id="r_c"> </li>
+                    <li><i class="del_f"></i>D、<input class="timu_optt_input" type="text"><label class="radiostyle_n" for="r_d"></label><input type="radio" name="timuoptt" id="r_d"></li>
+                </ul>
+            </div>
+
+            <div class="timu_left_analysis timu_left_block">
+                <ul>
+                    <li>答案解析：</li>
+                    <li><textarea class="wd600" rows="5"></textarea></li>
+                </ul>
+            </div>
+
+            <div class="timu_left_protocol timu_left_block">
+                <ul>
+                    <li></li>
+                    <li><input type="checkbox">我已阅读 <a href="###">《资源上传服务条款》</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="p_timu_confirm" ng-click="materialSubmit()">保存并加入试题篮</div>
+    </div>
+</div>
+</div>
+<div id="script"></div>
+<script type="text/javascript" src="/js/re/timu_zujuan_public.js"></script>
+<script type="text/javascript">
+    $(document).on('click','.p_timu_confirm,.p_head_colse',function(){
+        $('.p_dig').hide('slow');
+    });
+    $(document).on('click','.timu_right_top span',function(){
+        $('#timu_show_teaching').show('slow');
+    });
+    $(document).on('click','.timu_left_top span',function(){
+        $('#pop_add_timu_box').show('slow');
+        /*if($("#script").html()==''){
+            var scripthtml='<link href="\/js\/jmeditor\/mathquill-0.9.1\/mathquill.css" rel="stylesheet" type="text/css" \/>'+
+                '<script src="\/js\/ckeditor\/ckeditor.js"><\/script>'+
+                '<script type="text/javascript" src="\/js\/jmeditor\/mathquill-0.9.1\/mathquill.min.js"><\/script>'+
+                '<script type="text/javascript" src="\/js\/re\/timu_zujuan_public.js"><\/script>';
+                $("#script").html(scripthtml);
+        }*/
+    });
+    $(document).on('click','.zujuan_edit',function(){
+       /* $('#timu_show_shiti_edit').show('slow');*/
+    });
+    $(document).on('mouseover','.zujuan_car,.zujuan_car_list',function(){
+        $('.zujuan_car_list').show();
+    });
+    $(document).on('mouseout','.zujuan_car,.zujuan_car_list',function(){
+        $('.zujuan_car_list').hide();
+    });
+    $(document).on('click','.zujuan_block_up span',function(){
+        $(this).parent().prev().slideDown("slow");
+        $(this).parent().removeClass('zujuan_block_up').addClass('zujuan_block_down');
+    });
+    $(document).on('click','.zujuan_block_down span',function(){
+        $(this).parent().prev().slideUp("slow");
+        $(this).parent().removeClass('zujuan_block_down').addClass('zujuan_block_up');
+    });
+    $(document).on('click','.pop_head_colse',function(){
+        $(this).closest('.pop_box').hide();
+    });
+    $(document).on("click",".radiostyle_n",function(){
+        var type=null;
+        if($(this).closest('#edit_timu_form').length>0){
+            type=$('[name="questiontype"]').val();
+        }else if($(this).closest('#add_timu_form').length>0){
+            type=$('[name="timu_question_types"]').val();
+        }
+        var p=$(this).parent().parent();
+        if(type==1 || type==3){
+            p.find('.radiostyle_y').removeClass('radiostyle_y').addClass('radiostyle_n');
+            p.find('span').text('');
+            $(this).removeClass('radiostyle_n').addClass('radiostyle_y');
+            $(this).next().text("正确答案");
+        }else if(type==2){
+            $(this).removeClass('radiostyle_n').addClass('radiostyle_y');
+            $(this).next().text("正确答案");
+        }
+    });
+    $(document).on("click",".radiostyle_y",function(){
+        var type=null;
+        if($(this).closest('#edit_timu_form').length>0){
+            type=$('[name="questiontype"]').val();
+        }else if($(this).closest('#add_timu_form').length>0){
+            type=$('[name="timu_question_types"]').val();
+        }
+        if(type==2){
+            var p=$(this).parent().parent();
+            if(p.find('.radiostyle_y').length>1){
+                $(this).removeClass('radiostyle_y').addClass('radiostyle_n');
+                $(this).next().text("");
+            }
+        }
+    });
+</script>

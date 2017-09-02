@@ -2,28 +2,29 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <title>报表页设置</title>
-<script type="text/javascript" src="/resource/js/jQuery/jquery-1.9.1.js"></script>
-<link href="/resource/part/newtpl/css/rheight.css" rel="stylesheet" type="text/css" />
-<link href="/resource/part/ligerlib/ligerUI/skins/Aqua/css/ligerui-all.css" rel="stylesheet" type="text/css" /> 
-<link href="/resource/part/ligerlib/ligerUI/skins/Tab/css/form.css" rel="stylesheet" type="text/css" /> 
-<script src="/resource/part/ligerlib/jquery/jquery-1.3.2.min.js" type="text/javascript"></script>
-<script src="/resource/part/ligerlib/ligerUI/js/ligerui.all.js" type="text/javascript"></script>
-<script src="/resource/part/ligerlib/jquery-validation/jquery.validate.min.js"></script>
-<script src="/resource/part/ligerlib/jquery-validation/jquery.metadata.js" type="text/javascript"></script>
-<script src="/resource/part/ligerlib/jquery-validation/messages_cn.js" type="text/javascript"></script>
+<script type="text/javascript" src="../../resource/js/jQuery/jquery-1.9.1.js"></script>
+<link href="../../resource/part/newtpl/css/rheight.css" rel="stylesheet" type="text/css" />
+<link href="../../resource/part/ligerlib/ligerUI/skins/Aqua/css/ligerui-all.css" rel="stylesheet" type="text/css" /> 
+<link href="../../resource/part/ligerlib/ligerUI/skins/Tab/css/form.css" rel="stylesheet" type="text/css" /> 
+<script src="../../resource/part/ligerlib/jquery/jquery-1.3.2.min.js" type="text/javascript"></script>
+<script src="../../resource/part/ligerlib/ligerUI/js/ligerui.all.js" type="text/javascript"></script>
+<script src="../../resource/part/ligerlib/jquery-validation/jquery.validate.min.js"></script>
+<script src="../../resource/part/ligerlib/jquery-validation/jquery.metadata.js" type="text/javascript"></script>
+<script src="../../resource/part/ligerlib/jquery-validation/messages_cn.js" type="text/javascript"></script>
 
-<script type="text/javascript" charset="utf-8" src="/admin/pageEdit/formdesign/js/ueditor/ueditor.config.js"></script>
-<script type="text/javascript" charset="utf-8" src="/admin/pageEdit/formdesign/js/ueditor/ueditor.all.min.js"> </script>
+<script type="text/javascript" charset="utf-8" src="../pageEdit/formdesign/js/ueditor/ueditor.config.js"></script>
+<script type="text/javascript" charset="utf-8" src="../pageEdit/formdesign/js/ueditor/ueditor.all.min.js"> </script>
 <!--建议手动加在语言，避免在ie下有时因为加载语言失败导致编辑器加载失败-->
 <!--这里加载的语言文件会覆盖你在配置项目里添加的语言类型，比如你在配置项目里配置的是英文，这里加载的中文，那最后就是中文-->
-<script type="text/javascript" charset="utf-8" src="/admin/pageEdit/formdesign/js/ueditor/lang/zh-cn/zh-cn.js"></script>
+<script type="text/javascript" charset="utf-8" src="../pageEdit/formdesign/js/ueditor/lang/zh-cn/zh-cn.js"></script>
 
 <script>
 $(function(){
 
 	$.ajax({type: "POST",url: "/s/function/reportform.load.php", 
-		data:{formid:'<?php echo $_REQUEST['id']?>'}
-		,success: function(data){
+//		data:{formid:'<?php echo $_REQUEST['id']?>'},
+		data:{formid:''},
+		success: function(data){
 			if(data==null){
 				alert("加载失败，返回为空！");
 				startEditor();
@@ -93,7 +94,8 @@ $(function(){
 			return;
 		}
 		$.ajax({type: "POST",url: "/s/function/reportform.save.php", 
-			data:{field:outstr,formid:'<?php echo $_REQUEST['id']?>',
+//			data:{field:outstr,formid:'<?php echo $_REQUEST['id']?>',
+			data:{field:outstr,formid:'',
 			content:formeditor,traditional:true}
 			,success: function(data){
 				if(data==null){

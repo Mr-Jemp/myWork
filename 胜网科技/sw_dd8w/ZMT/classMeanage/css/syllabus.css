@@ -1,0 +1,236 @@
+*{
+	padding: 0;
+	margin: 0;
+}
+html,body{
+	font-family: "宋体","冬青黑体";
+}
+.class_header{
+	background-color:#56c399;
+	height: 0.66rem;
+}
+.class_header img{
+	width: 0.3rem;
+	font-size: 0.17rem;
+	line-height: 0.66rem;
+	padding-left: 0.15rem;
+}
+.header_message{
+	font-size: 0.3rem;
+	color: white;
+	text-align: center;
+	padding-left: 1.2rem;
+}
+.class_header div{
+	line-height: 0.66rem;
+}
+.class_header .selectClass{
+	font-size: 0.2rem;
+	color: white;
+	text-align: right;
+	padding-right: 0.55rem;
+}
+/*班级课程表还是我的课程表*/
+
+.classORmy{
+	padding: 5% 10%;
+}
+.classORmy li{
+	position: relative;
+	cursor: pointer;
+	text-align: center;
+	list-style: none;
+	width: 40%;
+	display: inline-block;
+	padding: 5% ;
+	background-color: white;
+	border-radius: 5%;
+}
+.classORmy li:last-child{
+	float: right;
+}
+.classORmy li a{
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top:0;left: 0;
+}
+.classORmy li img{
+	width: 1.2rem;
+}
+.classORmy li p{
+	font-size: 0.2rem;
+	margin-top: 0.1rem;
+}
+/*班级课程表*/
+.classSyllabus{
+	width: 100%;
+	height: 10rem;
+	text-align: center;
+	font-size: 0.2rem;
+	border:1px solid #EEEEEE;
+	/*color: #ABB9C4;*/
+}
+.classSyllabus td{
+
+	border:1px solid #EEEEEE;
+}
+.classSyllabus tr td:first-child,.classSyllabus tr:first-child td{
+	background-color: #F6F9F9;
+	color: #617A90;
+}
+.tianjia{
+	background-color: #DEE2E2;
+	cursor: pointer;
+	background-image: url(../images/tianjia@2x.png);
+	background-position: 50% 50%;
+	background-repeat: no-repeat;
+}
+/*添加课程*/
+.syllabusName{
+	padding: 0.35rem;
+}
+.syllabusName input,.syllabusTime li input{
+	color: #757575;
+	width: 100%;
+	font-size: 0.22rem;
+	border: 0;
+	background-color: white;
+	outline: none;
+	text-align: left;
+}
+.syllabusTime li{
+	cursor: pointer;
+	position: relative;
+	list-style: none;
+	padding: 0.35rem;
+	border-bottom: 1px solid #f3f6f8;
+}
+.syllabusTime li a{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	left: 0;top: 0;
+}
+/*设置课程表最大节数*/
+.setClassNumber{
+	color: #617A90;
+	cursor: pointer;
+	background-color: #f3f6f8;
+	padding: 0.35rem;
+	font-size: 0.22rem;
+	border-bottom: 1px solid lightgray;
+}
+p{
+	margin: 0;
+}
+.setClassNumber img,.classNumber img{
+	width: 0.3rem;
+	float: right;
+}
+.classNumber p{
+	cursor: pointer;
+	font-size: 0.22rem;
+	padding: 0.35rem;
+	border-bottom:1px solid lightgray ;
+}
+
+.setClassNumber1P,.setRelaxTimeP{
+	display: none;
+	height: 100%;
+	background-color: rgba(0,0,0,0.3);
+	width: 100%;
+	position: fixed;
+	bottom: 0;
+	left: 0;
+}
+.setClassNumber1,.setRelaxTime{
+	color: #B6B6B6;
+	width: 100%;
+	position: absolute;
+	bottom: 0;left: 0;
+	font-size: 0.3rem;
+}
+.setClassNumber1 ul{
+	padding: 0;
+}
+.setClassNumber1 p,.setRelaxTime p{
+	width: 100%;
+	background-color: #F7F7F7;
+	text-align: center;			
+	padding: 0.35rem;
+}
+.setClassNumber1 p span,.setRelaxTime p span{
+	float: right;
+	color: #617A90;
+	cursor: pointer;
+}
+.setClassNumber1 li,.setRelaxTime li{
+	cursor: pointer;
+	background-color: white;
+	text-align: center;
+	list-style: none;
+	padding: 0.2rem;
+}
+.kuang{
+	/*color: #617A90;*/
+	color: rgba(0,0,0,0);
+	position: absolute;
+	top: 0.82rem;
+	width: 100%;
+	padding: 0.2rem;
+	border-top: 1px solid #E8E8E8;
+	border-bottom: 1px solid #E8E8E8;
+	z-index: 100;
+}
+.setClassNumber1 .jieshu{
+	color: #617A90;
+}
+/*编辑课程表*/
+.redactMySyllabus{
+	width: 100%;	
+	height: 100%;
+	position: fixed;
+	left: 0;top: 0;
+	background-color: rgba(0,0,0,0.3);
+	display: -webkit-flex; /* Safari */
+  	display: flex;
+  	justify-content:center;
+  	align-items:center;
+  	display: none;
+}
+.redactMySyllabus ul{
+	list-style: none;
+	background-color: white;
+	width: 5rem;
+	/*padding: 0.2rem;*/border-radius: 0.2rem;
+}
+.redactMySyllabus ul li{
+	padding: 0.2rem;
+	font-size: 0.3rem;
+	text-align: center;
+	
+}
+.redactMySyllabus ul li:nth-child(2),.redactMySyllabus ul li:nth-child(3){
+	background-color: #EFF4F4;
+	text-align: left;
+}
+.redactMySyllabus ul li input{
+	border: 0;
+	width: 100%;
+	background-color: rgba(0,0,0,0);
+	outline: none;
+}
+.redactMySyllabus ul li:nth-child(4){
+	display: -webkit-flex; /* Safari */
+  	display: flex;
+  	justify-content:center;
+  	align-items:space-around;
+}
+.redactMySyllabus ul li:nth-child(4) p{
+	text-align: center;
+	width: 50%;
+	cursor: pointer;
+}
+
+	

@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css"/>
+		<link rel="stylesheet" type="text/css" href="css/photo.css"/>
+		
+	</head>
+	<body ng-app="myApp">
+		<!--<!--头部-->
+			<div class="class_header row" style="margin: 0;">
+				<div class="col-xs-2" onclick="javascript:history.go(-1);">
+					<img src="images/fanhui@2x.png" alt="" />
+				</div>
+				<div class="header_message col-xs-7">初一（2）班相册</div>
+				<div class="selectClass col-xs-3">
+					<img src="images/tianjia@2x.png" style="width: 0.45rem;" />
+				</div>
+			</div>
+			<div class="contractList row" style="margin-top: 0.8rem;">
+  					<a href="#/" class="col-xs-4 contractListActive" >相册</a>
+  					<a href="#/photophotos" class="col-xs-4">照片</a>
+  					<a href="#/videoList" class="col-xs-4">视频</a>
+  					<!--ng-repeat= "tab in tabs"-->
+  					<!--ng-class="{selected: tab === currentTab}"-->
+  			</div>
+			<!--显示内容-->
+			<div ng-view></div>
+			
+			
+			<!--点击+号 显示的内容-->
+			<div class="addSimbol row" style="margin: 0;">
+				<p class="col-xs-6">
+					<img onclick="$('#previewImg').click();" src="images/shangchuanxiangce@2x.png" alt="" /><br/>
+					<span >上传照片</span>
+					<input type="file" onchange="previewImage2(this)" accept="image/*" multiple="multiple"  style="display: none;" id="previewImg">
+				</p>
+				<p class="col-xs-6">
+					<img onclick="$('#previewVideo').click();" src="images/shanngchuanship@2x.png" alt="" /><br/>
+					<span >上传视频</span>
+					<input type="file" onchange="previewVideo(this)" accept="video/*" multiple="multiple"  style="display: none;" id="previewVideo">
+				</p>
+				<div></div>
+			</div>
+			
+			
+	<script type="text/javascript" src="js/jquery-1.12.4.min.js" ></script>
+	<script type="text/javascript" src="js/angular.min.js"></script>
+	<script type="text/javascript" src="js/angular-route.min.js" ></script>
+	<script type="text/javascript" src="js/publicJs.js" ></script>
+	</body>
+	
+	<script type="text/javascript">
+
+		var app=angular.module("myApp",["ngRoute"]);
+		app.config(["$routeProvider",function($routeProvider){
+			
+			$routeProvider.when("/",{
+				templateUrl:"photo_index.html"
+			}).when("/photophotos",{
+				templateUrl:"photo_allPhotos.html"
+			}).when("/videoList",{
+				templateUrl:"photo_videos.html"
+			})
+		}])
+		app.run(function($location){
+			console.log($location)
+			
+		})
+		.controller('main', function(){
+			var self = this;
+			self.tabs = [
+				{title: 'sdf', value: 'sdfsdf'}
+			]
+		})
+
+		//点击全部 照片 视频
+		$(".contractList a").on("click",function(){
+			app.run(function($location){
+			console.log($location)
+			
+		})
+			$(".contractList a").removeClass("contractListActive");
+			$(this).addClass("contractListActive");
+			$(".contractChange").css("display","none");
+			$(".contractChange").eq($(this).index()).css("display","block");
+			console.log($(this).index())
+			localStorage.setItem("zmt_photos",$(this).index());
+	})
+//			$(".contractList a").removeClass("contractListActive");
+//			$('.contractList a').eq(Number(localStorage.getItem("zmt_photos"))).addClass("contractListActive");
+
+
+		//点击+号
+		$(".selectClass").click(function(){
+			console.log("加号");
+			$(".addSimbol").toggleClass("addSimbolActive");
+		})
+		//点击其他 ，上传视频上传相册消
+		
+		$(".addSimbol div").click(function(){
+			$(".addSimbol").toggleClass("addSimbolActive");
+		})
+		
+		 var src="";
+		 var bol=false;
+		 function previewImage2(file){
+		 	
+		 	if(bol){
+		 		return;
+		 	}
+		 	bol=true;
+		    console.log("击中");
+		    if(file.files && file.files[0]){      
+		        var reader = new FileReader();
+		        reader.onload = function(evt){
+			        src = evt.target.result;
+			        localStorage.setItem("aaa",src);
+			        bol=false;
+					window.location.href="photo_uploading.html";
+					
+		        }
+		        reader.readAsDataURL(file.files[0]);
+		      }
+		}
+
+	 function previewVideo(file){  
+	 	console.log(584)
+	    if (file.files && file.files[0]){  
+	      var reader = new FileReader();
+	      reader.onload = function(evt){
+	      	var src = evt.target.result;
+	      	console.log(src);
+//	      	location.href="photo_videoUploading.html?txt="+src;//发送txt里面的内容
+	      }
+	      reader.readAsDataURL(file.files[0]);
+	    }
+	          
+	}
+	</script>
+	
+	
+</html>

@@ -180,6 +180,13 @@
 									{
 										display: '性别',
 										name: 'sex',
+										render:function(data){
+											if(data.sex=='0'){
+												return "男";
+											}else{
+												return "女";
+											}
+										},
 										minWidth: 140
 									},
 									{

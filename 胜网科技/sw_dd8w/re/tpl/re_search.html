@@ -1,0 +1,82 @@
+<link rel="stylesheet" href="/re/css/re_public.css">
+<link rel="stylesheet" href="/re/css/re_search.css">
+<div class="search_top">
+    <div class="search-re"><span onclick="javascript:history.go(-1);"></span></div>
+    <input type="text" ng-model="title" placeholder="请输入搜索内容">
+    <div class="search-btn"><span ng-click="search()">搜索</span></div>
+</div>
+<dl class="search_history" ng-if="is_show_history">
+    <dt><i></i>搜索记录</dt>
+    <dd ng-click="setTitle(h)" ng-repeat="h in history">{{h}}</dd>
+    <dd class="clear-search" ng-click="clearSearch()">清空搜索记录</dd>
+</dl>
+<div class="searchlists" ng-if="dummy_data">
+        <div class="searchlistsh">
+            <h2>导学案</h2>
+        </div>
+        <ul>
+            <li>
+                <a href="#!/re_des/1/1"><div class="re_content_digimg"><img src="/data/img/re/re_list.png" /><span class="re_content_smallimg"></span></div></a>
+                <div class="re_content_des">
+                    <h3><a href="#!/re_des/1/1">陈晓明</a></h3>
+                    <p>巧用地图、巧用题型复习世界的地 区和国家</p>
+                </div>
+            </li>
+            <li>
+                <a href="#!/re_des/1/1"><div class="re_content_digimg"><img src="/data/img/re/re_list.png" /><span class="re_content_smallimg"></span></div></a>
+                <div class="re_content_des">
+                    <h3><a href="#!/re_des/1/1">陈晓明</a></h3>
+                    <p>巧用地图、巧用题型复习世界的地 区和国家</p>
+                </div>
+            </li>
+            <li>
+                <a href="#!/re_des/1/1"><div class="re_content_digimg"><img src="/data/img/re/re_list.png" /><span class="re_content_smallimg"></span></div></a>
+                <div class="re_content_des">
+                    <h3><a href="#!/re_des/1/1">陈晓明</a></h3>
+                    <p>巧用地图、巧用题型复习世界的地 区和国家</p>
+                </div>
+            </li>
+        </ul>
+        <div class="searchlistsh" style="margin-top: 10px;">
+            <h2>课件</h2>
+        </div>
+        <ul>
+            <li>
+                <a href="#!/re_des/1/1"><div class="re_content_digimg"><img src="/data/img/re/re_list.png" /><span class="re_content_smallimg"></span></div></a>
+                <div class="re_content_des">
+                    <h3><a href="#!/re_des/1/1">陈晓明</a></h3>
+                    <p>巧用地图、巧用题型复习世界的地 区和国家</p>
+                </div>
+            </li>
+            <li>
+                <a href="#!/re_des/1/1"><div class="re_content_digimg"><img src="/data/img/re/re_list.png" /><span class="re_content_smallimg"></span></div></a>
+                <div class="re_content_des">
+                    <h3><a href="#!/re_des/1/1">陈晓明</a></h3>
+                    <p>巧用地图、巧用题型复习世界的地 区和国家</p>
+                </div>
+            </li>
+            <li>
+                <a href="#!/re_des/1/1"><div class="re_content_digimg"><img src="/data/img/re/re_list.png" /><span class="re_content_smallimg"></span></div></a>
+                <div class="re_content_des">
+                    <h3><a href="#!/re_des/1/1">陈晓明</a></h3>
+                    <p>巧用地图、巧用题型复习世界的地 区和国家</p>
+                </div>
+            </li>
+        </ul>
+</div>
+<div class="searchlists" ng-if="!is_show_history && !dummy_data">
+    <div ng-repeat="ls in content">
+        <div class="searchlistsh">
+            <h2>{{type[ls.filetype]}}</h2>
+        </div>
+        <ul>
+            <li ng-repeat="item in ls.list">
+                <a href="#!/re_des/{{item.fileType}}/{{item.id}}"><div class="re_content_digimg"><img src="{{item.coverImg}}" /><span class="re_content_smallimg"></span></div></a>
+                <div class="re_content_des">
+                    <h3><a href="#!/re_des/{{item.fileType}}/{{item.id}}">陈晓明</a></h3>
+                    <p>{{item.explain}}</p>
+                </div>
+            </li>
+        </ul>
+    </div>
+</div>

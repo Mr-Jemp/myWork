@@ -1,0 +1,143 @@
+<link rel="stylesheet" href="./css/qiyezhuce.css">
+<script src="../../js/jquery.min.js"></script>
+<style>
+    .show{
+        display: block;
+    }
+    .hien{
+        display: none;
+    }
+</style>
+
+<div class="wraper">
+    <div id="commonForm">
+        <div class="logo">
+           <span></span>
+            <span class="text">注册胜网科技账号</span>
+            <div class="regtypetip ">自由工作，高效管理</div>
+        </div>
+        <div class="tabtoggle">
+            <a href="javascript:;" class="current">
+                <span class="regnew ">注册胜网</span>
+            </a>
+            <a href="javascript:;">
+                <span class="enterhas">加入已有企业
+                  <small>(邀请码注册)</small>
+                </span>
+            </a>
+        </div>
+        <!--内容区-->
+        <div class="register_wrap">
+           <div class="show">
+               <!--手机号码-->
+               <div class="ng-scope">
+                   <!--手机号码输入-->
+                   <div class="inputwrap clearfix email_input_wrap">
+                       <!--区号和提示-->
+                       <div class="mobiarea">
+                           <label id="regway-list-label" class="inline_block username_type_switch">
+                               <span class="area-code-wrap ng-binding">+86</span>
+                               <i class="icon-arrowdown ng-hide"></i>
+                           </label>
+                           <ul class="regway-list mobile-phone-area-code" id="regway-list"></ul>
+                       </div>
+                       <!--号码输入框-->
+                       <div class="regmobi">
+                           <input  type="number" id="email"    placeholder="请输入手机号"  class="padr1" name="username" >
+                       </div>
+                       <a href="javascript:void(0);" class="inputclear input-clear"><i class="icon-clear"></i></a>
+                   </div>
+               </div>
+               <!--验证码-->
+               <div class="auth-code" ng-auth-code="register">
+                   <div class="verify-code from-item">
+                       <div class="img-code-wrap clearfix smswrap" ng-class="{errorfocus:codeError}">
+                           <div class="img-code authcode inputwrap img-code-row">
+                               <img class="code-img" ng-click="change_code()" id="codeImg" src="./images/code_image.png">
+                               <div class="code-input-wrap">
+                                   <input class="code-input" style="background:#fff;" id="code" ng-limit-code="4" ng-keydown="verifyCodeKeyDown($event)" ng-focus="vaCodeFocus($event)" ng-blur="vaCodeBlur($event)" type="text" placeholder="请输入图片内容" history_value="" name="password" tabindex="2">
+                               </div>
+                           </div>
+                       </div>
+                       <!-- 图片验证码初始化状态 -->
+                       <div class="errortip ng-binding ng-hide" ng-class="{error:codeError}" ng-show="codeError" ng-init="codeError=0" ng-bind-html="codeErrorTip|rawHtml"></div>
+                       <div class="clearfix smswrap" ng-class="{errorfocus:authCodeError}">
+                           <div class="authcode">
+                               <input ng-limit-code="6" autocomplete="off" type="text" id="authCode" placeholder="请输入短信验证码" ng-focus="vaAuthCodeFocus($event)" ng-blur="vaAuthCodeBlur($event)" history_value="" name="password" tabindex="3">
+                           </div>
+                           <div class="btn-wrap smswrap btn-wrap-getCode">
+                               <a href="javascript:void(0);" class="getauth effect" ng-class="{regetauth:authWait,effect:!sendProgress,success:authSuccess}" ng-click="getAuthCode($event)" ng-init="usernameRight=false;authWait=false;authSuccess=false;sendProgress=false;"><i class="icon-authsuccess"></i><span class="ng-binding">获取短信验证码</span></a>
+                           </div>
+                       </div>
+                       <div class="errortip ng-binding ng-hide" ng-class="{error:authCodeError}" ng-show="authCodeError" ng-init="authCodeError=0" ng-bind-html="authCodeErrorTip|rawHtml"></div>
+                   </div>
+
+               </div>
+               <!--下一步-->
+               <div class="submitwrap">
+                   <a href="javascript:;" class="btn-submit ng-binding" submit-click="form_submit()" ng-init="submitBtnText=('next' | translate)">下一步</a>
+               </div>
+               <!--了解-->
+               <div class="backreg">
+                   <!-- ngIf: !isInternational --><a ng-if="!isInternational" ng-click="knowJingoal($event)" href="http://localhost:63342/8.26_news02/8.26/index.html#/school" target="_blank" class="ng-binding ng-scope">了解今目标</a><!-- end ngIf: !isInternational -->
+                   <!-- ngIf: bodyRegisterType==='email' -->
+                   <!-- ngIf: isInternational && bodyRegisterType==='phone' -->
+               </div>
+           </div>
+            <div class="hien">
+                <div class="inputwrap clearfix ng-scope" ng-init="iCodeError=0;" ng-class="{errorfocus:iCodeError}">
+                    <input type="text" id="iCode" placeholder="邀请码" class="cutpad" ng-focus="vCodeFocus($event)" ng-blur="vCodeBlur($event)" name="password" tabindex="1">
+                </div>
+                <div class="inputwrap clearfix ng-scope" ng-init="companyCodeError=0;" ng-class="{errorfocus:companyCodeError}">
+                    <input type="text" id="companyCode" placeholder="企业号" class="cutpad" ng-focus="companyCodeFocus($event)" ng-blur="companyCodeBlur($event)" name="password" tabindex="2">
+                </div>
+                <div class="submitwrap ng-scope">
+                    <a href="javascript:void(0);" class="btn-submit ng-binding" submit-click="joinRegister()">下一步</a>
+                </div>
+                <div class="backreg ng-scope">
+                    <a ng-click="noInviteCode($event)" href="icode_error.html?lang=zh_CN&amp;isInter=false" target="_blank" class="ng-binding">没有邀请码？</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+
+    var zhuce = $(".tabtoggle").children()[0]   //注册
+    var qiye = $(".tabtoggle").children()[1]       //企业
+
+    var zhuces = $(".register_wrap").children()[0]
+    var qiyes = $(".register_wrap").children()[1]
+
+    var register_wrap = $(".register_wrap").children()
+
+    zhuce.onclick = function(){
+        $(this).addClass("current").siblings().removeClass("current")
+        if(zhuces.classList.contains('hien')){
+            zhuces.classList.remove("hien")
+        }
+        zhuces.classList.add("show")
+        qiyes.classList.add("hien")
+    }
+
+    qiye.onclick=function(){
+        $(this).addClass("current").siblings().removeClass("current")
+        if(qiyes.classList.contains('hien')){
+            qiyes.classList.remove("hien")
+        }
+        qiyes.classList.add("show")
+        zhuces.classList.add("hien")
+    }
+
+    //手机号验证
+    $("#email").blur(function(){
+        var phone = $("#email").val();
+        if(!(/^1(3|4|5|7|8)\d{9}$/.test(phone))){
+
+        }
+    })
+
+
+
+</script>

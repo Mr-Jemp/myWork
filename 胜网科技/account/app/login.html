@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<title>登录页面</title>
+		<meta name="keywords" content="胜网科技" />
+		<meta name="description" content="胜网科技" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<!-- basic styles -->
+		<link href="../assets/css/bootstrap.min.css" rel="stylesheet" />
+		<link rel="stylesheet" href="../assets/css/font-awesome.min.css" />
+		<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:400,300"/>
+		<!-- ace styles -->
+		<link rel="stylesheet" href="../assets/css/ace.min.css" />
+		<link rel="stylesheet" href="../assets/css/ace-rtl.min.css" />
+		<script src="../../js/jquery.min.js"></script>
+		<script src="../../js/bootstrap.min.js"></script>
+
+	
+	</head>
+	<style>
+	
+		.errortip {
+			color: #f44;
+			font-size: 12px;
+		}	
+		.password_show{
+			color: #f44;
+			font-size: 12px;
+		}
+		.password_test{
+			color: #f44;
+			font-size: 12px;
+		}
+		.logo{
+			display:inline-block
+		}
+		.logo>img{
+			width: 50px
+		}
+	
+	</style>
+	<body class="login-layout" style="background-color: #E0F0FE;">
+		<div class="main-container">
+			<div class="main-content">
+				<div class="row">
+					<div class="col-sm-10 col-sm-offset-1">
+						<div class="login-container">
+							<div class="center">
+								<h1>
+									<!-- <i class="icon-leaf green"></i> -->
+									<a href="javascript:;" class="logo"><img src="../assets/img/logo.png" alt=""></a>
+									<span class="red">胜网</span>
+									<span class="white">欢迎你</span>
+								</h1>
+								<h4 class="blue">注册/登陆</h4>
+							</div>
+
+							<div class="space-6"></div>
+
+							<div class="position-relative">
+								<div id="login-box" class="login-box visible widget-box no-border">
+									<div class="widget-body">
+										<div class="widget-main">
+											<h4 class="header blue lighter bigger">
+												<i class="icon-coffee green"></i>
+												请输入你的账号
+											</h4>
+
+											<div class="space-6"></div>
+
+											<form>
+												<fieldset>
+													<label class="block clearfix">
+														<span class="block input-icon input-icon-right">
+															<input type="text" class="form-control" placeholder="请输入用户名/账号" />
+															<i class="icon-user"></i>
+														</span>
+													</label>
+
+													<label class="block clearfix">
+														<span class="block input-icon input-icon-right">
+															<input type="password" class="form-control" placeholder="请输入密码" />
+															<i class="icon-lock"></i>
+														</span>
+													</label>
+
+													<div class="space"></div>
+
+													<div class="clearfix">
+														<label class="inline">
+															<input type="checkbox" class="ace" />
+															<span class="lbl">记住我</span>
+														</label>
+
+														<button type="button" class="width-35 pull-right btn btn-sm btn-primary">
+															<i class="icon-key"></i>
+															登陆
+														</button>
+													</div>
+
+													<div class="space-4"></div>
+												</fieldset>
+											</form>
+
+											<div class="social-or-login center">
+												<span class="bigger-110">其他平台登陆</span>
+											</div>
+
+											<div class="social-login center">
+												<a class="btn btn-primary">
+													<i class="icon-facebook"></i>
+												</a>
+
+												<a class="btn btn-info">
+													<i class="icon-twitter"></i>
+												</a>
+
+												<a class="btn btn-danger">
+													<i class="icon-google-plus"></i>
+												</a>
+											</div>
+										</div><!-- /widget-main -->
+
+										<div class="toolbar clearfix">
+											<div>
+												<a href="#" onclick="show_box('forgot-box'); return false;" class="forgot-password-link">
+													<i class="icon-arrow-left"></i>
+													忘记密码?
+												</a>
+											</div>
+
+											<div>
+												<a href="javascript:;" onclick="show_box('signup-box'); return false;" class="user-signup-link">
+													我要注册
+													<i class="icon-arrow-right"></i>
+												</a>
+											</div>
+										</div>
+									</div><!-- /widget-body -->
+								</div><!-- /login-box -->
+                            <!--找回密码区-->
+								<div id="forgot-box" class="forgot-box widget-box no-border">
+									<div class="widget-body">
+										<div class="widget-main">
+											<h4 class="header red lighter bigger">
+												<i class="icon-key"></i>
+												找回密码
+											</h4>
+
+											<div class="space-6"></div>
+											<p>
+												输入您的电子邮件并收到说明
+											</p>
+
+											<form>
+												<fieldset>
+													<label class="block clearfix">
+														<span class="block input-icon input-icon-right">
+															<input type="email" class="form-control" placeholder="Email" />
+															<i class="icon-envelope"></i>
+														</span>
+													</label>
+
+													<div class="clearfix">
+														<button type="button" class="width-35 pull-right btn btn-sm btn-danger">
+															<i class="icon-lightbulb"></i>
+															发给我
+														</button>
+													</div>
+												</fieldset>
+											</form>
+										</div><!-- /widget-main -->
+                                        <!--回到登陆  -->
+										<div class="toolbar center">
+											<a href="#" onclick="show_box('login-box'); return false;" class="back-to-login-link">
+												回到登陆
+												<i class="icon-arrow-right"></i>
+											</a>
+										</div>
+									</div><!-- /widget-body -->
+								</div><!-- /forgot-box -->
+                            <!--注册新用户-->
+								<div id="signup-box" class="signup-box widget-box no-border">
+									<div class="widget-body">
+										<div class="widget-main">
+											<h4 class="header green lighter bigger">
+												<i class="icon-group blue"></i>
+												注册新用户
+											</h4>
+
+											<div class="space-6"></div>
+											<p> 输入您的详细信息: </p>
+
+											<form>
+												<fieldset>
+													<!-- <label class="block clearfix">
+														<span class="block input-icon input-icon-right">
+															<input type="email" class="form-control" placeholder="邮箱" />
+															<i class="icon-envelope"></i>
+														</span>
+													
+													</label> -->
+
+													<label class="block clearfix">
+														<span class="block input-icon input-icon-right">
+															<input type="text" class="form-control" placeholder="用户名/手机号码" />
+															<i class="icon-user"></i>
+														</span>
+														<div class="errortip" style="display:none">请输入正确的用户名(4-16位)</div>
+													</label>
+
+													<label class="block clearfix">
+														<span class="block input-icon input-icon-right">
+															<input type="password" class="form-control password_01" placeholder="密码" />
+															<i class="icon-lock"></i>
+														</span>
+														<div class="password_show" style="display:none">密码强度高级</div>
+													</label>
+
+													<label class="block clearfix">
+														<span class="block input-icon input-icon-right">
+															<input type="password" class="form-control password_02" placeholder="确认密码" />
+															<i class="icon-retweet"></i>
+														</span>
+														<div class="password_test" style="display:none">两次密码不相同</div>
+													</label>
+
+													<label class="block">
+														<input type="checkbox" class="ace check" />
+														<span class="lbl">
+															我接受
+															<a href="javascript:;"  class="" data-toggle="modal"  data-target="#myModal">用户协议</a>
+														</span>
+													</label>
+
+													<div class="space-24"></div>
+
+													<div class="clearfix">
+														<button type="reset" class="width-30 pull-left btn btn-sm">
+															<i class="icon-refresh"></i>
+															重置内容
+														</button>
+
+														<button type="button" class="width-65 pull-right btn btn-sm btn-success zhuce" disabled>
+															注册
+															<i class="icon-arrow-right icon-on-right"></i>
+														</button>
+													</div>
+												</fieldset>
+											</form>
+										</div>
+
+										<div class="toolbar center">
+											<a href="javascript:;" onclick="show_box('login-box'); return false;" class="back-to-login-link">
+												<i class="icon-arrow-left"></i>
+												回到登陆
+											</a>
+										</div>
+									</div><!-- /widget-body -->
+								</div><!-- /signup-box -->
+							</div><!-- /position-relative -->
+						</div>
+					</div><!-- /.col -->
+				</div><!-- /.row -->
+			</div> 	
+		</div><!-- /.main-container -->
+
+		<!-- 协议 -->
+		<!-- 模态框（Modal） -->
+		<div class="modal fade" id="myModal" tabindex="-1" role="dialog" 
+		   aria-labelledby="myModalLabel" aria-hidden="true">
+		   <div class="modal-dialog">
+		      	<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" 
+						data-dismiss="modal" aria-hidden="true">
+							&times;
+						</button>
+						<h4 class="modal-title" id="myModalLabel">
+						用户协议
+						</h4>
+					</div>
+					<div class="modal-body">
+						在这里添加一些文本
+					</div>
+				</div>
+		    </div>	<!-- /.modal-content -->
+		</div>
+		
+		<!--[if !IE]> -->
+
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+		<script type="text/javascript">
+			window.jQuery || document.write("<script src='../assets/js/jquery-2.0.3.min.js'>"+"<"+"/script>");
+		</script>
+		<script type="text/javascript">
+			if("ontouchend" in document) document.write("<script src='../assets/js/jquery.mobile.custom.min.js'>"+"<"+"/script>");
+				function show_box(id) {
+			 jQuery('.widget-box.visible').removeClass('visible');
+			 jQuery('#'+id).addClass('visible');
+			}
+		</script>
+		<script>
+			// 邮箱匹配
+		//  var re = /^[A-Za-z\d]+([-_.][A-Za-z\d]+)*@([A-Za-z\d]+[-.])+[A-Za-z\d]{2,4}$/; 
+		// 	$("input[type=email]").blur(function(){
+		// 		if(re.test($(this).val())){
+		// 			console.log(re.test($(this).val()))
+		// 		}else{
+		// 			console.log(re.test($(this).val()))
+		// 		}
+		// 	})
+			
+			var userflag = false;//用户名标记
+			var passflag = false; //密码标记
+			var checkboxflag = false; //协议标记
+			//用户名匹配  4到16位（字母，数字，下划线，减号）
+			var userName = /^[a-zA-Z0-9_-]{6,16}$/
+			$("input[type=text]").blur(function(){
+				if(userName.test($(this).val())){
+					$(".errortip").fadeOut()
+					userflag = true
+				}else{
+				$(".errortip").fadeIn()
+				}
+			})
+			//密码   /^.*(?=.{6,})(?=.*\d)(?=.*[A-Z])(?=.*[a-z])(?=.*[!@#$%^&*? ]).*$/;
+			///密码强度正则，最少6位，包括至少1个大写字母，1个小写字母，1个数字，1个特殊字符
+			var pPattern = /^.*(?=.{6,})(?=.*\d)(?=.*[A-Z])(?=.*[a-z])(?=.*[!@#$%^&*? ]).*$/;
+			$(".password_01").blur(function(e){
+				if(pPattern.test($(this).val())){
+					$(".password_show").fadeIn()
+				}
+			})
+			//第二次输入密码匹配
+			$(".password_02").blur(function(e){
+				if($(this).val()!=$(".password_01").val()){
+					$(".password_test").fadeIn()
+					passflag=true;
+				}else{
+					$(".password_test").fadeOut()
+				}
+			})
+			//点击接受协议,判断前面有没有输入正确的信息
+			$(".check").on("click",function(){
+				if($(".check").prop("checked")==true&&userflag==true&&passflag==true){
+						$("button[type=button]")[2].disabled=false
+				}else{
+					$("button[type=button]")[2].disabled=true
+				}
+			})
+			//注册按钮
+			$(".zhuce").on("click",function(){
+					if($(".check").prop("checked")==false){
+							alert("请接受协议")
+					}else if(userflag==true&&passflag==true){
+						alert("注册成功")
+					}
+			})
+		
+			
+		</script>
+</body>
+</html>

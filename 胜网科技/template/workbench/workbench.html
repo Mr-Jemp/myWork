@@ -28,19 +28,7 @@
     $(function() {
 
 
-//            $.ajax({
-//                type:"POST",
-//                url:"http://192.168.0.21:20896/htRoleService/getSearchInfoRole",
-//                dataType:"json",
-//                data:{"role_id":0},
-//                beforeSend:function(xhr){
-//                    xhr.setRequestHeader("Access-Toke")
-//                },
-//                success:function(data){
-//                    console.log(data)
-//                }
-//            })
-        //
+
         //左边的主要菜单
         $("#tab1").ligerTab();
         //右边的主要菜单
@@ -150,10 +138,13 @@
             showSwitchInTab: true,
             showSwitch: true,
             onAfterAddTabItem: function(tabdata) {
+                console.log(tabdata)
+                sessionStorage.setItem(tabdata.text,tabdata.tabid)
                 tabItems.push(tabdata);
                 saveTabStatus();
             },
             onAfterRemoveTabItem: function(tabid) {
+                console.log(tabid)
                 for (var i = 0; i < tabItems.length; i++) {
                     var o = tabItems[i];
                     if (o.tabid == tabid) {
@@ -164,11 +155,13 @@
                 }
             },
             onReload: function(tabdata) {
+                console.log(tabdata)
                 var tabid = tabdata.tabid;
                 addFrameSkinLink(tabid);
             },
             onAfterSelectTabItem: function (tabid)
             {
+                console.log(tabid)
                 cu_tabid=tabid;
             }
         });
@@ -178,10 +171,12 @@
             showSwitchInTab: true,
             showSwitch: true,
             onAfterAddTabItem: function(tabdata) {
+
                 tabItems.push(tabdata);
                 saveTabStatus();
             },
             onAfterRemoveTabItem: function(tabid) {
+
                 for (var i = 0; i < tabItems.length; i++) {
                     var o = tabItems[i];
                     if (o.tabid == tabid) {
@@ -198,6 +193,7 @@
             },*/
             onAfterSelectTabItem: function (tabid)
             {
+                console.log(tabid)
                 cu_tabid=tabid;
             }
         });
@@ -227,12 +223,12 @@
             $(this).removeClass("l-link-over");
         });
         //树
-        <!--<?php-->
-        <!--include_once"../../s/inc/conn.php";-->
-        <!--include_once"../../s/function/public.php";-->
-        <!--$result=getfreepower("",0,implode(',',$_SESSION['uroles']));-->
-        <!--?>-->
-        <!--var data=eval('['+decodeURIComponent('<?php echo urlencode($result[1]);?>')+']');-->
+        // <!--<?php-->
+        // <!--include_once"../../s/inc/conn.php";-->
+        // <!--include_once"../../s/function/public.php";-->
+        // <!--$result=getfreepower("",0,implode(',',$_SESSION['uroles']));-->
+        // <!--?>-->
+        // <!--var data=eval('['+decodeURIComponent('<?php echo urlencode($result[1]);?>')+']');-->
 
 
 
@@ -368,7 +364,7 @@
         return false;
     }
 //    var dizhi = location.host+location.pathname+"#/school"
-  $(".l-layout-header-inner").append("<a target='_self' title='胜网科技首页' href='http://127.0.0.1:8020/8.26/index.html#/website'><img src='./resource/images/common/sz.png'></a>")
+  $(".l-layout-header-inner").append("<a target='_self' title='胜网科技首页' href='http://127.0.0.1:8020/8.26/#/website'><img src='./resource/images/common/sz.png'></a>")
 
     //    function attachLinkToFrame(iframeId, filename) {
     //        if (!window.frames[iframeId]) return;
@@ -465,7 +461,7 @@
 <div id="layout1" style="width:99.2%; margin-top:0px; "  ng-controller="main">
     <div position="left"  title="主要菜单"  id="accordion1!!!" style="height:100%;" ng-controller="gourl">
         <div id="tab1" style="height:100%">
-            <div title="角色" style="height:100%;overflow-y:scroll" ng-controller="work1Controller">
+            <div title="角色" style="height:100%;overflow-y:scroll" class="{{id}}" ng-controller="work1Controller">
                 <div style="height:7px;"></div>
                 <ul id="power_tree" style="margin-top:3px;">
                     <!--<div-->
@@ -507,7 +503,7 @@
 
     </div>
     <div position="center" id="framecenter" style="width: 1200px">
-        <div tabid="home" title="我的主页" style="height:300px">
+        <div tabid="home" title="我的主页"  style="height:300px">
             <!--<iframe frameborder="0" name="home" id="home" src="./s/powermain.html"></iframe>-->
             <div id="pageloading"></div>
             <div id="layout2" style="width:99.2%; margin:0 auto; margin-top:0px; ">

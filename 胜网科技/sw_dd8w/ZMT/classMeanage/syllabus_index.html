@@ -1,0 +1,43 @@
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
+		<title></title>
+	</head>
+	<body ng-app="myApp">
+
+
+
+
+
+			<!--显示内容-->
+			<div ng-view></div>
+
+			
+			
+	</body>
+	<script type="text/javascript" src="js/jquery-1.12.4.min.js" ></script>
+	<script type="text/javascript" src="js/angular.min.js"></script>
+	<script type="text/javascript" src="js/angular-route.min.js" ></script>
+	<script type="text/javascript" src="js/publicJs.js" ></script>
+	<script type="text/javascript">
+	
+
+	
+		var app=angular.module("myApp",["ngRoute"]);
+		app.config(["$routeProvider",function($routeProvider){
+			$routeProvider.when("/",{
+				templateUrl:"syllabus_classORmy.html"
+			}).when("/classSyllabus",{
+				templateUrl:"syllabus_classSyllabus.html"
+			}).when("/mySyllabus",{
+				templateUrl:"syllabus_MySyllabus.html"
+			})
+		}])
+		
+	</script>
+	
+	
+</html>

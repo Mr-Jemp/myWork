@@ -1,0 +1,44 @@
+.what{
+    width: 100%;
+    text-align: center;
+}
+.what img{
+    width: 100px;
+    height: 137px;
+    margin: 35px auto;
+}
+.error_des{
+    width: 280px;
+    height: auto;
+    overflow: hidden;
+    padding: 5px 5px;
+    border: 1px solid #E5E5E5;
+    margin: auto auto;
+    background-color: #F9F9F9;
+    color: #B5B5B5;
+}
+.error_des p{
+    line-height: 22px;
+    padding: 0px;
+    margin: 0px;
+    font-size: 12px;
+}
+.erro_content{
+    width: 70%;
+    text-align: center;
+    margin: 10px auto;
+    padding-top: 20px;
+}
+.erro_content a{
+    font-size: 16px;
+    font-weight: bold;
+    color: #3399FF;
+}
+.erro_content a:hover{
+    text-decoration: underline;
+}
+.erro_content p{
+    margin-top: 5px;
+    color: #FF6666;
+    font-size: 12px;
+}

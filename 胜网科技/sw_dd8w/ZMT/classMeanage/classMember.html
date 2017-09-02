@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css"/>
+		<link rel="stylesheet" type="text/css" href="css/addClass.css">
+		<style> *{margin: 0;padding: 0;}html,body{overflow-y：hidden;}</style>
+	</head>
+	<body ng-app="myApp">
+		<!--头部-->
+			<div class="class_header row" style="margin: 0;">
+				<div class="col-xs-2" onclick="window.location.href='classMeanage.html'">
+					<img src="images/fanhui@2x.png"/>
+				</div>
+				<div class="header_message col-xs-6 ">班级成员</div>
+				<div class="selectClass col-xs-4">
+					<img src="images/shezhi@2x.png"  style="width:0.4rem"/>
+				</div>
+			</div>
+			<div class="contractList row" style="margin: 0;">
+  					<a href="#/" class="col-xs-4 contractListActive" >老师</a>
+  					<a href="#/student" class="col-xs-4">学生</a>
+  					<a href="#/parent" class="col-xs-4">家长</a>
+  			</div>
+  			
+		
+
+  			
+  		<div ng-view></div>
+
+  		<!--底部栏-->
+		<div id="footer">
+			<ul>
+				<li class="foot_li"><a href="/"><img src="images/nav_home_default@2x.png" class="img-responsive image_a " /><p>首页</p></a></li>
+				<li class="foot_li"><a><img src="images/nav_home_jy_default@2x.png" class="img-responsive  image_b" /><p>教研</p></a></li>
+				<li class="foot_li"><a href="classMeanage.html"><img src="images/nav_home_bj_default@2x.png" class="img-responsive  image_c" /><p>班级</p></a></li>
+				<li class="foot_li"><a><img src="images/nav_home_xywh_default@2x.png" class="img-responsive  image_d" /><p>校园文化</p></a></li>
+				<li class="foot_li"><a href="../../account/index.html#/account"><img src="images/nav_home_my_default@2x.png" class="img-responsive image_e" /><p>我</p></a></li>
+			</ul>
+		</div>
+	</body>
+	<script type="text/javascript" src="js/jquery-1.12.4.min.js"></script>
+	<script type="text/javascript" src="js/angular.min.js"></script>
+	<script type="text/javascript" src="js/angular-route.min.js" ></script>
+	<script type="text/javascript" src="js/publicJs.js"></script>
+	<script type="text/javascript">
+		
+
+			
+
+		
+		//点击老师 学生 家长
+		$(".contractList a").on("click",function(){
+			$(".contractList a").removeClass("contractListActive");
+			$(this).addClass("contractListActive");
+	})
+		
+		//点击详情页
+		$(".scaleTeacher").eq(0).children().click(function(){
+			window.location.href="addClass_teachDetalMessage.html"
+		})
+		$(".studentGo").children().click(function(){
+			window.location.href="addClass_stuDetalMessage.html"
+		})
+		$(".parGo").children().click(function(){
+			window.location.href="addClass_ParDetalMessage.html"
+		})
+			
+			
+		
+		$(".selectClass").click(function(){
+			window.location.href="addClass_set.html";
+
+		})
+		
+		
+		//路由
+		var app=angular.module("myApp",["ngRoute"]);
+		app.config(["$routeProvider",function($routeProvider){
+			$routeProvider.when("/",{
+				templateUrl:"classMember_teacher.html",
+				controller:"teacher"
+			}).when("/student",{
+				templateUrl:"classMember_student.html",
+				controller:"student"
+			}).when("/parent",{
+				templateUrl:"classMember_parent.html",
+				controller:"parent"
+			})
+		}])
+		
+		app.controller("teacher",function($scope){
+			$scope.role="老师";
+		})
+		app.controller("student",function($scope){
+			$scope.role="学生";
+		})
+
+		app.controller("parent",function($scope){
+			$scope.role="家长";
+		})
+
+
+	</script>
+</html>

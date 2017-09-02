@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no,minimal-ui">
+	<meta name="apple-mobile-web-app-capable" content="yes"/>
+	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"/>
+	<meta http-equiv="Access-Control-Allow-Origin" content="*">
+    <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+   <link rel="stylesheet" type="text/css" href="css/classMeanage.css"/>
+	<script src="js/jquery-1.12.4.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/publicJs.js" ></script>
+
+</head>
+<body>
+	<div class="container">
+	<div class="container-fluid">
+		<!--<div class="class_head">
+					<div class="class_back" style="font-size:2em;float:left;line-height: 66px;color:#fff;"></div>
+			
+				<p>班级管理</p>
+			</div>-->
+			<!--头部-->
+			<div class="class_header row" style="margin: 0;">
+				<div class="col-xs-2" onclick="javascript:history.go(-1);">
+					<img src="images/fanhui@2x.png" alt="" />
+				</div>
+				<div class="header_message col-xs-7 ">开通班级</div>
+				<div class="selectClass col-xs-3">
+				</div>
+			</div>
+			
+			<div class="row" style="margin:0 auto; width:97%; margin-top:37px;">
+				<div class="col-xs-6 col-lg-6 col-md-6 col-sm-6">
+				<div class="class_o"><div class="class_left"></div><div><p class="class_r">开通班级</p></div></div>
+
+				</div>
+					<div class="col-xs-6 col-lg-6 col-md-6 col-sm-6">
+					<div  class="class_p"><div class="class_l"></div><div class="class_r"><p>加入班级</p></div></div>
+				</div>
+
+			</div>
+			<!-- 显示所在班级 -->
+			<div class="row" style="background: #f3f6f8;width: 100%;height: auto;margin:0 auto;margin-top: 10px;">
+				<div class="col-sm-12 col-md-12 col-xs-12" id="show_class">
+					<div style="float:left;margin-left:6px;" class="class_data">
+						<p>天河一中</p>
+						<p>初一一班(人数45人)</p>
+						<p>班主任:<span></span></p>
+						<p>班级编号:<span></span></p>
+					</div>
+					<div style="float:right;" class="data_r"><p style="font-size: 1.6em;line-height: 112px;">></p></div>
+				</div>
+			
+			</div>
+
+		<div id="footer">
+			<ul>
+			<li class="foot_li"><a href="index.html"><img src="./images/footer/nav_home_default@2x.png" class="img-responsive image_a " /><p>首页</p></a></li>
+			<li class="foot_li"><a><img src="./images/footer/nav_home_jy_default@2x.png" class="img-responsive  image_b" /><p>教研</p></a></li>
+			<li class="foot_li"><a href="classMeanage/classMeanage.html"><img src="./images/footer/nav_home_bj_default@2x.png" class="img-responsive  image_c" /><p>班级</p></a></li>
+			<li class="foot_li"><a><img src="./images/footer/nav_home_xywh_default@2x.png" class="img-responsive  image_d" /><p>校园文化</p></a></li>
+			<li class="foot_li"><a><img src="./images/footer/nav_home_my_default@2x.png" class="img-responsive image_e" /><p>我</p></a></li>
+			
+			</ul>
+			</div>
+	</div>
+	</div>
+	<script>
+		$(function(){
+			$(".class_data").click(function(){
+				window.location.href="班级列表.html";
+			})
+			$(".data_r").click(function(){
+				window.location.href="班级列表.html";
+			})
+			$(".class_back").click(function(){
+				window.location.href="select_class.html";
+			})
+
+		})
+
+	</script>
+	<script>
+$(function(){
+	var Imgs=['u1.png','u2.png','u3.png','u4.png','u5.png'];
+	$(".image_a").mouseover(function(){
+		$(this).attr("src","./images/footer/u1.png");
+	}).mouseout(function(){
+		$(this).attr("src","./images/footer/nav_home_default@2x.png");
+	})
+	$(".image_b").mouseover(function(){
+		$(this).attr("src","./images/footer/u2.png");
+	}).mouseout(function(){
+		$(this).attr("src","./images/footer/nav_home_jy_default@2x.png");
+	})
+	$(".image_c").mouseover(function(){
+		$(this).attr("src","./images/footer/u3.png");
+	}).mouseout(function(){
+		$(this).attr("src","./images/footer/nav_home_bj_default@2x.png");
+	})
+	$(".image_d").mouseover(function(){
+		$(this).attr("src","./images/footer/u4.png");
+	}).mouseout(function(){
+		$(this).attr("src","./images/footer/nav_home_xywh_default@2x.png");
+	})
+	$(".image_e").mouseover(function(){
+		$(this).attr("src","./images/footer/u5.png");
+	}).mouseout(function(){
+		$(this).attr("src","./images/footer/nav_home_my_default@2x.png");
+	})
+	
+	
+	$(".foot_li p").each(function(){
+		$(this).hover(function(){
+			$(this).css("color","#56c399");
+		},function(){
+			$(this).css("color","black")
+		})
+	})
+
+})
+
+</script>
+</body>
+</html>

@@ -1,0 +1,291 @@
+*{
+	padding: 0;
+	margin: 0;
+}
+html,body{
+	font-family: "宋体","冬青黑体";
+}
+.class_header{
+	background-color:#56c399;
+	height: 0.66rem;
+}
+.class_header img{
+	width: 0.3rem;
+	font-size: 0.17rem;
+	line-height: 0.66rem;
+	padding-left: 0.15rem;
+}
+.header_message{
+	font-size: 0.3rem;
+	color: white;
+	text-align: center;
+	padding-left: 1.2rem;
+}
+.class_header div{
+	line-height: 0.66rem;
+}
+.class_header .selectClass{
+	font-size: 0.2rem;
+	color: white;
+	text-align: right;
+	padding-right: 0.55rem;
+}
+/*头像*/
+.headImgParent li{
+	list-style: none;
+	margin-top: 0.2rem;
+	background: white;
+	padding: 0.2rem;
+	font-size: 0.2rem;
+}
+.headImgParent .one{
+	height: 1.6rem;
+} 
+.headImgParent p{
+	height: 100%;
+	margin-bottom: 0;
+}
+.headImgParent .one img{
+	height: 100%;
+	margin-left: 0.15rem;
+}
+.headImgParent .one span{
+	line-height: 0.3rem;
+	display: block;
+}
+.two p:first-child{
+	padding-left: 0.1rem;
+	font-size: 0.24rem;
+}
+.two p:first-child~p{
+	/*display: inline-block;
+	width: 22.2%;*/
+	margin: 0.1rem;
+	color:#56c399 ;
+	text-align: center;
+	border-radius: 0.2rem;
+	margin:0.1rem;
+	height: 0.5rem;
+	line-height: 0.5rem;
+	cursor: pointer;
+	border: 1px solid #56c399;
+}
+#activeClass{
+	background-color: #56c399;
+	color: white;
+}
+.submit{
+	margin-top: 0.3rem;
+	text-align: center;
+}
+.submit button{
+	color: white;
+	background-color:#56c399;
+	border-radius: 0.1rem;
+	width: 50%;
+	height: 0.6rem;
+	font-size: 0.3rem;
+	border-width: 0;
+}
+/*联系列表*/
+.contractList a.contractListActive{
+	color: #56c399;
+	border-bottom: 1px solid #56c399;
+}
+.contractList a,.contractTeacher li{
+	background-color: white;
+	padding: 0;
+	height: 0.8rem;
+	line-height: 0.75rem;
+	cursor: pointer;
+	color: black;
+}
+.contractList a:hover{
+	color: #56c399;
+	border-bottom: 1px solid #56c399;
+}
+.contractList a{
+	
+	text-decoration: none;
+	padding: 0;
+	text-align: center;
+	margin: 0;
+	font-size: 0.22rem;
+}
+
+.contractList p{
+	background-color: white;
+	padding: 0;
+	height: 0.8rem;
+	line-height: 0.75rem;
+	cursor: pointer;
+}
+.contractList p:hover{
+	color: #56c399;
+	border-bottom: 1px solid #56c399;
+}
+.contractList p{
+	
+	text-decoration: none;
+	padding: 0;
+	text-align: center;
+	margin: 0;
+	font-size: 0.22rem;
+}
+/*老师联系表*/
+.contractTeacher li{
+	margin: 0;
+	padding: 0;
+	font-size: 0.24rem;
+	padding-left:0.1rem ;
+}
+.contractTeacher p{
+	font-size: 0.2rem;
+	margin: 0;
+	height: 100%;
+}
+
+.contractList li p:last-child,.contractTeacher li p:last-child{
+	text-align: right;
+	padding-right: 0.55rem;
+}
+.contractTeacher li p img:last-child{
+	width: 0.2rem;
+}
+/*收缩老师部分*/
+.scaleTeacher p:nth-child(1) img{
+	/*width: 0.5rem;*/
+	height: 90%;
+    margin-right: 0.1rem;
+}
+.scaleTeacher span{
+	font-size: 0.18rem;
+	display: inline-block;
+	margin-left: 0.2rem;
+}
+
+/*老师详细信息表*/
+.teachDealMess p{
+	margin: 0;
+	font-size: 0.18rem;
+}
+.teachDealMess p:nth-child(2){
+	text-align: right;
+}
+.teachDealMess li{
+	padding-left: 0.3rem;
+	padding-right: 0.35rem;
+}
+/*选择班级*/
+.select{
+	background-color: #c9c9ce;
+	padding: 0.2rem;
+	font-size: 0.2rem;
+}
+.select span{
+	cursor: pointer;
+}
+.select input{
+	margin-left: 0.5rem;
+	height: 0.5rem;
+	width: 5rem;
+	border: 0;
+	border-radius: 0.1rem;
+	padding-left: 0.5rem;
+	background-image: url(../images/12341354.png);
+	background-repeat: no-repeat;
+	background-size: 0.3rem 0.4rem;
+	background-position: 0.07rem 0.05rem;
+}
+.select~ul li{
+	padding-left: 0.3rem;
+	cursor: pointer;
+	font-size: 0.2rem;
+	font-weight: bold;
+}
+.select~ul .small1{
+	font-size: 0.2rem;
+}
+
+/*老师详细表改动版*/
+p{
+	margin: 0;
+}
+.headImgTeacher{
+	padding: 0.2rem 0.4rem;
+	margin: 0;	
+}
+.headImgTeacher li{
+	list-style: none;
+	height: 1rem;
+}
+.headImgTeacher li div{
+	float: left;
+	margin-right: 0.4rem;
+	display: inline-block;
+	height: 1rem;
+	font-size: 0.22rem;
+}
+.headImgTeacher li div:first-child img{
+	height: 100%;
+	width: 1rem;
+}
+.headImgTeacher li div:last-child p{
+	height: 0.5rem;
+	line-height: 0.5rem;
+}
+.headImgTeacher li div:last-child img{
+	width: 0.25rem;
+	margin-left: 0.2rem;
+}
+.teacherPhone{
+	padding:0.2rem 0.4rem;
+	font-size: 0.22rem;
+}
+.teacherPhone span{
+	float: right;
+	color: #999999;
+}
+li{list-style: none;}
+.career p{
+	border-bottom: 1px solid  #F3F1F1;
+}
+.phoneORmessage{
+	border-bottom: 1rem;
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+}
+.phoneORmessage p{
+	cursor: pointer;
+	box-sizing: border-box;
+	font-size: 0.22rem;
+	padding:0.2rem 0.4rem;
+	display: inline-block;
+	width: 50%;
+	float: left;
+	text-align: center;
+}
+
+/*底部栏*/
+#footer{width: 100%;height:100px;background:#f8f8f8;margin-top:50px;position:fixed;bottom:0px;left:0;right:0;margin-left:0;margin-right: 0}
+	
+		#footer ul{margin:0 auto;width:100%;height:100px;margin-top: 20px;-webkit-padding-start: 0px;}
+		#footer ul li{list-style:none;float:left;margin:0 auto;margin-top:10px;width:20%;padding:0;}
+		#footer ul li img{margin:0 auto;}
+		#footer ul li a{text-decoration:none;}
+		#footer ul li p{text-align: center;color:black;}
+			@media screen and (max-width:720px) and (min-width:300px){	
+				
+			.container-fluid{position: absolute;bottom:0px;width:100%;height: 100%;margin:0;padding:0;}
+			#footer ul li{list-style:none;float:left;margin:0 auto;margin-top:10px;width:20%;padding:0;}
+			#footer ul li  img{width:25px;height:25px;} 
+	}
+	
+.new_class{width:0.3rem;height:0.3rem;background: #56c399;float: left;text-align: center;color:#fff;line-height: 0.3rem;}
+.push_class p{height: 0.3rem;line-height: 0.3rem;font-size:0.2rem;padding:0;margin-left: 0.5rem;}
+.push_class{
+	margin: 0.25rem;
+	cursor: pointer;
+}

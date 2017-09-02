@@ -1,0 +1,417 @@
+    <link href="/public/part/bootstrap/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <!--[if lt IE 9]>
+    <script src="//cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="//cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <link href="/study/css/teachPlan.css" rel="stylesheet" type="text/css">
+    <link href="/public/part/bootstrap/font-awesome/font-awesome.min.css" rel="stylesheet" type="text/css">
+<!-- 头部 -->
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-xs-12 teachPlanIndex_header">
+            <i class="icon-chevron-left" onclick="javascript:history.go(-1);"></i> 教学计划
+            <i class="icon-plus" onclick="javascript: location.href='#!/TeachPlan_add';"></i>
+        </div>
+    </div>
+</div>
+<!-- 搜索框 -->
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-xs-12 searchBox">
+            <div class="input-group">
+                <input id="keyword" type="text" class="form-control" placeholder="搜索教学计划">
+                <span class="input-group-btn">
+                        <button class="btn btn-default search_btn" type="button">
+                            <span class="icon-search" style="color: #A1A1A1"></span>
+                        </button>
+                    </span>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- 选项卡 -->
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-xs-12 tabBox">
+            <ui>
+                <li class="active" data-flag="myPlan_container">我原创的(4)</li>
+                <li data-flag="otherPlan_container">其他教学计划</li>
+                <li data-flag="myCollectPlan_container">我收藏的</li>
+            </ui>
+        </div>
+    </div>
+</div>
+<!-- 内容区 -->
+<!-- 我原创的 -->
+<div class="container-fluid" id="myPlan_container">
+    <div class="row" id="my_create_list"><div class="col-xs-12 contentBox"> <a class="contentBody" href="/index.php?m=Teacher&amp;c=TeachPlan&amp;a=LookPlan&amp;id=12078"> <p>网络介绍1 <span>2016-11-11</span></p> </a> <div class="contentFooter"> <div class="contentFooterBody"> <a class="btn btn-link" href="/index.php?m=Teacher&amp;c=TeachPlan&amp;a=EditorPlan&amp;id=12078"> <i class="icon-edit"></i> 编辑 </a> <button class="btn btn-link public_btn" id="183"><i class="icon-unlock"></i>公开</button> <button class="btn btn-link delete_plan" id="delete_plan183"> <i class="icon-trash"></i> 删除 </button> </div> </div> </div> <div class="col-xs-12 contentBox"> <a class="contentBody" href="/index.php?m=Teacher&amp;c=TeachPlan&amp;a=LookPlan&amp;id=12073"> <p>网络测试01 <span>2016-11-11</span></p> </a> <div class="contentFooter"> <div class="contentFooterBody"> <a class="btn btn-link" href="/index.php?m=Teacher&amp;c=TeachPlan&amp;a=EditorPlan&amp;id=12073"> <i class="icon-edit"></i> 编辑 </a> <button class="btn btn-link public_btn" id="178"><i class="icon-unlock"></i>已公开</button> <button class="btn btn-link delete_plan" id="delete_plan178"> <i class="icon-trash"></i> 删除 </button> </div> </div> </div> <div class="col-xs-12 contentBox"> <a class="contentBody" href="/index.php?m=Teacher&amp;c=TeachPlan&amp;a=LookPlan&amp;id=12062"> <p>测试 <span>2016-11-09</span></p> </a> <div class="contentFooter"> <div class="contentFooterBody"> <a class="btn btn-link" href="/index.php?m=Teacher&amp;c=TeachPlan&amp;a=EditorPlan&amp;id=12062"> <i class="icon-edit"></i> 编辑 </a> <button class="btn btn-link public_btn" id="175"><i class="icon-unlock"></i>已公开</button> <button class="btn btn-link delete_plan" id="delete_plan175"> <i class="icon-trash"></i> 删除 </button> </div> </div> </div> <div class="col-xs-12 contentBox"> <a class="contentBody" href="/index.php?m=Teacher&amp;c=TeachPlan&amp;a=LookPlan&amp;id=12060"> <p>教学计划 （测试） <span>2016-11-09</span></p> </a> <div class="contentFooter"> <div class="contentFooterBody"> <a class="btn btn-link" href="/index.php?m=Teacher&amp;c=TeachPlan&amp;a=EditorPlan&amp;id=12060"> <i class="icon-edit"></i> 编辑 </a> <button class="btn btn-link public_btn" id="174"><i class="icon-unlock"></i>已公开</button> <button class="btn btn-link delete_plan" id="delete_plan174"> <i class="icon-trash"></i> 删除 </button> </div> </div> </div> </div>
+    <div class="row">
+        <div class="col-xs-12">
+            <nav>
+                <ul class="pagination pagination-sm" id="myPlan_page"></ul>
+            </nav>
+        </div>
+    </div>
+</div>
+<!-- 其他教学计划 -->
+<div class="container-fluid" style="display: none" id="otherPlan_container">
+    <div class="row" id="other_create_list"></div>
+    <div class="row">
+        <div class="col-xs-12">
+            <nav>
+                <ul class="pagination pagination-sm" id="otherPlan_page"></ul>
+            </nav>
+        </div>
+    </div>
+</div>
+<!-- 我收藏的 -->
+<div class="container-fluid" style="display: none" id="myCollectPlan_container">
+    <div class="row" id="my_collect_list"></div>
+    <div class="row">
+        <div class="col-xs-12">
+            <nav>
+                <ul class="pagination pagination-sm" id="myCollectPlan_page"></ul>
+            </nav>
+        </div>
+    </div>
+</div>
+<!-- 查看更多 -->
+<div class="container-fluid" id="see_more_search_container" style="display: none">
+    <div class="row">
+        <div class="col-xs-12">
+            <button type="button" class="btn btn-default btn-block see_more_search">查看更多»</button>
+        </div>
+    </div>
+</div>
+<script src="/study/js/jqPaginator.js"></script>
+<script type="text/javascript">
+    /* 用于初始化后刷新的 */
+    var tempOtherPlanPage = 1;
+    var tempMyCollectPlanPage = 1;
+
+    $(function () {
+        /* tab 切换 */
+        $(".tabBox li").on("click", function () {
+            var oldActiveObj = $(this).siblings(".active");
+            var oldContainerId = oldActiveObj.attr("data-flag");
+            oldActiveObj.removeClass("active");
+            $("#" + oldContainerId).hide();
+            var newContainerId = $(this).attr("data-flag");
+            $(this).addClass("active");
+            $("#" + newContainerId).show();
+        });
+
+        /* 数据加载-分页 - start */
+        var my_num = '4';
+        var my_coll = '0';
+        var other_num = '1';
+
+        /* 我原创的 */
+        $.jqPaginator('#myPlan_page', {
+            totalPages: parseInt(Math.ceil(my_num / 5) == 0 ? 1 : Math.ceil(my_num / 5)),
+            visiblePages: 7,
+            currentPage: 1,
+            first: '<li><a href="javascript:;">首页</a></li>',
+            prev: '<li><a href="javascript:;">上一页</a></li>',
+            next: '<li><a href="javascript:;">下一页</a></li>',
+            last: '<li><a href="javascript:;">末页</a></li>',
+            page: '<li><a href="javascript:;">{{page}}</a></li>',
+            onPageChange: function (num, type) {
+                $.post("/index.php?m=Teacher&c=TeachPlan&a=index", {
+                    type: 'my',
+                    page: num
+                }, function (data) {
+                    var inner = "";
+                    for (var i = 0; i < data.length; i++) {
+                        var plan_name = data[i].plan_name;
+                        var create_time = data[i].create_time;
+                        var resource_id = data[i].resource_id;
+                        var state = data[i].state;
+                        var is_public = '公开';
+                        if (state == 1) {
+                            is_public = "已公开";
+                        }
+                        var id = data[i].id;
+                        inner += '<div class="col-xs-12 contentBox"> <a class="contentBody" href="/index.php?m=Teacher&c=TeachPlan&a=LookPlan&id=' + resource_id + '"> <p>' + plan_name + ' <span>' + create_time + '</span></p> </a> <div class="contentFooter"> <div class="contentFooterBody"> <a class="btn btn-link" href="/index.php?m=Teacher&c=TeachPlan&a=EditorPlan&id=' + resource_id + '"> <i class="icon-edit"></i> 编辑 </a> <button class="btn btn-link public_btn" id="'+ id +'"><i class="icon-unlock"></i>' + is_public + '</button> <button class="btn btn-link delete_plan" id="delete_plan' + id + '"> <i class="icon-trash"></i> 删除 </button> </div> </div> </div> ';
+                    }
+                    $('#my_create_list').html(inner);
+                }, 'json');
+            }
+        });
+        /* 其他教案 */
+        $.jqPaginator('#otherPlan_page', {
+            totalPages: parseInt(Math.ceil(other_num / 5) == 0 ? 1 : Math.ceil(other_num / 5)),
+            visiblePages: 7,
+            currentPage: 1,
+            first: '<li><a href="javascript:;">首页</a></li>',
+            prev: '<li><a href="javascript:;">上一页</a></li>',
+            next: '<li><a href="javascript:;">下一页</a></li>',
+            last: '<li><a href="javascript:;">末页</a></li>',
+            page: '<li><a href="javascript:;">{{page}}</a></li>',
+            onPageChange: function (num, type) {
+                tempOtherPlanPage = num;
+                getOtherPlanList(num);
+            }
+        });
+        function getOtherPlanList(num) {
+            $.post("/index.php?m=Teacher&c=TeachPlan&a=index", {
+                type: 'other',
+                page: num
+            }, function (data) {
+                var inner = "";
+                for (var i = 0; i < data.length; i++) {
+                    var plan_name = data[i].plan_name;
+                    var create_time = data[i].create_time;
+                    var resource_id = data[i].resource_id;
+                    var id = data[i].id;
+                    var is_collect = data[i].is_collect;
+                    var a_string = '收藏';
+                    if (is_collect == 1) {
+                        a_string = '取消收藏';
+                    }
+                    inner += '<div class="col-xs-12 contentBox"> <a class="contentBody" href="/index.php?m=Teacher&c=TeachPlan&a=LookPlan&id=' + resource_id + '"> <p>' + plan_name + ' <span>' + create_time + '</span></p> </a> <div class="contentFooter"> <div class="contentFooterBody"> <a class="btn btn-link" href="/index.php?m=Teacher&c=TeachPlan&a=LookPlan&id=' + resource_id + '"> <i class="icon-eye-open"></i> 查看 </a> <button class="btn btn-link collection" id="collection' + resource_id + '"><i class="icon-star"></i>' + a_string + '</button> </div> </div> </div> ';
+                }
+                $('#other_create_list').html(inner);
+            }, 'json');
+        }
+        /* 我收藏的 */
+        $.jqPaginator('#myCollectPlan_page', {
+            totalPages: parseInt(Math.ceil(my_coll / 5) == 0 ? 1 : Math.ceil(my_coll / 5)),
+            visiblePages: 7,
+            currentPage: 1,
+            first: '<li><a href="javascript:;">首页</a></li>',
+            prev: '<li><a href="javascript:;">上一页</a></li>',
+            next: '<li><a href="javascript:;">下一页</a></li>',
+            last: '<li><a href="javascript:;">末页</a></li>',
+            page: '<li><a href="javascript:;">{{page}}</a></li>',
+            onPageChange: function (num, type) {
+                tempMyCollectPlanPage = num;
+                getMyCollectPlanList(num);
+            }
+        });
+        function getMyCollectPlanList(num) {
+            $.post("/index.php?m=Teacher&c=TeachPlan&a=index", {
+                type: 'mc',
+                page: num
+            }, function (data) {
+                var inner = "";
+                for (var i = 0; i < data.length; i++) {
+                    var plan_name = data[i].plan_name;
+                    var collection_time = data[i].create_time;
+                    var resource_id = data[i].resource_id;
+                    var id = data[i].id;
+                    inner += '<div class="col-xs-12 contentBox"> <a class="contentBody" href="/index.php?m=Teacher&c=TeachPlan&a=LookPlan&id=' + resource_id + '"> <p>' + plan_name + ' <span>' + collection_time + '</span></p> </a> <div class="contentFooter"> <div class="contentFooterBody"> <a class="btn btn-link" href="/index.php?m=Teacher&c=TeachPlan&a=LookPlan&id=' + resource_id + '"> <i class="icon-eye-open"></i> 查看 </a> <button class="btn btn-link delete_collect" id="delete_collect' + id + '"> <i class="icon-trash"></i> 删除 </button> </div> </div> </div> ';
+                }
+                $('#my_collect_list').html(inner);
+            }, 'json');
+        }
+        /* 数据加载-分页-end */
+
+        /* 删除数据*/
+        $('body').delegate('.btn.delete_plan', 'click', function () {
+            var id = $(this).attr("id");
+            var _this = $(this);
+            id = id.replace("delete_plan", "");
+            if (confirm("你确定删除数据吗?")) {
+                $.ajax({
+                    type: 'GET',
+                    url: "/index.php?m=Teacher&c=TeachPlan&a=DeletePlan&id=" + id,
+                    dataType: "json",
+                    success: function (data) {
+                        if (data == 1) {
+                            _this.parents(".contentBox").remove();
+                            alert("删除成功!");
+                        } else {
+                            alert("删除失败!");
+                        }
+                    },
+                    error: function (e, xhl, dd) {
+                        alert("未知错误,删除失败!");
+                    }
+                })
+            }
+        });
+
+        /* 收藏 - 取消收藏(其它教学计划) */
+        $('body').delegate('.btn.collection', 'click', function () {
+            var id = $(this).attr("id");
+            var _this = $(this);
+            var text = _this.text();
+            console.log(text);
+            id = id.replace("collection", "");
+            if (text == "取消收藏") {
+                if (confirm("是否取消收藏?")) {
+                    $.ajax({
+                        type: "GET",
+                        url: "index.php?m=Teacher&c=TeachPlan&a=CollectionPlan&id=" + id + "&cancel=1",
+                        dataType: "json",
+                        async: false,
+                        success: function (data) {
+                            if (data != 0) {
+                                alert("取消收藏成功!");
+                                _this.html('<i class="icon-star"></i>收藏');
+                            } else {
+                                alert("取消收藏失败!");
+                            }
+                        },
+                        error: function (e) {
+                            alert("未知错误,取消收藏失败");
+                        }
+                    })
+                }
+            } else {
+                if (confirm("是否收藏?")) {
+                    $.ajax({
+                        type: "GET",
+                        url: "index.php?m=Teacher&c=TeachPlan&a=CollectionPlan&id=" + id,
+                        dataType: "json",
+                        async: false,
+                        success: function (data) {
+                            if (data == "is_collect") {
+                                alert("您已经收藏!请在我的收藏中查看!");
+                            } else {
+                                if (data != 0) {
+                                    _this.html('<i class="icon-star"></i>取消收藏');
+                                    alert("收藏成功!");
+                                } else {
+                                    alert("收藏失败!");
+                                }
+                            }
+                        },
+                        error: function (e) {
+                            alert("未知错误,收藏失败!");
+                        }
+                    })
+                }
+            }
+            getMyCollectPlanList(tempMyCollectPlanPage);
+        });
+
+        /* 删除收藏(我收藏的) */
+        $('body').delegate('.btn.delete_collect', 'click', function () {
+            var id = $(this).attr("id");
+            var _this = $(this);
+            id = id.replace("delete_collect", "");
+            if (confirm("你确定删除数据吗?")) {
+                $.ajax({
+                    type: 'GET',
+                    url: "/index.php?m=Teacher&c=TeachPlan&a=DeleteCollection&id=" + id,
+                    dataType: "json",
+                    async: false,
+                    success: function (data) {
+                        if (data == 1) {
+                            _this.parents(".contentBox").remove();
+                            alert("删除成功!");
+                        } else {
+                            alert("删除失败!");
+                        }
+                    },
+                    error: function (e, xhl, dd) {
+                        alert("未知错误,删除失败!");
+                    }
+                })
+            }
+            getOtherPlanList(tempOtherPlanPage);
+        });
+        /* 公开-已公开 */
+        $('body').delegate(".btn.public_btn", 'click', function () {
+            var id = $(this).attr('id');
+            var _this = $(this);
+            console.log(id);
+            var text = _this.text();
+            console.log(text);
+            if (text == "公开") {
+                if (confirm("是否公开?")) {
+                    $.post("/index.php?m=Teacher&c=TeachPlan&a=publicPlan", {id: id, text: text}, function (data) {
+                        if (data == 1) {
+                            alert("公开成功!");
+                            _this.html('<i class="icon-unlock"></i>已公开');
+                        } else {
+                            alert("公开失败!")
+                        }
+                    }, 'json');
+                }
+            } else {
+                if (confirm("是否取消公开?")) {
+                    $.post("/index.php?m=Teacher&c=TeachPlan&a=publicPlan", {id: id, text: text}, function (data) {
+                        if (data == 1) {
+                            alert("取消公开成功!");
+                            _this.html('<i class="icon-lock"></i>公开');
+                        } else {
+                            alert("取消公开失败!")
+                        }
+                    }, 'json');
+                }
+            }
+        });
+
+        /* 搜索框 */
+        var save_keyword = "";
+        var search_page = 2;
+        $('.search_btn').click(function () {
+            $("#myPlan_container,#otherPlan_container,#myCollectPlan_container").hide();
+            $(".tabBox li").removeClass("active");
+            var keyword = $('#keyword').val();
+            save_keyword = keyword;
+            is_state = 'search';
+            search_page = 2;
+            $.ajax({
+                type: 'GET',
+                url: "/index.php?m=Teacher&c=TeachPlan&a=SearchPlan&title=" + keyword,
+                dataType: 'json',
+                success: function (data) {
+                    var inner = "";
+                    for (var j = 0; j < data.length; j++) {
+                        console.log(data);
+                        var id = data[j].id;
+                        var resource_id = data[j].resource_id;
+                        var name = data[j].name;
+                        var plan_name = data[j].plan_name;
+                        var grade_name = '';
+                        var class_name = '';
+                        var create_time = data[j].create_time;
+                        var delete_str = '';
+                        var is_my = data[j].is_my;
+                        var state=data[j].state;
+                        var is_public = '公开';
+                        if (state == 1) {
+                            is_public = "已公开";
+                        }
+                        if (is_my == 1) {
+                            inner += '<div class="col-xs-12 contentBox"> <a class="contentBody" href="/index.php?m=Teacher&c=TeachPlan&a=LookPlan&id=' + resource_id + '"> <p>' + plan_name + ' <span>' + create_time + '</span></p> </a> <div class="contentFooter"> <div class="contentFooterBody"> <a class="btn btn-link edit-click" href="/index.php?m=Teacher&c=TeachPlan&a=EditorPlan&id=' + resource_id + '"> <i class="icon-edit"></i> 编辑 </a> <button class="btn btn-link public_btn" id=""> <i class="icon-unlock"></i> '+ is_public +' </button> <button class="btn btn-link delete_plan" id="delete_plan' + id + '"> <i class="icon-trash"></i> 删除 </button> </div> </div> </div> ';
+                        } else {
+                            var a_string = '收藏';
+                            inner += '<div class="col-xs-12 contentBox"> <a class="contentBody" href="/index.php?m=Teacher&c=TeachPlan&a=LookPlan&id=' + resource_id + '"> <p>' + plan_name + ' <span>' + create_time + '</span></p> </a> <div class="contentFooter"> <div class="contentFooterBody"> <a class="btn btn-link" href="/index.php?m=Teacher&c=TeachPlan&a=LookPlan&id=' + resource_id + '"> <i class="icon-eye-open"></i> 查看 </a> <button class="btn btn-link collection" id="collection' + resource_id + '"> <i class="icon-star"></i> ' + a_string + ' </button> </div> </div> </div> ';
+                        }
+                    }
+                    $('#my_create_list').html(inner);
+                    $("#myPlan_page").empty();
+                    $("#myPlan_container").show();
+                    $("#see_more_search_container").show();
+                }
+            })
+        });
+        /*查看更多搜索内容*/
+        $('.see_more_search').click(function () {
+            $.post("/index.php?m=Teacher&c=TeachPlan&a=SearchPlan", {title: save_keyword, page: search_page}, function (data) {
+                var inner = "";
+                for (var j = 0; j < data.length; j++) {
+                    var id = data[j].id;
+                    var resource_id = data[j].resource_id;
+                    var plan_name = data[j].plan_name;
+                    var create_time = data[j].create_time;
+                    var is_my = data[j].is_my;
+                    if (is_my == 1) {
+                        inner += '<div class="col-xs-12 contentBox"> <a class="contentBody" href="/index.php?m=Teacher&c=TeachPlan&a=LookPlan&id=' + resource_id + '"> <p>' + plan_name + ' <span>' + create_time + '</span></p> </a> <div class="contentFooter"> <div class="contentFooterBody"> <a class="btn btn-link edit-click" href="/index.php?m=Teacher&c=TeachPlan&a=EditorPlan&id=' + resource_id + '"> <i class="icon-edit"></i> 编辑 </a> <button class="btn btn-link public_btn" id=""> <i class="icon-unlock"></i>' + is_public + '</button> <button class="btn btn-link delete_plan" id="delete_plan' + id + '"> <i class="icon-trash"></i> 删除 </button> </div> </div> </div> ';
+                    } else {
+                        var a_string = '收藏';
+                        inner += '<div class="col-xs-12 contentBox"> <a class="contentBody" href="/index.php?m=Teacher&c=TeachPlan&a=LookPlan&id=' + resource_id + '"> <p>' + plan_name + ' <span>' + create_time + '</span></p> </a> <div class="contentFooter"> <div class="contentFooterBody"> <a class="btn btn-link" href="/index.php?m=Teacher&c=TeachPlan&a=LookPlan&id=' + resource_id + '"> <i class="icon-eye-open"></i> 查看 </a> <button class="btn btn-link collection" id="collection' + resource_id + '"> <i class="icon-star"></i> ' + a_string + ' </button> </div> </div> </div> ';
+                    }
+                }
+                $('.my_create_list').append(inner);
+                search_page++;
+            }, 'json');
+        })
+
+    })
+</script>

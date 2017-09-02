@@ -1,6 +1,6 @@
 //公用的控制器
 myApp.controller("main", ["$scope", "$http", function($scope, $http) {
-
+//	$rootScope.id=null
 	//角色请求地址
 	$scope.power_tree = "http://192.168.0.21:20896/htRoleService/getSearchInfoRole"
 	//功能请求地址
@@ -14,19 +14,22 @@ myApp.controller("main", ["$scope", "$http", function($scope, $http) {
 }])
 
 //左边主要菜单树分类   角色/功能/流程
-myApp.controller("work1Controller", ["$scope", "$http", function($scope, $http) {
+myApp.controller("work1Controller", ["$scope", "$http","$rootScope" ,function($scope, $http,$rootScope) {
 
 	$http({
 		method: 'GET',
 		url: $scope.power_tree,
 	}).success(function(data) {
 		var Objdata = data.msg
-		console.log(Objdata)
+
 		var power_tree = $("#power_tree").ligerTree({
 			textFieldName: 'name',
 			nodeWidth: 200,
 			data: Objdata,
-			onclick: function(node) {
+			onselect: function(node) {
+				console.log(node)
+				$rootScope.id=node.data.id
+
 				var tabid = $(node.target).attr("tabid");
 				if(!tabid) {
 					tabid = new Date().getTime();
@@ -37,7 +40,7 @@ myApp.controller("work1Controller", ["$scope", "$http", function($scope, $http) 
 					f_addTab(tabid + node.data.id, node.data.text + " 网盘硬盘", encodeURI("./template/workbench/role/bumenTree.html"));
 				} else if(!node.data.isLeaf) {
 					/*f_addTab(tabid,node.data.text,encodeURI('/s/organizesetting/powerformlist.php?roleid='+node.data.id));*/
-					f_addTab(tabid, node.data.text, encodeURI('./template/workbench/role/bumenTree.html'));
+					f_addTab( node.data.id,node.data.name, encodeURI('./template/workbench/workbench_news.html'));
 				}
 			},
 
@@ -56,11 +59,20 @@ myApp.controller("work2Controller", ["$scope", "$http", function($scope, $http) 
 		url: $scope.tissue_nav_tree
 	}).success(function(data) {
 		if(data.status == 1) {
-			var ngdata = data.msg
+			var ngdata = data.msg;
 			$("#tissue_nav_tree").ligerTree({
 				data: ngdata,
 				checkbox: false,
 				textFieldName: 'formName',
+				render: function (item){
+//			        	console.log(item)
+		            return item.formName
+		        },
+		        isLeaf:function(item){
+		            return item.isLeaf;
+		            //console.log((item.values[1].value=="文件夹"));
+		            // return !(item.values[1].value=="文件夹");
+		        },
 				slide: false,
 				nodeWidth: 120,
 				isExpand: 2,
@@ -85,14 +97,14 @@ myApp.controller("work2Controller", ["$scope", "$http", function($scope, $http) 
 						tabid = new Date().getTime();
 						$(node.target).attr("tabid", tabid) //为当前点击的节点,设置一个自定义属性,id是随机时间
 					}
-					console.log(node)
+//					console.log(node.data)
 					//isLeaf  是否子节点的判断函数
 					if(node.data.isLeaf) {
-
 						if(node.data.pid == 0)
 							f_addTab(tabid, node.data.formName, encodeURI("./template/workbench/role/bumenTree.html"));
 						else if(node.data.pid == 1) {
-							f_addTab(tabid, node.data.formName, encodeURI(node.data.content));
+//							f_addTab(tabid, node.data.formName, encodeURI(node.data.content));
+							f_addTab(tabid, node.data.formName, encodeURI("./template/workbench/role/content.html?id="+node.data.id));
 						} else if(node.data.pid == 2) {
 							f_addTab(tabid, node.data.formName, encodeURI("./template/workbench/role/bumenTree.html"));
 						} else
@@ -117,6 +129,7 @@ myApp.controller("work3Controller", ["$scope", "$http", function($scope, $http) 
 		method: 'GET',
 		url: $scope.appflow_tree02
 	}).success(function(data) {
+		console.log(data)
 		//流程菜单
 		$("#flow_tree").ligerTree(
 			//默认数据
@@ -166,6 +179,8 @@ myApp.controller("work3Controller", ["$scope", "$http", function($scope, $http) 
 
 }])
 
+
+
 //右边菜单树分类控制器  角色功能/流程应用
 myApp.controller("role1Controller", ["$scope", "$http", function($scope, $http) {
 
@@ -181,6 +196,16 @@ myApp.controller("role1Controller", ["$scope", "$http", function($scope, $http) 
 			slide: false,
 			nodeWidth: 120,
 			isExpand: 2,
+			render: function (item)
+	        {
+//			        	console.log(item)
+	            return item.formName
+	        },
+	        isLeaf:function(item){
+	            return item.isLeaf;
+	            //console.log((item.values[1].value=="文件夹"));
+	            // return !(item.values[1].value=="文件夹");
+	        },
 			onContextmenu: function(node, e) {
 				console.log(node)
 				if(node.data.isLeaf) return false;

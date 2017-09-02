@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css"/>
+		<link rel="stylesheet" type="text/css" href="css/realName.css"/>
+		<link rel="stylesheet" type="text/css" href="css/classMeanage.css"/>
+	</head>
+	<style></style>
+	<body>
+			<!--头部-->
+			<div class="class_header row">
+				<div class="col-xs-2" onclick="javascript:history.go(-1);">
+					<img src="images/fanhui@2x.png"/>
+				</div>
+				<div class="header_message col-xs-7 ">实名认证</div>
+				<div class="selectClass col-xs-3"></div>
+			</div>
+			<!--真实姓名 证件号-->
+			<ul class="realMessage">
+				<li>
+					<span>真实姓名</span>
+					<input type="text" placeholder="请如实填写"/>
+				</li>
+				<li>
+					<span>证件号码</span>
+					<input type="text"/>
+					<span class="idFail">*证件号码错误</span>
+				</li>
+			</ul>
+			
+			<p class="read">
+				<img src="images/20170517091558.png"/>
+				我已经阅读并同意
+				<span>《用户认证实名协议》</span>
+			</p>
+			<p class="idReminder" style="color: red;margin-left: 0.3rem;"></p>
+			<!--阅读并同意-->
+			<div class="accept">
+				<button>提交并同意</button>
+			</div>
+			<!--温馨提示-->
+			<div class="hint">
+				<p>温馨提示：</p>
+				<p>数字社区不会再任何地方泄露您的个人信息。</p>
+			</div>
+			
+			<!--身份证信息未完善-->
+			<div class="reminderParent">
+			<div class="reminder">
+			<p class="comfirm">
+				<span>提示</span><br/>
+				<span>身份证信息未完成，建议继续完善</span>
+			</p>
+			<p class="cancel">
+				<a href="classMeanage.html">离开</a>
+				<a href="#">继续完善</a>
+			</p>
+
+			</div>	
+		</div>
+		
+			<!--<div id="footer">
+			<ul>
+			<li class="foot_li"><a href="../index.html"><img src="../images/footer/nav_home_default@2x.png" class="img-responsive image_a " /><p>首页</p></a></li>
+			<li class="foot_li"><a><img src="../images/footer/nav_home_jy_default@2x.png" class="img-responsive  image_b" /><p>教研</p></a></li>
+			<li class="foot_li"><a href="classMeanage.html"><img src="../images/footer/nav_home_bj_default@2x.png" class="img-responsive  image_c" /><p>班级</p></a></li>
+			<li class="foot_li"><a><img src="../images/footer/nav_home_xywh_default@2x.png" class="img-responsive  image_d" /><p>校园文化</p></a></li>
+			<li class="foot_li"><a><img src="../images/footer/nav_home_my_default@2x.png" class="img-responsive image_e" /><p>我</p></a></li>
+			</ul>
+			</div>-->
+	</body>
+	<script type="text/javascript" src="js/jquery-1.12.4.min.js" ></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/publicJs.js" ></script>
+	<script type="text/javascript">
+		
+		//点击单选框切换图片
+		$(".read img").on("click",function(){
+			if($(this).attr("src")=="images/20170517091558.png"){
+				$(this).attr("src","images/xieyixuanzhong@2x.png");
+				if( $(".realMessage input").eq(0).val()!="" && $(".realMessage input").eq(1).val()!=""){
+					$(".accept button").css("background-color","#56c399");
+					$(".accept button").css("color","white");
+				}
+			}else{
+				$(this).attr("src","images/20170517091558.png");
+				$(".accept button").css("background-color","#DDDDDD");
+				$(".accept button").css("color","black").text("提交并同意");
+			}
+			checkAllFn();
+		})
+		
+		//点击同意
+		$(".accept button").on('click',function(){
+			if($(".realMessage input").eq(0).val()==""||$(".realMessage input").eq(1).val()==""){
+				$(".reminderParent").css("display","block");
+				return;
+			}
+			if($(".read img").attr("src")=="images/20170517091558.png"){
+				$(".idReminder").text("请阅读并同意《用户认证实名协议》");
+				$(".reminderParent").css("display","block");
+				return;
+			}
+		var name=$(".realMessage input").eq(0).val();
+		var id=$(".realMessage input").eq(1).val();
+		var reg=/^([\u4e00-\u9fa5]){2,7}$/;  
+		var reg15=/^[1-9]\d{7}((0\d)|(1[0-2]))(([0|1|2]\d)|3[0-1])\d{3}$/;
+		var reg18=/^[1-9]\d{5}[1-9]\d{3}((0\d)|(1[0-2]))(([0|1|2]\d)|3[0-1])\d{3}([0-9]|X)$/;
+		
+		if(!reg.test(name)){
+			$(".idReminder").text("请填写正确的姓名！");
+			$(".accept button").css("background-color","#DDDDDD");
+			$(".accept button").css("color","black").text("提交并同意");
+			$(".reminderParent").css("display","block");
+			return;
+		}
+		
+		if(id.length==15){
+			if(!reg15.test(id)){
+				$(".idReminder").text("请填写正确的身份证号码！")
+				$(".accept button").css("background-color","#DDDDDD");
+			$(".accept button").css("color","black").text("提交并同意");
+			$(".reminderParent").css("display","block");
+				return;
+			}	
+		}else if(id.length==18){
+			if(!reg18.test(id)){
+				$(".idReminder").text("请填写正确的身份证号码！")
+				$(".accept button").css("background-color","#DDDDDD");
+				$(".accept button").css("color","black").text("提交并同意");
+				$(".reminderParent").css("display","block");
+				return;
+			}
+		}else{
+			$(".idReminder").text("请填写正确的身份证号码！");
+			$(".accept button").css("background-color","#DDDDDD");
+			$(".accept button").css("color","black").text("提交并同意");
+			$(".reminderParent").css("display","block");
+			return;
+		}
+		
+		
+			$(".idReminder").text("");
+
+			$(this).css("background-color","#56c399").text("提交中...");
+			$(this).css("color","white");
+			console.log(name,id)
+			$.ajax({
+				type:"post",
+				url:"http://192.168.0.21:20882/addClassNormal/idCardAuth",
+				data:JSON.stringify({'name':name,"idCard":id}),
+				contentType: "application/json; charset=UTF-8",
+		        dataType:'json',
+				async:true,
+				success:function(data){
+					console.log(data);
+					if(data.status==1){
+						setTimeout(function(){
+							window.location.href="realNameOk.html";
+							$(".accept button").css("background-color","#DDDDDD");
+							$(".accept button").css("color","black").text("提交并同意");
+						},1000);
+					}else{
+						$(".idReminder").text("身份证或证件号错误，请重新填写！");
+						$(".accept button").css("background-color","#DDDDDD");
+						$(".accept button").css("color","black").text("提交并同意");
+						
+					}
+					
+				},error:function(){
+					console.log('验证身份证错误2');
+				}
+			})
+			
+			
+		})
+		//点击继续完善
+		$(".cancel a:nth-child(2)").on("click",function(){
+			$(".reminderParent").css("display","none");
+		})
+	
+	
+	//判断信息是否填整完全.
+	$(".realMessage input").eq(0).on("blur",checkAllFn)
+	$(".realMessage input").eq(1).on("blur",checkAllFn)
+	
+	function checkAllFn(){
+		var name=$(".realMessage input").eq(0).val();
+		var id=$(".realMessage input").eq(1).val();
+		var reg=/^([\u4e00-\u9fa5]){2,7}$/;  
+		var reg15=/^[1-9]\d{7}((0\d)|(1[0-2]))(([0|1|2]\d)|3[0-1])\d{3}$/;
+		var reg18=/^[1-9]\d{5}[1-9]\d{3}((0\d)|(1[0-2]))(([0|1|2]\d)|3[0-1])\d{3}([0-9]|X)$/;
+		
+		if(!reg.test(name)){
+			$(".idReminder").text("请填写正确的姓名！");
+			$(".accept button").css("background-color","#DDDDDD");
+			$(".accept button").css("color","black").text("提交并同意");
+			return;
+		}
+		
+		if(id.length==15){
+			if(!reg15.test(id)){
+				$(".idReminder").text("请填写正确的身份证号码！")
+				$(".accept button").css("background-color","#DDDDDD");
+			$(".accept button").css("color","black").text("提交并同意");
+				return;
+			}	
+		}else if(id.length==18){
+			if(!reg18.test(id)){
+				$(".idReminder").text("请填写正确的身份证号码！")
+				$(".accept button").css("background-color","#DDDDDD");
+				$(".accept button").css("color","black").text("提交并同意");
+				return;
+			}
+		}else{
+			$(".idReminder").text("请填写正确的身份证号码！");
+			$(".accept button").css("background-color","#DDDDDD");
+			$(".accept button").css("color","black").text("提交并同意");
+			return;
+		}
+		
+		
+		$(".idReminder").text("");
+		//判断资料是否完整
+		if($(".realMessage input").eq(1).val()!="" && $(".realMessage input").eq(0).val()!="" && $(".read img").attr("src")!="images/20170517091558.png"){
+			$(".accept button").css("background-color","#56c399");
+			$(".accept button").css("color","white");
+		}else{
+			$(".accept button").css("background-color","#DDDDDD");
+			$(".accept button").css("color","black").text("提交并同意");
+		}
+		
+	}
+	
+	</script>
+	
+</html>
+

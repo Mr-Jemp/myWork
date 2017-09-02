@@ -119,6 +119,7 @@
 <script type="text/javascript" charset="utf-8" src="js/ueditor/formdesign/leipi.formdesign.v4.js"></script>
 <!-- script start-->  
 <script type="text/javascript">
+	/*接收pdesign_left.html传过来的id，根据id渲染页面*/
 var modelId=0;
 var reg = new RegExp("(^|&)modelId=([^&]*)(&|$)","i");
 var r = window.location.search.substr(1).match(reg);
@@ -128,24 +129,29 @@ $(window).load(function()
 {
 	$.ajax({
         type: 'get',
-        url: '../../../s/tp/wwwroot/index.php?s=/demo/formdesign/form_id/'+modelId+'.html',
+//      url: '../../../s/tp/wwwroot/index.php?s=/demo/formdesign/form_id/'+modelId+'.html',
+        url: 'http://192.168.0.21:20898/formMenuFacade/getContentFormMenuById?id='+modelId,
         dataType :'html',
         success: function(data) {
-       		if(typeof data!="object")
-            $("#myFormDesign").val(data);
-            startEditor();
-        }, error: function(xhr, stat, e) { alert("读取数据失败：找不到地址！");startEditor(); }
+        	var json = (new Function('','return'+ data))();
+        	var content = json.msg.content;
+       		if(typeof content!="object"){
+       			 $("#myFormDesign").val(content);
+            	startEditor();
+       		}
+        }, 
+        error: function(xhr, stat, e) { alert("读取数据失败：找不到地址！");startEditor(); }
     });
 	$.ajax({
         type: 'get',
-        url: '../../../s/function/pagetype.php',
-		data:{'formid':modelId},
+        url: 'http://192.168.0.21:20898/formMenuFacade/getContentFormMenuById?id='+modelId,
+//		data:{'id':modelId},
         dataType :'text',
         success: function(data) {
-			data=eval("("+data+")");
+			/*data=eval("("+data+")");
 			if(data.IsSuccess!=true)return;
 			if(typeof(data.info.is_data_form)=='object')data.info.is_data_form=0;
-			$("input[name='formtype']:nth("+data.info.is_data_form+")").attr('checked',true);
+			$("input[name='formtype']:nth("+data.info.is_data_form+")").attr('checked',true);*/
         }, error: function(xhr, stat, e) { alert("读取数据失败：找不到页面类型地址！");startEditor(); }
     });
 });

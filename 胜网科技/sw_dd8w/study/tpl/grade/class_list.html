@@ -1,0 +1,231 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no,minimal-ui">
+	<meta name="apple-mobile-web-app-capable" content="yes"/>
+	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"/>
+	<meta http-equiv="Access-Control-Allow-Origin" content="*">
+    <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<script src="./js/jq/jquery-3.1.1.min.js"></script> -->
+	<script src="/js/bootstrap/bootstrap.min.js"></script>
+	<style>
+		html,body {width:100%;height:100%;margin:0px;padding:0px;font-family:"微软雅黑";}
+		.container-fluid{position:absolute;bottom:0px;width:100%;height:100%;margin:0;padding:0;}
+		.container{margin:0;padding:0;			
+			width:100%;height:100%;overflow: auto;
+		}
+		.row{margin:0;padding:0;}
+		.container a{text-decoration: none;cursor:pointer;}
+		.class_head{width:100%;height:60px;background:#56c399;margin-top: 0px;margin-right:0px;margin-left:0px;color:#fff;}
+		.class_head div{float: left;}
+		.class_head  div span{font-size:2em;line-height: 60px;color:#fff;}
+		.class_head  div p{font-size:2em;line-height: 60px;color:#fff;text-align: center;}
+		.class_head  div img{margin-top:20px;float:right;}
+		.class_user{margin-top: 15px;text-align: center;font-size: 1.2em;}
+		.new_class{width:24px;height:24px;background: #56c399;float: left;text-align: center;color:#fff;}
+	
+		.push_class{margin-top:20px;margin-left:25px;}
+		.push_class p{font-size: 1.3em;margin:0;padding:0;margin-left:33px;}
+		
+		.class_teacher{width:100%;height:44px;margin-top:10px;border-bottom: 1px solid #eee;border-top:1px solid #eee;}
+		#list_2,#list_3{display: none;}
+		.hover_1,.hover_2,.hover_3{float: left;width:30%;height:2px;margin-left:3%;margin-top:16px;}
+		.class_teacher .teach1{font-size: 1.2em;line-height: 44px;margin-left:25px;}
+		.class_teacher .teach2{font-size: 1.6em;line-height: 44px;margin-left:62%;}
+		.class_teacher .class_list1{font-size: 1.2em;line-height: 44px;margin-left:25px;float: left;}
+		.class_teacher .class_list2{font-size: 1.6em;line-height: 44px;display: block;float: right;margin-right:5%;}
+		#footer{width:100%;height:49px;background:#f8f8f8;margin-top:50px;position:fixed;bottom:0px;left:0;right:0;margin-left:0;margin-right: 0}
+		#footer ul{margin-top:0px;width:100%;height:49px;-webkit-padding-start:0px;}
+		#footer ul li{list-style:none;float:left;margin-top:10px;width:10%;margin-left:8.5%;}
+		#footer ul li div{width:30px;height:30px;margin:0 auto;background:url(/images/main/icon_list1.png)no-repeat;background-size:375px auto;margin-top:-11px;}
+		#footer ul li .foot_a{background-position:-18px -210px;}
+		#footer ul li .foot_b{background-position:-77px -210px;}
+		#footer ul li .foot_c{background-position:-131px -210px;}
+		#footer ul li .foot_d{background-position:-192px -210px;}
+		#footer ul li .foot_e{background-position:-255px -210px;}
+		#footer ul li a{text-decoration:none;}
+		#footer ul li p{ color:black;text-align: center;margin-top: 3px;}
+	</style><!-- 
+	</head>
+	<body> -->
+	<div class="container">
+	<div class="container-fluid">
+		<div class="class_head row">
+				<div style="margin-left: 4%;float: left;width:10%;"><span class="class_back"><</span></div>
+				<div style="width:70%;"><p>天河一中</p></div>
+				<div style="margin-right:4%;float: right;width:10%;"><img src="/images/main/u178.png" class="set"></div>
+			</div>
+		<div class="row  class_user">
+			<div class="col-md-4 col-xs-4 col-sm-4 col-lg-4"><a<span class="teacher">老师</span></a></div>
+			<div class="col-md-4 col-xs-4 col-sm-4 col-lg-4"><a><span class="stu">学生</span></a></div>
+			<div class="col-md-4 col-xs-4 col-sm-4 col-lg-4"><a><span class="parent">家长</span></a></div>
+		</div>
+		<div class="hover_1"></div><div class="hover_2"></div><div class="hover_3"></div>
+		<div id="list_1" style="margin-top: 26px;">
+		<div class="row push_class add1" >
+			<div class="new_class">+</div>
+			<p>添加老师</p>
+
+		</div>
+
+		<div class="row push_class ">
+			<div class="new_class"><span >+</span></div>
+		    <p >新建分组</p>
+
+		</div>
+	
+		<div class="class_teacher">
+			<span class="teach1 class_list1">全部老师</span>
+			<span class="class_list2">></span>
+		</div>
+
+		<div class="class_teacher">
+			<span class="class_list1">A组()</span>
+			<span class="class_list2">></span>
+		</div>
+		<div class="class_teacher">
+			<span class="class_list1">B组()</span>
+			<span class="class_list2">></span>
+		</div>
+		<div class="class_teacher">
+			<span class="class_list1">C组()</span>
+			<span class="class_list2">></span>
+		</div>
+		<div class="class_teacher">
+			<span class="class_list1">D组()</span>
+			<span class="class_list2">></span>
+		</div>
+		</div>
+			<!-- 添加学生部分 -->
+			<div id="list_2"  style="margin-top: 26px;">
+			<div class="row push_class add2" >
+			<div class="new_class">+</div>
+			<p>添加学生</p>
+
+		</div>
+
+		<div class="row push_class">
+			<div class="new_class"><span >+</span></div>
+		    <p >新建分组</p>
+
+		</div>
+	
+		<div class="class_teacher">
+			<span class="teach1 class_list1">全部学生</span>
+			<span class="class_list2">></span>
+		</div>
+
+		<div class="class_teacher">
+			<span class="class_list1">A组()</span>
+			<span class="class_list2">></span>
+		</div>
+		<div class="class_teacher">
+			<span class="class_list1">B组()</span>
+			<span class="class_list2">></span>
+		</div>
+		<div class="class_teacher">
+			<span class="class_list1">C组()</span>
+			<span class="class_list2">></span>
+		</div>
+		<div class="class_teacher">
+			<span class="class_list1">D组()</span>
+			<span class="class_list2">></span>
+		</div>
+		</div>
+	<div id="list_3"  style="margin-top:26px;">
+	<!-- 添加家长部分 -->
+		<div class="row push_class add3"  >
+			<div class="new_class">+</div>
+			<p>添加家长</p>
+
+		</div>
+
+		<div class="row push_class">
+			<div class="new_class"><span >+</span></div>
+		    <p >新建分组</p>
+
+		</div>
+	
+		<div class="class_teacher">
+			<span class="teach1 class_list1">全部家长</span>
+			<span class="class_list2">></span>
+		</div>
+
+		<div class="class_teacher">
+			<span class="class_list1">A组()</span>
+			<span class="class_list2">></span>
+		</div>
+		<div class="class_teacher">
+			<span class="class_list1">B组()</span>
+			<span class="class_list2">></span>
+		</div>
+		<div class="class_teacher">
+			<span class="class_list1">C组()</span>
+			<span class="class_list2">></span>
+		</div>
+		<div class="class_teacher">
+			<span class="class_list1">D组()</span>
+			<span class="class_list2">></span>
+		</div>
+		</div>
+	
+		<!-- <div id="footer">
+			<ul>
+				<li class="foot_li"><a href=""><div class="foot_a"></div><p>首页</p></a></li>
+				<li class="foot_li"><a href=""><div class="foot_b"></div><p>教研</p></a></li>
+				<li class="foot_li"><a href=""><div class="foot_c"></div><p>班级</p></a></li>
+				<li class="foot_li"><a href=""><div class="foot_d"></div><p>校园</p></a></li>
+				<li class="foot_li"><a href=""><div class="foot_e"></div><p>我的</p></a></li>	
+			</ul>
+				
+			</div> -->
+	</div>
+	</div>
+	<script>
+		$(function(){
+			$(".teacher").mouseover(function(){
+				$(".hover_1").css("background","#56c399")
+			}).mouseout(function(){
+				$(".hover_1").css("background","");
+			})
+			$(".stu").mouseover(function(){
+				$(".hover_2").css("background","#56c399")
+			}).mouseout(function(){
+				$(".hover_2").css("background","");
+			})
+			$(".parent").mouseover(function(){
+				$(".hover_3").css("background","#56c399")
+			}).mouseout(function(){
+				$(".hover_3").css("background","");
+			})
+			$(".stu").click(function(){
+				$("#list_2").css("display","block");
+				$("#list_1").css("display","none");
+				$("#list_3").css("display","none");
+			})
+			$(".teacher").click(function(){
+				$("#list_1").css("display","block");
+				$("#list_2").css("display","none");
+				$("#list_3").css("display","none");
+			})
+			$(".parent").click(function(){
+				$("#list_3").css("display","block");
+				$("#list_2").css("display","none");
+				$("#list_1").css("display","none");
+			})
+			$(".add1").click(function(){
+				window.location.href="#!/add_teacher";
+			})
+			$(".class_back").click(function(){
+				window.location.href="#!/class_management";
+			})
+			$(".set").click(function(){
+				window.location.href="#!/shezhi";
+			})
+		})
+
+	</script>

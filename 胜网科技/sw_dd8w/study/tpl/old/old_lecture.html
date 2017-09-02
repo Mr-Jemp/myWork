@@ -1,0 +1,104 @@
+    <!-- <link href="/Public/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css"> -->
+    <!--[if lt IE 9]>
+    <script src="//cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="//cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <link href="/Public/Css/jscss.css" rel="stylesheet" type="text/css">
+    <link href="/Public/Css/index.css" rel="stylesheet" type="text/css">
+    <link href="/Public/templet/one/css/reset.css" rel="stylesheet">
+    <link href="/Public/templet/one/css/style.css" rel="stylesheet">
+    <!--<link href="/Public/Css/lecture.css" rel="stylesheet">-->
+    <style>
+        .row{
+            margin-left: 0px;
+        }
+        .btn-xs{
+            margin-bottom: 2px;
+        }
+    </style>
+    <link href="/Public/Css/teacher.css" rel="stylesheet" type="text/css">
+<!--教师端左侧栏导航条开始处-->
+<!--左侧栏导航条结束处-->
+<main id="main" class="homeAdjust" style="height: 100%;">
+    <div class="container pa0">
+        <!-- 顶部 -->
+        <div class="row top-box">
+            <div class="col-xs-12 top-bar Teacher-style" style="padding: 2px 10px 0;">
+                <div class="col-xs-3 radius_img" style="padding-left: 0px; padding-right: 0px;">
+                    <button class="js-slideout-toggle btn-link"><img src="/Public/images/manpic.jpg" class="img-responsive" alt="用户头像"></button>
+                </div>
+                <div class="col-xs-6 text-center"><span class="js_top_font_style">数字社区</span></div>
+            </div>
+            <!-- 幻灯片 -->
+        </div>
+    </div>
+    <!--备课区-->
+    <div class="row">
+        <table class="table">
+            <tr>
+                <th width="25%">科目</th>
+                <th width="25%">知识点</th>
+                <th>备课内容</th>
+            </tr>
+            <tr>
+                <td>2017年1月17日</td>
+                <td>新版课堂</td>
+                <td><a class="btn btn-success btn-xs" href="/classroom/index.html">2017-1-17 测试</a></td>
+            </tr>
+            <tr>
+                <td>计算机应用与网络(16计用班上册)</td>
+                <td>[网络基本概念]&nbsp;第1章  计算机网络基本概念</td>
+                <td><a class="btn btn-success btn-xs" href="/classroom/index.html">2017-1-10 备课</a>&nbsp;&nbsp;<a class="btn btn-success btn-xs" href="/classroom/index.html">2017-1-6 备课</a>&nbsp;&nbsp;<a class="btn btn-success btn-xs" href="/classroom/index.html">ddddddddddf</a>&nbsp;&nbsp;<a class="btn btn-success btn-xs" href="/classroom/index.html">2017-1-6 备课</a>&nbsp;&nbsp;</td>
+            </tr><tr>
+            <td>计算机应用与网络(16计用班上册)</td>
+            <td>[网络基本概念]&nbsp;第2章   数据通信基础</td>
+            <td><a class="btn btn-success btn-xs" href="/classroom/index.html">2017-1-7 备课</a>&nbsp;&nbsp;</td>
+        </tr>            <tr><td colspan="3"><button type="button" class="btn btn-info btn-st" data-toggle="modal" data-target="#myModal">更多..</button></td></tr>
+        </table>
+    </div>
+    <!--底部开始-->
+    <!--底部开始结束-->
+</main>
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="myModalLabel">备课详细列表</h4>
+            </div>
+            <div class="modal-body">
+                <div style="padding-bottom: 10px;">
+                    <select class="subjects">
+                        <option value="40:76:47:16">计算机应用与网络 上册</option><option value="40:76:47:17">计算机应用与网络 下册</option>                    </select>
+                    <select class="units">
+                        <option value="">选择单元</option>
+                    </select>
+                    <select class="Kpoint">
+                        <option value="">选择知识点</option>
+                    </select>
+                </div>
+                <div class="beikelists">
+                    <table class="table">
+                        <tr>
+                            <th width="25%">科目</th>
+                            <th width="25%">知识点</th>
+                            <th>备课内容</th>
+                        </tr>
+                        <tr>
+                            <td>计算机应用与网络(16计用班上册)</td>
+                            <td>[网络基本概念]&nbsp;第1章  计算机网络基本概念</td>
+                            <td><a class="btn btn-success btn-xs" href="/classroom/index.html">2017-1-10 备课</a>&nbsp;&nbsp;<a class="btn btn-success btn-xs" href="/classroom/index.html">2017-1-6 备课</a>&nbsp;&nbsp;<a class="btn btn-success btn-xs" href="/classroom/index.html">ddddddddddf</a>&nbsp;&nbsp;<a class="btn btn-success btn-xs" href="/classroom/index.html">2017-1-6 备课</a>&nbsp;&nbsp;</td>
+                        </tr><tr>
+                        <td>计算机应用与网络(16计用班上册)</td>
+                        <td>[网络基本概念]&nbsp;第2章   数据通信基础</td>
+                        <td><a class="btn btn-success btn-xs" href="/classroom/index.html">2017-1-7 备课</a>&nbsp;&nbsp;</td>
+                    </tr>                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--内容区结束-->
+<!-- <script type="text/javascript" src="/Public/jQuery/jquery.min.js"></script> -->
+<script src="/Public/bootstrap/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="/Public/Js/slideout.min.js"></script>

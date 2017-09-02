@@ -1,0 +1,245 @@
+<link rel="stylesheet" href="/re/css/re_public.css">
+<link rel="stylesheet" href="/re/css/re_upfile_timu_add.css">
+
+<div style="background-color: #ECEAEB;" >
+<div class="re_upfile_top">
+    <span class="top-return" onclick="javascript:history.go(-1);"></span>
+    {{title}}
+</div>
+<div class="timu">
+    <ng-include src="viewFile"></ng-include>
+    <div class="timu_right">
+        <div class="timu_right_top">
+           <i class="timu_right_addr"></i> <p class="timu_right_chapter">教材：</p> <span ng-click="showMaterial()">切换教材</span>
+        </div>
+        <div class="timu_right_content" ng-if="teaching_material_type<2">
+            <div class="timu_r_title">
+                章节内容
+            </div>
+            <div class="timu_r_list">
+                <ul>
+                    <li ng-repeat="t in timu_right_chapter" data-rcid="{{t.id}}" data-title="{{t.value}}" ng-click="doRchapter(t.id,t.key,t.isChild)" ng-class="{true:'choice_list_act'}[isSectionChild(t.id)]">{{t.value}}<i class="down" ng-if="t.isChild"></i></li>
+                </ul>
+            </div>
+        </div>
+        <!--知识点内容-->
+        <div class="timu_right_content" ng-if="teaching_material_type>1">
+            <div class="timu_r_title">
+                知识点
+            </div>
+            <div class="timu_r_list">
+                <ul>
+                    <li ng-repeat="t in timu_right_Knowledge" data-rcid="{{t.id}}" data-title="{{t.value}}" ng-click="doKnowledge(t.id,t.key,t.isChild)" ng-class="{true:'choice_list_act'}[isKnowledgeChild(t.id)]">{{t.value}}<i class="down" ng-if="t.isChild"></i></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<!--切换教材-->
+<div id="p_sw_material" class="p_dig">
+    <div class="p_dig_content">
+        <!-- <div class="p_head">请选择教材<span class="p_head_colse"></span></div> -->
+        <div class="p_head">
+            <ul class="p_head_swtool">
+                <li><span class="{{teaching_material_type==1?'swtool_act':''}}" ng-click="setTeachingMaterialType(1)">教材</span></li>
+                <li><span class="{{teaching_material_type==3?'swtool_act':''}}" ng-click="setTeachingMaterialType(3)">知识点</span></li>
+            </ul>
+        </div>
+        <div class="p_sw_material_content">
+            <div ng-if="teaching_material_type<3">
+                <div class="p_sw_material_block">
+                    <h2>校段</h2>
+                    <ul>
+                        <li><div ng-repeat="c in xiaoduan" class="{{gcss[$index%3]}}"><span ng-click="setTypeId('xiaoduan',c.id,true,c.name)" ng-class="(c.id==tmpid.school_period_id)?'pc_list_act':''">{{c.name}}</span></div></li>
+                    </ul>
+                </div>
+                <div class="p_sw_material_block" ng-if="isShowSubject">
+                    <h2>科目</h2>
+                    <ul>
+                        <li><div ng-repeat="s in subject" class="{{gcss[$index%3]}}"><span ng-click="setTypeId('subject',s.id,true,s.value)" ng-class="(s.id==tmpid.subject_id)?'pc_list_act':''">{{s.value}}</span></div></li>
+                    </ul>
+                </div>
+                <div class="p_sw_material_block" ng-if="isShowVersion">
+                    <h2>版本</h2>
+                    <ul>
+                        <li><div ng-repeat="v in version" class="{{gcss[$index%3]}}"><span ng-click="setTypeId('version',v.id,true,v.value)" ng-class="(v.id==tmpid.version_id)?'pc_list_act':''">{{v.value}}</span></div></li>
+                    </ul>
+                </div>
+                <div class="p_sw_material_block" ng-if="isShowBook">
+                    <h2>册数</h2>
+                    <ul>
+                        <li><div ng-repeat="b in book" class="{{gcss[$index%3]}}"><span  ng-click="setTypeId('book',b.id,true,b.value)" ng-class="(b.id==tmpid.book_id)?'pc_list_act':''">{{b.value}}</span></div></li>
+                    </ul>
+                </div>
+            </div>
+            <div ng-if="teaching_material_type==3">
+                <div class="p_sw_material_block">
+                    <h2>校段</h2>
+                    <ul>
+                        <li><div ng-repeat="c in xiaoduan" class="{{gcss[$index%3]}}"><span ng-click="setTypeId('pxiaoduan',c.id,true,c.name)" ng-class="(c.id==tmpid.pschool_period_id)?'pc_list_act':''">{{c.name}}</span></div></li>
+                    </ul>
+                </div>
+                <div class="p_sw_material_block" ng-if="isShowPSubject">
+                    <h2>科目</h2>
+                    <ul>
+                        <li><div ng-repeat="s in subject" class="{{gcss[$index%3]}}"><span ng-click="setTypeId('psubject',s.id,true,s.value)" ng-class="(s.id==tmpid.psubject_id)?'pc_list_act':''">{{s.value}}</span></div></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="clear p_sw_bttool">
+            <div class="p_cancelBtn" ng-click="materialSubmit(false)">取消</div>
+            <div class="p_confirmBtn" ng-click="materialSubmit(true)">确定</div>
+        </div>
+    </div>
+</div>
+</div>
+<!--提交动画-->
+<div id="waitfor">
+    <div class="spinner">
+        <div class="spinner-container container1">
+            <div class="circle1"></div>
+            <div class="circle2"></div>
+            <div class="circle3"></div>
+            <div class="circle4"></div>
+        </div>
+        <div class="spinner-container container2">
+            <div class="circle1"></div>
+            <div class="circle2"></div>
+            <div class="circle3"></div>
+            <div class="circle4"></div>
+        </div>
+        <div class="spinner-container container3">
+            <div class="circle1"></div>
+            <div class="circle2"></div>
+            <div class="circle3"></div>
+            <div class="circle4"></div>
+        </div>
+    </div>
+</div>
+<style>
+    #waitfor{
+        width: 100%;
+        height: 100%;
+        background:rgba(0,0,0,.6);
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 999;
+        display: none;
+    }
+    .spinner {
+        margin: 100px auto;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 60px;
+        height: 60px;
+        margin-top: -30px;
+        margin-left: -30px;
+    }
+
+    .container1 > div, .container2 > div, .container3 > div {
+        width: 10px;
+        height: 10px;
+        background-color:#fff;
+
+        border-radius: 100%;
+        position: absolute;
+        -webkit-animation: bouncedelay 1.2s infinite ease-in-out;
+        animation: bouncedelay 1.2s infinite ease-in-out;
+        -webkit-animation-fill-mode: both;
+        animation-fill-mode: both;
+    }
+
+    .spinner .spinner-container {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+    }
+
+    .container2 {
+        -webkit-transform: rotateZ(45deg);
+        transform: rotateZ(45deg);
+    }
+
+    .container3 {
+        -webkit-transform: rotateZ(90deg);
+        transform: rotateZ(90deg);
+    }
+
+    .circle1 { top: 0; left: 0; }
+    .circle2 { top: 0; right: 0; }
+    .circle3 { right: 0; bottom: 0; }
+    .circle4 { left: 0; bottom: 0; }
+
+    .container2 .circle1 {
+        -webkit-animation-delay: -1.1s;
+        animation-delay: -1.1s;
+    }
+
+    .container3 .circle1 {
+        -webkit-animation-delay: -1.0s;
+        animation-delay: -1.0s;
+    }
+
+    .container1 .circle2 {
+        -webkit-animation-delay: -0.9s;
+        animation-delay: -0.9s;
+    }
+
+    .container2 .circle2 {
+        -webkit-animation-delay: -0.8s;
+        animation-delay: -0.8s;
+    }
+
+    .container3 .circle2 {
+        -webkit-animation-delay: -0.7s;
+        animation-delay: -0.7s;
+    }
+
+    .container1 .circle3 {
+        -webkit-animation-delay: -0.6s;
+        animation-delay: -0.6s;
+    }
+
+    .container2 .circle3 {
+        -webkit-animation-delay: -0.5s;
+        animation-delay: -0.5s;
+    }
+
+    .container3 .circle3 {
+        -webkit-animation-delay: -0.4s;
+        animation-delay: -0.4s;
+    }
+
+    .container1 .circle4 {
+        -webkit-animation-delay: -0.3s;
+        animation-delay: -0.3s;
+    }
+
+    .container2 .circle4 {
+        -webkit-animation-delay: -0.2s;
+        animation-delay: -0.2s;
+    }
+
+    .container3 .circle4 {
+        -webkit-animation-delay: -0.1s;
+        animation-delay: -0.1s;
+    }
+
+    @-webkit-keyframes bouncedelay {
+        0%, 80%, 100% { -webkit-transform: scale(0.0) }
+        40% { -webkit-transform: scale(1.0) }
+    }
+
+    @keyframes bouncedelay {
+        0%, 80%, 100% {
+            transform: scale(0.0);
+            -webkit-transform: scale(0.0);
+        } 40% {
+              transform: scale(1.0);
+              -webkit-transform: scale(1.0);
+          }
+    }
+</style>

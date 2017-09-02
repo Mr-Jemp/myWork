@@ -1,0 +1,84 @@
+body{
+    background-color: #E6E6E6;
+}
+.re_comment_top{
+    position: relative;
+    text-align: center;
+    height: 45px;
+    line-height: 45px;
+    background-color: #52DFAA;
+    width: 100%;
+    padding: 0px 10px;
+    box-sizing: border-box;
+    color: #ffffff;
+    font-size: 16px;
+}
+.top-return{
+    width: 20px;
+    height: 19px;
+    position: absolute;
+    top:50%;
+    left: 10px;
+    margin-top: -10px;
+    display: inline-block;
+    background: url('../img/re_icon.png') no-repeat -191px 0px;
+    background-size: 320px 240px;
+    cursor: pointer;
+}
+.subcomment{
+    font-size: 12px;
+    display: inline-block;
+    float: right;
+    cursor: pointer;
+}
+.comment_block{
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+}
+.comment_des{
+    width: 100%;
+    position: relative;
+}
+.comment_des span{
+    position: absolute;
+    display: inline-block;
+    right: 20px;
+    bottom: 5px;
+    color: #C1C1C1;
+    font-size: 12px;
+}
+.comment_block textarea{
+    width: 100%;
+    box-sizing: border-box;
+    padding: 10px;
+    border: none;
+}
+.comment_star{
+    background-color: #ffffff;
+    margin: 10px auto;
+    height: auto;
+    padding: 10px;
+    overflow: hidden;
+}
+.comment_star li{
+    float: left;
+}
+.comment_star li:nth-child(1){
+    width: 10%;
+    color: #828282;
+}
+.comment_star li:nth-child(2){
+    width: 80%;
+}
+.comment_star li:nth-child(3){
+    width: 10%;
+    text-align: center;
+    color: #A6A6A6;
+}
+.comment_star li img{
+    width: 17px;
+    height: 17px;
+    margin: auto 3px;
+    cursor: pointer;
+}

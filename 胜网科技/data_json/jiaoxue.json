@@ -1,0 +1,14 @@
+[
+    {
+      "text":"教学管理",
+      "children":[
+        {"text":"年级","type":1},
+        {"text":"班级","type":1},
+        {"text":"学段","type":1},
+        {"text":"学段","type":1},
+        {"text":"学段","type":1}
+      ],
+      "isLeaf":"true",
+      "type":2
+    }
+  ]

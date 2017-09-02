@@ -74,7 +74,7 @@ $(function()
 		var web_company=$("[name='"+prefix+"_company']").val();
 		$.ajax({
 			type: 'POST',
-			url: '/s/setting/web_setting.php',
+			url: '../../s/setting/web_setting.php',
 			data: {'web_name':web_name,'web_logo':web_logo,'web_beian':web_beian,'web_company':web_company,"get":"no"},
 			success: function(data) {
 				data = eval('(' + data + ')');
@@ -94,7 +94,7 @@ $(window).load(function()
 {
 	$.ajax({
 		type: 'POST',
-		url: '/s/setting/web_setting.php',
+		url: '../../s/setting/web_setting.php',
 		data: {"get":"yes"},
 		success: function(data) {
 			data = eval('(' + data + ')');

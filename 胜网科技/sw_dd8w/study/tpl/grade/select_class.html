@@ -1,0 +1,313 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no,minimal-ui">
+	<meta name="apple-mobile-web-app-capable" content="yes"/>
+	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"/>
+	<meta http-equiv="Access-Control-Allow-Origin" content="*">
+    <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<script src="./js/jq/jquery-3.1.1.min.js"></script> -->
+	<script src="/js/bootstrap/bootstrap.min.js"></script>
+	<style>
+		html,body {width:100%;height:100%;margin:0px;padding:0px;font-family:"微软雅黑";}
+		.container-fluid{position:absolute;bottom:0px;width:100%;height:100%;margin:0;padding:0;}
+		.container{margin:0;padding:0;			
+			width:100%;height:100%;overflow: auto;
+		}
+		.container a{text-decoration: none;cursor:pointer;}
+		.class_head{width:100%;height:60px;background:#56c399;margin-top: 0px;margin-right:0px;margin-left:0px;color:#fff;}
+		.class_back{ width:33px;height:33px; background:url(/images/main/icon_list1.png)no-repeat;background-position:-150px -62px;float: left;background-size:375px auto;margin-top:12px;}
+		.class_head p{text-align:center;font-size:2em;line-height: 60px;color:#fff;}
+		#class_btn{background:#56c399;width:100%;height:50px;border-radius:30px;border:0;outline: none;font-size:1.5em;color:#fff;}
+		#class_btn:hover{opacity: 0.8;}
+		#footer{width:100%;height:49px;background:#f8f8f8;margin-top:50px;position:fixed;bottom:0px;left:0;right:0;margin-left:0;margin-right: 0}
+		#footer ul{margin-top:0px;width:100%;height:49px;-webkit-padding-start:0px;}
+		#footer ul li{list-style:none;float:left;margin-top:10px;width:10%;margin-left:8.5%;}
+		#footer ul li div{width:30px;height:30px;margin:0 auto;background:url(/images/main/icon_list1.png)no-repeat;background-size:375px auto;margin-top:-11px;}
+		#footer ul li .foot_a{background-position:-18px -210px;}
+		#footer ul li .foot_b{background-position:-77px -210px;}
+		#footer ul li .foot_c{background-position:-131px -210px;}
+		#footer ul li .foot_d{background-position:-192px -210px;}
+		#footer ul li .foot_e{background-position:-255px -210px;}
+		#footer ul li a{text-decoration:none;}
+
+		#footer ul li p{ color:black;text-align: center;margin-top: 3px;}
+
+		hr{border:1px solid #ebebeb;width:90%;margin-top: 10px;margin-bottom: 10px;}
+		#school_per,#school_city,#school,
+		#school_grade,#input_grade{width:90%;height:60px;background:#f7f7f7;margin:0 auto;}
+	
+		#school_per{margin-top:15px;}
+		#school_grade,#input_grade{margin-top:11px;}
+		#school_city{background:#fff;height:60px;}
+		#school_city p{line-height:60px;}
+		
+		#school_per,#school_city,#school,
+		#school_grade,#input_grade p{font-size:1.3em;line-height:60px;}
+
+		#input_grade input{width:90%;border:0;outline: none;height:60px;background: #f7f7f7;font-size:1.3em;padding-left:22px;}
+		.adderss,.adderss_a,.adderss_b{width:32.1%;height:60px;background:red;background:#f7f7f7;float:left;}
+		.adderss_a{margin-left:1.74%;}
+		.adderss_b{margin-left: 1.74%;}
+		/*遮罩层*/
+		#shade{position:fixed;background:black;opacity: 0.6;left:0;top:0; display:none;}
+		#foot_shade{width:100%;height:49px;background:black;margin-top:40px;position:fixed;bottom:0px;left:0;right:0;margin-left:0;margin-right:0;opacity:0.6;z-index:2;display: none;}
+		
+		.pro{width:90%;height:auto;position: absolute;top:0;left:0;left:5%;top:9%;display:none;background: #fff;z-index:6;}
+		.pro ul{list-style: none;width:100%;-webkit-padding-start:0px;}
+		.pro ul li{margin-top:10px;border-bottom: 1px solid #ccc;width:90%;height:43px;margin:0 auto;}
+		.pro ul li span{line-height: 43px;display:block;float: left;font-size: 1.2em;margin-left:20px;}
+		.pro ul li .li_r{width:20px;height: 20px;border-radius:10px;float: right;margin-right: 20px;margin-top:10px;border:1px solid #b9bbba;}
+		.pro ul li .li_g{width:20px;height: 20px;border-radius:10px;float: right;margin-right: 20px;margin-top:10px;border:1px solid #56c399;}
+		.city{width:90%;height:auto;position: absolute;top:0;left:0;left:5%;top:9%;display: none;z-index: 3;background: #fff;}
+		.city ul{list-style: none;width:100%;-webkit-padding-start:0px;}
+		.city ul li{margin-top:10px;border-bottom: 1px solid #ccc;width:90%;height:43px;margin:0 auto;}
+		.city ul li span{line-height: 43px;display:block;float: left;font-size: 1.2em;margin-left:20px;}
+		.city ul li .li_r{width:20px;height: 20px;border-radius:10px;float: right;margin-right: 20px;margin-top:10px;border:1px solid #b9bbba;}
+		.city ul li .li_g{width:20px;height: 20px;border-radius:10px;float: right;margin-right: 20px;margin-top:10px;border:1px solid #56c399;}
+		.dist{width:90%;height:auto;position: absolute;top:0;left:0;left:5%;top:9%;display: none;z-index: 3;background: #fff;}
+		.dist ul{list-style: none;width:100%;-webkit-padding-start:0px;}
+		.dist ul li{margin-top:10px;border-bottom: 1px solid #ccc;width:90%;height:43px;margin:0 auto;}
+		.dist ul li span{line-height: 43px;display:block;float: left;font-size: 1.2em;margin-left:20px;}
+		.dist ul li .li_r{width:20px;height: 20px;border-radius:10px;float: right;margin-right: 20px;margin-top:10px;border:1px solid #b9bbba;}
+		.dist ul li .li_g{width:20px;height: 20px;border-radius:10px;float: right;margin-right: 20px;margin-top:10px;border:1px solid #56c399;}
+		
+		.li_r div{background:#56c399;width:10px;height:10px;border-radius:5px;margin:4px;display: none;}
+
+		/*按钮*/
+		#select_button{width:60%;height:46px;margin:0 auto;margin-top:15px;}
+		.select_btn{width: 100%;height: 46px;background: #56c399;border-radius: 20px;border:0;outline: none;font-size: 1.6em;color:#fff;}
+		
+		
+         
+	
+
+
+
+		@media screen and (max-width:720px) and (min-width:300px){
+			.container-fluid{position: absolute;bottom:0px;width:100%;height: 100%;margin:0;padding:0;}
+			#footer ul li{list-style:none;float:left;margin:0 auto;margin-top:10px;width:20%;}
+			#footer ul li  img{width:25px;height:25px;}
+		
+			
+		}
+		
+		
+
+	</style>
+		
+</head>
+<body>
+	<div class="container">
+		<div class="container-fluid">
+				<div class="class_head">
+					<div class="class_back" style="font-size:2em;float:left;line-height: 66px;color:#fff;"></div>
+			
+				<p>开通班级</p>
+				
+
+
+			</div>
+			<!-- 校段 -->
+				<div id="school_per" class="row">
+					<p style="margin-left:23px;">请选择校段</p>
+
+				</div>
+				<hr/>
+				<!-- 所选择城市 -->
+				<div class="row" id="school_city">
+					<div class="adderss"><p style="margin-left:23px;">省份</p></div>
+					
+				<div class="adderss_a"><p style="margin-left:23px;">市</p></div>
+				
+					<div class="adderss_b"><p style="margin-left:23px;">区</p></div>
+
+				</div>
+				<!-- 遮罩层 -->
+				<div id="shade"></div>
+				
+				<!-- 选择省份 -->
+				<div class="pro">
+					<p style="margin-right:10px;float: right;">取消</p>
+					<div style="clear:both;"></div>
+					<ul>
+						<li><span class="li_l">广东</span><div class="li_r"><div></div></div></li>
+						<li><span class="li_l">广东</span><div class="li_r"><div></div></div></li>
+						<li><span class="li_l">广东</span><div class="li_r"><div></div></div></li>
+						<li><span class="li_l">广东</span><div class="li_r"><div></div></div></li>
+						<li><span class="li_l">广东</span><div class="li_r"><div></div></div></li>
+						<li><span class="li_l">广东</span><div class="li_r"><div></div></div></li>
+						<li><span class="li_l">广东</span><div class="li_r"><div></div></div></li>
+						<li><span class="li_l">广东</span><div class="li_r"><div></div></div></li>
+						<li><span class="li_l">广东</span><div class="li_r"><div></div></div></li>
+						<li><span class="li_l">广东</span><div class="li_r"><div></div></div></li>
+						<li><span class="li_l">广东</span><div class="li_r"><div></div></div></li>
+					
+					
+					</ul>
+
+				</div>
+				
+				<!-- 选择城市 -->
+				<div class="city">
+					<p style="margin-right:10px;float: right;">取消</p>
+					<div style="clear:both;"></div>
+					<ul>
+						<li><span class="li_l">广州</span><div class="li_r"><div></div></div></li>
+						<li><span class="li_l">广州</span><div class="li_r"><div></div></div></li>
+						<li><span class="li_l">广州</span><div class="li_r"><div></div></div></li>
+						<li><span class="li_l">广州</span><div class="li_r"><div></div></div></li>
+						<li><span class="li_l">广州</span><div class="li_r"><div></div></div></li>
+						<li><span class="li_l">广州</span><div class="li_r"><div></div></div></li>
+						<li><span class="li_l">广州</span><div class="li_r"><div></div></div></li>
+						<li><span class="li_l">广州</span><div class="li_r"><div></div></div></li>
+						<li><span class="li_l">广州</span><div class="li_r"><div></div></div></li>
+						<li><span class="li_l">广州</span><div class="li_r"><div></div></div></li>
+						<li><span class="li_l">广州</span><div class="li_r"><div></div></div></li>
+					
+					
+					</ul>
+
+				</div>
+
+				<!-- 区 -->
+				<div class="dist">
+					<p style="margin-right:10px;float: right;">取消</p>
+					<div style="clear:both;"></div>
+					<ul>
+						<li><span class="li_l">天河区</span><div class="li_r li_g"><div></div></div></li>
+						<li><span class="li_l">天河区</span><div class="li_r"><div></div></div></li>
+						<li><span class="li_l">天河区</span><div class="li_r"><div></div></div></li>
+						<li><span class="li_l">天河区</span><div class="li_r"><div></div></div></li>
+						<li><span class="li_l">天河区</span><div class="li_r"><div></div></div></li>
+						<li><span class="li_l">天河区</span><div class="li_r"><div></div></div></li>
+						<li><span class="li_l">天河区</span><div class="li_r"><div></div></div></li>
+						<li><span class="li_l">天河区</span><div class="li_r"><div></div></div></li>
+						<li><span class="li_l">天河区</span><div class="li_r"><div></div></div></li>
+						<li><span class="li_l">天河区</span><div class="li_r"><div></div></div></li>
+						<li><span class="li_l">天河区</span><div class="li_r"><div></div></div></li>
+					
+					
+					</ul>
+
+				</div>
+
+				<hr/>
+				<!-- 选择学校 -->
+				<div class="row" id="school">
+					<p style="margin-left:23px;">请选择学校</p>
+				</div>
+				<!-- 选择年级 -->
+				<div class="row" id="school_grade">
+					<p style="margin-left:23px;">请选择年级</p>
+				</div>
+				<!-- 输入年级 -->
+				<div class="row" id="input_grade">
+					<input type="text" name="usertext" value="" placeholder="请输入班级" class="input1">
+				</div>
+		
+
+				<!-- <div id="footer">
+							<ul>
+				<li class="foot_li"><a href=""><div class="foot_a"></div><p>首页</p></a></li>
+				<li class="foot_li"><a href=""><div class="foot_b"></div><p>教研</p></a></li>
+				<li class="foot_li"><a href=""><div class="foot_c"></div><p>班级</p></a></li>
+				<li class="foot_li"><a href=""><div class="foot_d"></div><p>校园</p></a></li>
+				<li class="foot_li"><a href=""><div class="foot_e"></div><p>我的</p></a></li>
+				
+							
+							</ul>
+				
+							</div> -->
+			<!-- 页脚的遮罩层 -->
+				<div id="foot_shade"></div>
+
+				<div id="select_button">
+					<button class="select_btn">确定</button>
+				</div>
+
+		
+		
+		
+		</div>
+	
+	</div>
+	<script>
+			$(function(){
+				$("#class_btn").click(function(){
+					window.location.href="new_class.html";
+				})
+			
+
+				$(".adderss").click(function(){
+					$("#shade").css({"width":"100%","height":"100%", "display":"block"});
+					$("#foot_shade").css("display","block");
+					$(".pro").css("display","block");
+					
+				})
+				$(".adderss_a").click(function(){
+					$("#shade").css({"width":"100%","height":"100%", "display":"block"});
+					$("#foot_shade").css("display","block");
+					$(".city").css("display","block");
+					
+				})
+				$(".adderss_b").click(function(){
+				$("#shade").css({"width":"100%","height":"100%", "display":"block"});
+				$("#foot_shade").css("display","block");
+				$(".dist").css("display","block");
+					
+				}) 
+				$(".class_back").click(function(){
+					window.location.href="#!/open_class";
+				})
+					
+				
+				$(".pro ul li").click(function(){
+				   $(this).children("div.li_r").addClass("li_g");
+				   $(this).children("div.li_r").children().css("display","block");
+				   $(this).siblings().children("div.li_r").removeClass("li_g");
+				   $(this).siblings().children("div.li_r").children().css("display","none");
+
+				});
+				$(".city ul li").click(function(){
+				   $(this).children("div.li_r").addClass("li_g");
+				   $(this).children("div.li_r").children().css("display","block");
+				   $(this).siblings().children("div.li_r").removeClass("li_g");
+				   $(this).siblings().children("div.li_r").children().css("display","none");
+
+				});
+				$(".dist ul li").click(function(){
+				   $(this).children("div.li_r").addClass("li_g");
+				   $(this).children("div.li_r").children().css("display","block");
+				   $(this).siblings().children("div.li_r").removeClass("li_g");
+				   $(this).siblings().children("div.li_r").children().css("display","none");
+
+				});
+				$(".pro p").click(function(){
+					$(".pro").fadeOut();
+					$("#shade").fadeOut()
+					$("#foot_shade").css("display","none");
+				})
+				$(".city p").click(function(){
+					$(".city").fadeOut();
+					$("#shade").fadeOut()
+					$("#foot_shade").css("display","none");
+				})
+				$(".dist p").click(function(){
+					$(".dist").fadeOut();
+					$("#shade").fadeOut()
+					$("#foot_shade").css("display","none");
+				})
+				
+				$(".select_btn").click(function(){
+				   	window.location.href="#!/class_management";
+				   })		
+
+				
+			})
+
+	</script>
+</body>
+</html>

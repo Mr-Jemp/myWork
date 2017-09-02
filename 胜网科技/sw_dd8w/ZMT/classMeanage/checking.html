@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
+		<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css"/>
+		<link rel="stylesheet" type="text/css" href="css/check.css"/>
+	</head>
+	<body>
+		<!--头部-->
+			<div class="class_header row">
+				<div class="col-xs-2" onclick="javascript:history.go(-1);">
+					<img src="images/fanhui@2x.png" alt="" />
+				</div>
+				<div class="header_message col-xs-6 ">审核中</div>
+			</div>
+			<!--审核中-->
+			<div class="checkImg">
+				<p>审核中...</p>
+			</div>
+		
+		<div class="checkContent">
+			提交成功，请等待管理员审核！
+			<br/>
+			<p>预计会在3个工作日内审核完毕，审核结果会在短息通知到您的注册手机上。</p>
+		</div>
+		
+	</body>
+	<script type="text/javascript" src="js/jquery-1.12.4.min.js" ></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/publicJs.js" ></script>
+	<script type="text/javascript">
+		//跳转审核成功页面
+		
+//		setInterval(function(){
+//			window.location.href="checkSuccess.html"
+//		},2000)
+
+	$.ajax({
+		type:"post",
+		url:"http://192.168.0.21:20882/addClassOperation/getResultOpenClassAudit",
+		data:JSON.stringify({'accountId':5}),
+		contentType: "application/json; charset=UTF-8",
+		async:true,
+		dataType:'json',
+		success:function(data){
+			console.log(data);
+			
+			setTimeout(function(){
+				if(data.msg=="4"){
+					 window.location.href="checkSuccess.html";
+				}else if(data.msg=="2"){
+					window.location.href="checkFail.html";
+				}else if(data.mes=="3"){
+					window.location.href="checkDatePast.html";
+				}
+			},2000)
+			
+		},
+		error:function(){
+			console.log("获取审核信息错误");
+		}
+	});
+
+	</script>
+</html>
