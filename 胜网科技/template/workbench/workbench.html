@@ -138,8 +138,8 @@
             showSwitchInTab: true,
             showSwitch: true,
             onAfterAddTabItem: function(tabdata) {
-                console.log(tabdata)
-                sessionStorage.setItem(tabdata.text,tabdata.tabid)
+               /* console.log(tabdata)
+                sessionStorage.setItem(tabdata.text,tabdata.tabid)*/
                 tabItems.push(tabdata);
                 saveTabStatus();
             },
@@ -155,13 +155,13 @@
                 }
             },
             onReload: function(tabdata) {
-                console.log(tabdata)
+//              console.log(tabdata)
                 var tabid = tabdata.tabid;
                 addFrameSkinLink(tabid);
             },
             onAfterSelectTabItem: function (tabid)
             {
-                console.log(tabid)
+//              console.log(tabid)
                 cu_tabid=tabid;
             }
         });

@@ -14,15 +14,14 @@
     <script src="../../main/app.js"></script>
     <script src="../../controller/workbench/work_controller/workController.js"></script>
     <script type="text/javascript">
-
+    var  role_id = window.location.href.split("?")[1].split("=")[1]
+        console.log(role_id)
         var tab = null;
         var accordion = null;
         var tree = null;
         var tabItems = [];
         var ddd,rmenu_id,rmenu_ti,cu_tabid;
-        var role_id =null;
-        
-        console.log(window.location.href)
+    
         $(function() {
             //
             $("#tab1").ligerTab();
@@ -32,62 +31,14 @@
                 success:function(data){
                     var dataArray = data.msg
                    if(data.status==1){
-                       for(var i=0;i<dataArray.length;i++){
-                                if(dataArray[i].id==sessionStorage.getItem(dataArray[i].name)){
-                                    //大中华
-                                    role_id = sessionStorage.getItem(dataArray[i].name)
-                                              break;
-                                }else{
-                                        if(dataArray[i].children.length){
-                                            for(var j=0;j<dataArray[i].children.length;j++){
-                                                //华南区
-                                                    if(dataArray[i].children[j].id==sessionStorage.getItem(dataArray[i].children[j].name)){
-                                                        role_id = dataArray[i].children[j].id
-                                                        break;
-                                                    }else {
-                                                            for(var k=0;k<dataArray[i].children[j].children.length;k++){
-                                                                            //广东省
-                                                                if(dataArray[i].children[j].children[k].id==sessionStorage.getItem(dataArray[i].children[j].children[k].name)){
-//                                                                    console.log(dataArray[i].children[j].children[k].id)
-                                                                    role_id = dataArray[i].children[j].children[k].id
-                                                                    break;
-                                                                }else {
-                                                                    for(var h =0;h<dataArray[i].children[j].children[k].children.length;h++){
-                                                                            //茂战区
-                                                                        if(dataArray[i].children[j].children[k].children[h].id==sessionStorage.getItem(dataArray[i].children[j].children[k].children[h].name)){
-                                                                              role_id = dataArray[i].children[j].children[k].children[h].id
-                                                                              break;
-                                                                          }else{
-                                                                                for(var g=0;g<dataArray[i].children[j].children[k].children[h].children.length;g++){
-                                                                                    //政府单位
-                                                                                    if(dataArray[i].children[j].children[k].children[h].children[g].id==sessionStorage.getItem(dataArray[i].children[j].children[k].children[h].children[g].name)){
-                                                                                            role_id = dataArray[i].children[j].children[k].children[h].children[g].id
-                                                                                            break;
-                                                                                        }else{
-                                                                                             for(var f=0;f<dataArray[i].children[j].children[k].children[h].children[g].children.length;f++){
-                                                                                                 if(dataArray[i].children[j].children[k].children[h].children[g].children[f].id==sessionStorage.getItem(dataArray[i].children[j].children[k].children[h].children[g].children[f].name)){
-                                                                                                     role_id = dataArray[i].children[j].children[k].children[h].children[g].children[f].id
-                                                                                                     break;
-                                                                                                 }
-                                                                                             }
-                                                                                        }
-                                                                                }
-                                                                          }
-                                                                    }
-                                                                }
-                                                            }
-
-                                                    }
-                                            }
-                                        }
-
-                                }
-                       }
-                       $.ajax({
+                   }
+                }
+            })
+                    $.ajax({
                            type:"GET",
                            url:"http://192.168.0.21:20896/htPowerService/getRolePowrMenu?role_id="+role_id,
                            success:function(data){
-                               console.log(data)
+                            //    console.log(data)
                                if(data.status==1){
                                    data = data.msg
                                    $("#tissue_nav_tree").ligerTree({
@@ -146,10 +97,6 @@
                            }
 
                        })
-                   }
-                }
-            })
-
             //布局
             $("#layout1").ligerLayout({ leftWidth: 200, height: '100%', heightDiff: -5, space: 4, onHeightChanged: f_heightChanged });
 

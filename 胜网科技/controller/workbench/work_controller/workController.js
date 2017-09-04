@@ -40,7 +40,7 @@ myApp.controller("work1Controller", ["$scope", "$http","$rootScope" ,function($s
 					f_addTab(tabid + node.data.id, node.data.text + " 网盘硬盘", encodeURI("./template/workbench/role/bumenTree.html"));
 				} else if(!node.data.isLeaf) {
 					/*f_addTab(tabid,node.data.text,encodeURI('/s/organizesetting/powerformlist.php?roleid='+node.data.id));*/
-					f_addTab( node.data.id,node.data.name, encodeURI('./template/workbench/workbench_news.html'));
+					f_addTab( node.data.id,node.data.name, encodeURI('./template/workbench/workbench_news.html?role_id='+node.data.id));
 				}
 			},
 
