@@ -35,6 +35,9 @@
 		}else if(linkID=="oaflowsetting"){
 			parent.document.getElementsByTagName("frameset")[1].cols = "1,*";
 			window.parent.frames["leftFrame"].location.href =  "../newtpl/left.html";
+		}else if(linkID=="company-reg"){
+			parent.document.getElementsByTagName("frameset")[1].cols = "1,*";
+			window.parent.frames["leftFrame"].location.href =  "../newtpl/left.html";
 		}
 		else{
 			window.parent.frames["leftFrame"].location.href =  "../newtpl/left.html";

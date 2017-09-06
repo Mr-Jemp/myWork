@@ -133,11 +133,12 @@
 						return false;
 					}
 					if(act == "add") {
-						$.get(url, {
-								"pid": aid,
+						$.post(url, 
+					        {
 								"formName": form_name,
+								"pid": aid,
 								"type": ftype,
-								"createrUid": actionNodeID
+								"createrUid": 18
 							},
 							function(data) {
 								if(data.pw_flag == 1) {
@@ -293,7 +294,7 @@
 									}
 									if(!node.data.isLeaf) return false;
 									if(node.data.type == 3) {
-										//							window.parent.frames["mainFrame"].location.href ='./new_pagedesign/editReportForm.html?id='+node.data.id+'&name='+node.data.values[0].value;			
+										//window.parent.frames["mainFrame"].location.href ='./new_pagedesign/editReportForm.html?id='+node.data.id+'&name='+node.data.values[0].value;			
 										window.parent.frames["mainFrame"].location.href = '../new_pagedesign/editHTMLPage.htm?id=' + node.data.id;
 									} else if(node.data.type == 2) {
 										window.parent.frames["mainFrame"].location.href = '../new_pagedesign/editLINKPage.html?id=' + node.data.id;
