@@ -314,7 +314,7 @@ body.client-browser .wraper.neterror {
 }
 .inputwrap {
     background: #fff;
-    margin: 0 0 12px;
+    margin: 0 0 20px;
     height: 48px;
     border: 1px solid #d9d9d9;
     position: relative;
@@ -375,7 +375,7 @@ body.client-browser .wraper.neterror {
     float: left;
     padding: 15px 10px 15px 15px;
     width: 50px;
-    height: 18px;
+    height: 46px;
     line-height: 18px;
     display: inline-block;
     *display: inline;
@@ -416,7 +416,7 @@ body.client-browser .wraper.neterror {
     background: #f2f2f2;
 }
 .inputwrap .regmobi {
-    margin: 0 0 0 76px;
+    margin: 0 0 0 55px;
     *margin: 0;
     height: 48px;
 }
@@ -636,7 +636,7 @@ body.client-browser .top {
 }
 .tabtoggle {
     margin: 0 0 12px;
-    height: 48px;
+    height: 46px;
     border-width: 1px 1px 0 1px;
     border-style: solid;
     border-color: #d9d9d9;
@@ -659,7 +659,7 @@ body.client-browser .top {
     float: left;
 }
 .tabtoggle a .regnew {
-    line-height: 46px;
+    line-height: 44px;
     display: block;
     border-right: 1px solid #cacbcc;
 }
@@ -682,7 +682,7 @@ body.client-browser .top {
 }
 .tabtoggle a.current .regnew {
     margin: -1px -1px 0;
-    border-right: none;
+    /* border-right: none; */
     border-top: 2px solid #29e;
     position: relative;
 }
@@ -693,7 +693,7 @@ body.client-browser .top {
     position: relative;
 }
 .smswrap {
-    margin: 0 0 12px;
+    margin: 0 0 20px;
     position: relative;
 }
 .smswrap a.getauth {
@@ -736,7 +736,7 @@ body.client-browser .top {
 .btn-wrap-getCode.smswrap .getauth {
     border: none !important;
     background: transparent !important;
-    line-height: 50px;
+    line-height: 35px;
     margin-top: 1px;
 }
 .btn-wrap-getCode.smswrap a.getauth.effect:active {

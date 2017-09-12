@@ -4,21 +4,56 @@
 <script src="../../js/bootstrap.min.js"></script>
 
 <style>
-    a{
-        text-decoration: none;
+   a{
+    text-decoration: none;
+}
+a:hover{
+    text-decoration: none;
+}
+.show{
+    display: block;
+}
+.hien{
+    display: none;
+}
+/* 注册页面 */
+#main_wraper{
+    display: none;
+}
+    /* 用户名提示 */
+    .errortip {
+        color: #f44;
+        font-size: 12px;
+    }	
+    /* 密码提示 */
+    .password_show{
+        color: #f44;
+        font-size: 12px;
     }
-    a:hover{
-        text-decoration: none;
+    /* 手机提示 */
+    .phone_msg{
+        color: #f44;
+        font-size: 12px;
     }
-    .show{
-        display: block;
+    /* 验证码提示 */
+    .Verification_msg{
+        color: #f44;
+        font-size: 12px;
+        margin-top: -17px;
     }
-    .hien{
-        display: none;
+    .password_test{
+        color: #f44;
+        font-size: 12px;
     }
-    /* 注册页面 */
-    #main_wraper{
-        display: none;
+    /* 点击获取验证码 */
+    /* 验证码 */
+    .yzm{
+        line-height: 46px;
+        text-align: center;
+        cursor: pointer;
+    }
+    .yzm:hover{
+        color:#29e
     }
 </style>
 <!-- 验证页面 -->
@@ -56,9 +91,9 @@
                            </div>
                            <!--号码输入框-->
                            <div class="regmobi">
-                               <input  type="number" id="email"    placeholder="请输入手机号"  class="padr1" name="username" >
+                               <input  type="number" id="phone"    placeholder="请输入手机号"  class="padr1" name="username" >
                            </div>
-                           <a href="javascript:void(0);" class="inputclear input-clear"><i class="icon-clear"></i></a>
+                           <div class="phone_msg" style="display:none">请输入正确的手机号(11位)</div>
                        </div>
                    </div>
                    <!--验证码-->
@@ -66,12 +101,15 @@
                        <div class="verify-code from-item">
                            <div class="img-code-wrap clearfix smswrap" ng-class="{errorfocus:codeError}">
                                <div class="img-code authcode inputwrap img-code-row">
-                                   <img class="code-img" ng-click="change_code()" id="codeImg" src="./images/code_image.png">
+                                   <!-- <img class="code-img" ng-click="change_code()" id="codeImg" src="./images/code_image.png"> -->
+                                   <span class="code-img yzm">点击获取验证码</span> 
                                    <div class="code-input-wrap">
-                                       <input class="code-input" style="background:#fff;" id="code" ng-limit-code="4" ng-keydown="verifyCodeKeyDown($event)" ng-focus="vaCodeFocus($event)" ng-blur="vaCodeBlur($event)" type="text" placeholder="请输入图片内容" history_value="" name="password" tabindex="2">
+                                       <input class="code-input" style="background:#fff;" id="code" ng-limit-code="4" ng-keydown="verifyCodeKeyDown($event)" ng-focus="vaCodeFocus($event)" ng-blur="vaCodeBlur($event)" type="text" placeholder="请输入验证码内容" history_value="" name="password" tabindex="2">
                                    </div>
                                </div>
+                             
                            </div>
+                           <div class="Verification_msg bdyz" style="display:none">验证码错误</div>
                            <!-- 图片验证码初始化状态 -->
                            <div class="errortip ng-binding ng-hide" ng-class="{error:codeError}" ng-show="codeError" ng-init="codeError=0" ng-bind-html="codeErrorTip|rawHtml"></div>
                            <div class="clearfix smswrap" ng-class="{errorfocus:authCodeError}">
@@ -79,20 +117,24 @@
                                    <input ng-limit-code="6" autocomplete="off" type="text" id="authCode" placeholder="请输入短信验证码" ng-focus="vaAuthCodeFocus($event)" ng-blur="vaAuthCodeBlur($event)" history_value="" name="password" tabindex="3">
                                </div>
                                <div class="btn-wrap smswrap btn-wrap-getCode">
-                                   <a href="javascript:void(0);" class="getauth effect" ng-class="{regetauth:authWait,effect:!sendProgress,success:authSuccess}" ng-click="getAuthCode($event)" ng-init="usernameRight=false;authWait=false;authSuccess=false;sendProgress=false;"><i class="icon-authsuccess"></i><span class="ng-binding">获取短信验证码</span></a>
+                                   <a href="javascript:void(0);" class="btn getauth effect">
+                                       <!-- <span class="ng-binding"></span> -->
+                                       获取短信验证码
+                                    </a>
                                </div>
                            </div>
+                           <div class="Verification_msg dxyz" style="display:none">验证码错误</div>
                            <div class="errortip ng-binding ng-hide" ng-class="{error:authCodeError}" ng-show="authCodeError" ng-init="authCodeError=0" ng-bind-html="authCodeErrorTip|rawHtml"></div>
                        </div>
     
                    </div>
                    <!--下一步-->
-                   <div class="submitwrap">
-                       <a href="javascript:;" class="btn-submit next" submit-click="form_submit()" ng-init="submitBtnText=('next' | translate)">下一步</a>
+                   <div class="submitwrap next">
+                       <a href="javascript:;" class="btn-submit">下一步</a>
                    </div>
                    <!--了解-->
                    <div class="backreg">
-                       <!-- ngIf: !isInternational --><a ng-if="!isInternational" ng-click="knowJingoal($event)" href="http://localhost:63342/8.26_news02/8.26/index.html#/school" target="_blank" class="ng-binding ng-scope">了解胜网</a><!-- end ngIf: !isInternational -->
+                       <!-- ngIf: !isInternational --><a  href="http://127.0.0.1:8080/9.11/#/school" target="_blank" class="ng-binding ng-scope">了解胜网</a><!-- end ngIf: !isInternational -->
                        <!-- ngIf: bodyRegisterType==='email' -->
                        <!-- ngIf: isInternational && bodyRegisterType==='phone' -->
                    </div>
@@ -133,8 +175,9 @@
     <div class="register_wrap">
         <div class="inputwrap input-person-name">
             <input id="personName" type="text" placeholder="姓名" class="cutpad" name="password" tabindex="1">
+          
         </div>
-        <div class="errortip"></div>
+        <div class="errortip nametip" style="display:none">名字长度过长</div>
     <div>
 </div>
         <!-- 密码 -->
@@ -142,86 +185,26 @@
     <label class="lable-login"><i class="icon-lock"></i></label>
     <input id="password" type="password" placeholder="密码" validate="" name="password" class="cutpad"tabindex="2">
     <a href="javascript:void(0);" class="input-clear inputclear reset_pass"><i class="icon-clear"></i></a>
-    <a href="javascript:void(0);" class="inputclear psd-visible" ondragstart="return false;"><i class="icon-eye"></i></a>
-    <div class="inputProgress ng-hide" >
-        <span class="triangle">
-            <span class="inner"></span>
-        </span>
-        <ul class="tip-list">
-            <li class="tip-item item1 normal">
-                <i class="tip-icon"></i><span class="tip-text">长度8-20位</span>
-            </li>
-            <li class="tip-item item2 normal">
-                <i class="tip-icon"></i><span class="tip-text">支持数字、字母（区分大小写）、标点符号</span>
-            </li>
-            <li class="tip-item item3 normal">
-                <i class="tip-icon"></i><span class="tip-text">不允许空格</span>
-            </li>
-        </ul>
-    </div>
-    <div class="passwordLevel ng-hide" >
-        <div class="level-wrap level1 ng-hide">
-            <div class="icon">
-                <span class="label">安全级别：</span>
-                <div class="level-list">
-                    <span class="level-item item1">弱</span>
-                    <span class="level-item item2"></span>
-                    <span class="level-item item3"></span>
-                    <div class="clear"></div>
-                </div>
-                <div class="clear"></div>
-            </div>
-            <div class="tip ng-binding">
-                您的密码有风险，请使用数字、字母或标点符号的组合
-            </div>
-        </div>
-        <div class="level-wrap level2 ng-hide" ng-show="passwordLevel===2">
-            <div class="icon">
-                <span class="label ng-binding">安全级别：</span>
-                <div class="level-list">
-                    <span class="level-item item1"></span>
-                    <span class="level-item item2">中</span>
-                    <span class="level-item item3"></span>
-                    <div class="clear"></div>
-                </div>
-                <div class="clear"></div>
-            </div>
-            <div class="tip">
-                您的密码安全度适中，可尝试加入大小写混合密码
-            </div>
-        </div>
-         <div class="level-wrap level3 ng-hide" ng-show="passwordLevel===3||passwordLevel===4">
-            <div class="icon">
-                <span class="label ng-binding">安全级别：</span>
-                <div class="level-list">
-                    <span class="level-item item1"></span>
-                    <span class="level-item item2"></span>
-                    <span class="level-item item3">强</span>
-                    <div class="clear"></div>
-                </div>
-                <div class="clear"></div>
-            </div>
-            <div class="tip ng-binding">
-                您的密码很安全，建议您定期更换密码以保证帐号安全
-            </div>
-        </div>
-    </div>
 </div>
-
-<div class="errortip ng-binding"></div>
-
+<!-- 确认密码-->
+<div class="inputwrap input-password" >
+        <label class="lable-login"><i class="icon-lock"></i></label>
+        <input id="password2" type="password" placeholder="确认密码" validate="" name="password" class="cutpad"tabindex="2">
+        <a href="javascript:void(0);" class="input-clear inputclear reset_pass"><i class="icon-clear"></i></a>
+</div>
+<div class="errortip passwordtip" style="display:none">两次密码不一致</div>
 <!-- 协议和注册按钮 -->
 </div>
         <div class="tiptext disagree">
             <label for="ieagreelable" class="ng-binding"><i style="display:none;"  class="icon-checked"></i><input id="ieagreelable" type="checkbox" checked="" class="position_hidden">点击“注册”即同意并接受</label>
             <!-- ng-model="isAgree" -->
             <!-- ngIf: !isInternational -->
-            <a target="_blank" ng-if="!isInternational" href="http://www.jingoal.com/register/serve_treaty.html" class="font_blue ng-binding ng-scope" data-toggle="modal"  data-target="#myModal">《服务协议》</a>
+            <a class="font_blue ng-binding ng-scope" data-toggle="modal"  data-target="#myModal">《服务协议》</a>
            
         </div>
         <!-- <div class="errortip disagree">要使用我们的服务，您必须同意今目标的服务协议</div> -->
     </div>
-    <div class="submitwrap">
+    <div class="submitwrap2">
         <a href="javascript:void(0);" class="btn-submit ng-binding" submit-click="form_submit()">注册</a>
     </div>
     <div class="backreg">
@@ -260,46 +243,167 @@
 
 <script>
 
-    var zhuce = $(".tabtoggle").children()[0]   //注册
-    var qiye = $(".tabtoggle").children()[1]       //企业
+var zhuce = $(".tabtoggle").children()[0]   //注册
+var qiye = $(".tabtoggle").children()[1]       //企业
 
-    var zhuces = $(".register_wrap").children()[0]
-    var qiyes = $(".register_wrap").children()[1]
+var zhuces = $(".register_wrap").children()[0]
+var qiyes = $(".register_wrap").children()[1]
 
-    var register_wrap = $(".register_wrap").children()
- 
-    zhuce.onclick = function(){
-        $(this).addClass("current").siblings().removeClass("current")
-        if(zhuces.classList.contains('hien')){
-            $(zhuces).removeClass("show hien")
-        }
-        //点击注册,注册添加show,企业添加hien,删除show
-        $(zhuces).addClass("show")
-        $(qiyes).addClass("hien")
-        $(qiyes).removeClass("show")
+var register_wrap = $(".register_wrap").children()
+
+zhuce.onclick = function(){
+    $(this).addClass("current").siblings().removeClass("current")
+    if(zhuces.classList.contains('hien')){
+        $(zhuces).removeClass("show hien")
     }
+    //点击注册,注册添加show,企业添加hien,删除show
+    $(zhuces).addClass("show")
+    $(qiyes).addClass("hien")
+    $(qiyes).removeClass("show")
+}
 
-    qiye.onclick=function(){
-        $(this).addClass("current").siblings().removeClass("current")
-        if(qiyes.classList.contains('hien')){
-            $(qiyes).removeClass("show hien")
-        }
-        $(qiyes).addClass("show")
-        $(zhuces).addClass("hien")
-        $(zhuces).removeClass("show")
+qiye.onclick=function(){
+    $(this).addClass("current").siblings().removeClass("current")
+    if(qiyes.classList.contains('hien')){
+        $(qiyes).removeClass("show hien")
     }
+    $(qiyes).addClass("show")
+    $(zhuces).addClass("hien")
+    $(zhuces).removeClass("show")
+}
 
-    //手机号验证
-    $("#email").blur(function(){
-        var phone = $("#email").val();
-        if(!(/^1(3|4|5|7|8)\d{9}$/.test(phone))){
+    //验证标记
+    var phoneflag; //手机
+    var yzm; //验证码
+    var dxyzm; //短信验证码
+//手机号验证
+var phone = /^1(3|4|5|7|8)\d{9}$/i;
+$("#phone").on("input",function(){
+    if(phone.test($(this).val())){	
+                $(".phone_msg").fadeOut()
+                phoneflag = true;
+            }else{
+                $(".phone_msg").fadeIn()
+                phoneflag = false;
+                $(".zhuce").attr("disabled",true)
+                $(".check").attr("checked",false)
+            }
+})
+// 点击下一步,显示注册页面
 
+//点击获取验证码
+//随机生成四个字符串
+var code;
+function createCode(){  
+ code = "";   
+ var codeLength = 4;//验证码的长度  
+ var random = new Array(0,1,2,3,4,5,6,7,8,9,'A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R',  
+ 'S','T','U','V','W','X','Y','Z');//随机数  
+ for(var i = 0; i < codeLength; i++) {//循环操作  
+    var index = Math.floor(Math.random()*36);//取得随机数的索引（0~35）  
+    code += random[index];//根据索引取得随机数加到code上  
+}  
+} 
+$(".yzm").on("click",function(){
+    createCode();
+    $(this).html(code)
+    $(this).css("font-size",25+"px")
+}) 
+$(".code-input").on("input",function(){ 
+if($(this).val().toUpperCase()==code){
+    yzm=true;
+  $(".bdyz").fadeOut()
+}else{
+    yzm=false;
+    $(".bdyz").fadeIn()
+}
+})
+
+//短信验证码
+var dataNum;
+var timestop
+$(".getauth").on("click",function(){
+clearInterval(timestop)
+var count = 60
+    $.ajax({
+        url:"../../data_json/yanzhengma.json",
+        type:"GET",
+        success:function(data){
+            dataNum=data.data
+            timestop = setInterval(function(){   
+                    count--;
+                    $(".getauth").attr("disabled",true)
+                    $(".getauth").html(count+"秒后再发送")
+                    //btn btn-danger no-border
+                    if(count<=0){
+                        $(".getauth").html("获取短信验证码")
+                        $(".getauth").attr("disabled",false)
+                        clearInterval(timestop)
+                    }
+                },1000)
         }
     })
-    // 点击下一步,显示注册页面
-    $(".next").on("click",function(){
-            $("#wraper").fadeOut()
-            $("#main_wraper").fadeIn()
+})
+//输入短信验证码
+$("#authCode").on("input",function(){
+if($(this).val()==dataNum){
+    dxyzm=true;
+    $(".dxyz").fadeOut()
+}else{
+    $(".dxyz").fadeIn()
+    dxyzm=false;
+}
+})
+//点击下一步验证
+$(".next").on("click",function(){
+    if(phoneflag==true&&yzm==true&&dxyzm==true){
+        $("#wraper").fadeOut()
+        $("#main_wraper").fadeIn()
+    }
+       
+})
+
+// --------------------------------------------------------------
+    //注册
+    var namefalg; //姓名
+    var passfalg; //密码
+    $("#personName").on("input",function(){ //姓名
+            if($(this).val().length>=10&&$(this).val().length!=0){
+                    $(".nametip").fadeIn()
+                    namefalg=false;
+            }else{
+                $(".nametip").fadeOut()
+                namefalg=true;
+            }
     })
-    
+
+    //第一个密码框,判断确认密码是否有输入,有就判断
+    $("#password").on("input",function(){
+        if($("#password2").val().length!=0){
+              if($("#password2").val()!=$(this).val()){
+                $(".passwordtip").fadeIn()
+                passfalg=false
+              }else{
+                $(".passwordtip").fadeOut()
+                passfalg=true
+              }  
+        }
+    })
+    $("#password2").on("input",function(){  //确认密码
+           if($(this).val()!=$("#password").val()){
+            $(".passwordtip").fadeIn()
+            passfalg=false
+            } else{
+            $(".passwordtip").fadeOut()
+            passfalg=true
+           }
+    })
+
+    //点击注册
+    $(".submitwrap2").on("click",function(){
+            if(namefalg==true&& passfalg==true){
+                    alert("注册成功")
+            }
+        $("input").val("")    
+    })
 </script>
