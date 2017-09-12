@@ -1,0 +1,70 @@
+<!--<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">-->
+<!--<html xmlns="http://www.w3.org/1999/xhtml">-->
+<!--<head>-->
+<!--<title>组织架构</title>-->
+<link href="../../../resource/part/ligerlib/ligerUI/skins/Aqua/css/ligerui-all.css" rel="stylesheet" type="text/css" />
+<script src="../../../resource/js/jQuery/jquery-1.9.1.js" type="text/javascript"></script>
+<script src="../../../resource/part/ligerlib/ligerUI/js/core/base.js" type="text/javascript"></script>
+<script src="../../../resource/part/ligerlib/ligerUI/js/ligerui.all.js"></script>
+<script src="../../../resource/part/ligerlib/json2.js" type="text/javascript"></script>
+<script src="../../../js/lib/ligerUI/js/plugins/ligerGrid.js" type="text/javascript"></script>
+<script src="../../../js/angular/angular.min.js"></script>
+<script src="../../../main/app.js"></script>
+
+<script type="text/javascript">
+    $(function ()
+    {
+        var jsonObj = {};
+        jsonObj.Rows = [
+            { id: 3, name: "林三", sex: "男", birthday: "1989/01/12" },
+            { id: 43, name: "陈丽", sex: "女", birthday: "1989/01/12" },
+            { id: 33, name: "啊三", sex: "男", birthday: "1981/12/12" },
+            { id: 34, name: "表三", sex: "男", birthday: "1983/01/12" },
+            { id: 43, name: "陈丽", sex: "女", birthday: "1989/01/12" },
+            { id: 33, name: "成三", sex: "男", birthday: "1989/11/23" },
+            { id: 34, name: "都三", sex: "女", birthday: "1989/04/12" },
+            { id: 324, name: "鄂三", sex: "男", birthday: "1999/05/15" },
+            { id: 344, name: "林三", sex: "男", birthday: "1969/02/21" },
+            { id: 1, name: "王开", sex: "男", birthday: "1989/01/12" }
+        ];
+        window['g'] = 
+            $("#maingrid").ligerGrid({
+                columns: [
+                { display: '主键', name: 'id', align: 'left', width: 100, minWidth: 60 },
+                { display: '内容', name: 'name', minWidth: 120 },
+                { display: '申请时间', name: 'sex', minWidth: 140 },
+                { display: '状态', name: 'birthday' },
+                { display: '操作', name: 'birthday' },
+                ], data:jsonObj,  height:700,pageSize:30 
+            });
+
+ 
+            $("#pageloading").hide();
+    });
+    
+</script>
+	
+
+
+
+
+
+<!--权限END-->
+<style>
+    body{
+        max-width: 1000px;
+    }
+	#tab1 .l-tab-content{height:98%;}
+	#maingrid23 .l-grid-body-inner{height:auto!important;}
+
+	#maingrid .l-grid-header-inner{width:auto!important;}
+	#maingrid .l-grid table{width:100%}
+	#maingrid .l-grid-body-inner{width:auto!important;}
+</style>
+</head>
+<body style="background-color:#E0F0FE;" ng-controller="apphttp">
+<div class="" id="maingrid">
+	
+</div>
+</body>
+<!--</html>-->

@@ -113,7 +113,6 @@
 
 					</div>
 				</div>
-
 				<div class="row">
 
 					<div class="span10" style="width:940px">
@@ -429,8 +428,7 @@
 							//parse_form=parse_form.replace('{"fields":','{"formtype":"'+formtype+'","preview":"'+encodeURIComponent(preview)+'","fields":');
 							//clipboardData.setData("text",parse_form);
 							var formeditor = leipiEditor.getContent();
-							/*console.log(formtype)
-							console.log(formeditor)*/
+							/*console.log(formtype)*/
 							//异步提交数据
 							$.ajax({
 								type: 'POST',
@@ -441,7 +439,9 @@
 									'formtype': formtype
 								},
 								dataType: 'json',
+								contentType:"application/json",
 								success: function(data) {
+									console.log(data)
 									//data = eval('(' + data + ')');
 									if(data.result == 1) {
 										alert('保存成功');
@@ -481,9 +481,9 @@
 							var newWindow = window.open(urlfile, 'mywin', "menubar=0,toolbar=0,status=0,resizable=1,left=0,top=0,scrollbars=1,width=" + (screen.availWidth - 10) + ",height=" + (screen.availHeight - 50) + "\"");
 
 							//在线解释后再预览
-							//var newWindow=window.open('', 'mywin', "menubar=0,toolbar=0,status=0,resizable=1,left=0,top=0,scrollbars=1,width=" + (screen.availWidth - 10) + ",height=" + (screen.availHeight - 50) + "\"");					
-							//document.saveform.action = "http://127.0.0.1/fuview/fuview.php";
-							//document.saveform.submit(); //提交表单
+							/*var newWindow=window.open('', 'mywin', "menubar=0,toolbar=0,status=0,resizable=1,left=0,top=0,scrollbars=1,width=" + (screen.availWidth - 10) + ",height=" + (screen.availHeight - 50) + "\"");					
+							document.saveform.action = "http://127.0.0.1/fuview/fuview.php";
+							document.saveform.submit();*/ //提交表单
 
 						} else {
 							alert('表单内容不能为空！');

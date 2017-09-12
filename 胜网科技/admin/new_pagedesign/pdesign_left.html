@@ -40,7 +40,8 @@
 						}, {
 							text: '上拉',
 							click: function(node) {
-								move_node(node_conet, -1);
+								ccccccr960412
+								(node_conet, -1);
 							}
 						}, {
 							text: '下移',
@@ -63,8 +64,9 @@
 				});
 
 				function editparentid(node) {
-					parent.parent.OpenDialog("修改【" + node_conet.data.values[0].value + "】，请选择父结点", "node_form", function(json) {
+					parent.parent.OpenDialog("修改【" + node_conet.data.formName + "】，请选择父结点", "node_form", function(json) {
 						var data = eval(json);
+						console.log(data)
 						$.ajax({
 							type: "get",
 							url: "http://192.168.0.21:20898/formMenuFacade/updateFormMenu",
@@ -73,6 +75,7 @@
 								"pid": data[0].selectid
 							},
 							success: function(data) {
+								console.log(data)
 								data = eval('(' + data + ')');
 								parent.parent.toevel('$.ligerDialog.success("' + data.Message + '");');
 								if(data.IsSuccess) {
@@ -133,55 +136,46 @@
 						return false;
 					}
 					if(act == "add") {
-						$.post(url, 
-					        {
+						$.ajax({
+							type: "post",
+							url: url,
+							async: true,
+							data: JSON.stringify({
 								"formName": form_name,
 								"pid": aid,
 								"type": ftype,
-								"createrUid": 18
-							},
-							function(data) {
+								"createrUid": 18 //当前登录用户的ID，后期登录的时候再取，现在随便传
+							}),
+							contentType: "application/json",
+							processData: false,
+							success: function(data) {
+								console.log(data)
 								if(data.pw_flag == 1) {
 									parent.parent.toevel('$.ligerDialog.error("' + data.msg + '");');
 									return false;
 								}
 								parent.parent.toevel('$.ligerDialog.success("添加成功");');
-								var nodes = [];
-								data.type = data.isLeaf;
-								if(data.isLeaf == 0 || data.isLeaf == 2) {
-									data.isLeaf = true;
-								} else {
-									data.isLeaf = false;
-								}
-								nodes.push(data);
-								if(node_conet)
-									left_tree.append(node_conet.target, nodes);
-								else
-									left_tree.append(null, nodes);
-
-								var formid = data.id;
-								var roleids = ''
-								//var roleids='<?php 
-								//echo implode(',',$_SESSION['uroles']);
-								//?>'.split(",");
-								if(roleids == null) return;
-								for(i = 0; i < roleids.length; i++) {
-									$.ajax({
-										url: "/s/power/saveviewpower.php",
-										type: "post",
-										data: "role_id=" + roleids[i] + "&form_id=" + formid
-									});
-								}
-
-							}, "json");
-					} else if(act == "edit") {
-						$.post("http://192.168.0.21:20898/formMenuFacade/updateFormMenu", {
-								"form_id": aid,
-								"pid": form_name,
-								"formName": form_name,
-								"ftype": ftype
 							},
-							function(data) {
+							complete:function(xhr){
+								if(xhr.readyState == 4){
+									if(xhr.status == 200){
+										getTree(); //添加节点成功以后执行
+									}
+								}
+							}
+						});
+					} else if(act == "edit") {
+						$.ajax({
+							type: "post",
+							url: "http://192.168.0.21:20898/formMenuFacade/updateFormMenu",
+							data: JSON.stringify({
+								"id": aid,
+								"formName": form_name,
+							}),
+							contentType: "application/json",
+							processData: false,
+							async: true,
+							success: function(data) {
 								if(data.pw_flag == 1) {
 									parent.parent.toevel('$.ligerDialog.success("' + data.msg + '");');
 									return false;
@@ -206,13 +200,23 @@
 									left_tree.append(left_tree.getParentTreeItem(node_conet.target), nodes);
 									left_tree.remove(node_conet.target);
 								}
-							}, "json");
+								
+							},
+							complete:function(xhr){
+								if(xhr.readyState == 4){
+									if(xhr.status == 200){
+										getTree();//加载完成以后再次渲染树
+									}
+								}
+							}
+						});
 					}
 					return false;
 				};
 
 				function edit_node() {
-					var cvalue = node_conet.data.values[0].value;
+					console.log(node_conet.data)
+					var cvalue = node_conet.data.formName;
 					if(node_conet.data.isLeaf) {
 						$("#chselected").prop("selected", true);
 					}
@@ -232,14 +236,21 @@
 					//alert("您没有权限操作删除！");
 					//return false;
 					if(!node_conet) {
-						parent.parent.toevel('$.ligerDialog.warn("请先选择节点");');
+						toevel('$.ligerDialog.warn("请先选择节点");');
 					}
 					if(!confirm("确定要删除吗？")) return false;
-					$.post(url + "Demo/del.html", {
-							"form_id": actionNodeID
-						},
-						function(data) {
-							if(data.flag == 1) {
+					$.ajax({
+						type: "post",
+						url: "http://192.168.0.21:20898/formMenuFacade/delFormMenu",
+						data: JSON.stringify({
+							"id": actionNodeID
+						}),
+						dataType: "json",
+						async: true,
+						contentType: "application/json",//post方式设置请求头
+						processData: false,//jq独有参数，是否对数据进行序列化处理
+						success: function(data) {
+							if(data.status == 1) {
 								if(node_conet) {
 									left_tree.remove(node_conet.target);
 									parent.parent.toevel('$.ligerDialog.success("' + data.msg + '");');
@@ -247,80 +258,87 @@
 							} else {
 								parent.parent.toevel('$.ligerDialog.error("' + data.msg + '");');
 							}
-						}, "json");
+						}
+					});
 				}
 				fieldsStr = "name;datatype";
 				var showRoot = true;
 				/*<?php
-        include_once"../../s/inc/conn.php";
-		include_once"../../s/function/public.php";
-		$pow=getfreepower("",0,implode(',',$_SESSION['uroles']),'',$_SESSION['uid']);
-		
-    ?>*/
-				var data = eval('[' + ('') + ']');
+			        include_once"../../s/inc/conn.php";
+					include_once"../../s/function/public.php";
+					$pow=getfreepower("",0,implode(',',$_SESSION['uroles']),'',$_SESSION['uid']);
+					
+			    ?>*/
 				//树
-				$.ajax({
-					type: "get",
-					url: "http://192.168.0.21:20898/formMenuFacade/getFormMenu?pid=0",
-					dataType: "json",
-					success: function(data) {
-						//  		console.log(data)
-						var da = data.msg;
-						console.log(da)
-						if(data.status == 1) {
-							left_tree = $("#dataTree").ligerTree({
-								data: da,
-								checkbox: false,
-								slide: false,
-								nodeWidth: 64,
-								textFiledName: "formName",
-								render: function(item) {
-									//			        	console.log(item)
-									return item.formName
-								},
-								isLeaf: function(item) {
-									return item.isLeaf;
-									//console.log((item.values[1].value=="文件夹"));
-									// return !(item.values[1].value=="文件夹");
-								},
-								isExpand: 2,
-								onselect: function(node) {
-									//			        	console.log(node.data.type);
-									//			        	console.log(node.target);
-									var tabid = $(node.target).attr("tabid");
-									if(!tabid) {
-										tabid = new Date().getTime();
-										$(node.target).attr("tabid", tabid)
+				function getTree() {
+					$.ajax({
+						type: "get",
+						url: "http://192.168.0.21:20898/formMenuFacade/getFormMenu?pid=0",
+						dataType: "json",
+						success: function(data) {
+							var da = data.msg;
+							console.log(da)
+							if(data.status == 1) {
+								left_tree = $("#dataTree").ligerTree({
+									data: da,
+									checkbox: false,
+									slide: false,
+									nodeWidth: 64,
+									textFiledName: "formName",
+									render: function(item) {
+										//			        	console.log(item)
+										return item.formName
+									},
+									isLeaf: function(item) {
+										return item.isLeaf;
+										//console.log((item.values[1].value=="文件夹"));
+										// return !(item.values[1].value=="文件夹");
+									},
+									isExpand: 2,
+									onselect: function(node) {
+										//			        	console.log(node.data.type);
+										//			        	console.log(node.target);
+										var tabid = $(node.target).attr("tabid");
+										if(!tabid) {
+											tabid = new Date().getTime();
+											$(node.target).attr("tabid", tabid);
+										}
+										if(!node.data.isLeaf) return false;
+										if(node.data.type == 3) {
+											//window.parent.frames["mainFrame"].location.href ='./new_pagedesign/editReportForm.html?id='+node.data.id+'&name='+node.data.values[0].value;			
+											window.parent.frames["mainFrame"].location.href = '../new_pagedesign/editHTMLPage.htm?id=' + node.data.id;
+										} else if(node.data.type == 2) {
+											window.parent.frames["mainFrame"].location.href = '../new_pagedesign/editLINKPage.html?id=' + node.data.id;
+										} else {
+											window.parent.frames["mainFrame"].location.href = '../new_pagedesign/editHTMLPage.htm?id=' + node.data.id;
+										}
+									},
+									onContextmenu: function(node, e) {
+										//if(node.data.isLeaf)return false;
+										actionNodeID = node.data.id;
+										node_conet = node;
+										var left = e.pageX;
+										var top = e.pageY;
+										if(left + 130 > 200) left = 200 - 130;
+										if(top + 140 > $(window).height()) top = $(window).height() - 140;
+										rmenu.show({
+											top: top,
+											left: left
+										});
+										return false;
 									}
-									if(!node.data.isLeaf) return false;
-									if(node.data.type == 3) {
-										//window.parent.frames["mainFrame"].location.href ='./new_pagedesign/editReportForm.html?id='+node.data.id+'&name='+node.data.values[0].value;			
-										window.parent.frames["mainFrame"].location.href = '../new_pagedesign/editHTMLPage.htm?id=' + node.data.id;
-									} else if(node.data.type == 2) {
-										window.parent.frames["mainFrame"].location.href = '../new_pagedesign/editLINKPage.html?id=' + node.data.id;
-									} else {
-										window.parent.frames["mainFrame"].location.href = '../new_pagedesign/editHTMLPage.htm?id=' + node.data.id;
-									}
-								},
-								onContextmenu: function(node, e) {
-									//if(node.data.isLeaf)return false;
-									actionNodeID = node.data.id;
-									node_conet = node;
-									var left = e.pageX;
-									var top = e.pageY;
-									if(left + 130 > 200) left = 200 - 130;
-									if(top + 140 > $(window).height()) top = $(window).height() - 140;
-									rmenu.show({
-										top: top,
-										left: left
-									});
-									return false;
-								}
-							});
-						}
+								});
+							}
 
-					}
-				});
+						},
+						/*complete:function(xhr,textStatus){//不管请求成功还是失败，即便是同步请求都能触发当前事件
+							console.log(xhr.readyState);//请求状态，返回1-4
+							console.log(xhr.status);//相应状态，返回200代表成功
+							console.log(textStatus);//返回success
+						}*/
+					});
+				}
+				getTree(); //默认调用一次渲染树
 
 				$.ajax({
 					url: "../../data_json/jiaoxue.json",
@@ -342,6 +360,20 @@
 									window.parent.frames["mainFrame"].location.href = "../jiaoxue/index.html";
 								}
 
+							},
+							onContextmenu: function(node, e) {
+								//if(node.data.isLeaf)return false;
+								actionNodeID = node.data.id;
+								node_conet = node;
+								var left = e.pageX;
+								var top = e.pageY;
+								if(left + 130 > 200) left = 200 - 130;
+								if(top + 140 > $(window).height()) top = $(window).height() - 140;
+								rmenu.show({
+									top: top,
+									left: left
+								});
+								return false;
 							}
 						})
 					}
@@ -429,9 +461,9 @@
 			
 			#dataTree:first-child>li {
 				/*overflow-x: scroll;
-	overflow-y: scroll;
-	height: 100%;
-	width:195px;*/
+				overflow-y: scroll;
+				height: 100%;
+				width:195px;*/
 			}
 			
 			.l-tree .l-body span {

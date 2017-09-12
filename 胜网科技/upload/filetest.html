@@ -1,0 +1,374 @@
+<html>
+    <head>
+        <meta name="robots" content="noindex,follow">
+        <title>file - 主页</title>
+      
+    </head>
+    
+    <body>
+        <style>
+           html{
+               width: 1000px;
+           }
+            @font-face {
+                font-family: 'FontAwesome';
+                src: url('../resource/css/filebox/fontawesome-webfont.eot?v=3.2.1');
+                src: url('../resource/css/filebox/fontawesome-webfont.eot?#iefix&v=3.2.1') format('embedded-opentype'), url('../resource/css/filebox/fontawesome-webfont.woff?v=3.2.1') format('woff'), url('../resource/css/filebox/fontawesome-webfont.ttf?v=3.2.1') format('truetype'), url('../resource/css/filebox/fontawesome-webfont.svg#fontawesomeregular?v=3.2.1') format('svg');
+                font-weight: normal;
+                font-style: normal;
+            }
+    
+            .icon-upload-alt:before {
+                content: "\f093";
+                font-family: FontAwesome;
+            }
+    
+            .icon-plus-sign-alt:before {
+                content: "\f0fe";
+                font-family: FontAwesome;
+            }
+    
+            .icon-indent-right:before {
+                content: "\f03c";
+                font-family: FontAwesome;
+            }
+    
+            .icon-reply:before {
+                content: "\f112";
+                font-family: FontAwesome;
+            }
+    
+            .icon-move:before {
+                content: "\f047";
+                font-family: FontAwesome;
+            }
+    
+            .icon-copy:before {
+                content: "\f0c5";
+                font-family: FontAwesome;
+            }
+    
+            .icon-remove:before {
+                content: "\f00d";
+                font-family: FontAwesome;
+            }
+    
+            .buttons {
+                border-top-left-radius: 5px;
+                border-bottom-left-radius: 5px;
+                border: 1px solid #ccc;
+                outline: none;
+                background-color: #ffffff;
+                *display: inline;
+                text-align: center !important;
+                color: #333 !important;
+                text-decoration: none !important;
+                padding: 3px 10px;
+                font-size: 13px;
+                margin-top: 10px
+            }
+    
+            .buttone {
+                border-top-right-radius: 5px;
+                border-bottom-right-radius: 5px;
+            }
+    
+            .buttons:hover {
+                background-color: #f8f8f8;
+            }
+        </style>
+        <style>
+            * {
+                font-family: 'Open Sans', 'Microsoft Yahei' !important;
+            }
+    
+            .box {
+                line-height: 30px;
+                border: 1px solid #ccc;
+                background-color: #fff;
+                padding: 10px;
+            }
+    
+            .title {
+                border: 1px solid #ccc;
+                border-bottom: 0;
+                font-weight: normal !important;
+                text-align: left !important;
+                padding: 10px;
+                font-size: 13px;
+                color: #666;
+                background-color: #F0F0F0;
+            }
+    
+            .right {
+                float: right;
+                text-align: right !important;
+            }
+    
+            .content {
+                width: 95%;
+                margin: auto;
+                overflow: hidden;
+                font-size: 13px;
+            }
+    
+            .login_button {
+                margin: 0 !important;
+                height: 46px;
+                vertical-align: middle;
+                font-size: 22px !important;
+                filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src=hIEfix.png, sizingMethod=crop);
+            }
+    
+            .login_text {
+                vertical-align: middle;
+                padding: 7px;
+                width: 40%;
+                font-size: 22px;
+                border: 1px #ccc solid;
+            }
+    
+            input[type=text]:focus,
+            input[type=password]:hover {
+                outline: #aaa solid 1px;
+                background-color: #f8f8f8;
+            }
+    
+            input[type=text]:hover,
+            input[type=password]:hover,
+            input[type=password]:active {
+                outline: #aaa solid 1px;
+                background-color: #f8f8f8;
+            }
+    
+            h2 {
+                -webkit-font-smoothing: antialiased;
+                /* filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src=hIEfix.png, sizingMethod=crop); */
+                text-align: center;
+                margin: 16px 0;
+                font-size: 48px;
+                font-family: simHei, 'Microsoft Yahei' !important;
+            }
+    
+            .tips {
+                overflow: auto;
+                margin: 6px 0
+            }
+    
+            span {
+                margin-bottom: 8px;
+            }
+    
+            a:visited {
+                color: #333;
+                text-decoration: none;
+            }
+    
+            a:hover {
+                color: #999;
+                text-decoration: none;
+            }
+    
+            a:link {
+                color: #333;
+                text-decoration: none;
+            }
+    
+            a:active {
+                color: #999;
+                text-decoration: none;
+            }
+    
+            textarea {
+                outline: none;
+                font-family: 'Yahei Consolas Hybrid', Consolas, Verdana, Tahoma, Arial, Helvetica, 'Microsoft Yahei', sans-serif !important;
+                font-size: 13px;
+                border: 1px solid #ccc;
+                margin-top: -1px;
+                padding: 8px;
+                line-height: 18px;
+                width: 682px;
+                max-width: 682px;
+            }
+    
+            .abutton {
+                outline: none;
+                border-top: 1px solid #ccc;
+                border-right: 1px solid #ccc;
+                background-color: #ffffff;
+                border-bottom: 1px solid #ccc;
+                border-left: 0px solid #ccc;
+                text-align: center !important;
+                color: #333 !important;
+                text-decoration: none !important;
+                padding: 3px 10px;
+                font-size: 13px;
+                margin-top: 10px
+            }
+    
+            .abutton:hover {
+                background-color: #f8f8f8;
+            }
+    
+            input.text,
+            select,
+            option,
+            .upload {
+                border: 1px solid #ccc;
+                margin: 6px 1px;
+                padding: 5px;
+                font-size: 13px;
+                height: 16px;
+            }
+    
+            body {
+                background-color: #fff;
+                margin: 0px 0px 10px;
+            }
+    
+            .title {
+                font-weight: bold;
+                FONT-SIZE: 12px;
+                text-align: center;
+            }
+    
+            .error {
+                font-size: 10pt;
+                color: #AA2222;
+                text-align: left
+            }
+    
+            .menu {
+                margin-top: 50px;
+                position: fixed;
+                font-size: 13px;
+                padding: 5px;
+            }
+    
+            .menu li {
+                list-style-type: square;
+                margin-bottom: 8px;
+            }
+    
+            .menu a {
+                text-decoration: none;
+            }
+    
+            .menu a:hover {
+                color: #707070;
+            }
+    
+            .table {
+                background-color: #777;
+                color: #fff;
+            }
+    
+            th {
+                text-align: left;
+                height: 40px;
+                line-height: 40px;
+                border-bottom: 3px solid #dbdbdb;
+                font-size: 14px;
+                background-color: #f8f8f8 !important;
+            }
+    
+            table {
+                border: 1px solid #ccc;
+            }
+    
+            tr {
+                height: 31px;
+                font-size: 13px;
+            }
+    
+            tr:hover {
+                background-color: #f5f5f5;
+            }
+    
+            td {
+                border-bottom: 1px solid #ededed;
+            }
+    
+            .upload {
+                width: 375px;
+            }
+    
+            a.button {
+                border-radius: 5px;
+                font: 15px/15px Arial;
+                border: 1px solid #DDD;
+                padding: 2px 5px;
+                background: #FFF;
+                color: #636363;
+                text-decoration: none;
+            }
+    
+            a:hover.button {
+                color: black;
+                background: #F0F0F0;
+            }
+        </style>
+        <h2></h2>
+        <div style="width:95%;margin:5px auto;background-color: #f8f8f8;
+          height: 40px;
+          line-height: 40px;
+          border-radius: 10px;">&nbsp;<a class="button icon-upload-alt" href="#"> 上传文件</a>
+            <a class="button icon-plus-sign-alt" href="#"> 创建文件</a>
+            <a class="button icon-indent-right" href="#"> FTP备份</a>
+        </div>
+        <div class="content">
+            <div style="line-height:30px"><a href="#">首目录</a> » </div>
+            <table border="0" cellpadding="2" cellspacing="0" width="100%" class="mytable">
+                <form method="post" id="cmdfrm"></form><input id="hidsubmit" name="action" type="hidden" value="移动"><input name="folder" type="hidden" value="1/">
+                <tbody>
+                    <tr>
+                        <td colspan="6">
+                            <div style="width:98%;margin:0 auto;height:40px;line-height:40px;"><a class="buttons" href="javascript:document.getElementById('check').checked=!document.getElementById('check').checked;Check();"><input type="checkbox" id="check" onclick="Check()">全选</a>
+                                <a class="abutton icon-move" href="javascript:document.getElementById('hidsubmit').value='移动';document.getElementById('cmdfrm').submit();">
+                                移动</a><a class="abutton icon-copy" href="javascript:document.getElementById('hidsubmit').value='复制';document.getElementById('cmdfrm').submit();"> 复制</a>
+                                <a class="abutton buttone icon-remove" href="javascript:if(confirm('您真的要删除选中的文件吗?')){document.getElementById('hidsubmit').value='删除';document.getElementById('cmdfrm').submit();}">
+                                    删除</a>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr class="headtable" width="100%">
+                        <script>
+                            function Check() {
+                                var collid = document.getElementById("check")
+                                var coll = document.getElementsByTagName('input')
+                                if (collid.checked) {
+                                    for (var i = 0; i < coll.length; i++)
+                                        coll[i].checked = true;
+                                } else {
+                                    for (var i = 0; i < coll.length; i++)
+                                        coll[i].checked = false;
+                                }
+                            }
+                        </script>
+                        <th width="20"></th>
+                        <th>文件名</th>
+                        <th width="65">大小</th>
+                        <th width="45">打开</th>
+                        <th width="55">重命名</th>
+                        <th width="40">查看</th>
+                    </tr>
+                    <tr width="100%">
+                        <td><input name="select_item[f][工作报表-李亚勇2015-9-11.ppt]" type="checkbox" id="工作报表-李亚勇2015-9-11.ppt" class="checkbox"
+                                value="1/工作报表-李亚勇2015-9-11.ppt"></td>
+                        <td><img src="../resource/images/filebox/file.png" width="16" height="16" align="absmiddle"> <a href="1/工作报表-李亚勇2015-9-11.ppt"
+                                target="_blank">工作报表-李亚勇2015-9-11.ppt</a></td>
+                        <td>918.5k</td>
+                        <td><a href="#">编辑</a></td>
+                        <td><a href="#">重命名</a></td>
+                        <td><a href="#" target="_blank">查看</a></td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="right" style="margin-top:5px;">共有 1 个文件</div>
+        </div>
+        <div style="text-align:center;font-size:13px;color:#999 !important;margin-top:5px;margin-bottom:45px">
+        </div>
+    
+    </body>
+    
+    </html>

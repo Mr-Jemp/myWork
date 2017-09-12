@@ -5,15 +5,19 @@
 <!--<meta http-equiv="X-UA-Compatible" content="IE=7">-->
 <!--<title>页面左边树</title>-->
 <style type="text/css">
-<!--
-body {
-	margin-left: 0px;
-	margin-top: 0px;
-	margin-right: 0px;
-	margin-bottom: 0px;
-}
-html,body{height:100%;}
--->
+	<!-- body {
+		margin-left: 0px;
+		margin-top: 0px;
+		margin-right: 0px;
+		margin-bottom: 0px;
+	}
+	
+	html,
+	body {
+		height: 100%;
+	}
+	
+	-->
 </style>
 <script type="text/javascript" src="../../resource/js/jQuery/jquery-1.7.2.min.js"></script>
 <script src="../../resource/part/ligerlib/ligerUI/js/ligerui.min.js" type="text/javascript"></script>
@@ -21,134 +25,169 @@ html,body{height:100%;}
 <link href="../../resource/part/ligerlib/ligerUI/skins/ligerui-icons.css" rel="stylesheet" type="text/css" />
 
 <script>
-var dialog;
-var openDialog;
-function OpenDialog(title,id,okCallback,cancelCallback,RefreshFun)
-{
-	eval(RefreshFun+"()");
-	dialog=$.ligerDialog.open({target: $("#"+id),title: title,width:450,buttons: [{ text: "确定", onclick:function()
-	{
-		dialog.hide();
-		if(okCallback==null)return;
-		//找出该ID下的所有表单数据
-		var ifor=0,json="";
-		for(ifor=0;ifor<1;ifor++)
-		{
-			var input=$("#"+id).find("input");
-			if(input==null)break;
-			var i=0,l=input.length,value="";
-			for(i=0;i<l;i++)
-			{
-				if(i>0)json+=",";
-				value=$(input[i]).val();
-				if($(input[i]).attr("type").toUpperCase()=="RADIO" && !$(input[i]).is(":checked"))value="";
-				if($(input[i]).attr("type").toUpperCase()=="CHECKBOX" && !$(input[i]).is(":checked"))value="";
-				json+="{";
-				json+='"'+$(input[i]).attr("name")+'"';
-				json+=":";
-				json+='"'+value+'"';
-				json+="}";
-			}
-			break;
-		}
-		okCallback("["+json+"]");
-	} }, { text: "取消", onclick: function()
-	{
-		dialog.hide();
-		if(cancelCallback)cancelCallback();
-	}}]});
-}
-function loadDataTree()
-{
-	$("#dataTree").html("");
-	$.ajax({
-		type: 'POST',
-		url: "",
-		data: { type: "1" },
-		success: function(data) {
-			data = eval('(' + data + ')');
-			if (!data.IsSuccess)return;
-			data.tree=eval('[' + data.tree + ']');
-	
-			$("#dataTree").ligerTree({
-			data:data.tree,
-			checkbox: false,
-			slide: false,
-			nodeWidth: 120,
-			render: function (item)
-			{
-				return item.values[0].value;
-			},
-			isLeaf:function(item){
-				return item.isLeaf;
-			},
-			isExpand: 2,
-			onselect: function (node)
-			{
-				$("#selectid").val(node.data.id);
-			}
-			});	
-		}
-	});
-}
-function toevel(code)
-{
-	eval(code);
-}
-function toopen_nodeform(edit,title,okCallback,cancelCallback)
-{
-	if(typeof(edit)=="object")
-	{
-		for(na in edit)$("#"+na).val(edit[na]);
+	var dialog;
+	var openDialog;
+
+	function OpenDialog(title, id, okCallback, cancelCallback, RefreshFun) {
+		eval(RefreshFun + "()");
+		dialog = $.ligerDialog.open({
+			target: $("#" + id),
+			title: title,
+			width: 450,
+			buttons: [{
+				text: "确定",
+				onclick: function() {
+					dialog.hide();
+					if(okCallback == null) return;
+					//找出该ID下的所有表单数据
+					var ifor = 0,
+						json = "";
+					for(ifor = 0; ifor < 1; ifor++) {
+						var input = $("#" + id).find("input");
+						if(input == null) break;
+						var i = 0,
+							l = input.length,
+							value = "";
+						for(i = 0; i < l; i++) {
+							if(i > 0) json += ",";
+							value = $(input[i]).val();
+							if($(input[i]).attr("type").toUpperCase() == "RADIO" && !$(input[i]).is(":checked")) value = "";
+							if($(input[i]).attr("type").toUpperCase() == "CHECKBOX" && !$(input[i]).is(":checked")) value = "";
+							json += "{";
+							json += '"' + $(input[i]).attr("name") + '"';
+							json += ":";
+							json += '"' + value + '"';
+							json += "}";
+						}
+						break;
+					}
+					okCallback("[" + json + "]");
+				}
+			}, {
+				text: "取消",
+				onclick: function() {
+					dialog.hide();
+					if(cancelCallback) cancelCallback();
+				}
+			}]
+		});
 	}
-	return openDialog=$.ligerDialog.open({target:$("#target"),title: title,
-	buttons: [{ text: "确定", onclick:function()
-	{
-		openDialog.hide();
-		
-		var json="{";
-		var outs=$("#target .out");
-		var i=0,l=outs.length;
-		for(i=0;i<l;i++)
-		{
-			if(i>0)json+=",";
-			json+='"'+outs.eq(i).attr("name")+'":"'+outs.eq(i).val()+'"';
+
+	function loadDataTree() {
+		$("#dataTree").html("");
+		$.ajax({
+			type: 'POST',
+			url: "http://192.168.0.21:20898/formMenuFacade/getFormMenu?pid=0",
+			contentType:"application/json",
+			data: {
+				type: "1"
+			},
+			success: function(data) {
+				data = eval('(' + data + ')');
+				if(!data.IsSuccess) return;
+				data.tree = eval('[' + data.tree + ']');
+
+				$("#dataTree").ligerTree({
+					data: data.tree,
+					checkbox: false,
+					slide: false,
+					nodeWidth: 120,
+					render: function(item) {
+						return item.values[0].value;
+					},
+					isLeaf: function(item) {
+						return item.isLeaf;
+					},
+					isExpand: 2,
+					onselect: function(node) {
+						$("#selectid").val(node.data.id);
+					}
+				});
+			}
+		});
+	}
+
+	function toevel(code) {
+		eval(code);
+	}
+
+	function toopen_nodeform(edit, title, okCallback, cancelCallback) {
+		if(typeof(edit) == "object") {
+			for(na in edit) $("#" + na).val(edit[na]);
 		}
-		json+="}";
-		if(okCallback)okCallback(json);
-	}}, { text: "取消", onclick: function()
-	{
-		openDialog.hide();
-		if(cancelCallback)cancelCallback();
-	}}]
-	});
-}
+		return openDialog = $.ligerDialog.open({
+			target: $("#target"),
+			title: title,
+			buttons: [{
+				text: "确定",
+				onclick: function() {
+					openDialog.hide();
+
+					var json = "{";
+					var outs = $("#target .out");
+					var i = 0,
+						l = outs.length;
+					for(i = 0; i < l; i++) {
+						if(i > 0) json += ",";
+						json += '"' + outs.eq(i).attr("name") + '":"' + outs.eq(i).val() + '"';
+					}
+					json += "}";
+					if(okCallback) okCallback(json);
+				}
+			}, {
+				text: "取消",
+				onclick: function() {
+					openDialog.hide();
+					if(cancelCallback) cancelCallback();
+				}
+			}]
+		});
+	}
+
+	/*根据传过来的id改变iframe的src*/
+	window.onload = function() {
+		//判断当前的location.href中有没有id=999字段，有代表点击了另一个页面传过来了id才创建变量，否则会报错，则数据加载不出来
+		if(window.location.href.split("html")[1] == "?id=999") {
+			var change = window.location.href.split('?')[1].split('=')[1]; //取到当前传过来的id
+		}
+		//	console.log(window.location.href.substr(53,6))
+		//	console.log(window.location.href.split("html"))
+		//	console.log(window.location.href)
+		var changeIf = document.getElementById("change-ifr"); //获取iframe
+		if(change == 999) { //如果传过来的id==999则改变路径
+			changeIf.src = "index.html";
+		} else {
+			changeIf.src = "index_kenzo.html";
+		}
+	}
 </script>
 </head>
+
 <body>
-<iframe src="index_kenzo.html" height="100%" width="100%" frameborder="0" scrolling="on"></iframe>
+	<iframe id="change-ifr" src="" height="100%" width="100%" frameborder="0" scrolling="on"></iframe>
 
-<!-- start -->
-<div id="node_form" style="width:180px;height:200px; margin:3px; display:none;">
-	<input name="selectid" type="hidden" value="" id="selectid"/>
-	<ul id="dataTree"></ul>
- </div>
-<!-- ebd -->
+	<!-- start -->
+	<div id="node_form" style="width:180px;height:200px; margin:3px; display:none;">
+		<input name="selectid" type="hidden" value="" id="selectid" />
+		<ul id="dataTree"></ul>
+	</div>
+	<!-- ebd -->
 
-<!-- start -->
-<div id="target" style="width:auto;height:auto; margin:3px; display:none;">
-    <input type="hidden" name="node_id" id="node_id" class="out"/>
-	<input type="hidden" name="act" id="act" value="add"  class="out"/>	
-	<p style="margin:5px">文件名：<input type="text" name="filename" id="filename" value=""  style="width:100px;"  class="out"/></p>
-	<p style="margin:5px">类　型：<select name="filetype" id="filetype" style="width:105px;"  class="out">
-    <option value="1">文件夹</option>
-    <option value="0" id="chselected">页面</option>
-    <option value="2">跳转地址</option>
-	<option value="3">报表管理</option>
-  </select></p>
-</div>
-<!-- ebd -->
+	<!-- start -->
+	<div id="target" style="width:auto;height:auto; margin:3px; display:none;">
+		<input type="hidden" name="node_id" id="node_id" class="out" />
+		<input type="hidden" name="act" id="act" value="add" class="out" />
+		<p style="margin:5px">文件名：<input type="text" name="filename" id="filename" value="" style="width:100px;" class="out" /></p>
+		<p style="margin:5px">类　型：
+			<select name="filetype" id="filetype" style="width:105px;" class="out">
+				<option value="1">文件夹</option>
+				<option value="0" id="chselected">页面</option>
+				<option value="2">跳转地址</option>
+				<option value="3">报表管理</option>
+			</select>
+		</p>
+	</div>
+	<!-- ebd -->
 
 </body>
 <!--</html>-->
-

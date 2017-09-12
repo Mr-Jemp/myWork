@@ -73,6 +73,7 @@ $(window).load(function()
 		type: 'POST',
 		url: '../../s/setting/gong.php',
 		data: {"get":"yes"},
+		contentType:"application/json",
 		success: function(data) {
 			data = eval('(' + data + ')');
 			if(data.IsSuccess)
