@@ -40,13 +40,12 @@
 						}, {
 							text: '上拉',
 							click: function(node) {
-								ccccccr960412
-								(node_conet, -1);
+								move_node_up(node_conet, -1);
 							}
 						}, {
 							text: '下移',
 							click: function(node) {
-								move_node(node_conet, 1);
+								move_node_down(node_conet, 1);
 							}
 						}, {
 							text: '修改父结点',
@@ -69,18 +68,19 @@
 						console.log(data)
 						$.ajax({
 							type: "get",
-							url: "http://192.168.0.21:20898/formMenuFacade/updateFormMenu",
-							data: {
+							url: "http://192.168.0.21:20898/formMenuFacade/getFormMenu?pid=0",
+							/*data: {
 								"id": node_conet.data.id,
 								"pid": data[0].selectid
-							},
+							},*/
 							success: function(data) {
 								console.log(data)
-								data = eval('(' + data + ')');
-								parent.parent.toevel('$.ligerDialog.success("' + data.Message + '");');
-								if(data.IsSuccess) {
-									left_tree.setData(eval('[' + decodeURIComponent(data.tree) + ']'));
-								}
+//								data = eval('(' + data + ')');
+//								parent.parent.toevel('$.ligerDialog.success("' + data.Message + '");');
+								parent.parent.toevel('$.ligerDialog.success("设置成功");');
+//								if(data.IsSuccess) {
+//									left_tree.setData(eval('[' + decodeURIComponent(data.tree) + ']'));
+//								}
 							},
 							error: function(XMLHttpRequest, textStatus, errorThrown) {
 								parent.parent.toevel('$.ligerDialog.error("网络出错，请重试！");');
@@ -89,21 +89,61 @@
 
 					}, null, "loadDataTree");
 				}
-
-				function move_node(node, type) {
+				//上拉
+				function move_node_up(node, type) {
 					$.ajax({
 						type: "POST",
-						url: "/s/function/movefreenode.php",
-						data: {
+						url: "http://192.168.0.21:20898/formMenuFacade/getUpMenu",
+						data: JSON.stringify({
 							"id": node.data.id,
 							"pid": node.data.parentId,
 							"type": type
-						},
+						}),
+						contentType:"application/json",
 						success: function(data) {
-							data = eval('(' + data + ')');
-							parent.parent.toevel('$.ligerDialog.success("' + data.Message + '");');
-							if(data.IsSuccess) {
-								left_tree.setData(eval('[' + decodeURIComponent(data.tree) + ']'));
+//							data = eval('(' + data + ')');
+							console.log(data)
+							
+							if(data.statusMsg == "error"){
+								console.log(1)
+								parent.parent.toevel('$.ligerDialog.success("' + data.msg + '");');
+							}else{
+								parent.parent.toevel('$.ligerDialog.success("' + data.statusMsg + '");');
+//								if(data.status) {
+	//								left_tree.setData(eval('[' + decodeURIComponent(data.msg) + ']'));
+									left_tree.setData(data.msg);
+//								}
+							}
+							
+						},
+						error: function(XMLHttpRequest, textStatus, errorThrown) {
+							parent.parent.toevel('$.ligerDialog.error("网络出错，请重试！");');
+						}
+					});
+				}
+				//下移
+				function move_node_down(node, type) {
+					$.ajax({
+						type: "POST",
+						url: "http://192.168.0.21:20898/formMenuFacade/getDownMenu",
+						data: JSON.stringify({
+							"id": node.data.id,
+							"pid": node.data.parentId,
+							"type": type
+						}),
+						contentType:"application/json",
+						success: function(data) {
+//							data = eval('(' + data + ')');
+							console.log(data)
+							if(data.statusMsg == "error"){
+								console.log(1)
+								parent.parent.toevel('$.ligerDialog.success("' + data.msg + '");');
+							}else{
+								parent.parent.toevel('$.ligerDialog.success("' + data.statusMsg + '");');
+//								if(data.status) {
+	//								left_tree.setData(eval('[' + decodeURIComponent(data.msg) + ']'));
+									left_tree.setData(data.msg);
+//								}
 							}
 						},
 						error: function(XMLHttpRequest, textStatus, errorThrown) {
@@ -111,7 +151,8 @@
 						}
 					});
 				}
-
+				
+				//添加
 				function add_node() {
 					if(node_conet.data.isLeaf) {
 						parent.parent.toevel('$.ligerDialog.warn("在要文夹件里才能添加子节点");');
@@ -213,7 +254,8 @@
 					}
 					return false;
 				};
-
+				
+				//修改
 				function edit_node() {
 					console.log(node_conet.data)
 					var cvalue = node_conet.data.formName;
@@ -231,7 +273,7 @@
 					}, null);
 
 				}
-
+				
 				function del_node(item) {
 					//alert("您没有权限操作删除！");
 					//return false;
@@ -252,8 +294,10 @@
 						success: function(data) {
 							if(data.status == 1) {
 								if(node_conet) {
-									left_tree.remove(node_conet.target);
-									parent.parent.toevel('$.ligerDialog.success("' + data.msg + '");');
+									if(data.msg == true){
+										left_tree.remove(node_conet.target);
+										parent.parent.toevel('$.ligerDialog.success("删除成功");');
+									}
 								}
 							} else {
 								parent.parent.toevel('$.ligerDialog.error("' + data.msg + '");');
@@ -314,6 +358,7 @@
 										}
 									},
 									onContextmenu: function(node, e) {
+										console.log(node.data.id)
 										//if(node.data.isLeaf)return false;
 										actionNodeID = node.data.id;
 										node_conet = node;
@@ -361,20 +406,6 @@
 								}
 
 							},
-							onContextmenu: function(node, e) {
-								//if(node.data.isLeaf)return false;
-								actionNodeID = node.data.id;
-								node_conet = node;
-								var left = e.pageX;
-								var top = e.pageY;
-								if(left + 130 > 200) left = 200 - 130;
-								if(top + 140 > $(window).height()) top = $(window).height() - 140;
-								rmenu.show({
-									top: top,
-									left: left
-								});
-								return false;
-							}
 						})
 					}
 				})

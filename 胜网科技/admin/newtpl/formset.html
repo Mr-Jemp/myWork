@@ -76,27 +76,39 @@
 	function loadDataTree() {
 		$("#dataTree").html("");
 		$.ajax({
-			type: 'POST',
+			type: 'get',
 			url: "http://192.168.0.21:20898/formMenuFacade/getFormMenu?pid=0",
 			contentType:"application/json",
-			data: {
+			/*data: {
 				type: "1"
-			},
+			},*/
 			success: function(data) {
-				data = eval('(' + data + ')');
+				/*data = eval('(' + data + ')');
 				if(!data.IsSuccess) return;
-				data.tree = eval('[' + data.tree + ']');
+				data.tree = eval('[' + data.tree + ']');*/
+//				console.log(data)
 
 				$("#dataTree").ligerTree({
-					data: data.tree,
+					data: data.msg,
 					checkbox: false,
 					slide: false,
 					nodeWidth: 120,
-					render: function(item) {
+					/*render: function(item) {
 						return item.values[0].value;
 					},
 					isLeaf: function(item) {
 						return item.isLeaf;
+					},
+					isExpand: 2,*/
+					textFiledName: "formName",
+					render: function(item) {
+						//			        	console.log(item)
+						return item.formName
+					},
+					isLeaf: function(item) {
+						return item.isLeaf;
+						//console.log((item.values[1].value=="文件夹"));
+						// return !(item.values[1].value=="文件夹");
 					},
 					isExpand: 2,
 					onselect: function(node) {
