@@ -190,7 +190,6 @@
 							contentType: "application/json",
 							processData: false,
 							success: function(data) {
-								console.log(data)
 								if(data.pw_flag == 1) {
 									parent.parent.toevel('$.ligerDialog.error("' + data.msg + '");');
 									return false;
@@ -289,6 +288,7 @@
 						}),
 						dataType: "json",
 						async: true,
+						//默认值是application/x-www-form-urlencoded; charset=UTF-8
 						contentType: "application/json",//post方式设置请求头
 						processData: false,//jq独有参数，是否对数据进行序列化处理
 						success: function(data) {

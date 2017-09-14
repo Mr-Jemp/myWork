@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta name="viewport" content="width=device-width, height=device-height,initial-scale=1.0,maximum=scale=1.0,user-scalable=no;">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style">
+    <meta name="format-detection" content="telephone=no">
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <title></title>
+    <link href="/m/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/m/css/base.css" rel="stylesheet">
+
+
+    <script src="/m/js/jquery-2.1.1.min.js" type="text/javascript"></script>
+    <script src="/m/js/bootstrap.min.js" type="text/javascript"></script>
+
+    <script type="text/javascript">
+        $(function() {
+
+            $("#loginButton").on("click", function() {
+                //                alert($("#number").val());
+                //                alert($("#username").val());
+                //                alert($("#passwordid").val());
+                var enNumber = "sssss";
+                var userName = $("#username").val();
+                var password = $("#passwordid").val();
+                $.ajax({ url: "/handler/backDesk.ashx", dataType: "json", type: "POST", data: { operatetype: "loginWebsite", enNumber: escape(enNumber), userName: escape(userName), password: escape(password) },
+                    success: function(data) {
+                        if (data.IsSuccess) {
+                            document.location.href = "/m/f.html";
+
+                        }
+                        else {
+                            alert(data.Message);
+                        }
+                    },
+                    error: function(xhr, stat, e) {
+                        alert(e);
+                    }
+                });
+
+            });
+
+        })
+    </script>
+
+</head>
+<body>
+    <div class="navbar-fixed-top top-menu">
+        <div class="row">
+            <div class="col-xs-12">
+                <img src="resource/images/loginimages/LOGO.gif" width="80px" height="35px;" />
+            </div>
+        </div>
+    </div>
+    <div class="main-content">
+        <div class="container">
+            <div class="row" style="height: 40px; margin-top: 80px; text-align: center;">
+                <div class="col-xs-2">
+                </div>
+                <div class="col-xs-8" style="font-size: 20px; color: #227FAB; text-align: center;
+                    padding: 5px;">
+                    <span>胜网管理平台</span>
+                </div>
+                <div class="col-xs-2">
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row" style="height: 40px; margin-top: 20px; text-align: center;">
+                <div class="col-xs-12">
+                    <input type="text" name="username" id="username" class="form-control" placeholder="账号">
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row" style="height: 40px; margin-top: 10px; text-align: center;">
+                <div class="col-xs-12">
+                    <input type="password" name="password" id="passwordid" class="form-control" placeholder="密码">
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row" style="height: 40px; margin-top: 20px; text-align: center;">
+                <div class="col-xs-12">
+                    <button class="btn btn-primary btn-block" id="loginButton">
+                        登录</button>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row" style="height: 40px; margin-top: 80px; text-align: center;">
+                <div class="col-xs-4">
+                    <hr style="border: none; border-top: 1px solid #CCC;">
+                </div>
+                <div class="col-xs-4" style="font-size: 20px; color: #227FAB; text-align: center;
+                    padding: 5px;">
+                    <span>关于我们</span></div>
+                <div class="col-xs-4">
+                    <hr style="border: none; border-top: 1px solid #CCC;">
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row" style="height: 100px; margin-top: 10px; text-align: center">
+                <div class="col-xs-7">
+                    <img src="resource/images/loginimages/computer.gif" style="width: 100%; height: 60%; margin: 0 auto;" />
+                </div>
+                <div class="col-xs-5" style="padding: 10px;">
+                    <img src="resource/images/loginimages/23.gif" style="width: 100%; height: 60%;" />
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row" style="height: 40px; margin-top: 10px; text-align: center;">
+                <div class="col-xs-3">
+                    <hr style="border: none; border-top: 1px solid #CCC;">
+                </div>
+                <div class="col-xs-6" style="font-size: 20px; color: #227FAB; text-align: center;
+                    padding: 5px;">
+                    <span>这就是我们</span></div>
+                <div class="col-xs-3">
+                    <hr style="border: none; border-top: 1px solid #CCC;">
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row" style="height: 100px; margin-top: 10px; text-align: center">
+                <div class="col-xs-6">
+                    <img src="resource/images/loginimages/computer14.gif" style="width: 60%; height: 60%; margin: 0 auto;" />
+                </div>
+                <div class="col-xs-6">
+                    <img src="resource/images/loginimages/computer16.gif" style="width: 60%; height: 60%; margin: 0 auto;" />
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row" style="height: 30px; text-align: center">
+                <div class="col-xs-6">
+                    <h4 style="margin: 0 auto;">
+                        更低成本</h4>
+                </div>
+                <div class="col-xs-6">
+                    <h4 style="margin: 0 auto;">
+                        更高效率</h4>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row" style="height: 100px; text-align: center">
+                <div class="col-xs-6">
+                    <img src="resource/images/loginimages/computer18.gif" style="width: 60%; height: 60%; margin: 0 auto;" />
+                </div>
+                <div class="col-xs-6">
+                    <img src="resource/images/loginimages/computer20.gif" style="width: 60%; height: 60%; margin: 0 auto;" />
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row" style="height: 30px; text-align: center">
+                <div class="col-xs-6">
+                    <h4 style="margin: 0 auto;">
+                        更专业</h4>
+                </div>
+                <div class="col-xs-6">
+                    <h4 style="margin: 0 auto;">
+                        更简单使用</h4>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row" style="height: 40px; margin-top: 10px; text-align: center;">
+                <div class="col-xs-5">
+                    <hr style="border: none; border-top: 1px solid #CCC;">
+                </div>
+                <div class="col-xs-2" style="font-size: 20px; color: #227FAB; text-align: center;
+                    padding: 5px;">
+                    <span>D&nbsp;I&nbsp;Y</span></div>
+                <div class="col-xs-5">
+                    <hr style="border: none; border-top: 1px solid #CCC;">
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row" style="height: 50px; margin-top: 10px;">
+                <div class="col-xs-4">
+                    <img src="resource/images/loginimages/computer26.gif" style="width: 90%; height: 100%; margin: 0 auto;" /></div>
+                <div class="col-xs-8">
+                    <h4>
+                        表单自定义制作，方便使用</h4>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row" style="height: 50px; margin-top: 10px;">
+                <div class="col-xs-4">
+                    <img src="resource/images/loginimages/computer29.gif" style="width: 90%; height: 100%; margin: 0 auto;" /></div>
+                <div class="col-xs-8">
+                    <h4>
+                        一个账号管理多个账号，省时省力</h4>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row" style="height: 50px; margin-top: 10px;">
+                <div class="col-xs-4">
+                    <img src="resource/images/loginimages/computer33.gif" style="width: 90%; height: 100%; margin: 0 auto;" /></div>
+                <div class="col-xs-8">
+                    <h4>
+                        账号权限随时更换，更人性化，更科学化</h4>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row" style="height: 50px; margin-top: 10px;">
+                <div class="col-xs-4">
+                    <img src="resource/images/loginimages/computer34.gif" style="width: 90%; height: 100%; margin: 0 auto;" /></div>
+                <div class="col-xs-8">
+                    <h4>
+                        软件和硬件相结合，成本更低，效率更高</h4>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row" style="height: 50px; margin-top: 10px;">
+                <div class="col-xs-4">
+                    <img src="resource/images/loginimages/computer37.gif" style="width: 90%; height: 100%; margin: 0 auto;" /></div>
+                <div class="col-xs-8">
+                    <h4>
+                        强大的ERP系统，拥有更全面的信息</h4>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row" style="height: 50px; margin-top: 10px;">
+                <div class="col-xs-4">
+                    <img src="resource/images/loginimages/computer38.gif" style="width: 90%; height: 100%; margin: 0 auto;" /></div>
+                <div class="col-xs-8">
+                    <h4>
+                        专业的学校管理系统，简化易操作</h4>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row" style="height: 50px; margin-top: 10px;">
+                <div class="col-xs-4">
+                    <img src="resource/images/loginimages/computer41.gif" style="width: 90%; height: 100%; margin: 0 auto;" /></div>
+                <div class="col-xs-8">
+                    <h4>
+                        智能家居系统，完全自动化，安全美观</h4>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row" style="height: 50px; margin-top: 10px;">
+                <div class="col-xs-4">
+                    <img src="resource/images/loginimages/computer42.gif" style="width: 90%; height: 100%; margin: 0 auto;" /></div>
+                <div class="col-xs-8">
+                    <h4>
+                        车辆管理，让你不再担心失窃，轻轻松松管理</h4>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row" style="height: 40px; margin-top: 10px; text-align: center;">
+                <div class="col-xs-2">
+                    <hr style="border: none; border-top: 1px solid #CCC;">
+                </div>
+                <div class="col-xs-8" style="font-size: 20px; color: #227FAB; text-align: center;
+                    padding: 5px;">
+                    <span>无比强大的胜网平台</span></div>
+                <div class="col-xs-2">
+                    <hr style="border: none; border-top: 1px solid #CCC;">
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row" style="margin-top: 10px;">
+                <div class="col-xs-12">
+                    <p>
+                        <i>科技</i>，可以使人们生活更好，可以使企业效率更高。但科技不会说话，我们一般人难以去读懂它、运用它。科技，可以有思想有、有爱吗?</p>
+                    <p>
+                        <i>胜网平台</i>，拥有学校管理系统、进销存、财务、人力资源、OA、生产管理、车辆管理、行政管理、饭堂管理、供应链管理、CRM、ERP等等</p>
+                    <p>
+                        <i>胜网管理平台</i>,告诉你，可以的！我们做的不止于科技，做的更是需求、方便和服务。从而开启互联网模式下的新企业个性化移动管理时代！</p>
+                </div>
+            </div>
+        </div>
+        <br />
+    </div>
+
+    <script>
+        $('#btn_login_submit').click(function() {
+            var username = $('#username').val();
+            var password = $('#password').val();
+            if (username == '') {
+                $('#username').focus();
+                return false;
+            }
+            if (password == '') {
+                $('#password').focus();
+                return false;
+            }
+            $btn = $(this).button('loading'); //把按钮变成loading状态
+            $.post('', { username: username, password: password }, function(data) {
+                $btn.button('reset'); //按钮恢复状态
+            });
+        });
+    </script>
+
+</body>
+</html>

@@ -432,11 +432,11 @@
 							//异步提交数据
 							$.ajax({
 								type: 'POST',
-								url: 'http://192.168.0.21:20898/formMenuFacade/insertValueToTable',
+								url: 'http://192.168.0.21:20898/formMenuFacade/updateFormMenu',
 								data: {
-									formId: modelId,
-									'design_content': formeditor,
-									'formtype': formtype
+									"formId": modelId,
+									"design_content": formeditor,
+									"formtype": formtype
 								},
 								dataType: 'json',
 								contentType:"application/json",

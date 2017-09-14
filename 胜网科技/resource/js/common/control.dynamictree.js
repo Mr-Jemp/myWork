@@ -1,7 +1,7 @@
 ﻿$(function(){
 	$.ajax({
 		type: 'POST',
-		url: '/s/function/pageinfo.php',
+		url: '../../s/function/pageinfo.php',
 		data: { action: "gettreedata" },
 		success: function(data){
 			data = eval('(' + data + ')');
