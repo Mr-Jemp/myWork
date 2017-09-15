@@ -175,7 +175,7 @@
 
 						console.log(data)
 						if(data.statusMsg!='success')return;
-//						if(typeof(data.msg.is_data_form)=='object')data.info.is_data_form=0;
+						if(typeof(data.msg.type)=='object')data.msg.type=0;
 						$("input[name='formtype']:nth("+data.msg.type+")").attr('checked',true);
 					},
 					error: function(xhr, stat, e) {

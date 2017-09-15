@@ -281,7 +281,7 @@
 					$.ajax({
 						type: "post",
 						url: "http://192.168.0.21:20898/formMenuFacade/delFormMenu",
-						data: JSON.stringify({
+						data: JSON.stringify({	//post方式最好使用JSON.stringify()转化数据，否则很容易出错
 							"id": actionNodeID
 						}),
 						dataType: "json",
@@ -523,7 +523,7 @@
 							<option value="1">文件夹</option>
 							<option value="0" id="chselected">页面</option>
 							<option value="2">跳转地址</option>
-							<option value="2">跳转地址</option>
+							<option value="2">报表管理</option>
 						</select>
 					</dd>
 				</dl>
