@@ -102,10 +102,8 @@
 						contentType:"application/json",
 						success: function(data) {
 //							data = eval('(' + data + ')');
-							console.log(data)
 							
 							if(data.statusMsg == "error"){
-								console.log(1)
 								parent.parent.toevel('$.ligerDialog.success("' + data.msg + '");');
 							}else{
 								parent.parent.toevel('$.ligerDialog.success("' + data.statusMsg + '");');

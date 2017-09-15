@@ -167,16 +167,16 @@
 				});
 				$.ajax({
 					type: 'get',
-					url: 'http://192.168.0.21:20898/formMenuFacade/getContentFormMenuById?id='+modelId,
-//					data:{'id':modelId},
-					dataType: 'text',
+					url: 'http://192.168.0.21:20898/formMenuFacade/getContentFormMenuById?id=' + modelId,
+					//					data:{'id':modelId},
+					dataType: 'json',
 					success: function(data) {
-//						data=eval("("+data+")");
-						
+						//data=eval("("+data+")");
+
 						console.log(data)
-						/*if(data.IsSuccess!=true)return;
-						if(typeof(data.info.is_data_form)=='object')data.info.is_data_form=0;
-						$("input[name='formtype']:nth("+data.info.is_data_form+")").attr('checked',true);*/
+						if(data.statusMsg!='success')return;
+//						if(typeof(data.msg.is_data_form)=='object')data.info.is_data_form=0;
+						$("input[name='formtype']:nth("+data.msg.type+")").attr('checked',true);
 					},
 					error: function(xhr, stat, e) {
 						alert("读取数据失败：找不到页面类型地址！");
@@ -216,7 +216,7 @@
 					elementPathEnabled: false,
 					//默认的编辑区域高度
 					initialFrameHeight: 500,
-					iframeCssUrl:"css/bootstrap/css/bootstrap.css" //引入自身 css使编辑器兼容你网站css
+					iframeCssUrl: "css/bootstrap/css/bootstrap.css" //引入自身 css使编辑器兼容你网站css
 					//更多其他参数，请参考ueditor.config.js中的配置项
 				});
 
@@ -428,33 +428,92 @@
 							//parse_form=parse_form.replace('{"fields":','{"formtype":"'+formtype+'","preview":"'+encodeURIComponent(preview)+'","fields":');
 							//clipboardData.setData("text",parse_form);
 							var formeditor = leipiEditor.getContent();
-							/*console.log(formtype)*/
+							console.log(formeditor)
+							
 							//异步提交数据
-							$.ajax({
-								type: 'POST',
-								url: 'http://192.168.0.21:20898/formMenuFacade/updateFormMenu',
-								data: {
-									"formId": modelId,
-									"design_content": formeditor,
-									"formtype": formtype
-								},
-								dataType: 'json',
-								contentType:"application/json",
-								success: function(data) {
-									console.log(data)
-									//data = eval('(' + data + ')');
-									if(data.result == 1) {
-										alert('保存成功');
-										//$('#submitbtn').button('reset');
-										location.reload();
-									} else {
-										alert('保存失败：' + data.message);
+							//判断不同的页面类型保存不同的接口
+							if(formtype == 0){//普通页面
+								$.ajax({
+									type: 'POST',
+									url: 'http://192.168.0.21:20898/formMenuFacade/normalFormMenu',
+									data: JSON.stringify({
+										"id": modelId,
+										"content": formeditor,
+										"type": formtype
+									}),
+									async:true,
+									dataType: 'json',
+									contentType: "application/json",
+									success: function(data) {
+//										console.log(data)
+										if(data.status == 1) {
+											alert('保存成功');
+											//$('#submitbtn').button('reset');
+											location.reload();
+										} else {
+											alert('保存失败：' + data.statusMsg);
+										}
+									},
+									error: function(xhr, stat, e) {
+										alert("保存失败：找不到地址！");
 									}
-								},
-								error: function(xhr, stat, e) {
-									alert("保存失败：找不到地址！");
-								}
-							});
+								});
+							}else if(formtype == 1){//数据页面
+								$.ajax({
+									type: 'POST',
+									url: '',
+									data: {
+										"formId": modelId,
+										"design_content": formeditor,
+										"formtype": formtype
+									},
+									async:true,
+									dataType: 'json',
+									contentType: "application/json",
+									success: function(data) {
+										console.log(data)
+										//data = eval('(' + data + ')');
+										if(data.result == 1) {
+											alert('保存成功');
+											//$('#submitbtn').button('reset');
+											location.reload();
+										} else {
+											alert('保存失败：' + data.message);
+										}
+									},
+									error: function(xhr, stat, e) {
+										alert("保存失败：找不到地址！");
+									}
+								});
+							}else if(formtype == 2){//单项页面
+								$.ajax({
+									type: 'POST',
+									url: '',
+									data: {
+										"formId": modelId,
+										"design_content": formeditor,
+										"formtype": formtype
+									},
+									async:true,
+									dataType: 'json',
+									contentType: "application/json",
+									success: function(data) {
+										console.log(data)
+										//data = eval('(' + data + ')');
+										if(data.result == 1) {
+											alert('保存成功');
+											//$('#submitbtn').button('reset');
+											location.reload();
+										} else {
+											alert('保存失败：' + data.message);
+										}
+									},
+									error: function(xhr, stat, e) {
+										alert("保存失败：找不到地址！");
+									}
+								});
+							}
+							
 
 						} else {
 							alert('表单内容不能为空！')
@@ -492,204 +551,204 @@
 					}
 				};
 			}
-			 /*转为预览*/
-			var	toPreview = function(template_parse) {
-					template_parse = template_parse.replace(/\{\|-/gi, '');
-					template_parse = template_parse.replace(/\-\|\}/gi, '');
+			/*转为预览*/
+			var toPreview = function(template_parse) {
+				template_parse = template_parse.replace(/\{\|-/gi, '');
+				template_parse = template_parse.replace(/\-\|\}/gi, '');
 
-					var element = document.createElement("div");
-					$(element).append(template_parse);
-					$(element).find("textarea").width("98.5%");
-					$(element).find("select").width("");
-					$(element).find("table").addClass("table");
-					$(element).find("table").addClass("table-bordered");
+				var element = document.createElement("div");
+				$(element).append(template_parse);
+				$(element).find("textarea").width("98.5%");
+				$(element).find("select").width("");
+				$(element).find("table").addClass("table");
+				$(element).find("table").addClass("table-bordered");
 
-					$(element).find('input:[leipiplugins=\"macros\"]').attr("value", "宏控件");
-					$(element).find('input:[orgtype=\"sys_date_select\"]').attr("value", "");
-					$(element).find('input:[orgtype=\"sys_date_select\"]').attr('placeholder', '点击选择时间');
-					$(element).find('input:[orgtype=\"sys_date_select\"]').attr("data-role", "datebox");
+				$(element).find('input:[leipiplugins=\"macros\"]').attr("value", "宏控件");
+				$(element).find('input:[orgtype=\"sys_date_select\"]').attr("value", "");
+				$(element).find('input:[orgtype=\"sys_date_select\"]').attr('placeholder', '点击选择时间');
+				$(element).find('input:[orgtype=\"sys_date_select\"]').attr("data-role", "datebox");
 
-					//解释列表控件
-					toList(element);
+				//解释列表控件
+				toList(element);
 
-					return $(element).html();
-				}
-			 /*转为手机版*/
-			var	toMobile = function(template_parse) {
-					//解释控件
-					template_parse = template_parse.replace(/\{\|-/gi, '');
-					template_parse = template_parse.replace(/\-\|\}/gi, '');
+				return $(element).html();
+			}
+			/*转为手机版*/
+			var toMobile = function(template_parse) {
+				//解释控件
+				template_parse = template_parse.replace(/\{\|-/gi, '');
+				template_parse = template_parse.replace(/\-\|\}/gi, '');
 
-					var element = document.createElement("div");
+				var element = document.createElement("div");
 
-					$(element).append(template_parse);
-					$(element).find("textarea").width("100%");
-					$(element).find("select").width("");
-					$(element).find("select").attr("data-native-menu", "false");
-					$(element).find("table").width("100%");
+				$(element).append(template_parse);
+				$(element).find("textarea").width("100%");
+				$(element).find("select").width("");
+				$(element).find("select").attr("data-native-menu", "false");
+				$(element).find("table").width("100%");
 
-					$(element).find("table").addClass("table");
-					$(element).find("table").addClass("table-bordered");
-					$(element).find("table").attr("data-sort", "sortDisabled");
+				$(element).find("table").addClass("table");
+				$(element).find("table").addClass("table-bordered");
+				$(element).find("table").attr("data-sort", "sortDisabled");
 
-					$(element).find('input:[leipiplugins=\"macros\"]').attr("value", "宏控件");
-					$(element).find('input:[orgtype=\"sys_date_select\"]').attr("value", "");
-					$(element).find('input:[orgtype=\"sys_date_select\"]').attr("data-role", "datebox");
-					$(element).find('input:[orgtype=\"sys_date_select\"]').attr('placeholder', '点击选择时间');
+				$(element).find('input:[leipiplugins=\"macros\"]').attr("value", "宏控件");
+				$(element).find('input:[orgtype=\"sys_date_select\"]').attr("value", "");
+				$(element).find('input:[orgtype=\"sys_date_select\"]').attr("data-role", "datebox");
+				$(element).find('input:[orgtype=\"sys_date_select\"]').attr('placeholder', '点击选择时间');
 
-					toList(element);
+				toList(element);
 
-					for(;;) {
-						//单选复选转为手机
-						var tmp = null,
-							temp = "",
-							isloop = false;
-						var si = $(element).find("span");
-						var i = 0,
-							l = si.length;
-						for(i = 0; i < l; i++) {
-							if($(si[i].childNodes[0]).attr("type") != "radio" && $(si[i].childNodes[0]).attr("type") != "checkbox") continue;
+				for(;;) {
+					//单选复选转为手机
+					var tmp = null,
+						temp = "",
+						isloop = false;
+					var si = $(element).find("span");
+					var i = 0,
+						l = si.length;
+					for(i = 0; i < l; i++) {
+						if($(si[i].childNodes[0]).attr("type") != "radio" && $(si[i].childNodes[0]).attr("type") != "checkbox") continue;
 
-							tmp = $(si[i]); //得到span
-							temp = tmp.html();
-							if($(si[i].childNodes[0]).attr("type") == "radio") temp = temp.replace(/\<input/gi, '<label class="ui-btn ui-corner-all ui-btn-inherit"><input');
-							if($(si[i].childNodes[0]).attr("type") == "checkbox") temp = temp.replace(/\<input/gi, '<label class="ui-btn ui-corner-all ui-btn-inherit ui-btn-icon-left ui-first-child ui-checkbox-on"><input');
-							temp = temp.replace(/\<label/gi, '</label><label');
-							temp += '</label>';
-							temp = temp.substring(8, temp.length);
-							tmp.html(temp);
-							isloop = true;
-							break;
-						}
-						if(isloop == false) break;
+						tmp = $(si[i]); //得到span
+						temp = tmp.html();
+						if($(si[i].childNodes[0]).attr("type") == "radio") temp = temp.replace(/\<input/gi, '<label class="ui-btn ui-corner-all ui-btn-inherit"><input');
+						if($(si[i].childNodes[0]).attr("type") == "checkbox") temp = temp.replace(/\<input/gi, '<label class="ui-btn ui-corner-all ui-btn-inherit ui-btn-icon-left ui-first-child ui-checkbox-on"><input');
+						temp = temp.replace(/\<label/gi, '</label><label');
+						temp += '</label>';
+						temp = temp.substring(8, temp.length);
+						tmp.html(temp);
+						isloop = true;
+						break;
 					}
-					return $(element).html();
+					if(isloop == false) break;
 				}
-			 /*解释列表控件*/
-			var	toList = function(element) {
-					//转换列表
-					var input = $(element).find("input"),
-						inputl = input.length;
-					for(i = 0; i < inputl; i++) {
-						var $this = input[i];
-						var listctrl = $($this).attr("leipiplugins");
-						if(listctrl != "listctrl") continue;
-						var gtitle = $($this).attr("orgtitle").split("`");
-						var gcoltype = $($this).attr("orgcoltype").split("`");
-						var gunit = $($this).attr("orgunit").split("`");
-						var gsum = $($this).attr("orgsum").split("`");
-						var gcolvalue = $($this).attr("orgcolvalue").split("`");
+				return $(element).html();
+			}
+			/*解释列表控件*/
+			var toList = function(element) {
+				//转换列表
+				var input = $(element).find("input"),
+					inputl = input.length;
+				for(i = 0; i < inputl; i++) {
+					var $this = input[i];
+					var listctrl = $($this).attr("leipiplugins");
+					if(listctrl != "listctrl") continue;
+					var gtitle = $($this).attr("orgtitle").split("`");
+					var gcoltype = $($this).attr("orgcoltype").split("`");
+					var gunit = $($this).attr("orgunit").split("`");
+					var gsum = $($this).attr("orgsum").split("`");
+					var gcolvalue = $($this).attr("orgcolvalue").split("`");
 
-						var th = "",
-							tr = "",
-							tf = '';
-						for(i2 = 0; i2 < gtitle.length - 1; i2++) {
-							var orgcoltype = gcoltype[i2];
-							var sum_total_html = '';
-							if(gsum[i2] > 0) //需要合计
-							{
-								orgcoltype = 'int'; //必须数值
-								sum_total_html = 'onblur="sum_total(\'data_list' + i + '[' + i2 + ']\')"';
-							}
-
-							th += '<th>' + gtitle[i2] + '</th>';
-							if(orgcoltype == "textarea") tr += '<td><textarea class="input-medium" name="data_list' + i + '[' + i2 + '][]" >' + gcolvalue[i2] + '</textarea> ' + gunit[i2] + '</td>';
-							if(orgcoltype == "text") tr += '<td><input class="input-medium" type="text" name="data_list' + i + '[' + i2 + '][]" value="' + gcolvalue[i2] + '"> ' + gunit[i2] + '</td>';
-							if(orgcoltype == "int") tr += '<td><input class="input-medium" ' + sum_total_html + ' type="text" name="data_list' + i + '[' + i2 + '][]" value="' + gcolvalue[i2] + '"> ' + gunit[i2] + '</td>';
-
-							//tfooter
-							if(gsum[i2] > 0) //需要合计
-							{
-								tf += '<td>合计：<input type="text" class="input-small" name="data_list' + i + '[' + i2 + '][total]" onblur="sum_total(\'data_list' + i + '[' + i2 + '][]\')" value="' + gcolvalue[i2] + '"> ' + gunit[i2] + '</td>';
-							} else {
-								tf += '<td></td>';
-							}
+					var th = "",
+						tr = "",
+						tf = '';
+					for(i2 = 0; i2 < gtitle.length - 1; i2++) {
+						console.log(2222)
+						var orgcoltype = gcoltype[i2];
+						var sum_total_html = '';
+						if(gsum[i2] > 0) //需要合计
+						{
+							orgcoltype = 'int'; //必须数值
+							sum_total_html = 'onblur="sum_total(\'data_list' + i + '[' + i2 + ']\')"';
 						}
 
-						var B = '';
-						B += '<table id="data_list' + (i + 1) + '_table" cellspacing="0" class="table table-bordered table-condensed" style="width: 100%;">';
-						B += '<thead>';
-						B += '<tr>';
-						B += '<th colspan="' + (gtitle.length) + '">';
-						B += $($this).attr("title");
-						B += '<span class="pull-right">';
-						B += '<button class="btn btn-small btn-success" type="button" onclick="tbAddRow(\'data_list' + (i + 1) + '\')">添加一行</button>';
-						B += '</span>';
-						B += '</th>';
-						B += '</tr>';
-						B += '<tr>';
-						B += '</tr>';
-						B += '<tr>';
-						B += th + '<th>操作</th>';
-						B += '</tr>';
-						B += '</thead>';
-						B += '<tbody>';
-						B += '<tr class="template">';
-						B += tr;
-						B += '<td><a href="javascript:void(0);" onclick="fnDeleteRow(\'data_list' + (i + 1) + '\',this)" class="delrow hide" style="display:none">删除</a></td>';
-						B += '</tr>';
-						B += '</tbody>';
+						th += '<th>' + gtitle[i2] + '</th>';
+						if(orgcoltype == "textarea") tr += '<td><textarea class="input-medium" name="data_list' + i + '[' + i2 + '][]" >' + gcolvalue[i2] + '</textarea> ' + gunit[i2] + '</td>';
+						if(orgcoltype == "text") tr += '<td><input class="input-medium" type="text" name="data_list' + i + '[' + i2 + '][]" value="' + gcolvalue[i2] + '"> ' + gunit[i2] + '</td>';
+						if(orgcoltype == "int") tr += '<td><input class="input-medium" ' + sum_total_html + ' type="text" name="data_list' + i + '[' + i2 + '][]" value="' + gcolvalue[i2] + '"> ' + gunit[i2] + '</td>';
 
-						B += '<tbody>';
-						B += '<tr>';
-						B += tf;
-						B += '<td>&nbsp;</td>';
-						B += '</tr>';
-						B += '</tbody>';
-
-						B += '</table>';
-
-						$($this).before(B);
-						$($this).remove();
+						//tfooter
+						if(gsum[i2] > 0) //需要合计
+						{
+							tf += '<td>合计：<input type="text" class="input-small" name="data_list' + i + '[' + i2 + '][total]" onblur="sum_total(\'data_list' + i + '[' + i2 + '][]\')" value="' + gcolvalue[i2] + '"> ' + gunit[i2] + '</td>';
+						} else {
+							tf += '<td></td>';
+						}
 					}
+
+					var B = '';
+					B += '<table id="data_list' + (i + 1) + '_table" cellspacing="0" class="table table-bordered table-condensed" style="width: 100%;">';
+					B += '<thead>';
+					B += '<tr>';
+					B += '<th colspan="' + (gtitle.length) + '">';
+					B += $($this).attr("title");
+					B += '<span class="pull-right">';
+					B += '<button class="btn btn-small btn-success" type="button" onclick="tbAddRow(\'data_list' + (i + 1) + '\')">添加一行</button>';
+					B += '</span>';
+					B += '</th>';
+					B += '</tr>';
+					B += '<tr>';
+					B += '</tr>';
+					B += '<tr>';
+					B += th + '<th>操作</th>';
+					B += '</tr>';
+					B += '</thead>';
+					B += '<tbody>';
+					B += '<tr class="template">';
+					B += tr;
+					B += '<td><a href="javascript:void(0);" onclick="fnDeleteRow(\'data_list' + (i + 1) + '\',this)" class="delrow hide" style="display:none">删除</a></td>';
+					B += '</tr>';
+					B += '</tbody>';
+
+					B += '<tbody>';
+					B += '<tr>';
+					B += tf;
+					B += '<td>&nbsp;</td>';
+					B += '</tr>';
+					B += '</tbody>';
+
+					B += '</table>';
+					console.log(B)
+					$($this).before(B);
+					$($this).remove();
 				}
+			}
 
-			 /*转为带头部数据*/
-			var	toPreviewHead = function(preview) {
-					var out = "";
-					out += "<!DOCTYPE HTML>";
-					out += "<html>";
-					out += "<head>";
+			/*转为带头部数据*/
+			var toPreviewHead = function(preview) {
+				var out = "";
+				out += "<!DOCTYPE HTML>";
+				out += "<html>";
+				out += "<head>";
 
-					out += "<title>页面</title>";
+				out += "<title>页面</title>";
 
-					out += "<meta http-equiv=\"Content-Type\" content=\"text/html; charset=utf-8\" />";
-					out += "<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">";
-					out += "<meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge,chrome=1\">";
-					out += "<meta name=\"author\" content=\"leipi.org\">";
-					out += "<link href=\"./css/bootstrap/css/bootstrap.css\" rel=\"stylesheet\" type=\"text/css\" />";
-					out += "\r\n<!--[if lte IE 6]>";
-					out += "\r\n<link rel=\"stylesheet\" type=\"text/css\" href=\"./css/bootstrap/css/bootstrap-ie6.css\">";
-					out += "\r\n<![endif]-->";
-					out += "\r\n<!--[if lte IE 7]>";
-					out += "\r\n<link rel=\"stylesheet\" type=\"text/css\" href=\"./css/bootstrap/css/ie.css\">";
-					out += "\r\n<![endif]-->";
-					out += "\r\n<link href=\"./css/site.css\" rel=\"stylesheet\" type=\"text/css\" />";
+				out += "<meta http-equiv=\"Content-Type\" content=\"text/html; charset=utf-8\" />";
+				out += "<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">";
+				out += "<meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge,chrome=1\">";
+				out += "<meta name=\"author\" content=\"leipi.org\">";
+				out += "<link href=\"./css/bootstrap/css/bootstrap.css\" rel=\"stylesheet\" type=\"text/css\" />";
+				out += "\r\n<!--[if lte IE 6]>";
+				out += "\r\n<link rel=\"stylesheet\" type=\"text/css\" href=\"./css/bootstrap/css/bootstrap-ie6.css\">";
+				out += "\r\n<![endif]-->";
+				out += "\r\n<!--[if lte IE 7]>";
+				out += "\r\n<link rel=\"stylesheet\" type=\"text/css\" href=\"./css/bootstrap/css/ie.css\">";
+				out += "\r\n<![endif]-->";
+				out += "\r\n<link href=\"./css/site.css\" rel=\"stylesheet\" type=\"text/css\" />";
 
-					out += "<script type=\"text/javascript\" charset=\"utf-8\" src=\"./js/jquery-1.7.2.min.js\"><" + "/script>";
-					out += "<script type=\"text/javascript\" charset=\"utf-8\" src=\"./js/ueditor/ueditor.config.js\"><" + "/script>";
-					out += "<script type=\"text/javascript\" charset=\"utf-8\" src=\"./js/ueditor/ueditor.all.js\"> <" + "/script>";
-					out += "<script type=\"text/javascript\" charset=\"utf-8\" src=\"./js/ueditor/lang/zh-cn/zh-cn.js\"><" + "/script>";
+				out += "<script type=\"text/javascript\" charset=\"utf-8\" src=\"./js/jquery-1.7.2.min.js\"><" + "/script>";
+				out += "<script type=\"text/javascript\" charset=\"utf-8\" src=\"./js/ueditor/ueditor.config.js\"><" + "/script>";
+				out += "<script type=\"text/javascript\" charset=\"utf-8\" src=\"./js/ueditor/ueditor.all.js\"> <" + "/script>";
+				out += "<script type=\"text/javascript\" charset=\"utf-8\" src=\"./js/ueditor/lang/zh-cn/zh-cn.js\"><" + "/script>";
 
-					out += "<script type=\"text/javascript\" charset=\"utf-8\" src=\"./js/ueditor/formdesign/tolist.js\"><" + "/script>";
+				out += "<script type=\"text/javascript\" charset=\"utf-8\" src=\"./js/ueditor/formdesign/tolist.js\"><" + "/script>";
 
-					out += "<script type=\"text/javascript\">";
-					out += "var _root=\"\",_controller = \"index\";";
-					out += "<" + "/script>";
-					out += "</head>";
-					out += "<body>";
+				out += "<script type=\"text/javascript\">";
+				out += "var _root=\"\",_controller = \"index\";";
+				out += "<" + "/script>";
+				out += "</head>";
+				out += "<body>";
 
-					out += "<div class=\"container\">";
-					out += "<div id=\"design_content\">";
-					out += preview;
-					out += "</div>";
-					out += "</div><!--end container-->";
-					out += "</body>";
+				out += "<div class=\"container\">";
+				out += "<div id=\"design_content\">";
+				out += preview;
+				out += "</div>";
+				out += "</div><!--end container-->";
+				out += "</body>";
 
-					out += "</html>";
-					return out;
-				}
-			
+				out += "</html>";
+				return out;
+			}
 		</script>
 		<!-- script end -->
 
